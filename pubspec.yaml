@@ -1,5 +1,5 @@
 name: libretrack
-description: A new Flutter project.
+description: Private, cross-platform package tracking app.
 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `pub publish`. This is preferred for private packages.
