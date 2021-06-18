@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">LibreTrack</string>
+    <string name="enable_flashlight">Включить вспышку</string>
+    <string name="disable_flashlight">Выключить вспышку</string>
+    <string name="error">Ошибка</string>
+    <string name="android_crash_report_channel">Сообщения об ошибках Android</string>
+    <string name="crash_report_summary">В приложении произошла ошибка. Вы можете сообщить об этом разработчикам</string>
+    <string name="crash_report_extra_info">Дополнительная информация и комментарии</string>
+    <string name="report">Сообщить</string>
+    <string name="report_with_comment">Сообщить с комментарием</string>
+</resources>

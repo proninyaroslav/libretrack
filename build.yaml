@@ -1,0 +1,21 @@
+targets:
+  $default:
+    builders:
+      freezed:freezed:
+        generate_for:
+          - lib/**.dart
+      json_serializable:json_serializable:
+        options:
+          # Serialize nested Freezed objects
+          explicit_to_json: true
+        generate_for:
+          - lib/**.dart
+      floor_generator:floor_generator:
+        generate_for:
+          - lib/**.dart
+      injectable_generator:injectable_config_builder:
+        generate_for:
+          - lib/*.dart
+      injectable_generator:injectable_builder:
+        generate_for:
+          - lib/**.dart

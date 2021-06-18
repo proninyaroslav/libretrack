@@ -1,0 +1,16 @@
+Track postal items directly on your device using accounts of postal services. The app respects your privacy and freedom: you don't use third-party online services.
+
+📋 Features
+* Free and Open Source software (FOSS)
+* Support for various platfroms and devices (currently Android only)
+* Support accounts of different carriers (currently UPS only)
+* Detailed information about the postal items, carriers, tracking history
+* Local push notifications
+* Automatic tracking in the background, and also manual refreshing
+* Ability to add a list of track numbers
+* Filter and sort numbers by activity date, package status, carrier, etc
+* Barcode and QR code scanner for tracking numbers
+* Archiving tracking numbers
+* Material Design 2.0
+* Night theme
+* Responsive UI for different devices form factors

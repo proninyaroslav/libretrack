@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <import type="android.view.View" />
+        <variable
+            name="flashlightEnabled"
+            type="boolean" />
+        <variable
+            name="flashlightSupported"
+            type="boolean" />
+        <variable
+            name="handlers"
+            type="org.proninyaroslav.libretrack.BarcodeScannerActivity.Handlers" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.journeyapps.barcodescanner.DecoratedBarcodeView
+            android:id="@+id/barcode_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <include
+            layout="@layout/barcode_close_button"
+            android:id="@+id/close"
+            app:handlers="@{handlers}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true" />
+
+        <include
+            layout="@layout/flashlight_switcher"
+            android:id="@+id/flashlight_switcher"
+            app:flashlightEnabled="@{flashlightEnabled}"
+            app:handlers="@{handlers}"
+            android:visibility="@{flashlightSupported ? View.VISIBLE : View.GONE}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+</layout>

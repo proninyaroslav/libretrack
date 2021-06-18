@@ -1,0 +1,22 @@
+name: Flutter Test CI
+
+on: [push, pull_request]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - uses: subosito/flutter-action@v1.4.0
+      with:
+        flutter-version: '2.2.x'
+    - name: Disable Google Analytics
+      run: flutter config --no-analytics
+    - name: Install dependencies
+      run: flutter pub get
+    - name: Analyze code
+      run: flutter analyze
+    - name: Run tests
+      run: flutter test test

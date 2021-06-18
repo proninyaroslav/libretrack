@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">LibreTrack</string>
+    <string name="enable_flashlight">Enable flashlight</string>
+    <string name="disable_flashlight">Disable flashlight</string>
+    <string name="error">Error</string>
+    <string name="android_crash_report_channel">Android error reports</string>
+    <string name="crash_report_summary">An app error occurred. You can report it to the developers</string>
+    <string name="crash_report_extra_info">Extra info and comments</string>
+    <string name="report">Report</string>
+    <string name="report_with_comment">Report with comment</string>
+</resources>

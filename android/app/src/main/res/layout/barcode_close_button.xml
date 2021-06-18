@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="handlers"
+            type="org.proninyaroslav.libretrack.BarcodeScannerActivity.Handlers" />
+    </data>
+
+    <ImageButton
+        android:id="@+id/close_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:src="@{@drawable/ic_baseline_close_white_24dp}"
+        android:background="?attr/selectableItemBackground"
+        app:tooltipTextCompat="@{@android:string/cancel}"
+        android:contentDescription="@android:string/cancel"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="@{(v) -> handlers.onClose()}" />
+</layout>
