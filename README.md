@@ -103,6 +103,10 @@ Please see [CONTRIBUTING.md](CONTRIBUTING.md)
 ![phone dark](art/screenshots/phone_dark.png)
 ![tablet](art/screenshots/tablet.png)
 
+## 🔒 Privacy Policy
+
+Please see our [Privacy Policy](PRIVACY.md).
+
 ## 📄 License
 
 [![Large GPLv3 logo with “Free as in Freedom”](https://www.gnu.org/graphics/gplv3-with-text-136x68.png)](http://www.gnu.org/licenses/gpl-3.0.en.html)
