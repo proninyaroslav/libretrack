@@ -1,4 +1,6 @@
+![Current version](https://img.shields.io/github/release/proninyaroslav/libretrack.svg?logo=github)
 ![Made with Flutter](https://img.shields.io/badge/Made%20with-Flutter-blue.svg)
+[![Releases](https://img.shields.io/github/downloads/proninyaroslav/libretrack/total.svg)](https://github.com/proninyaroslav/libretrack/releases)
 
 LibreTrack
 =====================
