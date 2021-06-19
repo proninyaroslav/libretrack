@@ -101,9 +101,7 @@ Please see [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ## Screenshots
 
-![phone](art/screenshots/phone.png)
-![phone dark](art/screenshots/phone_dark.png)
-![tablet](art/screenshots/tablet.png)
+![phone](art/screenshots/phone.png) ![phone dark](art/screenshots/phone_dark.png) ![tablet](art/screenshots/tablet.png)
 
 ## 🔒 Privacy Policy
 
