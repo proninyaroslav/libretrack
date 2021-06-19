@@ -18,5 +18,7 @@ jobs:
       run: flutter pub get
     - name: Analyze code
       run: flutter analyze
+    - name: Build debug Android APK
+      run: flutter build apk --flavor main --debug 
     - name: Run tests
       run: flutter test test
