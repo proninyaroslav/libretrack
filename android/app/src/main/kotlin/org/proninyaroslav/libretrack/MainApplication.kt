@@ -21,15 +21,29 @@
 package org.proninyaroslav.libretrack
 
 import android.content.Context
+import android.util.Log
 import io.flutter.app.FlutterApplication
+import org.acra.BuildConfig
 import org.acra.config.mailSender
 import org.acra.config.notification
 import org.acra.data.StringFormat
 import org.acra.ktx.initAcra
 
 class MainApplication : FlutterApplication() {
+    companion object {
+        val TAG: String = MainApplication::class.simpleName!!
+    }
+
     override fun attachBaseContext(base: Context) {
         super.attachBaseContext(base)
+
+        if (Thread.getDefaultUncaughtExceptionHandler() == null) {
+            Thread.setDefaultUncaughtExceptionHandler { t, e ->
+                TAG
+                Log.e(TAG, "Uncaught exception in $t: ${Log.getStackTraceString(e)}")
+            }
+        }
+
         initAcra {
             buildConfigClass = BuildConfig::class.java
             reportFormat = StringFormat.JSON
