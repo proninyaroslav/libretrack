@@ -1,9 +1,9 @@
-name: Flutter Test CI
+name: Flutter Build CI
 
-on: [push, pull_request]
+on: [pull_request]
 
 jobs:
-  test:
+  build:
 
     runs-on: ubuntu-latest
 
@@ -16,7 +16,5 @@ jobs:
       run: flutter config --no-analytics
     - name: Install dependencies
       run: flutter pub get
-    - name: Analyze code
-      run: flutter analyze
-    - name: Run tests
-      run: flutter test test
+    - name: Build debug Android APK
+      run: flutter build apk --flavor main --debug
