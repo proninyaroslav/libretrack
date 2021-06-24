@@ -81,6 +81,7 @@ class ServiceAuthStorageImpl implements ServiceAuthStorage {
     }
   }
 
+  // TODO: Desktop/Web support
   @override
   bool get isSecureStorageSupported =>
       _platformInfo.isAndroid || _platformInfo.isIOS;
