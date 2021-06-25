@@ -1,6 +1,8 @@
 ![Current version](https://img.shields.io/github/release/proninyaroslav/libretrack.svg?logo=github)
 ![Made with Flutter](https://img.shields.io/badge/Made%20with-Flutter-blue.svg)
 [![Releases](https://img.shields.io/github/downloads/proninyaroslav/libretrack/total.svg)](https://github.com/proninyaroslav/libretrack/releases)
+[![Matrix Room](https://img.shields.io/matrix/libretrack:matrix.org?label=Matrix%20Room)](https://matrix.to/#libretrack:matrix.org)
+[![Chat - Telegram](https://img.shields.io/badge/chat-Telegram-blue.svg)](https://t.me/LibreTrack)
 
 LibreTrack
 =====================
