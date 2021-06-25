@@ -178,6 +178,7 @@ class NotificationManagerImpl implements NotificationManager {
           subtitle: e.subtitle,
           badgeNumber: contentList.length,
           presentBadge: true,
+          threadIdentifier: groupKey,
         );
         final details = NotificationDetails(
           android: androidDetails,
@@ -194,7 +195,7 @@ class NotificationManagerImpl implements NotificationManager {
       }),
     );
 
-    if (lastActivities.length > 1) {
+    if (_platformInfo.isAndroid && lastActivities.length > 1) {
       final androidInboxDetails = AndroidNotificationDetails(
         parcelActivityChannel.id,
         parcelActivityChannel.name,
@@ -317,6 +318,7 @@ class NotificationManagerImpl implements NotificationManager {
         );
         final iosDetails = IOSNotificationDetails(
           subtitle: e.subtitle,
+          threadIdentifier: groupKey,
         );
         final details = NotificationDetails(
           android: androidDetails,
@@ -333,7 +335,7 @@ class NotificationManagerImpl implements NotificationManager {
       }),
     );
 
-    if (trackInfoList.length > 1) {
+    if (_platformInfo.isAndroid && trackInfoList.length > 1) {
       final androidInboxDetails = AndroidNotificationDetails(
         trackingErrorChannel.id,
         trackingErrorChannel.name,
