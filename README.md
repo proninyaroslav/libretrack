@@ -1,6 +1,8 @@
 ![Current version](https://img.shields.io/github/release/proninyaroslav/libretrack.svg?logo=github)
 ![Made with Flutter](https://img.shields.io/badge/Made%20with-Flutter-blue.svg)
 [![Releases](https://img.shields.io/github/downloads/proninyaroslav/libretrack/total.svg)](https://github.com/proninyaroslav/libretrack/releases)
+[![Matrix Room](https://img.shields.io/matrix/libretrack:matrix.org?label=Matrix%20Room)](https://matrix.to/#libretrack:matrix.org)
+[![Chat - Telegram](https://img.shields.io/badge/chat-Telegram-blue.svg)](https://t.me/LibreTrack)
 
 LibreTrack
 =====================
@@ -10,7 +12,7 @@ LibreTrack
 [<img alt="Get it on F-Droid" height="80" src="https://tachibanagenerallaboratories.github.io/images/badges/F-Droid/get-it-on.png">]()
 [<img alt="Get it on Google Play" height="80" src="https://tachibanagenerallaboratories.github.io/images/badges/Google%20Play/google-play-badge.png">](https://play.google.com/store/apps/details?id=org.proninyaroslav.libretrack)
 [<img alt="Get it on GitHub" height="80" src="https://tachibanagenerallaboratories.github.io/images/badges/GitHub/get-it-on-github.png">](https://github.com/proninyaroslav/libretrack/releases)
-[<img alt="Get it on Android File Host" height="80" src="https://tachibanagenerallaboratories.github.io/images/badges/Android%20File%20Host/android-file-host-badge.png">]()
+[<img alt="Get it on Android File Host" height="80" src="https://tachibanagenerallaboratories.github.io/images/badges/Android%20File%20Host/android-file-host-badge.png">](https://www.androidfilehost.com/?w=files&flid=326398)
 [<img alt="Direct APK Download" height="80" src="https://tachibanagenerallaboratories.github.io/images/badges/Direct%20Download/direct-apk-download.png">](https://proninyaroslav.ru/ftp/libretrack)
 
 Private, cross-platform package tracking app.
