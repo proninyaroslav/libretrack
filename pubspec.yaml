@@ -28,7 +28,7 @@ dependencies:
   collection: ^1.15.0
   connectivity_plus: ^1.0.1
   cupertino_icons: ^1.0.2
-  device_info_plus: ^1.0.1
+  device_info_plus: ^2.1.0
   devicelocale: ^0.4.1
   diffutil_sliverlist: ^0.5.0
   enum_to_string: ^2.0.1
