@@ -292,9 +292,7 @@ class _$DeviceInfoTearOff {
   }
 
   WebDeviceInfo web(
-      {required String browserName,
-      required String platform,
-      required String vendor}) {
+      {required String browserName, String? platform, String? vendor}) {
     return WebDeviceInfo(
       browserName: browserName,
       platform: platform,
@@ -331,7 +329,7 @@ mixin _$DeviceInfo {
             String arch, String kernelVersion, String osVersion, String model)
         macOS,
     required TResult Function(
-            String browserName, String platform, String vendor)
+            String browserName, String? platform, String? vendor)
         web,
   }) =>
       throw _privateConstructorUsedError;
@@ -356,7 +354,7 @@ mixin _$DeviceInfo {
     TResult Function(
             String arch, String kernelVersion, String osVersion, String model)?
         macOS,
-    TResult Function(String browserName, String platform, String vendor)? web,
+    TResult Function(String browserName, String? platform, String? vendor)? web,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -470,7 +468,7 @@ class _$UnknownDeviceInfo
             String arch, String kernelVersion, String osVersion, String model)
         macOS,
     required TResult Function(
-            String browserName, String platform, String vendor)
+            String browserName, String? platform, String? vendor)
         web,
   }) {
     return unknown();
@@ -498,7 +496,7 @@ class _$UnknownDeviceInfo
     TResult Function(
             String arch, String kernelVersion, String osVersion, String model)?
         macOS,
-    TResult Function(String browserName, String platform, String vendor)? web,
+    TResult Function(String browserName, String? platform, String? vendor)? web,
     required TResult orElse(),
   }) {
     if (unknown != null) {
@@ -738,7 +736,7 @@ class _$AndroidDeviceInfo
             String arch, String kernelVersion, String osVersion, String model)
         macOS,
     required TResult Function(
-            String browserName, String platform, String vendor)
+            String browserName, String? platform, String? vendor)
         web,
   }) {
     return android(
@@ -767,7 +765,7 @@ class _$AndroidDeviceInfo
     TResult Function(
             String arch, String kernelVersion, String osVersion, String model)?
         macOS,
-    TResult Function(String browserName, String platform, String vendor)? web,
+    TResult Function(String browserName, String? platform, String? vendor)? web,
     required TResult orElse(),
   }) {
     if (android != null) {
@@ -981,7 +979,7 @@ class _$IOSDeviceInfo with DiagnosticableTreeMixin implements IOSDeviceInfo {
             String arch, String kernelVersion, String osVersion, String model)
         macOS,
     required TResult Function(
-            String browserName, String platform, String vendor)
+            String browserName, String? platform, String? vendor)
         web,
   }) {
     return iOS(deviceName, deviceModel, systemName, systemVersion);
@@ -1009,7 +1007,7 @@ class _$IOSDeviceInfo with DiagnosticableTreeMixin implements IOSDeviceInfo {
     TResult Function(
             String arch, String kernelVersion, String osVersion, String model)?
         macOS,
-    TResult Function(String browserName, String platform, String vendor)? web,
+    TResult Function(String browserName, String? platform, String? vendor)? web,
     required TResult orElse(),
   }) {
     if (iOS != null) {
@@ -1188,7 +1186,7 @@ class _$LinuxDeviceInfo
             String arch, String kernelVersion, String osVersion, String model)
         macOS,
     required TResult Function(
-            String browserName, String platform, String vendor)
+            String browserName, String? platform, String? vendor)
         web,
   }) {
     return linux(osName, kernelVersion, osVersion);
@@ -1216,7 +1214,7 @@ class _$LinuxDeviceInfo
     TResult Function(
             String arch, String kernelVersion, String osVersion, String model)?
         macOS,
-    TResult Function(String browserName, String platform, String vendor)? web,
+    TResult Function(String browserName, String? platform, String? vendor)? web,
     required TResult orElse(),
   }) {
     if (linux != null) {
@@ -1369,7 +1367,7 @@ class _$WindowsDeviceInfo
             String arch, String kernelVersion, String osVersion, String model)
         macOS,
     required TResult Function(
-            String browserName, String platform, String vendor)
+            String browserName, String? platform, String? vendor)
         web,
   }) {
     return windows(osVersion);
@@ -1397,7 +1395,7 @@ class _$WindowsDeviceInfo
     TResult Function(
             String arch, String kernelVersion, String osVersion, String model)?
         macOS,
-    TResult Function(String browserName, String platform, String vendor)? web,
+    TResult Function(String browserName, String? platform, String? vendor)? web,
     required TResult orElse(),
   }) {
     if (windows != null) {
@@ -1585,7 +1583,7 @@ class _$MacOSDeviceInfo
             String arch, String kernelVersion, String osVersion, String model)
         macOS,
     required TResult Function(
-            String browserName, String platform, String vendor)
+            String browserName, String? platform, String? vendor)
         web,
   }) {
     return macOS(arch, kernelVersion, osVersion, model);
@@ -1613,7 +1611,7 @@ class _$MacOSDeviceInfo
     TResult Function(
             String arch, String kernelVersion, String osVersion, String model)?
         macOS,
-    TResult Function(String browserName, String platform, String vendor)? web,
+    TResult Function(String browserName, String? platform, String? vendor)? web,
     required TResult orElse(),
   }) {
     if (macOS != null) {
@@ -1676,7 +1674,7 @@ abstract class $WebDeviceInfoCopyWith<$Res> {
   factory $WebDeviceInfoCopyWith(
           WebDeviceInfo value, $Res Function(WebDeviceInfo) then) =
       _$WebDeviceInfoCopyWithImpl<$Res>;
-  $Res call({String browserName, String platform, String vendor});
+  $Res call({String browserName, String? platform, String? vendor});
 }
 
 /// @nodoc
@@ -1703,11 +1701,11 @@ class _$WebDeviceInfoCopyWithImpl<$Res> extends _$DeviceInfoCopyWithImpl<$Res>
       platform: platform == freezed
           ? _value.platform
           : platform // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       vendor: vendor == freezed
           ? _value.vendor
           : vendor // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ));
   }
 }
@@ -1716,20 +1714,18 @@ class _$WebDeviceInfoCopyWithImpl<$Res> extends _$DeviceInfoCopyWithImpl<$Res>
 
 class _$WebDeviceInfo with DiagnosticableTreeMixin implements WebDeviceInfo {
   const _$WebDeviceInfo(
-      {required this.browserName,
-      required this.platform,
-      required this.vendor});
+      {required this.browserName, this.platform, this.vendor});
 
   @override
   final String browserName;
   @override
 
   /// A DOMString identifying the platform on which the browser is running
-  final String platform;
+  final String? platform;
   @override
 
   /// The vendor name of the current browser
-  final String vendor;
+  final String? vendor;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
@@ -1796,7 +1792,7 @@ class _$WebDeviceInfo with DiagnosticableTreeMixin implements WebDeviceInfo {
             String arch, String kernelVersion, String osVersion, String model)
         macOS,
     required TResult Function(
-            String browserName, String platform, String vendor)
+            String browserName, String? platform, String? vendor)
         web,
   }) {
     return web(browserName, platform, vendor);
@@ -1824,7 +1820,7 @@ class _$WebDeviceInfo with DiagnosticableTreeMixin implements WebDeviceInfo {
     TResult Function(
             String arch, String kernelVersion, String osVersion, String model)?
         macOS,
-    TResult Function(String browserName, String platform, String vendor)? web,
+    TResult Function(String browserName, String? platform, String? vendor)? web,
     required TResult orElse(),
   }) {
     if (web != null) {
@@ -1869,16 +1865,16 @@ class _$WebDeviceInfo with DiagnosticableTreeMixin implements WebDeviceInfo {
 abstract class WebDeviceInfo implements DeviceInfo {
   const factory WebDeviceInfo(
       {required String browserName,
-      required String platform,
-      required String vendor}) = _$WebDeviceInfo;
+      String? platform,
+      String? vendor}) = _$WebDeviceInfo;
 
   String get browserName => throw _privateConstructorUsedError;
 
   /// A DOMString identifying the platform on which the browser is running
-  String get platform => throw _privateConstructorUsedError;
+  String? get platform => throw _privateConstructorUsedError;
 
   /// The vendor name of the current browser
-  String get vendor => throw _privateConstructorUsedError;
+  String? get vendor => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $WebDeviceInfoCopyWith<WebDeviceInfo> get copyWith =>
       throw _privateConstructorUsedError;

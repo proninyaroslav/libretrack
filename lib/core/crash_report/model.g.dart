@@ -142,8 +142,8 @@ Map<String, dynamic> _$_$MacOSReportableInfoToJson(
 _$WebReportableInfo _$_$WebReportableInfoFromJson(Map<String, dynamic> json) {
   return _$WebReportableInfo(
     browserName: json['browserName'] as String,
-    platform: json['platform'] as String,
-    vendor: json['vendor'] as String,
+    platform: json['platform'] as String?,
+    vendor: json['vendor'] as String?,
   );
 }
 

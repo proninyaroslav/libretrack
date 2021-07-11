@@ -145,10 +145,10 @@ class ReportableInfo with _$ReportableInfo {
     required String browserName,
 
     /// A DOMString identifying the platform on which the browser is running
-    required String platform,
+    String? platform,
 
     /// The vendor name of the current browser
-    required String vendor,
+    String? vendor,
   }) = WebReportableInfo;
 
   factory ReportableInfo.fromJson(Map<String, dynamic> json) =>

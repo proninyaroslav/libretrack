@@ -1080,9 +1080,7 @@ class _$ReportableInfoTearOff {
   }
 
   WebReportableInfo web(
-      {required String browserName,
-      required String platform,
-      required String vendor}) {
+      {required String browserName, String? platform, String? vendor}) {
     return WebReportableInfo(
       browserName: browserName,
       platform: platform,
@@ -1123,7 +1121,7 @@ mixin _$ReportableInfo {
             String arch, String kernelVersion, String osVersion, String model)
         macOS,
     required TResult Function(
-            String browserName, String platform, String vendor)
+            String browserName, String? platform, String? vendor)
         web,
   }) =>
       throw _privateConstructorUsedError;
@@ -1148,7 +1146,7 @@ mixin _$ReportableInfo {
     TResult Function(
             String arch, String kernelVersion, String osVersion, String model)?
         macOS,
-    TResult Function(String browserName, String platform, String vendor)? web,
+    TResult Function(String browserName, String? platform, String? vendor)? web,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -1259,7 +1257,7 @@ class _$UnknownReportableInfo implements UnknownReportableInfo {
             String arch, String kernelVersion, String osVersion, String model)
         macOS,
     required TResult Function(
-            String browserName, String platform, String vendor)
+            String browserName, String? platform, String? vendor)
         web,
   }) {
     return unknown();
@@ -1287,7 +1285,7 @@ class _$UnknownReportableInfo implements UnknownReportableInfo {
     TResult Function(
             String arch, String kernelVersion, String osVersion, String model)?
         macOS,
-    TResult Function(String browserName, String platform, String vendor)? web,
+    TResult Function(String browserName, String? platform, String? vendor)? web,
     required TResult orElse(),
   }) {
     if (unknown != null) {
@@ -1523,7 +1521,7 @@ class _$AndroidReportableInfo implements AndroidReportableInfo {
             String arch, String kernelVersion, String osVersion, String model)
         macOS,
     required TResult Function(
-            String browserName, String platform, String vendor)
+            String browserName, String? platform, String? vendor)
         web,
   }) {
     return android(
@@ -1552,7 +1550,7 @@ class _$AndroidReportableInfo implements AndroidReportableInfo {
     TResult Function(
             String arch, String kernelVersion, String osVersion, String model)?
         macOS,
-    TResult Function(String browserName, String platform, String vendor)? web,
+    TResult Function(String browserName, String? platform, String? vendor)? web,
     required TResult orElse(),
   }) {
     if (android != null) {
@@ -1767,7 +1765,7 @@ class _$IOSReportableInfo implements IOSReportableInfo {
             String arch, String kernelVersion, String osVersion, String model)
         macOS,
     required TResult Function(
-            String browserName, String platform, String vendor)
+            String browserName, String? platform, String? vendor)
         web,
   }) {
     return iOS(deviceName, deviceModel, systemName, systemVersion);
@@ -1795,7 +1793,7 @@ class _$IOSReportableInfo implements IOSReportableInfo {
     TResult Function(
             String arch, String kernelVersion, String osVersion, String model)?
         macOS,
-    TResult Function(String browserName, String platform, String vendor)? web,
+    TResult Function(String browserName, String? platform, String? vendor)? web,
     required TResult orElse(),
   }) {
     if (iOS != null) {
@@ -1974,7 +1972,7 @@ class _$LinuxReportableInfo implements LinuxReportableInfo {
             String arch, String kernelVersion, String osVersion, String model)
         macOS,
     required TResult Function(
-            String browserName, String platform, String vendor)
+            String browserName, String? platform, String? vendor)
         web,
   }) {
     return linux(osName, kernelVersion, osVersion);
@@ -2002,7 +2000,7 @@ class _$LinuxReportableInfo implements LinuxReportableInfo {
     TResult Function(
             String arch, String kernelVersion, String osVersion, String model)?
         macOS,
-    TResult Function(String browserName, String platform, String vendor)? web,
+    TResult Function(String browserName, String? platform, String? vendor)? web,
     required TResult orElse(),
   }) {
     if (linux != null) {
@@ -2157,7 +2155,7 @@ class _$WindowsReportableInfo implements WindowsReportableInfo {
             String arch, String kernelVersion, String osVersion, String model)
         macOS,
     required TResult Function(
-            String browserName, String platform, String vendor)
+            String browserName, String? platform, String? vendor)
         web,
   }) {
     return windows(osVersion);
@@ -2185,7 +2183,7 @@ class _$WindowsReportableInfo implements WindowsReportableInfo {
     TResult Function(
             String arch, String kernelVersion, String osVersion, String model)?
         macOS,
-    TResult Function(String browserName, String platform, String vendor)? web,
+    TResult Function(String browserName, String? platform, String? vendor)? web,
     required TResult orElse(),
   }) {
     if (windows != null) {
@@ -2372,7 +2370,7 @@ class _$MacOSReportableInfo implements MacOSReportableInfo {
             String arch, String kernelVersion, String osVersion, String model)
         macOS,
     required TResult Function(
-            String browserName, String platform, String vendor)
+            String browserName, String? platform, String? vendor)
         web,
   }) {
     return macOS(arch, kernelVersion, osVersion, model);
@@ -2400,7 +2398,7 @@ class _$MacOSReportableInfo implements MacOSReportableInfo {
     TResult Function(
             String arch, String kernelVersion, String osVersion, String model)?
         macOS,
-    TResult Function(String browserName, String platform, String vendor)? web,
+    TResult Function(String browserName, String? platform, String? vendor)? web,
     required TResult orElse(),
   }) {
     if (macOS != null) {
@@ -2471,7 +2469,7 @@ abstract class $WebReportableInfoCopyWith<$Res> {
   factory $WebReportableInfoCopyWith(
           WebReportableInfo value, $Res Function(WebReportableInfo) then) =
       _$WebReportableInfoCopyWithImpl<$Res>;
-  $Res call({String browserName, String platform, String vendor});
+  $Res call({String browserName, String? platform, String? vendor});
 }
 
 /// @nodoc
@@ -2499,11 +2497,11 @@ class _$WebReportableInfoCopyWithImpl<$Res>
       platform: platform == freezed
           ? _value.platform
           : platform // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       vendor: vendor == freezed
           ? _value.vendor
           : vendor // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ));
   }
 }
@@ -2512,9 +2510,7 @@ class _$WebReportableInfoCopyWithImpl<$Res>
 @JsonSerializable()
 class _$WebReportableInfo implements WebReportableInfo {
   const _$WebReportableInfo(
-      {required this.browserName,
-      required this.platform,
-      required this.vendor});
+      {required this.browserName, this.platform, this.vendor});
 
   factory _$WebReportableInfo.fromJson(Map<String, dynamic> json) =>
       _$_$WebReportableInfoFromJson(json);
@@ -2524,11 +2520,11 @@ class _$WebReportableInfo implements WebReportableInfo {
   @override
 
   /// A DOMString identifying the platform on which the browser is running
-  final String platform;
+  final String? platform;
   @override
 
   /// The vendor name of the current browser
-  final String vendor;
+  final String? vendor;
 
   @override
   String toString() {
@@ -2585,7 +2581,7 @@ class _$WebReportableInfo implements WebReportableInfo {
             String arch, String kernelVersion, String osVersion, String model)
         macOS,
     required TResult Function(
-            String browserName, String platform, String vendor)
+            String browserName, String? platform, String? vendor)
         web,
   }) {
     return web(browserName, platform, vendor);
@@ -2613,7 +2609,7 @@ class _$WebReportableInfo implements WebReportableInfo {
     TResult Function(
             String arch, String kernelVersion, String osVersion, String model)?
         macOS,
-    TResult Function(String browserName, String platform, String vendor)? web,
+    TResult Function(String browserName, String? platform, String? vendor)? web,
     required TResult orElse(),
   }) {
     if (web != null) {
@@ -2663,8 +2659,8 @@ class _$WebReportableInfo implements WebReportableInfo {
 abstract class WebReportableInfo implements ReportableInfo {
   const factory WebReportableInfo(
       {required String browserName,
-      required String platform,
-      required String vendor}) = _$WebReportableInfo;
+      String? platform,
+      String? vendor}) = _$WebReportableInfo;
 
   factory WebReportableInfo.fromJson(Map<String, dynamic> json) =
       _$WebReportableInfo.fromJson;
@@ -2672,10 +2668,10 @@ abstract class WebReportableInfo implements ReportableInfo {
   String get browserName => throw _privateConstructorUsedError;
 
   /// A DOMString identifying the platform on which the browser is running
-  String get platform => throw _privateConstructorUsedError;
+  String? get platform => throw _privateConstructorUsedError;
 
   /// The vendor name of the current browser
-  String get vendor => throw _privateConstructorUsedError;
+  String? get vendor => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $WebReportableInfoCopyWith<WebReportableInfo> get copyWith =>
       throw _privateConstructorUsedError;
