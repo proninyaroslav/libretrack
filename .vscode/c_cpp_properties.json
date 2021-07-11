@@ -1,0 +1,20 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "${workspaceFolder}/linux/flutter/ephemeral/**",
+                "/usr/include/**",
+                "/usr/lib64/glib-2.0/include"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/lib64/ccache/clang",
+            "cStandard": "c17",
+            "cppStandard": "c++14",
+            "intelliSenseMode": "linux-clang-x64",
+            "configurationProvider": "ms-vscode.cmake-tools"
+        }
+    ],
+    "version": 4
+}
