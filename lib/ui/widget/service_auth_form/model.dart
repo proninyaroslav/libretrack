@@ -125,7 +125,6 @@ String buildHelperDescriptionText(
     case TrackingServiceType.ups:
       return S.of(context).upsAddAccountDescription;
     case TrackingServiceType.russianPost:
-      // TODO: Handle this case.
-      throw UnimplementedError();
+      return S.of(context).russianPostAddAccountDescription;
   }
 }

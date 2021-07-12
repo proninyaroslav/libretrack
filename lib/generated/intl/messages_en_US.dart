@@ -249,6 +249,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "refreshAll": MessageLookupByLibrary.simpleMessage("Refresh all"),
         "refreshParcelsFailed": m21,
         "russianPost": MessageLookupByLibrary.simpleMessage("Russian Post"),
+        "russianPostAddAccountDescription": MessageLookupByLibrary.simpleMessage(
+            "1. Register on the Russian Post website: https://www.pochta.ru/\n2. Go to Access Settings, enable the tracking API and agree to the terms of service: https://tracking.pochta.ru/access-settings\n3. In the Access Settings, copy the login (generated automatically). The password will be sent to the e-mail, provided during registration."),
         "secondsShortFormat": m22,
         "selectAccountType":
             MessageLookupByLibrary.simpleMessage("Please select account type"),
