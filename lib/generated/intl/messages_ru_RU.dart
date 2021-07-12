@@ -254,6 +254,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "refresh": MessageLookupByLibrary.simpleMessage("Обновить"),
         "refreshAll": MessageLookupByLibrary.simpleMessage("Обновить все"),
         "refreshParcelsFailed": m21,
+        "russianPost": MessageLookupByLibrary.simpleMessage("Почта России"),
         "secondsShortFormat": m22,
         "selectAccountType":
             MessageLookupByLibrary.simpleMessage("Выберите тип аккаунта"),

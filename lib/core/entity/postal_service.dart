@@ -26,6 +26,8 @@ import 'entity.dart';
 enum PostalServiceType {
   @JsonValue('ups')
   ups,
+  @JsonValue('russianPost')
+  russianPost,
 }
 
 @TypeConverters([

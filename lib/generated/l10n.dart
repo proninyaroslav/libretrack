@@ -2154,6 +2154,16 @@ class S {
       args: [],
     );
   }
+
+  /// `Russian Post`
+  String get russianPost {
+    return Intl.message(
+      'Russian Post',
+      name: 'russianPost',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

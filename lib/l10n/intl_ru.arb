@@ -212,5 +212,6 @@
     "aboutApp": "О программе",
     "changelog": "История изменений",
     "upsAddAccountDescription": "Необходимо ввести данные авторизации аккаунта UPS. Вы можете зарегистрировать его здесь: https://www.ups.com/doapp/signup?loc=ru_RU\nДля получения ключа доступа перейдите по ссылке и следуйте инструкциям: https://www.ups.com/upsdeveloperkit/manageaccesskeys?loc=ru_RU",
-    "ups": "UPS"
+    "ups": "UPS",
+    "russianPost": "Почта России"
 }
