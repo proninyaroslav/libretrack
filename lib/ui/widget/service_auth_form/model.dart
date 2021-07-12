@@ -31,6 +31,11 @@ abstract class UPSFormFieldId {
   static const accessKey = FormFieldId('access_key');
 }
 
+abstract class RussianPostFormFieldId {
+  static const login = FormFieldId('login');
+  static const password = FormFieldId('password');
+}
+
 @freezed
 class AuthFormField with _$AuthFormField {
   const factory AuthFormField({
@@ -56,6 +61,11 @@ AuthData buildModelAuthData(
         username: controllers[UPSFormFieldId.login]!.text,
         password: controllers[UPSFormFieldId.password]!.text,
         accessLicenseNumber: controllers[UPSFormFieldId.accessKey]!.text,
+      ).toAuthData();
+    case TrackingServiceType.russianPost:
+      return RussianPostAuthData(
+        login: controllers[RussianPostFormFieldId.login]!.text,
+        password: controllers[RussianPostFormFieldId.password]!.text,
       ).toAuthData();
   }
 }
@@ -88,6 +98,22 @@ List<AuthFormField> buildFormField({
           secured: false,
         ),
       ];
+    case TrackingServiceType.russianPost:
+      final rpAuthData = authData == null ? null : RussianPostAuthData.from(authData);
+      return [
+        AuthFormField(
+          id: UPSFormFieldId.login,
+          name: S.of(context).login,
+          value: rpAuthData?.login,
+          secured: false,
+        ),
+        AuthFormField(
+          id: UPSFormFieldId.password,
+          name: S.of(context).password,
+          value: rpAuthData?.password,
+          secured: true,
+        ),
+      ];
   }
 }
 
@@ -98,5 +124,8 @@ String buildHelperDescriptionText(
   switch (type) {
     case TrackingServiceType.ups:
       return S.of(context).upsAddAccountDescription;
+    case TrackingServiceType.russianPost:
+      // TODO: Handle this case.
+      throw UnimplementedError();
   }
 }

@@ -66,7 +66,7 @@ RequestBuilder _mapServiceToBuilder({
           ? UPSRequestBuilder(upsAuthData)
           : DevUPSRequestBuilder(upsAuthData);
     case TrackingServiceType.russianPost:
-      // TODO: Handle this case.
-      throw UnimplementedError();
+      final rpAuthData = RussianPostAuthData.from(authData);
+      return RussianPostRequestBuilder(rpAuthData);
   }
 }

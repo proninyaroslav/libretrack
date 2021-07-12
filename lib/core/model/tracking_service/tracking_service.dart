@@ -16,6 +16,8 @@
 // You should have received a copy of the GNU General Public License
 // along with LibreTrack.  If not, see <http://www.gnu.org/licenses/>.
 
+export 'russian_post/russian_post_request_builder.dart';
+export 'russian_post/russian_post_service_info.dart';
 export 'ups/ups_parser.dart';
 export 'ups/ups_request_builder.dart';
 export 'ups/ups_service_info.dart';

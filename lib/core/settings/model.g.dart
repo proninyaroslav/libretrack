@@ -171,6 +171,7 @@ Map<String, dynamic> _$_$ParcelsFilterPostalServiceToJson(
 
 const _$PostalServiceTypeEnumMap = {
   PostalServiceType.ups: 'ups',
+  PostalServiceType.russianPost: 'russianPost',
 };
 
 _$AppThemeTypeLight _$_$AppThemeTypeLightFromJson(Map<String, dynamic> json) {

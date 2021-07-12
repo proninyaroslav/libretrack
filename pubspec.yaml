@@ -64,6 +64,7 @@ dependencies:
   url_launcher: ^6.0.2
   uuid: ^3.0.1
   workmanager: ^0.4.0
+  xml: ^5.1.2
 
 dev_dependencies:
   analyzer: ^1.3.0
@@ -95,7 +96,7 @@ flutter:
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
   assets:
-    - assets/service_logo/ups.png
+    - assets/service_logo/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
