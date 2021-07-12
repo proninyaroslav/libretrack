@@ -30,7 +30,15 @@ part 'ups_parser.freezed.dart';
 class UPSParser implements Parser {
   @override
   ParseResult parse(ServiceResponse response) {
-    Map<String, dynamic> root;
+    if (response.statusCode != 200) {
+      return ParseResult.error(
+        ParseError.serviceTemporary(
+          code: '${response.statusCode}',
+          message: 'HTTP ${response.statusCode}',
+        ),
+      );
+    }
+    late final Map<String, dynamic> root;
     try {
       root = jsonDecode(response.payload) as Map<String, dynamic>;
     } on FormatException catch (e) {

@@ -38,6 +38,7 @@ void main() {
         };
         final response = ServiceResponse(
           transactionId: const TransactionId('1'),
+          statusCode: 200,
           payload: jsonEncode(payload),
         );
 
@@ -64,6 +65,7 @@ void main() {
         };
         final response = ServiceResponse(
           transactionId: const TransactionId('1'),
+          statusCode: 200,
           payload: jsonEncode(payload),
         );
 
@@ -74,6 +76,27 @@ void main() {
             badRequest: (code, message) {
               expect(code, '2');
               expect(message, 'Unknown operation');
+            },
+            orElse: () => throw e,
+          ),
+          orElse: () => throw result,
+        );
+      });
+
+      test('HTTP error', () {
+        const response = ServiceResponse(
+          transactionId: TransactionId('1'),
+          statusCode: 500,
+          payload: '',
+        );
+
+        final result = parser.parse(response);
+        result.maybeWhen(
+          (info, activity, alternateTracks) => throw result,
+          error: (e) => e.maybeWhen(
+            serviceTemporary: (code, message) {
+              expect(code, '${response.statusCode}');
+              expect(message, 'HTTP ${response.statusCode}');
             },
             orElse: () => throw e,
           ),
@@ -117,6 +140,7 @@ void main() {
 
         final response = ServiceResponse(
           transactionId: const TransactionId('1'),
+          statusCode: 200,
           payload: jsonEncode(payload),
         );
         final result = parser.parse(response);
@@ -133,6 +157,7 @@ void main() {
         );
         final response = ServiceResponse(
           transactionId: const TransactionId('1'),
+          statusCode: 200,
           payload: jsonEncode(payload),
         );
 
@@ -158,6 +183,7 @@ void main() {
         );
         final response = ServiceResponse(
           transactionId: const TransactionId('1'),
+          statusCode: 200,
           payload: jsonEncode(payload),
         );
 
@@ -183,6 +209,7 @@ void main() {
         );
         final response = ServiceResponse(
           transactionId: const TransactionId('1'),
+          statusCode: 200,
           payload: jsonEncode(payload),
         );
 
@@ -208,6 +235,7 @@ void main() {
         );
         final response = ServiceResponse(
           transactionId: const TransactionId('1'),
+          statusCode: 200,
           payload: jsonEncode(payload),
         );
 
@@ -234,6 +262,7 @@ void main() {
 
         final response = ServiceResponse(
           transactionId: const TransactionId('1'),
+          statusCode: 200,
           payload: jsonEncode(payload),
         );
         final result = parser.parse(response);
@@ -303,6 +332,7 @@ void main() {
         const actualId = TransactionId('2');
         final response = ServiceResponse(
           transactionId: expectedId,
+          statusCode: 200,
           payload: _makePayload(id: actualId, trackNumber: _defaultTrack),
         );
 
@@ -325,6 +355,7 @@ void main() {
       test('No tracking number in response', () {
         final response = ServiceResponse(
           transactionId: _defaultId,
+          statusCode: 200,
           payload: _makePayload(id: _defaultId, trackNumber: ''),
         );
 
@@ -342,6 +373,7 @@ void main() {
       test('Multi-package', () {
         final response = ServiceResponse(
           transactionId: _defaultId,
+          statusCode: 200,
           payload: _makePayload(
             id: _defaultId,
             trackNumber: _defaultTrack,
@@ -368,6 +400,7 @@ void main() {
         test('Base fields', () {
           final response = ServiceResponse(
             transactionId: _defaultId,
+            statusCode: 200,
             payload: _makePayload(id: _defaultId, trackNumber: _defaultTrack),
           );
 
@@ -384,6 +417,7 @@ void main() {
         test('Service description', () {
           final response = ServiceResponse(
             transactionId: _defaultId,
+            statusCode: 200,
             payload: _makePayload(
               id: _defaultId,
               trackNumber: _defaultTrack,
@@ -405,6 +439,7 @@ void main() {
         test('Shipment description', () {
           final response = ServiceResponse(
             transactionId: _defaultId,
+            statusCode: 200,
             payload: _makePayload(
               id: _defaultId,
               trackNumber: _defaultTrack,
@@ -427,6 +462,7 @@ void main() {
           final responseList = [
             ServiceResponse(
               transactionId: const TransactionId('1'),
+              statusCode: 200,
               payload: _makePayload(
                 id: const TransactionId('1'),
                 trackNumber: '1',
@@ -435,6 +471,7 @@ void main() {
             ),
             ServiceResponse(
               transactionId: const TransactionId('2'),
+              statusCode: 200,
               payload: _makePayload(
                 id: const TransactionId('2'),
                 trackNumber: '2',
@@ -467,6 +504,7 @@ void main() {
           final responseList = [
             ServiceResponse(
               transactionId: const TransactionId('1'),
+              statusCode: 200,
               payload: _makePayload(
                 id: const TransactionId('1'),
                 trackNumber: '1',
@@ -480,6 +518,7 @@ void main() {
             ),
             ServiceResponse(
               transactionId: const TransactionId('2'),
+              statusCode: 200,
               payload: _makePayload(
                 id: const TransactionId('2'),
                 trackNumber: '2',
@@ -515,6 +554,7 @@ void main() {
         test('Volume', () {
           final response = ServiceResponse(
             transactionId: _defaultId,
+            statusCode: 200,
             payload: _makePayload(
               id: _defaultId,
               trackNumber: _defaultTrack,
@@ -546,6 +586,7 @@ void main() {
           final responseList = [
             ServiceResponse(
               transactionId: const TransactionId('1'),
+              statusCode: 200,
               payload: _makePayload(
                 id: const TransactionId('1'),
                 trackNumber: '1',
@@ -554,6 +595,7 @@ void main() {
             ),
             ServiceResponse(
               transactionId: const TransactionId('2'),
+              statusCode: 200,
               payload: _makePayload(
                 id: const TransactionId('2'),
                 trackNumber: '2',
@@ -588,6 +630,7 @@ void main() {
           final responseList = [
             ServiceResponse(
               transactionId: const TransactionId('1'),
+              statusCode: 200,
               payload: _makePayload(
                 id: const TransactionId('1'),
                 trackNumber: '1',
@@ -605,6 +648,7 @@ void main() {
             ),
             ServiceResponse(
               transactionId: const TransactionId('2'),
+              statusCode: 200,
               payload: _makePayload(
                 id: const TransactionId('2'),
                 trackNumber: '2',
@@ -613,6 +657,7 @@ void main() {
             ),
             ServiceResponse(
               transactionId: const TransactionId('3'),
+              statusCode: 200,
               payload: _makePayload(
                 id: const TransactionId('3'),
                 trackNumber: '3',
@@ -646,6 +691,7 @@ void main() {
         test('Estimated and scheduled delivery date', () {
           final response = ServiceResponse(
             transactionId: _defaultId,
+            statusCode: 200,
             payload: _makePayload(
               id: _defaultId,
               trackNumber: _defaultTrack,
@@ -692,6 +738,7 @@ void main() {
           final responseList = [
             ServiceResponse(
               transactionId: const TransactionId('1'),
+              statusCode: 200,
               payload: _makePayload(
                 id: const TransactionId('1'),
                 trackNumber: '1',
@@ -707,6 +754,7 @@ void main() {
             ),
             ServiceResponse(
               transactionId: const TransactionId('2'),
+              statusCode: 200,
               payload: _makePayload(
                 id: const TransactionId('2'),
                 trackNumber: '2',
@@ -737,6 +785,7 @@ void main() {
         test('Shipper and receiver address', () {
           final response = ServiceResponse(
             transactionId: _defaultId,
+            statusCode: 200,
             payload: _makePayload(
               id: _defaultId,
               trackNumber: _defaultTrack,
@@ -798,6 +847,7 @@ void main() {
         test('Service message', () {
           final response = ServiceResponse(
             transactionId: _defaultId,
+            statusCode: 200,
             payload: _makePayload(
                 id: _defaultId,
                 trackNumber: _defaultTrack,
@@ -835,6 +885,7 @@ void main() {
         test('No activity', () {
           final response = ServiceResponse(
             transactionId: _defaultId,
+            statusCode: 200,
             payload: _makePayload(
               id: _defaultId,
               trackNumber: _defaultTrack,
@@ -852,6 +903,7 @@ void main() {
         test('Multiple activity', () {
           final response = ServiceResponse(
             transactionId: _defaultId,
+            statusCode: 200,
             payload: _makePayload(
               id: _defaultId,
               trackNumber: _defaultTrack,
@@ -961,6 +1013,7 @@ void main() {
         test('Activity in Shipment block', () {
           final response = ServiceResponse(
             transactionId: _defaultId,
+            statusCode: 200,
             payload: _makePayload(
               id: _defaultId,
               trackNumber: _defaultTrack,
@@ -1008,6 +1061,7 @@ void main() {
         test('Activity in Shipment and Package block', () {
           final response = ServiceResponse(
             transactionId: _defaultId,
+            statusCode: 200,
             payload: _makePayload(
               id: _defaultId,
               trackNumber: _defaultTrack,
@@ -1087,6 +1141,7 @@ void main() {
         test('Invalid date and time', () {
           final response = ServiceResponse(
             transactionId: _defaultId,
+            statusCode: 200,
             payload: _makePayload(
               id: _defaultId,
               trackNumber: _defaultTrack,

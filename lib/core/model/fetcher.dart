@@ -116,13 +116,19 @@ class _BatchRequest {
 
       final response = await _client.send(r);
       yield response.when(
-        success: (body) => FetchResult(ServiceResponse(
-          transactionId: r.transactionId,
-          payload: body,
-        )),
-        httpError: (statusCode) => FetchResult.error(
-          request: r,
-          error: FetchError('HTTP $statusCode'),
+        success: (body) => FetchResult(
+          ServiceResponse(
+            transactionId: r.transactionId,
+            statusCode: 200,
+            payload: body,
+          ),
+        ),
+        httpError: (statusCode, body) => FetchResult(
+          ServiceResponse(
+            transactionId: r.transactionId,
+            statusCode: statusCode,
+            payload: body,
+          ),
         ),
         exception: (e, stackTrace) => FetchResult.error(
           request: r,

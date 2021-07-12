@@ -102,6 +102,7 @@ void main() {
 
         final serviceResponse = ServiceResponse(
           transactionId: serviceRequest.transactionId,
+          statusCode: 200,
           payload: serviceRequest.body!,
         );
         serviceResponseList.add(serviceResponse);
@@ -181,6 +182,7 @@ void main() {
       );
       final serviceResponse = ServiceResponse(
         transactionId: serviceRequest.transactionId,
+        statusCode: 200,
         payload: serviceRequest.body!,
       );
       when(() => mockRequestBuilder.build(
@@ -246,6 +248,7 @@ void main() {
       );
       final serviceResponse = ServiceResponse(
         transactionId: serviceRequest.transactionId,
+        statusCode: 200,
         payload: serviceRequest.body!,
       );
       when(() => mockRequestBuilder.build(

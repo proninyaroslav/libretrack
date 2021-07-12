@@ -38,6 +38,7 @@ class HttpResponse with _$HttpResponse {
 
   const factory HttpResponse.httpError({
     required int statusCode,
+    required String body,
   }) = HttpResponseError;
 
   const factory HttpResponse.exception(
@@ -57,7 +58,10 @@ class HttpClientImpl implements HttpClient {
     try {
       final response = await _send(request);
       if (response.statusCode >= 400) {
-        return HttpResponse.httpError(statusCode: response.statusCode);
+        return HttpResponse.httpError(
+          statusCode: response.statusCode,
+          body: response.body,
+        );
       } else {
         return HttpResponse.success(body: response.body);
       }
