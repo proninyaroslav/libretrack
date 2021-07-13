@@ -273,12 +273,15 @@ class UPSParser implements Parser {
 
       final dateTime = _parseActivityDateTime(activity);
       final status = _parseActivityStatus(activity);
-      final address = activityLocation == null
-          ? null
-          : _parseAddress(
-              activityLocation['Address'] as Map<String, dynamic>? ??
-                  activityLocation,
-            );
+      late final Address? addressObj;
+      if (activityLocation == null) {
+        addressObj = null;
+      } else {
+        final address = activityLocation['Address'] is String
+            ? null
+            : activityLocation['Address'] as Map<String, dynamic>?;
+        addressObj = _parseAddress(address ?? activityLocation);
+      }
 
       signedForByName ??= _parseSignedForByName(activityLocation);
       if (alternateTrackNumbers == null) {
@@ -303,7 +306,7 @@ class UPSParser implements Parser {
           serviceType: PostalServiceType.ups,
           statusType: status?.type ?? ShipmentStatusType.notAvailable,
           statusDescription: status?.description,
-          activityLocation: address,
+          activityLocation: addressObj,
           dateTime: dateTime?.toDateTime(),
         ),
       );
@@ -608,9 +611,13 @@ _ShipmentAddress? _parseShipmentAddressElement(
 ) {
   final type = shipmentAddress['Type'] as Map<String, dynamic>;
   final typeCode = type['Code'] as String?;
-  final addressObj = _parseAddress(
-    shipmentAddress['Address'] as Map<String, dynamic>,
-  );
+  final address = shipmentAddress['Address'] is String
+      ? null
+      : shipmentAddress['Address'] as Map<String, dynamic>?;
+  if (address == null) {
+    return null;
+  }
+  final addressObj = _parseAddress(address);
 
   switch (typeCode) {
     case _ShipmentAddressTypeCode.shipper:
