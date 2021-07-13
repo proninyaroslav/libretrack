@@ -26,9 +26,23 @@ part 'model.g.dart';
 class CrashInfo with _$CrashInfo {
   const factory CrashInfo({
     required Object error,
-    StackTrace? stackTrace,
+    @StackTraceConverter() StackTrace? stackTrace,
     String? message,
   }) = _CrashInfo;
+
+  factory CrashInfo.fromJson(Map<String, dynamic> json) =>
+      _$CrashInfoFromJson(json);
+}
+
+class StackTraceConverter implements JsonConverter<StackTrace?, String?> {
+  const StackTraceConverter();
+
+  @override
+  StackTrace? fromJson(String? json) =>
+      json == null ? null : StackTrace.fromString(json);
+
+  @override
+  String? toJson(StackTrace? object) => object?.toString();
 }
 
 @freezed

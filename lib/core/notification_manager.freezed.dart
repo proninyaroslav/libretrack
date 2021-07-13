@@ -37,10 +37,9 @@ class _$NotificationActionTearOff {
     );
   }
 
-  NotificationActionReportCrash reportCrash(
-      {@CrashReportIdConverter() required CrashReportId reportId}) {
+  NotificationActionReportCrash reportCrash({required CrashInfo info}) {
     return NotificationActionReportCrash(
-      reportId: reportId,
+      info: info,
     );
   }
 
@@ -61,16 +60,14 @@ mixin _$NotificationAction {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(String trackNumber) openParcelDetails,
-    required TResult Function(@CrashReportIdConverter() CrashReportId reportId)
-        reportCrash,
+    required TResult Function(CrashInfo info) reportCrash,
     required TResult Function() openParcelsList,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String trackNumber)? openParcelDetails,
-    TResult Function(@CrashReportIdConverter() CrashReportId reportId)?
-        reportCrash,
+    TResult Function(CrashInfo info)? reportCrash,
     TResult Function()? openParcelsList,
     required TResult orElse(),
   }) =>
@@ -190,8 +187,7 @@ class _$NotificationActionOpenParcelDetails
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(String trackNumber) openParcelDetails,
-    required TResult Function(@CrashReportIdConverter() CrashReportId reportId)
-        reportCrash,
+    required TResult Function(CrashInfo info) reportCrash,
     required TResult Function() openParcelsList,
   }) {
     return openParcelDetails(trackNumber);
@@ -201,8 +197,7 @@ class _$NotificationActionOpenParcelDetails
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String trackNumber)? openParcelDetails,
-    TResult Function(@CrashReportIdConverter() CrashReportId reportId)?
-        reportCrash,
+    TResult Function(CrashInfo info)? reportCrash,
     TResult Function()? openParcelsList,
     required TResult orElse(),
   }) {
@@ -268,7 +263,9 @@ abstract class $NotificationActionReportCrashCopyWith<$Res> {
           NotificationActionReportCrash value,
           $Res Function(NotificationActionReportCrash) then) =
       _$NotificationActionReportCrashCopyWithImpl<$Res>;
-  $Res call({@CrashReportIdConverter() CrashReportId reportId});
+  $Res call({CrashInfo info});
+
+  $CrashInfoCopyWith<$Res> get info;
 }
 
 /// @nodoc
@@ -286,47 +283,51 @@ class _$NotificationActionReportCrashCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? reportId = freezed,
+    Object? info = freezed,
   }) {
     return _then(NotificationActionReportCrash(
-      reportId: reportId == freezed
-          ? _value.reportId
-          : reportId // ignore: cast_nullable_to_non_nullable
-              as CrashReportId,
+      info: info == freezed
+          ? _value.info
+          : info // ignore: cast_nullable_to_non_nullable
+              as CrashInfo,
     ));
+  }
+
+  @override
+  $CrashInfoCopyWith<$Res> get info {
+    return $CrashInfoCopyWith<$Res>(_value.info, (value) {
+      return _then(_value.copyWith(info: value));
+    });
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$NotificationActionReportCrash implements NotificationActionReportCrash {
-  const _$NotificationActionReportCrash(
-      {@CrashReportIdConverter() required this.reportId});
+  const _$NotificationActionReportCrash({required this.info});
 
   factory _$NotificationActionReportCrash.fromJson(Map<String, dynamic> json) =>
       _$_$NotificationActionReportCrashFromJson(json);
 
   @override
-  @CrashReportIdConverter()
-  final CrashReportId reportId;
+  final CrashInfo info;
 
   @override
   String toString() {
-    return 'NotificationAction.reportCrash(reportId: $reportId)';
+    return 'NotificationAction.reportCrash(info: $info)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is NotificationActionReportCrash &&
-            (identical(other.reportId, reportId) ||
-                const DeepCollectionEquality()
-                    .equals(other.reportId, reportId)));
+            (identical(other.info, info) ||
+                const DeepCollectionEquality().equals(other.info, info)));
   }
 
   @override
   int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(reportId);
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(info);
 
   @JsonKey(ignore: true)
   @override
@@ -338,24 +339,22 @@ class _$NotificationActionReportCrash implements NotificationActionReportCrash {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(String trackNumber) openParcelDetails,
-    required TResult Function(@CrashReportIdConverter() CrashReportId reportId)
-        reportCrash,
+    required TResult Function(CrashInfo info) reportCrash,
     required TResult Function() openParcelsList,
   }) {
-    return reportCrash(reportId);
+    return reportCrash(info);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String trackNumber)? openParcelDetails,
-    TResult Function(@CrashReportIdConverter() CrashReportId reportId)?
-        reportCrash,
+    TResult Function(CrashInfo info)? reportCrash,
     TResult Function()? openParcelsList,
     required TResult orElse(),
   }) {
     if (reportCrash != null) {
-      return reportCrash(reportId);
+      return reportCrash(info);
     }
     return orElse();
   }
@@ -395,15 +394,13 @@ class _$NotificationActionReportCrash implements NotificationActionReportCrash {
 }
 
 abstract class NotificationActionReportCrash implements NotificationAction {
-  const factory NotificationActionReportCrash(
-          {@CrashReportIdConverter() required CrashReportId reportId}) =
+  const factory NotificationActionReportCrash({required CrashInfo info}) =
       _$NotificationActionReportCrash;
 
   factory NotificationActionReportCrash.fromJson(Map<String, dynamic> json) =
       _$NotificationActionReportCrash.fromJson;
 
-  @CrashReportIdConverter()
-  CrashReportId get reportId => throw _privateConstructorUsedError;
+  CrashInfo get info => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $NotificationActionReportCrashCopyWith<NotificationActionReportCrash>
       get copyWith => throw _privateConstructorUsedError;
@@ -459,8 +456,7 @@ class _$NotificationActionOpenParcelsList
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(String trackNumber) openParcelDetails,
-    required TResult Function(@CrashReportIdConverter() CrashReportId reportId)
-        reportCrash,
+    required TResult Function(CrashInfo info) reportCrash,
     required TResult Function() openParcelsList,
   }) {
     return openParcelsList();
@@ -470,8 +466,7 @@ class _$NotificationActionOpenParcelsList
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String trackNumber)? openParcelDetails,
-    TResult Function(@CrashReportIdConverter() CrashReportId reportId)?
-        reportCrash,
+    TResult Function(CrashInfo info)? reportCrash,
     TResult Function()? openParcelsList,
     required TResult orElse(),
   }) {

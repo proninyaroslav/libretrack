@@ -12,17 +12,27 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
+CrashInfo _$CrashInfoFromJson(Map<String, dynamic> json) {
+  return _CrashInfo.fromJson(json);
+}
+
 /// @nodoc
 class _$CrashInfoTearOff {
   const _$CrashInfoTearOff();
 
   _CrashInfo call(
-      {required Object error, StackTrace? stackTrace, String? message}) {
+      {required Object error,
+      @StackTraceConverter() StackTrace? stackTrace,
+      String? message}) {
     return _CrashInfo(
       error: error,
       stackTrace: stackTrace,
       message: message,
     );
+  }
+
+  CrashInfo fromJson(Map<String, Object> json) {
+    return CrashInfo.fromJson(json);
   }
 }
 
@@ -32,9 +42,11 @@ const $CrashInfo = _$CrashInfoTearOff();
 /// @nodoc
 mixin _$CrashInfo {
   Object get error => throw _privateConstructorUsedError;
+  @StackTraceConverter()
   StackTrace? get stackTrace => throw _privateConstructorUsedError;
   String? get message => throw _privateConstructorUsedError;
 
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $CrashInfoCopyWith<CrashInfo> get copyWith =>
       throw _privateConstructorUsedError;
@@ -44,7 +56,10 @@ mixin _$CrashInfo {
 abstract class $CrashInfoCopyWith<$Res> {
   factory $CrashInfoCopyWith(CrashInfo value, $Res Function(CrashInfo) then) =
       _$CrashInfoCopyWithImpl<$Res>;
-  $Res call({Object error, StackTrace? stackTrace, String? message});
+  $Res call(
+      {Object error,
+      @StackTraceConverter() StackTrace? stackTrace,
+      String? message});
 }
 
 /// @nodoc
@@ -84,7 +99,10 @@ abstract class _$CrashInfoCopyWith<$Res> implements $CrashInfoCopyWith<$Res> {
           _CrashInfo value, $Res Function(_CrashInfo) then) =
       __$CrashInfoCopyWithImpl<$Res>;
   @override
-  $Res call({Object error, StackTrace? stackTrace, String? message});
+  $Res call(
+      {Object error,
+      @StackTraceConverter() StackTrace? stackTrace,
+      String? message});
 }
 
 /// @nodoc
@@ -120,13 +138,20 @@ class __$CrashInfoCopyWithImpl<$Res> extends _$CrashInfoCopyWithImpl<$Res>
 }
 
 /// @nodoc
-
+@JsonSerializable()
 class _$_CrashInfo implements _CrashInfo {
-  const _$_CrashInfo({required this.error, this.stackTrace, this.message});
+  const _$_CrashInfo(
+      {required this.error,
+      @StackTraceConverter() this.stackTrace,
+      this.message});
+
+  factory _$_CrashInfo.fromJson(Map<String, dynamic> json) =>
+      _$_$_CrashInfoFromJson(json);
 
   @override
   final Object error;
   @override
+  @StackTraceConverter()
   final StackTrace? stackTrace;
   @override
   final String? message;
@@ -160,17 +185,26 @@ class _$_CrashInfo implements _CrashInfo {
   @override
   _$CrashInfoCopyWith<_CrashInfo> get copyWith =>
       __$CrashInfoCopyWithImpl<_CrashInfo>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$_$_CrashInfoToJson(this);
+  }
 }
 
 abstract class _CrashInfo implements CrashInfo {
   const factory _CrashInfo(
       {required Object error,
-      StackTrace? stackTrace,
+      @StackTraceConverter() StackTrace? stackTrace,
       String? message}) = _$_CrashInfo;
+
+  factory _CrashInfo.fromJson(Map<String, dynamic> json) =
+      _$_CrashInfo.fromJson;
 
   @override
   Object get error => throw _privateConstructorUsedError;
   @override
+  @StackTraceConverter()
   StackTrace? get stackTrace => throw _privateConstructorUsedError;
   @override
   String? get message => throw _privateConstructorUsedError;

@@ -22,15 +22,14 @@ Map<String, dynamic> _$_$NotificationActionOpenParcelDetailsToJson(
 _$NotificationActionReportCrash _$_$NotificationActionReportCrashFromJson(
     Map<String, dynamic> json) {
   return _$NotificationActionReportCrash(
-    reportId:
-        const CrashReportIdConverter().fromJson(json['reportId'] as String),
+    info: CrashInfo.fromJson(json['info'] as Map<String, dynamic>),
   );
 }
 
 Map<String, dynamic> _$_$NotificationActionReportCrashToJson(
         _$NotificationActionReportCrash instance) =>
     <String, dynamic>{
-      'reportId': const CrashReportIdConverter().toJson(instance.reportId),
+      'info': instance.info.toJson(),
     };
 
 _$NotificationActionOpenParcelsList

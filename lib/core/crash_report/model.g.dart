@@ -6,6 +6,22 @@ part of 'model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
+_$_CrashInfo _$_$_CrashInfoFromJson(Map<String, dynamic> json) {
+  return _$_CrashInfo(
+    error: json['error'] as Object,
+    stackTrace:
+        const StackTraceConverter().fromJson(json['stackTrace'] as String?),
+    message: json['message'] as String?,
+  );
+}
+
+Map<String, dynamic> _$_$_CrashInfoToJson(_$_CrashInfo instance) =>
+    <String, dynamic>{
+      'error': instance.error,
+      'stackTrace': const StackTraceConverter().toJson(instance.stackTrace),
+      'message': instance.message,
+    };
+
 _$_CrashReportData _$_$_CrashReportDataFromJson(Map<String, dynamic> json) {
   return _$_CrashReportData(
     reportId:

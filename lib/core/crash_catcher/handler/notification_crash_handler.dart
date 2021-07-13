@@ -16,7 +16,6 @@
 // You should have received a copy of the GNU General Public License
 // along with LibreTrack.  If not, see <http://www.gnu.org/licenses/>.
 
-import 'package:libretrack/core/crash_report/crash_report_id_generator.dart';
 import 'package:libretrack/core/crash_report/crash_report_manager.dart';
 import 'package:libretrack/core/notification_manager.dart';
 import 'package:libretrack/injector.dart';
@@ -27,36 +26,12 @@ class NotificationCrashHandler implements CrashHandler {
   @override
   Future<void> handle(Object error, StackTrace? stackTrace) async {
     final notifyManager = getIt<NotificationManager>();
-    final reportId = getIt<CrashReportIdGenerator>().random();
 
-    await notifyManager.crashReportNotify(reportId);
-    await for (final action in notifyManager.listenOnSelectNotification()) {
-      await action.maybeWhen(
-        reportCrash: (id) {
-          if (id == reportId) {
-            return _onReport(reportId, error, stackTrace);
-          }
-        },
-        orElse: () {},
-      );
-    }
-  }
-
-  Future<void> _onReport(
-    CrashReportId reportId,
-    Object error,
-    StackTrace? stackTrace,
-  ) async {
-    final res = await getIt<CrashReportManager>().sendReport(
+    await notifyManager.crashReportNotify(
       CrashInfo(
         error: error,
         stackTrace: stackTrace,
       ),
-    );
-    await res.maybeWhen(
-      emailUnsupported: () =>
-          getIt<NotificationManager>().sendReportErrorNotify(reportId),
-      orElse: () {},
     );
   }
 }

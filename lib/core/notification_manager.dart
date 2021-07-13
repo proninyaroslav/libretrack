@@ -55,9 +55,9 @@ abstract class NotificationManager {
     List<TrackNumberInfo> trackInfoList,
   );
 
-  Future<void> crashReportNotify(CrashReportId reportId);
+  Future<void> crashReportNotify(CrashInfo info);
 
-  Future<void> sendReportErrorNotify(CrashReportId reportId);
+  Future<void> sendReportErrorNotify(CrashInfo info);
 }
 
 @freezed
@@ -67,7 +67,7 @@ class NotificationAction with _$NotificationAction {
   }) = NotificationActionOpenParcelDetails;
 
   const factory NotificationAction.reportCrash({
-    @CrashReportIdConverter() required CrashReportId reportId,
+    required CrashInfo info,
   }) = NotificationActionReportCrash;
 
   const factory NotificationAction.openParcelsList() =
@@ -433,7 +433,7 @@ class NotificationManagerImpl implements NotificationManager {
   }
 
   @override
-  Future<void> crashReportNotify(CrashReportId reportId) async {
+  Future<void> crashReportNotify(CrashInfo info) async {
     final locale = await _getAppLocale();
     final defaultChannel = _AndroidChannel.defaultChan(locale);
 
@@ -450,18 +450,18 @@ class NotificationManagerImpl implements NotificationManager {
       android: androidDetails,
     );
     await _notifyPlugin.show(
-      reportId.toString().hashCode,
+      info.hashCode,
       title,
       body,
       details,
       payload: jsonEncode(
-        NotificationAction.reportCrash(reportId: reportId),
+        NotificationAction.reportCrash(info: info),
       ),
     );
   }
 
   @override
-  Future<void> sendReportErrorNotify(CrashReportId reportId) async {
+  Future<void> sendReportErrorNotify(CrashInfo info) async {
     final locale = await _getAppLocale();
     final defaultChannel = _AndroidChannel.defaultChan(locale);
 
@@ -481,7 +481,7 @@ class NotificationManagerImpl implements NotificationManager {
       android: androidDetails,
     );
     await _notifyPlugin.show(
-      reportId.toString().hashCode,
+      info.hashCode,
       title,
       body,
       details,
