@@ -890,6 +890,18 @@ void main() {
                       'Code': 'AR'
                     },
                     'Date': '20200102',
+                    'Time': '120000',
+                  },
+                  {
+                    'ActivityLocation': {
+                      'Address': '',
+                    },
+                    'Status': {
+                      'Type': 'I',
+                      'Description': 'Origin Scan',
+                      'Code': 'OR'
+                    },
+                    'Date': '20200102',
                     'Time': '110000',
                   },
                   {
@@ -935,6 +947,14 @@ void main() {
                 location: 'BA, Bar',
                 countryCode: 'US',
               ),
+              dateTime: DateTime(2020, 01, 02, 12),
+            ),
+            ShipmentActivityInfo.from(
+              trackNumber: _defaultTrack,
+              statusType: ShipmentStatusType.inTransit,
+              serviceType: PostalServiceType.ups,
+              statusDescription: 'Origin Scan',
+              activityLocation: const Address(),
               dateTime: DateTime(2020, 01, 02, 11),
             ),
             ShipmentActivityInfo.from(
