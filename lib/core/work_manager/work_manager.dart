@@ -219,26 +219,26 @@ Future<void> callbackDispatcher() async {
     NotificationCrashHandler(),
   ];
 
+  final debugHandlers = [
+    DefaultCrashHandler(),
+  ];
+
   Future<void> _dispatcher() async {
     await initInjector(kDebugMode ? Env.dev : Env.prod);
     getIt<AppDatabaseIsolateBinder>().emitChanges();
     await getIt<NotificationManager>().init();
 
     wm.Workmanager().executeTask((taskName, inputData) async {
-      if (kDebugMode) {
-        return _taskHandler(taskName, inputData);
-      } else {
-        await crashCatcher(
+       await crashCatcher(
           hooks: [
             _TaskCrashHook(
               taskHandler: () => _taskHandler(taskName, inputData),
             ),
           ],
           handlers: [
-            _TaskCrashHandler(handlers: handlers),
+            _TaskCrashHandler(handlers: kDebugMode ? debugHandlers : handlers),
           ],
         );
-      }
       return true;
     });
   }
