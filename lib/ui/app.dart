@@ -22,6 +22,7 @@ import 'package:device_preview/device_preview.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:libretrack/core/crash_report/crash_report_manager.dart';
 import 'package:libretrack/core/notification_manager.dart';
 import 'package:libretrack/core/settings/settings.dart';
 import 'package:libretrack/locale.dart';
@@ -58,6 +59,23 @@ class _AppState extends State<App> {
 
     _routerDelegate = AppRouterDelegate(navigatorKey: widget.navigatorKey);
 
+    getIt<NotificationManager>().listenOnSelectNotification().listen(
+      (action) {
+        final initRoute = _notifyActionToRoute(action);
+        if (initRoute != null) {
+          _routerDelegate.setNewRoutePath(initRoute);
+        } else {
+          action.maybeWhen(
+            reportCrash: _onReport,
+            orElse: () {},
+          );
+        }
+      },
+      onError: (e, StackTrace stackTrace) {
+        log().e('Unable to handle notification action', e, stackTrace);
+      },
+    );
+
     getIt<NotificationManager>().getAppLaunchDetails().then(
       (action) {
         if (action == null) {
@@ -66,6 +84,11 @@ class _AppState extends State<App> {
         final initRoute = _notifyActionToRoute(action);
         if (initRoute != null) {
           _routerDelegate.setNewRoutePath(initRoute);
+        } else {
+          action.maybeWhen(
+            reportCrash: _onReport,
+            orElse: () {},
+          );
         }
       },
       onError: (e, StackTrace stackTrace) {
@@ -74,18 +97,6 @@ class _AppState extends State<App> {
           e,
           stackTrace,
         );
-      },
-    );
-
-    getIt<NotificationManager>().listenOnSelectNotification().listen(
-      (action) {
-        final initRoute = _notifyActionToRoute(action);
-        if (initRoute != null) {
-          _routerDelegate.setNewRoutePath(initRoute);
-        }
-      },
-      onError: (e, StackTrace stackTrace) {
-        log().e('Unable to handle notification action', e, stackTrace);
       },
     );
 
@@ -112,6 +123,17 @@ class _AppState extends State<App> {
       onError: (e, StackTrace stackTrace) {
         log().e('Unable to getting initial shared text', e, stackTrace);
       },
+    );
+  }
+
+  Future<void> _onReport(
+    CrashInfo info,
+  ) async {
+    final res = await getIt<CrashReportManager>().sendReport(info);
+    await res.maybeWhen(
+      emailUnsupported: () =>
+          getIt<NotificationManager>().sendReportErrorNotify(info),
+      orElse: () {},
     );
   }
 
