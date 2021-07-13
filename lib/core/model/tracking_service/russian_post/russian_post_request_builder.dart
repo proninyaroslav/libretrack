@@ -16,11 +16,9 @@
 // You should have received a copy of the GNU General Public License
 // along with LibreTrack.  If not, see <http://www.gnu.org/licenses/>.
 
-import 'package:libretrack/core/model/type/locale.dart';
-
-import 'package:libretrack/core/entity/transaction_id.dart';
-
 import 'package:libretrack/core/entity/track_number_info.dart';
+import 'package:libretrack/core/entity/transaction_id.dart';
+import 'package:libretrack/core/model/type/locale.dart';
 import 'package:xml/xml.dart';
 
 import '../../request_builder.dart';
