@@ -79,6 +79,10 @@ dev_dependencies:
   intl_utils: ^2.1.0
   mocktail: ^0.1.0
 
+# TODO: wait for fix https://github.com/fluttercommunity/plus_plugins/issues/358
+dependency_overrides:
+  connectivity_plus: 1.0.4
+
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 
