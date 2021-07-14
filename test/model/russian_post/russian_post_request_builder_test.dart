@@ -39,6 +39,9 @@ void main() {
 
     test('Build request', () {
       final expectedUrl = Uri.parse('https://tracking.russianpost.ru/rtm34');
+      const expectedHeaders = {
+        'Content-Type': 'application/soap+xml; charset=utf-8',
+      };
       final r = builder.build(
         transactionId: TransactionId(const Uuid().v4()),
         trackService: trackService,
@@ -46,6 +49,7 @@ void main() {
 
       expect(r.transactionId, isNotNull);
       expect(r.url, expectedUrl);
+      expect(r.headers, expectedHeaders);
 
       final actualBody = XmlDocument.parse(r.body!);
 

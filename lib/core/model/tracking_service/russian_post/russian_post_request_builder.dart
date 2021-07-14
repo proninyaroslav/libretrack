@@ -32,6 +32,9 @@ class RussianPostRequestBuilder implements RequestBuilder {
     'http://russianpost.org/operationhistory/data': 'data',
     'http://schemas.xmlsoap.org/soap/envelope': 'soapenv',
   };
+  static const _headers = {
+    'Content-Type': 'application/soap+xml; charset=utf-8',
+  };
 
   final RussianPostAuthData authData;
 
@@ -72,6 +75,7 @@ class RussianPostRequestBuilder implements RequestBuilder {
       transactionId: transactionId,
       url: _requestUrl,
       method: RequestMethod.post,
+      headers: _headers,
       body: builder.buildDocument().toXmlString(),
     );
   }
