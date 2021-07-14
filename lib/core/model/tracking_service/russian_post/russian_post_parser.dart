@@ -24,6 +24,8 @@ class RussianPostParser implements Parser {
       return _parseFault(fault);
     } else if (getOperationHistoryResponse != null) {
       return _parseGetOperationHistoryResponse(getOperationHistoryResponse);
+    } else if (response.statusCode != 200) {
+      return _handleHttpError(response);
     }
 
     throw const ParseResult.error(ParseError.format('Unknown XML structure'));
@@ -73,11 +75,25 @@ class RussianPostParser implements Parser {
     );
     return operationHistoryFaultReason == null
         ? null
-        : ParseResult.error(
-            ParseError.serviceHard(
-              message: '[$reasonStr] ${operationHistoryFaultReason.innerText}',
-            ),
-          );
+        : _parseInvalidTrackingNumber(operationHistoryFaultReason) ??
+            ParseResult.error(
+              ParseError.serviceHard(
+                message:
+                    '[$reasonStr] ${operationHistoryFaultReason.innerText}',
+              ),
+            );
+  }
+
+  ParseResult? _parseInvalidTrackingNumber(
+    XmlElement operationHistoryFaultReason,
+  ) {
+    final message = operationHistoryFaultReason.innerText;
+    if (message == _ErrorMessage.invalidTrackNumberEng ||
+        message == _ErrorMessage.invalidTrackNumberRus) {
+      return const ParseResult.error(ParseError.invalidTrackNumber());
+    } else {
+      return null;
+    }
   }
 
   ParseResult? _parseAuthFaultReason(
@@ -140,4 +156,13 @@ class _SoapErrorCode {
 
   // ignore: unused_field
   static const versionMismatch = 'S:VersionMismatch';
+}
+
+class _ErrorMessage {
+  // ignore: unused_field
+  static const invalidTrackNumberEng =
+      'The format of the request data is invalid';
+  // ignore: unused_field
+  static const invalidTrackNumberRus =
+      'Формат данных запроса не соответствует установленному в регламенте обмена';
 }

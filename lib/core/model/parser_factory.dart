@@ -34,8 +34,7 @@ class ParserFactoryImpl implements ParserFactory {
       case TrackingServiceType.ups:
         return UPSParser();
       case TrackingServiceType.russianPost:
-        // TODO: Handle this case.
-        throw UnimplementedError();
+        return RussianPostParser();
     }
   }
 }
