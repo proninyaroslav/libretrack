@@ -46,6 +46,7 @@ abstract class TrackingServiceDao {
   (SELECT trackingServiceType FROM PostalServiceInfo
   WHERE priority =
   (SELECT MIN(priority) FROM PostalServiceInfo WHERE type = :postalServiceType)
+  AND type = :postalServiceType
   )''')
   Future<TrackingServiceInfo?> getHighPriorityService(
     PostalServiceType postalServiceType,

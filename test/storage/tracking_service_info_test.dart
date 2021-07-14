@@ -179,6 +179,15 @@ void main() {
         StorageResult.empty,
       );
       expect(
+        await repo.addService(
+          info: const TrackingServiceInfo(
+            type: TrackingServiceType.russianPost,
+          ),
+          authData: const AuthData.empty(),
+        ),
+        StorageResult.empty,
+      );
+      expect(
         await repo.getHighPriorityService(PostalServiceType.ups),
         const StorageResult<TrackingServiceInfo?>(expectedInfo),
       );

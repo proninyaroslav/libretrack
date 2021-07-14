@@ -234,7 +234,7 @@ class _$TrackingServiceDao extends TrackingServiceDao {
   Future<TrackingServiceInfo?> getHighPriorityService(
       PostalServiceType postalServiceType) async {
     return _queryAdapter.query(
-        'SELECT * FROM TrackingServiceInfo   WHERE type IN   (SELECT trackingServiceType FROM PostalServiceInfo   WHERE priority =   (SELECT MIN(priority) FROM PostalServiceInfo WHERE type = ?1)   )',
+        'SELECT * FROM TrackingServiceInfo   WHERE type IN   (SELECT trackingServiceType FROM PostalServiceInfo   WHERE priority =   (SELECT MIN(priority) FROM PostalServiceInfo WHERE type = ?1)   AND type = ?1   )',
         mapper: (Map<String, Object?> row) => TrackingServiceInfo(type: _trackingServiceTypeConverter.decode(row['type'] as String)),
         arguments: [_postalServiceTypeConverter.encode(postalServiceType)]);
   }
