@@ -40,6 +40,7 @@ void main() {
       platformInfo = MockPlatformInfo();
       when(() => platformInfo.isAndroid).thenReturn(false);
       when(() => platformInfo.isIOS).thenReturn(false);
+      when(() => platformInfo.isLinux).thenReturn(false);
 
       authStorage = ServiceAuthStorageImpl(db, secureStorage, platformInfo);
     });
