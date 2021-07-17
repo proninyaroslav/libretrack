@@ -142,7 +142,7 @@ class FallbackWorkManager implements WorkManager {
   }
 
   Future<bool> _execute(WorkInfo info) async {
-    late final WorkResult result;
+    WorkResult result = const WorkResult.success();
     final worker = _workersProvider.getWorkerByName(info.workerName);
     if (worker == null) {
       return false;
@@ -175,7 +175,7 @@ class FallbackWorkManager implements WorkManager {
             }
             await _repo.deleteWork(currentInfo);
             if (workAllowed) {
-              final result = await worker.doWork(currentInfo.inputData);
+              result = await worker.doWork(currentInfo.inputData);
               _printResult(result, currentInfo);
             }
           },
