@@ -179,7 +179,7 @@ void main() {
 
     group('Periodic task |', () {
       test('Without constraints', () async {
-        final expectedWorkInfo = WorkInfo.from(
+        final expectedInfo = WorkInfo.from(
           id: '1',
           workerName: workerName,
           type: WorkType.periodic,
@@ -190,33 +190,33 @@ void main() {
 
         when(() => mockConstraintsManager.isWorkAllowed(any()))
             .thenAnswer((_) async => true);
-        when(() => mockWorker.doWork(expectedWorkInfo.inputData))
+        when(() => mockWorker.doWork(expectedInfo.inputData))
             .thenAnswer((_) async => const WorkResult.success());
-        when(() => mockRepo.addWork(expectedWorkInfo)).thenAnswer((_) async {});
+        when(() => mockRepo.addWork(expectedInfo)).thenAnswer((_) async {});
         when(
           () => mockRepo.getAll(),
-        ).thenAnswer((_) async => [expectedWorkInfo]);
+        ).thenAnswer((_) async => [expectedInfo]);
         when(
           () => mockRepo.updateWork(
-            expectedWorkInfo.copyWith(lastRunning: DateTime(2021)),
+            expectedInfo.copyWith(lastRunning: DateTime(2021)),
           ),
         ).thenAnswer((_) async {});
         when(() => mockDateTimeProvider.now()).thenReturn(DateTime(2021));
 
         await workManager.registerPeriodic(
-          workId: expectedWorkInfo.id,
-          workerName: expectedWorkInfo.workerName,
+          workId: expectedInfo.id,
+          workerName: expectedInfo.workerName,
           params: WorkParams(
-            inputData: expectedWorkInfo.inputData,
+            inputData: expectedInfo.inputData,
           ),
         );
 
         await workManager.executeAll();
-        verify(() => mockWorker.doWork(expectedWorkInfo.inputData)).called(1);
+        verify(() => mockWorker.doWork(expectedInfo.inputData)).called(1);
       });
 
       test('No network connection', () async {
-        final expectedWorkInfo = WorkInfo.from(
+        final expectedInfo = WorkInfo.from(
           id: '1',
           workerName: workerName,
           type: WorkType.periodic,
@@ -225,21 +225,32 @@ void main() {
           ),
         );
 
-        when(() => mockConstraintsManager.isWorkAllowed(
-            expectedWorkInfo.constraints)).thenAnswer((_) async => false);
+        when(
+          () => mockConstraintsManager.isWorkAllowed(
+            expectedInfo.constraints,
+          ),
+        ).thenAnswer((_) async => false);
+        when(
+          () => mockConstraintsManager.defferedCheck(
+            expectedInfo.constraints,
+          ),
+        ).thenAnswer((_) async => false);
         when(() => mockWorker.doWork(any()))
             .thenAnswer((_) async => const WorkResult.success());
-        when(() => mockRepo.addWork(expectedWorkInfo)).thenAnswer((_) async {});
+        when(() => mockRepo.addWork(expectedInfo)).thenAnswer((_) async {});
         when(
           () => mockRepo.getAll(),
-        ).thenAnswer((_) async => [expectedWorkInfo]);
+        ).thenAnswer((_) async => [expectedInfo]);
+        when(
+          () => mockRepo.getWorkById(expectedInfo.id),
+        ).thenAnswer((_) async => expectedInfo);
 
         await workManager.registerPeriodic(
-          workId: expectedWorkInfo.id,
-          workerName: expectedWorkInfo.workerName,
+          workId: expectedInfo.id,
+          workerName: expectedInfo.workerName,
           params: WorkParams(
-            inputData: expectedWorkInfo.inputData,
-            constraints: expectedWorkInfo.constraints,
+            inputData: expectedInfo.inputData,
+            constraints: expectedInfo.constraints,
           ),
         );
 

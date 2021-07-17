@@ -16,6 +16,8 @@
 // You should have received a copy of the GNU General Public License
 // along with LibreTrack.  If not, see <http://www.gnu.org/licenses/>.
 
+import 'dart:async';
+
 import 'package:flutter/foundation.dart';
 import 'package:flutter/widgets.dart';
 import 'package:injectable/injectable.dart';
@@ -23,6 +25,7 @@ import 'package:libretrack/core/app_database_isolate_binder.dart';
 import 'package:libretrack/core/crash_catcher/crash_catcher.dart';
 import 'package:libretrack/core/crash_catcher/hook/flutter_crash_hook.dart';
 import 'package:libretrack/core/date_time_provider.dart';
+import 'package:libretrack/core/entity/entity.dart';
 import 'package:libretrack/core/storage/work_manager_repository.dart';
 import 'package:libretrack/env.dart';
 import 'package:libretrack/injector.dart';
@@ -35,6 +38,8 @@ import 'registered_workers.dart';
 import 'worker.dart';
 
 export 'worker.dart';
+
+const _kDefaultFrequency = Duration(minutes: 15);
 
 abstract class WorkManager {
   Future<void> init();
@@ -430,62 +435,6 @@ class _IOSWorkManager implements WorkManager {
   Future<void> cancelById(String workId) => _fallbackWm.cancelById(workId);
 
   @override
-  Future<void> init() => _fallbackWm.executeAll();
-
-  @override
-  Future<void> registerOneTime({
-    required String workId,
-    required String workerName,
-    WorkParams? params,
-    Duration? initialDelay,
-  }) async {
-    await _fallbackWm.registerOneTime(
-      workId: workId,
-      workerName: workerName,
-      params: params,
-      initialDelay: initialDelay,
-    );
-  }
-
-  @override
-  Future<void> registerPeriodic({
-    required String workId,
-    required String workerName,
-    Duration? frequency,
-    WorkParams? params,
-  }) =>
-      _fallbackWm.registerPeriodic(
-        workId: workId,
-        workerName: workerName,
-        params: params,
-        frequency: frequency,
-      );
-
-  Future<bool> executeAll() => _fallbackWm.executeAll();
-}
-
-class _DesktopWorkManager implements _PlatformWorkManager {
-  final FallbackWorkManager _fallbackWm;
-
-  _DesktopWorkManager(
-    WorkManagerRepository repo,
-    PlatformInfo platform,
-    WorkersProvider workersProvider,
-    DateTimeProvider dateTimeProvider,
-  ) : _fallbackWm = FallbackWorkManager(
-          repo: repo,
-          constraintsManager: _getConstraintsManager(platform),
-          workersProvider: workersProvider,
-          dateTimeProvider: dateTimeProvider,
-        );
-
-  static ConstraintsManager _getConstraintsManager(PlatformInfo platform) =>
-      ConstraintsManagerImpl(platform);
-
-  @override
-  Future<void> cancelById(String workId) => _fallbackWm.cancelById(workId);
-
-  @override
   Future<void> init() async {
     await _fallbackWm.init();
     await _fallbackWm.executeAll();
@@ -513,9 +462,107 @@ class _DesktopWorkManager implements _PlatformWorkManager {
     required String workerName,
     Duration? frequency,
     WorkParams? params,
+  }) =>
+      _fallbackWm.registerPeriodic(
+        workId: workId,
+        workerName: workerName,
+        params: params,
+        frequency: frequency,
+      );
+
+  Future<bool> executeAll() => _fallbackWm.executeAll();
+}
+
+class _DesktopWorkManager implements _PlatformWorkManager {
+  final FallbackWorkManager _fallbackWm;
+  final WorkManagerRepository _repo;
+
+  final Map<String, Timer> _timers = {};
+
+  _DesktopWorkManager(
+    WorkManagerRepository repo,
+    PlatformInfo platform,
+    WorkersProvider workersProvider,
+    DateTimeProvider dateTimeProvider,
+  )   : _repo = repo,
+        _fallbackWm = FallbackWorkManager(
+          repo: repo,
+          constraintsManager: _getConstraintsManager(platform),
+          workersProvider: workersProvider,
+          dateTimeProvider: dateTimeProvider,
+        );
+
+  static ConstraintsManager _getConstraintsManager(PlatformInfo platform) =>
+      ConstraintsManagerImpl(platform);
+
+  @override
+  Future<void> cancelById(String workId) async {
+    _timers.remove(workId);
+    await _fallbackWm.cancelById(workId);
+  }
+
+  @override
+  Future<void> init() async {
+    await _fallbackWm.init();
+    await _fallbackWm.executeAll();
+    await _registerTimers();
+  }
+
+  Future<void> _registerTimers() async {
+    for (final info in await _repo.getAll()) {
+      if (info.type != WorkType.periodic) {
+        continue;
+      }
+      _timers[info.id] = _buildTimer(
+        info.id,
+        info.frequency ?? _kDefaultFrequency,
+      );
+    }
+  }
+
+  @override
+  Future<void> registerOneTime({
+    required String workId,
+    required String workerName,
+    WorkParams? params,
+    Duration? initialDelay,
   }) async {
-    // TODO: implement registerPeriodic
-    throw UnimplementedError();
+    await _fallbackWm.registerOneTime(
+      workId: workId,
+      workerName: workerName,
+      params: params,
+      initialDelay: initialDelay,
+    );
+    await _fallbackWm.execute(workId);
+    _timers.remove(workId);
+  }
+
+  @override
+  Future<void> registerPeriodic({
+    required String workId,
+    required String workerName,
+    Duration? frequency,
+    WorkParams? params,
+  }) async {
+    final timer = _timers[workId];
+    if (timer != null &&
+        params?.existingWorkPolicy != ExistingWorkPolicy.replace) {
+      return;
+    }
+    _timers[workId] = _buildTimer(workId, frequency);
+    await _fallbackWm.registerPeriodic(
+      workId: workId,
+      workerName: workerName,
+      frequency: frequency,
+      params: params,
+    );
+  }
+
+  Timer _buildTimer(String workId, Duration? frequency) {
+    return Timer.periodic(
+      frequency ?? _kDefaultFrequency,
+      (timer) => _fallbackWm.execute(workId),
+    );
   }
 
   @override

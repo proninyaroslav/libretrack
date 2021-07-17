@@ -142,7 +142,7 @@ class FallbackWorkManager implements WorkManager {
   }
 
   Future<bool> _execute(WorkInfo info) async {
-    WorkResult result = const WorkResult.success();
+    WorkResult? result;
     final worker = _workersProvider.getWorkerByName(info.workerName);
     if (worker == null) {
       return false;
@@ -163,7 +163,7 @@ class FallbackWorkManager implements WorkManager {
         if (info.type == WorkType.oneTime) {
           await _repo.deleteWork(info);
         }
-        _printResult(result, info);
+        _printResult(result!, info);
       };
     } else {
       run = () async {
@@ -173,10 +173,12 @@ class FallbackWorkManager implements WorkManager {
             if (currentInfo == null) {
               return;
             }
-            await _repo.deleteWork(currentInfo);
+            if (info.type == WorkType.oneTime) {
+              await _repo.deleteWork(currentInfo);
+            }
             if (workAllowed) {
               result = await worker.doWork(currentInfo.inputData);
-              _printResult(result, currentInfo);
+              _printResult(result!, currentInfo);
             }
           },
         );
@@ -188,10 +190,11 @@ class FallbackWorkManager implements WorkManager {
       await run();
     }
 
-    return result.when(
-      success: () => true,
-      failure: () => false,
-    );
+    return result?.when(
+          success: () => true,
+          failure: () => false,
+        ) ??
+        true;
   }
 
   Future<bool> execute(String id) async {
