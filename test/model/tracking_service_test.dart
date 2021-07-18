@@ -113,7 +113,12 @@ void main() {
               locale: const Locale('ru', 'RU'),
             )).thenReturn(serviceRequest);
 
-        when(() => mockParser.parse(serviceResponse)).thenReturn(
+        when(
+          () => mockParser.parse(
+            serviceResponse,
+            locale: const Locale('ru', 'RU'),
+          ),
+        ).thenReturn(
           ParseResult(
             info: ShipmentInfo.from(
               trackNumber: trackService.trackNumber,

@@ -1,8 +1,28 @@
+// Copyright (C) 2021 Yaroslav Pronin <proninyaroslav@mail.ru>
+// Copyright (C) 2021 Insurgo Inc. <insurgo@riseup.net>
+//
+// This file is part of LibreTrack.
+//
+// LibreTrack is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+//
+// LibreTrack is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with LibreTrack.  If not, see <http://www.gnu.org/licenses/>.
+
+import 'package:flutter/foundation.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:libretrack/core/entity/entity.dart';
 import 'package:libretrack/core/model/parser.dart';
 import 'package:libretrack/core/model/service_response.dart';
 import 'package:libretrack/core/model/tracking_service/tracking_service.dart';
+import 'package:libretrack/core/model/type/locale.dart';
 import 'package:xml/xml.dart';
 
 void main() {
@@ -226,6 +246,346 @@ void main() {
         test('Russian message', () async {
           await _testInvalidTrackNumber(
             'Формат данных запроса не соответствует установленному в регламенте обмена',
+          );
+        });
+      });
+
+      group('Result |', () {
+        String _buildResult(
+          XmlBuilder builder, {
+          List<VoidCallback>? historyRecord,
+        }) {
+          builder.element(
+            'S:Envelope',
+            nest: () {
+              builder.element('S:Body', nest: () {
+                builder.element('ns7:getOperationHistoryResponse', nest: () {
+                  builder.element(
+                    'ns3:OperationHistoryData',
+                    nest: historyRecord?.map(
+                      (record) => builder.element(
+                        'ns3:historyRecord',
+                        nest: record,
+                      ),
+                    ),
+                  );
+                });
+              });
+            },
+          );
+          return builder.buildDocument().toXmlString();
+        }
+
+        test('Empty history record', () async {
+          final builder = XmlBuilder();
+          final payload = _buildResult(builder);
+          final response = ServiceResponse(
+            transactionId: const TransactionId('1'),
+            statusCode: 200,
+            payload: payload,
+          );
+
+          final result = parser.parse(response);
+          expect(result is ParseResultNoInfo, isTrue);
+        });
+
+        test('No barcode', () async {
+          final builder = XmlBuilder();
+          final payload = _buildResult(
+            builder,
+            historyRecord: [() {}],
+          );
+          final response = ServiceResponse(
+            transactionId: const TransactionId('1'),
+            statusCode: 200,
+            payload: payload,
+          );
+
+          final result = parser.parse(response);
+          result.maybeWhen(
+            (info, activity, alternateTracks) => throw result,
+            error: (e) => e is ParseErrorFormat,
+            orElse: () => throw result,
+          );
+        });
+
+        test('Shipper and receiver address', () async {
+          final builder = XmlBuilder();
+          final payload = _buildResult(
+            builder,
+            historyRecord: [
+              () => builder.element('ns3:AddressParameters', nest: () {
+                    builder.element('ns3:MailDirect', nest: () {
+                      builder.element('ns3:Code2A', nest: 'unreachable');
+                      builder.element('ns3:NameRU', nest: 'unreachable');
+                      builder.element('ns3:NameEN', nest: 'unreachable');
+                    });
+                    builder.element('ns3:DestinationAddress', nest: () {
+                      builder.element('ns3:Index', nest: 'unreachable');
+                      builder.element('ns3:Description', nest: 'unreachable');
+                    });
+                    builder.element('ns3:CountryFrom', nest: () {
+                      builder.element('ns3:Code2A', nest: 'unreachable');
+                      builder.element('ns3:NameRU', nest: 'unreachable');
+                      builder.element('ns3:NameEN', nest: 'unreachable');
+                    });
+                  }),
+              () {
+                builder.element('ns3:ItemParameters', nest: () {
+                  builder.element('ns3:Barcode', nest: '123');
+                });
+                builder.element('ns3:AddressParameters', nest: () {
+                  builder.element('ns3:MailDirect', nest: () {
+                    builder.element('ns3:Code2A', nest: 'RU');
+                    builder.element(
+                      'ns3:NameRU',
+                      nest: 'Российская Федерация',
+                    );
+                    builder.element('ns3:NameEN', nest: 'Russian Federation');
+                  });
+                  builder.element('ns3:DestinationAddress', nest: () {
+                    builder.element('ns3:Index', nest: '101000');
+                    builder.element('ns3:Description', nest: 'Moscow');
+                  });
+                  builder.element('ns3:CountryFrom', nest: () {
+                    builder.element('ns3:Code2A', nest: 'US');
+                    builder.element('ns3:NameRU', nest: 'Соединенные Штаты');
+                    builder.element('ns3:NameEN', nest: 'United States');
+                  });
+                });
+              }
+            ],
+          );
+          final expectedShipmentInfo = ShipmentInfo.from(
+            trackNumber: '123',
+            serviceType: PostalServiceType.russianPost,
+            shipperAddress: const Address(
+              location: 'United States',
+              countryCode: 'US',
+            ),
+            receiverAddress: const Address(
+              location: 'Moscow, Russian Federation',
+              postalCode: '101000',
+              countryCode: 'RU',
+            ),
+          );
+          final expectedRuShipmentInfo = ShipmentInfo.from(
+            trackNumber: '123',
+            serviceType: PostalServiceType.russianPost,
+            shipperAddress: const Address(
+              location: 'Соединенные Штаты',
+              countryCode: 'US',
+            ),
+            receiverAddress: const Address(
+              location: 'Moscow, Российская Федерация',
+              postalCode: '101000',
+              countryCode: 'RU',
+            ),
+          );
+          final response = ServiceResponse(
+            transactionId: const TransactionId('1'),
+            statusCode: 200,
+            payload: payload,
+          );
+
+          var result = parser.parse(response);
+          result.maybeWhen(
+            (info, activity, alternateTracks) {
+              expect(info, expectedShipmentInfo);
+            },
+            orElse: () => throw result,
+          );
+
+          result = parser.parse(response, locale: const Locale('ru'));
+          result.maybeWhen(
+            (info, activity, alternateTracks) {
+              expect(info, expectedRuShipmentInfo);
+            },
+            orElse: () => throw result,
+          );
+        });
+
+        test('Cash on delivery', () async {
+          final builder = XmlBuilder();
+          final payload = _buildResult(
+            builder,
+            historyRecord: [
+              () => builder.element('ns3:FinanceParameters', nest: () {
+                    builder.element('ns3:Payment', nest: 'unreachable');
+                  }),
+              () {
+                builder.element('ns3:ItemParameters', nest: () {
+                  builder.element('ns3:Barcode', nest: '123');
+                });
+                builder.element('ns3:FinanceParameters', nest: () {
+                  builder.element('ns3:Payment', nest: '10000');
+                });
+              }
+            ],
+          );
+          final expectedShipmentInfo = ShipmentInfo.from(
+            trackNumber: '123',
+            serviceType: PostalServiceType.russianPost,
+            cashOnDelivery: const CashOnDelivery(100, 'RUB'),
+          );
+          final response = ServiceResponse(
+            transactionId: const TransactionId('1'),
+            statusCode: 200,
+            payload: payload,
+          );
+
+          final result = parser.parse(response);
+          result.maybeWhen(
+            (info, activity, alternateTracks) {
+              expect(info, expectedShipmentInfo);
+            },
+            orElse: () => throw result,
+          );
+        });
+
+        test('Service description', () async {
+          final builder = XmlBuilder();
+          final payload = _buildResult(
+            builder,
+            historyRecord: [
+              () => builder.element('ns3:ItemParameters', nest: () {
+                    builder.element('ns3:MailType', nest: () {
+                      builder.element('ns3:Id', nest: 'unreachable');
+                      builder.element('ns3:Name', nest: 'unreachable');
+                    });
+                  }),
+              () => builder.element('ns3:ItemParameters', nest: () {
+                    builder.element('ns3:Barcode', nest: '123');
+                    builder.element('ns3:MailType', nest: () {
+                      builder.element('ns3:Id', nest: '7');
+                      builder.element('ns3:Name', nest: 'EMS');
+                    });
+                  }),
+            ],
+          );
+          final expectedShipmentInfo = ShipmentInfo.from(
+            trackNumber: '123',
+            serviceType: PostalServiceType.russianPost,
+            serviceDescription: 'EMS',
+            shipmentDescription: 'EMS',
+          );
+          final response = ServiceResponse(
+            transactionId: const TransactionId('1'),
+            statusCode: 200,
+            payload: payload,
+          );
+
+          final result = parser.parse(response);
+          result.maybeWhen(
+            (info, activity, alternateTracks) {
+              expect(info, expectedShipmentInfo);
+            },
+            orElse: () => throw result,
+          );
+        });
+
+        test('Shipment description', () async {
+          final builder = XmlBuilder();
+          final payload = _buildResult(
+            builder,
+            historyRecord: [
+              () => builder.element('ns3:ItemParameters', nest: () {
+                    builder.element('ns3:MailType', nest: () {
+                      builder.element('ns3:Id', nest: '4');
+                      builder.element('ns3:Name', nest: 'Package');
+                    });
+                    builder.element('ns3:MailCtg', nest: () {
+                      builder.element('ns3:Id', nest: 'unreachable');
+                      builder.element('ns3:Name', nest: 'unreachable');
+                    });
+                    builder.element('ns3:MailRank', nest: () {
+                      builder.element('ns3:Id', nest: 'unreachable');
+                      builder.element('ns3:Name', nest: 'unreachable');
+                    });
+                    builder.element('ns3:PostMark', nest: () {
+                      builder.element('ns3:Id', nest: 'unreachable');
+                      builder.element('ns3:Name', nest: 'unreachable');
+                    });
+                  }),
+              () => builder.element('ns3:ItemParameters', nest: () {
+                    builder.element('ns3:Barcode', nest: '123');
+                    builder.element('ns3:MailType', nest: () {
+                      builder.element('ns3:Id', nest: '4');
+                      builder.element('ns3:Name', nest: 'Package');
+                    });
+                    builder.element('ns3:MailCtg', nest: () {
+                      builder.element('ns3:Id', nest: '1');
+                      builder.element('ns3:Name', nest: 'With declared value');
+                    });
+                    builder.element('ns3:MailRank', nest: () {
+                      builder.element('ns3:Id', nest: '5');
+                      builder.element('ns3:Name', nest: 'Presidential');
+                    });
+                    builder.element('ns3:PostMark', nest: () {
+                      builder.element('ns3:Id', nest: '1');
+                      builder.element(
+                        'ns3:Name',
+                        nest: 'With a simple notification',
+                      );
+                    });
+                  }),
+            ],
+          );
+          final expectedShipmentInfo = ShipmentInfo.from(
+            trackNumber: '123',
+            serviceType: PostalServiceType.russianPost,
+            shipmentDescription: 'Package With declared value '
+                'Presidential With a simple notification',
+          );
+          final response = ServiceResponse(
+            transactionId: const TransactionId('1'),
+            statusCode: 200,
+            payload: payload,
+          );
+
+          final result = parser.parse(response);
+          result.maybeWhen(
+            (info, activity, alternateTracks) {
+              expect(info, expectedShipmentInfo);
+            },
+            orElse: () => throw result,
+          );
+        });
+
+        test('Weight', () async {
+          final builder = XmlBuilder();
+          final payload = _buildResult(
+            builder,
+            historyRecord: [
+              () => builder.element('ns3:ItemParameters', nest: () {
+                    builder.element('ns3:Mass', nest: 'unreachable');
+                  }),
+              () => builder.element('ns3:ItemParameters', nest: () {
+                    builder.element('ns3:Barcode', nest: '123');
+                    builder.element('ns3:Mass', nest: '1100');
+                  }),
+            ],
+          );
+          final expectedShipmentInfo = ShipmentInfo.from(
+            trackNumber: '123',
+            serviceType: PostalServiceType.russianPost,
+            weight: const UnitOfMeasurement(
+              value: 1.1,
+              measurement: Measurement.kilogram,
+            ),
+          );
+          final response = ServiceResponse(
+            transactionId: const TransactionId('1'),
+            statusCode: 200,
+            payload: payload,
+          );
+
+          final result = parser.parse(response);
+          result.maybeWhen(
+            (info, activity, alternateTracks) {
+              expect(info, expectedShipmentInfo);
+            },
+            orElse: () => throw result,
           );
         });
       });

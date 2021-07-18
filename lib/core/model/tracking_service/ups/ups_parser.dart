@@ -21,6 +21,7 @@ import 'dart:convert';
 import 'package:flutter/foundation.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:libretrack/core/entity/entity.dart';
+import 'package:libretrack/core/model/type/type.dart';
 
 import '../../parser.dart';
 import '../../service_response.dart';
@@ -29,7 +30,7 @@ part 'ups_parser.freezed.dart';
 
 class UPSParser implements Parser {
   @override
-  ParseResult parse(ServiceResponse response) {
+  ParseResult parse(ServiceResponse response, {Locale? locale}) {
     if (response.statusCode != 200) {
       return ParseResult.error(
         ParseError.serviceTemporary(
@@ -741,15 +742,15 @@ abstract class _FaultSeverity {
 }
 
 abstract class _FaultCode {
-  static const noInfoList = [
+  static const noInfoList = {
     '151044',
     '151045',
     '151062',
     '152110',
     '151019',
     '154030',
-  ];
-  static const badRequestList = [
+  };
+  static const badRequestList = {
     '10001',
     '10002',
     '10003',
@@ -762,14 +763,14 @@ abstract class _FaultCode {
     '250019',
     '150040',
     '9151000',
-  ];
-  static const invalidTrackNumberList = [
+  };
+  static const invalidTrackNumberList = {
     '150021',
     '150022',
     '151018',
     '154010',
     '9150002',
-  ];
+  };
 }
 
 abstract class _ResponseStatusCode {
