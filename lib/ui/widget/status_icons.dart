@@ -76,4 +76,16 @@ class StatusIconsData {
     iconColor: Colors.white,
     backgroundColor: Colors.blueGrey,
   );
+
+  static RRectIconData notDelivered = RRectIconData(
+    iconData: Icons.close,
+    iconColor: Colors.white,
+    backgroundColor: Colors.red.shade400,
+  );
+
+  static RRectIconData inStorage = RRectIconData(
+    iconData: Icons.inbox_outlined,
+    iconColor: Colors.white,
+    backgroundColor: Colors.yellow.shade600,
+  );
 }

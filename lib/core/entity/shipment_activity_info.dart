@@ -146,4 +146,28 @@ enum ShipmentStatusType {
 
   @JsonValue('other')
   other,
+
+  @JsonValue('notDelivered')
+  notDelivered,
+
+  @JsonValue('inStorage')
+  inStorage,
+
+  @JsonValue('inTransitArrivedWaypoint')
+  inTransitArrivedWaypoint,
+
+  @JsonValue('inTransitDepartedWaypoint')
+  inTransitDepartedWaypoint,
+
+  @JsonValue('exportedFromDepartureCountry')
+  exportedFromDepartureCountry,
+
+  @JsonValue('importedToDestinationCountry')
+  importedToDestinationCountry,
+
+  @JsonValue('arrivedAtCustoms')
+  arrivedAtCustoms,
+
+  @JsonValue('customsClearanceComplete')
+  customsClearanceComplete,
 }

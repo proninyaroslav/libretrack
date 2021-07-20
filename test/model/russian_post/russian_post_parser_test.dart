@@ -399,6 +399,7 @@ void main() {
           result = parser.parse(response, locale: const Locale('ru'));
           result.maybeWhen(
             (info, activity, alternateTracks) {
+              expect(activity, []);
               expect(info, expectedRuShipmentInfo);
             },
             orElse: () => throw result,
@@ -437,6 +438,7 @@ void main() {
           final result = parser.parse(response);
           result.maybeWhen(
             (info, activity, alternateTracks) {
+              expect(activity, []);
               expect(info, expectedShipmentInfo);
             },
             orElse: () => throw result,
@@ -478,6 +480,7 @@ void main() {
           final result = parser.parse(response);
           result.maybeWhen(
             (info, activity, alternateTracks) {
+              expect(activity, []);
               expect(info, expectedShipmentInfo);
             },
             orElse: () => throw result,
@@ -546,6 +549,7 @@ void main() {
           final result = parser.parse(response);
           result.maybeWhen(
             (info, activity, alternateTracks) {
+              expect(activity, []);
               expect(info, expectedShipmentInfo);
             },
             orElse: () => throw result,
@@ -583,7 +587,120 @@ void main() {
           final result = parser.parse(response);
           result.maybeWhen(
             (info, activity, alternateTracks) {
+              expect(activity, []);
               expect(info, expectedShipmentInfo);
+            },
+            orElse: () => throw result,
+          );
+        });
+
+        test('Activity', () async {
+          final builder = XmlBuilder();
+          final payload = _buildResult(
+            builder,
+            historyRecord: [
+              () {
+                builder.element('ns3:AddressParameters', nest: () {
+                  builder.element('ns3:OperationAddress', nest: () {
+                    builder.element('ns3:Index', nest: '101000');
+                    builder.element('ns3:Description', nest: 'Moscow');
+                  });
+                  builder.element('ns3:CountryOper', nest: () {
+                    builder.element('ns3:Code2A', nest: 'RU');
+                    builder.element(
+                      'ns3:NameEN',
+                      nest: 'Russian Federation',
+                    );
+                  });
+                });
+                builder.element('ns3:OperationParameters', nest: () {
+                  builder.element('ns3:OperType', nest: () {
+                    builder.element('ns3:Id', nest: '1');
+                    builder.element('ns3:Name', nest: 'Pickup');
+                  });
+                  builder.element('ns3:OperAttr', nest: () {
+                    builder.element('ns3:Id', nest: '3');
+                    builder.element('ns3:Name', nest: 'Info Received');
+                  });
+                  builder.element(
+                    'ns3:OperDate',
+                    nest: '2021-01-01T10:01:00.000+03:00',
+                  );
+                });
+              },
+              () => builder.element('ns3:OperationParameters', nest: () {
+                    builder.element('ns3:OperType', nest: () {
+                      builder.element('ns3:Id', nest: '1');
+                      builder.element('ns3:Name', nest: 'Pickup');
+                    });
+                    builder.element('ns3:OperAttr', nest: () {
+                      builder.element('ns3:Id', nest: '1');
+                      builder.element('ns3:Name', nest: 'Single');
+                    });
+                    builder.element('ns3:OperDate',
+                        nest: '2021-01-02T10:01:00.000+03:00');
+                  }),
+              () {
+                builder.element('ns3:ItemParameters', nest: () {
+                  builder.element('ns3:Barcode', nest: '123');
+                });
+                builder.element('ns3:OperationParameters', nest: () {
+                  builder.element('ns3:OperType', nest: () {
+                    builder.element('ns3:Id', nest: '2');
+                    builder.element('ns3:Name', nest: 'Delivered');
+                  });
+                  builder.element('ns3:OperDate',
+                      nest: '2021-01-03T10:01:00.000+03:00');
+                });
+              },
+            ],
+          );
+          const trackNumber = '123';
+          final expectedShipmentInfo = ShipmentInfo.from(
+            trackNumber: trackNumber,
+            serviceType:  PostalServiceType.russianPost,
+            pickupDate: DateTime.utc(2021, 1, 2, 7, 01),
+            deliveryDate: DateTime.utc(2021, 1, 3, 7, 01),
+          );
+          final expectedActivity = [
+            ShipmentActivityInfo.from(
+              trackNumber: trackNumber,
+              serviceType: PostalServiceType.russianPost,
+              statusType: ShipmentStatusType.delivered,
+              statusDescription: 'Delivered',
+              dateTime: expectedShipmentInfo.deliveryDate,
+            ),
+            ShipmentActivityInfo.from(
+              trackNumber: trackNumber,
+              serviceType: PostalServiceType.russianPost,
+              statusType: ShipmentStatusType.pickup,
+              statusDescription: 'Pickup - Single',
+              dateTime: expectedShipmentInfo.pickupDate,
+            ),
+            ShipmentActivityInfo.from(
+              trackNumber: trackNumber,
+              serviceType: PostalServiceType.russianPost,
+              statusType: ShipmentStatusType.infoReceived,
+              statusDescription: 'Pickup - Info Received',
+              activityLocation: const Address(
+                location: 'Moscow, Russian Federation',
+                postalCode: '101000',
+                countryCode: 'RU',
+              ),
+              dateTime: DateTime.utc(2021, 1, 1, 7, 01),
+            ),
+          ];
+          final response = ServiceResponse(
+            transactionId: const TransactionId('1'),
+            statusCode: 200,
+            payload: payload,
+          );
+
+          final result = parser.parse(response);
+          result.maybeWhen(
+            (info, activity, alternateTracks) {
+              expect(info, expectedShipmentInfo);
+              expect(activity, expectedActivity);
             },
             orElse: () => throw result,
           );

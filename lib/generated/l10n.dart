@@ -620,6 +620,86 @@ class S {
     );
   }
 
+  /// `Not delivered`
+  String get statusNotDelivered {
+    return Intl.message(
+      'Not delivered',
+      name: 'statusNotDelivered',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `In storage`
+  String get statusInStorage {
+    return Intl.message(
+      'In storage',
+      name: 'statusInStorage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Arrived at the waypoint`
+  String get statusInTransitArrivedWaypoint {
+    return Intl.message(
+      'Arrived at the waypoint',
+      name: 'statusInTransitArrivedWaypoint',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Departed from the waypoint`
+  String get statusInTransitDepartedWaypoint {
+    return Intl.message(
+      'Departed from the waypoint',
+      name: 'statusInTransitDepartedWaypoint',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Exported from the departure country`
+  String get statusExportedFromDepartureCountry {
+    return Intl.message(
+      'Exported from the departure country',
+      name: 'statusExportedFromDepartureCountry',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Imported to the destination country`
+  String get statusImportedToDestinationCountry {
+    return Intl.message(
+      'Imported to the destination country',
+      name: 'statusImportedToDestinationCountry',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Arrived at customs`
+  String get statusArrivedAtCustoms {
+    return Intl.message(
+      'Arrived at customs',
+      name: 'statusArrivedAtCustoms',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Customs clearance complete`
+  String get statusCustomsClearanceComplete {
+    return Intl.message(
+      'Customs clearance complete',
+      name: 'statusCustomsClearanceComplete',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `No tracking info available`
   String get trackingErrorNoInfo {
     return Intl.message(

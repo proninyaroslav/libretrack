@@ -350,12 +350,29 @@ class MessageLookup extends MessageLookupByLibrary {
         "squareMeterUnitShort": m26,
         "squareYardUnitShort": m27,
         "status": MessageLookupByLibrary.simpleMessage("Status"),
+        "statusArrivedAtCustoms":
+            MessageLookupByLibrary.simpleMessage("Arrived at customs"),
+        "statusCustomsClearanceComplete":
+            MessageLookupByLibrary.simpleMessage("Customs clearance complete"),
         "statusDelivered": MessageLookupByLibrary.simpleMessage("Delivered"),
+        "statusExportedFromDepartureCountry":
+            MessageLookupByLibrary.simpleMessage(
+                "Exported from the departure country"),
+        "statusImportedToDestinationCountry":
+            MessageLookupByLibrary.simpleMessage(
+                "Imported to the destination country"),
+        "statusInStorage": MessageLookupByLibrary.simpleMessage("In storage"),
         "statusInTransit": MessageLookupByLibrary.simpleMessage("In transit"),
+        "statusInTransitArrivedWaypoint":
+            MessageLookupByLibrary.simpleMessage("Arrived at the waypoint"),
+        "statusInTransitDepartedWaypoint":
+            MessageLookupByLibrary.simpleMessage("Departed from the waypoint"),
         "statusInfoReceived":
             MessageLookupByLibrary.simpleMessage("Info received"),
         "statusNotAvailable":
             MessageLookupByLibrary.simpleMessage("No tracking info yet"),
+        "statusNotDelivered":
+            MessageLookupByLibrary.simpleMessage("Not delivered"),
         "statusOutForDelivery":
             MessageLookupByLibrary.simpleMessage("Out for delivery"),
         "statusPickup": MessageLookupByLibrary.simpleMessage("Pickup"),

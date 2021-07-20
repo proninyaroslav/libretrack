@@ -357,12 +357,28 @@ class MessageLookup extends MessageLookupByLibrary {
         "squareMeterUnitShort": m26,
         "squareYardUnitShort": m27,
         "status": MessageLookupByLibrary.simpleMessage("Статус"),
+        "statusArrivedAtCustoms":
+            MessageLookupByLibrary.simpleMessage("Прибыло на таможню"),
+        "statusCustomsClearanceComplete":
+            MessageLookupByLibrary.simpleMessage("Покинуло таможню"),
         "statusDelivered": MessageLookupByLibrary.simpleMessage("Доставлено"),
+        "statusExportedFromDepartureCountry":
+            MessageLookupByLibrary.simpleMessage(
+                "Экспорт из страны отправления"),
+        "statusImportedToDestinationCountry":
+            MessageLookupByLibrary.simpleMessage("Импорт в страну назначения"),
+        "statusInStorage": MessageLookupByLibrary.simpleMessage("В хранении"),
         "statusInTransit": MessageLookupByLibrary.simpleMessage("В пути"),
+        "statusInTransitArrivedWaypoint": MessageLookupByLibrary.simpleMessage(
+            "Прибыл в промежуточный пункт"),
+        "statusInTransitDepartedWaypoint":
+            MessageLookupByLibrary.simpleMessage("Покинул промежуточный пункт"),
         "statusInfoReceived":
             MessageLookupByLibrary.simpleMessage("Информация получена"),
         "statusNotAvailable": MessageLookupByLibrary.simpleMessage(
             "Информации об отслеживании пока нет"),
+        "statusNotDelivered":
+            MessageLookupByLibrary.simpleMessage("Не доставлено"),
         "statusOutForDelivery":
             MessageLookupByLibrary.simpleMessage("Выдано для доставки"),
         "statusPickup": MessageLookupByLibrary.simpleMessage("Посылка принята"),

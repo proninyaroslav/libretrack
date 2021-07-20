@@ -176,6 +176,7 @@ class RussianPostParser implements Parser {
     _Cash? cashOnDelivery;
     String? serviceDescription, shipmentDescription;
     _Weight? weight;
+    _DateTime? pickupDate, deliveryDate;
     for (final record in historyRecords.toList().reversed) {
       Address? activityLocation;
       final itemParameters = record.getElement('ns3:ItemParameters');
@@ -217,14 +218,32 @@ class RussianPostParser implements Parser {
         weight ??= _parseWeight(itemParameters);
       }
 
-      activityList.add(
-        ShipmentActivityInfo.from(
-          trackNumber: trackNumber,
-          serviceType: PostalServiceType.russianPost,
-          statusType: ShipmentStatusType.delivered,
-          activityLocation: activityLocation,
-        ),
-      );
+      final operationParameters = record.getElement('ns3:OperationParameters');
+      _Status? status;
+      _DateTime? activityDateTime;
+      if (operationParameters != null) {
+        status ??= _parseStatus(operationParameters);
+        activityDateTime ??= _parseActivityDateTime(operationParameters);
+      }
+      if (status != null) {
+        if (pickupDate == null && status.type == ShipmentStatusType.pickup) {
+          pickupDate = activityDateTime;
+        }
+        if (deliveryDate == null &&
+            status.type == ShipmentStatusType.delivered) {
+          deliveryDate = activityDateTime;
+        }
+        activityList.add(
+          ShipmentActivityInfo.from(
+            trackNumber: trackNumber,
+            serviceType: PostalServiceType.russianPost,
+            statusType: status.type ?? ShipmentStatusType.notAvailable,
+            statusDescription: status.description,
+            activityLocation: activityLocation,
+            dateTime: activityDateTime?.toDateTime(),
+          ),
+        );
+      }
     }
 
     return ParseResult(
@@ -237,6 +256,8 @@ class RussianPostParser implements Parser {
         serviceDescription: serviceDescription,
         shipmentDescription: shipmentDescription,
         weight: weight?.toUnitOfMeasurement(),
+        deliveryDate: deliveryDate?.toDateTime(),
+        pickupDate: pickupDate?.toDateTime(),
       ),
       activity: activityList,
     );
@@ -367,6 +388,32 @@ class RussianPostParser implements Parser {
     final value = itemParameters.getElement('ns3:Mass')?.innerText;
     return value == null ? null : _Weight(value);
   }
+
+  _Status _parseStatus(XmlElement operationParameters) {
+    final type = operationParameters.getElement('ns3:OperType');
+    final typeId = type?.getElement('ns3:Id')?.innerText;
+    final typeName = type?.getElement('ns3:Name')?.innerText;
+
+    final attr = operationParameters.getElement('ns3:OperAttr');
+    final attrId = attr?.getElement('ns3:Id')?.innerText;
+    final attrName = attr?.getElement('ns3:Name')?.innerText;
+
+    final statusType = _shipmentStatusTypeMap['$typeId:$attrId'] ??
+        _shipmentStatusTypeMap[typeId];
+    final description = [
+      if (typeName != null) typeName,
+      if (attrName != null) attrName,
+    ].join(' - ');
+    return _Status(
+      type: statusType,
+      description: description.isEmpty ? null : description,
+    );
+  }
+
+  _DateTime? _parseActivityDateTime(XmlElement operationParameters) {
+    final date = operationParameters.getElement('ns3:OperDate')?.innerText;
+    return date == null ? null : _DateTime(date);
+  }
 }
 
 class _SoapErrorCode {
@@ -412,6 +459,34 @@ class _Cash {
       CashOnDelivery(int.parse(value) ~/ 100, 'RUB');
 }
 
+class _Weight {
+  String value;
+
+  _Weight(this.value);
+
+  UnitOfMeasurement toUnitOfMeasurement() => UnitOfMeasurement(
+        value: int.parse(value) / 1000,
+        measurement: Measurement.kilogram,
+      );
+}
+
+class _Status {
+  final ShipmentStatusType? type;
+  final String? description;
+
+  _Status({required this.type, this.description});
+}
+
+class _DateTime {
+  final String dateTime;
+
+  const _DateTime(this.dateTime);
+
+  DateTime? toDateTime() => DateTime.tryParse(dateTime);
+}
+
+const _undefinedIdCode = '0';
+
 const _nonServiceMailId = {
   '1',
   '2',
@@ -426,15 +501,106 @@ const _nonServiceMailId = {
   '14',
 };
 
-const _undefinedIdCode = '0';
-
-class _Weight {
-  String value;
-
-  _Weight(this.value);
-
-  UnitOfMeasurement toUnitOfMeasurement() => UnitOfMeasurement(
-        value: int.parse(value) / 1000,
-        measurement: Measurement.kilogram,
-      );
-}
+/// Format: "operType:operAttr": status
+const _shipmentStatusTypeMap = <String, ShipmentStatusType>{
+  '1': ShipmentStatusType.pickup,
+  '1:3': ShipmentStatusType.infoReceived,
+  '2': ShipmentStatusType.delivered,
+  '3': ShipmentStatusType.returnedToShipper,
+  '4': ShipmentStatusType.inTransit,
+  '5': ShipmentStatusType.notDelivered,
+  '6': ShipmentStatusType.inStorage,
+  '7': ShipmentStatusType.inStorage,
+  '8': ShipmentStatusType.inTransit,
+  '8:1': ShipmentStatusType.inTransitDepartedWaypoint,
+  '8:2': ShipmentStatusType.outForDelivery,
+  '8:3': ShipmentStatusType.inTransitArrivedWaypoint,
+  '8:4': ShipmentStatusType.inTransitDepartedWaypoint,
+  '8:5': ShipmentStatusType.inTransitArrivedWaypoint,
+  '8:6': ShipmentStatusType.inTransitDepartedWaypoint,
+  '8:7': ShipmentStatusType.inTransitArrivedWaypoint,
+  '8:8': ShipmentStatusType.inTransitDepartedWaypoint,
+  '8:9': ShipmentStatusType.outForDelivery,
+  '8:10': ShipmentStatusType.outForDelivery,
+  '8:13': ShipmentStatusType.importedToDestinationCountry,
+  '8:14': ShipmentStatusType.outForDelivery,
+  '8:15': ShipmentStatusType.outForDelivery,
+  '8:16': ShipmentStatusType.outForDelivery,
+  '8:17': ShipmentStatusType.inTransitDepartedWaypoint,
+  '8:18': ShipmentStatusType.outForDelivery,
+  '8:19': ShipmentStatusType.inStorage,
+  '8:20': ShipmentStatusType.inTransitDepartedWaypoint,
+  '8:23': ShipmentStatusType.outForDelivery,
+  '8:24': ShipmentStatusType.outForDelivery,
+  '8:25': ShipmentStatusType.outForDelivery,
+  '8:26': ShipmentStatusType.other,
+  '8:27': ShipmentStatusType.outForDelivery,
+  '8:28': ShipmentStatusType.outForDelivery,
+  '8:29': ShipmentStatusType.other,
+  '8:30': ShipmentStatusType.inTransitArrivedWaypoint,
+  '8:31': ShipmentStatusType.inTransitDepartedWaypoint,
+  '8:33': ShipmentStatusType.outForDelivery,
+  '8:34': ShipmentStatusType.other,
+  '8:35': ShipmentStatusType.outForDelivery,
+  '8:37': ShipmentStatusType.outForDelivery,
+  '8:38': ShipmentStatusType.outForDelivery,
+  '8:40': ShipmentStatusType.notDelivered,
+  '8:41': ShipmentStatusType.returnedToShipper,
+  '8:42': ShipmentStatusType.outForDelivery,
+  '8:43': ShipmentStatusType.outForDelivery,
+  '8:47': ShipmentStatusType.other,
+  '8:50': ShipmentStatusType.other,
+  '9': ShipmentStatusType.importedToDestinationCountry,
+  '10': ShipmentStatusType.exportedFromDepartureCountry,
+  '11': ShipmentStatusType.arrivedAtCustoms,
+  '12': ShipmentStatusType.notDelivered,
+  '13': ShipmentStatusType.infoReceived,
+  '14': ShipmentStatusType.arrivedAtCustoms,
+  '14:1': ShipmentStatusType.customsClearanceComplete,
+  '14:16': ShipmentStatusType.customsClearanceComplete,
+  '15': ShipmentStatusType.inTransit,
+  '16': ShipmentStatusType.notDelivered,
+  '17': ShipmentStatusType.other,
+  '18': ShipmentStatusType.notDelivered,
+  '19': ShipmentStatusType.other,
+  '20': ShipmentStatusType.infoReceived,
+  '21': ShipmentStatusType.delivered,
+  '22': ShipmentStatusType.notDelivered,
+  '23': ShipmentStatusType.inStorage,
+  '24': ShipmentStatusType.inTransit,
+  '25': ShipmentStatusType.other,
+  '26': ShipmentStatusType.other,
+  '27': ShipmentStatusType.infoReceived,
+  '28': ShipmentStatusType.infoReceived,
+  '29': ShipmentStatusType.importedToDestinationCountry,
+  '30': ShipmentStatusType.inTransit,
+  '31': ShipmentStatusType.inTransit,
+  '31:21': ShipmentStatusType.inTransitArrivedWaypoint,
+  '31:23': ShipmentStatusType.importedToDestinationCountry,
+  '31:40': ShipmentStatusType.inTransitArrivedWaypoint,
+  '32': ShipmentStatusType.inTransit,
+  '33': ShipmentStatusType.inTransit,
+  '33:1': ShipmentStatusType.inTransitDepartedWaypoint,
+  '33:2': ShipmentStatusType.inTransitArrivedWaypoint,
+  '34': ShipmentStatusType.other,
+  '35': ShipmentStatusType.notDelivered,
+  '36': ShipmentStatusType.other,
+  '37': ShipmentStatusType.infoReceived,
+  '38': ShipmentStatusType.inTransit,
+  '39': ShipmentStatusType.inTransit,
+  '40': ShipmentStatusType.inTransit,
+  '41': ShipmentStatusType.other,
+  '42': ShipmentStatusType.notDelivered,
+  '42:8': ShipmentStatusType.outForDelivery,
+  '42:9': ShipmentStatusType.outForDelivery,
+  '43': ShipmentStatusType.other,
+  '44': ShipmentStatusType.other,
+  '45': ShipmentStatusType.other,
+  '46': ShipmentStatusType.other,
+  '47': ShipmentStatusType.other,
+  '48': ShipmentStatusType.other,
+  '49': ShipmentStatusType.other,
+  '50': ShipmentStatusType.notDelivered,
+  '51': ShipmentStatusType.notDelivered,
+  '52': ShipmentStatusType.other,
+};
