@@ -1,3 +1,23 @@
+/*
+ * Copyright (C) 2021 Yaroslav Pronin <proninyaroslav@mail.ru>
+ * Copyright (C) 2021 Insurgo Inc. <insurgo@riseup.net>
+ *
+ * This file is part of LibreTrack.
+ *
+ * LibreTrack is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * LibreTrack is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with LibreTrack.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
 #include "my_application.h"
 
 #include <flutter_linux/flutter_linux.h>
@@ -15,6 +35,10 @@ struct _MyApplication {
 };
 
 G_DEFINE_TYPE(MyApplication, my_application, GTK_TYPE_APPLICATION)
+
+const char *WINDOWS_TITLE = "LibreTrack";
+const unsigned int WINDOW_WINDTH = 1280;
+const unsigned int WINDOW_HEIGHT = 720;
 
 // Implements GApplication::activate.
 static void my_application_activate(GApplication *application)
@@ -42,14 +66,19 @@ static void my_application_activate(GApplication *application)
     if (use_header_bar) {
         GtkHeaderBar *header_bar = GTK_HEADER_BAR(gtk_header_bar_new());
         gtk_widget_show(GTK_WIDGET(header_bar));
-        gtk_header_bar_set_title(header_bar, "LibreTrack");
+        gtk_header_bar_set_title(header_bar, WINDOWS_TITLE);
         gtk_header_bar_set_show_close_button(header_bar, TRUE);
         gtk_window_set_titlebar(window, GTK_WIDGET(header_bar));
     } else {
-        gtk_window_set_title(window, "LibreTrack");
+        gtk_window_set_title(window, WINDOWS_TITLE);
     }
 
-    gtk_window_set_default_size(window, 1280, 720);
+    GdkWindow *gdk_window = gtk_widget_get_window(GTK_WIDGET(window));
+    gint scale_factor = gdk_window_get_scale_factor(gdk_window);
+    gtk_window_set_default_size(window,
+        WINDOW_WINDTH / scale_factor,
+        WINDOW_HEIGHT / scale_factor);
+
     gtk_widget_show(GTK_WIDGET(window));
 
     g_autoptr(FlDartProject) project = fl_dart_project_new();
