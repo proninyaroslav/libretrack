@@ -48,6 +48,7 @@ static void show_hide_window()
     if (gtk_widget_is_visible(GTK_WIDGET(window))) {
         gtk_widget_hide(GTK_WIDGET(window));
     } else {
+        gtk_window_deiconify(window);
         gtk_widget_show(GTK_WIDGET(window));
     }
 }
