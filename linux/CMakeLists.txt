@@ -42,6 +42,7 @@ add_subdirectory(${FLUTTER_MANAGED_DIR})
 # System-level dependencies.
 find_package(PkgConfig REQUIRED)
 pkg_check_modules(GTK REQUIRED IMPORTED_TARGET gtk+-3.0)
+pkg_check_modules(APPINDICATOR REQUIRED appindicator3-0.1)
 
 add_definitions(-DAPPLICATION_ID="${APPLICATION_ID}")
 
@@ -55,6 +56,11 @@ apply_standard_settings(${BINARY_NAME})
 target_link_libraries(${BINARY_NAME} PRIVATE flutter)
 target_link_libraries(${BINARY_NAME} PRIVATE PkgConfig::GTK)
 add_dependencies(${BINARY_NAME} flutter_assemble)
+# AppIndicator
+find_library(APPINDICATOR_LIBRARY NAMES appindicator3)
+target_link_libraries(${BINARY_NAME} PRIVATE ${APPINDICATOR_LIBRARY})
+target_include_directories(${BINARY_NAME} PRIVATE ${APPINDICATOR_INCLUDE_DIRS})
+
 # Only the install-generated bundle's copy of the executable will launch
 # correctly, since the resources must in the right relative locations. To avoid
 # people trying to run the unbundled copy, put it in a subdirectory instead of

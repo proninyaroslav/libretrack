@@ -24,6 +24,7 @@
 #ifdef GDK_WINDOWING_X11
 #include <gdk/gdkx.h>
 #endif
+#include <libappindicator/app-indicator.h>
 
 #include <string_view>
 
@@ -40,11 +41,64 @@ const char *WINDOWS_TITLE = "LibreTrack";
 const unsigned int WINDOW_WINDTH = 1280;
 const unsigned int WINDOW_HEIGHT = 720;
 
+GtkWindow *window = nullptr;
+
+static void show_hide_window()
+{
+    if (gtk_widget_is_visible(GTK_WIDGET(window))) {
+        gtk_widget_hide(GTK_WIDGET(window));
+    } else {
+        gtk_widget_show(GTK_WIDGET(window));
+    }
+}
+
+static void quit(GtkMenuItem *item, gpointer application)
+{
+    g_application_quit(G_APPLICATION(application));
+}
+
+static void build_app_indicator(GApplication *application)
+{
+    AppIndicator *indicator;
+    GtkWidget *indicator_menu;
+    GtkWidget *show_hide_button;
+    GtkWidget *quit_button;
+
+    indicator = app_indicator_new(
+        "libretrack",
+        "libretrack",
+        APP_INDICATOR_CATEGORY_APPLICATION_STATUS);
+    app_indicator_set_status(indicator, APP_INDICATOR_STATUS_ACTIVE);
+
+    indicator_menu = gtk_menu_new();
+
+    show_hide_button = gtk_menu_item_new_with_label("Show/Hide");
+    g_signal_connect(
+        show_hide_button,
+        "activate",
+        G_CALLBACK(show_hide_window),
+        nullptr);
+    gtk_menu_shell_insert(GTK_MENU_SHELL(indicator_menu), show_hide_button, 0);
+    gtk_widget_show(show_hide_button);
+
+    quit_button = gtk_menu_item_new_with_label("Quit");
+    g_signal_connect(
+        quit_button,
+        "activate",
+        G_CALLBACK(quit),
+        application);
+    gtk_menu_shell_insert(GTK_MENU_SHELL(indicator_menu), quit_button, 1);
+    gtk_widget_show(quit_button);
+
+    app_indicator_set_menu(indicator, GTK_MENU(indicator_menu));
+    gtk_widget_show_all(indicator_menu);
+}
+
 // Implements GApplication::activate.
 static void my_application_activate(GApplication *application)
 {
     MyApplication *self = MY_APPLICATION(application);
-    GtkWindow *window = GTK_WINDOW(gtk_application_window_new(GTK_APPLICATION(application)));
+    window = GTK_WINDOW(gtk_application_window_new(GTK_APPLICATION(application)));
 
     // Use a header bar when running in GNOME as this is the common style used
     // by applications and is the setup most users will be using (e.g. Ubuntu
@@ -73,13 +127,20 @@ static void my_application_activate(GApplication *application)
         gtk_window_set_title(window, WINDOWS_TITLE);
     }
 
+    g_signal_connect(
+        window,
+        "delete-event",
+        G_CALLBACK(show_hide_window),
+        nullptr);
+    gtk_window_set_icon_name(window, "libretrack");
+    gtk_window_set_default_size(window, WINDOW_WINDTH, WINDOW_HEIGHT);
+    gtk_widget_show(GTK_WIDGET(window));
+
     GdkWindow *gdk_window = gtk_widget_get_window(GTK_WIDGET(window));
     gint scale_factor = gdk_window_get_scale_factor(gdk_window);
-    gtk_window_set_default_size(window,
+    gtk_widget_set_size_request(GTK_WIDGET(window),
         WINDOW_WINDTH / scale_factor,
         WINDOW_HEIGHT / scale_factor);
-
-    gtk_widget_show(GTK_WIDGET(window));
 
     g_autoptr(FlDartProject) project = fl_dart_project_new();
     fl_dart_project_set_dart_entrypoint_arguments(project, self->dart_entrypoint_arguments);
@@ -91,6 +152,8 @@ static void my_application_activate(GApplication *application)
     fl_register_plugins(FL_PLUGIN_REGISTRY(view));
 
     gtk_widget_grab_focus(GTK_WIDGET(view));
+
+    build_app_indicator(application);
 }
 
 // Implements GApplication::local_command_line.
