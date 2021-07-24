@@ -28,7 +28,6 @@
 #include <glib/gi18n.h>
 
 #include <string_view>
-#include <locale>
 
 #include "flutter/generated_plugin_registrant.h"
 
