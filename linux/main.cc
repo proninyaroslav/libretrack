@@ -20,8 +20,15 @@
 
 #include "my_application.h"
 
+#include <glib/gi18n.h>
+#include <locale>
+
 int main(int argc, char **argv)
 {
+    setlocale(LC_ALL, "");
+    bindtextdomain(GETTEXT_PACKAGE, GETTEXT_LOCALE_DIR);
+    textdomain(GETTEXT_PACKAGE);
+
     g_autoptr(MyApplication) app = my_application_new();
     return g_application_run(G_APPLICATION(app), argc, argv);
 }

@@ -25,8 +25,10 @@
 #include <gdk/gdkx.h>
 #endif
 #include <libappindicator/app-indicator.h>
+#include <glib/gi18n.h>
 
 #include <string_view>
+#include <locale>
 
 #include "flutter/generated_plugin_registrant.h"
 
@@ -73,7 +75,7 @@ static void build_app_indicator(GApplication *application)
 
     indicator_menu = gtk_menu_new();
 
-    show_hide_button = gtk_menu_item_new_with_label("Show/Hide");
+    show_hide_button = gtk_menu_item_new_with_label(gettext("Show/Hide"));
     g_signal_connect(
         show_hide_button,
         "activate",
@@ -82,7 +84,7 @@ static void build_app_indicator(GApplication *application)
     gtk_menu_shell_insert(GTK_MENU_SHELL(indicator_menu), show_hide_button, 0);
     gtk_widget_show(show_hide_button);
 
-    quit_button = gtk_menu_item_new_with_label("Quit");
+    quit_button = gtk_menu_item_new_with_label(gettext("Quit"));
     g_signal_connect(
         quit_button,
         "activate",
@@ -192,7 +194,7 @@ static void my_application_class_init(MyApplicationClass *klass)
     G_OBJECT_CLASS(klass)->dispose = my_application_dispose;
 }
 
-static void my_application_init(MyApplication *self) { }
+static void my_application_init(MyApplication *self) {}
 
 MyApplication *my_application_new()
 {
