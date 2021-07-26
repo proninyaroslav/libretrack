@@ -35,6 +35,7 @@ enum PostalServiceType {
   TrackingServiceTypeConverter,
 ])
 @Entity(
+  primaryKeys: ['type', 'trackingServiceType'],
   foreignKeys: [
     ForeignKey(
       entity: TrackingServiceInfo,
@@ -45,10 +46,8 @@ enum PostalServiceType {
   ],
 )
 class PostalServiceInfo extends Equatable {
-  @primaryKey
   final PostalServiceType type;
 
-  @primaryKey
   final TrackingServiceType trackingServiceType;
 
   /// Used to select a service for tracking in order of priority.

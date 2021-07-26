@@ -84,6 +84,10 @@ final migrations = [
       await txn.execute(
         'CREATE TABLE IF NOT EXISTS `AuthDataField_new` (`key` TEXT NOT NULL, `value` TEXT NOT NULL, `serviceType` TEXT NOT NULL, FOREIGN KEY (`serviceType`) REFERENCES `TrackingServiceInfo` (`type`) ON UPDATE NO ACTION ON DELETE CASCADE, PRIMARY KEY (`key`, `serviceType`))',
       );
+      // Create the new PostalServiceInfo table
+      await txn.execute(
+        'CREATE TABLE IF NOT EXISTS `PostalServiceInfo_new` (`type` TEXT NOT NULL, `trackingServiceType` TEXT NOT NULL, `priority` INTEGER NOT NULL, FOREIGN KEY (`trackingServiceType`) REFERENCES `TrackingServiceInfo` (`type`) ON UPDATE NO ACTION ON DELETE CASCADE, PRIMARY KEY (`type`, `trackingServiceType`))',
+      );
 
       // Copy the data
       await txn.execute(
@@ -92,11 +96,16 @@ final migrations = [
       await txn.execute(
         'INSERT INTO `AuthDataField_new` (`key`, `value`, `serviceType`) SELECT `key`, `value`, `serviceType` FROM `AuthDataField`',
       );
+      await txn.execute(
+        'INSERT INTO `PostalServiceInfo_new` (`type`, `trackingServiceType`, `priority`) SELECT `type`, `trackingServiceType`, `priority` FROM `PostalServiceInfo`',
+      );
 
       // Delete the old ShipmentInfo table
       await txn.execute('DROP TABLE `ShipmentInfo`');
       // Delete the old AuthDataField table
       await txn.execute('DROP TABLE `AuthDataField`');
+      // Delete the old PostalServiceInfo table
+      await txn.execute('DROP TABLE `PostalServiceInfo`');
 
       // Change the new ShipmentInfo table name
       await txn.execute(
@@ -105,6 +114,10 @@ final migrations = [
       // Change the new AuthDataField table name
       await txn.execute(
         'ALTER TABLE `AuthDataField_new` RENAME TO `AuthDataField`',
+      );
+      // Change the new PostalServiceInfo table name
+      await txn.execute(
+        'ALTER TABLE `PostalServiceInfo_new` RENAME TO `PostalServiceInfo`',
       );
     });
   }),

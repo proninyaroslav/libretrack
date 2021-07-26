@@ -99,7 +99,7 @@ class _$AppDatabase extends AppDatabase {
         await database.execute(
             'CREATE TABLE IF NOT EXISTS `AuthDataField` (`key` TEXT NOT NULL, `value` TEXT NOT NULL, `serviceType` TEXT NOT NULL, FOREIGN KEY (`serviceType`) REFERENCES `TrackingServiceInfo` (`type`) ON UPDATE NO ACTION ON DELETE CASCADE, PRIMARY KEY (`key`, `serviceType`))');
         await database.execute(
-            'CREATE TABLE IF NOT EXISTS `PostalServiceInfo` (`type` TEXT NOT NULL, `trackingServiceType` TEXT NOT NULL, `priority` INTEGER NOT NULL, FOREIGN KEY (`trackingServiceType`) REFERENCES `TrackingServiceInfo` (`type`) ON UPDATE NO ACTION ON DELETE CASCADE, PRIMARY KEY (`type`))');
+            'CREATE TABLE IF NOT EXISTS `PostalServiceInfo` (`type` TEXT NOT NULL, `trackingServiceType` TEXT NOT NULL, `priority` INTEGER NOT NULL, FOREIGN KEY (`trackingServiceType`) REFERENCES `TrackingServiceInfo` (`type`) ON UPDATE NO ACTION ON DELETE CASCADE, PRIMARY KEY (`type`, `trackingServiceType`))');
         await database.execute(
             'CREATE TABLE IF NOT EXISTS `TrackNumberInfo` (`trackNumber` TEXT NOT NULL, `description` TEXT, `isArchived` INTEGER NOT NULL, `dateAdded` INTEGER, PRIMARY KEY (`trackNumber`))');
         await database.execute(
