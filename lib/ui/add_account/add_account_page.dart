@@ -246,7 +246,6 @@ class _StepperState extends State<_Stepper> {
 
   Widget? _getAccountTypeSubtitle() {
     if (_selectedService != null &&
-        _selectedService == TrackingServiceType.ups &&
         _currentStep != _StepperSteps.selectAccountType) {
       final metadata = TrackingServiceMetadataMapper.of(
         context,
