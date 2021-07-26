@@ -92,8 +92,8 @@ class ServiceRepositoryImpl implements ServiceRepository {
         );
       }).toList();
 
-      await _authStorage.insert(type: info.type, authData: authData);
       await _db.trackingServiceDao.addService(info);
+      await _authStorage.insert(type: info.type, authData: authData);
       await _db.postalServiceDao.add(supportedServicesInfo);
       return StorageResult.empty;
     } on Exception catch (e, stackTrace) {

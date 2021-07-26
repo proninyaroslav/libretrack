@@ -76,22 +76,35 @@ abstract class AppDatabaseModule {
 final migrations = [
   Migration(1, 2, (db) async {
     await db.transaction((txn) async {
-      // Create the new table
+      // Create the new ShipmentInfo table
       await txn.execute(
         'CREATE TABLE IF NOT EXISTS `ShipmentInfo_new` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `trackNumber` TEXT NOT NULL, `serviceType` TEXT NOT NULL, `serviceDescription` TEXT, `shipmentDescription` TEXT, `signedForByName` TEXT, `pickupDate` INTEGER, `deliveryDate` INTEGER, `estimatedDeliveryDate` INTEGER, `scheduledDeliveryDate` INTEGER, `serviceMessage` TEXT, `cashOnDelivery_value` REAL, `cashOnDelivery_currencyCode` TEXT, `shipper_location` TEXT, `shipper_postalCode` TEXT, `shipper_countryCode` TEXT, `receiver_location` TEXT, `receiver_postalCode` TEXT, `receiver_countryCode` TEXT, `weight_Value` REAL, `weight_Measurement` TEXT, `volume_Value` REAL, `volume_Measurement` TEXT, FOREIGN KEY (`trackNumber`) REFERENCES `TrackNumberInfo` (`trackNumber`) ON UPDATE NO ACTION ON DELETE CASCADE)',
+      );
+      // Create the new AuthDataField table
+      await txn.execute(
+        'CREATE TABLE IF NOT EXISTS `AuthDataField_new` (`key` TEXT NOT NULL, `value` TEXT NOT NULL, `serviceType` TEXT NOT NULL, FOREIGN KEY (`serviceType`) REFERENCES `TrackingServiceInfo` (`type`) ON UPDATE NO ACTION ON DELETE CASCADE, PRIMARY KEY (`key`, `serviceType`))',
       );
 
       // Copy the data
       await txn.execute(
         'INSERT INTO `ShipmentInfo_new` (`id`, `trackNumber`, `serviceType`, `serviceDescription`, `shipmentDescription`, `signedForByName`, `pickupDate`, `deliveryDate`, `estimatedDeliveryDate`, `scheduledDeliveryDate`, `serviceMessage`, `cashOnDelivery_value`, `cashOnDelivery_currencyCode`, `shipper_location`, `shipper_postalCode`, `shipper_countryCode`, `receiver_location`, `receiver_postalCode`, `receiver_countryCode`, `weight_Value`, `weight_Measurement`, `volume_Value`, `volume_Measurement`) SELECT `id`, `trackNumber`, `serviceType`, `serviceDescription`, `shipmentDescription`, `signedForByName`, `pickupDate`, `deliveryDate`, `estimatedDeliveryDate`, `scheduledDeliveryDate`, `serviceMessage`, `cashOnDelivery_value`, `cashOnDelivery_currencyCode`, `shipper_location`, `shipper_postalCode`, `shipper_countryCode`, `receiver_location`, `receiver_postalCode`, `receiver_countryCode`, `weight_Value`, `weight_Measurement`, `volume_Value`, `volume_Measurement` FROM `ShipmentInfo`',
       );
+      await txn.execute(
+        'INSERT INTO `AuthDataField_new` (`key`, `value`, `serviceType`) SELECT `key`, `value`, `serviceType` FROM `AuthDataField`',
+      );
 
-      // Delete the old table
+      // Delete the old ShipmentInfo table
       await txn.execute('DROP TABLE `ShipmentInfo`');
+      // Delete the old AuthDataField table
+      await txn.execute('DROP TABLE `AuthDataField`');
 
-      // Change the new table name
+      // Change the new ShipmentInfo table name
       await txn.execute(
         'ALTER TABLE `ShipmentInfo_new` RENAME TO `ShipmentInfo`',
+      );
+      // Change the new AuthDataField table name
+      await txn.execute(
+        'ALTER TABLE `AuthDataField_new` RENAME TO `AuthDataField`',
       );
     });
   }),
