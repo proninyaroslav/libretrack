@@ -293,7 +293,7 @@ class _StepperState extends State<_Stepper> {
 
 class _ServicesList extends StatelessWidget {
   final List<TrackingServiceType> nonExistenServices;
-  final Function(TrackingServiceType)? onTap;
+  final ValueChanged<TrackingServiceType>? onTap;
 
   const _ServicesList({
     Key? key,
