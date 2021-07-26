@@ -744,7 +744,6 @@ abstract class _FaultSeverity {
 abstract class _FaultCode {
   static const noInfoList = {
     '151044',
-    '151045',
     '151062',
     '152110',
     '151019',
@@ -770,6 +769,7 @@ abstract class _FaultCode {
     '151018',
     '154010',
     '9150002',
+    '151045',
   };
 }
 
