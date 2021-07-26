@@ -456,7 +456,7 @@ class _Cash {
   _Cash(this.value);
 
   CashOnDelivery toCashValue() =>
-      CashOnDelivery(int.parse(value) ~/ 100, 'RUB');
+      CashOnDelivery(int.parse(value) / 100, 'RUB');
 }
 
 class _Weight {

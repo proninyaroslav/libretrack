@@ -419,7 +419,7 @@ void main() {
                   builder.element('ns3:Barcode', nest: '123');
                 });
                 builder.element('ns3:FinanceParameters', nest: () {
-                  builder.element('ns3:Payment', nest: '10000');
+                  builder.element('ns3:Payment', nest: '10010');
                 });
               }
             ],
@@ -427,7 +427,7 @@ void main() {
           final expectedShipmentInfo = ShipmentInfo.from(
             trackNumber: '123',
             serviceType: PostalServiceType.russianPost,
-            cashOnDelivery: const CashOnDelivery(100, 'RUB'),
+            cashOnDelivery: const CashOnDelivery(100.1, 'RUB'),
           );
           final response = ServiceResponse(
             transactionId: const TransactionId('1'),

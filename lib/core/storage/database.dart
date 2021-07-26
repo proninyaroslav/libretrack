@@ -29,7 +29,7 @@ import 'dao/dao.dart';
 
 part 'database.g.dart';
 
-@Database(version: 1, entities: [
+@Database(version: 2, entities: [
   TrackingServiceInfo,
   AuthDataField,
   PostalServiceInfo,
@@ -63,10 +63,36 @@ abstract class AppDatabase extends FloorDatabase {
 @module
 abstract class AppDatabaseModule {
   @Singleton(env: [Env.prod, Env.dev])
-  Future<AppDatabase> get db async =>
-      $FloorAppDatabase.databaseBuilder('libretrack.db').build();
+  Future<AppDatabase> get db async => $FloorAppDatabase
+      .databaseBuilder('libretrack.db')
+      .addMigrations(migrations)
+      .build();
 
   @Singleton(env: [Env.test])
   Future<AppDatabase> get inMemoryDb async =>
       $FloorAppDatabase.inMemoryDatabaseBuilder().build();
 }
+
+final migrations = [
+  Migration(1, 2, (db) async {
+    await db.transaction((txn) async {
+      // Create the new table
+      await txn.execute(
+        'CREATE TABLE IF NOT EXISTS `ShipmentInfo_new` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `trackNumber` TEXT NOT NULL, `serviceType` TEXT NOT NULL, `serviceDescription` TEXT, `shipmentDescription` TEXT, `signedForByName` TEXT, `pickupDate` INTEGER, `deliveryDate` INTEGER, `estimatedDeliveryDate` INTEGER, `scheduledDeliveryDate` INTEGER, `serviceMessage` TEXT, `cashOnDelivery_value` REAL, `cashOnDelivery_currencyCode` TEXT, `shipper_location` TEXT, `shipper_postalCode` TEXT, `shipper_countryCode` TEXT, `receiver_location` TEXT, `receiver_postalCode` TEXT, `receiver_countryCode` TEXT, `weight_Value` REAL, `weight_Measurement` TEXT, `volume_Value` REAL, `volume_Measurement` TEXT, FOREIGN KEY (`trackNumber`) REFERENCES `TrackNumberInfo` (`trackNumber`) ON UPDATE NO ACTION ON DELETE CASCADE)',
+      );
+
+      // Copy the data
+      await txn.execute(
+        'INSERT INTO `ShipmentInfo_new` (`id`, `trackNumber`, `serviceType`, `serviceDescription`, `shipmentDescription`, `signedForByName`, `pickupDate`, `deliveryDate`, `estimatedDeliveryDate`, `scheduledDeliveryDate`, `serviceMessage`, `cashOnDelivery_value`, `cashOnDelivery_currencyCode`, `shipper_location`, `shipper_postalCode`, `shipper_countryCode`, `receiver_location`, `receiver_postalCode`, `receiver_countryCode`, `weight_Value`, `weight_Measurement`, `volume_Value`, `volume_Measurement`) SELECT `id`, `trackNumber`, `serviceType`, `serviceDescription`, `shipmentDescription`, `signedForByName`, `pickupDate`, `deliveryDate`, `estimatedDeliveryDate`, `scheduledDeliveryDate`, `serviceMessage`, `cashOnDelivery_value`, `cashOnDelivery_currencyCode`, `shipper_location`, `shipper_postalCode`, `shipper_countryCode`, `receiver_location`, `receiver_postalCode`, `receiver_countryCode`, `weight_Value`, `weight_Measurement`, `volume_Value`, `volume_Measurement` FROM `ShipmentInfo`',
+      );
+
+      // Delete the old table
+      await txn.execute('DROP TABLE `ShipmentInfo`');
+
+      // Change the new table name
+      await txn.execute(
+        'ALTER TABLE `ShipmentInfo_new` RENAME TO `ShipmentInfo`',
+      );
+    });
+  }),
+];

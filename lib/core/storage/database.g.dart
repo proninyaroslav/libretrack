@@ -79,7 +79,7 @@ class _$AppDatabase extends AppDatabase {
   Future<sqflite.Database> open(String path, List<Migration> migrations,
       [Callback? callback]) async {
     final databaseOptions = sqflite.OpenDatabaseOptions(
-      version: 1,
+      version: 2,
       onConfigure: (database) async {
         await database.execute('PRAGMA foreign_keys = ON');
         await callback?.onConfigure?.call(database);
@@ -107,7 +107,7 @@ class _$AppDatabase extends AppDatabase {
         await database.execute(
             'CREATE TABLE IF NOT EXISTS `ShipmentActivityInfo` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `trackNumber` TEXT NOT NULL, `serviceType` TEXT NOT NULL, `statusType` TEXT NOT NULL, `statusDescription` TEXT, `dateTime` INTEGER NOT NULL, `activityLocation_location` TEXT, `activityLocation_postalCode` TEXT, `activityLocation_countryCode` TEXT, FOREIGN KEY (`trackNumber`) REFERENCES `TrackNumberInfo` (`trackNumber`) ON UPDATE NO ACTION ON DELETE CASCADE)');
         await database.execute(
-            'CREATE TABLE IF NOT EXISTS `ShipmentInfo` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `trackNumber` TEXT NOT NULL, `serviceType` TEXT NOT NULL, `serviceDescription` TEXT, `shipmentDescription` TEXT, `signedForByName` TEXT, `pickupDate` INTEGER, `deliveryDate` INTEGER, `estimatedDeliveryDate` INTEGER, `scheduledDeliveryDate` INTEGER, `serviceMessage` TEXT, `cashOnDelivery_value` INTEGER, `cashOnDelivery_currencyCode` TEXT, `shipper_location` TEXT, `shipper_postalCode` TEXT, `shipper_countryCode` TEXT, `receiver_location` TEXT, `receiver_postalCode` TEXT, `receiver_countryCode` TEXT, `weight_Value` REAL, `weight_Measurement` TEXT, `volume_Value` REAL, `volume_Measurement` TEXT, FOREIGN KEY (`trackNumber`) REFERENCES `TrackNumberInfo` (`trackNumber`) ON UPDATE NO ACTION ON DELETE CASCADE)');
+            'CREATE TABLE IF NOT EXISTS `ShipmentInfo` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `trackNumber` TEXT NOT NULL, `serviceType` TEXT NOT NULL, `serviceDescription` TEXT, `shipmentDescription` TEXT, `signedForByName` TEXT, `pickupDate` INTEGER, `deliveryDate` INTEGER, `estimatedDeliveryDate` INTEGER, `scheduledDeliveryDate` INTEGER, `serviceMessage` TEXT, `cashOnDelivery_value` REAL, `cashOnDelivery_currencyCode` TEXT, `shipper_location` TEXT, `shipper_postalCode` TEXT, `shipper_countryCode` TEXT, `receiver_location` TEXT, `receiver_postalCode` TEXT, `receiver_countryCode` TEXT, `weight_Value` REAL, `weight_Measurement` TEXT, `volume_Value` REAL, `volume_Measurement` TEXT, FOREIGN KEY (`trackNumber`) REFERENCES `TrackNumberInfo` (`trackNumber`) ON UPDATE NO ACTION ON DELETE CASCADE)');
         await database.execute(
             'CREATE TABLE IF NOT EXISTS `AlternateTrackNumber` (`trackNumber` TEXT NOT NULL, `shipmentId` INTEGER NOT NULL, FOREIGN KEY (`shipmentId`) REFERENCES `ShipmentInfo` (`id`) ON UPDATE NO ACTION ON DELETE CASCADE, PRIMARY KEY (`trackNumber`))');
         await database.execute(
@@ -718,7 +718,7 @@ class _$ShipmentDao extends ShipmentDao {
             volumeValue_: row['volume_Value'] as double?,
             volumeMeasurement_: _nullableMeasurementConverter
                 .decode(row['volume_Measurement'] as String?),
-            cashOnDeliveryValue_: row['cashOnDelivery_value'] as int?,
+            cashOnDeliveryValue_: row['cashOnDelivery_value'] as double?,
             cashOnDeliveryCurrencyCode_:
                 row['cashOnDelivery_currencyCode'] as String?,
             shipperLocation_: row['shipper_location'] as String?,
@@ -757,7 +757,7 @@ class _$ShipmentDao extends ShipmentDao {
             volumeValue_: row['volume_Value'] as double?,
             volumeMeasurement_: _nullableMeasurementConverter
                 .decode(row['volume_Measurement'] as String?),
-            cashOnDeliveryValue_: row['cashOnDelivery_value'] as int?,
+            cashOnDeliveryValue_: row['cashOnDelivery_value'] as double?,
             cashOnDeliveryCurrencyCode_:
                 row['cashOnDelivery_currencyCode'] as String?,
             shipperLocation_: row['shipper_location'] as String?,
