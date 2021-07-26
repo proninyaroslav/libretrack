@@ -88,6 +88,10 @@ final migrations = [
       await txn.execute(
         'CREATE TABLE IF NOT EXISTS `PostalServiceInfo_new` (`type` TEXT NOT NULL, `trackingServiceType` TEXT NOT NULL, `priority` INTEGER NOT NULL, FOREIGN KEY (`trackingServiceType`) REFERENCES `TrackingServiceInfo` (`type`) ON UPDATE NO ACTION ON DELETE CASCADE, PRIMARY KEY (`type`, `trackingServiceType`))',
       );
+      // Create the new TrackNumberService table
+      await txn.execute(
+        'CREATE TABLE IF NOT EXISTS `TrackNumberService_new` (`trackNumber` TEXT NOT NULL, `serviceType` TEXT NOT NULL, `isActive` INTEGER NOT NULL, FOREIGN KEY (`trackNumber`) REFERENCES `TrackNumberInfo` (`trackNumber`) ON UPDATE NO ACTION ON DELETE CASCADE, PRIMARY KEY (`trackNumber`, `serviceType`))',
+      );
 
       // Copy the data
       await txn.execute(
@@ -99,6 +103,9 @@ final migrations = [
       await txn.execute(
         'INSERT INTO `PostalServiceInfo_new` (`type`, `trackingServiceType`, `priority`) SELECT `type`, `trackingServiceType`, `priority` FROM `PostalServiceInfo`',
       );
+      await txn.execute(
+        'INSERT INTO `TrackNumberService_new` (`trackNumber`, `serviceType`, `isActive`) SELECT `trackNumber`, `serviceType`, `isActive` FROM `TrackNumberService`',
+      );
 
       // Delete the old ShipmentInfo table
       await txn.execute('DROP TABLE `ShipmentInfo`');
@@ -106,6 +113,8 @@ final migrations = [
       await txn.execute('DROP TABLE `AuthDataField`');
       // Delete the old PostalServiceInfo table
       await txn.execute('DROP TABLE `PostalServiceInfo`');
+      // Delete the old TrackNumberService table
+      await txn.execute('DROP TABLE `TrackNumberService`');
 
       // Change the new ShipmentInfo table name
       await txn.execute(
@@ -118,6 +127,10 @@ final migrations = [
       // Change the new PostalServiceInfo table name
       await txn.execute(
         'ALTER TABLE `PostalServiceInfo_new` RENAME TO `PostalServiceInfo`',
+      );
+      // Change the new TrackNumberService table name
+      await txn.execute(
+        'ALTER TABLE `TrackNumberService_new` RENAME TO `TrackNumberService`',
       );
     });
   }),

@@ -103,7 +103,7 @@ class _$AppDatabase extends AppDatabase {
         await database.execute(
             'CREATE TABLE IF NOT EXISTS `TrackNumberInfo` (`trackNumber` TEXT NOT NULL, `description` TEXT, `isArchived` INTEGER NOT NULL, `dateAdded` INTEGER, PRIMARY KEY (`trackNumber`))');
         await database.execute(
-            'CREATE TABLE IF NOT EXISTS `TrackNumberService` (`trackNumber` TEXT NOT NULL, `serviceType` TEXT NOT NULL, `isActive` INTEGER NOT NULL, FOREIGN KEY (`trackNumber`) REFERENCES `TrackNumberInfo` (`trackNumber`) ON UPDATE NO ACTION ON DELETE CASCADE, PRIMARY KEY (`trackNumber`))');
+            'CREATE TABLE IF NOT EXISTS `TrackNumberService` (`trackNumber` TEXT NOT NULL, `serviceType` TEXT NOT NULL, `isActive` INTEGER NOT NULL, FOREIGN KEY (`trackNumber`) REFERENCES `TrackNumberInfo` (`trackNumber`) ON UPDATE NO ACTION ON DELETE CASCADE, PRIMARY KEY (`trackNumber`, `serviceType`))');
         await database.execute(
             'CREATE TABLE IF NOT EXISTS `ShipmentActivityInfo` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `trackNumber` TEXT NOT NULL, `serviceType` TEXT NOT NULL, `statusType` TEXT NOT NULL, `statusDescription` TEXT, `dateTime` INTEGER NOT NULL, `activityLocation_location` TEXT, `activityLocation_postalCode` TEXT, `activityLocation_countryCode` TEXT, FOREIGN KEY (`trackNumber`) REFERENCES `TrackNumberInfo` (`trackNumber`) ON UPDATE NO ACTION ON DELETE CASCADE)');
         await database.execute(
@@ -1280,7 +1280,7 @@ class _$TrackNumberServiceDao extends TrackNumberServiceDao {
         _trackNumberServiceUpdateAdapter = UpdateAdapter(
             database,
             'TrackNumberService',
-            ['trackNumber'],
+            ['trackNumber', 'serviceType'],
             (TrackNumberService item) => <String, Object?>{
                   'trackNumber': item.trackNumber,
                   'serviceType':
@@ -1291,7 +1291,7 @@ class _$TrackNumberServiceDao extends TrackNumberServiceDao {
         _trackNumberServiceDeletionAdapter = DeletionAdapter(
             database,
             'TrackNumberService',
-            ['trackNumber'],
+            ['trackNumber', 'serviceType'],
             (TrackNumberService item) => <String, Object?>{
                   'trackNumber': item.trackNumber,
                   'serviceType':

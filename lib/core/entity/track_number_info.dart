@@ -71,6 +71,7 @@ class TrackNumberInfo extends Equatable {
 
 @TypeConverters([PostalServiceTypeConverter])
 @Entity(
+  primaryKeys: ['trackNumber', 'serviceType'],
   foreignKeys: [
     ForeignKey(
       entity: TrackNumberInfo,
@@ -82,10 +83,8 @@ class TrackNumberInfo extends Equatable {
 )
 @JsonSerializable()
 class TrackNumberService extends Equatable {
-  @primaryKey
   final String trackNumber;
 
-  @primaryKey
   @JsonKey(name: 'serviceType')
   final PostalServiceType serviceType;
 
