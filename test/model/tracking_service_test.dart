@@ -80,7 +80,9 @@ void main() {
         final id = TransactionId('$i');
         final trackService = TrackNumberService(
           trackNumber: '$i',
-          serviceType: PostalServiceType.ups,
+          serviceType: (i as int).isEven
+              ? PostalServiceType.ups
+              : PostalServiceType.russianPost,
         );
 
         final request = TrackingRequest(

@@ -23,10 +23,10 @@ import 'package:libretrack/core/platform_info.dart';
 import 'package:libretrack/core/settings/settings.dart';
 import 'package:libretrack/core/storage/storage_result.dart';
 import 'package:libretrack/core/storage/track_number_repository.dart';
-import 'package:libretrack/core/worker/tracking_all_worker.dart';
-import 'package:libretrack/core/worker/tracking_worker.dart';
 import 'package:libretrack/core/work_manager/work_manager.dart';
 import 'package:libretrack/core/work_manager/worker.dart';
+import 'package:libretrack/core/worker/tracking_all_worker.dart';
+import 'package:libretrack/core/worker/tracking_worker.dart';
 import 'package:mocktail/mocktail.dart';
 
 import '../mock/mock.dart';
@@ -58,14 +58,20 @@ void main() {
         TrackNumberInfo('2', isArchived: true),
         TrackNumberInfo('3'),
       ];
-      final trackServiceList = trackInfoList
-          .map(
-            (info) => TrackNumberService(
-              trackNumber: info.trackNumber,
-              serviceType: PostalServiceType.ups,
-            ),
-          )
-          .toList();
+      final trackServiceList = [
+        TrackNumberService(
+          trackNumber: trackInfoList[0].trackNumber,
+          serviceType: PostalServiceType.ups,
+        ),
+        TrackNumberService(
+          trackNumber: trackInfoList[1].trackNumber,
+          serviceType: PostalServiceType.ups,
+        ),
+        TrackNumberService(
+          trackNumber: trackInfoList[2].trackNumber,
+          serviceType: PostalServiceType.russianPost,
+        ),
+      ];
       final nonArchivedTracks = trackInfoList
           .where(
             (info) => !info.isArchived,

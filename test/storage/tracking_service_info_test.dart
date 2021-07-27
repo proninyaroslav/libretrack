@@ -51,30 +51,53 @@ void main() {
     });
 
     test('Add', () async {
-      const expectedInfo = TrackingServiceInfo(
+      const expectedInfo1 = TrackingServiceInfo(
         type: TrackingServiceType.ups,
       );
-      const expectedAuthData = AuthData({
+      const expectedInfo2 = TrackingServiceInfo(
+        type: TrackingServiceType.russianPost,
+      );
+      const expectedAuthData1 = AuthData({
         'accessLicenseNumber': '12345',
         'username': 'username',
         'password': 'password',
       });
+       const expectedAuthData2 = AuthData({
+        'username': 'username',
+        'password': 'password',
+      });
       expect(
-        await repo.getServiceByType(expectedInfo.type),
+        await repo.getServiceByType(expectedInfo1.type),
+        const StorageResult<TrackingServiceInfo?>(null),
+      );
+      expect(
+        await repo.getServiceByType(expectedInfo2.type),
         const StorageResult<TrackingServiceInfo?>(null),
       );
 
       expect(
-        await repo.addService(info: expectedInfo, authData: expectedAuthData),
+        await repo.addService(info: expectedInfo1, authData: expectedAuthData1),
         StorageResult.empty,
       );
       expect(
-        await repo.getServiceByType(expectedInfo.type),
-        const StorageResult<TrackingServiceInfo?>(expectedInfo),
+        await repo.addService(info: expectedInfo2, authData: expectedAuthData2),
+        StorageResult.empty,
       );
       expect(
-        await repo.getAuthDataByType(expectedInfo.type),
-        const StorageResult<AuthData?>(expectedAuthData),
+        await repo.getServiceByType(expectedInfo1.type),
+        const StorageResult<TrackingServiceInfo?>(expectedInfo1),
+      );
+      expect(
+        await repo.getServiceByType(expectedInfo2.type),
+        const StorageResult<TrackingServiceInfo?>(expectedInfo2),
+      );
+      expect(
+        await repo.getAuthDataByType(expectedInfo1.type),
+        const StorageResult<AuthData?>(expectedAuthData1),
+      );
+      expect(
+        await repo.getAuthDataByType(expectedInfo2.type),
+        const StorageResult<AuthData?>(expectedAuthData2),
       );
     });
 

@@ -69,18 +69,37 @@ void main() {
           )
           .toList();
 
-      for (final trackNumber in trackNumbersList) {
-        when(
-          () => mockTrackRepo.getActiveTrackNumberServices(trackNumber),
-        ).thenAnswer(
-          (_) async => StorageResult([
-            TrackNumberService(
-              trackNumber: trackNumber,
-              serviceType: PostalServiceType.ups,
-            ),
-          ]),
-        );
-      }
+      when(
+        () => mockTrackRepo.getActiveTrackNumberServices(trackNumbersList[0]),
+      ).thenAnswer(
+        (_) async => StorageResult([
+          TrackNumberService(
+            trackNumber: trackNumbersList[0],
+            serviceType: PostalServiceType.ups,
+          ),
+        ]),
+      );
+      when(
+        () => mockTrackRepo.getActiveTrackNumberServices(trackNumbersList[1]),
+      ).thenAnswer(
+        (_) async => StorageResult([
+          TrackNumberService(
+            trackNumber: trackNumbersList[1],
+            serviceType: PostalServiceType.ups,
+          ),
+        ]),
+      );
+      when(
+        () => mockTrackRepo.getActiveTrackNumberServices(trackNumbersList[2]),
+      ).thenAnswer(
+        (_) async => StorageResult([
+          TrackNumberService(
+            trackNumber: trackNumbersList[2],
+            serviceType: PostalServiceType.russianPost,
+          ),
+        ]),
+      );
+
       when(
         () => mockTrackingLimiter.check(trackNumbersList[0]),
       ).thenAnswer(
@@ -109,7 +128,7 @@ void main() {
           trackNumberServiceList: [
             TrackNumberService(
               trackNumber: trackNumbersList[2],
-              serviceType: PostalServiceType.ups,
+              serviceType: PostalServiceType.russianPost,
             ),
           ],
         ),

@@ -211,7 +211,7 @@ void main() {
           ),
           TrackNumberService(
             trackNumber: '3',
-            serviceType: PostalServiceType.ups,
+            serviceType: PostalServiceType.russianPost,
           ),
         ]),
       );
@@ -227,7 +227,7 @@ void main() {
           ),
           const TrackNumberService(
             trackNumber: '3',
-            serviceType: PostalServiceType.ups,
+            serviceType: PostalServiceType.russianPost,
           ),
         }, locale),
       ).thenAnswer(

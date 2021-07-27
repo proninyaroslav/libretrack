@@ -321,12 +321,21 @@ void main() {
               serviceType: PostalServiceType.ups,
               isActive: false,
             ),
+            TrackNumberService(
+              trackNumber: trackInfo.trackNumber,
+              serviceType: PostalServiceType.russianPost,
+              isActive: true,
+            ),
           ],
         );
         final expectedTrackServices = [
           TrackNumberService(
             trackNumber: trackInfo.trackNumber,
             serviceType: PostalServiceType.ups,
+          ),
+          TrackNumberService(
+            trackNumber: trackInfo.trackNumber,
+            serviceType: PostalServiceType.russianPost,
           ),
         ];
         when(

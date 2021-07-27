@@ -19,9 +19,9 @@
 import 'package:bloc_test/bloc_test.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:libretrack/core/entity/entity.dart';
+import 'package:libretrack/core/settings/settings.dart';
 import 'package:libretrack/core/storage/service_repository.dart';
 import 'package:libretrack/core/storage/storage_result.dart';
-import 'package:libretrack/core/settings/settings.dart';
 import 'package:libretrack/ui/parcels/first_start_cubit.dart';
 import 'package:mocktail/mocktail.dart';
 
@@ -52,11 +52,17 @@ void main() {
       'Hide add account tip (first start)',
       build: () => cubit,
       act: (FirstStartCubit cubit) async {
-        const info = TrackingServiceInfo(
-          type: TrackingServiceType.ups,
-        );
-        when(() => mockServiceRepo.getAllServices()).thenAnswer(
-          (_) async => const StorageResult([info]),
+        when(
+          () => mockServiceRepo.getAllServices(),
+        ).thenAnswer(
+          (_) async => const StorageResult([
+            TrackingServiceInfo(
+              type: TrackingServiceType.ups,
+            ),
+            TrackingServiceInfo(
+              type: TrackingServiceType.russianPost,
+            ),
+          ]),
         );
         when(() => mockAppSettings.addAccountTipShown).thenAnswer((_) => false);
         await cubit.showAddAccountTip();
@@ -68,11 +74,17 @@ void main() {
       'Hide add account tip (not the first start)',
       build: () => cubit,
       act: (FirstStartCubit cubit) async {
-        const info = TrackingServiceInfo(
-          type: TrackingServiceType.ups,
-        );
-        when(() => mockServiceRepo.getAllServices()).thenAnswer(
-          (_) async => const StorageResult([info]),
+         when(
+          () => mockServiceRepo.getAllServices(),
+        ).thenAnswer(
+          (_) async => const StorageResult([
+            TrackingServiceInfo(
+              type: TrackingServiceType.ups,
+            ),
+            TrackingServiceInfo(
+              type: TrackingServiceType.russianPost,
+            ),
+          ]),
         );
         when(() => mockAppSettings.addAccountTipShown).thenAnswer((_) => true);
         await cubit.showAddAccountTip();

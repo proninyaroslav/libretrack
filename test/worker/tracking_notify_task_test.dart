@@ -123,16 +123,16 @@ void main() {
         TrackingTaskResult(
           trackService: const TrackNumberService(
             trackNumber: '2',
-            serviceType: PostalServiceType.ups,
+            serviceType: PostalServiceType.russianPost,
           ),
           info: ShipmentInfo.from(
             trackNumber: '2',
-            serviceType: PostalServiceType.ups,
+            serviceType: PostalServiceType.russianPost,
           ),
           activity: [
             ShipmentActivityInfo.from(
               trackNumber: '2',
-              serviceType: PostalServiceType.ups,
+              serviceType: PostalServiceType.russianPost,
               statusType: ShipmentStatusType.delivered,
             ),
           ],

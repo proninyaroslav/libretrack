@@ -186,14 +186,20 @@ void main() {
               ),
             )
             .toList();
-        final trackNumberServiceList = trackNumberList
-            .map(
-              (trackNumber) => TrackNumberService(
-                trackNumber: trackNumber,
-                serviceType: PostalServiceType.ups,
-              ),
-            )
-            .toList();
+        final trackNumberServiceList = [
+          TrackNumberService(
+            trackNumber: trackNumberList[0],
+            serviceType: PostalServiceType.ups,
+          ),
+          TrackNumberService(
+            trackNumber: trackNumberList[1],
+            serviceType: PostalServiceType.russianPost,
+          ),
+          TrackNumberService(
+            trackNumber: trackNumberList[2],
+            serviceType: PostalServiceType.ups,
+          ),
+        ];
         when(
           () =>
               mockTrackNumberRepo.getTrackNumberServicesByList(trackNumberList),

@@ -57,6 +57,17 @@ void main() {
             ),
           ),
         );
+        when(
+          () => mockServiceRepo.getServiceByType(
+            TrackingServiceType.russianPost,
+          ),
+        ).thenAnswer(
+          (_) async => const StorageResult(
+            TrackingServiceInfo(
+              type: TrackingServiceType.russianPost,
+            ),
+          ),
+        );
         when(() => mockServiceRepo.getAuthDataByType(TrackingServiceType.ups))
             .thenAnswer(
           (_) async => const StorageResult(
@@ -65,8 +76,20 @@ void main() {
             ),
           ),
         );
+        when(
+          () => mockServiceRepo.getAuthDataByType(
+            TrackingServiceType.russianPost,
+          ),
+        ).thenAnswer(
+          (_) async => const StorageResult(
+            AuthData(
+              {'login': 'foo', 'password': 'baz'},
+            ),
+          ),
+        );
         when(() => mockServiceRepo.isAuthStorageEncrypted).thenReturn(true);
         await cubit.loadService(TrackingServiceType.ups);
+        await cubit.loadService(TrackingServiceType.russianPost);
       },
       expect: () => [
         const ServiceInfoState.initial(),
@@ -75,6 +98,14 @@ void main() {
             type: TrackingServiceType.ups,
           ),
           authData: AuthData({'login': 'foo', 'password': 'bar'}),
+          isAuthStorageEncrypted: true,
+        ),
+        const ServiceInfoState.initial(),
+        const ServiceInfoState.loaded(
+          info: TrackingServiceInfo(
+            type: TrackingServiceType.russianPost,
+          ),
+          authData: AuthData({'login': 'foo', 'password': 'baz'}),
           isAuthStorageEncrypted: true,
         ),
       ],

@@ -74,7 +74,7 @@ void main() {
               trackNumber: trackInfo.trackNumber,
               trackingId: trackingInfo.id,
               dateTime: DateTime(2020, 1, i),
-              serviceType: PostalServiceType.ups,
+              serviceType: PostalServiceType.russianPost,
               status: TrackingResponseStatus.success,
             ),
           )
