@@ -50,6 +50,7 @@ Track postal items directly on your device using accounts of postal services. Th
 ## 📦 Supported postal services
 
 [![UPS](assets/service_logo/ups.png)](https://www.ups.com)
+[![Russian Post](assets/service_logo/russian_post.png)](https://www.pochta.ru/)
 
 ## 🌍 Translations
 
