@@ -173,7 +173,12 @@ class RussianPostParser implements Parser {
     final activityList = <ShipmentActivityInfo>[];
     Address? shipToAddress, shipFromAddress;
     String? trackNumber;
-    _Cash? cashOnDelivery;
+    _Cash? cashOnDelivery,
+        declaredValue,
+        customDuty,
+        additionalRateFee,
+        shippingRateFee,
+        insuranceRateFee;
     String? serviceDescription, shipmentDescription;
     _Weight? weight;
     _DateTime? pickupDate, deliveryDate;
@@ -210,6 +215,11 @@ class RussianPostParser implements Parser {
       final financeParameters = record.getElement('ns3:FinanceParameters');
       if (financeParameters != null) {
         cashOnDelivery ??= _parseCashOnDelivery(financeParameters);
+        declaredValue ??= _parseDeclaredValue(financeParameters);
+        customDuty ??= _parseCustomDuty(financeParameters);
+        additionalRateFee ??= _parseAdditionalRateFee(financeParameters);
+        shippingRateFee ??= _parseShippingRateFee(financeParameters);
+        insuranceRateFee ??= _parseInsuranceRateFee(financeParameters);
       }
 
       if (itemParameters != null) {
@@ -258,6 +268,11 @@ class RussianPostParser implements Parser {
         weight: weight?.toUnitOfMeasurement(),
         deliveryDate: deliveryDate?.toDateTime(),
         pickupDate: pickupDate?.toDateTime(),
+        declaredValue: declaredValue?.toCashValue(),
+        customDuty: customDuty?.toCashValue(),
+        additionalRateFee: additionalRateFee?.toCashValue(),
+        shippingRateFee: shippingRateFee?.toCashValue(),
+        insuranceRateFee: insuranceRateFee?.toCashValue(),
       ),
       activity: activityList,
     );
@@ -316,6 +331,31 @@ class RussianPostParser implements Parser {
 
   _Cash? _parseCashOnDelivery(XmlElement financeParameters) {
     final value = financeParameters.getElement('ns3:Payment')?.innerText;
+    return value == null ? null : _Cash(value);
+  }
+
+  _Cash? _parseDeclaredValue(XmlElement financeParameters) {
+    final value = financeParameters.getElement('ns3:Value')?.innerText;
+    return value == null ? null : _Cash(value);
+  }
+
+  _Cash? _parseCustomDuty(XmlElement financeParameters) {
+    final value = financeParameters.getElement('ns3:CustomDuty')?.innerText;
+    return value == null ? null : _Cash(value);
+  }
+
+  _Cash? _parseAdditionalRateFee(XmlElement financeParameters) {
+    final value = financeParameters.getElement('ns3:Rate')?.innerText;
+    return value == null ? null : _Cash(value);
+  }
+
+  _Cash? _parseShippingRateFee(XmlElement financeParameters) {
+    final value = financeParameters.getElement('ns3:MassRate')?.innerText;
+    return value == null ? null : _Cash(value);
+  }
+
+  _Cash? _parseInsuranceRateFee(XmlElement financeParameters) {
+    final value = financeParameters.getElement('ns3:InsrRate')?.innerText;
     return value == null ? null : _Cash(value);
   }
 
@@ -455,8 +495,7 @@ class _Cash {
 
   _Cash(this.value);
 
-  Currency toCashValue() =>
-      Currency(int.parse(value) / 100, 'RUB');
+  Currency toCashValue() => Currency(int.parse(value) / 100, 'RUB');
 }
 
 class _Weight {

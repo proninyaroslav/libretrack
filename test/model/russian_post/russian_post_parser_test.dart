@@ -445,6 +445,201 @@ void main() {
           );
         });
 
+        test('Declared value', () async {
+          final builder = XmlBuilder();
+          final payload = _buildResult(
+            builder,
+            historyRecord: [
+              () => builder.element('ns3:FinanceParameters', nest: () {
+                    builder.element('ns3:Value', nest: 'unreachable');
+                  }),
+              () {
+                builder.element('ns3:ItemParameters', nest: () {
+                  builder.element('ns3:Barcode', nest: '123');
+                });
+                builder.element('ns3:FinanceParameters', nest: () {
+                  builder.element('ns3:Value', nest: '10010');
+                });
+              }
+            ],
+          );
+          final expectedShipmentInfo = ShipmentInfo.from(
+            trackNumber: '123',
+            serviceType: PostalServiceType.russianPost,
+            declaredValue: const Currency(100.1, 'RUB'),
+          );
+          final response = ServiceResponse(
+            transactionId: const TransactionId('1'),
+            statusCode: 200,
+            payload: payload,
+          );
+
+          final result = parser.parse(response);
+          result.maybeWhen(
+            (info, activity, alternateTracks) {
+              expect(activity, []);
+              expect(info, expectedShipmentInfo);
+            },
+            orElse: () => throw result,
+          );
+        });
+
+        test('Custom duty', () async {
+          final builder = XmlBuilder();
+          final payload = _buildResult(
+            builder,
+            historyRecord: [
+              () => builder.element('ns3:FinanceParameters', nest: () {
+                    builder.element('ns3:CustomDuty', nest: 'unreachable');
+                  }),
+              () {
+                builder.element('ns3:ItemParameters', nest: () {
+                  builder.element('ns3:Barcode', nest: '123');
+                });
+                builder.element('ns3:FinanceParameters', nest: () {
+                  builder.element('ns3:CustomDuty', nest: '10010');
+                });
+              }
+            ],
+          );
+          final expectedShipmentInfo = ShipmentInfo.from(
+            trackNumber: '123',
+            serviceType: PostalServiceType.russianPost,
+            customDuty: const Currency(100.1, 'RUB'),
+          );
+          final response = ServiceResponse(
+            transactionId: const TransactionId('1'),
+            statusCode: 200,
+            payload: payload,
+          );
+
+          final result = parser.parse(response);
+          result.maybeWhen(
+            (info, activity, alternateTracks) {
+              expect(activity, []);
+              expect(info, expectedShipmentInfo);
+            },
+            orElse: () => throw result,
+          );
+        });
+
+        test('Additional rate fee', () async {
+          final builder = XmlBuilder();
+          final payload = _buildResult(
+            builder,
+            historyRecord: [
+              () => builder.element('ns3:FinanceParameters', nest: () {
+                    builder.element('ns3:Rate', nest: 'unreachable');
+                  }),
+              () {
+                builder.element('ns3:ItemParameters', nest: () {
+                  builder.element('ns3:Barcode', nest: '123');
+                });
+                builder.element('ns3:FinanceParameters', nest: () {
+                  builder.element('ns3:Rate', nest: '10010');
+                });
+              }
+            ],
+          );
+          final expectedShipmentInfo = ShipmentInfo.from(
+            trackNumber: '123',
+            serviceType: PostalServiceType.russianPost,
+            additionalRateFee: const Currency(100.1, 'RUB'),
+          );
+          final response = ServiceResponse(
+            transactionId: const TransactionId('1'),
+            statusCode: 200,
+            payload: payload,
+          );
+
+          final result = parser.parse(response);
+          result.maybeWhen(
+            (info, activity, alternateTracks) {
+              expect(activity, []);
+              expect(info, expectedShipmentInfo);
+            },
+            orElse: () => throw result,
+          );
+        });
+
+        test('Shipping rate fee', () async {
+          final builder = XmlBuilder();
+          final payload = _buildResult(
+            builder,
+            historyRecord: [
+              () => builder.element('ns3:FinanceParameters', nest: () {
+                    builder.element('ns3:MassRate', nest: 'unreachable');
+                  }),
+              () {
+                builder.element('ns3:ItemParameters', nest: () {
+                  builder.element('ns3:Barcode', nest: '123');
+                });
+                builder.element('ns3:FinanceParameters', nest: () {
+                  builder.element('ns3:MassRate', nest: '10010');
+                });
+              }
+            ],
+          );
+          final expectedShipmentInfo = ShipmentInfo.from(
+            trackNumber: '123',
+            serviceType: PostalServiceType.russianPost,
+            shippingRateFee: const Currency(100.1, 'RUB'),
+          );
+          final response = ServiceResponse(
+            transactionId: const TransactionId('1'),
+            statusCode: 200,
+            payload: payload,
+          );
+
+          final result = parser.parse(response);
+          result.maybeWhen(
+            (info, activity, alternateTracks) {
+              expect(activity, []);
+              expect(info, expectedShipmentInfo);
+            },
+            orElse: () => throw result,
+          );
+        });
+
+        test('Insurance rate fee', () async {
+          final builder = XmlBuilder();
+          final payload = _buildResult(
+            builder,
+            historyRecord: [
+              () => builder.element('ns3:FinanceParameters', nest: () {
+                    builder.element('ns3:InsrRate', nest: 'unreachable');
+                  }),
+              () {
+                builder.element('ns3:ItemParameters', nest: () {
+                  builder.element('ns3:Barcode', nest: '123');
+                });
+                builder.element('ns3:FinanceParameters', nest: () {
+                  builder.element('ns3:InsrRate', nest: '10010');
+                });
+              }
+            ],
+          );
+          final expectedShipmentInfo = ShipmentInfo.from(
+            trackNumber: '123',
+            serviceType: PostalServiceType.russianPost,
+            insuranceRateFee: const Currency(100.1, 'RUB'),
+          );
+          final response = ServiceResponse(
+            transactionId: const TransactionId('1'),
+            statusCode: 200,
+            payload: payload,
+          );
+
+          final result = parser.parse(response);
+          result.maybeWhen(
+            (info, activity, alternateTracks) {
+              expect(activity, []);
+              expect(info, expectedShipmentInfo);
+            },
+            orElse: () => throw result,
+          );
+        });
+
         test('Service description', () async {
           final builder = XmlBuilder();
           final payload = _buildResult(
