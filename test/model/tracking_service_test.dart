@@ -79,8 +79,9 @@ void main() {
       for (final i in range(1, 6)) {
         final id = TransactionId('$i');
         final trackService = TrackNumberService(
-          trackNumber: '$i',
-          serviceType: PostalServiceType.ups,
+          trackNumber: (i as int).isEven ? '$i' : '${i - 1}',
+          serviceType:
+              i.isEven ? PostalServiceType.ups : PostalServiceType.russianPost,
         );
 
         final request = TrackingRequest(
@@ -102,6 +103,7 @@ void main() {
 
         final serviceResponse = ServiceResponse(
           transactionId: serviceRequest.transactionId,
+          statusCode: 200,
           payload: serviceRequest.body!,
         );
         serviceResponseList.add(serviceResponse);
@@ -112,7 +114,12 @@ void main() {
               locale: const Locale('ru', 'RU'),
             )).thenReturn(serviceRequest);
 
-        when(() => mockParser.parse(serviceResponse)).thenReturn(
+        when(
+          () => mockParser.parse(
+            serviceResponse,
+            locale: const Locale('ru', 'RU'),
+          ),
+        ).thenReturn(
           ParseResult(
             info: ShipmentInfo.from(
               trackNumber: trackService.trackNumber,
@@ -181,6 +188,7 @@ void main() {
       );
       final serviceResponse = ServiceResponse(
         transactionId: serviceRequest.transactionId,
+        statusCode: 200,
         payload: serviceRequest.body!,
       );
       when(() => mockRequestBuilder.build(
@@ -246,6 +254,7 @@ void main() {
       );
       final serviceResponse = ServiceResponse(
         transactionId: serviceRequest.transactionId,
+        statusCode: 200,
         payload: serviceRequest.body!,
       );
       when(() => mockRequestBuilder.build(

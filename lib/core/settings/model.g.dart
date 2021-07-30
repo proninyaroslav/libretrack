@@ -136,6 +136,16 @@ const _$ShipmentStatusTypeEnumMap = {
   ShipmentStatusType.delivered: 'delivered',
   ShipmentStatusType.returnedToShipper: 'returnedToShipper',
   ShipmentStatusType.other: 'other',
+  ShipmentStatusType.notDelivered: 'notDelivered',
+  ShipmentStatusType.inStorage: 'inStorage',
+  ShipmentStatusType.inTransitArrivedWaypoint: 'inTransitArrivedWaypoint',
+  ShipmentStatusType.inTransitDepartedWaypoint: 'inTransitDepartedWaypoint',
+  ShipmentStatusType.exportedFromDepartureCountry:
+      'exportedFromDepartureCountry',
+  ShipmentStatusType.importedToDestinationCountry:
+      'importedToDestinationCountry',
+  ShipmentStatusType.arrivedAtCustoms: 'arrivedAtCustoms',
+  ShipmentStatusType.customsClearanceComplete: 'customsClearanceComplete',
 };
 
 _$ParcelsFilterNewInfo _$_$ParcelsFilterNewInfoFromJson(
@@ -171,6 +181,7 @@ Map<String, dynamic> _$_$ParcelsFilterPostalServiceToJson(
 
 const _$PostalServiceTypeEnumMap = {
   PostalServiceType.ups: 'ups',
+  PostalServiceType.russianPost: 'russianPost',
 };
 
 _$AppThemeTypeLight _$_$AppThemeTypeLightFromJson(Map<String, dynamic> json) {

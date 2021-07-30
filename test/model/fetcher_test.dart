@@ -105,6 +105,7 @@ void main() {
             FetchResult(
               ServiceResponse(
                 transactionId: r.transactionId,
+                statusCode: 200,
                 payload: 'foo${r.transactionId}',
               ),
             ),
@@ -143,6 +144,7 @@ void main() {
             FetchResult(
               ServiceResponse(
                 transactionId: r.transactionId,
+                statusCode: 200,
                 payload: 'foo${r.transactionId}',
               ),
             ),
@@ -185,6 +187,7 @@ void main() {
                 FetchResult(
                   ServiceResponse(
                     transactionId: request.transactionId,
+                    statusCode: 200,
                     payload: 'foo${request.transactionId}',
                   ),
                 ),

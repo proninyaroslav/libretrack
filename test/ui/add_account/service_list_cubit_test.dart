@@ -58,7 +58,10 @@ void main() {
       expect: () => [
         const ServiceListState.initial(),
         const ServiceListState.loaded(
-          nonExistenServices: [TrackingServiceType.ups],
+          nonExistenServices: [
+            TrackingServiceType.ups,
+            TrackingServiceType.russianPost,
+          ],
           isAuthStorageEncrypted: true,
         ),
       ],

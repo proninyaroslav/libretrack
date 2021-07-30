@@ -22,6 +22,7 @@ import 'package:libretrack/core/entity/entity.dart';
 import 'package:libretrack/core/platform_info.dart';
 import 'package:libretrack/core/storage/database.dart';
 import 'package:libretrack/core/storage/service_auth_storage.dart';
+import 'package:libretrack/core/storage/service_repository.dart';
 import 'package:mocktail/mocktail.dart';
 
 import '../mock/mock.dart';
@@ -32,6 +33,7 @@ void main() {
     late AppDatabase db;
     late FlutterSecureStorage secureStorage;
     late PlatformInfo platformInfo;
+    late ServiceRepository serviceRepo;
 
     setUp(() async {
       db = await $FloorAppDatabase.inMemoryDatabaseBuilder().build();
@@ -42,6 +44,7 @@ void main() {
       when(() => platformInfo.isIOS).thenReturn(false);
 
       authStorage = ServiceAuthStorageImpl(db, secureStorage, platformInfo);
+      serviceRepo = ServiceRepositoryImpl(db, authStorage);
     });
 
     tearDown(() {
@@ -50,30 +53,39 @@ void main() {
 
     test('Insert', () async {
       const expectedData1 = AuthData({'foo': 'bar'});
-      await authStorage.insert(
-        type: TrackingServiceType.ups,
+      const expectedData2 = AuthData({'foo': 'baz'});
+      await serviceRepo.addService(
+        info: const TrackingServiceInfo(type: TrackingServiceType.ups),
         authData: expectedData1,
+      );
+      await serviceRepo.addService(
+        info: const TrackingServiceInfo(type: TrackingServiceType.russianPost),
+        authData: expectedData2,
       );
       expect(
         await authStorage.getByServiceType(TrackingServiceType.ups),
         expectedData1,
       );
+      expect(
+        await authStorage.getByServiceType(TrackingServiceType.russianPost),
+        expectedData2,
+      );
 
-      const expectedData2 = AuthData({'foo': 'bar', 'baz': 'bar'});
+      const expectedData3 = AuthData({'foo': 'bar', 'baz': 'bar'});
       await authStorage.insert(
         type: TrackingServiceType.ups,
         authData: const AuthData({'baz': 'bar'}),
       );
       expect(
         await authStorage.getByServiceType(TrackingServiceType.ups),
-        expectedData2,
+        expectedData3,
       );
     });
 
     test('Delete', () async {
       const expectedData = AuthData({'foo': 'bar'});
-      await authStorage.insert(
-        type: TrackingServiceType.ups,
+      await serviceRepo.addService(
+        info: const TrackingServiceInfo(type: TrackingServiceType.ups),
         authData: expectedData,
       );
       expect(
@@ -91,8 +103,8 @@ void main() {
     test('Replace', () async {
       const expectedData1 = AuthData({'foo': 'bar'});
       const expectedData2 = AuthData({'foo': 'baz'});
-      await authStorage.insert(
-        type: TrackingServiceType.ups,
+      await serviceRepo.addService(
+        info: const TrackingServiceInfo(type: TrackingServiceType.ups),
         authData: expectedData1,
       );
       expect(

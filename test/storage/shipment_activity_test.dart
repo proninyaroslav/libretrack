@@ -57,7 +57,7 @@ void main() {
           .map((i) => ShipmentActivityInfo.from(
                 id: i as int,
                 trackNumber: info.trackNumber,
-                serviceType: PostalServiceType.ups,
+                serviceType: PostalServiceType.russianPost,
                 statusType: ShipmentStatusType.other,
                 dateTime: DateTime(2020, 1, i),
               ))

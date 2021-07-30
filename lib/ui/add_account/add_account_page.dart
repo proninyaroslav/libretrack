@@ -246,7 +246,6 @@ class _StepperState extends State<_Stepper> {
 
   Widget? _getAccountTypeSubtitle() {
     if (_selectedService != null &&
-        _selectedService == TrackingServiceType.ups &&
         _currentStep != _StepperSteps.selectAccountType) {
       final metadata = TrackingServiceMetadataMapper.of(
         context,
@@ -294,7 +293,7 @@ class _StepperState extends State<_Stepper> {
 
 class _ServicesList extends StatelessWidget {
   final List<TrackingServiceType> nonExistenServices;
-  final Function(TrackingServiceType)? onTap;
+  final ValueChanged<TrackingServiceType>? onTap;
 
   const _ServicesList({
     Key? key,

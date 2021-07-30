@@ -57,6 +57,14 @@
     "statusOutForDelivery": "Out for delivery",
     "statusDelivered": "Delivered",
     "statusReturnedToShipper": "Returned to shipper",
+    "statusNotDelivered": "Not delivered",
+    "statusInStorage": "In storage",
+    "statusInTransitArrivedWaypoint": "Arrived at the waypoint",
+    "statusInTransitDepartedWaypoint": "Departed from the waypoint",
+    "statusExportedFromDepartureCountry": "Exported from the departure country",
+    "statusImportedToDestinationCountry": "Imported to the destination country",
+    "statusArrivedAtCustoms": "Arrived at customs",
+    "statusCustomsClearanceComplete": "Customs clearance complete",
     "trackingErrorNoInfo": "No tracking info available",
     "trackingErrorUnknown": "Unknown error",
     "trackingErrorNetwork": "Network error",
@@ -211,5 +219,7 @@
     "aboutApp": "About",
     "changelog": "Changelog",
     "upsAddAccountDescription": "You need to enter your UPS account authorization information. You can register it here: https://www.ups.com/doapp/signup?loc=en_US\nTo obtain an Access Key, go the link and follow the instructions: https://www.ups.com/upsdeveloperkit/manageaccesskeys?loc=en_US",
-    "ups": "UPS"
+    "ups": "UPS",
+    "russianPost": "Russian Post",
+    "russianPostAddAccountDescription": "1. Register on the Russian Post website: https://www.pochta.ru/\n2. Go to Access Settings, enable the tracking API and agree to the terms of service: https://tracking.pochta.ru/access-settings\n3. In the Access Settings, copy the login (generated automatically). The password will be sent to the e-mail, provided during registration."
 }

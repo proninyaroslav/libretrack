@@ -214,7 +214,7 @@ class ShipmentInfo extends Equatable {
   //===================================================
   @ColumnInfo(name: 'cashOnDelivery_value')
   // ignore: non_constant_identifier_names
-  final int? cashOnDeliveryValue_;
+  final double? cashOnDeliveryValue_;
 
   @ColumnInfo(name: 'cashOnDelivery_currencyCode')
   // ignore: non_constant_identifier_names
@@ -264,7 +264,7 @@ class ShipmentInfo extends Equatable {
 @freezed
 class CashOnDelivery with _$CashOnDelivery {
   const factory CashOnDelivery(
-    int value,
+    double value,
     String currencyCode,
   ) = _CashOnDelivery;
 }

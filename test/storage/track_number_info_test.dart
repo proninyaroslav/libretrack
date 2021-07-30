@@ -145,7 +145,7 @@ void main() {
       );
       final trackService2 = TrackNumberService(
         trackNumber: trackInfo2.trackNumber,
-        serviceType: PostalServiceType.ups,
+        serviceType: PostalServiceType.russianPost,
         isActive: false,
       );
 

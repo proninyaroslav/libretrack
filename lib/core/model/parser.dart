@@ -19,13 +19,14 @@
 import 'package:flutter/foundation.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:libretrack/core/entity/entity.dart';
+import 'package:libretrack/core/model/type/type.dart';
 
 import 'service_response.dart';
 
 part 'parser.freezed.dart';
 
 abstract class Parser {
-  ParseResult parse(ServiceResponse response);
+  ParseResult parse(ServiceResponse response, {Locale? locale});
 }
 
 @freezed

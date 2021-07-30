@@ -16,7 +16,7 @@ final _privateConstructorUsedError = UnsupportedError(
 class _$CashOnDeliveryTearOff {
   const _$CashOnDeliveryTearOff();
 
-  _CashOnDelivery call(int value, String currencyCode) {
+  _CashOnDelivery call(double value, String currencyCode) {
     return _CashOnDelivery(
       value,
       currencyCode,
@@ -29,7 +29,7 @@ const $CashOnDelivery = _$CashOnDeliveryTearOff();
 
 /// @nodoc
 mixin _$CashOnDelivery {
-  int get value => throw _privateConstructorUsedError;
+  double get value => throw _privateConstructorUsedError;
   String get currencyCode => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -42,7 +42,7 @@ abstract class $CashOnDeliveryCopyWith<$Res> {
   factory $CashOnDeliveryCopyWith(
           CashOnDelivery value, $Res Function(CashOnDelivery) then) =
       _$CashOnDeliveryCopyWithImpl<$Res>;
-  $Res call({int value, String currencyCode});
+  $Res call({double value, String currencyCode});
 }
 
 /// @nodoc
@@ -63,7 +63,7 @@ class _$CashOnDeliveryCopyWithImpl<$Res>
       value: value == freezed
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
-              as int,
+              as double,
       currencyCode: currencyCode == freezed
           ? _value.currencyCode
           : currencyCode // ignore: cast_nullable_to_non_nullable
@@ -79,7 +79,7 @@ abstract class _$CashOnDeliveryCopyWith<$Res>
           _CashOnDelivery value, $Res Function(_CashOnDelivery) then) =
       __$CashOnDeliveryCopyWithImpl<$Res>;
   @override
-  $Res call({int value, String currencyCode});
+  $Res call({double value, String currencyCode});
 }
 
 /// @nodoc
@@ -102,7 +102,7 @@ class __$CashOnDeliveryCopyWithImpl<$Res>
       value == freezed
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
-              as int,
+              as double,
       currencyCode == freezed
           ? _value.currencyCode
           : currencyCode // ignore: cast_nullable_to_non_nullable
@@ -119,7 +119,7 @@ class _$_CashOnDelivery
   const _$_CashOnDelivery(this.value, this.currencyCode);
 
   @override
-  final int value;
+  final double value;
   @override
   final String currencyCode;
 
@@ -161,11 +161,11 @@ class _$_CashOnDelivery
 }
 
 abstract class _CashOnDelivery implements CashOnDelivery {
-  const factory _CashOnDelivery(int value, String currencyCode) =
+  const factory _CashOnDelivery(double value, String currencyCode) =
       _$_CashOnDelivery;
 
   @override
-  int get value => throw _privateConstructorUsedError;
+  double get value => throw _privateConstructorUsedError;
   @override
   String get currencyCode => throw _privateConstructorUsedError;
   @override

@@ -66,7 +66,7 @@ void main() {
           trackInfo: TrackNumberInfo('2', dateAdded: DateTime(2020, 1, 3)),
           lastActivity: ShipmentActivityInfo.from(
             trackNumber: '2',
-            serviceType: PostalServiceType.ups,
+            serviceType: PostalServiceType.russianPost,
             statusType: ShipmentStatusType.delivered,
             dateTime: DateTime(2020, 1, 3),
           ),
@@ -89,7 +89,7 @@ void main() {
           trackInfo: TrackNumberInfo('2', dateAdded: DateTime(2020, 1, 3)),
           lastActivity: ShipmentActivityInfo.from(
             trackNumber: '2',
-            serviceType: PostalServiceType.ups,
+            serviceType: PostalServiceType.russianPost,
             statusType: ShipmentStatusType.delivered,
             dateTime: DateTime(2020, 1, 3),
           ),

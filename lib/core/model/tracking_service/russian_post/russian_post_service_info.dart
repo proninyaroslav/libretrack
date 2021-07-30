@@ -16,25 +16,38 @@
 // You should have received a copy of the GNU General Public License
 // along with LibreTrack.  If not, see <http://www.gnu.org/licenses/>.
 
-import 'package:injectable/injectable.dart';
+import 'package:flutter/foundation.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:libretrack/core/entity/entity.dart';
 
-import 'parser.dart';
-import 'tracking_service/tracking_service.dart';
+part 'russian_post_service_info.freezed.dart';
 
-abstract class ParserFactory {
-  Parser parserOf(TrackingServiceInfo info);
-}
+const String _loginField = 'login';
+const String _passwordField = 'password';
 
-@Injectable(as: ParserFactory)
-class ParserFactoryImpl implements ParserFactory {
-  @override
-  Parser parserOf(TrackingServiceInfo info) {
-    switch (info.type) {
-      case TrackingServiceType.ups:
-        return UPSParser();
-      case TrackingServiceType.russianPost:
-        return RussianPostParser();
-    }
+@freezed
+class RussianPostAuthData with _$RussianPostAuthData {
+  const factory RussianPostAuthData({
+    required String login,
+    required String password,
+  }) = _RussianPostAuthData;
+
+  const RussianPostAuthData._();
+
+  // ignore: prefer_constructors_over_static_methods
+  static RussianPostAuthData from(AuthData authData) {
+    return RussianPostAuthData(
+      login: authData[_loginField]!,
+      password: authData[_passwordField]!,
+    );
+  }
+
+  AuthData toAuthData() {
+    return AuthData(
+      {
+        _loginField: login,
+        _passwordField: password,
+      },
+    );
   }
 }

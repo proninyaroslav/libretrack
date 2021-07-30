@@ -620,6 +620,86 @@ class S {
     );
   }
 
+  /// `Not delivered`
+  String get statusNotDelivered {
+    return Intl.message(
+      'Not delivered',
+      name: 'statusNotDelivered',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `In storage`
+  String get statusInStorage {
+    return Intl.message(
+      'In storage',
+      name: 'statusInStorage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Arrived at the waypoint`
+  String get statusInTransitArrivedWaypoint {
+    return Intl.message(
+      'Arrived at the waypoint',
+      name: 'statusInTransitArrivedWaypoint',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Departed from the waypoint`
+  String get statusInTransitDepartedWaypoint {
+    return Intl.message(
+      'Departed from the waypoint',
+      name: 'statusInTransitDepartedWaypoint',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Exported from the departure country`
+  String get statusExportedFromDepartureCountry {
+    return Intl.message(
+      'Exported from the departure country',
+      name: 'statusExportedFromDepartureCountry',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Imported to the destination country`
+  String get statusImportedToDestinationCountry {
+    return Intl.message(
+      'Imported to the destination country',
+      name: 'statusImportedToDestinationCountry',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Arrived at customs`
+  String get statusArrivedAtCustoms {
+    return Intl.message(
+      'Arrived at customs',
+      name: 'statusArrivedAtCustoms',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Customs clearance complete`
+  String get statusCustomsClearanceComplete {
+    return Intl.message(
+      'Customs clearance complete',
+      name: 'statusCustomsClearanceComplete',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `No tracking info available`
   String get trackingErrorNoInfo {
     return Intl.message(
@@ -2150,6 +2230,26 @@ class S {
     return Intl.message(
       'UPS',
       name: 'ups',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Russian Post`
+  String get russianPost {
+    return Intl.message(
+      'Russian Post',
+      name: 'russianPost',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `1. Register on the Russian Post website: https://www.pochta.ru/\n2. Go to Access Settings, enable the tracking API and agree to the terms of service: https://tracking.pochta.ru/access-settings\n3. In the Access Settings, copy the login (generated automatically). The password will be sent to the e-mail, provided during registration.`
+  String get russianPostAddAccountDescription {
+    return Intl.message(
+      '1. Register on the Russian Post website: https://www.pochta.ru/\n2. Go to Access Settings, enable the tracking API and agree to the terms of service: https://tracking.pochta.ru/access-settings\n3. In the Access Settings, copy the login (generated automatically). The password will be sent to the e-mail, provided during registration.',
+      name: 'russianPostAddAccountDescription',
       desc: '',
       args: [],
     );

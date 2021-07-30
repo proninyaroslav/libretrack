@@ -17,9 +17,12 @@ class _$ServiceResponseTearOff {
   const _$ServiceResponseTearOff();
 
   _ServiceResponse call(
-      {required TransactionId transactionId, required String payload}) {
+      {required TransactionId transactionId,
+      required int statusCode,
+      required String payload}) {
     return _ServiceResponse(
       transactionId: transactionId,
+      statusCode: statusCode,
       payload: payload,
     );
   }
@@ -31,6 +34,7 @@ const $ServiceResponse = _$ServiceResponseTearOff();
 /// @nodoc
 mixin _$ServiceResponse {
   TransactionId get transactionId => throw _privateConstructorUsedError;
+  int get statusCode => throw _privateConstructorUsedError;
   String get payload => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -43,7 +47,7 @@ abstract class $ServiceResponseCopyWith<$Res> {
   factory $ServiceResponseCopyWith(
           ServiceResponse value, $Res Function(ServiceResponse) then) =
       _$ServiceResponseCopyWithImpl<$Res>;
-  $Res call({TransactionId transactionId, String payload});
+  $Res call({TransactionId transactionId, int statusCode, String payload});
 }
 
 /// @nodoc
@@ -58,6 +62,7 @@ class _$ServiceResponseCopyWithImpl<$Res>
   @override
   $Res call({
     Object? transactionId = freezed,
+    Object? statusCode = freezed,
     Object? payload = freezed,
   }) {
     return _then(_value.copyWith(
@@ -65,6 +70,10 @@ class _$ServiceResponseCopyWithImpl<$Res>
           ? _value.transactionId
           : transactionId // ignore: cast_nullable_to_non_nullable
               as TransactionId,
+      statusCode: statusCode == freezed
+          ? _value.statusCode
+          : statusCode // ignore: cast_nullable_to_non_nullable
+              as int,
       payload: payload == freezed
           ? _value.payload
           : payload // ignore: cast_nullable_to_non_nullable
@@ -80,7 +89,7 @@ abstract class _$ServiceResponseCopyWith<$Res>
           _ServiceResponse value, $Res Function(_ServiceResponse) then) =
       __$ServiceResponseCopyWithImpl<$Res>;
   @override
-  $Res call({TransactionId transactionId, String payload});
+  $Res call({TransactionId transactionId, int statusCode, String payload});
 }
 
 /// @nodoc
@@ -97,6 +106,7 @@ class __$ServiceResponseCopyWithImpl<$Res>
   @override
   $Res call({
     Object? transactionId = freezed,
+    Object? statusCode = freezed,
     Object? payload = freezed,
   }) {
     return _then(_ServiceResponse(
@@ -104,6 +114,10 @@ class __$ServiceResponseCopyWithImpl<$Res>
           ? _value.transactionId
           : transactionId // ignore: cast_nullable_to_non_nullable
               as TransactionId,
+      statusCode: statusCode == freezed
+          ? _value.statusCode
+          : statusCode // ignore: cast_nullable_to_non_nullable
+              as int,
       payload: payload == freezed
           ? _value.payload
           : payload // ignore: cast_nullable_to_non_nullable
@@ -118,16 +132,20 @@ class _$_ServiceResponse
     with DiagnosticableTreeMixin
     implements _ServiceResponse {
   const _$_ServiceResponse(
-      {required this.transactionId, required this.payload});
+      {required this.transactionId,
+      required this.statusCode,
+      required this.payload});
 
   @override
   final TransactionId transactionId;
+  @override
+  final int statusCode;
   @override
   final String payload;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'ServiceResponse(transactionId: $transactionId, payload: $payload)';
+    return 'ServiceResponse(transactionId: $transactionId, statusCode: $statusCode, payload: $payload)';
   }
 
   @override
@@ -136,6 +154,7 @@ class _$_ServiceResponse
     properties
       ..add(DiagnosticsProperty('type', 'ServiceResponse'))
       ..add(DiagnosticsProperty('transactionId', transactionId))
+      ..add(DiagnosticsProperty('statusCode', statusCode))
       ..add(DiagnosticsProperty('payload', payload));
   }
 
@@ -146,6 +165,9 @@ class _$_ServiceResponse
             (identical(other.transactionId, transactionId) ||
                 const DeepCollectionEquality()
                     .equals(other.transactionId, transactionId)) &&
+            (identical(other.statusCode, statusCode) ||
+                const DeepCollectionEquality()
+                    .equals(other.statusCode, statusCode)) &&
             (identical(other.payload, payload) ||
                 const DeepCollectionEquality().equals(other.payload, payload)));
   }
@@ -154,6 +176,7 @@ class _$_ServiceResponse
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(transactionId) ^
+      const DeepCollectionEquality().hash(statusCode) ^
       const DeepCollectionEquality().hash(payload);
 
   @JsonKey(ignore: true)
@@ -165,10 +188,13 @@ class _$_ServiceResponse
 abstract class _ServiceResponse implements ServiceResponse {
   const factory _ServiceResponse(
       {required TransactionId transactionId,
+      required int statusCode,
       required String payload}) = _$_ServiceResponse;
 
   @override
   TransactionId get transactionId => throw _privateConstructorUsedError;
+  @override
+  int get statusCode => throw _privateConstructorUsedError;
   @override
   String get payload => throw _privateConstructorUsedError;
   @override

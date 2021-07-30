@@ -76,7 +76,7 @@ void main() {
       final info2 = ShipmentInfo.from(
         id: 2,
         trackNumber: trackInfo.trackNumber,
-        serviceType: PostalServiceType.ups,
+        serviceType: PostalServiceType.russianPost,
       );
 
       expect(await trackRepo.addTrack(trackInfo), StorageResult.empty);

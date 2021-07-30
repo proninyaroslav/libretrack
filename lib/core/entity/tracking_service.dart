@@ -26,6 +26,8 @@ import 'entity.dart';
 enum TrackingServiceType {
   @JsonValue('ups')
   ups,
+  @JsonValue('russianPost')
+  russianPost,
 }
 
 extension PostalServiceTypeMapper on TrackingServiceType {
@@ -33,6 +35,8 @@ extension PostalServiceTypeMapper on TrackingServiceType {
     switch (this) {
       case TrackingServiceType.ups:
         return {PostalServiceType.ups};
+      case TrackingServiceType.russianPost:
+       return {PostalServiceType.russianPost};
     }
   }
 }

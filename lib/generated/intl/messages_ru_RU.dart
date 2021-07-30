@@ -254,6 +254,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "refresh": MessageLookupByLibrary.simpleMessage("Обновить"),
         "refreshAll": MessageLookupByLibrary.simpleMessage("Обновить все"),
         "refreshParcelsFailed": m21,
+        "russianPost": MessageLookupByLibrary.simpleMessage("Почта России"),
+        "russianPostAddAccountDescription": MessageLookupByLibrary.simpleMessage(
+            "1) Зарегистрируйтесь на сайте Почты России: https://www.pochta.ru/\n2) Перейдите в Настройки доступа, включите API отслеживания и согласитесь с условиями сервиса: https://tracking.pochta.ru/access-settings\n3) Скопируйте в Настройках доступа логин (сгенерирован автоматически. Пароль будет отправлен на e-mail, указанный при регистрации."),
         "secondsShortFormat": m22,
         "selectAccountType":
             MessageLookupByLibrary.simpleMessage("Выберите тип аккаунта"),
@@ -354,12 +357,28 @@ class MessageLookup extends MessageLookupByLibrary {
         "squareMeterUnitShort": m26,
         "squareYardUnitShort": m27,
         "status": MessageLookupByLibrary.simpleMessage("Статус"),
+        "statusArrivedAtCustoms":
+            MessageLookupByLibrary.simpleMessage("Прибыло на таможню"),
+        "statusCustomsClearanceComplete":
+            MessageLookupByLibrary.simpleMessage("Покинуло таможню"),
         "statusDelivered": MessageLookupByLibrary.simpleMessage("Доставлено"),
+        "statusExportedFromDepartureCountry":
+            MessageLookupByLibrary.simpleMessage(
+                "Экспорт из страны отправления"),
+        "statusImportedToDestinationCountry":
+            MessageLookupByLibrary.simpleMessage("Импорт в страну назначения"),
+        "statusInStorage": MessageLookupByLibrary.simpleMessage("В хранении"),
         "statusInTransit": MessageLookupByLibrary.simpleMessage("В пути"),
+        "statusInTransitArrivedWaypoint": MessageLookupByLibrary.simpleMessage(
+            "Прибыл в промежуточный пункт"),
+        "statusInTransitDepartedWaypoint":
+            MessageLookupByLibrary.simpleMessage("Покинул промежуточный пункт"),
         "statusInfoReceived":
             MessageLookupByLibrary.simpleMessage("Информация получена"),
         "statusNotAvailable": MessageLookupByLibrary.simpleMessage(
             "Информации об отслеживании пока нет"),
+        "statusNotDelivered":
+            MessageLookupByLibrary.simpleMessage("Не доставлено"),
         "statusOutForDelivery":
             MessageLookupByLibrary.simpleMessage("Выдано для доставки"),
         "statusPickup": MessageLookupByLibrary.simpleMessage("Посылка принята"),

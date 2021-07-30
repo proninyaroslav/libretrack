@@ -103,6 +103,62 @@ class ShipmentStatusMetadataMapper {
           emoji: '✈️',
           iconData: StatusIconsData.inTransit,
         );
+      case ShipmentStatusType.notDelivered:
+        return ShipmentStatusMetadata(
+          type: type,
+          emoji: '❌',
+          iconData: StatusIconsData.notDelivered,
+          localizedName: locale.statusNotDelivered,
+        );
+      case ShipmentStatusType.inStorage:
+        return ShipmentStatusMetadata(
+          type: type,
+          emoji: '📥',
+          iconData: StatusIconsData.inStorage,
+          localizedName: locale.statusInStorage,
+        );
+      case ShipmentStatusType.inTransitArrivedWaypoint:
+        return ShipmentStatusMetadata(
+          type: type,
+          iconData: StatusIconsData.inTransit,
+          emoji: '✈️',
+          localizedName: locale.statusInTransitArrivedWaypoint,
+        );
+      case ShipmentStatusType.inTransitDepartedWaypoint:
+        return ShipmentStatusMetadata(
+          type: type,
+          iconData: StatusIconsData.inTransit,
+          emoji: '✈️',
+          localizedName: locale.statusInTransitDepartedWaypoint,
+        );
+      case ShipmentStatusType.exportedFromDepartureCountry:
+        return ShipmentStatusMetadata(
+          type: type,
+          iconData: StatusIconsData.inTransit,
+          emoji: '✈️',
+          localizedName: locale.statusExportedFromDepartureCountry,
+        );
+      case ShipmentStatusType.importedToDestinationCountry:
+        return ShipmentStatusMetadata(
+          type: type,
+          iconData: StatusIconsData.inTransit,
+          emoji: '✈️',
+          localizedName: locale.statusImportedToDestinationCountry,
+        );
+      case ShipmentStatusType.arrivedAtCustoms:
+        return ShipmentStatusMetadata(
+          type: type,
+          iconData: StatusIconsData.inTransit,
+          emoji: '✈️',
+          localizedName: locale.statusArrivedAtCustoms,
+        );
+      case ShipmentStatusType.customsClearanceComplete:
+        return ShipmentStatusMetadata(
+          type: type,
+          iconData: StatusIconsData.inTransit,
+          emoji: '✈️',
+          localizedName: locale.statusCustomsClearanceComplete,
+        );
     }
   }
 }
