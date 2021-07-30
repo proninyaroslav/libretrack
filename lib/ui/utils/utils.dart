@@ -142,7 +142,7 @@ extension UnitOfMeasurementExtension on UnitOfMeasurement {
   }
 }
 
-extension CashOnDeliveryExtension on CashOnDelivery {
+extension CurrencyExtension on Currency {
   String format(BuildContext context) {
     return "${value.removeDecimalZeroFormat()} $currencyCode";
   }

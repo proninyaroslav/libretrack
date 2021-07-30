@@ -60,7 +60,7 @@ void main() {
         deliveryDate: DateTime(2020, 1, 5),
         estimatedDeliveryDate: DateTime(2020, 1, 5),
         scheduledDeliveryDate: DateTime(2020, 1, 5),
-        cashOnDelivery: const CashOnDelivery(100, 'USD'),
+        cashOnDelivery: const Currency(100, 'USD'),
         shipperAddress: const Address(
           location: 'test location 1',
           postalCode: '123',

@@ -776,7 +776,7 @@ void main() {
           for (final result in resultList) {
             result.maybeWhen(
               (info, activity, alternateTracks) =>
-                  expect(info.cashOnDelivery, const CashOnDelivery(10, 'USD')),
+                  expect(info.cashOnDelivery, const Currency(10, 'USD')),
               orElse: () => throw result,
             );
           }

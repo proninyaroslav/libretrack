@@ -18,14 +18,10 @@
 
 import 'package:equatable/equatable.dart';
 import 'package:floor/floor.dart';
-import 'package:flutter/foundation.dart';
-import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:libretrack/core/entity/entity.dart';
 
 import 'address.dart';
 import 'converter/converter.dart';
-
-part 'shipment_info.freezed.dart';
 
 @TypeConverters([
   PostalServiceTypeConverter,
@@ -73,7 +69,7 @@ class ShipmentInfo extends Equatable {
   final DateTime? scheduledDeliveryDate;
 
   @ignore
-  final CashOnDelivery? cashOnDelivery;
+  final Currency? cashOnDelivery;
 
   @ignore
   final Address? shipperAddress;
@@ -125,7 +121,7 @@ class ShipmentInfo extends Equatable {
   })  : cashOnDelivery = cashOnDeliveryValue_ == null ||
                 cashOnDeliveryCurrencyCode_ == null
             ? null
-            : CashOnDelivery(cashOnDeliveryValue_, cashOnDeliveryCurrencyCode_),
+            : Currency(cashOnDeliveryValue_, cashOnDeliveryCurrencyCode_),
         shipperAddress = shipperLocation_ == null &&
                 shipperPostalCode_ == null &&
                 shipperCountryCode_ == null
@@ -259,12 +255,4 @@ class ShipmentInfo extends Equatable {
   @ColumnInfo(name: 'volume_Measurement')
   // ignore: non_constant_identifier_names
   final Measurement? volumeMeasurement_;
-}
-
-@freezed
-class CashOnDelivery with _$CashOnDelivery {
-  const factory CashOnDelivery(
-    double value,
-    String currencyCode,
-  ) = _CashOnDelivery;
 }

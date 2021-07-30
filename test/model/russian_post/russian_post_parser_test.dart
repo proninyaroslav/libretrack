@@ -427,7 +427,7 @@ void main() {
           final expectedShipmentInfo = ShipmentInfo.from(
             trackNumber: '123',
             serviceType: PostalServiceType.russianPost,
-            cashOnDelivery: const CashOnDelivery(100.1, 'RUB'),
+            cashOnDelivery: const Currency(100.1, 'RUB'),
           );
           final response = ServiceResponse(
             transactionId: const TransactionId('1'),

@@ -873,8 +873,8 @@ class _CashOnDelivery {
 
   const _CashOnDelivery({required this.value, required this.currencyCode});
 
-  CashOnDelivery toCashOnDelivery() =>
-      CashOnDelivery(int.parse(value).toDouble(), currencyCode);
+  Currency toCashOnDelivery() =>
+      Currency(int.parse(value).toDouble(), currencyCode);
 }
 
 abstract class _ShipmentAddressTypeCode {

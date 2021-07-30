@@ -16,16 +16,15 @@
 // You should have received a copy of the GNU General Public License
 // along with LibreTrack.  If not, see <http://www.gnu.org/licenses/>.
 
-export 'address.dart';
-export 'alternate_track_number.dart';
-export 'currency.dart';
-export 'postal_service.dart';
-export 'service_auth.dart';
-export 'shipment_activity_info.dart';
-export 'shipment_info.dart';
-export 'track_number_info.dart';
-export 'tracking_info.dart';
-export 'tracking_service.dart';
-export 'transaction_id.dart';
-export 'unit_of_measurement.dart';
-export 'work_info.dart';
+import 'package:flutter/foundation.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
+
+part 'currency.freezed.dart';
+
+@freezed
+class Currency with _$Currency {
+  const factory Currency(
+    double value,
+    String currencyCode,
+  ) = _Currency;
+}
