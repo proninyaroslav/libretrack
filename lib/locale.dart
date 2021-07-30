@@ -27,6 +27,7 @@ export 'generated/l10n.dart';
 class AppLocale {
   static const supportedLocales = [
     Locale('en', 'US'),
+    Locale('es', 'ES'),
     Locale('ru', 'RU'),
   ];
 
