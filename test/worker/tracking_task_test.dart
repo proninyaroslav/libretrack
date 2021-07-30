@@ -115,6 +115,10 @@ void main() {
           trackNumber: trackList[2].trackNumber,
           serviceType: PostalServiceType.ups,
         ),
+        TrackNumberService(
+          trackNumber: trackList[2].trackNumber,
+          serviceType: PostalServiceType.russianPost,
+        ),
       ];
       final expectedRequestList = [
         TrackingRequest(
@@ -130,10 +134,16 @@ void main() {
           authData: rpAuthData,
         ),
         TrackingRequest(
-          id: TransactionId(trackServices[2].trackNumber),
+          id: TransactionId('${trackServices[2].trackNumber}_0'),
           trackService: trackServices[2],
           serviceInfo: upsService,
           authData: upsAuthData,
+        ),
+        TrackingRequest(
+          id: TransactionId('${trackServices[2].trackNumber}_1'),
+          trackService: trackServices[2],
+          serviceInfo: rpService,
+          authData: rpAuthData,
         ),
       ];
       final expectedTrackingResult = expectedRequestList
@@ -166,11 +176,11 @@ void main() {
       final dateTime = DateTime(2021);
       final expectedTaskStates = [
         TrackingTaskState.loading(
-          trackingInfoList: expectedRequestList
+          trackingInfoList: trackList
               .map(
-                (request) => TrackingInfo(
-                  id: TrackingId(request.id.toString()),
-                  trackNumber: request.trackService.trackNumber,
+                (info) => TrackingInfo(
+                  id: TrackingId(info.trackNumber),
+                  trackNumber: info.trackNumber,
                   dateTime: dateTime,
                   status: TrackingStatus.inProgress,
                   hasNewInfo: false,
@@ -182,11 +192,11 @@ void main() {
         ),
         TrackingTaskState.loaded(
           result: expectedTaskResult,
-          trackingInfoList: expectedRequestList
+          trackingInfoList: trackList
               .map(
-                (request) => TrackingInfo(
-                  id: TrackingId(request.id.toString()),
-                  trackNumber: request.trackService.trackNumber,
+                (info) => TrackingInfo(
+                  id: TrackingId(info.trackNumber),
+                  trackNumber: info.trackNumber,
                   dateTime: dateTime,
                   status: TrackingStatus.complete,
                   hasNewInfo: true,
@@ -198,7 +208,7 @@ void main() {
           responseInfoList: expectedRequestList
               .map(
                 (request) => TrackingResponseInfo.from(
-                  trackingId: TrackingId(request.id.toString()),
+                  trackingId: TrackingId(request.trackService.trackNumber),
                   trackNumber: request.trackService.trackNumber,
                   dateTime: dateTime,
                   serviceType: request.trackService.serviceType,
@@ -214,11 +224,11 @@ void main() {
         if (requestIter.moveNext()) {
           return requestIter.current.id;
         }
-        throw "Cannot be more than ${trackList.length} ID's";
+        throw "Cannot be more than ${expectedRequestList.length} ID's";
       });
       final trackingIdIter = trackList
           .map(
-            (track) => TrackingId(track.trackNumber),
+            (info) => TrackingId(info.trackNumber),
           )
           .iterator;
       when(() => mockTrackingIdGenerator.randomUnique()).thenAnswer((_) {
@@ -720,10 +730,10 @@ void main() {
               trackNumber: expectedRequestList[2].trackService.trackNumber,
               dateTime: dateTime,
               serviceType: expectedRequestList[2].trackService.serviceType,
-              status: TrackingResponseStatus.success,
+              status: TrackingResponseStatus.noInfo,
             ),
           ],
-          unsupportedServices: trackServices,
+          unsupportedServices: trackServices.getRange(0, 2).toList(),
         ),
       ];
 
