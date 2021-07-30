@@ -228,18 +228,56 @@ class TrackingTask {
       );
     }
 
+    final removedServices = <String, Set<TrackNumberService>>{};
+    final allServices = <String, Set<TrackNumberService>>{};
+    for (final result in resultList) {
+      final trackService = result.request.trackService;
+      allServices
+          .putIfAbsent(trackService.trackNumber, () => {})
+          .add(trackService);
+      final unsupportedService = _handleUnsupportedService(result);
+
+      if (unsupportedService != null) {
+        unsupportedServices.add(unsupportedService);
+        removedServices
+            .putIfAbsent(unsupportedService.trackNumber, () => {})
+            .add(unsupportedService);
+      } else {
+        result.maybeMap(
+          (value) {
+            successResult.add(value);
+            final trackService = _handleStatusDeliveredService(value.activity);
+            if (trackService != null) {
+              disabledServices.add(trackService);
+            }
+          },
+          error: (value) {
+            final trackService = _handleNonRetryableService(value);
+            if (trackService != null) {
+              disabledServices.add(trackService);
+            }
+          },
+          orElse: () {},
+        );
+      }
+    }
+
     final invalidTrackNumber = <TrackingId, bool>{};
     final hasNonRetryableError = <TrackingId, bool>{};
     final hasNewInfo = <TrackingId, bool>{};
     for (final result in resultList) {
-      final unsupportedService = _handleUnsupportedService(result);
-      if (unsupportedService != null) {
-        unsupportedServices.add(unsupportedService);
+      final trackService = result.request.trackService;
+      final trackNumber = trackService.trackNumber;
+
+      final allServicesRemoved = removedServices[trackNumber]?.length ==
+          allServices[trackNumber]?.length;
+      final skip = !allServicesRemoved &&
+          (removedServices[trackNumber]?.contains(trackService) ?? false);
+      if (skip) {
+        continue;
       }
 
-      final trackNumber = result.request.trackService.trackNumber;
-      final TrackingId trackingId = initInfo[trackNumber]!.id;
-
+      final trackingId = initInfo[trackNumber]!.id;
       final responseInfo = _resultToTrackingResponseInfo(
         trackingId,
         trackNumber,
@@ -259,23 +297,6 @@ class TrackingTask {
       hasNewInfo[trackingId] = await _hasNewInfo(
         hasNewInfo[trackingId],
         result,
-      );
-
-      result.maybeMap(
-        (value) {
-          successResult.add(value);
-          final trackService = _handleStatusDeliveredService(value.activity);
-          if (trackService != null) {
-            disabledServices.add(trackService);
-          }
-        },
-        error: (value) {
-          final trackService = _handleNonRetryableService(value);
-          if (trackService != null) {
-            disabledServices.add(trackService);
-          }
-        },
-        orElse: () {},
       );
     }
 
@@ -309,7 +330,7 @@ class TrackingTask {
       trackingInfoList: trackingInfoList,
       responseInfoList: responseList,
       unsupportedServices:
-          unsupportedServices.isEmpty ? null : unsupportedServices,
+          unsupportedServices.isEmpty ? null : unsupportedServices.toList(),
       disabledServices: disabledServices.isEmpty ? null : disabledServices,
     );
   }
@@ -322,11 +343,7 @@ class TrackingTask {
       final error = result.error;
       return error.maybeWhen(
         parse: (e) => e.maybeWhen(
-          invalidTrackNumber: () => TrackNumberService(
-            trackNumber: request.trackService.trackNumber,
-            serviceType: request.trackService.serviceType,
-            isActive: false,
-          ),
+          invalidTrackNumber: () => request.trackService,
           orElse: () => null,
         ),
         orElse: () => null,
