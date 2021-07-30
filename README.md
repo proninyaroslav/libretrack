@@ -55,6 +55,7 @@ Track postal items directly on your device using accounts of postal services. Th
 
  - **English**
  - **Russian**
+ - **Spanish** *(thanks sguinetti)*
 
 ## 💰 Donation
 
