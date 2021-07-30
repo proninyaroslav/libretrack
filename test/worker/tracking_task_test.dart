@@ -720,10 +720,10 @@ void main() {
               trackNumber: expectedRequestList[2].trackService.trackNumber,
               dateTime: dateTime,
               serviceType: expectedRequestList[2].trackService.serviceType,
-              status: TrackingResponseStatus.noInfo,
+              status: TrackingResponseStatus.success,
             ),
           ],
-          unsupportedServices: trackServices.getRange(0, 2).toList(),
+          unsupportedServices: trackServices,
         ),
       ];
 

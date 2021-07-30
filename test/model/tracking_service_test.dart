@@ -79,10 +79,9 @@ void main() {
       for (final i in range(1, 6)) {
         final id = TransactionId('$i');
         final trackService = TrackNumberService(
-          trackNumber: '$i',
-          serviceType: (i as int).isEven
-              ? PostalServiceType.ups
-              : PostalServiceType.russianPost,
+          trackNumber: (i as int).isEven ? '$i' : '${i - 1}',
+          serviceType:
+              i.isEven ? PostalServiceType.ups : PostalServiceType.russianPost,
         );
 
         final request = TrackingRequest(

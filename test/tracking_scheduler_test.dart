@@ -85,7 +85,7 @@ void main() {
         (_) async => StorageResult([
           TrackNumberService(
             trackNumber: trackNumbersList[1],
-            serviceType: PostalServiceType.ups,
+            serviceType: PostalServiceType.russianPost,
           ),
         ]),
       );
@@ -93,6 +93,10 @@ void main() {
         () => mockTrackRepo.getActiveTrackNumberServices(trackNumbersList[2]),
       ).thenAnswer(
         (_) async => StorageResult([
+          TrackNumberService(
+            trackNumber: trackNumbersList[2],
+            serviceType: PostalServiceType.ups,
+          ),
           TrackNumberService(
             trackNumber: trackNumbersList[2],
             serviceType: PostalServiceType.russianPost,
@@ -126,6 +130,10 @@ void main() {
       when(
         () => mockWorkerManager.tracking(
           trackNumberServiceList: [
+            TrackNumberService(
+              trackNumber: trackNumbersList[2],
+              serviceType: PostalServiceType.ups,
+            ),
             TrackNumberService(
               trackNumber: trackNumbersList[2],
               serviceType: PostalServiceType.russianPost,

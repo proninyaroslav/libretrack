@@ -65,11 +65,15 @@ void main() {
         ),
         TrackNumberService(
           trackNumber: trackInfoList[1].trackNumber,
-          serviceType: PostalServiceType.ups,
+          serviceType: PostalServiceType.russianPost,
         ),
         TrackNumberService(
           trackNumber: trackInfoList[2].trackNumber,
           serviceType: PostalServiceType.russianPost,
+        ),
+        TrackNumberService(
+          trackNumber: trackInfoList[2].trackNumber,
+          serviceType: PostalServiceType.ups,
         ),
       ];
       final nonArchivedTracks = trackInfoList
