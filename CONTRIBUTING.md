@@ -11,6 +11,7 @@ If you are making changes to the localization files, run the following command:
 ```
 flutter pub run intl_utils:generate
 ```
+or use [VSCode](https://marketplace.visualstudio.com/items?itemName=localizely.flutter-intl)/[Intellij IDEA](https://plugins.jetbrains.com/plugin/13666-flutter-intl) special plugin.
 
 If you added a new language, make sure to add it to the [lib/locale.dart](lib/locale.dart).
 
