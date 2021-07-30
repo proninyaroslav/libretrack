@@ -308,14 +308,22 @@ class MessageLookup extends MessageLookupByLibrary {
         "settingsTrackingSection":
             MessageLookupByLibrary.simpleMessage("Tracking settings"),
         "share": MessageLookupByLibrary.simpleMessage("Share"),
+        "shipmentAdditionalRateFee":
+            MessageLookupByLibrary.simpleMessage("Additional rate fee"),
         "shipmentAlternateTrackingNumber":
             MessageLookupByLibrary.simpleMessage("Alternate tracking number"),
         "shipmentCashOnDelivery":
             MessageLookupByLibrary.simpleMessage("Cash on delivery"),
+        "shipmentCustomDuty":
+            MessageLookupByLibrary.simpleMessage("Custom duty"),
+        "shipmentDeclaredValue":
+            MessageLookupByLibrary.simpleMessage("Declared value"),
         "shipmentDeliveryDate":
             MessageLookupByLibrary.simpleMessage("Delivery date"),
         "shipmentEstimatedDeliveryDate":
             MessageLookupByLibrary.simpleMessage("Estimated delivery date"),
+        "shipmentInsuranceRateFee":
+            MessageLookupByLibrary.simpleMessage("Insurance rate fee"),
         "shipmentPickupDate":
             MessageLookupByLibrary.simpleMessage("Pickup date"),
         "shipmentReceiverAddress":
@@ -326,6 +334,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Service"),
         "shipmentShipperAddress":
             MessageLookupByLibrary.simpleMessage("Shipper address"),
+        "shipmentShippingRateFee":
+            MessageLookupByLibrary.simpleMessage("Shipping rate fee"),
         "shipmentSignedBy": MessageLookupByLibrary.simpleMessage("Signed by"),
         "shipmentTypeDescription":
             MessageLookupByLibrary.simpleMessage("Shipment type"),

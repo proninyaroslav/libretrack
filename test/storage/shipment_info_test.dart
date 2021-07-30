@@ -72,6 +72,11 @@ void main() {
           countryCode: 'US',
         ),
         serviceMessage: 'test',
+        declaredValue: const Currency(1, 'USD'),
+        customDuty: const Currency(2, 'USD'),
+        additionalRateFee: const Currency(3, 'USD'),
+        shippingRateFee: const Currency(4, 'USD'),
+        insuranceRateFee: const Currency(5, 'USD'),
       );
       final info2 = ShipmentInfo.from(
         id: 2,

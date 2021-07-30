@@ -1535,6 +1535,56 @@ class S {
     );
   }
 
+  /// `Declared value`
+  String get shipmentDeclaredValue {
+    return Intl.message(
+      'Declared value',
+      name: 'shipmentDeclaredValue',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Custom duty`
+  String get shipmentCustomDuty {
+    return Intl.message(
+      'Custom duty',
+      name: 'shipmentCustomDuty',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Additional rate fee`
+  String get shipmentAdditionalRateFee {
+    return Intl.message(
+      'Additional rate fee',
+      name: 'shipmentAdditionalRateFee',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Shipping rate fee`
+  String get shipmentShippingRateFee {
+    return Intl.message(
+      'Shipping rate fee',
+      name: 'shipmentShippingRateFee',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Insurance rate fee`
+  String get shipmentInsuranceRateFee {
+    return Intl.message(
+      'Insurance rate fee',
+      name: 'shipmentInsuranceRateFee',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Shipment type`
   String get shipmentTypeDescription {
     return Intl.message(

@@ -315,14 +315,22 @@ class MessageLookup extends MessageLookupByLibrary {
         "settingsTrackingSection":
             MessageLookupByLibrary.simpleMessage("Настройки отслеживания"),
         "share": MessageLookupByLibrary.simpleMessage("Поделиться"),
+        "shipmentAdditionalRateFee": MessageLookupByLibrary.simpleMessage(
+            "Дополнительный тарифный сбор"),
         "shipmentAlternateTrackingNumber":
             MessageLookupByLibrary.simpleMessage("Альтернативный трек номер"),
         "shipmentCashOnDelivery":
             MessageLookupByLibrary.simpleMessage("Наложенный платёж"),
+        "shipmentCustomDuty":
+            MessageLookupByLibrary.simpleMessage("Таможенная пошлина"),
+        "shipmentDeclaredValue":
+            MessageLookupByLibrary.simpleMessage("Объявленная ценность"),
         "shipmentDeliveryDate":
             MessageLookupByLibrary.simpleMessage("Дата доставки"),
         "shipmentEstimatedDeliveryDate": MessageLookupByLibrary.simpleMessage(
             "Предполагаемая дата доставки"),
+        "shipmentInsuranceRateFee":
+            MessageLookupByLibrary.simpleMessage("Страховой сбор"),
         "shipmentPickupDate":
             MessageLookupByLibrary.simpleMessage("Дата приёма"),
         "shipmentReceiverAddress":
@@ -333,6 +341,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Услуга"),
         "shipmentShipperAddress":
             MessageLookupByLibrary.simpleMessage("Адрес отправителя"),
+        "shipmentShippingRateFee":
+            MessageLookupByLibrary.simpleMessage("Стоимость доставки"),
         "shipmentSignedBy": MessageLookupByLibrary.simpleMessage("Подписано"),
         "shipmentTypeDescription":
             MessageLookupByLibrary.simpleMessage("Тип отправления"),

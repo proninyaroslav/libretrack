@@ -151,6 +151,11 @@
         "description": "Объём в кубометрах, литрах и т.д."
     },
     "shipmentCashOnDelivery": "Наложенный платёж",
+    "shipmentDeclaredValue": "Объявленная ценность",
+    "shipmentCustomDuty": "Таможенная пошлина",
+    "shipmentAdditionalRateFee": "Дополнительный тарифный сбор",
+    "shipmentShippingRateFee": "Стоимость доставки",
+    "shipmentInsuranceRateFee": "Страховой сбор",
     "shipmentTypeDescription": "Тип отправления",
     "shipmentReceiverAddress": "Адрес получателя",
     "shipmentShipperAddress": "Адрес отправителя",

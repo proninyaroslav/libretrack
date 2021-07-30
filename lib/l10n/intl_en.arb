@@ -150,6 +150,11 @@
         "description": "Volume in cubic meters, liters, etc."
     },
     "shipmentCashOnDelivery": "Cash on delivery",
+    "shipmentDeclaredValue": "Declared value",
+    "shipmentCustomDuty": "Custom duty",
+    "shipmentAdditionalRateFee": "Additional rate fee",
+    "shipmentShippingRateFee": "Shipping rate fee",
+    "shipmentInsuranceRateFee": "Insurance rate fee",
     "shipmentTypeDescription": "Shipment type",
     "shipmentReceiverAddress": "Receiver address",
     "shipmentShipperAddress": "Shipper address",

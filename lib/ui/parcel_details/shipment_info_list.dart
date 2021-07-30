@@ -201,6 +201,36 @@ class _ShipmentInfoItem extends StatelessWidget {
           title: S.of(context).shipmentCashOnDelivery,
           content: info.cashOnDelivery!.format(context),
         ),
+      if (info.declaredValue != null && info.declaredValue!.value != 0)
+        _InfoString(
+          iconData: Icons.payment,
+          title: S.of(context).shipmentDeclaredValue,
+          content: info.declaredValue!.format(context),
+        ),
+      if (info.customDuty != null && info.customDuty!.value != 0)
+        _InfoString(
+          iconData: Icons.payment,
+          title: S.of(context).shipmentCustomDuty,
+          content: info.customDuty!.format(context),
+        ),
+      if (info.additionalRateFee != null && info.additionalRateFee!.value != 0)
+        _InfoString(
+          iconData: Icons.payment,
+          title: S.of(context).shipmentAdditionalRateFee,
+          content: info.additionalRateFee!.format(context),
+        ),
+      if (info.shippingRateFee != null && info.shippingRateFee!.value != 0)
+        _InfoString(
+          iconData: Icons.payment,
+          title: S.of(context).shipmentShippingRateFee,
+          content: info.shippingRateFee!.format(context),
+        ),
+      if (info.insuranceRateFee != null && info.insuranceRateFee!.value != 0)
+        _InfoString(
+          iconData: Icons.payment,
+          title: S.of(context).shipmentInsuranceRateFee,
+          content: info.insuranceRateFee!.format(context),
+        ),
       if (info.deliveryDate != null)
         _InfoString(
           iconData: MdiIcons.calendarCheck,
