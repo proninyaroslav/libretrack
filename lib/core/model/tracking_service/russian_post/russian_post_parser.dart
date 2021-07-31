@@ -464,11 +464,15 @@ class RussianPostParser implements Parser {
     return date == null ? null : _DateTime(date);
   }
 
-  String? _parseReceiverName(XmlElement userParameters) =>
-      userParameters.getElement('ns3:Rcpn')?.innerText;
+  String? _parseReceiverName(XmlElement userParameters) {
+    final value = userParameters.getElement('ns3:Rcpn')?.innerText;
+    return value == null || value.isEmpty ? null : value;
+  }
 
-  String? _parseShipperName(XmlElement userParameters) =>
-      userParameters.getElement('ns3:Sndr')?.innerText;
+  String? _parseShipperName(XmlElement userParameters) {
+    final value = userParameters.getElement('ns3:Sndr')?.innerText;
+    return value == null || value.isEmpty ? null : value;
+  }
 }
 
 class _SoapErrorCode {
