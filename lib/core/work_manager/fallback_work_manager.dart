@@ -58,71 +58,36 @@ class FallbackWorkManager implements WorkManager {
     WorkParams? params,
     Duration? initialDelay,
   }) async {
+    Future<void> register() async {
+      final worker = _workersProvider.getWorkerByName(workerName);
+      if (worker == null) {
+        return;
+      }
+      final info = WorkInfo.from(
+        id: workId,
+        workerName: workerName,
+        type: WorkType.oneTime,
+        inputData: params?.inputData,
+        constraints: params?.constraints,
+        initialDelay: initialDelay,
+      );
+      await _repo.addWork(info);
+    }
+
     if (params == null) {
-      return _doOneTime(workId, workerName, params, initialDelay);
+      return register();
     } else {
       switch (params.existingWorkPolicy) {
         case ExistingWorkPolicy.keep:
           if (await _repo.getWorkById(workId) == null) {
-            return _doOneTime(workId, workerName, params, initialDelay);
+            return register();
           } else {
             // Do nothing
             return;
           }
         case ExistingWorkPolicy.replace:
-          return _doOneTime(workId, workerName, params, initialDelay);
+          return register();
       }
-    }
-  }
-
-  Future<void> _doOneTime(
-    String workId,
-    String workerName,
-    WorkParams? params,
-    Duration? initialDelay,
-  ) async {
-    final worker = _workersProvider.getWorkerByName(workerName);
-    if (worker == null) {
-      return;
-    }
-
-    final info = WorkInfo.from(
-      id: workId,
-      workerName: workerName,
-      type: WorkType.oneTime,
-      inputData: params?.inputData,
-      constraints: params?.constraints,
-      initialDelay: initialDelay,
-    );
-    await _repo.addWork(info);
-    late final Future<void> Function() run;
-    if (await _constraintsManager.isWorkAllowed(info.constraints)) {
-      run = () async {
-        final result = await worker.doWork(info.inputData);
-        await _repo.deleteWork(info);
-        _printResult(result, info);
-      };
-    } else {
-      run = () async {
-        _constraintsManager.defferedCheck(info.constraints).then(
-          (workAllowed) async {
-            final currentInfo = await _repo.getWorkById(info.id);
-            if (currentInfo == null) {
-              return;
-            }
-            await _repo.deleteWork(currentInfo);
-            if (workAllowed) {
-              final result = await worker.doWork(currentInfo.inputData);
-              _printResult(result, currentInfo);
-            }
-          },
-        );
-      };
-    }
-    if (initialDelay != null) {
-      Timer(initialDelay, run);
-    } else {
-      await run();
     }
   }
 
@@ -176,49 +141,78 @@ class FallbackWorkManager implements WorkManager {
     }
   }
 
+  Future<bool> _execute(WorkInfo info) async {
+    WorkResult? result;
+    final worker = _workersProvider.getWorkerByName(info.workerName);
+    if (worker == null) {
+      return false;
+    }
+    late final Future<void> Function() run;
+    if (await _constraintsManager.isWorkAllowed(info.constraints)) {
+      if (info.type == WorkType.periodic) {
+        if (_isTooFast(info)) {
+          return true;
+        } else {
+          await _repo.updateWork(info.copyWith(
+            lastRunning: _dateTimeProvider.now(),
+          ));
+        }
+      }
+      run = () async {
+        result = await worker.doWork(info.inputData);
+        if (info.type == WorkType.oneTime) {
+          await _repo.deleteWork(info);
+        }
+        _printResult(result!, info);
+      };
+    } else {
+      run = () async {
+        _constraintsManager.defferedCheck(info.constraints).then(
+          (workAllowed) async {
+            final currentInfo = await _repo.getWorkById(info.id);
+            if (currentInfo == null) {
+              return;
+            }
+            if (info.type == WorkType.oneTime) {
+              await _repo.deleteWork(currentInfo);
+            }
+            if (workAllowed) {
+              result = await worker.doWork(currentInfo.inputData);
+              _printResult(result!, currentInfo);
+            }
+          },
+        );
+      };
+    }
+    if (info.initialDelay != null) {
+      Timer(info.initialDelay!, run);
+    } else {
+      await run();
+    }
+
+    return result?.when(
+          success: () => true,
+          failure: () => false,
+        ) ??
+        true;
+  }
+
+  Future<bool> execute(String id) async {
+    final info = await _repo.getWorkById(id);
+    if (info == null) {
+      return true;
+    }
+
+    return _execute(info);
+  }
+
   Future<bool> executeAll() async {
-    final results = <Future<MapEntry<WorkInfo, WorkResult>>>[];
+    final results = <Future<bool>>[];
     final infoList = await _repo.getAll();
     for (final info in infoList) {
-      final worker = _workersProvider.getWorkerByName(info.workerName);
-      if (worker == null) {
-        continue;
-      }
-      Future<void> run() async {
-        if (await _constraintsManager.isWorkAllowed(info.constraints)) {
-          if (info.type == WorkType.periodic) {
-            if (_isTooFast(info)) {
-              return;
-            } else {
-              await _repo.updateWork(info.copyWith(
-                lastRunning: _dateTimeProvider.now(),
-              ));
-            }
-          }
-          results.add(worker.doWork(info.inputData).then(
-                (result) => MapEntry(info, result),
-                onError: (e, StackTrace stacktrace) =>
-                    log().e('Work failed: ', e, stacktrace),
-              ));
-        }
-        for (final e in await Future.wait(results)) {
-          final result = e.value;
-          final info = e.key;
-
-          _printResult(result, info);
-
-          if (info.type == WorkType.oneTime) {
-            await _repo.deleteWork(info);
-          }
-        }
-      }
-
-      if (info.initialDelay != null) {
-        Timer(info.initialDelay!, run);
-      } else {
-        await run();
-      }
+      results.add(_execute(info).then((result) => result));
     }
+    await Future.wait(results);
 
     return true;
   }

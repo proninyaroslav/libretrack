@@ -24,6 +24,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:libretrack/core/crash_report/crash_report_manager.dart';
 import 'package:libretrack/core/notification_manager.dart';
+import 'package:libretrack/core/platform_info.dart';
 import 'package:libretrack/core/settings/settings.dart';
 import 'package:libretrack/locale.dart';
 import 'package:libretrack/logger.dart';
@@ -51,7 +52,7 @@ class App extends StatefulWidget {
 class _AppState extends State<App> {
   late final AppRouterDelegate _routerDelegate;
   final AppRouteInfoParser _routeInfoParser = const AppRouteInfoParser();
-  late StreamSubscription _sharedTextIntentSubscription;
+  StreamSubscription? _sharedTextIntentSubscription;
 
   @override
   void initState() {
@@ -59,71 +60,79 @@ class _AppState extends State<App> {
 
     _routerDelegate = AppRouterDelegate(navigatorKey: widget.navigatorKey);
 
-    getIt<NotificationManager>().listenOnSelectNotification().listen(
-      (action) {
-        final initRoute = _notifyActionToRoute(action);
-        if (initRoute != null) {
-          _routerDelegate.setNewRoutePath(initRoute);
-        } else {
-          action.maybeWhen(
-            reportCrash: _onReport,
-            orElse: () {},
-          );
-        }
-      },
-      onError: (e, StackTrace stackTrace) {
-        log().e('Unable to handle notification action', e, stackTrace);
-      },
-    );
+    final platform = getIt<PlatformInfo>();
 
-    getIt<NotificationManager>().getAppLaunchDetails().then(
-      (action) {
-        if (action == null) {
-          return;
-        }
-        final initRoute = _notifyActionToRoute(action);
-        if (initRoute != null) {
-          _routerDelegate.setNewRoutePath(initRoute);
-        } else {
-          action.maybeWhen(
-            reportCrash: _onReport,
-            orElse: () {},
+    // TODO: Desktop/Web support
+    if (platform.isAndroid || platform.isIOS) {
+      getIt<NotificationManager>().listenOnSelectNotification().listen(
+        (action) {
+          final initRoute = _notifyActionToRoute(action);
+          if (initRoute != null) {
+            _routerDelegate.setNewRoutePath(initRoute);
+          } else {
+            action.maybeWhen(
+              reportCrash: _onReport,
+              orElse: () {},
+            );
+          }
+        },
+        onError: (e, StackTrace stackTrace) {
+          log().e('Unable to handle notification action', e, stackTrace);
+        },
+      );
+
+      getIt<NotificationManager>().getAppLaunchDetails().then(
+        (action) {
+          if (action == null) {
+            return;
+          }
+          final initRoute = _notifyActionToRoute(action);
+          if (initRoute != null) {
+            _routerDelegate.setNewRoutePath(initRoute);
+          } else {
+            action.maybeWhen(
+              reportCrash: _onReport,
+              orElse: () {},
+            );
+          }
+        },
+        onError: (e, StackTrace stackTrace) {
+          log().e(
+            'Unable to launch the app from the notification',
+            e,
+            stackTrace,
           );
-        }
-      },
-      onError: (e, StackTrace stackTrace) {
-        log().e(
-          'Unable to launch the app from the notification',
-          e,
-          stackTrace,
-        );
-      },
-    );
+        },
+      );
+    }
 
     // TODO: iOS/Desktop/Web support
-    _sharedTextIntentSubscription = ReceiveSharingIntent.getTextStream().listen(
-      (value) {
-        _routerDelegate.setNewRoutePath(
-          AppRoutePath.addParcels(initialTrackNumbers: value),
-        );
-      },
-      onError: (e, StackTrace stackTrace) {
-        log().e('Unable to getting shared text', e, stackTrace);
-      },
-    );
-
-    ReceiveSharingIntent.getInitialText().then(
-      (value) {
-        if (value != null) {
+    if (platform.isAndroid) {
+      _sharedTextIntentSubscription =
+          ReceiveSharingIntent.getTextStream().listen(
+        (value) {
           _routerDelegate.setNewRoutePath(
             AppRoutePath.addParcels(initialTrackNumbers: value),
           );
-        }
-      },
-      onError: (e, StackTrace stackTrace) {
-        log().e('Unable to getting initial shared text', e, stackTrace);
-      },
-    );
+        },
+        onError: (e, StackTrace stackTrace) {
+          log().e('Unable to getting shared text', e, stackTrace);
+        },
+      );
+
+      ReceiveSharingIntent.getInitialText().then(
+        (value) {
+          if (value != null) {
+            _routerDelegate.setNewRoutePath(
+              AppRoutePath.addParcels(initialTrackNumbers: value),
+            );
+          }
+        },
+        onError: (e, StackTrace stackTrace) {
+          log().e('Unable to getting initial shared text', e, stackTrace);
+        },
+      );
+    }
   }
 
   Future<void> _onReport(
@@ -150,7 +159,7 @@ class _AppState extends State<App> {
 
   @override
   void dispose() {
-    _sharedTextIntentSubscription.cancel();
+    _sharedTextIntentSubscription?.cancel();
 
     super.dispose();
   }

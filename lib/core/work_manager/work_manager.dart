@@ -16,6 +16,8 @@
 // You should have received a copy of the GNU General Public License
 // along with LibreTrack.  If not, see <http://www.gnu.org/licenses/>.
 
+import 'dart:async';
+
 import 'package:flutter/foundation.dart';
 import 'package:flutter/widgets.dart';
 import 'package:injectable/injectable.dart';
@@ -23,6 +25,7 @@ import 'package:libretrack/core/app_database_isolate_binder.dart';
 import 'package:libretrack/core/crash_catcher/crash_catcher.dart';
 import 'package:libretrack/core/crash_catcher/hook/flutter_crash_hook.dart';
 import 'package:libretrack/core/date_time_provider.dart';
+import 'package:libretrack/core/entity/entity.dart';
 import 'package:libretrack/core/storage/work_manager_repository.dart';
 import 'package:libretrack/env.dart';
 import 'package:libretrack/injector.dart';
@@ -35,6 +38,8 @@ import 'registered_workers.dart';
 import 'worker.dart';
 
 export 'worker.dart';
+
+const _kDefaultFrequency = Duration(minutes: 15);
 
 abstract class WorkManager {
   Future<void> init();
@@ -98,6 +103,10 @@ class DebugWorkManagerImpl extends _WorkManagerImpl {
         );
 }
 
+abstract class _PlatformWorkManager extends WorkManager {
+  Future<void> execute();
+}
+
 class _WorkManagerImpl implements WorkManager {
   final WorkManager _platformWm;
   final WorkersProvider _workersProvider;
@@ -119,7 +128,7 @@ class _WorkManagerImpl implements WorkManager {
   @override
   Future<void> init() async => _platformWm.init();
 
-  static WorkManager _getPlatfowmWm(
+  static _PlatformWorkManager _getPlatfowmWm(
     WorkManagerRepository repo,
     PlatformInfo platform,
     WorkersProvider workersProvider,
@@ -134,9 +143,16 @@ class _WorkManagerImpl implements WorkManager {
         dateTimeProvider,
         isDebug: isDebug,
       );
+    } else if (platform.isLinux || platform.isWindows || platform.isMacOS) {
+      return _DesktopWorkManager(
+        repo,
+        platform,
+        workersProvider,
+        dateTimeProvider,
+      );
     } else {
-      // TODO: Desktop support
-      return _DesktopWorkManagerStub();
+      // TODO: Web support
+      throw UnsupportedError('Unsupported platform');
     }
   }
 
@@ -183,64 +199,35 @@ class _WorkManagerImpl implements WorkManager {
       _platformWm.cancelById(workId);
 }
 
-Future<bool> _taskHandler(
-  String taskName,
-  Map<String, dynamic>? inputData,
-) async {
-  final repo = getIt<WorkManagerRepository>();
-  final platform = getIt<PlatformInfo>();
-  final workersProvider = getIt<WorkersProvider>();
-  final dateTimeProvider = getIt<DateTimeProvider>();
-  final platformWm = _WorkManagerImpl._getPlatfowmWm(
-    repo,
-    platform,
-    workersProvider,
-    dateTimeProvider,
-    isDebug: kDebugMode,
-  );
-  late final bool result;
-  if (platformWm is _MobileWorkManager) {
-    result = await platformWm.execute(taskName, inputData);
-  } else {
-    // TODO: Desktop support
-    throw UnsupportedError('Unsupported platform');
-  }
-  if (!result) {
-    throw _WorkFailedException();
-  }
-  return true;
-}
+final _crashHandlers = [
+  DefaultCrashHandler(),
+  NotificationCrashHandler(),
+];
+
+final _debugCrashHandlers = [
+  DefaultCrashHandler(),
+];
 
 Future<void> callbackDispatcher() async {
   WidgetsFlutterBinding.ensureInitialized();
-
-  final handlers = [
-    DefaultCrashHandler(),
-    NotificationCrashHandler(),
-  ];
-
-  final debugHandlers = [
-    DefaultCrashHandler(),
-  ];
 
   Future<void> _dispatcher() async {
     await initInjector(kDebugMode ? Env.dev : Env.prod);
     getIt<AppDatabaseIsolateBinder>().emitChanges();
     await getIt<NotificationManager>().init();
 
-    wm.Workmanager().executeTask((taskName, inputData) async {
-       await crashCatcher(
-          hooks: [
-            _TaskCrashHook(
-              taskHandler: () => _taskHandler(taskName, inputData),
-            ),
-          ],
-          handlers: [
-            _TaskCrashHandler(handlers: kDebugMode ? debugHandlers : handlers),
-          ],
-        );
-      return true;
-    });
+    final repo = getIt<WorkManagerRepository>();
+    final platform = getIt<PlatformInfo>();
+    final workersProvider = getIt<WorkersProvider>();
+    final dateTimeProvider = getIt<DateTimeProvider>();
+    final platformWm = _WorkManagerImpl._getPlatfowmWm(
+      repo,
+      platform,
+      workersProvider,
+      dateTimeProvider,
+      isDebug: kDebugMode,
+    );
+    await platformWm.execute();
   }
 
   if (kDebugMode) {
@@ -252,14 +239,14 @@ Future<void> callbackDispatcher() async {
         IsolateCrashHook(),
         FlutterCrashHook(),
       ],
-      handlers: handlers,
+      handlers: _crashHandlers,
     );
   }
 }
 
-class _MobileWorkManager implements WorkManager {
+class _MobileWorkManager implements _PlatformWorkManager {
   final PlatformInfo _platform;
-  final FallbackWorkManager _fallbackWm;
+  final _IOSWorkManager _iosWm;
   final WorkersProvider _workersProvider;
   final bool _isDebug;
   final wm.Workmanager _wm;
@@ -270,11 +257,13 @@ class _MobileWorkManager implements WorkManager {
     this._workersProvider,
     DateTimeProvider dateTimeProvider, {
     required bool isDebug,
-  })  : _fallbackWm = FallbackWorkManager(
-          repo: repo,
-          constraintsManager: _getConstraintsManager(_platform),
-          workersProvider: _workersProvider,
-          dateTimeProvider: dateTimeProvider,
+  })  : _iosWm = _IOSWorkManager(
+          FallbackWorkManager(
+            repo: repo,
+            constraintsManager: _getConstraintsManager(_platform),
+            workersProvider: _workersProvider,
+            dateTimeProvider: dateTimeProvider,
+          ),
         ),
         _isDebug = isDebug,
         _wm = wm.Workmanager();
@@ -286,7 +275,7 @@ class _MobileWorkManager implements WorkManager {
   Future<void> init() async {
     await _wm.initialize(callbackDispatcher, isInDebugMode: _isDebug);
     if (_platform.isIOS) {
-      _fallbackWm.executeAll();
+      _iosWm.init();
     }
   }
 
@@ -307,7 +296,7 @@ class _MobileWorkManager implements WorkManager {
         initialDelay: initialDelay ?? const Duration(),
       );
     } else {
-      await _fallbackWm.registerOneTime(
+      await _iosWm.registerOneTime(
         workId: workId,
         workerName: workerName,
         params: params,
@@ -333,7 +322,7 @@ class _MobileWorkManager implements WorkManager {
         existingWorkPolicy: _convertWorkPolicy(params?.existingWorkPolicy),
       );
     } else {
-      await _fallbackWm.registerPeriodic(
+      await _iosWm.registerPeriodic(
         workId: workId,
         workerName: workerName,
         params: params,
@@ -347,29 +336,46 @@ class _MobileWorkManager implements WorkManager {
     if (_platform.isAndroid) {
       await _wm.cancelByUniqueName(workId);
     } else {
-      await _fallbackWm.cancelById(workId);
+      await _iosWm.cancelById(workId);
     }
   }
 
-  Future<bool> execute(
-    String taskName,
-    Map<String, dynamic>? inputData,
-  ) async {
-    if (taskName == wm.Workmanager.iOSBackgroundTask) {
-      return _fallbackWm.executeAll();
-    } else {
-      final worker = _workersProvider.getWorkerByName(taskName);
-      if (worker == null) {
-        return false;
-      }
-      final workerData = _convertData(inputData);
-      final result = await worker.doWork(workerData);
+  @override
+  Future<void> execute() async {
+    wm.Workmanager().executeTask((taskName, inputData) async {
+      await crashCatcher(
+        hooks: [
+          _WorkmanagerCrashHook(
+            taskHandler: () async {
+              if (taskName == wm.Workmanager.iOSBackgroundTask) {
+                if (!await _iosWm.executeAll()) {
+                  throw _WorkFailedException();
+                }
+              } else {
+                final worker = _workersProvider.getWorkerByName(taskName);
+                if (worker == null) {
+                  throw _WorkFailedException();
+                }
+                final workerData = _convertData(inputData);
+                final result = await worker.doWork(workerData);
 
-      return result.when(
-        success: () => true,
-        failure: () => false,
+                result.when(
+                  success: () {},
+                  failure: () => throw _WorkFailedException(),
+                );
+              }
+            },
+          ),
+        ],
+        handlers: [
+          _WorkmanagerCrashHandler(
+            handlers: kDebugMode ? _debugCrashHandlers : _crashHandlers,
+          ),
+        ],
       );
-    }
+
+      return true;
+    });
   }
 
   wm.Constraints? _convertConstraints(WorkConstraints? constraints) {
@@ -420,16 +426,18 @@ class _MobileWorkManager implements WorkManager {
   }
 }
 
-// TODO: Desktop support
-class _DesktopWorkManagerStub implements WorkManager {
-  @override
-  Future<void> cancelById(String workId) {
-    throw UnsupportedError('Unsupported platform');
-  }
+class _IOSWorkManager implements WorkManager {
+  final FallbackWorkManager _fallbackWm;
+
+  _IOSWorkManager(FallbackWorkManager fallbackWm) : _fallbackWm = fallbackWm;
 
   @override
-  Future<void> init() {
-    throw UnsupportedError('Unsupported platform');
+  Future<void> cancelById(String workId) => _fallbackWm.cancelById(workId);
+
+  @override
+  Future<void> init() async {
+    await _fallbackWm.init();
+    await _fallbackWm.executeAll();
   }
 
   @override
@@ -438,8 +446,14 @@ class _DesktopWorkManagerStub implements WorkManager {
     required String workerName,
     WorkParams? params,
     Duration? initialDelay,
-  }) {
-    throw UnsupportedError('Unsupported platform');
+  }) async {
+    await _fallbackWm.registerOneTime(
+      workId: workId,
+      workerName: workerName,
+      params: params,
+      initialDelay: initialDelay,
+    );
+    await _fallbackWm.execute(workId);
   }
 
   @override
@@ -448,8 +462,112 @@ class _DesktopWorkManagerStub implements WorkManager {
     required String workerName,
     Duration? frequency,
     WorkParams? params,
-  }) {
-    throw UnsupportedError('Unsupported platform');
+  }) =>
+      _fallbackWm.registerPeriodic(
+        workId: workId,
+        workerName: workerName,
+        params: params,
+        frequency: frequency,
+      );
+
+  Future<bool> executeAll() => _fallbackWm.executeAll();
+}
+
+class _DesktopWorkManager implements _PlatformWorkManager {
+  final FallbackWorkManager _fallbackWm;
+  final WorkManagerRepository _repo;
+
+  final Map<String, Timer> _timers = {};
+
+  _DesktopWorkManager(
+    WorkManagerRepository repo,
+    PlatformInfo platform,
+    WorkersProvider workersProvider,
+    DateTimeProvider dateTimeProvider,
+  )   : _repo = repo,
+        _fallbackWm = FallbackWorkManager(
+          repo: repo,
+          constraintsManager: _getConstraintsManager(platform),
+          workersProvider: workersProvider,
+          dateTimeProvider: dateTimeProvider,
+        );
+
+  static ConstraintsManager _getConstraintsManager(PlatformInfo platform) =>
+      ConstraintsManagerImpl(platform);
+
+  @override
+  Future<void> cancelById(String workId) async {
+    _timers.remove(workId);
+    await _fallbackWm.cancelById(workId);
+  }
+
+  @override
+  Future<void> init() async {
+    await _fallbackWm.init();
+    await _fallbackWm.executeAll();
+    await _registerTimers();
+  }
+
+  Future<void> _registerTimers() async {
+    for (final info in await _repo.getAll()) {
+      if (info.type != WorkType.periodic) {
+        continue;
+      }
+      _timers[info.id] = _buildTimer(
+        info.id,
+        info.frequency ?? _kDefaultFrequency,
+      );
+    }
+  }
+
+  @override
+  Future<void> registerOneTime({
+    required String workId,
+    required String workerName,
+    WorkParams? params,
+    Duration? initialDelay,
+  }) async {
+    await _fallbackWm.registerOneTime(
+      workId: workId,
+      workerName: workerName,
+      params: params,
+      initialDelay: initialDelay,
+    );
+    await _fallbackWm.execute(workId);
+    _timers.remove(workId);
+  }
+
+  @override
+  Future<void> registerPeriodic({
+    required String workId,
+    required String workerName,
+    Duration? frequency,
+    WorkParams? params,
+  }) async {
+    final timer = _timers[workId];
+    if (timer != null &&
+        params?.existingWorkPolicy != ExistingWorkPolicy.replace) {
+      return;
+    }
+    _timers[workId] = _buildTimer(workId, frequency);
+    await _fallbackWm.registerPeriodic(
+      workId: workId,
+      workerName: workerName,
+      frequency: frequency,
+      params: params,
+    );
+  }
+
+  Timer _buildTimer(String workId, Duration? frequency) {
+    return Timer.periodic(
+      frequency ?? _kDefaultFrequency,
+      (timer) => _fallbackWm.execute(workId),
+    );
+  }
+
+  @override
+  Future<void> execute() {
+    throw UnimplementedError();
   }
 }
 
@@ -463,10 +581,10 @@ class _WorkFailedException implements Exception {
       message == null ? 'WorkFailedException' : 'WorkFailedException: $message';
 }
 
-class _TaskCrashHook implements CrashHook {
+class _WorkmanagerCrashHook implements CrashHook {
   final Future<void> Function() taskHandler;
 
-  _TaskCrashHook({required this.taskHandler});
+  _WorkmanagerCrashHook({required this.taskHandler});
 
   @override
   Future<void> setup({required List<CrashHandler> handlers}) async {
@@ -482,10 +600,10 @@ class _TaskCrashHook implements CrashHook {
   }
 }
 
-class _TaskCrashHandler implements CrashHandler {
+class _WorkmanagerCrashHandler implements CrashHandler {
   final List<CrashHandler> handlers;
 
-  _TaskCrashHandler({required this.handlers});
+  _WorkmanagerCrashHandler({required this.handlers});
 
   @override
   Future<void> handle(Object error, StackTrace? stackTrace) async {

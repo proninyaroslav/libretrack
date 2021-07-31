@@ -143,7 +143,7 @@ class PlatformInfoImpl implements PlatformInfo {
   @override
   bool get isWeb => kIsWeb;
 
-  // TODO: Web and Desktop support
+  // TODO: Windows/macOS support
   @override
   Future<String?> get currentLocale => Devicelocale.currentLocale;
 

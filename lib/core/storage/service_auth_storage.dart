@@ -81,10 +81,10 @@ class ServiceAuthStorageImpl implements ServiceAuthStorage {
     }
   }
 
-  // TODO: Desktop/Web support
+  // TODO: Windows/macOS/Web support
   @override
   bool get isSecureStorageSupported =>
-      _platformInfo.isAndroid || _platformInfo.isIOS;
+      _platformInfo.isAndroid || _platformInfo.isIOS || _platformInfo.isLinux;
 }
 
 Future<void> _dbInsert(
