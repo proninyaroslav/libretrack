@@ -8,7 +8,7 @@ part of 'model.dart';
 
 _$_CrashInfo _$_$_CrashInfoFromJson(Map<String, dynamic> json) {
   return _$_CrashInfo(
-    error: json['error'] as Object,
+    error: const ErrorConverter().fromJson(json['error'] as String),
     stackTrace:
         const StackTraceConverter().fromJson(json['stackTrace'] as String?),
     message: json['message'] as String?,
@@ -17,7 +17,7 @@ _$_CrashInfo _$_$_CrashInfoFromJson(Map<String, dynamic> json) {
 
 Map<String, dynamic> _$_$_CrashInfoToJson(_$_CrashInfo instance) =>
     <String, dynamic>{
-      'error': instance.error,
+      'error': const ErrorConverter().toJson(instance.error),
       'stackTrace': const StackTraceConverter().toJson(instance.stackTrace),
       'message': instance.message,
     };

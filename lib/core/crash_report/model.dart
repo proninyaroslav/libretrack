@@ -16,6 +16,8 @@
 // You should have received a copy of the GNU General Public License
 // along with LibreTrack.  If not, see <http://www.gnu.org/licenses/>.
 
+import 'dart:convert';
+
 import 'package:equatable/equatable.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
@@ -25,7 +27,7 @@ part 'model.g.dart';
 @freezed
 class CrashInfo with _$CrashInfo {
   const factory CrashInfo({
-    required Object error,
+    @ErrorConverter() required Object error,
     @StackTraceConverter() StackTrace? stackTrace,
     String? message,
   }) = _CrashInfo;
@@ -43,6 +45,22 @@ class StackTraceConverter implements JsonConverter<StackTrace?, String?> {
 
   @override
   String? toJson(StackTrace? object) => object?.toString();
+}
+
+class ErrorConverter implements JsonConverter<Object, String> {
+  const ErrorConverter();
+
+  @override
+  Object fromJson(String json) {
+    try {
+      return jsonDecode(json);
+    } catch (e) {
+      return json;
+    }
+  }
+
+  @override
+  String toJson(Object object) => object.toString();
 }
 
 @freezed

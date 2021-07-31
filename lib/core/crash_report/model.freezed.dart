@@ -21,7 +21,7 @@ class _$CrashInfoTearOff {
   const _$CrashInfoTearOff();
 
   _CrashInfo call(
-      {required Object error,
+      {@ErrorConverter() required Object error,
       @StackTraceConverter() StackTrace? stackTrace,
       String? message}) {
     return _CrashInfo(
@@ -41,6 +41,7 @@ const $CrashInfo = _$CrashInfoTearOff();
 
 /// @nodoc
 mixin _$CrashInfo {
+  @ErrorConverter()
   Object get error => throw _privateConstructorUsedError;
   @StackTraceConverter()
   StackTrace? get stackTrace => throw _privateConstructorUsedError;
@@ -57,7 +58,7 @@ abstract class $CrashInfoCopyWith<$Res> {
   factory $CrashInfoCopyWith(CrashInfo value, $Res Function(CrashInfo) then) =
       _$CrashInfoCopyWithImpl<$Res>;
   $Res call(
-      {Object error,
+      {@ErrorConverter() Object error,
       @StackTraceConverter() StackTrace? stackTrace,
       String? message});
 }
@@ -100,7 +101,7 @@ abstract class _$CrashInfoCopyWith<$Res> implements $CrashInfoCopyWith<$Res> {
       __$CrashInfoCopyWithImpl<$Res>;
   @override
   $Res call(
-      {Object error,
+      {@ErrorConverter() Object error,
       @StackTraceConverter() StackTrace? stackTrace,
       String? message});
 }
@@ -141,7 +142,7 @@ class __$CrashInfoCopyWithImpl<$Res> extends _$CrashInfoCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_CrashInfo implements _CrashInfo {
   const _$_CrashInfo(
-      {required this.error,
+      {@ErrorConverter() required this.error,
       @StackTraceConverter() this.stackTrace,
       this.message});
 
@@ -149,6 +150,7 @@ class _$_CrashInfo implements _CrashInfo {
       _$_$_CrashInfoFromJson(json);
 
   @override
+  @ErrorConverter()
   final Object error;
   @override
   @StackTraceConverter()
@@ -194,7 +196,7 @@ class _$_CrashInfo implements _CrashInfo {
 
 abstract class _CrashInfo implements CrashInfo {
   const factory _CrashInfo(
-      {required Object error,
+      {@ErrorConverter() required Object error,
       @StackTraceConverter() StackTrace? stackTrace,
       String? message}) = _$_CrashInfo;
 
@@ -202,6 +204,7 @@ abstract class _CrashInfo implements CrashInfo {
       _$_CrashInfo.fromJson;
 
   @override
+  @ErrorConverter()
   Object get error => throw _privateConstructorUsedError;
   @override
   @StackTraceConverter()
