@@ -182,6 +182,7 @@ class RussianPostParser implements Parser {
     String? serviceDescription, shipmentDescription;
     _Weight? weight;
     _DateTime? pickupDate, deliveryDate;
+    String? receiverName, shipperName;
     for (final record in historyRecords.toList().reversed) {
       Address? activityLocation;
       final itemParameters = record.getElement('ns3:ItemParameters');
@@ -226,6 +227,12 @@ class RussianPostParser implements Parser {
         serviceDescription ??= _parseServiceDescription(itemParameters);
         shipmentDescription ??= _parseShipmentDescription(itemParameters);
         weight ??= _parseWeight(itemParameters);
+      }
+
+      final userParameters = record.getElement('ns3:UserParameters');
+      if (userParameters != null) {
+        receiverName ??= _parseReceiverName(userParameters);
+        shipperName ??= _parseShipperName(userParameters);
       }
 
       final operationParameters = record.getElement('ns3:OperationParameters');
@@ -273,6 +280,8 @@ class RussianPostParser implements Parser {
         additionalRateFee: additionalRateFee?.toCashValue(),
         shippingRateFee: shippingRateFee?.toCashValue(),
         insuranceRateFee: insuranceRateFee?.toCashValue(),
+        shipperName: shipperName,
+        receiverName: receiverName,
       ),
       activity: activityList,
     );
@@ -454,6 +463,12 @@ class RussianPostParser implements Parser {
     final date = operationParameters.getElement('ns3:OperDate')?.innerText;
     return date == null ? null : _DateTime(date);
   }
+
+  String? _parseReceiverName(XmlElement userParameters) =>
+      userParameters.getElement('ns3:Rcpn')?.innerText;
+
+  String? _parseShipperName(XmlElement userParameters) =>
+      userParameters.getElement('ns3:Sndr')?.innerText;
 }
 
 class _SoapErrorCode {

@@ -853,7 +853,7 @@ void main() {
           const trackNumber = '123';
           final expectedShipmentInfo = ShipmentInfo.from(
             trackNumber: trackNumber,
-            serviceType:  PostalServiceType.russianPost,
+            serviceType: PostalServiceType.russianPost,
             pickupDate: DateTime.utc(2021, 1, 2, 7, 01),
             deliveryDate: DateTime.utc(2021, 1, 3, 7, 01),
           );
@@ -896,6 +896,48 @@ void main() {
             (info, activity, alternateTracks) {
               expect(info, expectedShipmentInfo);
               expect(activity, expectedActivity);
+            },
+            orElse: () => throw result,
+          );
+        });
+
+        test('Shipper and receiver name', () async {
+          final builder = XmlBuilder();
+          final payload = _buildResult(
+            builder,
+            historyRecord: [
+              () => builder.element('ns3:UserParameters', nest: () {
+                    builder.element('ns3:Sndr', nest: 'unreachable');
+                    builder.element('ns3:Rcpn', nest: 'unreachable');
+                  }),
+              () {
+                builder.element('ns3:ItemParameters', nest: () {
+                  builder.element('ns3:Barcode', nest: '123');
+                });
+                builder.element('ns3:UserParameters', nest: () {
+                  builder.element('ns3:Sndr', nest: 'Shipper');
+                  builder.element('ns3:Rcpn', nest: 'Receiver');
+                });
+              }
+            ],
+          );
+          final expectedShipmentInfo = ShipmentInfo.from(
+            trackNumber: '123',
+            serviceType: PostalServiceType.russianPost,
+            shipperName: 'Shipper',
+            receiverName: 'Receiver',
+          );
+          final response = ServiceResponse(
+            transactionId: const TransactionId('1'),
+            statusCode: 200,
+            payload: payload,
+          );
+
+          final result = parser.parse(response);
+          result.maybeWhen(
+            (info, activity, alternateTracks) {
+              expect(activity, []);
+              expect(info, expectedShipmentInfo);
             },
             orElse: () => throw result,
           );
