@@ -277,8 +277,9 @@ class UPSParser implements Parser {
     final shipmentActivityList = <ShipmentActivityInfo>[];
     for (final a in activityList) {
       final activity = a as Map<String, dynamic>;
-      final activityLocation =
-          activity['ActivityLocation'] as Map<String, dynamic>?;
+      final activityLocation = activity['ActivityLocation'] is String
+          ? null
+          : activity['ActivityLocation'] as Map<String, dynamic>?;
 
       final dateTime = _parseActivityDateTime(activity);
       final status = _parseActivityStatus(activity);
