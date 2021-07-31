@@ -992,7 +992,7 @@ void main() {
             ),
             ShipmentActivityInfo.from(
               trackNumber: _defaultTrack,
-              statusType: ShipmentStatusType.inTransit,
+              statusType: ShipmentStatusType.inTransitArrivedWaypoint,
               serviceType: PostalServiceType.ups,
               statusDescription: 'Arrived at Facility',
               activityLocation: const Address(
@@ -1003,7 +1003,7 @@ void main() {
             ),
             ShipmentActivityInfo.from(
               trackNumber: _defaultTrack,
-              statusType: ShipmentStatusType.inTransit,
+              statusType: ShipmentStatusType.pickup,
               serviceType: PostalServiceType.ups,
               statusDescription: 'Origin Scan',
               activityLocation: const Address(),
@@ -1127,7 +1127,7 @@ void main() {
           final expectedActivity = [
             ShipmentActivityInfo.from(
               trackNumber: _defaultTrack,
-              statusType: ShipmentStatusType.inTransit,
+              statusType: ShipmentStatusType.inTransitArrivedWaypoint,
               serviceType: PostalServiceType.ups,
               statusDescription: 'Arrived at Facility',
               activityLocation: const Address(
@@ -1238,7 +1238,7 @@ void main() {
             ),
             ShipmentActivityInfo.from(
               trackNumber: _defaultTrack,
-              statusType: ShipmentStatusType.inTransit,
+              statusType: ShipmentStatusType.inTransitArrivedWaypoint,
               serviceType: PostalServiceType.ups,
               statusDescription: 'Arrived at Facility',
               activityLocation: const Address(
