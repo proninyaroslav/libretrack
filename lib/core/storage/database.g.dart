@@ -107,7 +107,7 @@ class _$AppDatabase extends AppDatabase {
         await database.execute(
             'CREATE TABLE IF NOT EXISTS `ShipmentActivityInfo` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `trackNumber` TEXT NOT NULL, `serviceType` TEXT NOT NULL, `statusType` TEXT NOT NULL, `statusDescription` TEXT, `dateTime` INTEGER NOT NULL, `activityLocation_location` TEXT, `activityLocation_postalCode` TEXT, `activityLocation_countryCode` TEXT, FOREIGN KEY (`trackNumber`) REFERENCES `TrackNumberInfo` (`trackNumber`) ON UPDATE NO ACTION ON DELETE CASCADE)');
         await database.execute(
-            'CREATE TABLE IF NOT EXISTS `ShipmentInfo` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `trackNumber` TEXT NOT NULL, `serviceType` TEXT NOT NULL, `serviceDescription` TEXT, `shipmentDescription` TEXT, `signedForByName` TEXT, `pickupDate` INTEGER, `deliveryDate` INTEGER, `estimatedDeliveryDate` INTEGER, `scheduledDeliveryDate` INTEGER, `serviceMessage` TEXT, `cashOnDelivery_value` REAL, `cashOnDelivery_currencyCode` TEXT, `shipper_location` TEXT, `shipper_postalCode` TEXT, `shipper_countryCode` TEXT, `receiver_location` TEXT, `receiver_postalCode` TEXT, `receiver_countryCode` TEXT, `weight_Value` REAL, `weight_Measurement` TEXT, `volume_Value` REAL, `volume_Measurement` TEXT, `declaredValue_value` REAL, `declaredValue_currencyCode` TEXT, `customDuty_value` REAL, `customDuty_currencyCode` TEXT, `additionalRateFee_value` REAL, `additionalRateFee_currencyCode` TEXT, `shippingRateFee_value` REAL, `shippingRateFee_currencyCode` TEXT, `insuranceRateFee_value` REAL, `insuranceRateFee_currencyCode` TEXT, FOREIGN KEY (`trackNumber`) REFERENCES `TrackNumberInfo` (`trackNumber`) ON UPDATE NO ACTION ON DELETE CASCADE)');
+            'CREATE TABLE IF NOT EXISTS `ShipmentInfo` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `trackNumber` TEXT NOT NULL, `serviceType` TEXT NOT NULL, `serviceDescription` TEXT, `shipmentDescription` TEXT, `signedForByName` TEXT, `pickupDate` INTEGER, `deliveryDate` INTEGER, `estimatedDeliveryDate` INTEGER, `scheduledDeliveryDate` INTEGER, `serviceMessage` TEXT, `shipperName` TEXT, `receiverName` TEXT, `cashOnDelivery_value` REAL, `cashOnDelivery_currencyCode` TEXT, `shipper_location` TEXT, `shipper_postalCode` TEXT, `shipper_countryCode` TEXT, `receiver_location` TEXT, `receiver_postalCode` TEXT, `receiver_countryCode` TEXT, `weight_Value` REAL, `weight_Measurement` TEXT, `volume_Value` REAL, `volume_Measurement` TEXT, `declaredValue_value` REAL, `declaredValue_currencyCode` TEXT, `customDuty_value` REAL, `customDuty_currencyCode` TEXT, `additionalRateFee_value` REAL, `additionalRateFee_currencyCode` TEXT, `shippingRateFee_value` REAL, `shippingRateFee_currencyCode` TEXT, `insuranceRateFee_value` REAL, `insuranceRateFee_currencyCode` TEXT, FOREIGN KEY (`trackNumber`) REFERENCES `TrackNumberInfo` (`trackNumber`) ON UPDATE NO ACTION ON DELETE CASCADE)');
         await database.execute(
             'CREATE TABLE IF NOT EXISTS `AlternateTrackNumber` (`trackNumber` TEXT NOT NULL, `shipmentId` INTEGER NOT NULL, FOREIGN KEY (`shipmentId`) REFERENCES `ShipmentInfo` (`id`) ON UPDATE NO ACTION ON DELETE CASCADE, PRIMARY KEY (`trackNumber`))');
         await database.execute(
@@ -540,6 +540,8 @@ class _$ShipmentDao extends ShipmentDao {
                   'scheduledDeliveryDate': _nullableDateTimeConverter
                       .encode(item.scheduledDeliveryDate),
                   'serviceMessage': item.serviceMessage,
+                  'shipperName': item.shipperName,
+                  'receiverName': item.receiverName,
                   'cashOnDelivery_value': item.cashOnDeliveryValue_,
                   'cashOnDelivery_currencyCode':
                       item.cashOnDeliveryCurrencyCode_,
@@ -725,6 +727,8 @@ class _$ShipmentDao extends ShipmentDao {
                 .decode(row['estimatedDeliveryDate'] as int?),
             scheduledDeliveryDate: _nullableDateTimeConverter
                 .decode(row['scheduledDeliveryDate'] as int?),
+            shipperName: row['shipperName'] as String?,
+            receiverName: row['receiverName'] as String?,
             weightValue_: row['weight_Value'] as double?,
             weightMeasurement_: _nullableMeasurementConverter
                 .decode(row['weight_Measurement'] as String?),
@@ -778,6 +782,8 @@ class _$ShipmentDao extends ShipmentDao {
                 .decode(row['estimatedDeliveryDate'] as int?),
             scheduledDeliveryDate: _nullableDateTimeConverter
                 .decode(row['scheduledDeliveryDate'] as int?),
+            shipperName: row['shipperName'] as String?,
+            receiverName: row['receiverName'] as String?,
             weightValue_: row['weight_Value'] as double?,
             weightMeasurement_: _nullableMeasurementConverter
                 .decode(row['weight_Measurement'] as String?),

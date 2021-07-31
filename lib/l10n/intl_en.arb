@@ -158,6 +158,8 @@
     "shipmentTypeDescription": "Shipment type",
     "shipmentReceiverAddress": "Receiver address",
     "shipmentShipperAddress": "Shipper address",
+    "shipmentShipper": "Shipper",
+    "shipmentReceiver": "Receiver",
     "kilogramUnitShort": "{value} kg",
     "poundUnitShort": "{value} lb",
     "ounceUnitShort": "{value} oz",

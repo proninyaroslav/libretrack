@@ -249,6 +249,18 @@ class _ShipmentInfoItem extends StatelessWidget {
           title: S.of(context).shipmentPickupDate,
           content: formatDateTime(info.pickupDate!),
         ),
+      if (info.receiverName != null)
+        _InfoString(
+          iconData: Icons.person_outline,
+          title: S.of(context).shipmentReceiver,
+          content: info.receiverName!,
+        ),
+      if (info.shipperName != null)
+        _InfoString(
+          iconData: Icons.person_outline,
+          title: S.of(context).shipmentShipper,
+          content: info.shipperName!,
+        ),
       if (info.receiverAddress != null)
         _InfoString(
           iconData: Icons.location_on_outlined,

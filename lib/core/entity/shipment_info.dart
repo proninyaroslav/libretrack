@@ -96,6 +96,10 @@ class ShipmentInfo extends Equatable {
   @ignore
   final Currency? insuranceRateFee;
 
+  final String? shipperName;
+
+  final String? receiverName;
+
   // TODO: remove it; wait for @Embedded
   ShipmentInfo({
     this.id,
@@ -109,6 +113,8 @@ class ShipmentInfo extends Equatable {
     this.deliveryDate,
     this.estimatedDeliveryDate,
     this.scheduledDeliveryDate,
+    this.shipperName,
+    this.receiverName,
     // ignore: non_constant_identifier_names
     this.weightValue_,
     // ignore: non_constant_identifier_names
@@ -229,6 +235,8 @@ class ShipmentInfo extends Equatable {
     this.additionalRateFee,
     this.shippingRateFee,
     this.insuranceRateFee,
+    this.shipperName,
+    this.receiverName,
   })  : cashOnDeliveryValue_ = cashOnDelivery?.value,
         cashOnDeliveryCurrencyCode_ = cashOnDelivery?.currencyCode,
         shipperLocation_ = shipperAddress?.location,
@@ -275,6 +283,8 @@ class ShipmentInfo extends Equatable {
         additionalRateFee,
         shippingRateFee,
         insuranceRateFee,
+        shipperName,
+        receiverName,
       ];
 
   @override

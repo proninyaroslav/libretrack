@@ -77,6 +77,8 @@ void main() {
         additionalRateFee: const Currency(3, 'USD'),
         shippingRateFee: const Currency(4, 'USD'),
         insuranceRateFee: const Currency(5, 'USD'),
+        shipperName: 'Shipper',
+        receiverName: 'Receiver',
       );
       final info2 = ShipmentInfo.from(
         id: 2,

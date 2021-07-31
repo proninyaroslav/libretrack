@@ -1615,6 +1615,26 @@ class S {
     );
   }
 
+  /// `Shipper`
+  String get shipmentShipper {
+    return Intl.message(
+      'Shipper',
+      name: 'shipmentShipper',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Receiver`
+  String get shipmentReceiver {
+    return Intl.message(
+      'Receiver',
+      name: 'shipmentReceiver',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `{value} kg`
   String kilogramUnitShort(Object value) {
     return Intl.message(

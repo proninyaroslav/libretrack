@@ -326,12 +326,14 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Insurance rate fee"),
         "shipmentPickupDate":
             MessageLookupByLibrary.simpleMessage("Pickup date"),
+        "shipmentReceiver": MessageLookupByLibrary.simpleMessage("Receiver"),
         "shipmentReceiverAddress":
             MessageLookupByLibrary.simpleMessage("Receiver address"),
         "shipmentScheduledDeliveryDate":
             MessageLookupByLibrary.simpleMessage("Scheduled delivery date"),
         "shipmentServiceDescription":
             MessageLookupByLibrary.simpleMessage("Service"),
+        "shipmentShipper": MessageLookupByLibrary.simpleMessage("Shipper"),
         "shipmentShipperAddress":
             MessageLookupByLibrary.simpleMessage("Shipper address"),
         "shipmentShippingRateFee":

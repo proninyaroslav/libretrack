@@ -333,12 +333,14 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Страховой сбор"),
         "shipmentPickupDate":
             MessageLookupByLibrary.simpleMessage("Дата приёма"),
+        "shipmentReceiver": MessageLookupByLibrary.simpleMessage("Получатель"),
         "shipmentReceiverAddress":
             MessageLookupByLibrary.simpleMessage("Адрес получателя"),
         "shipmentScheduledDeliveryDate": MessageLookupByLibrary.simpleMessage(
             "Запланированная дата доставки"),
         "shipmentServiceDescription":
             MessageLookupByLibrary.simpleMessage("Услуга"),
+        "shipmentShipper": MessageLookupByLibrary.simpleMessage("Отправитель"),
         "shipmentShipperAddress":
             MessageLookupByLibrary.simpleMessage("Адрес отправителя"),
         "shipmentShippingRateFee":

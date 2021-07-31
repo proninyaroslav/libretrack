@@ -159,6 +159,8 @@
     "shipmentTypeDescription": "Тип отправления",
     "shipmentReceiverAddress": "Адрес получателя",
     "shipmentShipperAddress": "Адрес отправителя",
+    "shipmentShipper": "Отправитель",
+    "shipmentReceiver": "Получатель",
     "kilogramUnitShort": "{value} кг",
     "poundUnitShort": "{value} lb",
     "ounceUnitShort": "{value} oz",
