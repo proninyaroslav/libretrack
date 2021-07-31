@@ -87,21 +87,12 @@ class _Form extends StatefulWidget {
 }
 
 class _FormState extends State<_Form> {
-  late Map<FormFieldId, TextEditingController> _controllers;
+  final Map<FormFieldId, TextEditingController> _controllers = {};
   final _formKey = GlobalKey<FormState>();
 
   Map<FormFieldId, TextEditingController> get controllers => _controllers;
 
   bool validate() => _formKey.currentState!.validate();
-
-  @override
-  void initState() {
-    super.initState();
-
-    _controllers = Map.fromEntries(widget.fields.map(
-      (f) => MapEntry(f.id, TextEditingController(text: f.value)),
-    ));
-  }
 
   @override
   void dispose() {
@@ -122,7 +113,10 @@ class _FormState extends State<_Form> {
         itemCount: widget.fields.length,
         itemBuilder: (context, position) {
           final field = widget.fields[position];
-          final controller = _controllers[field.id];
+          final controller = _controllers.putIfAbsent(
+            field.id,
+            () => TextEditingController(text: field.value),
+          );
 
           return _FormFieldInput(
             field: field,

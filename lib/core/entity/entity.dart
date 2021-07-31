@@ -18,6 +18,7 @@
 
 export 'address.dart';
 export 'alternate_track_number.dart';
+export 'currency.dart';
 export 'postal_service.dart';
 export 'service_auth.dart';
 export 'shipment_activity_info.dart';

@@ -65,5 +65,8 @@ RequestBuilder _mapServiceToBuilder({
       return isProduction
           ? UPSRequestBuilder(upsAuthData)
           : DevUPSRequestBuilder(upsAuthData);
+    case TrackingServiceType.russianPost:
+      final rpAuthData = RussianPostAuthData.from(authData);
+      return RussianPostRequestBuilder(rpAuthData);
   }
 }

@@ -79,7 +79,7 @@ class _$AppDatabase extends AppDatabase {
   Future<sqflite.Database> open(String path, List<Migration> migrations,
       [Callback? callback]) async {
     final databaseOptions = sqflite.OpenDatabaseOptions(
-      version: 1,
+      version: 2,
       onConfigure: (database) async {
         await database.execute('PRAGMA foreign_keys = ON');
         await callback?.onConfigure?.call(database);
@@ -97,17 +97,17 @@ class _$AppDatabase extends AppDatabase {
         await database.execute(
             'CREATE TABLE IF NOT EXISTS `TrackingServiceInfo` (`type` TEXT NOT NULL, PRIMARY KEY (`type`))');
         await database.execute(
-            'CREATE TABLE IF NOT EXISTS `AuthDataField` (`key` TEXT NOT NULL, `value` TEXT NOT NULL, `serviceType` TEXT NOT NULL, PRIMARY KEY (`key`))');
+            'CREATE TABLE IF NOT EXISTS `AuthDataField` (`key` TEXT NOT NULL, `value` TEXT NOT NULL, `serviceType` TEXT NOT NULL, FOREIGN KEY (`serviceType`) REFERENCES `TrackingServiceInfo` (`type`) ON UPDATE NO ACTION ON DELETE CASCADE, PRIMARY KEY (`key`, `serviceType`))');
         await database.execute(
-            'CREATE TABLE IF NOT EXISTS `PostalServiceInfo` (`type` TEXT NOT NULL, `trackingServiceType` TEXT NOT NULL, `priority` INTEGER NOT NULL, FOREIGN KEY (`trackingServiceType`) REFERENCES `TrackingServiceInfo` (`type`) ON UPDATE NO ACTION ON DELETE CASCADE, PRIMARY KEY (`type`))');
+            'CREATE TABLE IF NOT EXISTS `PostalServiceInfo` (`type` TEXT NOT NULL, `trackingServiceType` TEXT NOT NULL, `priority` INTEGER NOT NULL, FOREIGN KEY (`trackingServiceType`) REFERENCES `TrackingServiceInfo` (`type`) ON UPDATE NO ACTION ON DELETE CASCADE, PRIMARY KEY (`type`, `trackingServiceType`))');
         await database.execute(
             'CREATE TABLE IF NOT EXISTS `TrackNumberInfo` (`trackNumber` TEXT NOT NULL, `description` TEXT, `isArchived` INTEGER NOT NULL, `dateAdded` INTEGER, PRIMARY KEY (`trackNumber`))');
         await database.execute(
-            'CREATE TABLE IF NOT EXISTS `TrackNumberService` (`trackNumber` TEXT NOT NULL, `serviceType` TEXT NOT NULL, `isActive` INTEGER NOT NULL, FOREIGN KEY (`trackNumber`) REFERENCES `TrackNumberInfo` (`trackNumber`) ON UPDATE NO ACTION ON DELETE CASCADE, PRIMARY KEY (`trackNumber`))');
+            'CREATE TABLE IF NOT EXISTS `TrackNumberService` (`trackNumber` TEXT NOT NULL, `serviceType` TEXT NOT NULL, `isActive` INTEGER NOT NULL, FOREIGN KEY (`trackNumber`) REFERENCES `TrackNumberInfo` (`trackNumber`) ON UPDATE NO ACTION ON DELETE CASCADE, PRIMARY KEY (`trackNumber`, `serviceType`))');
         await database.execute(
             'CREATE TABLE IF NOT EXISTS `ShipmentActivityInfo` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `trackNumber` TEXT NOT NULL, `serviceType` TEXT NOT NULL, `statusType` TEXT NOT NULL, `statusDescription` TEXT, `dateTime` INTEGER NOT NULL, `activityLocation_location` TEXT, `activityLocation_postalCode` TEXT, `activityLocation_countryCode` TEXT, FOREIGN KEY (`trackNumber`) REFERENCES `TrackNumberInfo` (`trackNumber`) ON UPDATE NO ACTION ON DELETE CASCADE)');
         await database.execute(
-            'CREATE TABLE IF NOT EXISTS `ShipmentInfo` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `trackNumber` TEXT NOT NULL, `serviceType` TEXT NOT NULL, `serviceDescription` TEXT, `shipmentDescription` TEXT, `signedForByName` TEXT, `pickupDate` INTEGER, `deliveryDate` INTEGER, `estimatedDeliveryDate` INTEGER, `scheduledDeliveryDate` INTEGER, `serviceMessage` TEXT, `cashOnDelivery_value` INTEGER, `cashOnDelivery_currencyCode` TEXT, `shipper_location` TEXT, `shipper_postalCode` TEXT, `shipper_countryCode` TEXT, `receiver_location` TEXT, `receiver_postalCode` TEXT, `receiver_countryCode` TEXT, `weight_Value` REAL, `weight_Measurement` TEXT, `volume_Value` REAL, `volume_Measurement` TEXT, FOREIGN KEY (`trackNumber`) REFERENCES `TrackNumberInfo` (`trackNumber`) ON UPDATE NO ACTION ON DELETE CASCADE)');
+            'CREATE TABLE IF NOT EXISTS `ShipmentInfo` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `trackNumber` TEXT NOT NULL, `serviceType` TEXT NOT NULL, `serviceDescription` TEXT, `shipmentDescription` TEXT, `signedForByName` TEXT, `pickupDate` INTEGER, `deliveryDate` INTEGER, `estimatedDeliveryDate` INTEGER, `scheduledDeliveryDate` INTEGER, `serviceMessage` TEXT, `shipperName` TEXT, `receiverName` TEXT, `cashOnDelivery_value` REAL, `cashOnDelivery_currencyCode` TEXT, `shipper_location` TEXT, `shipper_postalCode` TEXT, `shipper_countryCode` TEXT, `receiver_location` TEXT, `receiver_postalCode` TEXT, `receiver_countryCode` TEXT, `weight_Value` REAL, `weight_Measurement` TEXT, `volume_Value` REAL, `volume_Measurement` TEXT, `declaredValue_value` REAL, `declaredValue_currencyCode` TEXT, `customDuty_value` REAL, `customDuty_currencyCode` TEXT, `additionalRateFee_value` REAL, `additionalRateFee_currencyCode` TEXT, `shippingRateFee_value` REAL, `shippingRateFee_currencyCode` TEXT, `insuranceRateFee_value` REAL, `insuranceRateFee_currencyCode` TEXT, FOREIGN KEY (`trackNumber`) REFERENCES `TrackNumberInfo` (`trackNumber`) ON UPDATE NO ACTION ON DELETE CASCADE)');
         await database.execute(
             'CREATE TABLE IF NOT EXISTS `AlternateTrackNumber` (`trackNumber` TEXT NOT NULL, `shipmentId` INTEGER NOT NULL, FOREIGN KEY (`shipmentId`) REFERENCES `ShipmentInfo` (`id`) ON UPDATE NO ACTION ON DELETE CASCADE, PRIMARY KEY (`trackNumber`))');
         await database.execute(
@@ -234,7 +234,7 @@ class _$TrackingServiceDao extends TrackingServiceDao {
   Future<TrackingServiceInfo?> getHighPriorityService(
       PostalServiceType postalServiceType) async {
     return _queryAdapter.query(
-        'SELECT * FROM TrackingServiceInfo   WHERE type IN   (SELECT trackingServiceType FROM PostalServiceInfo   WHERE priority =   (SELECT MIN(priority) FROM PostalServiceInfo WHERE type = ?1)   )',
+        'SELECT * FROM TrackingServiceInfo   WHERE type IN   (SELECT trackingServiceType FROM PostalServiceInfo   WHERE priority =   (SELECT MIN(priority) FROM PostalServiceInfo WHERE type = ?1)   AND type = ?1   )',
         mapper: (Map<String, Object?> row) => TrackingServiceInfo(type: _trackingServiceTypeConverter.decode(row['type'] as String)),
         arguments: [_postalServiceTypeConverter.encode(postalServiceType)]);
   }
@@ -540,6 +540,8 @@ class _$ShipmentDao extends ShipmentDao {
                   'scheduledDeliveryDate': _nullableDateTimeConverter
                       .encode(item.scheduledDeliveryDate),
                   'serviceMessage': item.serviceMessage,
+                  'shipperName': item.shipperName,
+                  'receiverName': item.receiverName,
                   'cashOnDelivery_value': item.cashOnDeliveryValue_,
                   'cashOnDelivery_currencyCode':
                       item.cashOnDeliveryCurrencyCode_,
@@ -554,7 +556,20 @@ class _$ShipmentDao extends ShipmentDao {
                       .encode(item.weightMeasurement_),
                   'volume_Value': item.volumeValue_,
                   'volume_Measurement': _nullableMeasurementConverter
-                      .encode(item.volumeMeasurement_)
+                      .encode(item.volumeMeasurement_),
+                  'declaredValue_value': item.declaredValueValue_,
+                  'declaredValue_currencyCode': item.declaredValueCurrencyCode_,
+                  'customDuty_value': item.customDutyValue_,
+                  'customDuty_currencyCode': item.customDutyCurrencyCode_,
+                  'additionalRateFee_value': item.additionalRateFeeValue_,
+                  'additionalRateFee_currencyCode':
+                      item.additionalRateFeeCurrencyCode_,
+                  'shippingRateFee_value': item.shippingRateFeeValue_,
+                  'shippingRateFee_currencyCode':
+                      item.shippingRateFeeCurrencyCode_,
+                  'insuranceRateFee_value': item.insuranceRateFeeValue_,
+                  'insuranceRateFee_currencyCode':
+                      item.insuranceRateFeeCurrencyCode_
                 },
             changeListener),
         _alternateTrackNumberInsertionAdapter = InsertionAdapter(
@@ -712,13 +727,15 @@ class _$ShipmentDao extends ShipmentDao {
                 .decode(row['estimatedDeliveryDate'] as int?),
             scheduledDeliveryDate: _nullableDateTimeConverter
                 .decode(row['scheduledDeliveryDate'] as int?),
+            shipperName: row['shipperName'] as String?,
+            receiverName: row['receiverName'] as String?,
             weightValue_: row['weight_Value'] as double?,
             weightMeasurement_: _nullableMeasurementConverter
                 .decode(row['weight_Measurement'] as String?),
             volumeValue_: row['volume_Value'] as double?,
             volumeMeasurement_: _nullableMeasurementConverter
                 .decode(row['volume_Measurement'] as String?),
-            cashOnDeliveryValue_: row['cashOnDelivery_value'] as int?,
+            cashOnDeliveryValue_: row['cashOnDelivery_value'] as double?,
             cashOnDeliveryCurrencyCode_:
                 row['cashOnDelivery_currencyCode'] as String?,
             shipperLocation_: row['shipper_location'] as String?,
@@ -726,7 +743,21 @@ class _$ShipmentDao extends ShipmentDao {
             shipperCountryCode_: row['shipper_countryCode'] as String?,
             receiverLocation_: row['receiver_location'] as String?,
             receiverPostalCode_: row['receiver_postalCode'] as String?,
-            receiverCountryCode_: row['receiver_countryCode'] as String?),
+            receiverCountryCode_: row['receiver_countryCode'] as String?,
+            declaredValueValue_: row['declaredValue_value'] as double?,
+            declaredValueCurrencyCode_:
+                row['declaredValue_currencyCode'] as String?,
+            customDutyValue_: row['customDuty_value'] as double?,
+            customDutyCurrencyCode_: row['customDuty_currencyCode'] as String?,
+            additionalRateFeeValue_: row['additionalRateFee_value'] as double?,
+            additionalRateFeeCurrencyCode_:
+                row['additionalRateFee_currencyCode'] as String?,
+            shippingRateFeeValue_: row['shippingRateFee_value'] as double?,
+            shippingRateFeeCurrencyCode_:
+                row['shippingRateFee_currencyCode'] as String?,
+            insuranceRateFeeValue_: row['insuranceRateFee_value'] as double?,
+            insuranceRateFeeCurrencyCode_:
+                row['insuranceRateFee_currencyCode'] as String?),
         arguments: [trackNumber]);
   }
 
@@ -751,13 +782,15 @@ class _$ShipmentDao extends ShipmentDao {
                 .decode(row['estimatedDeliveryDate'] as int?),
             scheduledDeliveryDate: _nullableDateTimeConverter
                 .decode(row['scheduledDeliveryDate'] as int?),
+            shipperName: row['shipperName'] as String?,
+            receiverName: row['receiverName'] as String?,
             weightValue_: row['weight_Value'] as double?,
             weightMeasurement_: _nullableMeasurementConverter
                 .decode(row['weight_Measurement'] as String?),
             volumeValue_: row['volume_Value'] as double?,
             volumeMeasurement_: _nullableMeasurementConverter
                 .decode(row['volume_Measurement'] as String?),
-            cashOnDeliveryValue_: row['cashOnDelivery_value'] as int?,
+            cashOnDeliveryValue_: row['cashOnDelivery_value'] as double?,
             cashOnDeliveryCurrencyCode_:
                 row['cashOnDelivery_currencyCode'] as String?,
             shipperLocation_: row['shipper_location'] as String?,
@@ -765,7 +798,20 @@ class _$ShipmentDao extends ShipmentDao {
             shipperCountryCode_: row['shipper_countryCode'] as String?,
             receiverLocation_: row['receiver_location'] as String?,
             receiverPostalCode_: row['receiver_postalCode'] as String?,
-            receiverCountryCode_: row['receiver_countryCode'] as String?),
+            receiverCountryCode_: row['receiver_countryCode'] as String?,
+            declaredValueValue_: row['declaredValue_value'] as double?,
+            declaredValueCurrencyCode_:
+                row['declaredValue_currencyCode'] as String?,
+            customDutyValue_: row['customDuty_value'] as double?,
+            customDutyCurrencyCode_: row['customDuty_currencyCode'] as String?,
+            additionalRateFeeValue_: row['additionalRateFee_value'] as double?,
+            additionalRateFeeCurrencyCode_:
+                row['additionalRateFee_currencyCode'] as String?,
+            shippingRateFeeValue_: row['shippingRateFee_value'] as double?,
+            shippingRateFeeCurrencyCode_:
+                row['shippingRateFee_currencyCode'] as String?,
+            insuranceRateFeeValue_: row['insuranceRateFee_value'] as double?,
+            insuranceRateFeeCurrencyCode_: row['insuranceRateFee_currencyCode'] as String?),
         arguments: [trackNumber],
         queryableName: 'ShipmentInfo',
         isView: false);
@@ -1280,7 +1326,7 @@ class _$TrackNumberServiceDao extends TrackNumberServiceDao {
         _trackNumberServiceUpdateAdapter = UpdateAdapter(
             database,
             'TrackNumberService',
-            ['trackNumber'],
+            ['trackNumber', 'serviceType'],
             (TrackNumberService item) => <String, Object?>{
                   'trackNumber': item.trackNumber,
                   'serviceType':
@@ -1291,7 +1337,7 @@ class _$TrackNumberServiceDao extends TrackNumberServiceDao {
         _trackNumberServiceDeletionAdapter = DeletionAdapter(
             database,
             'TrackNumberService',
-            ['trackNumber'],
+            ['trackNumber', 'serviceType'],
             (TrackNumberService item) => <String, Object?>{
                   'trackNumber': item.trackNumber,
                   'serviceType':

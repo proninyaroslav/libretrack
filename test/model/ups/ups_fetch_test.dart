@@ -54,6 +54,7 @@ void main() {
       );
       final expectedResponse = ServiceResponse(
         transactionId: request.transactionId,
+        statusCode: 200,
         payload: 'body',
       );
 

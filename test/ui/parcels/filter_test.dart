@@ -421,6 +421,23 @@ void main() {
       );
 
       expect(
+        const ParcelsFilter.postalService(
+          serviceType: PostalServiceType.ups,
+        ).apply(
+          const ParcelInfo(
+            trackInfo: TrackNumberInfo('1'),
+            trackServices: [
+              TrackNumberService(
+                trackNumber: '1',
+                serviceType: PostalServiceType.russianPost,
+              ),
+            ],
+          ),
+        ),
+        isFalse,
+      );
+
+      expect(
         const ParcelsFilter.postalService().apply(
           const ParcelInfo(
             trackInfo: TrackNumberInfo('1'),

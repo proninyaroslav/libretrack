@@ -77,14 +77,20 @@ void main() {
         TrackNumberInfo('2'),
         TrackNumberInfo('3'),
       ];
-      final trackServices = trackList
-          .map(
-            (track) => TrackNumberService(
-              trackNumber: track.trackNumber,
-              serviceType: PostalServiceType.ups,
-            ),
-          )
-          .toList();
+      final trackServices = [
+        TrackNumberService(
+          trackNumber: trackList[0].trackNumber,
+          serviceType: PostalServiceType.ups,
+        ),
+        TrackNumberService(
+          trackNumber: trackList[1].trackNumber,
+          serviceType: PostalServiceType.russianPost,
+        ),
+        TrackNumberService(
+          trackNumber: trackList[2].trackNumber,
+          serviceType: PostalServiceType.ups,
+        ),
+      ];
       final successShipmentInfo = ShipmentInfo.from(
         id: 1,
         trackNumber: trackServices[0].trackNumber,
@@ -408,14 +414,20 @@ void main() {
         TrackNumberInfo('2'),
         TrackNumberInfo('3'),
       ];
-      final trackServices = trackList
-          .map(
-            (track) => TrackNumberService(
-              trackNumber: track.trackNumber,
-              serviceType: PostalServiceType.ups,
-            ),
-          )
-          .toList();
+      final trackServices = [
+        TrackNumberService(
+          trackNumber: trackList[0].trackNumber,
+          serviceType: PostalServiceType.ups,
+        ),
+        TrackNumberService(
+          trackNumber: trackList[1].trackNumber,
+          serviceType: PostalServiceType.russianPost,
+        ),
+        TrackNumberService(
+          trackNumber: trackList[2].trackNumber,
+          serviceType: PostalServiceType.ups,
+        ),
+      ];
       final successShipmentInfo = ShipmentInfo.from(
         id: 1,
         trackNumber: trackServices[0].trackNumber,

@@ -63,7 +63,9 @@ void main() {
       final response = await httpClient.send(request);
       response.when(
         success: (body) => expect(body, expectedBody),
-        httpError: (statusCode) => fail('HTTP code: $statusCode'),
+        httpError: (statusCode, body) => fail(
+          'HTTP code: $statusCode\n\n$body',
+        ),
         exception: (e, stackTrace) => throw [e, stackTrace],
       );
     });
@@ -96,7 +98,9 @@ void main() {
       final response = await httpClient.send(request);
       response.when(
         success: (body) => expect(body, expectedBody),
-        httpError: (statusCode) => fail('HTTP code: $statusCode'),
+        httpError: (statusCode, body) => fail(
+          'HTTP code: $statusCode\n\n$body',
+        ),
         exception: (e, stackTrace) => throw [e, stackTrace],
       );
     });
@@ -129,7 +133,9 @@ void main() {
       final response = await httpClient.send(request);
       response.when(
         success: (body) => expect(body, expectedBody),
-        httpError: (statusCode) => fail('HTTP code: $statusCode'),
+        httpError: (statusCode, body) => fail(
+          'HTTP code: $statusCode\n\n$body',
+        ),
         exception: (e, stackTrace) => throw [e, stackTrace],
       );
     });
@@ -162,7 +168,9 @@ void main() {
       final response = await httpClient.send(request);
       response.when(
         success: (body) => expect(body, expectedBody),
-        httpError: (statusCode) => fail('HTTP code: $statusCode'),
+        httpError: (statusCode, body) => fail(
+          'HTTP code: $statusCode\n\n$body',
+        ),
         exception: (e, stackTrace) => throw [e, stackTrace],
       );
     });
@@ -187,6 +195,36 @@ void main() {
       response.maybeWhen(
         exception: (e, stackTrace) => expect(e is SocketException, isTrue),
         orElse: () => throw response,
+      );
+    });
+
+    test('HTTP error', () async {
+      const expectedBody = 'body';
+      final request = ServiceRequest(
+        transactionId: _makeTransactionId(),
+        url: Uri.parse('https://example.org'),
+        method: RequestMethod.get,
+      );
+
+      when(
+        () => mockClient.get(
+          request.url,
+          headers: request.headers,
+        ),
+      ).thenAnswer(
+        (_) async => http.Response(expectedBody, 500),
+      );
+
+      final response = await httpClient.send(request);
+      response.when(
+        success: (body) => fail(
+          'HTTP code: 200\n\n$body',
+        ),
+        httpError: (statusCode, body) {
+          expect(body, expectedBody);
+          expect(statusCode, 500);
+        },
+        exception: (e, stackTrace) => throw [e, stackTrace],
       );
     });
   });

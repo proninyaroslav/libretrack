@@ -63,6 +63,19 @@ class TrackingServiceMetadataMapper {
             )
           },
         );
+      case TrackingServiceType.russianPost:
+        return TrackingServiceMetadata(
+          type: TrackingServiceType.russianPost,
+          localizedName: S.of(context).russianPost,
+          iconData: ServiceLogoIconsData.russianPost,
+          postalServices: {
+            PostalServiceMetadata(
+              type: PostalServiceType.russianPost,
+              localizedName: S.of(context).russianPost,
+              iconData: ServiceLogoIconsData.russianPost,
+            )
+          },
+        );
     }
   }
 }
@@ -78,6 +91,12 @@ class PostalServiceMetadataMapper {
           type: PostalServiceType.ups,
           localizedName: S.of(context).ups,
           iconData: ServiceLogoIconsData.ups,
+        );
+      case PostalServiceType.russianPost:
+        return PostalServiceMetadata(
+          type: PostalServiceType.russianPost,
+          localizedName: S.of(context).russianPost,
+          iconData: ServiceLogoIconsData.russianPost,
         );
     }
   }

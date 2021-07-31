@@ -18,14 +18,10 @@
 
 import 'package:equatable/equatable.dart';
 import 'package:floor/floor.dart';
-import 'package:flutter/foundation.dart';
-import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:libretrack/core/entity/entity.dart';
 
 import 'address.dart';
 import 'converter/converter.dart';
-
-part 'shipment_info.freezed.dart';
 
 @TypeConverters([
   PostalServiceTypeConverter,
@@ -73,7 +69,7 @@ class ShipmentInfo extends Equatable {
   final DateTime? scheduledDeliveryDate;
 
   @ignore
-  final CashOnDelivery? cashOnDelivery;
+  final Currency? cashOnDelivery;
 
   @ignore
   final Address? shipperAddress;
@@ -84,6 +80,25 @@ class ShipmentInfo extends Equatable {
   /// Any additional message that a service sent along with tracking information,
   /// for example, a warning or information
   final String? serviceMessage;
+
+  @ignore
+  final Currency? declaredValue;
+
+  @ignore
+  final Currency? customDuty;
+
+  @ignore
+  final Currency? additionalRateFee;
+
+  @ignore
+  final Currency? shippingRateFee;
+
+  @ignore
+  final Currency? insuranceRateFee;
+
+  final String? shipperName;
+
+  final String? receiverName;
 
   // TODO: remove it; wait for @Embedded
   ShipmentInfo({
@@ -98,6 +113,8 @@ class ShipmentInfo extends Equatable {
     this.deliveryDate,
     this.estimatedDeliveryDate,
     this.scheduledDeliveryDate,
+    this.shipperName,
+    this.receiverName,
     // ignore: non_constant_identifier_names
     this.weightValue_,
     // ignore: non_constant_identifier_names
@@ -122,10 +139,30 @@ class ShipmentInfo extends Equatable {
     this.receiverPostalCode_,
     // ignore: non_constant_identifier_names
     this.receiverCountryCode_,
-  })  : cashOnDelivery = cashOnDeliveryValue_ == null ||
-                cashOnDeliveryCurrencyCode_ == null
-            ? null
-            : CashOnDelivery(cashOnDeliveryValue_, cashOnDeliveryCurrencyCode_),
+    // ignore: non_constant_identifier_names
+    this.declaredValueValue_,
+    // ignore: non_constant_identifier_names
+    this.declaredValueCurrencyCode_,
+    // ignore: non_constant_identifier_names
+    this.customDutyValue_,
+    // ignore: non_constant_identifier_names
+    this.customDutyCurrencyCode_,
+    // ignore: non_constant_identifier_names
+    this.additionalRateFeeValue_,
+    // ignore: non_constant_identifier_names
+    this.additionalRateFeeCurrencyCode_,
+    // ignore: non_constant_identifier_names
+    this.shippingRateFeeValue_,
+    // ignore: non_constant_identifier_names
+    this.shippingRateFeeCurrencyCode_,
+    // ignore: non_constant_identifier_names
+    this.insuranceRateFeeValue_,
+    // ignore: non_constant_identifier_names
+    this.insuranceRateFeeCurrencyCode_,
+  })  : cashOnDelivery =
+            cashOnDeliveryValue_ == null || cashOnDeliveryCurrencyCode_ == null
+                ? null
+                : Currency(cashOnDeliveryValue_, cashOnDeliveryCurrencyCode_),
         shipperAddress = shipperLocation_ == null &&
                 shipperPostalCode_ == null &&
                 shipperCountryCode_ == null
@@ -155,7 +192,26 @@ class ShipmentInfo extends Equatable {
             : UnitOfMeasurement(
                 value: volumeValue_,
                 measurement: volumeMeasurement_,
-              );
+              ),
+        declaredValue =
+            declaredValueValue_ == null || declaredValueCurrencyCode_ == null
+                ? null
+                : Currency(declaredValueValue_, declaredValueCurrencyCode_),
+        customDuty = customDutyValue_ == null || customDutyCurrencyCode_ == null
+            ? null
+            : Currency(customDutyValue_, customDutyCurrencyCode_),
+        additionalRateFee = additionalRateFeeValue_ == null ||
+                additionalRateFeeCurrencyCode_ == null
+            ? null
+            : Currency(additionalRateFeeValue_, additionalRateFeeCurrencyCode_),
+        shippingRateFee = shippingRateFeeValue_ == null ||
+                shippingRateFeeCurrencyCode_ == null
+            ? null
+            : Currency(shippingRateFeeValue_, shippingRateFeeCurrencyCode_),
+        insuranceRateFee = insuranceRateFeeValue_ == null ||
+                insuranceRateFeeCurrencyCode_ == null
+            ? null
+            : Currency(insuranceRateFeeValue_, insuranceRateFeeCurrencyCode_);
 
   ShipmentInfo.from({
     this.id,
@@ -174,6 +230,13 @@ class ShipmentInfo extends Equatable {
     this.shipperAddress,
     this.receiverAddress,
     this.serviceMessage,
+    this.declaredValue,
+    this.customDuty,
+    this.additionalRateFee,
+    this.shippingRateFee,
+    this.insuranceRateFee,
+    this.shipperName,
+    this.receiverName,
   })  : cashOnDeliveryValue_ = cashOnDelivery?.value,
         cashOnDeliveryCurrencyCode_ = cashOnDelivery?.currencyCode,
         shipperLocation_ = shipperAddress?.location,
@@ -185,7 +248,17 @@ class ShipmentInfo extends Equatable {
         weightValue_ = weight?.value,
         weightMeasurement_ = weight?.measurement,
         volumeValue_ = volume?.value,
-        volumeMeasurement_ = volume?.measurement;
+        volumeMeasurement_ = volume?.measurement,
+        declaredValueValue_ = declaredValue?.value,
+        declaredValueCurrencyCode_ = declaredValue?.currencyCode,
+        customDutyValue_ = customDuty?.value,
+        customDutyCurrencyCode_ = customDuty?.currencyCode,
+        additionalRateFeeValue_ = additionalRateFee?.value,
+        additionalRateFeeCurrencyCode_ = additionalRateFee?.currencyCode,
+        shippingRateFeeValue_ = shippingRateFee?.value,
+        shippingRateFeeCurrencyCode_ = shippingRateFee?.currencyCode,
+        insuranceRateFeeValue_ = insuranceRateFee?.value,
+        insuranceRateFeeCurrencyCode_ = insuranceRateFee?.currencyCode;
 
   @override
   List<Object?> get props => [
@@ -205,6 +278,13 @@ class ShipmentInfo extends Equatable {
         shipperAddress,
         receiverAddress,
         serviceMessage,
+        declaredValue,
+        customDuty,
+        additionalRateFee,
+        shippingRateFee,
+        insuranceRateFee,
+        shipperName,
+        receiverName,
       ];
 
   @override
@@ -214,7 +294,7 @@ class ShipmentInfo extends Equatable {
   //===================================================
   @ColumnInfo(name: 'cashOnDelivery_value')
   // ignore: non_constant_identifier_names
-  final int? cashOnDeliveryValue_;
+  final double? cashOnDeliveryValue_;
 
   @ColumnInfo(name: 'cashOnDelivery_currencyCode')
   // ignore: non_constant_identifier_names
@@ -259,12 +339,44 @@ class ShipmentInfo extends Equatable {
   @ColumnInfo(name: 'volume_Measurement')
   // ignore: non_constant_identifier_names
   final Measurement? volumeMeasurement_;
-}
 
-@freezed
-class CashOnDelivery with _$CashOnDelivery {
-  const factory CashOnDelivery(
-    int value,
-    String currencyCode,
-  ) = _CashOnDelivery;
+  @ColumnInfo(name: 'declaredValue_value')
+  // ignore: non_constant_identifier_names
+  final double? declaredValueValue_;
+
+  @ColumnInfo(name: 'declaredValue_currencyCode')
+  // ignore: non_constant_identifier_names
+  final String? declaredValueCurrencyCode_;
+
+  @ColumnInfo(name: 'customDuty_value')
+  // ignore: non_constant_identifier_names
+  final double? customDutyValue_;
+
+  @ColumnInfo(name: 'customDuty_currencyCode')
+  // ignore: non_constant_identifier_names
+  final String? customDutyCurrencyCode_;
+
+  @ColumnInfo(name: 'additionalRateFee_value')
+  // ignore: non_constant_identifier_names
+  final double? additionalRateFeeValue_;
+
+  @ColumnInfo(name: 'additionalRateFee_currencyCode')
+  // ignore: non_constant_identifier_names
+  final String? additionalRateFeeCurrencyCode_;
+
+  @ColumnInfo(name: 'shippingRateFee_value')
+  // ignore: non_constant_identifier_names
+  final double? shippingRateFeeValue_;
+
+  @ColumnInfo(name: 'shippingRateFee_currencyCode')
+  // ignore: non_constant_identifier_names
+  final String? shippingRateFeeCurrencyCode_;
+
+  @ColumnInfo(name: 'insuranceRateFee_value')
+  // ignore: non_constant_identifier_names
+  final double? insuranceRateFeeValue_;
+
+  @ColumnInfo(name: 'insuranceRateFee_currencyCode')
+  // ignore: non_constant_identifier_names
+  final String? insuranceRateFeeCurrencyCode_;
 }

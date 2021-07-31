@@ -620,6 +620,86 @@ class S {
     );
   }
 
+  /// `Not delivered`
+  String get statusNotDelivered {
+    return Intl.message(
+      'Not delivered',
+      name: 'statusNotDelivered',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `In storage`
+  String get statusInStorage {
+    return Intl.message(
+      'In storage',
+      name: 'statusInStorage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Arrived at the waypoint`
+  String get statusInTransitArrivedWaypoint {
+    return Intl.message(
+      'Arrived at the waypoint',
+      name: 'statusInTransitArrivedWaypoint',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Departed from the waypoint`
+  String get statusInTransitDepartedWaypoint {
+    return Intl.message(
+      'Departed from the waypoint',
+      name: 'statusInTransitDepartedWaypoint',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Exported from the departure country`
+  String get statusExportedFromDepartureCountry {
+    return Intl.message(
+      'Exported from the departure country',
+      name: 'statusExportedFromDepartureCountry',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Imported to the destination country`
+  String get statusImportedToDestinationCountry {
+    return Intl.message(
+      'Imported to the destination country',
+      name: 'statusImportedToDestinationCountry',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Arrived at customs`
+  String get statusArrivedAtCustoms {
+    return Intl.message(
+      'Arrived at customs',
+      name: 'statusArrivedAtCustoms',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Customs clearance complete`
+  String get statusCustomsClearanceComplete {
+    return Intl.message(
+      'Customs clearance complete',
+      name: 'statusCustomsClearanceComplete',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `No tracking info available`
   String get trackingErrorNoInfo {
     return Intl.message(
@@ -1455,6 +1535,56 @@ class S {
     );
   }
 
+  /// `Declared value`
+  String get shipmentDeclaredValue {
+    return Intl.message(
+      'Declared value',
+      name: 'shipmentDeclaredValue',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Custom duty`
+  String get shipmentCustomDuty {
+    return Intl.message(
+      'Custom duty',
+      name: 'shipmentCustomDuty',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Additional rate fee`
+  String get shipmentAdditionalRateFee {
+    return Intl.message(
+      'Additional rate fee',
+      name: 'shipmentAdditionalRateFee',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Shipping rate fee`
+  String get shipmentShippingRateFee {
+    return Intl.message(
+      'Shipping rate fee',
+      name: 'shipmentShippingRateFee',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Insurance rate fee`
+  String get shipmentInsuranceRateFee {
+    return Intl.message(
+      'Insurance rate fee',
+      name: 'shipmentInsuranceRateFee',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Shipment type`
   String get shipmentTypeDescription {
     return Intl.message(
@@ -1480,6 +1610,26 @@ class S {
     return Intl.message(
       'Shipper address',
       name: 'shipmentShipperAddress',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Shipper`
+  String get shipmentShipper {
+    return Intl.message(
+      'Shipper',
+      name: 'shipmentShipper',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Receiver`
+  String get shipmentReceiver {
+    return Intl.message(
+      'Receiver',
+      name: 'shipmentReceiver',
       desc: '',
       args: [],
     );
@@ -2154,6 +2304,26 @@ class S {
       args: [],
     );
   }
+
+  /// `Russian Post`
+  String get russianPost {
+    return Intl.message(
+      'Russian Post',
+      name: 'russianPost',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `1. Register on the Russian Post website: https://www.pochta.ru/\n2. Go to Access Settings, enable the tracking API and agree to the terms of service: https://tracking.pochta.ru/access-settings\n3. In the Access Settings, copy the login (generated automatically). The password will be sent to the e-mail, provided during registration.`
+  String get russianPostAddAccountDescription {
+    return Intl.message(
+      '1. Register on the Russian Post website: https://www.pochta.ru/\n2. Go to Access Settings, enable the tracking API and agree to the terms of service: https://tracking.pochta.ru/access-settings\n3. In the Access Settings, copy the login (generated automatically). The password will be sent to the e-mail, provided during registration.',
+      name: 'russianPostAddAccountDescription',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
@@ -2162,6 +2332,7 @@ class AppLocalizationDelegate extends LocalizationsDelegate<S> {
   List<Locale> get supportedLocales {
     return const <Locale>[
       Locale.fromSubtags(languageCode: 'en'),
+      Locale.fromSubtags(languageCode: 'es'),
       Locale.fromSubtags(languageCode: 'ru'),
     ];
   }

@@ -26,8 +26,8 @@ import 'package:libretrack/core/storage/service_repository.dart';
 import 'package:libretrack/core/storage/shipment_repository.dart';
 import 'package:libretrack/core/storage/storage_result.dart';
 import 'package:libretrack/core/tracking_id_generator.dart';
-import 'package:libretrack/core/worker/tracking_task.dart';
 import 'package:libretrack/core/transaction_id_generator.dart';
+import 'package:libretrack/core/worker/tracking_task.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:quiver/async.dart' as async;
 
@@ -35,12 +35,19 @@ import '../mock/mock.dart';
 
 void main() {
   group('Tracking task |', () {
-    const authData = AuthData({
+    const upsAuthData = AuthData({
       'login': 'foo',
       'password': 'bar',
     });
-    const service = TrackingServiceInfo(
+    const rpAuthData = AuthData({
+      'login': 'foo',
+      'password': 'baz',
+    });
+    const upsService = TrackingServiceInfo(
       type: TrackingServiceType.ups,
+    );
+    const rpService = TrackingServiceInfo(
+      type: TrackingServiceType.russianPost,
     );
 
     late TrackingService mockTrackingService;
@@ -74,10 +81,19 @@ void main() {
     setUp(() {
       when(
         () => mockServiceRepo.getHighPriorityService(PostalServiceType.ups),
-      ).thenAnswer((_) async => const StorageResult(service));
+      ).thenAnswer((_) async => const StorageResult(upsService));
       when(
-        () => mockServiceRepo.getAuthDataByType(service.type),
-      ).thenAnswer((_) async => const StorageResult(authData));
+        () => mockServiceRepo.getHighPriorityService(
+          PostalServiceType.russianPost,
+        ),
+      ).thenAnswer((_) async => const StorageResult(rpService));
+      when(
+        () => mockServiceRepo.getAuthDataByType(upsService.type),
+      ).thenAnswer((_) async => const StorageResult(upsAuthData));
+
+      when(
+        () => mockServiceRepo.getAuthDataByType(rpService.type),
+      ).thenAnswer((_) async => const StorageResult(upsAuthData));
     });
 
     test('Success result', () async {
@@ -86,22 +102,50 @@ void main() {
         TrackNumberInfo('2'),
         TrackNumberInfo('3'),
       ];
-      final trackServices = trackList
-          .map(
-            (track) => TrackNumberService(
-              trackNumber: track.trackNumber,
-              serviceType: PostalServiceType.ups,
-            ),
-          )
-          .toList();
-      final expectedRequestList = trackServices.map(
-        (trackService) => TrackingRequest(
-          id: TransactionId(trackService.trackNumber),
-          trackService: trackService,
-          serviceInfo: service,
-          authData: authData,
+      final trackServices = [
+        TrackNumberService(
+          trackNumber: trackList[0].trackNumber,
+          serviceType: PostalServiceType.ups,
         ),
-      );
+        TrackNumberService(
+          trackNumber: trackList[1].trackNumber,
+          serviceType: PostalServiceType.russianPost,
+        ),
+        TrackNumberService(
+          trackNumber: trackList[2].trackNumber,
+          serviceType: PostalServiceType.ups,
+        ),
+        TrackNumberService(
+          trackNumber: trackList[2].trackNumber,
+          serviceType: PostalServiceType.russianPost,
+        ),
+      ];
+      final expectedRequestList = [
+        TrackingRequest(
+          id: TransactionId(trackServices[0].trackNumber),
+          trackService: trackServices[0],
+          serviceInfo: upsService,
+          authData: upsAuthData,
+        ),
+        TrackingRequest(
+          id: TransactionId(trackServices[1].trackNumber),
+          trackService: trackServices[1],
+          serviceInfo: rpService,
+          authData: rpAuthData,
+        ),
+        TrackingRequest(
+          id: TransactionId('${trackServices[2].trackNumber}_0'),
+          trackService: trackServices[2],
+          serviceInfo: upsService,
+          authData: upsAuthData,
+        ),
+        TrackingRequest(
+          id: TransactionId('${trackServices[2].trackNumber}_1'),
+          trackService: trackServices[2],
+          serviceInfo: rpService,
+          authData: rpAuthData,
+        ),
+      ];
       final expectedTrackingResult = expectedRequestList
           .map(
             (request) => TrackingServiceResultData(
@@ -132,11 +176,11 @@ void main() {
       final dateTime = DateTime(2021);
       final expectedTaskStates = [
         TrackingTaskState.loading(
-          trackingInfoList: expectedRequestList
+          trackingInfoList: trackList
               .map(
-                (request) => TrackingInfo(
-                  id: TrackingId(request.id.toString()),
-                  trackNumber: request.trackService.trackNumber,
+                (info) => TrackingInfo(
+                  id: TrackingId(info.trackNumber),
+                  trackNumber: info.trackNumber,
                   dateTime: dateTime,
                   status: TrackingStatus.inProgress,
                   hasNewInfo: false,
@@ -148,11 +192,11 @@ void main() {
         ),
         TrackingTaskState.loaded(
           result: expectedTaskResult,
-          trackingInfoList: expectedRequestList
+          trackingInfoList: trackList
               .map(
-                (request) => TrackingInfo(
-                  id: TrackingId(request.id.toString()),
-                  trackNumber: request.trackService.trackNumber,
+                (info) => TrackingInfo(
+                  id: TrackingId(info.trackNumber),
+                  trackNumber: info.trackNumber,
                   dateTime: dateTime,
                   status: TrackingStatus.complete,
                   hasNewInfo: true,
@@ -164,7 +208,7 @@ void main() {
           responseInfoList: expectedRequestList
               .map(
                 (request) => TrackingResponseInfo.from(
-                  trackingId: TrackingId(request.id.toString()),
+                  trackingId: TrackingId(request.trackService.trackNumber),
                   trackNumber: request.trackService.trackNumber,
                   dateTime: dateTime,
                   serviceType: request.trackService.serviceType,
@@ -180,11 +224,11 @@ void main() {
         if (requestIter.moveNext()) {
           return requestIter.current.id;
         }
-        throw "Cannot be more than ${trackList.length} ID's";
+        throw "Cannot be more than ${expectedRequestList.length} ID's";
       });
       final trackingIdIter = trackList
           .map(
-            (track) => TrackingId(track.trackNumber),
+            (info) => TrackingId(info.trackNumber),
           )
           .iterator;
       when(() => mockTrackingIdGenerator.randomUnique()).thenAnswer((_) {
@@ -219,8 +263,8 @@ void main() {
       final expectedRequest = TrackingRequest(
         id: TransactionId(track.trackNumber),
         trackService: trackService,
-        serviceInfo: service,
-        authData: authData,
+        serviceInfo: upsService,
+        authData: upsAuthData,
       );
       final expectedTrackingResult = TrackingServiceResult.error(
         request: expectedRequest,
@@ -303,8 +347,8 @@ void main() {
       final expectedRequest = TrackingRequest(
         id: TransactionId(track.trackNumber),
         trackService: trackService,
-        serviceInfo: service,
-        authData: authData,
+        serviceInfo: upsService,
+        authData: upsAuthData,
       );
       final expectedTrackingResult = TrackingServiceResult.noInfo(
         expectedRequest,
@@ -375,8 +419,8 @@ void main() {
       final expectedRequest = TrackingRequest(
         id: TransactionId(track.trackNumber),
         trackService: trackService,
-        serviceInfo: service,
-        authData: authData,
+        serviceInfo: upsService,
+        authData: upsAuthData,
       );
       final expectedTrackingResult = TrackingServiceResult.error(
         request: expectedRequest,
@@ -452,32 +496,188 @@ void main() {
     });
 
     test('Unsupported service (invalid tracking number)', () async {
-      const track = TrackNumberInfo('1');
-      final trackService = TrackNumberService(
-        trackNumber: track.trackNumber,
-        serviceType: PostalServiceType.ups,
-        isActive: false,
-      );
-      final expectedRequest = TrackingRequest(
-        id: TransactionId(track.trackNumber),
-        trackService: trackService,
-        serviceInfo: service,
-        authData: authData,
-      );
-      final expectedTrackingResult = TrackingServiceResult.error(
-        request: expectedRequest,
-        error: const TrackingServiceError.parse(
-          ParseError.invalidTrackNumber(),
+      const trackInfo = TrackNumberInfo('1');
+      final trackServices = [
+        TrackNumberService(
+          trackNumber: trackInfo.trackNumber,
+          serviceType: PostalServiceType.ups,
         ),
-        isRetryable: false,
+        TrackNumberService(
+          trackNumber: trackInfo.trackNumber,
+          serviceType: PostalServiceType.russianPost,
+        ),
+      ];
+      final expectedRequestList = [
+        TrackingRequest(
+          id: TransactionId(trackServices[0].trackNumber),
+          trackService: trackServices[0],
+          serviceInfo: upsService,
+          authData: upsAuthData,
+        ),
+        TrackingRequest(
+          id: TransactionId(trackServices[1].trackNumber),
+          trackService: trackServices[1],
+          serviceInfo: rpService,
+          authData: rpAuthData,
+        ),
+      ];
+      final shipmentInfo = ShipmentInfo.from(
+        trackNumber: expectedRequestList[1].trackService.trackNumber,
+        serviceType: expectedRequestList[1].trackService.serviceType,
       );
+      final expectedTrackingResult = [
+        TrackingServiceResult.error(
+          request: expectedRequestList[0],
+          error: const TrackingServiceError.parse(
+            ParseError.invalidTrackNumber(),
+          ),
+          isRetryable: false,
+        ),
+        TrackingServiceResultData(
+          request: expectedRequestList[1],
+          info: shipmentInfo,
+          activity: [],
+        ),
+      ];
       final dateTime = DateTime(2021);
       final expectedTaskStates = [
         TrackingTaskState.loading(
           trackingInfoList: [
             TrackingInfo(
-              id: TrackingId(expectedRequest.id.toString()),
-              trackNumber: expectedRequest.trackService.trackNumber,
+              id: const TrackingId('1'),
+              trackNumber: trackInfo.trackNumber,
+              dateTime: dateTime,
+              status: TrackingStatus.inProgress,
+              hasNewInfo: false,
+              hasNonRetryableError: false,
+              invalidTrackNumber: false,
+            ),
+          ],
+        ),
+        TrackingTaskState.loaded(
+          result: [
+            TrackingTaskResult(
+              trackService: expectedRequestList[1].trackService,
+              info: shipmentInfo,
+              activity: [],
+            ),
+          ],
+          trackingInfoList: [
+            TrackingInfo(
+              id: const TrackingId('1'),
+              trackNumber: trackInfo.trackNumber,
+              dateTime: dateTime,
+              status: TrackingStatus.complete,
+              hasNewInfo: false,
+              hasNonRetryableError: false,
+              invalidTrackNumber: false,
+            ),
+          ],
+          responseInfoList: [
+            TrackingResponseInfo.from(
+              trackingId: const TrackingId('1'),
+              trackNumber: expectedRequestList[1].trackService.trackNumber,
+              dateTime: dateTime,
+              serviceType: expectedRequestList[1].trackService.serviceType,
+              status: TrackingResponseStatus.success,
+            ),
+          ],
+          unsupportedServices: [trackServices[0]],
+        ),
+      ];
+
+      when(() => mockTransactionIdGenerator.randomUnique()).thenAnswer(
+        (_) => const TransactionId('1'),
+      );
+      when(() => mockTrackingIdGenerator.randomUnique()).thenAnswer(
+        (_) => const TrackingId('1'),
+      );
+      when(() => mockTrackingService.fetch(expectedRequestList))
+          .thenAnswer((_) async => expectedTrackingResult);
+      when(() => mockDateTimeProvider.now()).thenReturn(dateTime);
+
+      await for (final entry in async.enumerate(
+        task.run(trackServices.toSet()),
+      )) {
+        expect(
+          entry.value,
+          expectedTaskStates[entry.index],
+        );
+      }
+    });
+
+    test('All services are unsupported (invalid tracking number)', () async {
+      const trackList = [
+        TrackNumberInfo('1'),
+        TrackNumberInfo('2'),
+      ];
+      final trackServices = [
+        TrackNumberService(
+          trackNumber: trackList[0].trackNumber,
+          serviceType: PostalServiceType.ups,
+        ),
+        TrackNumberService(
+          trackNumber: trackList[0].trackNumber,
+          serviceType: PostalServiceType.russianPost,
+        ),
+        TrackNumberService(
+          trackNumber: trackList[1].trackNumber,
+          serviceType: PostalServiceType.russianPost,
+        ),
+      ];
+      final expectedRequestList = [
+        TrackingRequest(
+          id: TransactionId(trackServices[0].trackNumber),
+          trackService: trackServices[0],
+          serviceInfo: upsService,
+          authData: upsAuthData,
+        ),
+        TrackingRequest(
+          id: TransactionId(trackServices[1].trackNumber),
+          trackService: trackServices[1],
+          serviceInfo: rpService,
+          authData: rpAuthData,
+        ),
+        TrackingRequest(
+          id: TransactionId(trackServices[2].trackNumber),
+          trackService: trackServices[2],
+          serviceInfo: rpService,
+          authData: rpAuthData,
+        ),
+      ];
+      final expectedTrackingResult = [
+        TrackingServiceResult.error(
+          request: expectedRequestList[0],
+          error: const TrackingServiceError.parse(
+            ParseError.invalidTrackNumber(),
+          ),
+          isRetryable: false,
+        ),
+        TrackingServiceResult.error(
+          request: expectedRequestList[1],
+          error: const TrackingServiceError.parse(
+            ParseError.invalidTrackNumber(),
+          ),
+          isRetryable: false,
+        ),
+        TrackingServiceResult.noInfo(expectedRequestList[2]),
+      ];
+      final dateTime = DateTime(2021);
+      final expectedTaskStates = [
+        TrackingTaskState.loading(
+          trackingInfoList: [
+            TrackingInfo(
+              id: const TrackingId('1'),
+              trackNumber: trackList[0].trackNumber,
+              dateTime: dateTime,
+              status: TrackingStatus.inProgress,
+              hasNewInfo: false,
+              hasNonRetryableError: false,
+              invalidTrackNumber: false,
+            ),
+            TrackingInfo(
+              id: const TrackingId('2'),
+              trackNumber: trackList[1].trackNumber,
               dateTime: dateTime,
               status: TrackingStatus.inProgress,
               hasNewInfo: false,
@@ -490,42 +690,78 @@ void main() {
           result: [],
           trackingInfoList: [
             TrackingInfo(
-              id: TrackingId(expectedRequest.id.toString()),
-              trackNumber: expectedRequest.trackService.trackNumber,
+              id: const TrackingId('1'),
+              trackNumber: trackList[0].trackNumber,
               dateTime: dateTime,
               status: TrackingStatus.complete,
               hasNewInfo: true,
               hasNonRetryableError: true,
               invalidTrackNumber: true,
             ),
-          ],
-          responseInfoList: [
-            TrackingResponseInfo.from(
-              trackingId: TrackingId(expectedRequest.id.toString()),
-              trackNumber: expectedRequest.trackService.trackNumber,
+            TrackingInfo(
+              id: const TrackingId('2'),
+              trackNumber: trackList[1].trackNumber,
               dateTime: dateTime,
-              serviceType: expectedRequest.trackService.serviceType,
-              status: TrackingResponseStatus.fail,
-              error: const TrackingError(
-                type: TrackingErrorType.invalidTrackNumber,
-                isRetryable: false,
-              ),
+              status: TrackingStatus.complete,
+              hasNewInfo: false,
+              hasNonRetryableError: false,
+              invalidTrackNumber: false,
             ),
           ],
-          unsupportedServices: [trackService],
-          disabledServices: [trackService],
+          responseInfoList: [
+            ...expectedRequestList
+                .getRange(0, 2)
+                .map(
+                  (request) => TrackingResponseInfo.from(
+                    trackingId: const TrackingId('1'),
+                    trackNumber: request.trackService.trackNumber,
+                    dateTime: dateTime,
+                    serviceType: request.trackService.serviceType,
+                    status: TrackingResponseStatus.fail,
+                    error: const TrackingError(
+                      type: TrackingErrorType.invalidTrackNumber,
+                      isRetryable: false,
+                    ),
+                  ),
+                )
+                .toList(),
+            TrackingResponseInfo.from(
+              trackingId: const TrackingId('2'),
+              trackNumber: expectedRequestList[2].trackService.trackNumber,
+              dateTime: dateTime,
+              serviceType: expectedRequestList[2].trackService.serviceType,
+              status: TrackingResponseStatus.noInfo,
+            ),
+          ],
+          unsupportedServices: trackServices.getRange(0, 2).toList(),
         ),
       ];
 
-      when(() => mockTransactionIdGenerator.randomUnique())
-          .thenReturn(expectedRequest.id);
-      when(() => mockTrackingIdGenerator.randomUnique())
-          .thenReturn(TrackingId(track.trackNumber));
-      when(() => mockTrackingService.fetch([expectedRequest]))
-          .thenAnswer((_) async => [expectedTrackingResult]);
+      final requestIter = expectedRequestList.iterator;
+      when(() => mockTransactionIdGenerator.randomUnique()).thenAnswer((_) {
+        if (requestIter.moveNext()) {
+          return requestIter.current.id;
+        }
+        throw "Cannot be more than ${trackList.length} ID's";
+      });
+      final trackingIdIter = trackList
+          .map(
+            (track) => TrackingId(track.trackNumber),
+          )
+          .iterator;
+      when(() => mockTrackingIdGenerator.randomUnique()).thenAnswer((_) {
+        if (trackingIdIter.moveNext()) {
+          return trackingIdIter.current;
+        }
+        throw "Cannot be more than ${trackList.length} ID's";
+      });
+      when(() => mockTrackingService.fetch(expectedRequestList))
+          .thenAnswer((_) async => expectedTrackingResult);
       when(() => mockDateTimeProvider.now()).thenReturn(dateTime);
 
-      await for (final entry in async.enumerate(task.run({trackService}))) {
+      await for (final entry in async.enumerate(
+        task.run(trackServices.toSet()),
+      )) {
         expect(
           entry.value,
           expectedTaskStates[entry.index],

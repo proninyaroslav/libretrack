@@ -1,0 +1,2 @@
+* Added Russian Post support
+* Added Spanish translation

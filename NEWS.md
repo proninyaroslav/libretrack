@@ -1,3 +1,8 @@
+### Version 1.1.0 (2021-07-31)
+
+* Added Russian Post support
+* Added Spanish translation
+
 ### Version 1.0.1 (2021-07-13)
 
 Bugfixes:

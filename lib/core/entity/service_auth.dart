@@ -32,14 +32,22 @@ class AuthData extends MapView<String, String>
 }
 
 @TypeConverters([TrackingServiceTypeConverter])
-@entity
+@Entity(
+  primaryKeys: ['key', 'serviceType'],
+  foreignKeys: [
+    ForeignKey(
+      entity: TrackingServiceInfo,
+      childColumns: ['serviceType'],
+      parentColumns: ['type'],
+      onDelete: ForeignKeyAction.cascade,
+    ),
+  ],
+)
 class AuthDataField {
-  @primaryKey
   final String key;
 
   final String value;
 
-  @primaryKey
   final TrackingServiceType serviceType;
 
   const AuthDataField({

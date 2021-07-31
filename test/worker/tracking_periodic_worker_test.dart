@@ -207,7 +207,11 @@ void main() {
           ),
           TrackNumberService(
             trackNumber: '2',
-            serviceType: PostalServiceType.ups,
+            serviceType: PostalServiceType.russianPost,
+          ),
+          TrackNumberService(
+            trackNumber: '3',
+            serviceType: PostalServiceType.russianPost,
           ),
           TrackNumberService(
             trackNumber: '3',
@@ -223,7 +227,11 @@ void main() {
           ),
           const TrackNumberService(
             trackNumber: '2',
-            serviceType: PostalServiceType.ups,
+            serviceType: PostalServiceType.russianPost,
+          ),
+          const TrackNumberService(
+            trackNumber: '3',
+            serviceType: PostalServiceType.russianPost,
           ),
           const TrackNumberService(
             trackNumber: '3',

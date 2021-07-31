@@ -22,9 +22,10 @@ class _$HttpResponseTearOff {
     );
   }
 
-  HttpResponseError httpError({required int statusCode}) {
+  HttpResponseError httpError({required int statusCode, required String body}) {
     return HttpResponseError(
       statusCode: statusCode,
+      body: body,
     );
   }
 
@@ -44,14 +45,14 @@ mixin _$HttpResponse {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(String body) success,
-    required TResult Function(int statusCode) httpError,
+    required TResult Function(int statusCode, String body) httpError,
     required TResult Function(Exception e, StackTrace? stackTrace) exception,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String body)? success,
-    TResult Function(int statusCode)? httpError,
+    TResult Function(int statusCode, String body)? httpError,
     TResult Function(Exception e, StackTrace? stackTrace)? exception,
     required TResult orElse(),
   }) =>
@@ -165,7 +166,7 @@ class _$HttpResponseSuccess
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(String body) success,
-    required TResult Function(int statusCode) httpError,
+    required TResult Function(int statusCode, String body) httpError,
     required TResult Function(Exception e, StackTrace? stackTrace) exception,
   }) {
     return success(body);
@@ -175,7 +176,7 @@ class _$HttpResponseSuccess
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String body)? success,
-    TResult Function(int statusCode)? httpError,
+    TResult Function(int statusCode, String body)? httpError,
     TResult Function(Exception e, StackTrace? stackTrace)? exception,
     required TResult orElse(),
   }) {
@@ -225,7 +226,7 @@ abstract class $HttpResponseErrorCopyWith<$Res> {
   factory $HttpResponseErrorCopyWith(
           HttpResponseError value, $Res Function(HttpResponseError) then) =
       _$HttpResponseErrorCopyWithImpl<$Res>;
-  $Res call({int statusCode});
+  $Res call({int statusCode, String body});
 }
 
 /// @nodoc
@@ -242,12 +243,17 @@ class _$HttpResponseErrorCopyWithImpl<$Res>
   @override
   $Res call({
     Object? statusCode = freezed,
+    Object? body = freezed,
   }) {
     return _then(HttpResponseError(
       statusCode: statusCode == freezed
           ? _value.statusCode
           : statusCode // ignore: cast_nullable_to_non_nullable
               as int,
+      body: body == freezed
+          ? _value.body
+          : body // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -257,14 +263,16 @@ class _$HttpResponseErrorCopyWithImpl<$Res>
 class _$HttpResponseError
     with DiagnosticableTreeMixin
     implements HttpResponseError {
-  const _$HttpResponseError({required this.statusCode});
+  const _$HttpResponseError({required this.statusCode, required this.body});
 
   @override
   final int statusCode;
+  @override
+  final String body;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'HttpResponse.httpError(statusCode: $statusCode)';
+    return 'HttpResponse.httpError(statusCode: $statusCode, body: $body)';
   }
 
   @override
@@ -272,7 +280,8 @@ class _$HttpResponseError
     super.debugFillProperties(properties);
     properties
       ..add(DiagnosticsProperty('type', 'HttpResponse.httpError'))
-      ..add(DiagnosticsProperty('statusCode', statusCode));
+      ..add(DiagnosticsProperty('statusCode', statusCode))
+      ..add(DiagnosticsProperty('body', body));
   }
 
   @override
@@ -281,12 +290,16 @@ class _$HttpResponseError
         (other is HttpResponseError &&
             (identical(other.statusCode, statusCode) ||
                 const DeepCollectionEquality()
-                    .equals(other.statusCode, statusCode)));
+                    .equals(other.statusCode, statusCode)) &&
+            (identical(other.body, body) ||
+                const DeepCollectionEquality().equals(other.body, body)));
   }
 
   @override
   int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(statusCode);
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(statusCode) ^
+      const DeepCollectionEquality().hash(body);
 
   @JsonKey(ignore: true)
   @override
@@ -297,22 +310,22 @@ class _$HttpResponseError
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(String body) success,
-    required TResult Function(int statusCode) httpError,
+    required TResult Function(int statusCode, String body) httpError,
     required TResult Function(Exception e, StackTrace? stackTrace) exception,
   }) {
-    return httpError(statusCode);
+    return httpError(statusCode, body);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String body)? success,
-    TResult Function(int statusCode)? httpError,
+    TResult Function(int statusCode, String body)? httpError,
     TResult Function(Exception e, StackTrace? stackTrace)? exception,
     required TResult orElse(),
   }) {
     if (httpError != null) {
-      return httpError(statusCode);
+      return httpError(statusCode, body);
     }
     return orElse();
   }
@@ -343,10 +356,11 @@ class _$HttpResponseError
 }
 
 abstract class HttpResponseError implements HttpResponse {
-  const factory HttpResponseError({required int statusCode}) =
-      _$HttpResponseError;
+  const factory HttpResponseError(
+      {required int statusCode, required String body}) = _$HttpResponseError;
 
   int get statusCode => throw _privateConstructorUsedError;
+  String get body => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $HttpResponseErrorCopyWith<HttpResponseError> get copyWith =>
       throw _privateConstructorUsedError;
@@ -442,7 +456,7 @@ class _$HttpResponseException
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(String body) success,
-    required TResult Function(int statusCode) httpError,
+    required TResult Function(int statusCode, String body) httpError,
     required TResult Function(Exception e, StackTrace? stackTrace) exception,
   }) {
     return exception(e, stackTrace);
@@ -452,7 +466,7 @@ class _$HttpResponseException
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String body)? success,
-    TResult Function(int statusCode)? httpError,
+    TResult Function(int statusCode, String body)? httpError,
     TResult Function(Exception e, StackTrace? stackTrace)? exception,
     required TResult orElse(),
   }) {

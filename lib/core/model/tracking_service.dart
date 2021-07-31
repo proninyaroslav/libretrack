@@ -136,7 +136,7 @@ class TrackingServiceImpl extends TrackingService {
       (response) {
         final request = requestMap[response.transactionId];
         final parser = _parserFactory.parserOf(request.serviceInfo);
-        final parseResult = parser.parse(response);
+        final parseResult = parser.parse(response, locale: request.locale);
 
         return _handleParseResult(parseResult, request);
       },

@@ -9,7 +9,7 @@ LibreTrack
 
 ![LibreTrack](fastlane/metadata/android/en-US/images/featureGraphic.png)
 
-[<img alt="Get it on F-Droid" height="80" src="https://tachibanagenerallaboratories.github.io/images/badges/F-Droid/get-it-on.png">]()
+[<img alt="Get it on F-Droid" height="80" src="https://tachibanagenerallaboratories.github.io/images/badges/F-Droid/get-it-on.png">](https://f-droid.org/packages/org.proninyaroslav.libretrack)
 [<img alt="Get it on Google Play" height="80" src="https://tachibanagenerallaboratories.github.io/images/badges/Google%20Play/google-play-badge.png">](https://play.google.com/store/apps/details?id=org.proninyaroslav.libretrack)
 [<img alt="Get it on GitHub" height="80" src="https://tachibanagenerallaboratories.github.io/images/badges/GitHub/get-it-on-github.png">](https://github.com/proninyaroslav/libretrack/releases)
 [<img alt="Get it on Android File Host" height="80" src="https://tachibanagenerallaboratories.github.io/images/badges/Android%20File%20Host/android-file-host-badge.png">](https://www.androidfilehost.com/?w=files&flid=326398)
@@ -25,7 +25,7 @@ Track postal items directly on your device using accounts of postal services. Th
 
  - Free and Open Source software (FOSS)
  - Support for various platfroms and devices (currently Android only)
- - Support accounts of different carriers (currently UPS only)
+ - Support accounts of different carriers
  - Detailed information about the postal items, carriers, tracking history
  - Local push notifications
  - Automatic tracking in the background, and also manual refreshing
@@ -50,11 +50,13 @@ Track postal items directly on your device using accounts of postal services. Th
 ## 📦 Supported postal services
 
 [![UPS](assets/service_logo/ups.png)](https://www.ups.com)
+[![Russian Post](assets/service_logo/russian_post.png)](https://www.pochta.ru/)
 
 ## 🌍 Translations
 
  - **English**
  - **Russian**
+ - **Spanish** *(thanks sguinetti)*
 
 ## 💰 Donation
 

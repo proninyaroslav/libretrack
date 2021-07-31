@@ -26,6 +26,7 @@ part 'service_response.freezed.dart';
 class ServiceResponse with _$ServiceResponse {
   const factory ServiceResponse({
     required TransactionId transactionId,
+    required int statusCode,
     required String payload,
   }) = _ServiceResponse;
 }

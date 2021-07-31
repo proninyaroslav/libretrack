@@ -118,9 +118,7 @@ class UiUtils {
 
 extension UnitOfMeasurementExtension on UnitOfMeasurement {
   String format(BuildContext context) {
-    final valueStr = value.truncateToDouble() == value
-        ? value.toStringAsFixed(0)
-        : value.toString();
+    final valueStr = value.removeDecimalZeroFormat();
     switch (measurement) {
       case Measurement.kilogram:
         return S.of(context).kilogramUnitShort(valueStr);
@@ -144,9 +142,9 @@ extension UnitOfMeasurementExtension on UnitOfMeasurement {
   }
 }
 
-extension CashOnDeliveryExtension on CashOnDelivery {
+extension CurrencyExtension on Currency {
   String format(BuildContext context) {
-    return "$value $currencyCode";
+    return "${value.removeDecimalZeroFormat()} $currencyCode";
   }
 }
 
@@ -192,5 +190,11 @@ extension AutoTrackingFreqExtension on AutoTrackingFreq {
       threeDays: () => S.of(context).settingsAutoTrackingFreqThreeDays,
       oneWeek: () => S.of(context).settingsAutoTrackingFreqOneWeek,
     );
+  }
+}
+
+extension DoubleExtension on double {
+  String removeDecimalZeroFormat() {
+    return truncateToDouble() == this ? toStringAsFixed(0) : toString();
   }
 }

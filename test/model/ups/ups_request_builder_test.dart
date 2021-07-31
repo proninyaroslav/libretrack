@@ -20,8 +20,7 @@ import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
 import 'package:libretrack/core/entity/entity.dart';
-import 'package:libretrack/core/model/tracking_service/ups/ups_request_builder.dart';
-import 'package:libretrack/core/model/tracking_service/ups/ups_service_info.dart';
+import 'package:libretrack/core/model/tracking_service/tracking_service.dart';
 import 'package:libretrack/core/model/type/type.dart';
 import 'package:uuid/uuid.dart';
 
@@ -73,8 +72,9 @@ void main() {
       };
 
       final r = builder.build(
-          transactionId: TransactionId(const Uuid().v4()),
-          trackService: trackService);
+        transactionId: TransactionId(const Uuid().v4()),
+        trackService: trackService,
+      );
       final trackRequest = expectedBody['TrackRequest'] as Map<String, dynamic>;
       final request = trackRequest['Request'] as Map<String, dynamic>;
       final transactionReference =
