@@ -327,35 +327,36 @@ class RussianPostParser implements Parser {
             ?.innerText;
 
     final location = [
-      if (description != null) description,
-      if (countryName != null) countryName,
+      if (description != null && description.isNotEmpty) description,
+      if (countryName != null && countryName.isNotEmpty) countryName,
     ];
 
     return Address(
       location: location.isEmpty ? null : location.join(', '),
-      postalCode: postalCode,
-      countryCode: countryCode,
+      postalCode: postalCode == null || postalCode.isEmpty ? null : postalCode,
+      countryCode:
+          countryCode == null || countryCode.isEmpty ? null : countryCode,
     );
   }
 
   _Cash? _parseCashOnDelivery(XmlElement financeParameters) {
     final value = financeParameters.getElement('ns3:Payment')?.innerText;
-    return value == null ? null : _Cash(value);
+    return value == null || value.isEmpty ? null : _Cash(value);
   }
 
   _Cash? _parseDeclaredValue(XmlElement financeParameters) {
     final value = financeParameters.getElement('ns3:Value')?.innerText;
-    return value == null ? null : _Cash(value);
+    return value == null || value.isEmpty ? null : _Cash(value);
   }
 
   _Cash? _parseCustomDuty(XmlElement financeParameters) {
     final value = financeParameters.getElement('ns3:CustomDuty')?.innerText;
-    return value == null ? null : _Cash(value);
+    return value == null || value.isEmpty ? null : _Cash(value);
   }
 
   _Cash? _parseAdditionalRateFee(XmlElement financeParameters) {
     final value = financeParameters.getElement('ns3:Rate')?.innerText;
-    return value == null ? null : _Cash(value);
+    return value == null || value.isEmpty ? null : _Cash(value);
   }
 
   _Cash? _parseShippingRateFee(XmlElement financeParameters) {
@@ -365,14 +366,15 @@ class RussianPostParser implements Parser {
 
   _Cash? _parseInsuranceRateFee(XmlElement financeParameters) {
     final value = financeParameters.getElement('ns3:InsrRate')?.innerText;
-    return value == null ? null : _Cash(value);
+    return value == null || value.isEmpty ? null : _Cash(value);
   }
 
   String? _parseServiceDescription(XmlElement itemParameters) {
     final mailType = itemParameters.getElement('ns3:MailType');
     final id = mailType?.getElement('ns3:Id')?.innerText;
     final name = mailType?.getElement('ns3:Name')?.innerText;
-    return _nonServiceMailId.contains(id) ? null : name;
+    final description = _nonServiceMailId.contains(id) ? null : name;
+    return description == null || description.isEmpty ? null : description;
   }
 
   String? _parseShipmentDescription(XmlElement itemParameters) {
@@ -385,7 +387,7 @@ class RussianPostParser implements Parser {
     final postMark = itemParameters.getElement('ns3:PostMark');
     final postMarkName = _parsePostMark(postMark);
 
-    if (complexItemName != null) {
+    if (complexItemName != null && complexItemName.isNotEmpty) {
       return [
         complexItemName,
         if (mailRankName != null) mailRankName,
@@ -410,32 +412,36 @@ class RussianPostParser implements Parser {
 
   String? _parseMailType(XmlElement? mailType) {
     final id = mailType?.getElement('ns3:Id')?.innerText;
-    return id == _undefinedIdCode
+    final mailTypeStr = id == _undefinedIdCode
         ? null
         : mailType?.getElement('ns3:Name')?.innerText;
+    return mailTypeStr == null || mailTypeStr.isEmpty ? null : mailTypeStr;
   }
 
   String? _parseMailCtg(XmlElement? mailCtg) {
-    return mailCtg?.getElement('ns3:Name')?.innerText;
+    final mailCtgStr = mailCtg?.getElement('ns3:Name')?.innerText;
+    return mailCtgStr == null || mailCtgStr.isEmpty ? null : mailCtgStr;
   }
 
   String? _parseMailRank(XmlElement? mailRank) {
     final id = mailRank?.getElement('ns3:Id')?.innerText;
-    return id == _undefinedIdCode
+    final mailRankStr = id == _undefinedIdCode
         ? null
         : mailRank?.getElement('ns3:Name')?.innerText;
+    return mailRankStr == null || mailRankStr.isEmpty ? null : mailRankStr;
   }
 
   String? _parsePostMark(XmlElement? postMark) {
     final id = postMark?.getElement('ns3:Id')?.innerText;
-    return id == _undefinedIdCode
+    final postMarkStr = id == _undefinedIdCode
         ? null
         : postMark?.getElement('ns3:Name')?.innerText;
+    return postMarkStr == null || postMarkStr.isEmpty ? null : postMarkStr;
   }
 
   _Weight? _parseWeight(XmlElement itemParameters) {
     final value = itemParameters.getElement('ns3:Mass')?.innerText;
-    return value == null ? null : _Weight(value);
+    return value == null || value.isEmpty ? null : _Weight(value);
   }
 
   _Status _parseStatus(XmlElement operationParameters) {
@@ -450,8 +456,8 @@ class RussianPostParser implements Parser {
     final statusType = _shipmentStatusTypeMap['$typeId:$attrId'] ??
         _shipmentStatusTypeMap[typeId];
     final description = [
-      if (typeName != null) typeName,
-      if (attrName != null) attrName,
+      if (typeName != null && typeName.isNotEmpty) typeName,
+      if (attrName != null && attrName.isNotEmpty) attrName,
     ].join(' - ');
     return _Status(
       type: statusType,
@@ -461,7 +467,7 @@ class RussianPostParser implements Parser {
 
   _DateTime? _parseActivityDateTime(XmlElement operationParameters) {
     final date = operationParameters.getElement('ns3:OperDate')?.innerText;
-    return date == null ? null : _DateTime(date);
+    return date == null || date.isEmpty ? null : _DateTime(date);
   }
 
   String? _parseReceiverName(XmlElement userParameters) {
