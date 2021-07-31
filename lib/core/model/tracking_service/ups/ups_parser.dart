@@ -697,35 +697,14 @@ _ActivityStatus? _parseActivityStatus(Map<String, dynamic> activity) {
   }
   final code = status['Code'] as String?;
   final description = status['Description'] as String;
-  final type = _parseStatusTypeCode(status['Type'] as String?);
+  final type = (status['Type'] as String?);
+  final shipmentType = _statusCodeMap[code] ?? _statusTypeMap[type];
 
   return _ActivityStatus(
     code: code,
     description: description,
-    type: type,
+    type: shipmentType ?? ShipmentStatusType.other,
   );
-}
-
-ShipmentStatusType _parseStatusTypeCode(String? type) {
-  switch (type) {
-    case _StatusTypeCode.notAvailable:
-      return ShipmentStatusType.notAvailable;
-    case _StatusTypeCode.manifestPickup:
-      return ShipmentStatusType.infoReceived;
-    case _StatusTypeCode.pickup:
-      return ShipmentStatusType.pickup;
-    case _StatusTypeCode.inTransit:
-      return ShipmentStatusType.inTransit;
-    case _StatusTypeCode.outForDelivery:
-      return ShipmentStatusType.outForDelivery;
-    case _StatusTypeCode.delivered:
-    case _StatusTypeCode.deliveredOriginCFS:
-    case _StatusTypeCode.deliveredDestinationCFS:
-      return ShipmentStatusType.delivered;
-    case _StatusTypeCode.returnedToShipper:
-      return ShipmentStatusType.returnedToShipper;
-  }
-  return ShipmentStatusType.other;
 }
 
 abstract class _SimpleErrorCode {
@@ -904,6 +883,41 @@ abstract class _StatusTypeCode {
   static const deliveredDestinationCFS = 'DD';
   static const returnedToShipper = 'RS';
 }
+
+abstract class _StatusCode {
+  static const originScan = 'OR';
+  static const departedFromFacility = 'DP';
+  static const arrivedAtFacility = 'AR';
+  static const importScan = 'IP';
+  static const exportScan = 'EP';
+  static const outForDelivery = 'OF';
+  static const outForDeliveryToday = 'OT';
+  static const arrivedAtCustoms = 'SR';
+}
+
+final _statusTypeMap = <String, ShipmentStatusType>{
+  _StatusTypeCode.notAvailable: ShipmentStatusType.notAvailable,
+  _StatusTypeCode.manifestPickup: ShipmentStatusType.infoReceived,
+  _StatusTypeCode.pickup: ShipmentStatusType.pickup,
+  _StatusTypeCode.inTransit: ShipmentStatusType.inTransit,
+  _StatusTypeCode.outForDelivery: ShipmentStatusType.outForDelivery,
+  _StatusTypeCode.delivered: ShipmentStatusType.delivered,
+  _StatusTypeCode.deliveredOriginCFS: ShipmentStatusType.delivered,
+  _StatusTypeCode.deliveredDestinationCFS: ShipmentStatusType.delivered,
+  _StatusTypeCode.returnedToShipper: ShipmentStatusType.returnedToShipper,
+};
+
+final _statusCodeMap = <String, ShipmentStatusType>{
+  _StatusCode.originScan: ShipmentStatusType.pickup,
+  _StatusCode.departedFromFacility:
+      ShipmentStatusType.inTransitDepartedWaypoint,
+  _StatusCode.arrivedAtFacility: ShipmentStatusType.inTransitArrivedWaypoint,
+  _StatusCode.importScan: ShipmentStatusType.importedToDestinationCountry,
+  _StatusCode.exportScan: ShipmentStatusType.exportedFromDepartureCountry,
+  _StatusCode.outForDelivery: ShipmentStatusType.outForDelivery,
+  _StatusCode.outForDeliveryToday: ShipmentStatusType.outForDelivery,
+  _StatusCode.arrivedAtCustoms: ShipmentStatusType.arrivedAtCustoms,
+};
 
 @immutable
 class _ActivityStatus {
