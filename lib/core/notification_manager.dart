@@ -167,11 +167,12 @@ class NotificationManagerImpl implements NotificationManager {
           groupKey: groupKey,
           ticker: locale.parcelsTrackingNotifyInboxStyleLine(
             e.title,
-            e.body,
+            e.body.first,
           ),
           styleInformation: InboxStyleInformation(
-            [e.body],
+            e.body,
             summaryText: e.subtitle,
+            htmlFormatLines: true,
           ),
         );
         final iosDetails = IOSNotificationDetails(
@@ -188,7 +189,7 @@ class NotificationManagerImpl implements NotificationManager {
         return _notifyPlugin.show(
           e.id,
           e.title,
-          e.body,
+          e.body.first,
           details,
           payload: actionJson == null ? null : jsonEncode(actionJson),
         );
@@ -212,7 +213,7 @@ class NotificationManagerImpl implements NotificationManager {
               .map(
                 (e) => locale.parcelsTrackingNotifyInboxStyleLine(
                   e.title,
-                  e.body,
+                  e.body.first,
                 ),
               )
               .toList(),
@@ -246,6 +247,9 @@ class NotificationManagerImpl implements NotificationManager {
       );
       final statusName =
           metadata.localizedName ?? lastActivity.statusDescription;
+      final statusDescription = statusName == lastActivity.statusDescription
+          ? null
+          : lastActivity.statusDescription;
       if (statusName == null) {
         continue;
       }
@@ -262,7 +266,10 @@ class NotificationManagerImpl implements NotificationManager {
           ),
           title: title,
           subtitle: subtitle,
-          body: '${metadata.emoji} $statusName',
+          body: [
+            '${metadata.emoji} $statusName',
+            if (statusDescription != null) '<i>$statusDescription</i>',
+          ],
           action: NotificationAction.openParcelDetails(
             trackNumber: trackInfo.trackNumber,
           ),
@@ -312,7 +319,7 @@ class NotificationManagerImpl implements NotificationManager {
           groupKey: groupKey,
           ticker: ticker,
           styleInformation: BigTextStyleInformation(
-            e.body,
+            e.body.first,
             summaryText: e.subtitle,
           ),
         );
@@ -328,7 +335,7 @@ class NotificationManagerImpl implements NotificationManager {
         return _notifyPlugin.show(
           e.id,
           e.title,
-          e.body,
+          e.body.first,
           details,
           payload: actionJson == null ? null : jsonEncode(actionJson),
         );
@@ -348,7 +355,7 @@ class NotificationManagerImpl implements NotificationManager {
               .map(
                 (e) => locale.parcelsTrackingNotifyInboxStyleLine(
                   e.title,
-                  e.body,
+                  e.body.first,
                 ),
               )
               .toList(),
@@ -383,8 +390,9 @@ class NotificationManagerImpl implements NotificationManager {
           id: hash2(groupKey, trackInfo.hashCode),
           title: title,
           subtitle: subtitle,
-          body:
-              '${TrackingErrorMetadata.defaultIcon} ${locale.parcelsListHardErrorOccurred}',
+          body: [
+            '${TrackingErrorMetadata.defaultIcon} ${locale.parcelsListHardErrorOccurred}',
+          ],
           action: NotificationAction.openParcelDetails(
             trackNumber: trackInfo.trackNumber,
           ),
@@ -524,7 +532,7 @@ class _NotificationData {
   final int id;
   final String title;
   final String? subtitle;
-  final String body;
+  final List<String> body;
   final NotificationAction? action;
 
   _NotificationData({
