@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=LibreTrack
+Comment=Private, cross-platform package tracking app
+Exec=libretrack
+Icon=${SNAP}/meta/gui/libretrack.png
+Terminal=false
+Type=Application
+Categories=Network;

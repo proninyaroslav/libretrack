@@ -1,0 +1,54 @@
+name: libretrack
+base: core18
+version: git
+summary: Private, cross-platform package tracking app.
+description: |
+  Track postal items directly on your device using accounts of postal services. The app respects your privacy and freedom: you don't use third-party online services.
+
+  📋 Features
+  * Free and Open Source software (FOSS)
+  * Support for various platforms and devices
+  * Support accounts of different carriers
+  * Detailed information about the postal items, carriers, tracking history
+  * Local push notifications
+  * Automatic tracking in the background, and also manual refreshing
+  * Ability to add a list of track numbers
+  * Filter and sort numbers by activity date, package status, carrier, etc
+  * Barcode and QR code scanner for tracking numbers
+  * Barcode generator
+  * Archiving tracking numbers
+  * Material Design 2.0
+  * Night theme
+  * Responsive UI for different devices form factors
+
+grade: devel # must be 'stable' to release into candidate/stable channels
+confinement: devmode # use 'strict' once you have the right plugs and slots
+
+parts:
+  libretrack:
+    plugin: dump
+    source: ./build/linux/x64/release/bundle/
+    build-packages:
+     - libsecret-1-dev
+     - libjsoncpp-dev
+     - libappindicator3-dev
+    stage-packages:
+     - libsecret-1-dev
+     - libjsoncpp-dev
+     - libappindicator3-dev
+
+slots:
+  dbus-svc:
+    interface: dbus
+    bus: session
+    name: org.proninyaroslav.libretrack
+
+apps:
+  libretrack:
+    extensions: [flutter-stable]
+    command: libretrack
+    plugs:
+      - network
+      - home
+    slots:
+      - dbus-svc
