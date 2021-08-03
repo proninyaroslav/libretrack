@@ -18,30 +18,35 @@
  * along with LibreTrack.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "my_application.h"
+#ifndef PATH_PROVIDER_H_
+#define PATH_PROVIDER_H_
 
-#include <glib/gi18n.h>
-#include <locale>
+#include <glib.h>
 
-#include "path_provider.h"
+namespace PathProvider {
+/*
+ * Returns the absolute path to the locale dir or
+ * nullptr if an error occurs.
+ *
+ * The data is owned by the caller of the function.
+ */
+gchar *get_app_dir(GError **err);
 
-void init_locale()
-{
-    GError *err = nullptr;
-    g_autofree gchar *locale_path = PathProvider::get_locale_dir(&err);
-    if (err != nullptr) {
-        g_error("Unable to get locale dir path: %s", err->message);
-        g_error_free(err);
-    }
-    setlocale(LC_ALL, "");
-    bindtextdomain(GETTEXT_PACKAGE, locale_path);
-    textdomain(GETTEXT_PACKAGE);
+/*
+ * Returns the absolute path to the locale dir or
+ * GETTEXT_LOCALE_DIR if an error occurs.
+ *
+ * The data is owned by the caller of the function.
+ */
+gchar *get_locale_dir(GError **err);
+
+/*
+ * Returns the absolute path to the locale dir or
+ * ICONS_DIR if an error occurs.
+ *
+ * The data is owned by the caller of the function.
+ */
+gchar *get_icons_dir(GError **err);
 }
 
-int main(int argc, char **argv)
-{
-    init_locale();
-
-    g_autoptr(MyApplication) app = my_application_new();
-    return g_application_run(G_APPLICATION(app), argc, argv);
-}
+#endif // PATH_PROVIDER_H_

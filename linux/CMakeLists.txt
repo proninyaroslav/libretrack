@@ -50,6 +50,7 @@ add_definitions(-DAPPLICATION_ID="${APPLICATION_ID}")
 add_executable(${BINARY_NAME}
   "main.cc"
   "my_application.cc"
+  "path_provider.cc"
   "${FLUTTER_MANAGED_DIR}/generated_plugin_registrant.cc"
 )
 apply_standard_settings(${BINARY_NAME})
@@ -134,3 +135,11 @@ set(LOCALIZE_PROJECT_NAME "LibreTrack")
 set(LOCALIZE_MSGID_BUGS_ADDRESS "https://github.com/proninyaroslav/libretrack/issues")
 
 add_subdirectory(po)
+
+# Icons.
+set(ICONS_INSTALL_DIR "icons")
+set(ICONS_DIR "${INSTALL_BUNDLE_DATA_DIR}/${ICONS_INSTALL_DIR}")
+set_property (TARGET ${BINARY_NAME}
+    APPEND PROPERTY COMPILE_DEFINITIONS ICONS_DIR="data/${ICONS_INSTALL_DIR}")
+
+add_subdirectory(icons)

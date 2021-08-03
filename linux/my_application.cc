@@ -30,6 +30,7 @@
 #include <string_view>
 
 #include "flutter/generated_plugin_registrant.h"
+#include "path_provider.h"
 
 struct _MyApplication {
     GtkApplication parent_instance;
@@ -59,7 +60,7 @@ static void quit(GtkMenuItem *item, gpointer application)
     g_application_quit(G_APPLICATION(application));
 }
 
-static void build_app_indicator(GApplication *application)
+static void build_app_indicator(GApplication *application, gchar *app_icon_path)
 {
     AppIndicator *indicator;
     GtkWidget *indicator_menu;
@@ -68,7 +69,7 @@ static void build_app_indicator(GApplication *application)
 
     indicator = app_indicator_new(
         "libretrack",
-        "libretrack",
+        app_icon_path,
         APP_INDICATOR_CATEGORY_APPLICATION_STATUS);
     app_indicator_set_status(indicator, APP_INDICATOR_STATUS_ACTIVE);
 
@@ -134,7 +135,25 @@ static void my_application_activate(GApplication *application)
         "delete-event",
         G_CALLBACK(show_hide_window),
         nullptr);
-    gtk_window_set_icon_name(window, "libretrack");
+
+    GError *err = nullptr;
+    g_autofree gchar *icons_path = PathProvider::get_icons_dir(&err);
+    if (err != nullptr) {
+        g_error("Unable to get icons dir path: %s", err->message);
+        g_error_free(err);
+    }
+    g_autofree gchar *app_icon_path = g_build_filename(
+        icons_path,
+        "app-icon.svg",
+        nullptr);
+
+    err = nullptr;
+    gtk_window_set_icon_from_file(window, app_icon_path, &err);
+    if (err != nullptr) {
+        g_error("Unable to set window icon: %s", err->message);
+        g_error_free(err);
+    }
+
     gtk_window_set_default_size(window, WINDOW_WINDTH, WINDOW_HEIGHT);
     gtk_widget_show(GTK_WIDGET(window));
 
@@ -155,7 +174,7 @@ static void my_application_activate(GApplication *application)
 
     gtk_widget_grab_focus(GTK_WIDGET(view));
 
-    build_app_indicator(application);
+    build_app_indicator(application, app_icon_path);
 }
 
 // Implements GApplication::local_command_line.

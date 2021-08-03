@@ -56,8 +56,3 @@ parts:
       - libjsoncpp-dev
       - libappindicator3-dev
       - libsqlite3-dev
-  app-icons:
-    plugin: dump
-    source: linux/icons
-    organize:
-      'app-icon.svg': usr/share/icons/hicolor/scalable/apps/libretrack.svg
