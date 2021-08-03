@@ -247,9 +247,7 @@ class NotificationManagerImpl implements NotificationManager {
       );
       final statusName =
           metadata.localizedName ?? lastActivity.statusDescription;
-      final statusDescription = statusName == lastActivity.statusDescription
-          ? null
-          : lastActivity.statusDescription;
+      final location = lastActivity.activityLocation?.notifyFormat();
       if (statusName == null) {
         continue;
       }
@@ -268,7 +266,7 @@ class NotificationManagerImpl implements NotificationManager {
           subtitle: subtitle,
           body: [
             '${metadata.emoji} $statusName',
-            if (statusDescription != null) '<i>$statusDescription</i>',
+            if (location != null) location,
           ],
           action: NotificationAction.openParcelDetails(
             trackNumber: trackInfo.trackNumber,
@@ -549,5 +547,16 @@ class _NotificationData {
   @override
   bool operator ==(Object other) {
     return other is _NotificationData && id == other.id;
+  }
+}
+
+extension AddressExtension on Address {
+  String notifyFormat() {
+    final locationStr = [
+      if (postalCode != null) postalCode,
+      if (location != null) location,
+      if (countryCode != null) countryCode,
+    ];
+    return '🌍 ${locationStr.join(', ')}';
   }
 }
