@@ -172,7 +172,6 @@ class NotificationManagerImpl implements NotificationManager {
           styleInformation: InboxStyleInformation(
             e.body,
             summaryText: e.subtitle,
-            htmlFormatLines: true,
           ),
         );
         final iosDetails = IOSNotificationDetails(
