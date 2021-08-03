@@ -23,11 +23,30 @@
 #include <glib/gi18n.h>
 #include <locale>
 
-int main(int argc, char **argv)
+void setup_locale()
 {
     setlocale(LC_ALL, "");
-    bindtextdomain(GETTEXT_PACKAGE, GETTEXT_LOCALE_DIR);
+    GError *err = nullptr;
+    g_autofree gchar *exec_path = g_file_read_link("/proc/self/exe", &err);
+    if (err == nullptr) {
+        g_autofree gchar *dir_path = g_path_get_dirname(exec_path);
+        g_autofree gchar *locale_path = g_build_filename(
+            dir_path,
+            GETTEXT_LOCALE_DIR,
+            nullptr);
+        bindtextdomain(GETTEXT_PACKAGE, locale_path);
+    } else {
+        g_error("Unable to get app dir path: %s", err->message);
+        g_error_free(err);
+        bindtextdomain(GETTEXT_PACKAGE, GETTEXT_LOCALE_DIR);
+    }
+
     textdomain(GETTEXT_PACKAGE);
+}
+
+int main(int argc, char **argv)
+{
+    setup_locale();
 
     g_autoptr(MyApplication) app = my_application_new();
     return g_application_run(G_APPLICATION(app), argc, argv);
