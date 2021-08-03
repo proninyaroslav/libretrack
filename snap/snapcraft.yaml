@@ -1,6 +1,7 @@
 name: libretrack
 base: core18
-version: git
+version: 1.1.0
+license: GPL-3.0-or-later
 summary: Private, cross-platform package tracking app.
 description: |
   Track postal items directly on your device using accounts of postal services. The app respects your privacy and freedom: you don't use third-party online services.
@@ -21,24 +22,11 @@ description: |
   * Night theme
   * Responsive UI for different devices form factors
 
-grade: devel # must be 'stable' to release into candidate/stable channels
-confinement: devmode # use 'strict' once you have the right plugs and slots
-
-parts:
-  libretrack:
-    plugin: dump
-    source: ./build/linux/x64/release/bundle/
-    build-packages:
-     - libsecret-1-dev
-     - libjsoncpp-dev
-     - libappindicator3-dev
-    stage-packages:
-     - libsecret-1-dev
-     - libjsoncpp-dev
-     - libappindicator3-dev
+grade: stable
+confinement: strict
 
 slots:
-  dbus-svc:
+  dbus-libretrack:
     interface: dbus
     bus: session
     name: org.proninyaroslav.libretrack
@@ -51,4 +39,20 @@ apps:
       - network
       - home
     slots:
-      - dbus-svc
+      - dbus-libretrack
+
+parts:
+  libretrack:
+    plugin: flutter
+    source: https://github.com/proninyaroslav/libretrack.git
+    flutter-target: lib/main.dart
+    build-packages:
+     - libsecret-1-dev
+     - libjsoncpp-dev
+     - libappindicator3-dev
+     - gettext
+    stage-packages:
+     - libsecret-1-dev
+     - libjsoncpp-dev
+     - libappindicator3-dev
+     - libsqlite3-dev

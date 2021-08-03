@@ -8,6 +8,7 @@
 .buildlog/
 .history
 .svn/
+*.snap
 
 # IntelliJ related
 *.iml
