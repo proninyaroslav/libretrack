@@ -47,12 +47,17 @@ parts:
     source: https://github.com/proninyaroslav/libretrack.git
     flutter-target: lib/main.dart
     build-packages:
-     - libsecret-1-dev
-     - libjsoncpp-dev
-     - libappindicator3-dev
-     - gettext
+      - libsecret-1-dev
+      - libjsoncpp-dev
+      - libappindicator3-dev
+      - gettext
     stage-packages:
-     - libsecret-1-dev
-     - libjsoncpp-dev
-     - libappindicator3-dev
-     - libsqlite3-dev
+      - libsecret-1-dev
+      - libjsoncpp-dev
+      - libappindicator3-dev
+      - libsqlite3-dev
+  app-icons:
+    plugin: dump
+    source: linux/icons
+    organize:
+      'app-icon.svg': usr/share/icons/hicolor/scalable/apps/libretrack.svg
