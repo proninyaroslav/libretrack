@@ -382,9 +382,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "statusInStorage": MessageLookupByLibrary.simpleMessage("В хранении"),
         "statusInTransit": MessageLookupByLibrary.simpleMessage("В пути"),
         "statusInTransitArrivedWaypoint": MessageLookupByLibrary.simpleMessage(
-            "Прибыл в промежуточный пункт"),
-        "statusInTransitDepartedWaypoint":
-            MessageLookupByLibrary.simpleMessage("Покинул промежуточный пункт"),
+            "Прибыло в промежуточный пункт"),
+        "statusInTransitDepartedWaypoint": MessageLookupByLibrary.simpleMessage(
+            "Покинуло промежуточный пункт"),
         "statusInfoReceived":
             MessageLookupByLibrary.simpleMessage("Информация получена"),
         "statusNotAvailable": MessageLookupByLibrary.simpleMessage(
