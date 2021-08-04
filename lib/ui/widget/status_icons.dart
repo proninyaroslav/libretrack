@@ -84,7 +84,7 @@ class StatusIconsData {
   );
 
   static RRectIconData inStorage = RRectIconData(
-    iconData: Icons.inbox_outlined,
+    iconData: Icons.inbox,
     iconColor: Colors.white,
     backgroundColor: Colors.yellow.shade600,
   );
