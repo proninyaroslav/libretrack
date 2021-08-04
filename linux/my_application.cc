@@ -97,12 +97,19 @@ static void build_app_indicator(GApplication *application, gchar *app_icon_path)
     gtk_widget_show_all(indicator_menu);
 }
 
+static void show_window()
+{
+    if (!gtk_widget_is_visible(GTK_WIDGET(window))) {
+        gtk_window_deiconify(window);
+        gtk_widget_show(GTK_WIDGET(window));
+    }
+}
+
 // Implements GApplication::activate.
 static void my_application_activate(GApplication *application)
 {
     if (window) {
-        gtk_window_deiconify(window);
-        gtk_widget_show(GTK_WIDGET(window));
+        show_window();
         return;
     }
     MyApplication *self = MY_APPLICATION(application);
