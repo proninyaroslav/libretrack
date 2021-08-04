@@ -100,6 +100,11 @@ static void build_app_indicator(GApplication *application, gchar *app_icon_path)
 // Implements GApplication::activate.
 static void my_application_activate(GApplication *application)
 {
+    if (window) {
+        gtk_window_deiconify(window);
+        gtk_widget_show(GTK_WIDGET(window));
+        return;
+    }
     MyApplication *self = MY_APPLICATION(application);
     window = GTK_WINDOW(gtk_application_window_new(GTK_APPLICATION(application)));
 
