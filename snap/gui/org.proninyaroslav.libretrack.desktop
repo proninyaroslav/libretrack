@@ -10,3 +10,4 @@ Categories=Network;
 StartupWMClass=LibreTrack
 X-GNOME-UsesNotifications=true
 DBusActivatable=true
+StartupNotify=false
