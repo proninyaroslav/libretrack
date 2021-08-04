@@ -24,8 +24,8 @@
 #ifdef GDK_WINDOWING_X11
 #include <gdk/gdkx.h>
 #endif
-#include <libappindicator/app-indicator.h>
 #include <glib/gi18n.h>
+#include <libappindicator/app-indicator.h>
 
 #include <string_view>
 
@@ -178,7 +178,10 @@ static void my_application_activate(GApplication *application)
 }
 
 // Implements GApplication::local_command_line.
-static gboolean my_application_local_command_line(GApplication *application, gchar ***arguments, int *exit_status)
+static gboolean my_application_local_command_line(
+    GApplication *application,
+    gchar ***arguments,
+    int *exit_status)
 {
     MyApplication *self = MY_APPLICATION(application);
     // Strip out the first argument as it is the binary name.
@@ -188,13 +191,13 @@ static gboolean my_application_local_command_line(GApplication *application, gch
     if (!g_application_register(application, nullptr, &error)) {
         g_warning("Failed to register: %s", error->message);
         *exit_status = 1;
-        return TRUE;
+        return true;
     }
 
     g_application_activate(application);
     *exit_status = 0;
 
-    return TRUE;
+    return true;
 }
 
 // Implements GObject::dispose.
@@ -212,7 +215,7 @@ static void my_application_class_init(MyApplicationClass *klass)
     G_OBJECT_CLASS(klass)->dispose = my_application_dispose;
 }
 
-static void my_application_init(MyApplication *self) {}
+static void my_application_init(MyApplication *self) { }
 
 MyApplication *my_application_new()
 {
