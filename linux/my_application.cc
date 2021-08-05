@@ -72,6 +72,10 @@ static void build_app_indicator(GApplication *application, gchar *app_icon_path)
         app_icon_path,
         APP_INDICATOR_CATEGORY_APPLICATION_STATUS);
     app_indicator_set_status(indicator, APP_INDICATOR_STATUS_ACTIVE);
+    // Set fallback icon
+    app_indicator_set_icon(
+        indicator,
+        APPLICATION_ID);
 
     indicator_menu = gtk_menu_new();
 
@@ -162,6 +166,8 @@ static void my_application_activate(GApplication *application)
     err = nullptr;
     gtk_window_set_icon_from_file(window, app_icon_path, &err);
     if (err != nullptr) {
+        // Set fallback icon
+        gtk_window_set_icon_name(window, APPLICATION_ID);
         g_error("Unable to set window icon: %s", err->message);
         g_error_free(err);
     }
