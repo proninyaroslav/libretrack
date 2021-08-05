@@ -29,7 +29,7 @@ slots:
   dbus-libretrack:
     interface: dbus
     bus: session
-    name: org.proninyaroslav.libretrack
+    name: ru.proninyaroslav.libretrack
 
 apps:
   libretrack:
