@@ -62,10 +62,13 @@ class _CrashReportDialogState extends State<CrashReportDialog> {
     return AlertDialog(
       title: Text(S.of(context).error),
       scrollable: true,
-      content: _Body(
-        controller: _controller,
-        error: widget.error,
-        stackTrace: widget.stackTrace,
+      content: ConstrainedBox(
+        constraints: const BoxConstraints.tightFor(width: 300),
+        child: _Body(
+          controller: _controller,
+          error: widget.error,
+          stackTrace: widget.stackTrace,
+        ),
       ),
       actions: [
         TextButton(

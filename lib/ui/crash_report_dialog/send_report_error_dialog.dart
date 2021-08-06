@@ -30,13 +30,16 @@ class SendReportErrorDialog extends StatelessWidget {
     return AlertDialog(
       title: Text(S.of(context).error),
       scrollable: true,
-      content: LinkText(
-        text: S.of(context).crashDialogNoEmailApp(
-              CrashReportManager.reportEmail,
-              S.of(context).projectIssuesPage,
-            ),
-        selectable: true,
-        style: Theme.of(context).textTheme.subtitle1,
+      content: ConstrainedBox(
+        constraints: const BoxConstraints.tightFor(width: 300),
+        child: LinkText(
+          text: S.of(context).crashDialogNoEmailApp(
+                CrashReportManager.reportEmail,
+                S.of(context).projectIssuesPage,
+              ),
+          selectable: true,
+          style: Theme.of(context).textTheme.subtitle1,
+        ),
       ),
       actions: [
         TextButton(
