@@ -68,7 +68,7 @@ static void build_app_indicator(GApplication *application, gchar *app_icon)
     GtkWidget *quit_button;
 
     indicator = app_indicator_new(
-        "libretrack",
+        APPLICATION_ID,
         app_icon,
         APP_INDICATOR_CATEGORY_APPLICATION_STATUS);
     app_indicator_set_status(indicator, APP_INDICATOR_STATUS_ACTIVE);
