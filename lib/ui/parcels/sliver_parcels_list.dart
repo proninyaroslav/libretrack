@@ -193,6 +193,7 @@ class _ParcelListItem extends StatelessWidget {
           child: InkWell(
             onTap: onTap,
             onLongPress: onLongPress,
+            onDoubleTap: onLongPress,
             customBorder: Theme.of(context).cardTheme.shape,
             child: Container(
               alignment: Alignment.center,
