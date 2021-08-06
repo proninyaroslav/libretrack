@@ -75,7 +75,11 @@ class _SearchBarState extends State<SearchBar> {
         child: TextField(
           controller: widget.controller,
           decoration: InputDecoration(
-            border: InputBorder.none,
+            border: const OutlineInputBorder(
+              borderSide: BorderSide.none,
+              gapPadding: 0.0,
+            ),
+            contentPadding: EdgeInsets.zero,
             isDense: true,
             hintText: MaterialLocalizations.of(context).searchFieldLabel,
             prefixIcon: const Icon(Icons.search),
