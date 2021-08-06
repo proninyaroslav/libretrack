@@ -275,6 +275,8 @@ class _FormState extends State<_Form> {
             context,
             trackingNumbers?.error,
           ),
+          enableSuggestions: false,
+          autocorrect: false,
           onChanged: (value) {
             context.read<AddParcelsCubit>().trackingNumbersChanged(value);
           },
@@ -298,6 +300,7 @@ class _FormState extends State<_Form> {
         _MultilineFormField(
           labelText: S.of(context).parcelNames,
           hintText: S.of(context).parcelNamesFieldHint,
+          textCapitalization: TextCapitalization.sentences,
           onChanged: (value) {
             context.read<AddParcelsCubit>().parcelNamesChanged(value);
           },
@@ -324,6 +327,9 @@ class _MultilineFormField extends StatelessWidget {
   final String? errorText;
   final ValueChanged<String>? onChanged;
   final TextEditingController? controller;
+  final TextCapitalization textCapitalization;
+  final bool enableSuggestions;
+  final bool autocorrect;
 
   const _MultilineFormField({
     Key? key,
@@ -332,6 +338,9 @@ class _MultilineFormField extends StatelessWidget {
     this.errorText,
     this.onChanged,
     this.controller,
+    this.textCapitalization = TextCapitalization.none,
+    this.enableSuggestions = true,
+    this.autocorrect = true,
   }) : super(key: key);
 
   @override
@@ -346,6 +355,9 @@ class _MultilineFormField extends StatelessWidget {
       ),
       style: style.copyWith(height: _MultilineFormField._lineHeight),
       onChanged: onChanged,
+      textCapitalization: textCapitalization,
+      enableSuggestions: enableSuggestions,
+      autocorrect: autocorrect,
     );
   }
 }

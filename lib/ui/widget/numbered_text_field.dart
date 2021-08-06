@@ -25,6 +25,9 @@ class NumberedTextField extends StatefulWidget {
   final InputDecoration decoration;
   final TextStyle? style;
   final ValueChanged<String>? onChanged;
+  final TextCapitalization textCapitalization;
+  final bool enableSuggestions;
+  final bool autocorrect;
 
   const NumberedTextField({
     Key? key,
@@ -33,6 +36,9 @@ class NumberedTextField extends StatefulWidget {
     this.decoration = const InputDecoration(),
     this.style,
     this.onChanged,
+    this.textCapitalization = TextCapitalization.none,
+    this.enableSuggestions = true,
+    this.autocorrect = true,
   }) : super(key: key);
 
   @override
@@ -94,6 +100,10 @@ class _NumberedTextFieldState extends State<NumberedTextField> {
         prefixIconConstraints: const BoxConstraints(),
         prefixIcon: _buildLineNumbers(context, style),
       ),
+      keyboardType: TextInputType.multiline,
+      textCapitalization: widget.textCapitalization,
+      enableSuggestions: widget.enableSuggestions,
+      autocorrect: widget.autocorrect,
     );
   }
 
