@@ -309,7 +309,7 @@ class _ServicesList extends StatelessWidget {
       final metadataList = _buildMetadata(context, nonExistenServices);
 
       return Scrollbar(
-        child: ListView.separated(
+        child: ListView.builder(
           shrinkWrap: true,
           physics: const ClampingScrollPhysics(),
           itemCount: nonExistenServices.length,
@@ -321,7 +321,6 @@ class _ServicesList extends StatelessWidget {
               onTap: () => onTap?.call(metadata.type),
             );
           },
-          separatorBuilder: (context, position) => const Divider(height: 1),
         ),
       );
     }
@@ -355,7 +354,7 @@ class _ServicesListItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      contentPadding: const EdgeInsets.symmetric(horizontal: 4.0),
+      contentPadding: const EdgeInsets.all(4.0),
       leading: RRectIcon(
         iconData: iconData,
         size: 40.0,
