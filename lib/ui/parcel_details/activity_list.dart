@@ -28,7 +28,7 @@ import 'package:material_design_icons_flutter/material_design_icons_flutter.dart
 import '../../locale.dart';
 import 'section_header.dart';
 
-class ActivityList extends StatelessWidget {
+class ActivityList extends StatefulWidget {
   final List<ShipmentActivityInfo> activities;
 
   const ActivityList({
@@ -37,8 +37,19 @@ class ActivityList extends StatelessWidget {
   }) : super(key: key);
 
   @override
+  _ActivityListState createState() => _ActivityListState();
+}
+
+class _ActivityListState extends State<ActivityList>
+    with AutomaticKeepAliveClientMixin {
+  @override
+  bool get wantKeepAlive => true;
+
+  @override
   Widget build(BuildContext context) {
-    if (activities.isEmpty) {
+    super.build(context);
+
+    if (widget.activities.isEmpty) {
       return const SizedBox.shrink();
     } else {
       return Card(
@@ -53,7 +64,7 @@ class ActivityList extends StatelessWidget {
                 title: S.of(context).activityHistory,
               ),
             ),
-            ..._buildItems(activities),
+            ..._buildItems(widget.activities),
           ],
         ),
       );
