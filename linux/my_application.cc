@@ -172,14 +172,23 @@ static void my_application_activate(GApplication *application)
         g_error_free(err);
     }
 
-    gtk_window_set_default_size(window, WINDOW_WINDTH, WINDOW_HEIGHT);
-    gtk_widget_show(GTK_WIDGET(window));
+    GdkRectangle workarea = { 0 };
+    auto display = gdk_display_get_default();
+    if (display) {
+        auto monitor = gdk_display_get_primary_monitor(display);
+        if (monitor) {
+            gdk_monitor_get_workarea(monitor, &workarea);
+        }
+    }
+    if (workarea.width == 0 && workarea.height == 0) {
+        gtk_window_set_default_size(window, WINDOW_WINDTH, WINDOW_HEIGHT);
+    } else {
+        gtk_window_set_default_size(window,
+            WINDOW_WINDTH > workarea.width ? workarea.width : WINDOW_WINDTH,
+            WINDOW_HEIGHT > workarea.height ? workarea.height : WINDOW_HEIGHT);
+    }
 
-    GdkWindow *gdk_window = gtk_widget_get_window(GTK_WIDGET(window));
-    gint scale_factor = gdk_window_get_scale_factor(gdk_window);
-    gtk_widget_set_size_request(GTK_WIDGET(window),
-        WINDOW_WINDTH / scale_factor,
-        WINDOW_HEIGHT / scale_factor);
+    gtk_widget_show(GTK_WIDGET(window));
 
     g_autoptr(FlDartProject) project = fl_dart_project_new();
     fl_dart_project_set_dart_entrypoint_arguments(project, self->dart_entrypoint_arguments);
