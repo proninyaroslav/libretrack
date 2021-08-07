@@ -19,8 +19,11 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:libretrack/core/platform_info.dart';
 import 'package:libretrack/locale.dart';
 import 'package:libretrack/ui/widget/widget.dart';
+
+import '../../injector.dart';
 
 typedef OnReportCallback = FutureOr<bool> Function(String? message);
 
@@ -115,6 +118,7 @@ class _Body extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final isLinux = !getIt<PlatformInfo>().isLinux;
     return Column(
       mainAxisSize: MainAxisSize.min,
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -138,7 +142,8 @@ class _Body extends StatelessWidget {
               style: Theme.of(context)
                   .textTheme
                   .bodyText2!
-                  .copyWith(fontFamily: 'Monospace'),
+                  // TODO: temp fix: https://github.com/flutter/flutter/issues/87850
+                  .copyWith(fontFamily: isLinux ? null : 'Monospace'),
             ),
           ],
         ),
