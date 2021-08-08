@@ -180,12 +180,14 @@ class NotificationManagerImpl implements NotificationManager {
             e.body,
             summaryText: e.subtitle,
           ),
+          playSound: true,
         );
         final iosDetails = IOSNotificationDetails(
           subtitle: e.subtitle,
           badgeNumber: contentList.length,
           presentBadge: true,
           threadIdentifier: groupKey,
+          presentSound: true,
         );
         final linuxDetails = LinuxNotificationDetails(
           defaultActionName: locale.openDetails,
@@ -228,6 +230,7 @@ class NotificationManagerImpl implements NotificationManager {
               )
               .toList(),
         ),
+        playSound: true,
       );
       final detailsInbox = NotificationDetails(
         android: androidInboxDetails,
@@ -330,10 +333,12 @@ class NotificationManagerImpl implements NotificationManager {
             e.body.first,
             summaryText: e.subtitle,
           ),
+          playSound: true,
         );
         final iosDetails = IOSNotificationDetails(
           subtitle: e.subtitle,
           threadIdentifier: groupKey,
+          presentSound: true,
         );
         final linuxDetails = LinuxNotificationDetails(
           defaultActionName: locale.openDetails,
@@ -372,6 +377,7 @@ class NotificationManagerImpl implements NotificationManager {
               )
               .toList(),
         ),
+        playSound: true,
       );
       final detailsInbox = NotificationDetails(
         android: androidInboxDetails,
@@ -447,6 +453,7 @@ class NotificationManagerImpl implements NotificationManager {
     );
     final linuxDetails = LinuxNotificationDetails(
       defaultActionName: locale.openDetails,
+      suppressSound: true,
     );
     final details = NotificationDetails(
       android: androidDetails,
