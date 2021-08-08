@@ -113,6 +113,7 @@ class NotificationManagerImpl implements NotificationManager {
     final initSettingsLinux = LinuxInitializationSettings(
       defaultActionName: 'LibreTrack',
       defaultIcon: AssetsLinuxIcon('assets/notify_icon.png'),
+      defaultSound: ThemeLinuxSound('message'),
     );
 
     final initSettings = InitializationSettings(
