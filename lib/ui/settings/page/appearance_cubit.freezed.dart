@@ -47,6 +47,12 @@ class _$AppearanceStateTearOff {
       info,
     );
   }
+
+  AppearanceStateTrayIconChanged trayIconChanged(AppearanceInfo info) {
+    return AppearanceStateTrayIconChanged(
+      info,
+    );
+  }
 }
 
 /// @nodoc
@@ -63,6 +69,7 @@ mixin _$AppearanceState {
     required TResult Function(AppearanceInfo info) trackingNotifyChanged,
     required TResult Function(AppearanceInfo info) localeChanged,
     required TResult Function(AppearanceInfo info) trackingErrorNotifyChanged,
+    required TResult Function(AppearanceInfo info) trayIconChanged,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -72,6 +79,7 @@ mixin _$AppearanceState {
     TResult Function(AppearanceInfo info)? trackingNotifyChanged,
     TResult Function(AppearanceInfo info)? localeChanged,
     TResult Function(AppearanceInfo info)? trackingErrorNotifyChanged,
+    TResult Function(AppearanceInfo info)? trayIconChanged,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -84,6 +92,8 @@ mixin _$AppearanceState {
     required TResult Function(AppearanceStateLocaleChanged value) localeChanged,
     required TResult Function(AppearanceStateTrackingErrorNotifyChanged value)
         trackingErrorNotifyChanged,
+    required TResult Function(AppearanceStateTrayIconChanged value)
+        trayIconChanged,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -95,6 +105,7 @@ mixin _$AppearanceState {
     TResult Function(AppearanceStateLocaleChanged value)? localeChanged,
     TResult Function(AppearanceStateTrackingErrorNotifyChanged value)?
         trackingErrorNotifyChanged,
+    TResult Function(AppearanceStateTrayIconChanged value)? trayIconChanged,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -219,6 +230,7 @@ class _$AppearanceStateInitial implements AppearanceStateInitial {
     required TResult Function(AppearanceInfo info) trackingNotifyChanged,
     required TResult Function(AppearanceInfo info) localeChanged,
     required TResult Function(AppearanceInfo info) trackingErrorNotifyChanged,
+    required TResult Function(AppearanceInfo info) trayIconChanged,
   }) {
     return initial(info);
   }
@@ -231,6 +243,7 @@ class _$AppearanceStateInitial implements AppearanceStateInitial {
     TResult Function(AppearanceInfo info)? trackingNotifyChanged,
     TResult Function(AppearanceInfo info)? localeChanged,
     TResult Function(AppearanceInfo info)? trackingErrorNotifyChanged,
+    TResult Function(AppearanceInfo info)? trayIconChanged,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -249,6 +262,8 @@ class _$AppearanceStateInitial implements AppearanceStateInitial {
     required TResult Function(AppearanceStateLocaleChanged value) localeChanged,
     required TResult Function(AppearanceStateTrackingErrorNotifyChanged value)
         trackingErrorNotifyChanged,
+    required TResult Function(AppearanceStateTrayIconChanged value)
+        trayIconChanged,
   }) {
     return initial(this);
   }
@@ -263,6 +278,7 @@ class _$AppearanceStateInitial implements AppearanceStateInitial {
     TResult Function(AppearanceStateLocaleChanged value)? localeChanged,
     TResult Function(AppearanceStateTrackingErrorNotifyChanged value)?
         trackingErrorNotifyChanged,
+    TResult Function(AppearanceStateTrayIconChanged value)? trayIconChanged,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -362,6 +378,7 @@ class _$AppearanceStateThemeChanged implements AppearanceStateThemeChanged {
     required TResult Function(AppearanceInfo info) trackingNotifyChanged,
     required TResult Function(AppearanceInfo info) localeChanged,
     required TResult Function(AppearanceInfo info) trackingErrorNotifyChanged,
+    required TResult Function(AppearanceInfo info) trayIconChanged,
   }) {
     return themeChanged(info);
   }
@@ -374,6 +391,7 @@ class _$AppearanceStateThemeChanged implements AppearanceStateThemeChanged {
     TResult Function(AppearanceInfo info)? trackingNotifyChanged,
     TResult Function(AppearanceInfo info)? localeChanged,
     TResult Function(AppearanceInfo info)? trackingErrorNotifyChanged,
+    TResult Function(AppearanceInfo info)? trayIconChanged,
     required TResult orElse(),
   }) {
     if (themeChanged != null) {
@@ -392,6 +410,8 @@ class _$AppearanceStateThemeChanged implements AppearanceStateThemeChanged {
     required TResult Function(AppearanceStateLocaleChanged value) localeChanged,
     required TResult Function(AppearanceStateTrackingErrorNotifyChanged value)
         trackingErrorNotifyChanged,
+    required TResult Function(AppearanceStateTrayIconChanged value)
+        trayIconChanged,
   }) {
     return themeChanged(this);
   }
@@ -406,6 +426,7 @@ class _$AppearanceStateThemeChanged implements AppearanceStateThemeChanged {
     TResult Function(AppearanceStateLocaleChanged value)? localeChanged,
     TResult Function(AppearanceStateTrackingErrorNotifyChanged value)?
         trackingErrorNotifyChanged,
+    TResult Function(AppearanceStateTrayIconChanged value)? trayIconChanged,
     required TResult orElse(),
   }) {
     if (themeChanged != null) {
@@ -508,6 +529,7 @@ class _$AppearanceStateTrackingNotifyChanged
     required TResult Function(AppearanceInfo info) trackingNotifyChanged,
     required TResult Function(AppearanceInfo info) localeChanged,
     required TResult Function(AppearanceInfo info) trackingErrorNotifyChanged,
+    required TResult Function(AppearanceInfo info) trayIconChanged,
   }) {
     return trackingNotifyChanged(info);
   }
@@ -520,6 +542,7 @@ class _$AppearanceStateTrackingNotifyChanged
     TResult Function(AppearanceInfo info)? trackingNotifyChanged,
     TResult Function(AppearanceInfo info)? localeChanged,
     TResult Function(AppearanceInfo info)? trackingErrorNotifyChanged,
+    TResult Function(AppearanceInfo info)? trayIconChanged,
     required TResult orElse(),
   }) {
     if (trackingNotifyChanged != null) {
@@ -538,6 +561,8 @@ class _$AppearanceStateTrackingNotifyChanged
     required TResult Function(AppearanceStateLocaleChanged value) localeChanged,
     required TResult Function(AppearanceStateTrackingErrorNotifyChanged value)
         trackingErrorNotifyChanged,
+    required TResult Function(AppearanceStateTrayIconChanged value)
+        trayIconChanged,
   }) {
     return trackingNotifyChanged(this);
   }
@@ -552,6 +577,7 @@ class _$AppearanceStateTrackingNotifyChanged
     TResult Function(AppearanceStateLocaleChanged value)? localeChanged,
     TResult Function(AppearanceStateTrackingErrorNotifyChanged value)?
         trackingErrorNotifyChanged,
+    TResult Function(AppearanceStateTrayIconChanged value)? trayIconChanged,
     required TResult orElse(),
   }) {
     if (trackingNotifyChanged != null) {
@@ -653,6 +679,7 @@ class _$AppearanceStateLocaleChanged implements AppearanceStateLocaleChanged {
     required TResult Function(AppearanceInfo info) trackingNotifyChanged,
     required TResult Function(AppearanceInfo info) localeChanged,
     required TResult Function(AppearanceInfo info) trackingErrorNotifyChanged,
+    required TResult Function(AppearanceInfo info) trayIconChanged,
   }) {
     return localeChanged(info);
   }
@@ -665,6 +692,7 @@ class _$AppearanceStateLocaleChanged implements AppearanceStateLocaleChanged {
     TResult Function(AppearanceInfo info)? trackingNotifyChanged,
     TResult Function(AppearanceInfo info)? localeChanged,
     TResult Function(AppearanceInfo info)? trackingErrorNotifyChanged,
+    TResult Function(AppearanceInfo info)? trayIconChanged,
     required TResult orElse(),
   }) {
     if (localeChanged != null) {
@@ -683,6 +711,8 @@ class _$AppearanceStateLocaleChanged implements AppearanceStateLocaleChanged {
     required TResult Function(AppearanceStateLocaleChanged value) localeChanged,
     required TResult Function(AppearanceStateTrackingErrorNotifyChanged value)
         trackingErrorNotifyChanged,
+    required TResult Function(AppearanceStateTrayIconChanged value)
+        trayIconChanged,
   }) {
     return localeChanged(this);
   }
@@ -697,6 +727,7 @@ class _$AppearanceStateLocaleChanged implements AppearanceStateLocaleChanged {
     TResult Function(AppearanceStateLocaleChanged value)? localeChanged,
     TResult Function(AppearanceStateTrackingErrorNotifyChanged value)?
         trackingErrorNotifyChanged,
+    TResult Function(AppearanceStateTrayIconChanged value)? trayIconChanged,
     required TResult orElse(),
   }) {
     if (localeChanged != null) {
@@ -800,6 +831,7 @@ class _$AppearanceStateTrackingErrorNotifyChanged
     required TResult Function(AppearanceInfo info) trackingNotifyChanged,
     required TResult Function(AppearanceInfo info) localeChanged,
     required TResult Function(AppearanceInfo info) trackingErrorNotifyChanged,
+    required TResult Function(AppearanceInfo info) trayIconChanged,
   }) {
     return trackingErrorNotifyChanged(info);
   }
@@ -812,6 +844,7 @@ class _$AppearanceStateTrackingErrorNotifyChanged
     TResult Function(AppearanceInfo info)? trackingNotifyChanged,
     TResult Function(AppearanceInfo info)? localeChanged,
     TResult Function(AppearanceInfo info)? trackingErrorNotifyChanged,
+    TResult Function(AppearanceInfo info)? trayIconChanged,
     required TResult orElse(),
   }) {
     if (trackingErrorNotifyChanged != null) {
@@ -830,6 +863,8 @@ class _$AppearanceStateTrackingErrorNotifyChanged
     required TResult Function(AppearanceStateLocaleChanged value) localeChanged,
     required TResult Function(AppearanceStateTrackingErrorNotifyChanged value)
         trackingErrorNotifyChanged,
+    required TResult Function(AppearanceStateTrayIconChanged value)
+        trayIconChanged,
   }) {
     return trackingErrorNotifyChanged(this);
   }
@@ -844,6 +879,7 @@ class _$AppearanceStateTrackingErrorNotifyChanged
     TResult Function(AppearanceStateLocaleChanged value)? localeChanged,
     TResult Function(AppearanceStateTrackingErrorNotifyChanged value)?
         trackingErrorNotifyChanged,
+    TResult Function(AppearanceStateTrayIconChanged value)? trayIconChanged,
     required TResult orElse(),
   }) {
     if (trackingErrorNotifyChanged != null) {
@@ -868,6 +904,156 @@ abstract class AppearanceStateTrackingErrorNotifyChanged
 }
 
 /// @nodoc
+abstract class $AppearanceStateTrayIconChangedCopyWith<$Res>
+    implements $AppearanceStateCopyWith<$Res> {
+  factory $AppearanceStateTrayIconChangedCopyWith(
+          AppearanceStateTrayIconChanged value,
+          $Res Function(AppearanceStateTrayIconChanged) then) =
+      _$AppearanceStateTrayIconChangedCopyWithImpl<$Res>;
+  @override
+  $Res call({AppearanceInfo info});
+
+  @override
+  $AppearanceInfoCopyWith<$Res> get info;
+}
+
+/// @nodoc
+class _$AppearanceStateTrayIconChangedCopyWithImpl<$Res>
+    extends _$AppearanceStateCopyWithImpl<$Res>
+    implements $AppearanceStateTrayIconChangedCopyWith<$Res> {
+  _$AppearanceStateTrayIconChangedCopyWithImpl(
+      AppearanceStateTrayIconChanged _value,
+      $Res Function(AppearanceStateTrayIconChanged) _then)
+      : super(_value, (v) => _then(v as AppearanceStateTrayIconChanged));
+
+  @override
+  AppearanceStateTrayIconChanged get _value =>
+      super._value as AppearanceStateTrayIconChanged;
+
+  @override
+  $Res call({
+    Object? info = freezed,
+  }) {
+    return _then(AppearanceStateTrayIconChanged(
+      info == freezed
+          ? _value.info
+          : info // ignore: cast_nullable_to_non_nullable
+              as AppearanceInfo,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$AppearanceStateTrayIconChanged
+    implements AppearanceStateTrayIconChanged {
+  const _$AppearanceStateTrayIconChanged(this.info);
+
+  @override
+  final AppearanceInfo info;
+
+  @override
+  String toString() {
+    return 'AppearanceState.trayIconChanged(info: $info)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is AppearanceStateTrayIconChanged &&
+            (identical(other.info, info) ||
+                const DeepCollectionEquality().equals(other.info, info)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(info);
+
+  @JsonKey(ignore: true)
+  @override
+  $AppearanceStateTrayIconChangedCopyWith<AppearanceStateTrayIconChanged>
+      get copyWith => _$AppearanceStateTrayIconChangedCopyWithImpl<
+          AppearanceStateTrayIconChanged>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(AppearanceInfo info) initial,
+    required TResult Function(AppearanceInfo info) themeChanged,
+    required TResult Function(AppearanceInfo info) trackingNotifyChanged,
+    required TResult Function(AppearanceInfo info) localeChanged,
+    required TResult Function(AppearanceInfo info) trackingErrorNotifyChanged,
+    required TResult Function(AppearanceInfo info) trayIconChanged,
+  }) {
+    return trayIconChanged(info);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(AppearanceInfo info)? initial,
+    TResult Function(AppearanceInfo info)? themeChanged,
+    TResult Function(AppearanceInfo info)? trackingNotifyChanged,
+    TResult Function(AppearanceInfo info)? localeChanged,
+    TResult Function(AppearanceInfo info)? trackingErrorNotifyChanged,
+    TResult Function(AppearanceInfo info)? trayIconChanged,
+    required TResult orElse(),
+  }) {
+    if (trayIconChanged != null) {
+      return trayIconChanged(info);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(AppearanceStateInitial value) initial,
+    required TResult Function(AppearanceStateThemeChanged value) themeChanged,
+    required TResult Function(AppearanceStateTrackingNotifyChanged value)
+        trackingNotifyChanged,
+    required TResult Function(AppearanceStateLocaleChanged value) localeChanged,
+    required TResult Function(AppearanceStateTrackingErrorNotifyChanged value)
+        trackingErrorNotifyChanged,
+    required TResult Function(AppearanceStateTrayIconChanged value)
+        trayIconChanged,
+  }) {
+    return trayIconChanged(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(AppearanceStateInitial value)? initial,
+    TResult Function(AppearanceStateThemeChanged value)? themeChanged,
+    TResult Function(AppearanceStateTrackingNotifyChanged value)?
+        trackingNotifyChanged,
+    TResult Function(AppearanceStateLocaleChanged value)? localeChanged,
+    TResult Function(AppearanceStateTrackingErrorNotifyChanged value)?
+        trackingErrorNotifyChanged,
+    TResult Function(AppearanceStateTrayIconChanged value)? trayIconChanged,
+    required TResult orElse(),
+  }) {
+    if (trayIconChanged != null) {
+      return trayIconChanged(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class AppearanceStateTrayIconChanged implements AppearanceState {
+  const factory AppearanceStateTrayIconChanged(AppearanceInfo info) =
+      _$AppearanceStateTrayIconChanged;
+
+  @override
+  AppearanceInfo get info => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(ignore: true)
+  $AppearanceStateTrayIconChangedCopyWith<AppearanceStateTrayIconChanged>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
 class _$AppearanceInfoTearOff {
   const _$AppearanceInfoTearOff();
 
@@ -875,12 +1061,14 @@ class _$AppearanceInfoTearOff {
       {required AppThemeType theme,
       required bool trackingNotify,
       required AppLocaleType locale,
-      required bool trackingErrorNotify}) {
+      required bool trackingErrorNotify,
+      required bool trayIcon}) {
     return _AppearanceInfo(
       theme: theme,
       trackingNotify: trackingNotify,
       locale: locale,
       trackingErrorNotify: trackingErrorNotify,
+      trayIcon: trayIcon,
     );
   }
 }
@@ -894,6 +1082,7 @@ mixin _$AppearanceInfo {
   bool get trackingNotify => throw _privateConstructorUsedError;
   AppLocaleType get locale => throw _privateConstructorUsedError;
   bool get trackingErrorNotify => throw _privateConstructorUsedError;
+  bool get trayIcon => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $AppearanceInfoCopyWith<AppearanceInfo> get copyWith =>
@@ -909,7 +1098,8 @@ abstract class $AppearanceInfoCopyWith<$Res> {
       {AppThemeType theme,
       bool trackingNotify,
       AppLocaleType locale,
-      bool trackingErrorNotify});
+      bool trackingErrorNotify,
+      bool trayIcon});
 
   $AppThemeTypeCopyWith<$Res> get theme;
   $AppLocaleTypeCopyWith<$Res> get locale;
@@ -930,6 +1120,7 @@ class _$AppearanceInfoCopyWithImpl<$Res>
     Object? trackingNotify = freezed,
     Object? locale = freezed,
     Object? trackingErrorNotify = freezed,
+    Object? trayIcon = freezed,
   }) {
     return _then(_value.copyWith(
       theme: theme == freezed
@@ -947,6 +1138,10 @@ class _$AppearanceInfoCopyWithImpl<$Res>
       trackingErrorNotify: trackingErrorNotify == freezed
           ? _value.trackingErrorNotify
           : trackingErrorNotify // ignore: cast_nullable_to_non_nullable
+              as bool,
+      trayIcon: trayIcon == freezed
+          ? _value.trayIcon
+          : trayIcon // ignore: cast_nullable_to_non_nullable
               as bool,
     ));
   }
@@ -977,7 +1172,8 @@ abstract class _$AppearanceInfoCopyWith<$Res>
       {AppThemeType theme,
       bool trackingNotify,
       AppLocaleType locale,
-      bool trackingErrorNotify});
+      bool trackingErrorNotify,
+      bool trayIcon});
 
   @override
   $AppThemeTypeCopyWith<$Res> get theme;
@@ -1002,6 +1198,7 @@ class __$AppearanceInfoCopyWithImpl<$Res>
     Object? trackingNotify = freezed,
     Object? locale = freezed,
     Object? trackingErrorNotify = freezed,
+    Object? trayIcon = freezed,
   }) {
     return _then(_AppearanceInfo(
       theme: theme == freezed
@@ -1020,6 +1217,10 @@ class __$AppearanceInfoCopyWithImpl<$Res>
           ? _value.trackingErrorNotify
           : trackingErrorNotify // ignore: cast_nullable_to_non_nullable
               as bool,
+      trayIcon: trayIcon == freezed
+          ? _value.trayIcon
+          : trayIcon // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -1031,7 +1232,8 @@ class _$_AppearanceInfo implements _AppearanceInfo {
       {required this.theme,
       required this.trackingNotify,
       required this.locale,
-      required this.trackingErrorNotify});
+      required this.trackingErrorNotify,
+      required this.trayIcon});
 
   @override
   final AppThemeType theme;
@@ -1041,10 +1243,12 @@ class _$_AppearanceInfo implements _AppearanceInfo {
   final AppLocaleType locale;
   @override
   final bool trackingErrorNotify;
+  @override
+  final bool trayIcon;
 
   @override
   String toString() {
-    return 'AppearanceInfo(theme: $theme, trackingNotify: $trackingNotify, locale: $locale, trackingErrorNotify: $trackingErrorNotify)';
+    return 'AppearanceInfo(theme: $theme, trackingNotify: $trackingNotify, locale: $locale, trackingErrorNotify: $trackingErrorNotify, trayIcon: $trayIcon)';
   }
 
   @override
@@ -1060,7 +1264,10 @@ class _$_AppearanceInfo implements _AppearanceInfo {
                 const DeepCollectionEquality().equals(other.locale, locale)) &&
             (identical(other.trackingErrorNotify, trackingErrorNotify) ||
                 const DeepCollectionEquality()
-                    .equals(other.trackingErrorNotify, trackingErrorNotify)));
+                    .equals(other.trackingErrorNotify, trackingErrorNotify)) &&
+            (identical(other.trayIcon, trayIcon) ||
+                const DeepCollectionEquality()
+                    .equals(other.trayIcon, trayIcon)));
   }
 
   @override
@@ -1069,7 +1276,8 @@ class _$_AppearanceInfo implements _AppearanceInfo {
       const DeepCollectionEquality().hash(theme) ^
       const DeepCollectionEquality().hash(trackingNotify) ^
       const DeepCollectionEquality().hash(locale) ^
-      const DeepCollectionEquality().hash(trackingErrorNotify);
+      const DeepCollectionEquality().hash(trackingErrorNotify) ^
+      const DeepCollectionEquality().hash(trayIcon);
 
   @JsonKey(ignore: true)
   @override
@@ -1082,7 +1290,8 @@ abstract class _AppearanceInfo implements AppearanceInfo {
       {required AppThemeType theme,
       required bool trackingNotify,
       required AppLocaleType locale,
-      required bool trackingErrorNotify}) = _$_AppearanceInfo;
+      required bool trackingErrorNotify,
+      required bool trayIcon}) = _$_AppearanceInfo;
 
   @override
   AppThemeType get theme => throw _privateConstructorUsedError;
@@ -1092,6 +1301,8 @@ abstract class _AppearanceInfo implements AppearanceInfo {
   AppLocaleType get locale => throw _privateConstructorUsedError;
   @override
   bool get trackingErrorNotify => throw _privateConstructorUsedError;
+  @override
+  bool get trayIcon => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$AppearanceInfoCopyWith<_AppearanceInfo> get copyWith =>

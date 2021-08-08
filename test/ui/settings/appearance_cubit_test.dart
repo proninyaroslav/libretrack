@@ -20,6 +20,7 @@ import 'package:bloc_test/bloc_test.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:libretrack/core/model/type/locale.dart';
 import 'package:libretrack/core/settings/settings.dart';
+import 'package:libretrack/platform/system_tray.dart';
 import 'package:libretrack/ui/app_cubit.dart';
 import 'package:libretrack/ui/settings/settings.dart';
 import 'package:mocktail/mocktail.dart';
@@ -27,10 +28,11 @@ import 'package:mocktail/mocktail.dart';
 import '../../mock/mock.dart';
 
 void main() {
-  group('AppearanceSettingsCubit', () {
+  group('AppearanceSettingsCubit |', () {
     late AppearanceSettingsCubit cubit;
     late AppSettings mockPref;
     late AppCubit mockAppCubit;
+    late SystemTray mockSystemTray;
 
     setUpAll(() {
       mockPref = MockAppSettings();
@@ -42,11 +44,22 @@ void main() {
         const AppLocaleType.system(),
       );
       when(() => mockPref.trackingErrorNotifications).thenReturn(false);
+      mockSystemTray = MockSystemTray();
+      when(
+        () => mockSystemTray.switchTrayIcon(
+          enable: any(named: 'enable'),
+        ),
+      ).thenAnswer((_) async => {});
+      when(() => mockPref.trayIcon).thenReturn(true);
       mockAppCubit = MockAppCubit();
     });
 
     setUp(() {
-      cubit = AppearanceSettingsCubit(mockPref, mockAppCubit);
+      cubit = AppearanceSettingsCubit(
+        mockPref,
+        mockAppCubit,
+        mockSystemTray,
+      );
     });
 
     blocTest(
@@ -90,6 +103,7 @@ void main() {
             trackingNotify: false,
             locale: AppLocaleType.system(),
             trackingErrorNotify: false,
+            trayIcon: true,
           ),
         ),
         const AppearanceState.themeChanged(
@@ -98,6 +112,7 @@ void main() {
             trackingNotify: false,
             locale: AppLocaleType.system(),
             trackingErrorNotify: false,
+            trayIcon: true,
           ),
         ),
         const AppearanceState.themeChanged(
@@ -106,6 +121,7 @@ void main() {
             trackingNotify: false,
             locale: AppLocaleType.system(),
             trackingErrorNotify: false,
+            trayIcon: true,
           ),
         ),
       ],
@@ -132,6 +148,7 @@ void main() {
             trackingNotify: true,
             locale: AppLocaleType.system(),
             trackingErrorNotify: false,
+            trayIcon: true,
           ),
         ),
         const AppearanceState.trackingNotifyChanged(
@@ -140,6 +157,7 @@ void main() {
             trackingNotify: false,
             locale: AppLocaleType.system(),
             trackingErrorNotify: false,
+            trayIcon: true,
           ),
         ),
       ],
@@ -186,6 +204,7 @@ void main() {
               locale: Locale('ru', 'RU'),
             ),
             trackingErrorNotify: false,
+            trayIcon: true,
           ),
         ),
         const AppearanceState.localeChanged(
@@ -194,6 +213,7 @@ void main() {
             trackingNotify: false,
             locale: AppLocaleType.system(),
             trackingErrorNotify: false,
+            trayIcon: true,
           ),
         ),
       ],
@@ -220,6 +240,7 @@ void main() {
             trackingNotify: false,
             locale: AppLocaleType.system(),
             trackingErrorNotify: true,
+            trayIcon: true,
           ),
         ),
         const AppearanceState.trackingErrorNotifyChanged(
@@ -228,6 +249,49 @@ void main() {
             trackingNotify: false,
             locale: AppLocaleType.system(),
             trackingErrorNotify: false,
+            trayIcon: true,
+          ),
+        ),
+      ],
+    );
+
+    blocTest(
+      'Tray icon',
+      build: () => cubit,
+      act: (AppearanceSettingsCubit cubit) {
+        cubit.trayIcon(enable: true);
+        verify(
+          () => mockPref.trayIcon = true,
+        ).called(1);
+        verify(
+          () => mockSystemTray.switchTrayIcon(enable: true),
+        ).called(1);
+
+        cubit.trayIcon(enable: false);
+        verify(
+          () => mockPref.trayIcon = false,
+        ).called(1);
+        verify(
+          () => mockSystemTray.switchTrayIcon(enable: false),
+        ).called(1);
+      },
+      expect: () => [
+        const AppearanceState.trayIconChanged(
+          AppearanceInfo(
+            theme: AppThemeType.system(),
+            trackingNotify: false,
+            locale: AppLocaleType.system(),
+            trackingErrorNotify: false,
+            trayIcon: true,
+          ),
+        ),
+        const AppearanceState.trayIconChanged(
+          AppearanceInfo(
+            theme: AppThemeType.system(),
+            trackingNotify: false,
+            locale: AppLocaleType.system(),
+            trackingErrorNotify: false,
+            trayIcon: false,
           ),
         ),
       ],

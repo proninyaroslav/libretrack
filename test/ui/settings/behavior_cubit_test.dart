@@ -26,7 +26,7 @@ import 'package:mocktail/mocktail.dart';
 import '../../mock/mock.dart';
 
 void main() {
-  group('BehaviorSettingsCubit', () {
+  group('BehaviorSettingsCubit |', () {
     late BehaviorSettingsCubit cubit;
     late AppSettings mockPref;
     late TrackingScheduler mockTrackingScheduler;

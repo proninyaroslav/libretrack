@@ -48,6 +48,8 @@ abstract class AppSettings {
   abstract int trackingHistorySize;
 
   abstract bool trackingErrorNotifications;
+
+  abstract bool trayIcon;
 }
 
 abstract class AppSettingsDefault {
@@ -68,6 +70,8 @@ abstract class AppSettingsDefault {
   static const int trackingHistorySize = 5;
 
   static const trackingErrorNotifications = true;
+
+  static const trayIcon = true;
 }
 
 @Singleton(as: AppSettings, dependsOn: [SharedPreferences])
@@ -221,6 +225,13 @@ class AppSettingsImpl implements AppSettings {
   bool get trackingErrorNotifications =>
       pref.getBool(_AppSettingsKey.trackingErrorNotifications) ??
       AppSettingsDefault.trackingErrorNotifications;
+
+  @override
+  set trayIcon(bool value) => pref.setBool(_AppSettingsKey.trayIcon, value);
+
+  @override
+  bool get trayIcon =>
+      pref.getBool(_AppSettingsKey.trayIcon) ?? AppSettingsDefault.trayIcon;
 }
 
 abstract class _AppSettingsKey {
@@ -246,6 +257,8 @@ abstract class _AppSettingsKey {
 
   static const trackingErrorNotifications =
       'pref_key_tracking_error_notifications';
+
+  static const trayIcon = 'pref_key_tray_icon';
 }
 
 @module

@@ -276,11 +276,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "settingsAutoTrackingFreqTwelveHours":
             MessageLookupByLibrary.simpleMessage("Every 12 hours"),
         "settingsBehavior": MessageLookupByLibrary.simpleMessage("Behavior"),
+        "settingsDesktopSection":
+            MessageLookupByLibrary.simpleMessage("Desktop"),
         "settingsLanguage": MessageLookupByLibrary.simpleMessage("Language"),
         "settingsNotificationsSection":
             MessageLookupByLibrary.simpleMessage("Notifications settings"),
         "settingsSystemLanguageOption":
             MessageLookupByLibrary.simpleMessage("System"),
+        "settingsSystemTrayIcon":
+            MessageLookupByLibrary.simpleMessage("System tray icon"),
         "settingsTheme": MessageLookupByLibrary.simpleMessage("Theme"),
         "settingsThemeDark": MessageLookupByLibrary.simpleMessage("Dark"),
         "settingsThemeLight": MessageLookupByLibrary.simpleMessage("Light"),

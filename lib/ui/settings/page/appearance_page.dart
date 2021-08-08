@@ -18,7 +18,9 @@
 
 import 'package:flutter/material.dart' hide Locale;
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:libretrack/core/platform_info.dart';
 import 'package:libretrack/core/settings/settings.dart';
+import 'package:libretrack/injector.dart';
 import 'package:libretrack/locale.dart';
 import 'package:libretrack/ui/settings/page/appearance_cubit.dart';
 import 'package:libretrack/ui/settings/settings_list.dart';
@@ -53,6 +55,14 @@ class AppearanceSettingsPage extends StatelessWidget {
               _buildTrackingErrorNotifyOption(context),
             ],
           ),
+          // TODO: Windows/macOS support
+          if (getIt<PlatformInfo>().isLinux)
+            SettingsListGroup(
+              title: S.of(context).settingsDesktopSection,
+              items: [
+                _buildSystemTrayIconOption(context),
+              ],
+            ),
         ],
       ),
     );
@@ -206,6 +216,23 @@ class AppearanceSettingsPage extends StatelessWidget {
           onChanged: (value) => context
               .read<AppearanceSettingsCubit>()
               .trackingErrorNotify(enable: value),
+        );
+      },
+    );
+  }
+
+  Widget _buildSystemTrayIconOption(BuildContext context) {
+    return BlocBuilder<AppearanceSettingsCubit, AppearanceState>(
+      buildWhen: (prev, current) {
+        return current is AppearanceStateTrayIconChanged;
+      },
+      builder: (context, state) {
+        return SwitchListTile(
+          value: state.info.trayIcon,
+          title: Text(S.of(context).settingsSystemTrayIcon),
+          secondary: const Icon(Icons.monitor),
+          onChanged: (value) =>
+              context.read<AppearanceSettingsCubit>().trayIcon(enable: value),
         );
       },
     );

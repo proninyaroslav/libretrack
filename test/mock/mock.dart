@@ -38,6 +38,7 @@ export 'model/mock_http_client.dart';
 export 'model/mock_parser.dart';
 export 'model/mock_request.dart';
 export 'model/mock_tracking_service.dart';
+export 'platform/mock_system_tray.dart';
 export 'settings/mock_app_settings.dart';
 export 'storage/mock_database.dart';
 export 'storage/mock_service_repository.dart';

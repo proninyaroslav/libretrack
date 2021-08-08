@@ -31,6 +31,7 @@
 
 #include "flutter/generated_plugin_registrant.h"
 #include "path_provider.h"
+#include "system_tray_channel.h"
 
 struct _MyApplication {
     GtkApplication parent_instance;
@@ -44,6 +45,8 @@ const unsigned int WINDOW_WINDTH = 1280;
 const unsigned int WINDOW_HEIGHT = 720;
 
 GtkWindow *window = nullptr;
+AppIndicator *indicator = nullptr;
+gulong delete_event_id = 0;
 
 static void show_hide_window()
 {
@@ -62,7 +65,6 @@ static void quit(GtkMenuItem *item, gpointer application)
 
 static void build_app_indicator(GApplication *application, gchar *app_icon)
 {
-    AppIndicator *indicator;
     GtkWidget *indicator_menu;
     GtkWidget *show_hide_button;
     GtkWidget *quit_button;
@@ -71,7 +73,7 @@ static void build_app_indicator(GApplication *application, gchar *app_icon)
         APPLICATION_ID,
         app_icon,
         APP_INDICATOR_CATEGORY_APPLICATION_STATUS);
-    app_indicator_set_status(indicator, APP_INDICATOR_STATUS_ACTIVE);
+    app_indicator_set_status(indicator, APP_INDICATOR_STATUS_PASSIVE);
 
     indicator_menu = gtk_menu_new();
 
@@ -118,6 +120,42 @@ static gchar *get_app_icon(gchar *icons_path)
     }
 }
 
+static void enable_tray_icon()
+{
+    if (!indicator) {
+        return;
+    }
+    delete_event_id = g_signal_connect(
+        window,
+        "delete-event",
+        G_CALLBACK(show_hide_window),
+        nullptr);
+    app_indicator_set_status(indicator, APP_INDICATOR_STATUS_ACTIVE);
+}
+
+static void disable_tray_icon()
+{
+    if (!indicator) {
+        return;
+    }
+    if (delete_event_id) {
+        g_signal_handler_disconnect(window, delete_event_id);
+    }
+    app_indicator_set_status(indicator, APP_INDICATOR_STATUS_PASSIVE);
+}
+
+static void system_tray_channel_cb(SystemTrayChannel::Method method_call)
+{
+    switch (method_call) {
+    case SystemTrayChannel::Method::ENABLE_TRAY_ICON:
+        enable_tray_icon();
+        break;
+    case SystemTrayChannel::Method::DISABLE_TRAY_ICON:
+        disable_tray_icon();
+        break;
+    }
+}
+
 // Implements GApplication::activate.
 static void my_application_activate(GApplication *application)
 {
@@ -154,12 +192,6 @@ static void my_application_activate(GApplication *application)
     } else {
         gtk_window_set_title(window, WINDOWS_TITLE);
     }
-
-    g_signal_connect(
-        window,
-        "delete-event",
-        G_CALLBACK(show_hide_window),
-        nullptr);
 
     GError *err = nullptr;
     g_autofree gchar *icons_path = PathProvider::get_icons_dir(&err);
@@ -199,17 +231,23 @@ static void my_application_activate(GApplication *application)
     gtk_widget_show(GTK_WIDGET(window));
 
     g_autoptr(FlDartProject) project = fl_dart_project_new();
-    fl_dart_project_set_dart_entrypoint_arguments(project, self->dart_entrypoint_arguments);
+    fl_dart_project_set_dart_entrypoint_arguments(
+        project,
+        self->dart_entrypoint_arguments);
 
-    FlView *view = fl_view_new(project);
+    auto view = fl_view_new(project);
     gtk_widget_show(GTK_WIDGET(view));
     gtk_container_add(GTK_CONTAINER(window), GTK_WIDGET(view));
 
+    build_app_indicator(application, app_icon);
+
+    auto engine = fl_view_get_engine(view);
+    SystemTrayChannel::init(
+        fl_engine_get_binary_messenger(engine),
+        system_tray_channel_cb);
     fl_register_plugins(FL_PLUGIN_REGISTRY(view));
 
     gtk_widget_grab_focus(GTK_WIDGET(view));
-
-    build_app_indicator(application, app_icon);
 }
 
 // Implements GApplication::local_command_line.

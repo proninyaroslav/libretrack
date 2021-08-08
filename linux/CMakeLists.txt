@@ -51,6 +51,7 @@ add_executable(${BINARY_NAME}
   "main.cc"
   "my_application.cc"
   "path_provider.cc"
+  "system_tray_channel.cc"
   "${FLUTTER_MANAGED_DIR}/generated_plugin_registrant.cc"
 )
 apply_standard_settings(${BINARY_NAME})

@@ -282,11 +282,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "settingsAutoTrackingFreqTwelveHours":
             MessageLookupByLibrary.simpleMessage("Раз в 12 часов"),
         "settingsBehavior": MessageLookupByLibrary.simpleMessage("Поведение"),
+        "settingsDesktopSection":
+            MessageLookupByLibrary.simpleMessage("Десктоп"),
         "settingsLanguage": MessageLookupByLibrary.simpleMessage("Язык"),
         "settingsNotificationsSection":
             MessageLookupByLibrary.simpleMessage("Настройки уведомлений"),
         "settingsSystemLanguageOption":
             MessageLookupByLibrary.simpleMessage("Системный"),
+        "settingsSystemTrayIcon":
+            MessageLookupByLibrary.simpleMessage("Иконка системного трея"),
         "settingsTheme": MessageLookupByLibrary.simpleMessage("Тема"),
         "settingsThemeDark": MessageLookupByLibrary.simpleMessage("Тёмная"),
         "settingsThemeLight": MessageLookupByLibrary.simpleMessage("Светлая"),

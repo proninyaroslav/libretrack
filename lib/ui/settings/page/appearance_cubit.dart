@@ -20,6 +20,7 @@ import 'package:bloc/bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
 import 'package:libretrack/core/settings/settings.dart';
+import 'package:libretrack/platform/system_tray.dart';
 import 'package:libretrack/ui/app_cubit.dart';
 
 part 'appearance_cubit.freezed.dart';
@@ -45,6 +46,10 @@ class AppearanceState with _$AppearanceState {
   const factory AppearanceState.trackingErrorNotifyChanged(
     AppearanceInfo info,
   ) = AppearanceStateTrackingErrorNotifyChanged;
+
+  const factory AppearanceState.trayIconChanged(
+    AppearanceInfo info,
+  ) = AppearanceStateTrayIconChanged;
 }
 
 @freezed
@@ -54,6 +59,7 @@ class AppearanceInfo with _$AppearanceInfo {
     required bool trackingNotify,
     required AppLocaleType locale,
     required bool trackingErrorNotify,
+    required bool trayIcon,
   }) = _AppearanceInfo;
 }
 
@@ -61,15 +67,20 @@ class AppearanceInfo with _$AppearanceInfo {
 class AppearanceSettingsCubit extends Cubit<AppearanceState> {
   final AppSettings _pref;
   final AppCubit _appCubit;
+  final SystemTray _systemTray;
 
-  AppearanceSettingsCubit(this._pref, this._appCubit)
-      : super(
+  AppearanceSettingsCubit(
+    this._pref,
+    this._appCubit,
+    this._systemTray,
+  ) : super(
           AppearanceState.initial(
             AppearanceInfo(
               theme: _pref.theme,
               trackingNotify: _pref.trackingNotifications,
               locale: _pref.locale,
               trackingErrorNotify: _pref.trackingErrorNotifications,
+              trayIcon: _pref.trayIcon,
             ),
           ),
         );
@@ -101,6 +112,14 @@ class AppearanceSettingsCubit extends Cubit<AppearanceState> {
     _pref.trackingErrorNotifications = enable;
     emit(AppearanceState.trackingErrorNotifyChanged(
       state.info.copyWith(trackingErrorNotify: enable),
+    ));
+  }
+
+  Future<void> trayIcon({required bool enable}) async {
+    _pref.trayIcon = enable;
+    await _systemTray.switchTrayIcon(enable: enable);
+    emit(AppearanceState.trayIconChanged(
+      state.info.copyWith(trayIcon: enable),
     ));
   }
 }

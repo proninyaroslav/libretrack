@@ -23,6 +23,7 @@ import 'package:libretrack/core/app_database_isolate_binder.dart';
 import 'package:libretrack/core/crash_catcher/crash_catcher.dart';
 import 'package:libretrack/core/crash_catcher/hook/flutter_crash_hook.dart';
 import 'package:libretrack/core/notification_manager.dart';
+import 'package:libretrack/platform/system_tray.dart';
 
 import 'core/tracking_scheduler.dart';
 import 'core/work_manager/work_manager.dart';
@@ -37,6 +38,7 @@ Future<void> _main() async {
   await initInjector(kDebugMode ? Env.dev : Env.prod);
   GestureBinding.instance!.resamplingEnabled = true;
 
+  await getIt<SystemTray>().init();
   getIt<AppDatabaseIsolateBinder>().listenChanges();
   await getIt<NotificationManager>().init();
   await getIt<WorkManager>().init();
