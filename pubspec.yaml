@@ -39,7 +39,7 @@ dependencies:
     sdk: flutter
   flutter_bloc: ^7.1.0
   flutter_linkify: ^5.0.0
-  flutter_local_notifications: ^8.0.0
+  flutter_local_notifications: ^9.0.0-dev.2
   flutter_localizations:
     sdk: flutter
   flutter_mailer: ^2.0.0
@@ -97,6 +97,7 @@ flutter:
   #   - images/a_dot_ham.jpeg
   assets:
     - assets/service_logo/
+    - assets/notify_icon.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

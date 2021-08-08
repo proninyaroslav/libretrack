@@ -62,25 +62,25 @@ class _AppState extends State<App> {
 
     final platform = getIt<PlatformInfo>();
 
+    getIt<NotificationManager>().listenOnSelectNotification().listen(
+      (action) {
+        final initRoute = _notifyActionToRoute(action);
+        if (initRoute != null) {
+          _routerDelegate.setNewRoutePath(initRoute);
+        } else {
+          action.maybeWhen(
+            reportCrash: _onReport,
+            orElse: () {},
+          );
+        }
+      },
+      onError: (e, StackTrace stackTrace) {
+        log().e('Unable to handle notification action', e, stackTrace);
+      },
+    );
+
     // TODO: Desktop/Web support
     if (platform.isAndroid || platform.isIOS) {
-      getIt<NotificationManager>().listenOnSelectNotification().listen(
-        (action) {
-          final initRoute = _notifyActionToRoute(action);
-          if (initRoute != null) {
-            _routerDelegate.setNewRoutePath(initRoute);
-          } else {
-            action.maybeWhen(
-              reportCrash: _onReport,
-              orElse: () {},
-            );
-          }
-        },
-        onError: (e, StackTrace stackTrace) {
-          log().e('Unable to handle notification action', e, stackTrace);
-        },
-      );
-
       getIt<NotificationManager>().getAppLaunchDetails().then(
         (action) {
           if (action == null) {

@@ -227,6 +227,7 @@
     "changelog": "Changelog",
     "settingsDesktopSection": "Desktop",
     "settingsSystemTrayIcon": "System tray icon",
+    "openDetails": "Open details",
     "upsAddAccountDescription": "You need to enter your UPS account authorization information. You can register it here: https://www.ups.com/doapp/signup?loc=en_US\nTo obtain an Access Key, go the link and follow the instructions: https://www.ups.com/upsdeveloperkit/manageaccesskeys?loc=en_US",
     "ups": "UPS",
     "russianPost": "Russian Post",

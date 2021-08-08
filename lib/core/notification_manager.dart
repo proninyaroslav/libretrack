@@ -110,9 +110,15 @@ class NotificationManagerImpl implements NotificationManager {
 
     const initSettingsIOS = IOSInitializationSettings();
 
-    const initSettings = InitializationSettings(
+    final initSettingsLinux = LinuxInitializationSettings(
+      defaultActionName: 'LibreTrack',
+      defaultIcon: AssetsLinuxIcon('assets/notify_icon.png'),
+    );
+
+    final initSettings = InitializationSettings(
       android: initSettingsAndroid,
       iOS: initSettingsIOS,
+      linux: initSettingsLinux,
     );
 
     await _notifyPlugin.initialize(
@@ -180,15 +186,19 @@ class NotificationManagerImpl implements NotificationManager {
           presentBadge: true,
           threadIdentifier: groupKey,
         );
+        final linuxDetails = LinuxNotificationDetails(
+          defaultActionName: locale.openDetails,
+        );
         final details = NotificationDetails(
           android: androidDetails,
           iOS: iosDetails,
+          linux: linuxDetails,
         );
         final actionJson = e.action?.toJson();
         return _notifyPlugin.show(
           e.id,
           e.title,
-          e.body.first,
+          _platformInfo.isLinux ? e.body.join('\n') : e.body.first,
           details,
           payload: actionJson == null ? null : jsonEncode(actionJson),
         );
@@ -324,15 +334,19 @@ class NotificationManagerImpl implements NotificationManager {
           subtitle: e.subtitle,
           threadIdentifier: groupKey,
         );
+        final linuxDetails = LinuxNotificationDetails(
+          defaultActionName: locale.openDetails,
+        );
         final details = NotificationDetails(
           android: androidDetails,
           iOS: iosDetails,
+          linux: linuxDetails,
         );
         final actionJson = e.action?.toJson();
         return _notifyPlugin.show(
           e.id,
           e.title,
-          e.body.first,
+          _platformInfo.isLinux ? e.body.join('\n') : e.body.first,
           details,
           payload: actionJson == null ? null : jsonEncode(actionJson),
         );
@@ -430,9 +444,13 @@ class NotificationManagerImpl implements NotificationManager {
     const iosDetails = IOSNotificationDetails(
       presentSound: false,
     );
+    final linuxDetails = LinuxNotificationDetails(
+      defaultActionName: locale.openDetails,
+    );
     final details = NotificationDetails(
       android: androidDetails,
       iOS: iosDetails,
+      linux: linuxDetails,
     );
     await _notifyPlugin.show(id, title, body.join('\n'), details);
   }
@@ -451,8 +469,12 @@ class NotificationManagerImpl implements NotificationManager {
       ticker: title,
       styleInformation: BigTextStyleInformation(body),
     );
+    final linuxDetails = LinuxNotificationDetails(
+      defaultActionName: locale.openDetails,
+    );
     final details = NotificationDetails(
       android: androidDetails,
+      linux: linuxDetails,
     );
     await _notifyPlugin.show(
       info.hashCode,
@@ -482,8 +504,12 @@ class NotificationManagerImpl implements NotificationManager {
       ticker: title,
       styleInformation: BigTextStyleInformation(body),
     );
+    final linuxDetails = LinuxNotificationDetails(
+      defaultActionName: locale.openDetails,
+    );
     final details = NotificationDetails(
       android: androidDetails,
+      linux: linuxDetails,
     );
     await _notifyPlugin.show(
       info.hashCode,
