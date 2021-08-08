@@ -220,6 +220,16 @@ class S {
     );
   }
 
+  /// `Open`
+  String get open {
+    return Intl.message(
+      'Open',
+      name: 'open',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Optional`
   String get optionalField {
     return Intl.message(

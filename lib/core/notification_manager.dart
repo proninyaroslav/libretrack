@@ -451,8 +451,7 @@ class NotificationManagerImpl implements NotificationManager {
     const iosDetails = IOSNotificationDetails(
       presentSound: false,
     );
-    final linuxDetails = LinuxNotificationDetails(
-      defaultActionName: locale.openDetails,
+    const linuxDetails = LinuxNotificationDetails(
       suppressSound: true,
     );
     final details = NotificationDetails(
@@ -478,7 +477,7 @@ class NotificationManagerImpl implements NotificationManager {
       styleInformation: BigTextStyleInformation(body),
     );
     final linuxDetails = LinuxNotificationDetails(
-      defaultActionName: locale.openDetails,
+      defaultActionName: locale.crashDialogReport,
     );
     final details = NotificationDetails(
       android: androidDetails,
@@ -512,12 +511,8 @@ class NotificationManagerImpl implements NotificationManager {
       ticker: title,
       styleInformation: BigTextStyleInformation(body),
     );
-    final linuxDetails = LinuxNotificationDetails(
-      defaultActionName: locale.openDetails,
-    );
     final details = NotificationDetails(
       android: androidDetails,
-      linux: linuxDetails,
     );
     await _notifyPlugin.show(
       info.hashCode,

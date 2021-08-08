@@ -17,6 +17,7 @@
     "all": "All",
     "edit": "Edit",
     "name": "Name",
+    "open": "Open",
     "optionalField": "Optional",
     "selectAll": "Select all",
     "selectedCounter": "Selected: {count}",

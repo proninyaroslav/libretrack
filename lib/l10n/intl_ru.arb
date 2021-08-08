@@ -17,6 +17,7 @@
     "all": "Все",
     "edit": "Редактировать",
     "name": "Имя",
+    "open": "Открыть",
     "optionalField": "Опционально",
     "selectAll": "Выбрать все",
     "selectedCounter": "Выбрано: {count}",

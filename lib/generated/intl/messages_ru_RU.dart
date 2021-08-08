@@ -204,6 +204,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "noParcels": MessageLookupByLibrary.simpleMessage("Нет посылок"),
         "noTrackingHistory":
             MessageLookupByLibrary.simpleMessage("Нет истории отслеживания"),
+        "open": MessageLookupByLibrary.simpleMessage("Открыть"),
         "openDetails":
             MessageLookupByLibrary.simpleMessage("Открыть подробности"),
         "openLinkFailed":
