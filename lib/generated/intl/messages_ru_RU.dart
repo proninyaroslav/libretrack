@@ -259,7 +259,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "refreshParcelsFailed": m21,
         "russianPost": MessageLookupByLibrary.simpleMessage("Почта России"),
         "russianPostAddAccountDescription": MessageLookupByLibrary.simpleMessage(
-            "1) Зарегистрируйтесь на сайте Почты России: https://www.pochta.ru/\n2) Перейдите в Настройки доступа, включите API отслеживания и согласитесь с условиями сервиса: https://tracking.pochta.ru/access-settings\n3) Скопируйте в Настройках доступа логин (сгенерирован автоматически. Пароль будет отправлен на e-mail, указанный при регистрации."),
+            "1) Зарегистрируйтесь на сайте Почты России: https://www.pochta.ru/\n2) Перейдите в Настройки доступа, включите API отслеживания и согласитесь с условиями сервиса: https://tracking.pochta.ru/access-settings\n3) Скопируйте в Настройках доступа логин (сгенерирован автоматически). Пароль будет отправлен на e-mail, указанный при регистрации."),
         "secondsShortFormat": m22,
         "selectAccountType":
             MessageLookupByLibrary.simpleMessage("Выберите тип аккаунта"),
