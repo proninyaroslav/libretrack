@@ -314,6 +314,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "settingsTrackingSection":
             MessageLookupByLibrary.simpleMessage("Tracking settings"),
         "share": MessageLookupByLibrary.simpleMessage("Share"),
+        "shareFailed": MessageLookupByLibrary.simpleMessage("Unable to share"),
         "shipmentAdditionalRateFee":
             MessageLookupByLibrary.simpleMessage("Additional rate fee"),
         "shipmentAlternateTrackingNumber":

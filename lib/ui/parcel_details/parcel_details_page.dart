@@ -227,7 +227,16 @@ class _Body extends StatelessWidget {
           },
         );
       },
-      shareStringSuccess: (text) => Share.share(text),
+      shareStringSuccess: (text) {
+        try {
+          Share.share(text);
+        } on Exception catch (e, stackTrace) {
+          log().e("Unable to share", e, stackTrace);
+          AdaptiveScaffold.of(context).showAdaptiveToast(
+            text: S.of(context).shareFailed,
+          );
+        }
+      },
       copyTrackSuccess: (trackNumber) {
         Clipboard.setData(
           ClipboardData(

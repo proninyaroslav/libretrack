@@ -230,6 +230,7 @@
     "settingsDesktopSection": "Десктоп",
     "settingsSystemTrayIcon": "Иконка системного трея",
     "openDetails": "Открыть подробности",
+    "shareFailed": "Не удалось поделиться",
     "upsAddAccountDescription": "Необходимо ввести данные авторизации аккаунта UPS. Вы можете зарегистрировать его здесь: https://www.ups.com/doapp/signup?loc=ru_RU\nДля получения ключа доступа перейдите по ссылке и следуйте инструкциям: https://www.ups.com/upsdeveloperkit/manageaccesskeys?loc=ru_RU",
     "ups": "UPS",
     "russianPost": "Почта России",

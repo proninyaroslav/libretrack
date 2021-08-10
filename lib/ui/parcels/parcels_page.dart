@@ -351,7 +351,18 @@ class _BodyState extends State<_Body> with SingleTickerProviderStateMixin {
           ),
         );
       },
-      shareStringSuccess: (text) => Share.share(text),
+      shareStringSuccess: (text) {
+        try {
+          Share.share(text);
+        } on Exception catch (e, stackTrace) {
+          log().e("Unable to share", e, stackTrace);
+          ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(
+              content: Text(S.of(context).shareFailed),
+            ),
+          );
+        }
+      },
       copyTrackSuccess: (trackNumbers) {
         Clipboard.setData(ClipboardData(text: trackNumbers));
         ScaffoldMessenger.of(context).showSnackBar(

@@ -322,6 +322,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "settingsTrackingSection":
             MessageLookupByLibrary.simpleMessage("Настройки отслеживания"),
         "share": MessageLookupByLibrary.simpleMessage("Поделиться"),
+        "shareFailed":
+            MessageLookupByLibrary.simpleMessage("Не удалось поделиться"),
         "shipmentAdditionalRateFee": MessageLookupByLibrary.simpleMessage(
             "Дополнительный тарифный сбор"),
         "shipmentAlternateTrackingNumber":
