@@ -351,9 +351,9 @@ class _BodyState extends State<_Body> with SingleTickerProviderStateMixin {
           ),
         );
       },
-      shareStringSuccess: (text) {
+      shareStringSuccess: (text) async {
         try {
-          Share.share(text);
+          await Share.share(text);
         } on Exception catch (e, stackTrace) {
           log().e("Unable to share", e, stackTrace);
           ScaffoldMessenger.of(context).showSnackBar(

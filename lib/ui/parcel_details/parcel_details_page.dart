@@ -227,9 +227,9 @@ class _Body extends StatelessWidget {
           },
         );
       },
-      shareStringSuccess: (text) {
+      shareStringSuccess: (text) async {
         try {
-          Share.share(text);
+          await Share.share(text);
         } on Exception catch (e, stackTrace) {
           log().e("Unable to share", e, stackTrace);
           AdaptiveScaffold.of(context).showAdaptiveToast(
