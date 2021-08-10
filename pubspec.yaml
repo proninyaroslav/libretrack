@@ -48,6 +48,7 @@ dependencies:
   fluttertoast: ^8.0.3
   freezed_annotation: ^0.14.2
   http: ^0.13.0
+  image: ^3.0.2
   injectable: ^1.4.1
   jiffy: ^4.0.0
   json_serializable: ^4.1.4
@@ -65,7 +66,6 @@ dependencies:
   uuid: ^3.0.1
   workmanager: ^0.4.0
   xml: ^5.1.2
-  image: ^3.0.2
 
 dev_dependencies:
   analyzer: ^1.5.0
