@@ -19,6 +19,7 @@
 import 'dart:async';
 import 'dart:convert';
 
+import 'package:flutter/services.dart' show rootBundle;
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
@@ -26,6 +27,7 @@ import 'package:libretrack/core/crash_report/model.dart';
 import 'package:libretrack/ui/theme.dart';
 import 'package:libretrack/ui/utils/utils.dart';
 import 'package:quiver/core.dart';
+import 'package:image/image.dart' as image;
 
 import '../locale.dart';
 import 'crash_report/crash_report_manager.dart';
@@ -110,9 +112,23 @@ class NotificationManagerImpl implements NotificationManager {
 
     const initSettingsIOS = IOSInitializationSettings();
 
+    final assetIcon = await rootBundle.load('assets/notify_icon.png');
+    final iconData = image.decodePng(
+      assetIcon.buffer.asUint8List().toList(),
+    );
+    final iconBytes = iconData!.getBytes();
+
     final initSettingsLinux = LinuxInitializationSettings(
       defaultActionName: 'LibreTrack',
-      defaultIcon: AssetsLinuxIcon('assets/notify_icon.png'),
+      defaultIcon: ByteDataLinuxIcon(
+        LinuxRawIconData(
+          data: iconBytes,
+          width: iconData.width,
+          height: iconData.height,
+          channels: 4,
+          hasAlpha: true,
+        ),
+      ),
       defaultSound: ThemeLinuxSound('message'),
     );
 
