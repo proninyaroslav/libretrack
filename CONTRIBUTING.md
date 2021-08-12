@@ -17,6 +17,14 @@ If you added a new language, make sure to add it to the [lib/locale.dart](lib/lo
 
 Detailed documentation on `intl_utils` [here](https://pub.dev/packages/intl_utils).
 
+### Android localization
+
+The original strings for translation are located in the `android/app/src/main/res/values/strings.xml` file. To translate, you need to create a directory with your localization code, for example: `android/app/src/main/res/values-ru/strings.xml`. More about localization in Android https://developer.android.com/training/basics/supporting-devices/languages.
+
+### Linux localization
+
+The original strings for translation are located in the `linux/po/messages.pot` file. To translate, you need to create a file with your localization code, for example: `linux/po/ru.po`. More about `GNU gettext` localization https://docs.weblate.org/en/latest/devel/gettext.html#starting-new-translation.
+
 ## ⚙️ How to make changes in the code
 
 ### 1. Where to begin

@@ -102,6 +102,8 @@ Enter the following command in the terminal to build the project:
     - **libsqlite3**
     - **gettext** (for build only)
 
+    Development versions for these packages are also required for building.
+
     Then run the following command:
 
     ```
@@ -121,7 +123,7 @@ Enter the following command in the terminal to build the project:
     The resulting `.snap` file can be installed as follows:
 
     ```
-    sudo snap install my_snap_file.snap --dangerous
+    sudo snap install output_file_name.snap --dangerous
     ```
 
 ## 🎉 Contributing
