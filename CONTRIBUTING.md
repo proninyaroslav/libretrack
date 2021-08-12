@@ -23,7 +23,7 @@ The original strings for translation are located in the `android/app/src/main/re
 
 ### Linux localization
 
-The original strings for translation are located in the `linux/po/messages.pot` file. To translate, you need to create a file with your localization code, for example: `linux/po/ru.po`. More about `GNU gettext` localization https://docs.weblate.org/en/latest/devel/gettext.html#starting-new-translation.
+The original strings for translation are located in the `linux/po/messages.pot` file. To translate, you need to create a file with your localization code, for example: `linux/po/ru.po`. Also add your language code to the `linux/po/CMakeLists.txt` file (`translated_languages` section). More about `GNU gettext` localization https://docs.weblate.org/en/latest/devel/gettext.html#starting-new-translation.
 
 ## ⚙️ How to make changes in the code
 
