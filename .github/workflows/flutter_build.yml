@@ -18,3 +18,5 @@ jobs:
       run: flutter pub get
     - name: Build debug Android APK
       run: flutter build apk --flavor main --debug
+    - name: Build debug Linux binary
+      run: flutter build linux --debug
