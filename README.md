@@ -79,18 +79,50 @@ To build, you need to install [Flutter](https://flutter.dev/docs/get-started/ins
 
 Enter the following command in the terminal to build the project:
  - Android APK
-   ```
-   flutter build apk --flavor main
-   ```
-   You can also split APK into different architectures:
-   ```
-   flutter build apk --flavor main --split-per-abi
-   ```
-   or
-   ```
-   flutter build apk --flavor main --target-platform [android-arm|android-arm64|android-x64]
-   ```
-   The built APK will be located in the `build/app/outputs/flutter-apk/` directory.
+    ```
+    flutter build apk --flavor main
+    ```
+    You can also split APK into different architectures:
+    ```
+    flutter build apk --flavor main --split-per-abi
+    ```
+    or
+    ```
+    flutter build apk --flavor main --target-platform [android-arm|android-arm64|android-x64]
+    ```
+    The built APK will be located in the `build/app/outputs/flutter-apk/` directory.
+
+ - Linux binary
+
+    Before building, make sure that the following dependencies are installed on the system:
+    - **gtk3**
+    - **libsecret**
+    - **libjsoncpp**
+    - **libappindicator** (GTK3)
+    - **libsqlite3**
+    - **gettext** (for build only)
+
+    Then run the following command:
+
+    ```
+    flutter build linux
+    ```
+
+    The built binary will be located in the `build/linux/x64/debug/bundle/` directory. The contents of the `bundle` directory must be fully copied.
+
+ - Linux Snap package
+
+    Before building, make sure that the `snapcraft` dependency is installed on the system.
+
+    ```
+    snapcraft
+    ```
+
+    The resulting `.snap` file can be installed as follows:
+
+    ```
+    sudo snap install my_snap_file.snap --dangerous
+    ```
 
 ## 🎉 Contributing
 
