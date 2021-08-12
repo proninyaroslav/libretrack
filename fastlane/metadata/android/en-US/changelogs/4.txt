@@ -1,0 +1,7 @@
+* Added:
+    - Linux support
+    - Showing activity location in the notification
+* Improving package status differentiation
+* Bugfixes:
+    - [UPS] Handling empty activity location
+    - Crash report serializing
