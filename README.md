@@ -78,7 +78,7 @@ in the gift card details https://smile.amazon.com/gp/product/B004LLIKVU/
 To build, you need to install [Flutter](https://flutter.dev/docs/get-started/install).
 
 Enter the following command in the terminal to build the project:
- - Android APK
+ - **Android APK**
     ```
     flutter build apk --flavor main
     ```
@@ -92,7 +92,7 @@ Enter the following command in the terminal to build the project:
     ```
     The built APK will be located in the `build/app/outputs/flutter-apk/` directory.
 
- - Linux binary
+ - **Linux binary**
 
     Before building, make sure that the following dependencies are installed on the system:
     - **gtk3**
@@ -112,9 +112,11 @@ Enter the following command in the terminal to build the project:
 
     The built binary will be located in the `build/linux/x64/debug/bundle/` directory. The contents of the `bundle` directory must be fully copied.
 
- - Linux Snap package
+ - **Linux Snap package**
 
     Before building, make sure that the `snapcraft` dependency is installed on the system.
+    
+    Then run the following command:
 
     ```
     snapcraft
