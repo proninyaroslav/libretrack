@@ -2,7 +2,7 @@ Track postal items directly on your device using accounts of postal services. Th
 
 📋 Features
 * Free and Open Source software (FOSS)
-* Support for various platforms and devices (currently Android only)
+* Support for various platforms and devices
 * Support accounts of different carriers
 * Detailed information about the postal items, carriers, tracking history
 * Local push notifications
