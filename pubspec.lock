@@ -460,7 +460,7 @@ packages:
       name: flutter_local_notifications_linux
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.2.0"
+    version: "0.2.0+1"
   flutter_local_notifications_platform_interface:
     dependency: transitive
     description:
