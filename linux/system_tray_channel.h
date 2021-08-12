@@ -27,6 +27,7 @@ namespace SystemTrayChannel {
 enum Method {
     ENABLE_TRAY_ICON,
     DISABLE_TRAY_ICON,
+    SHOW_WINDOW,
 };
 
 typedef void (*CallHandler)(Method method_call);

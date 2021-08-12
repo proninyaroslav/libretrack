@@ -28,6 +28,7 @@ import 'package:libretrack/core/platform_info.dart';
 import 'package:libretrack/core/settings/settings.dart';
 import 'package:libretrack/locale.dart';
 import 'package:libretrack/logger.dart';
+import 'package:libretrack/platform/system_tray.dart';
 import 'package:receive_sharing_intent/receive_sharing_intent.dart';
 
 import '../injector.dart';
@@ -61,6 +62,7 @@ class _AppState extends State<App> {
     _routerDelegate = AppRouterDelegate(navigatorKey: widget.navigatorKey);
 
     final platform = getIt<PlatformInfo>();
+    final tray = getIt<SystemTray>();
 
     getIt<NotificationManager>().listenOnSelectNotification().listen(
       (action) {
@@ -73,6 +75,7 @@ class _AppState extends State<App> {
             orElse: () {},
           );
         }
+        tray.showWindow();
       },
       onError: (e, StackTrace stackTrace) {
         log().e('Unable to handle notification action', e, stackTrace);

@@ -41,6 +41,9 @@ void method_call_cb(
     } else if (method == "disableTrayIcon") {
         response = FL_METHOD_RESPONSE(fl_method_success_response_new(nullptr));
         cb(SystemTrayChannel::Method::DISABLE_TRAY_ICON);
+    } else if (method == "showWindow") {
+        response = FL_METHOD_RESPONSE(fl_method_success_response_new(nullptr));
+        cb(SystemTrayChannel::Method::SHOW_WINDOW);
     } else {
         response = FL_METHOD_RESPONSE(fl_method_not_implemented_response_new());
     }

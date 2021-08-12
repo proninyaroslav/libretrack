@@ -47,6 +47,18 @@ class SystemTray {
       throw SystemTrayException(e.message);
     }
   }
+
+  Future<void> showWindow() async {
+    // TODO: Windows/macOS support
+    if (!_platformInfo.isLinux) {
+      return;
+    }
+    try {
+      await _channel.invokeMethod('showWindow');
+    } on PlatformException catch (e) {
+      throw SystemTrayException(e.message);
+    }
+  }
 }
 
 class SystemTrayException implements Exception {
@@ -55,7 +67,6 @@ class SystemTrayException implements Exception {
   SystemTrayException(this.message);
 
   @override
-  String toString() => message == null
-      ? 'SystemTrayException'
-      : 'SystemTrayException: $message';
+  String toString() =>
+      message == null ? 'SystemTrayException' : 'SystemTrayException: $message';
 }

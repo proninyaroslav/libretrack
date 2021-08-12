@@ -70,5 +70,12 @@ void main() {
         isMethodCall('disableTrayIcon', arguments: null),
       ]);
     });
+
+    test('Show window', () {
+      systemTray.showWindow();
+      expect(log, [
+        isMethodCall('showWindow', arguments: null),
+      ]);
+    });
   });
 }

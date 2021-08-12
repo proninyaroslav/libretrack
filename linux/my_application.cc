@@ -153,6 +153,9 @@ static void system_tray_channel_cb(SystemTrayChannel::Method method_call)
     case SystemTrayChannel::Method::DISABLE_TRAY_ICON:
         disable_tray_icon();
         break;
+    case SystemTrayChannel::Method::SHOW_WINDOW:
+        show_window();
+        break;
     }
 }
 
