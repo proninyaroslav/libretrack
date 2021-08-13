@@ -21,5 +21,7 @@ jobs:
       run: flutter config --enable-linux-desktop
     - name: Build debug Android APK
       run: flutter build apk --flavor main --debug
+    - name: Install Linux dependencies
+      run: sudo apt update && sudo apt install curl clang cmake ninja-build pkg-config libgtk-3-dev libblkid-dev liblzma-dev libjsoncpp-dev cmake-data libjsoncpp1 libsecret-1-dev libsecret-1-0 librhash0 libsqlite3-dev libappindicator3-dev gettext -y
     - name: Build debug Linux binary
       run: flutter build linux --debug
