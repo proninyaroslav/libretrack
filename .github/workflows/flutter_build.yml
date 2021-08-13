@@ -1,6 +1,7 @@
 name: Flutter Build CI
 
-on: [commit]
+# TODO: For test
+on: [push]
 
 jobs:
   build:
