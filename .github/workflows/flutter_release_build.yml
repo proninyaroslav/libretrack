@@ -1,11 +1,9 @@
 name: Flutter Release Build CI
 
-# on:
-#   push:
-#     tags:
-#     - '*'
-# TODO: for test
-on: [push]
+on:
+  push:
+    tags:
+    - '*'
 
 jobs:
   build-linux-x86_64:
@@ -39,7 +37,7 @@ jobs:
 
   build-linux-arm64:
 
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04
 
     steps:
     - uses: actions/checkout@v2
@@ -48,6 +46,7 @@ jobs:
       with:
         flutter-version: '2.2.x'
         arch: arm64
+        distro: ubuntu-18.04
     - name: Disable Google Analytics
       run: flutter config --no-analytics
     - name: Install dependencies
