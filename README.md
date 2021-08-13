@@ -112,7 +112,7 @@ Enter the following command in the terminal to build the project:
     flutter build linux
     ```
 
-    The built binary will be located in the `build/linux/x64/debug/bundle/` directory. The contents of the `bundle` directory must be fully copied.
+    The built binary will be located in the `build/linux/x64/debug/bundle/` directory (or `build/linux/arm64` for arm64 builds). The contents of the `bundle` directory must be fully copied.
 
  - **Linux Snap package**
 
