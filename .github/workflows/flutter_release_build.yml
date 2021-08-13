@@ -100,10 +100,17 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - uses: samuelmeuli/action-snapcraft@v1
+    - uses: whywaita/setup-lxd@v1
+      with:
+        lxd_version: latest/stable
     - name: Install dependencies
-      run: sudo apt update && sudo apt install ${{ env.LINUX_DEPENDENCIES }} -y
+      run:  |
+        sudo apt update && sudo apt install ${{ env.LINUX_DEPENDENCIES }} -y
+    - name: Launch LXD instance
+      run: |
+        lxc launch ubuntu:focal build-server
     - name: Build amd64
-      run: snapcraft snap --target-arch amd64 --output "${{ env.SNAP_AMD64_NAME }}"
+      run: sg lxd -c 'snapcraft snap --use-lxd --target-arch amd64 --destructive-mode --output "${{ env.SNAP_AMD64_NAME }}"'
     - name: Upload amd64 asset
       uses: actions/upload-release-asset@v1
       env:
@@ -114,7 +121,7 @@ jobs:
           asset_name: ${{ env.SNAP_AMD64_NAME }}
           asset_content_type: application/octet-stream
     - name: Build arm64
-      run: snapcraft snap --target-arch arm64 --output "${{ env.SNAP_ARM64_NAME }}"
+      run: sg lxd -c 'snapcraft snap --use-lxd --target-arch arm64 --destructive-mode --output "${{ env.SNAP_ARM64_NAME }}"'
     - name: Upload arm64 asset
       uses: actions/upload-release-asset@v1
       env:
