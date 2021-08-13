@@ -89,45 +89,46 @@ jobs:
           asset_name: ${{ env.TARBALL_NAME }}
           asset_content_type: application/gzip
 
-  build-linux-snap:
+  build-linux-snap-amd64:
 
     runs-on: ubuntu-latest
 
     env:
-      SNAP_AMD64_NAME: libretrack_${{ github.event.release.tag_name }}_linux_unsigned_amd64.snap
-      SNAP_ARM64_NAME: libretrack_${{ github.event.release.tag_name }}_linux_unsigned_arm64.snap
+      SNAP_NAME: libretrack_${{ github.event.release.tag_name }}_linux_unsigned_amd64.snap
 
     steps:
     - uses: actions/checkout@v2
-    - uses: samuelmeuli/action-snapcraft@v1
-    - uses: whywaita/setup-lxd@v1
-      with:
-        lxd_version: latest/stable
-    - name: Install dependencies
-      run:  |
-        sudo apt update && sudo apt install ${{ env.LINUX_DEPENDENCIES }} -y
-    - name: Launch LXD instance
-      run: |
-        lxc launch ubuntu:focal build-server
-    - name: Build amd64
-      run: sg lxd -c 'snapcraft snap --use-lxd --target-arch amd64 --destructive-mode --output "${{ env.SNAP_AMD64_NAME }}"'
-    - name: Upload amd64 asset
-      uses: actions/upload-release-asset@v1
+    - uses: snapcore/action-build@v1
+      id: snapcraft
+    - uses: actions/upload-release-asset@v1
+      name: Upload assets
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
           upload_url: ${{ github.event.release.upload_url }}
-          asset_path: ${{ env.SNAP_AMD64_NAME }}
-          asset_name: ${{ env.SNAP_AMD64_NAME }}
+          asset_path: ${{ steps.snapcraft.outputs.snap }}
+          asset_name: ${{ env.SNAP_NAME }}
           asset_content_type: application/octet-stream
-    - name: Build arm64
-      run: sg lxd -c 'snapcraft snap --use-lxd --target-arch arm64 --destructive-mode --output "${{ env.SNAP_ARM64_NAME }}"'
-    - name: Upload arm64 asset
-      uses: actions/upload-release-asset@v1
+
+  build-linux-snap-arm64:
+
+    runs-on: ubuntu-latest
+
+    env:
+      SNAP_NAME: libretrack_${{ github.event.release.tag_name }}_linux_unsigned_arm64.snap
+
+    steps:
+    - uses: actions/checkout@v2
+    - uses: snapcore/action-build@v1
+      id: snapcraft
+      with:
+        snapcraft-args: --target-arch arm64 --destructive-mode
+    - uses: actions/upload-release-asset@v1
+      name: Upload assets
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
           upload_url: ${{ github.event.release.upload_url }}
-          asset_path: ${{ env.SNAP_ARM64_NAME }}
-          asset_name: ${{ env.SNAP_ARM64_NAME }}
+          asset_path: ${{ steps.snapcraft.outputs.snap }}
+          asset_name: ${{ env.SNAP_NAME }}
           asset_content_type: application/octet-stream
