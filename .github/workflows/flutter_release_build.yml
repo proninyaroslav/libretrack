@@ -27,11 +27,12 @@ jobs:
       run: sudo apt update && sudo apt install curl clang cmake ninja-build pkg-config libgtk-3-dev libblkid-dev liblzma-dev libjsoncpp-dev cmake-data libjsoncpp1 libsecret-1-dev libsecret-1-0 librhash0 libsqlite3-dev libappindicator3-dev gettext -y
     - name: Build
       run: flutter build linux --release
-    - name: Publish draft release
-      uses: ncipollo/release-action@v1
+    - name: Create tarball
       run: |
         cd build/linux/x64/release/bundle
         tar -czf ../libretrack-${{ env.RELEASE_VERSION }}-linux-x86_64.tar.gz *
+    - name: Publish draft release
+      uses: ncipollo/release-action@v1
       with:
         draft: true
         artifacts: build/linux/x64/release/*.tar.gz
@@ -57,11 +58,12 @@ jobs:
       run: sudo apt update && sudo apt install curl clang cmake ninja-build pkg-config libgtk-3-dev libblkid-dev liblzma-dev libjsoncpp-dev cmake-data libjsoncpp1 libsecret-1-dev libsecret-1-0 librhash0 libsqlite3-dev libappindicator3-dev gettext -y
     - name: Build
       run: flutter build linux --release
-    - name: Publish draft release
-      uses: ncipollo/release-action@v1
+    - name: Create tarball
       run: |
         cd build/linux/arm64/release/bundle
         tar -czf ../libretrack-${{ env.RELEASE_VERSION }}-linux-arm64.tar.gz *
+    - name: Publish draft release
+      uses: ncipollo/release-action@v1
       with:
         draft: true
         artifacts: build/linux/arm64/release/*.tar.gz
