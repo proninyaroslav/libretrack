@@ -122,7 +122,7 @@ jobs:
     - uses: snapcore/action-build@v1
       id: snapcraft
       with:
-        snapcraft-args: --target-arch arm64 --destructive-mode
+        snapcraft-args: --target-arch arm64
     - uses: actions/upload-release-asset@v1
       name: Upload assets
       env:
