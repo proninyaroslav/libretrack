@@ -88,3 +88,39 @@ jobs:
           asset_path: ${{ steps.build.outputs.assets-path }}/${{ env.TARBALL_NAME }}
           asset_name: ${{ env.TARBALL_NAME }}
           asset_content_type: application/gzip
+
+  build-linux-snap:
+
+    runs-on: ubuntu-latest
+
+    env:
+      SNAP_AMD64_NAME: libretrack_${{ github.event.release.tag_name }}_linux_unsigned_amd64.snap
+      SNAP_ARM64_NAME: libretrack_${{ github.event.release.tag_name }}_linux_unsigned_arm64.snap
+
+    steps:
+    - uses: actions/checkout@v2
+    - uses: samuelmeuli/action-snapcraft@v1
+    - name: Install dependencies
+      run: sudo apt update && sudo apt install ${{ env.LINUX_DEPENDENCIES }} -y
+    - name: Build amd64
+      run: snapcraft snap --target-arch amd64 --output "${{ env.SNAP_AMD64_NAME }}"
+    - name: Upload amd64 asset
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+          upload_url: ${{ github.event.release.upload_url }}
+          asset_path: ${{ env.SNAP_AMD64_NAME }}
+          asset_name: ${{ env.SNAP_AMD64_NAME }}
+          asset_content_type: application/octet-stream
+    - name: Build arm64
+      run: snapcraft snap --target-arch arm64 --output "${{ env.SNAP_ARM64_NAME }}"
+    - name: Upload arm64 asset
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+          upload_url: ${{ github.event.release.upload_url }}
+          asset_path: ${{ env.SNAP_ARM64_NAME }}
+          asset_name: ${{ env.SNAP_ARM64_NAME }}
+          asset_content_type: application/octet-stream
