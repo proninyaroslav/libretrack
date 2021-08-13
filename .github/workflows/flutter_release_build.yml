@@ -2,9 +2,10 @@ name: Flutter Release Build CI
 
 on:
   release:
-    types: [published]
+    types: [unpublished]
 
 env:
+  FLUTTER_VERSION: '2.2.3'
   LINUX_DEPENDENCIES: git unzip zip xz-utils curl clang cmake ninja-build pkg-config libgtk-3-dev libblkid-dev liblzma-dev libjsoncpp-dev cmake-data libjsoncpp1 libsecret-1-dev libsecret-1-0 librhash0 libsqlite3-dev libappindicator3-dev gettext
 
 jobs:
@@ -13,7 +14,6 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      FLUTTER_VERSION: '2.2.x'
       TARBALL_NAME: libretrack-${{ github.event.release.tag_name }}-linux-x86_64.tar.gz
 
     steps:
@@ -50,7 +50,6 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      FLUTTER_VERSION: '2.2.3'
       TARBALL_NAME: libretrack-${{ github.event.release.tag_name }}-linux-arm64.tar.gz
 
     steps:
