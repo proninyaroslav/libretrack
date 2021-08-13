@@ -1,6 +1,6 @@
 name: Flutter Build CI
 
-on: [pull_request]
+on: [commit]
 
 jobs:
   build:
@@ -16,6 +16,8 @@ jobs:
       run: flutter config --no-analytics
     - name: Install dependencies
       run: flutter pub get
+    - name: Enable desktop support
+      run: flutter config --enable-linux-desktop
     - name: Build debug Android APK
       run: flutter build apk --flavor main --debug
     - name: Build debug Linux binary
