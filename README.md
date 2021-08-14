@@ -117,7 +117,7 @@ Enter the following command in the terminal to build the project:
  - **Linux Snap package**
 
     Before building, make sure that the `snapcraft` dependency is installed on the system.
-    
+
     Then run the following command:
 
     ```
@@ -144,7 +144,7 @@ Please see [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ## Screenshots
 
-![phone](art/screenshots/phone.png) ![phone dark](art/screenshots/phone_dark.png) ![tablet](art/screenshots/tablet.png)
+![phone](art/screenshots/phone.png) ![phone dark](art/screenshots/phone_dark.png) ![tablet](art/screenshots/tablet.png) ![desktop](art/linux_screenshots/s1.png)
 
 ## 🔒 Privacy Policy
 
