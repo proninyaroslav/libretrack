@@ -66,9 +66,9 @@ import 'ui/parcels/selectable_parcels_cubit.dart' as _i13;
 import 'ui/settings/page/appearance_cubit.dart' as _i45;
 import 'ui/settings/page/behavior_cubit.dart' as _i54;
 
+const String _test = 'test';
 const String _prod = 'prod';
 const String _dev = 'dev';
-const String _test = 'test';
 // ignore_for_file: unnecessary_lambdas
 // ignore_for_file: lines_longer_than_80_chars
 /// initializes the registration of provided dependencies inside of [GetIt]
@@ -83,11 +83,11 @@ _i1.GetIt $initGetIt(_i1.GetIt get,
   gh.factory<_i4.CrashReportIdGenerator>(
       () => _i4.CrashReportIdGeneratorImpl());
   gh.factory<_i5.DateTimeProvider>(() => _i5.DateTimeProviderImpl());
-  gh.factory<_i6.FlutterSecureStorage>(() => flutterSecureStorageModule.storage,
-      registerFor: {_prod, _dev});
   gh.factory<_i6.FlutterSecureStorage>(
       () => flutterSecureStorageModule.testStorage,
       registerFor: {_test});
+  gh.factory<_i6.FlutterSecureStorage>(() => flutterSecureStorageModule.storage,
+      registerFor: {_prod, _dev});
   gh.factory<_i7.HttpClient>(() => _i7.HttpClientImpl(get<_i3.Client>()));
   gh.factory<_i8.HttpClientFactory>(
       () => _i8.HttpClientFactoryImpl(get<_i3.Client>()));
@@ -212,10 +212,10 @@ _i1.GetIt $initGetIt(_i1.GetIt get,
       get<_i28.TrackNumberRepository>(),
       get<_i34.TrackingRepository>(),
       get<_i53.TrackingScheduler>()));
-  gh.singletonAsync<_i15.AppDatabase>(() => appDatabaseModule.db,
-      registerFor: {_prod, _dev});
   gh.singletonAsync<_i15.AppDatabase>(() => appDatabaseModule.inMemoryDb,
       registerFor: {_test});
+  gh.singletonAsync<_i15.AppDatabase>(() => appDatabaseModule.db,
+      registerFor: {_prod, _dev});
   gh.singletonWithDependencies<_i57.AppDatabaseIsolateBinder>(
       () => _i57.AppDatabaseIsolateBinder(get<_i15.AppDatabase>()),
       dependsOn: [_i15.AppDatabase]);
@@ -223,11 +223,11 @@ _i1.GetIt $initGetIt(_i1.GetIt get,
       () => _i21.ServiceRepositoryImpl(
           get<_i15.AppDatabase>(), get<_i14.ServiceAuthStorage>()),
       dependsOn: [_i15.AppDatabase]);
+  gh.singletonAsync<_i58.SharedPreferences>(() => sharedPreferencesModule.pref,
+      registerFor: {_prod, _dev});
   gh.singletonAsync<_i58.SharedPreferences>(
       () => sharedPreferencesModule.testPref,
       registerFor: {_test});
-  gh.singletonAsync<_i58.SharedPreferences>(() => sharedPreferencesModule.pref,
-      registerFor: {_prod, _dev});
   gh.singletonWithDependencies<_i33.ShipmentRepository>(
       () => _i33.ShipmentRepositoryImpl(get<_i15.AppDatabase>()),
       dependsOn: [_i15.AppDatabase]);

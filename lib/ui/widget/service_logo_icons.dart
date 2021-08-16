@@ -31,4 +31,9 @@ class ServiceLogoIconsData {
     icon: Image.asset('assets/service_logo/russian_post.png'),
     backgroundColor: const Color(0xff0055a5),
   );
+
+  static RRectIconData usps = RRectIconData.widget(
+    icon: Image.asset('assets/service_logo/usps.png'),
+    backgroundColor: Colors.white,
+  );
 }

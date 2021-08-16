@@ -33,6 +33,8 @@
     "login": "Логин",
     "password": "Пароль",
     "accessKey": "Ключ доступа",
+    "username": "Имя пользователя",
+    "companyName": "Название организации",
     "fieldRequiredError": "Это поле обязательно",
     "addAccountFailed": "Не удалось добавить аккаунт",
     "editAccountFailed": "Не удалось изменить аккаунт",
@@ -234,5 +236,7 @@
     "upsAddAccountDescription": "Необходимо ввести данные авторизации аккаунта UPS. Вы можете зарегистрировать его здесь: https://www.ups.com/doapp/signup?loc=ru_RU\nДля получения ключа доступа перейдите по ссылке и следуйте инструкциям: https://www.ups.com/upsdeveloperkit/manageaccesskeys?loc=ru_RU",
     "ups": "UPS",
     "russianPost": "Почта России",
-    "russianPostAddAccountDescription": "1) Зарегистрируйтесь на сайте Почты России: https://www.pochta.ru/\n2) Перейдите в Настройки доступа, включите API отслеживания и согласитесь с условиями сервиса: https://tracking.pochta.ru/access-settings\n3) Скопируйте в Настройках доступа логин (сгенерирован автоматически). Пароль будет отправлен на e-mail, указанный при регистрации."
+    "russianPostAddAccountDescription": "1) Зарегистрируйтесь на сайте Почты России: https://www.pochta.ru/\n2) Перейдите в Настройки доступа, включите API отслеживания и согласитесь с условиями сервиса: https://tracking.pochta.ru/access-settings\n3) Скопируйте в Настройках доступа логин (сгенерирован автоматически). Пароль будет отправлен на e-mail, указанный при регистрации.",
+    "usps": "USPS",
+    "uspsAddAccountDescription": "1) Зарегистрируйтесь на сайте USPS Web Tools API Portal: https://www.usps.com/business/web-tools-apis/web-tools-registration.htm\n2) Во время регистрации, на вопрос «How will you be using the USPS Web Tools?» ответьте «Exclusively on my Web site».\n3) После регистрации данные для авторизации будут отправлены на указанный e-mail. Скопируйте строки «Username» и «Company» (кооторая была указана при регистрации)."
 }

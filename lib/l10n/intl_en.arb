@@ -33,6 +33,8 @@
     "login": "Login",
     "password": "Password",
     "accessKey": "Access Key",
+    "username": "Username",
+    "companyName": "Company name",
     "fieldRequiredError": "This field is required",
     "addAccountFailed": "Failed to add account",
     "editAccountFailed": "Failed to edit account",
@@ -233,5 +235,7 @@
     "upsAddAccountDescription": "You need to enter your UPS account authorization information. You can register it here: https://www.ups.com/doapp/signup?loc=en_US\nTo obtain an Access Key, go the link and follow the instructions: https://www.ups.com/upsdeveloperkit/manageaccesskeys?loc=en_US",
     "ups": "UPS",
     "russianPost": "Russian Post",
-    "russianPostAddAccountDescription": "1. Register on the Russian Post website: https://www.pochta.ru/\n2. Go to Access Settings, enable the tracking API and agree to the terms of service: https://tracking.pochta.ru/access-settings\n3. In the Access Settings, copy the login (generated automatically). The password will be sent to the e-mail, provided during registration."
+    "russianPostAddAccountDescription": "1. Register on the Russian Post website: https://www.pochta.ru/\n2. Go to Access Settings, enable the tracking API and agree to the terms of service: https://tracking.pochta.ru/access-settings\n3. In the Access Settings, copy the login (generated automatically). The password will be sent to the e-mail, provided during registration.",
+    "usps": "USPS",
+    "uspsAddAccountDescription": "1. Register on the USPS Web Tools API Portal website: https://www.usps.com/business/web-tools-apis/web-tools-registration.htm\n2. During registration, to the question \"How will you be using the USPS Web Tools?\" please answer \"Exclusively on my Web site\".\n3. After registration, the authorization data will be sent to the specified e-mail. Copy \"Username\" and \"Company\" (which was specified during registration strings."
 }

@@ -380,6 +380,26 @@ class S {
     );
   }
 
+  /// `Username`
+  String get username {
+    return Intl.message(
+      'Username',
+      name: 'username',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Company name`
+  String get companyName {
+    return Intl.message(
+      'Company name',
+      name: 'companyName',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `This field is required`
   String get fieldRequiredError {
     return Intl.message(
@@ -2370,6 +2390,26 @@ class S {
     return Intl.message(
       '1. Register on the Russian Post website: https://www.pochta.ru/\n2. Go to Access Settings, enable the tracking API and agree to the terms of service: https://tracking.pochta.ru/access-settings\n3. In the Access Settings, copy the login (generated automatically). The password will be sent to the e-mail, provided during registration.',
       name: 'russianPostAddAccountDescription',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `USPS`
+  String get usps {
+    return Intl.message(
+      'USPS',
+      name: 'usps',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `1. Register on the USPS Web Tools API Portal website: https://www.usps.com/business/web-tools-apis/web-tools-registration.htm\n2. During registration, to the question "How will you be using the USPS Web Tools?" please answer "Exclusively on my Web site".\n3. After registration, the authorization data will be sent to the specified e-mail. Copy "Username" and "Company" (which was specified during registration strings.`
+  String get uspsAddAccountDescription {
+    return Intl.message(
+      '1. Register on the USPS Web Tools API Portal website: https://www.usps.com/business/web-tools-apis/web-tools-registration.htm\n2. During registration, to the question "How will you be using the USPS Web Tools?" please answer "Exclusively on my Web site".\n3. After registration, the authorization data will be sent to the specified e-mail. Copy "Username" and "Company" (which was specified during registration strings.',
+      name: 'uspsAddAccountDescription',
       desc: '',
       args: [],
     );

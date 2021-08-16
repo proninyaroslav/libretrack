@@ -129,6 +129,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
         "changelog": MessageLookupByLibrary.simpleMessage("Changelog"),
         "close": MessageLookupByLibrary.simpleMessage("Close"),
+        "companyName": MessageLookupByLibrary.simpleMessage("Company name"),
         "copiedToClipboard":
             MessageLookupByLibrary.simpleMessage("Copied to clipboard"),
         "copyTrackNumber":
@@ -446,6 +447,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "ups": MessageLookupByLibrary.simpleMessage("UPS"),
         "upsAddAccountDescription": MessageLookupByLibrary.simpleMessage(
             "You need to enter your UPS account authorization information. You can register it here: https://www.ups.com/doapp/signup?loc=en_US\nTo obtain an Access Key, go the link and follow the instructions: https://www.ups.com/upsdeveloperkit/manageaccesskeys?loc=en_US"),
+        "username": MessageLookupByLibrary.simpleMessage("Username"),
+        "usps": MessageLookupByLibrary.simpleMessage("USPS"),
+        "uspsAddAccountDescription": MessageLookupByLibrary.simpleMessage(
+            "1. Register on the USPS Web Tools API Portal website: https://www.usps.com/business/web-tools-apis/web-tools-registration.htm\n2. During registration, to the question \"How will you be using the USPS Web Tools?\" please answer \"Exclusively on my Web site\".\n3. After registration, the authorization data will be sent to the specified e-mail. Copy \"Username\" and \"Company\" (which was specified during registration strings."),
         "whoDeliveresParcel":
             MessageLookupByLibrary.simpleMessage("Who delivers the package"),
         "yes": MessageLookupByLibrary.simpleMessage("Yes")

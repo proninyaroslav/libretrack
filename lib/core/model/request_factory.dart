@@ -68,5 +68,8 @@ RequestBuilder _mapServiceToBuilder({
     case TrackingServiceType.russianPost:
       final rpAuthData = RussianPostAuthData.from(authData);
       return RussianPostRequestBuilder(rpAuthData);
+    case TrackingServiceType.usps:
+      // TODO: Handle this case.
+      throw UnimplementedError();
   }
 }

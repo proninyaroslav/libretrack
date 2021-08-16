@@ -76,6 +76,19 @@ class TrackingServiceMetadataMapper {
             )
           },
         );
+      case TrackingServiceType.usps:
+        return TrackingServiceMetadata(
+          type: TrackingServiceType.usps,
+          localizedName: S.of(context).usps,
+          iconData: ServiceLogoIconsData.usps,
+          postalServices: {
+            PostalServiceMetadata(
+              type: PostalServiceType.usps,
+              localizedName: S.of(context).usps,
+              iconData: ServiceLogoIconsData.usps,
+            )
+          },
+        );
     }
   }
 }
@@ -97,6 +110,12 @@ class PostalServiceMetadataMapper {
           type: PostalServiceType.russianPost,
           localizedName: S.of(context).russianPost,
           iconData: ServiceLogoIconsData.russianPost,
+        );
+      case PostalServiceType.usps:
+        return PostalServiceMetadata(
+          type: PostalServiceType.usps,
+          localizedName: S.of(context).usps,
+          iconData: ServiceLogoIconsData.usps,
         );
     }
   }

@@ -16,28 +16,36 @@
 // You should have received a copy of the GNU General Public License
 // along with LibreTrack.  If not, see <http://www.gnu.org/licenses/>.
 
-import 'package:injectable/injectable.dart';
+import 'package:flutter/foundation.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:libretrack/core/entity/entity.dart';
 
-import 'parser.dart';
-import 'tracking_service/tracking_service.dart';
+part 'usps_service_info.freezed.dart';
 
-abstract class ParserFactory {
-  Parser parserOf(TrackingServiceInfo info);
-}
+const String _usernameField = 'username';
+const String _companyNameField = 'companyName';
 
-@Injectable(as: ParserFactory)
-class ParserFactoryImpl implements ParserFactory {
-  @override
-  Parser parserOf(TrackingServiceInfo info) {
-    switch (info.type) {
-      case TrackingServiceType.ups:
-        return UPSParser();
-      case TrackingServiceType.russianPost:
-        return RussianPostParser();
-      case TrackingServiceType.usps:
-        // TODO: Handle this case.
-        throw UnimplementedError();
-    }
+@freezed
+class UspsAuthData with _$UspsAuthData {
+  const factory UspsAuthData({
+    required String username,
+    required String companyName,
+  }) = _UspsAuthData;
+
+  const UspsAuthData._();
+
+  // ignore: prefer_constructors_over_static_methods
+  static UspsAuthData from(AuthData authData) {
+    return UspsAuthData(
+      username: authData[_usernameField]!,
+      companyName: authData[_companyNameField]!,
+    );
+  }
+
+  AuthData toAuthData() {
+    return AuthData({
+      _usernameField: username,
+      _companyNameField: companyName,
+    });
   }
 }

@@ -36,6 +36,11 @@ abstract class RussianPostFormFieldId {
   static const password = FormFieldId('password');
 }
 
+abstract class UspsFormFieldId {
+  static const username = FormFieldId('username');
+  static const companyName = FormFieldId('companyName');
+}
+
 @freezed
 class AuthFormField with _$AuthFormField {
   const factory AuthFormField({
@@ -66,6 +71,11 @@ AuthData buildModelAuthData(
       return RussianPostAuthData(
         login: controllers[RussianPostFormFieldId.login]!.text,
         password: controllers[RussianPostFormFieldId.password]!.text,
+      ).toAuthData();
+    case TrackingServiceType.usps:
+      return UspsAuthData(
+        username: controllers[UspsFormFieldId.username]!.text,
+        companyName: controllers[UspsFormFieldId.companyName]!.text,
       ).toAuthData();
   }
 }
@@ -99,7 +109,8 @@ List<AuthFormField> buildFormField({
         ),
       ];
     case TrackingServiceType.russianPost:
-      final rpAuthData = authData == null ? null : RussianPostAuthData.from(authData);
+      final rpAuthData =
+          authData == null ? null : RussianPostAuthData.from(authData);
       return [
         AuthFormField(
           id: UPSFormFieldId.login,
@@ -114,6 +125,23 @@ List<AuthFormField> buildFormField({
           secured: true,
         ),
       ];
+    case TrackingServiceType.usps:
+      final uspsAuthData =
+          authData == null ? null : UspsAuthData.from(authData);
+      return [
+        AuthFormField(
+          id: UspsFormFieldId.username,
+          name: S.of(context).username,
+          value: uspsAuthData?.username,
+          secured: true,
+        ),
+        AuthFormField(
+          id: UspsFormFieldId.companyName,
+          name: S.of(context).companyName,
+          value: uspsAuthData?.companyName,
+          secured: false,
+        ),
+      ];
   }
 }
 
@@ -126,5 +154,7 @@ String buildHelperDescriptionText(
       return S.of(context).upsAddAccountDescription;
     case TrackingServiceType.russianPost:
       return S.of(context).russianPostAddAccountDescription;
+    case TrackingServiceType.usps:
+      return S.of(context).uspsAddAccountDescription;
   }
 }
