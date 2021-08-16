@@ -49,7 +49,7 @@ dependencies:
   freezed_annotation: ^0.14.2
   http: ^0.13.0
   image: ^3.0.2
-  injectable: ^1.4.1
+  injectable: ^1.5.0
   jiffy: ^4.0.0
   json_serializable: ^4.1.4
   logger: ^1.0.0
