@@ -18,6 +18,7 @@
 
 import 'package:flutter_test/flutter_test.dart';
 import 'package:libretrack/core/entity/entity.dart';
+import 'package:libretrack/core/model/request_builder.dart';
 import 'package:libretrack/core/model/tracking_service/usps/usps_request_builder.dart';
 import 'package:libretrack/core/model/tracking_service/usps/usps_service_info.dart';
 import 'package:uuid/uuid.dart';
@@ -57,6 +58,7 @@ void main() {
       );
       expect(r.transactionId, isNotNull);
       expect(r.url, expectedUrl);
+      expect(r.method, RequestMethod.get);
     });
   });
 }

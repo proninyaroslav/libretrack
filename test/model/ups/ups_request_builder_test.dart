@@ -20,6 +20,7 @@ import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
 import 'package:libretrack/core/entity/entity.dart';
+import 'package:libretrack/core/model/request_builder.dart';
 import 'package:libretrack/core/model/tracking_service/tracking_service.dart';
 import 'package:libretrack/core/model/type/type.dart';
 import 'package:uuid/uuid.dart';
@@ -85,6 +86,7 @@ void main() {
       expect(r.url, expectedUrl);
       expect(r.headers, expectedHeaders);
       expect(jsonDecode(r.body!), expectedBody);
+      expect(r.method, RequestMethod.post);
     });
 
     test('Production and integration url variants', () {
