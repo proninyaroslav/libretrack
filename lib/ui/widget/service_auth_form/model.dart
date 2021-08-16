@@ -36,7 +36,7 @@ abstract class RussianPostFormFieldId {
   static const password = FormFieldId('password');
 }
 
-abstract class UspsFormFieldId {
+abstract class USPSFormFieldId {
   static const username = FormFieldId('username');
   static const companyName = FormFieldId('companyName');
 }
@@ -73,9 +73,9 @@ AuthData buildModelAuthData(
         password: controllers[RussianPostFormFieldId.password]!.text,
       ).toAuthData();
     case TrackingServiceType.usps:
-      return UspsAuthData(
-        username: controllers[UspsFormFieldId.username]!.text,
-        companyName: controllers[UspsFormFieldId.companyName]!.text,
+      return USPSAuthData(
+        username: controllers[USPSFormFieldId.username]!.text,
+        companyName: controllers[USPSFormFieldId.companyName]!.text,
       ).toAuthData();
   }
 }
@@ -127,16 +127,16 @@ List<AuthFormField> buildFormField({
       ];
     case TrackingServiceType.usps:
       final uspsAuthData =
-          authData == null ? null : UspsAuthData.from(authData);
+          authData == null ? null : USPSAuthData.from(authData);
       return [
         AuthFormField(
-          id: UspsFormFieldId.username,
+          id: USPSFormFieldId.username,
           name: S.of(context).username,
           value: uspsAuthData?.username,
           secured: true,
         ),
         AuthFormField(
-          id: UspsFormFieldId.companyName,
+          id: USPSFormFieldId.companyName,
           name: S.of(context).companyName,
           value: uspsAuthData?.companyName,
           secured: false,

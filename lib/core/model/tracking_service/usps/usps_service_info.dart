@@ -26,17 +26,17 @@ const String _usernameField = 'username';
 const String _companyNameField = 'companyName';
 
 @freezed
-class UspsAuthData with _$UspsAuthData {
-  const factory UspsAuthData({
+class USPSAuthData with _$USPSAuthData {
+  const factory USPSAuthData({
     required String username,
     required String companyName,
-  }) = _UspsAuthData;
+  }) = _USPSAuthData;
 
-  const UspsAuthData._();
+  const USPSAuthData._();
 
   // ignore: prefer_constructors_over_static_methods
-  static UspsAuthData from(AuthData authData) {
-    return UspsAuthData(
+  static USPSAuthData from(AuthData authData) {
+    return USPSAuthData(
       username: authData[_usernameField]!,
       companyName: authData[_companyNameField]!,
     );

@@ -13,11 +13,11 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
-class _$UspsAuthDataTearOff {
-  const _$UspsAuthDataTearOff();
+class _$USPSAuthDataTearOff {
+  const _$USPSAuthDataTearOff();
 
-  _UspsAuthData call({required String username, required String companyName}) {
-    return _UspsAuthData(
+  _USPSAuthData call({required String username, required String companyName}) {
+    return _USPSAuthData(
       username: username,
       companyName: companyName,
     );
@@ -25,33 +25,33 @@ class _$UspsAuthDataTearOff {
 }
 
 /// @nodoc
-const $UspsAuthData = _$UspsAuthDataTearOff();
+const $USPSAuthData = _$USPSAuthDataTearOff();
 
 /// @nodoc
-mixin _$UspsAuthData {
+mixin _$USPSAuthData {
   String get username => throw _privateConstructorUsedError;
   String get companyName => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
-  $UspsAuthDataCopyWith<UspsAuthData> get copyWith =>
+  $USPSAuthDataCopyWith<USPSAuthData> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $UspsAuthDataCopyWith<$Res> {
-  factory $UspsAuthDataCopyWith(
-          UspsAuthData value, $Res Function(UspsAuthData) then) =
-      _$UspsAuthDataCopyWithImpl<$Res>;
+abstract class $USPSAuthDataCopyWith<$Res> {
+  factory $USPSAuthDataCopyWith(
+          USPSAuthData value, $Res Function(USPSAuthData) then) =
+      _$USPSAuthDataCopyWithImpl<$Res>;
   $Res call({String username, String companyName});
 }
 
 /// @nodoc
-class _$UspsAuthDataCopyWithImpl<$Res> implements $UspsAuthDataCopyWith<$Res> {
-  _$UspsAuthDataCopyWithImpl(this._value, this._then);
+class _$USPSAuthDataCopyWithImpl<$Res> implements $USPSAuthDataCopyWith<$Res> {
+  _$USPSAuthDataCopyWithImpl(this._value, this._then);
 
-  final UspsAuthData _value;
+  final USPSAuthData _value;
   // ignore: unused_field
-  final $Res Function(UspsAuthData) _then;
+  final $Res Function(USPSAuthData) _then;
 
   @override
   $Res call({
@@ -72,31 +72,31 @@ class _$UspsAuthDataCopyWithImpl<$Res> implements $UspsAuthDataCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$UspsAuthDataCopyWith<$Res>
-    implements $UspsAuthDataCopyWith<$Res> {
-  factory _$UspsAuthDataCopyWith(
-          _UspsAuthData value, $Res Function(_UspsAuthData) then) =
-      __$UspsAuthDataCopyWithImpl<$Res>;
+abstract class _$USPSAuthDataCopyWith<$Res>
+    implements $USPSAuthDataCopyWith<$Res> {
+  factory _$USPSAuthDataCopyWith(
+          _USPSAuthData value, $Res Function(_USPSAuthData) then) =
+      __$USPSAuthDataCopyWithImpl<$Res>;
   @override
   $Res call({String username, String companyName});
 }
 
 /// @nodoc
-class __$UspsAuthDataCopyWithImpl<$Res> extends _$UspsAuthDataCopyWithImpl<$Res>
-    implements _$UspsAuthDataCopyWith<$Res> {
-  __$UspsAuthDataCopyWithImpl(
-      _UspsAuthData _value, $Res Function(_UspsAuthData) _then)
-      : super(_value, (v) => _then(v as _UspsAuthData));
+class __$USPSAuthDataCopyWithImpl<$Res> extends _$USPSAuthDataCopyWithImpl<$Res>
+    implements _$USPSAuthDataCopyWith<$Res> {
+  __$USPSAuthDataCopyWithImpl(
+      _USPSAuthData _value, $Res Function(_USPSAuthData) _then)
+      : super(_value, (v) => _then(v as _USPSAuthData));
 
   @override
-  _UspsAuthData get _value => super._value as _UspsAuthData;
+  _USPSAuthData get _value => super._value as _USPSAuthData;
 
   @override
   $Res call({
     Object? username = freezed,
     Object? companyName = freezed,
   }) {
-    return _then(_UspsAuthData(
+    return _then(_USPSAuthData(
       username: username == freezed
           ? _value.username
           : username // ignore: cast_nullable_to_non_nullable
@@ -111,8 +111,8 @@ class __$UspsAuthDataCopyWithImpl<$Res> extends _$UspsAuthDataCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_UspsAuthData extends _UspsAuthData with DiagnosticableTreeMixin {
-  const _$_UspsAuthData({required this.username, required this.companyName})
+class _$_USPSAuthData extends _USPSAuthData with DiagnosticableTreeMixin {
+  const _$_USPSAuthData({required this.username, required this.companyName})
       : super._();
 
   @override
@@ -122,14 +122,14 @@ class _$_UspsAuthData extends _UspsAuthData with DiagnosticableTreeMixin {
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'UspsAuthData(username: $username, companyName: $companyName)';
+    return 'USPSAuthData(username: $username, companyName: $companyName)';
   }
 
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
     properties
-      ..add(DiagnosticsProperty('type', 'UspsAuthData'))
+      ..add(DiagnosticsProperty('type', 'USPSAuthData'))
       ..add(DiagnosticsProperty('username', username))
       ..add(DiagnosticsProperty('companyName', companyName));
   }
@@ -137,7 +137,7 @@ class _$_UspsAuthData extends _UspsAuthData with DiagnosticableTreeMixin {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _UspsAuthData &&
+        (other is _USPSAuthData &&
             (identical(other.username, username) ||
                 const DeepCollectionEquality()
                     .equals(other.username, username)) &&
@@ -154,15 +154,15 @@ class _$_UspsAuthData extends _UspsAuthData with DiagnosticableTreeMixin {
 
   @JsonKey(ignore: true)
   @override
-  _$UspsAuthDataCopyWith<_UspsAuthData> get copyWith =>
-      __$UspsAuthDataCopyWithImpl<_UspsAuthData>(this, _$identity);
+  _$USPSAuthDataCopyWith<_USPSAuthData> get copyWith =>
+      __$USPSAuthDataCopyWithImpl<_USPSAuthData>(this, _$identity);
 }
 
-abstract class _UspsAuthData extends UspsAuthData {
-  const factory _UspsAuthData(
+abstract class _USPSAuthData extends USPSAuthData {
+  const factory _USPSAuthData(
       {required String username,
-      required String companyName}) = _$_UspsAuthData;
-  const _UspsAuthData._() : super._();
+      required String companyName}) = _$_USPSAuthData;
+  const _USPSAuthData._() : super._();
 
   @override
   String get username => throw _privateConstructorUsedError;
@@ -170,6 +170,6 @@ abstract class _UspsAuthData extends UspsAuthData {
   String get companyName => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$UspsAuthDataCopyWith<_UspsAuthData> get copyWith =>
+  _$USPSAuthDataCopyWith<_USPSAuthData> get copyWith =>
       throw _privateConstructorUsedError;
 }
