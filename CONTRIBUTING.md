@@ -27,6 +27,12 @@ The original strings for translation are located in the [linux/po/messages.pot](
 
 ## ⚙️ How to make changes in the code
 
+### 📦 Note for adding new postal services
+
+Service specific code is located in [lib/core/model/tracking_service](lib/core/model/tracking_service). Each new service should be in a separate directory.
+
+To add a new service, examine the code structure of any existing plugin, for example, UPS [lib/core/model/tracking_service/ups](lib/core/model/tracking_service/ups).
+
 ### 1. Where to begin
 
 Start by looking at the [open issues](https://github.com/proninyaroslav/libretrack/issues) to contribute code.
