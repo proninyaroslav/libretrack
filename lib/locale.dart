@@ -28,6 +28,7 @@ class AppLocale {
   static const supportedLocales = [
     Locale('en', 'US'),
     Locale('es', 'ES'),
+    Locale('it', 'IT'),
     Locale('ru', 'RU'),
   ];
 

@@ -123,7 +123,7 @@
     "details": "Dettagli",
     "trackingHistory": "Cronologia di monitoraggio",
     "activateTracking": "Attiva il monitoraggio",
-    "noTrackingHistory": Nessuna cronologia di monitoraggio",
+    "noTrackingHistory": "Nessuna cronologia di monitoraggio",
     "showError": "Mostra errore",
     "trackingResponseSuccess": "Con successo",
     "trackingResponseError": "Errore",
