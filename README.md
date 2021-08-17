@@ -10,7 +10,7 @@ LibreTrack
 ![LibreTrack](fastlane/metadata/android/en-US/images/featureGraphic.png)
 
 [![Get it from the Snap Store](https://snapcraft.io/static/images/badges/en/snap-store-black.svg)](https://snapcraft.io/libretrack)
-[<img alt="Get it on Flathub" height="60" src="https://flathub.org/assets/badges/flathub-badge-i-en.png">](https://flathub.org/apps/details/ru.proninyaroslav.libretrack)
+[<img alt="Get it on Flathub" height="60" src="https://flathub.org/assets/badges/flathub-badge-en.svg">](https://flathub.org/apps/details/ru.proninyaroslav.libretrack)
 
 [<img alt="Get it on F-Droid" height="80" src="https://tachibanagenerallaboratories.github.io/images/badges/F-Droid/get-it-on.png">](https://f-droid.org/packages/org.proninyaroslav.libretrack)
 [<img alt="Get it on Google Play" height="80" src="https://tachibanagenerallaboratories.github.io/images/badges/Google%20Play/google-play-badge.png">](https://play.google.com/store/apps/details?id=org.proninyaroslav.libretrack)
