@@ -31,12 +31,6 @@ architectures:
   - build-on: arm64
     run-on: arm64
 
-slots:
-  dbus-libretrack:
-    interface: dbus
-    bus: session
-    name: ru.proninyaroslav.libretrack
-
 apps:
   libretrack:
     extensions: [flutter-stable]
@@ -44,8 +38,6 @@ apps:
     plugs:
       - network
       - home
-    slots:
-      - dbus-libretrack
 
 parts:
   libretrack:
