@@ -58,6 +58,7 @@ Track postal items directly on your device using accounts of postal services. Th
 ## 🌍 Translations
 
  - **English**
+ - **Itialian** *(thanks albanobattistella)*
  - **Russian**
  - **Spanish** *(thanks sguinetti)*
 
