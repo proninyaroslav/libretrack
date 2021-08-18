@@ -79,7 +79,7 @@ class USPSParser extends Parser {
   }
 
   ParseResult _parseTrackResponse(XmlElement trackResponse) {
-    return ParseResult.noInfo();
+    return const ParseResult.noInfo();
   }
 }
 
