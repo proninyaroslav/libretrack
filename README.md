@@ -99,6 +99,8 @@ Enter the following command in the terminal to build the project:
 
  - **Linux binary**
 
+    Note: for support system tray in GNOME, please install [gnome-shell-extension-appindicator](https://extensions.gnome.org/extension/615/appindicator-support/) or similar extension.
+
     Before building, make sure that the following dependencies are installed on the system:
     - **gtk3**
     - **libsecret**
@@ -118,6 +120,8 @@ Enter the following command in the terminal to build the project:
     The built binary will be located in the `build/linux/x64/debug/bundle/` directory (or `build/linux/arm64` for arm64 builds). The contents of the `bundle` directory must be fully copied.
 
  - **Linux Snap package**
+
+    Note: for support system tray in GNOME, please install [gnome-shell-extension-appindicator](https://extensions.gnome.org/extension/615/appindicator-support/) or similar extension.
 
     Before building, make sure that the `snapcraft` dependency is installed on the system.
 
