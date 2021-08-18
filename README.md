@@ -40,6 +40,7 @@ Track postal items directly on your device using accounts of postal services. Th
  - Material Design 2.0
  - Night theme
  - Responsive UI for different devices form factors
+ - [Linux]: System tray support. Note: for support in GNOME, please install [gnome-shell-extension-appindicator](https://extensions.gnome.org/extension/615/appindicator-support/) or similar extension.
 
 ## 🖥️💻📱 Available platforms
 
