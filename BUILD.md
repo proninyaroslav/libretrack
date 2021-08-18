@@ -66,8 +66,10 @@ Enter the following command in the terminal to build the project:
 
     ```
     flatpak install org.freedesktop.Sdk
-
+    ```
+    ```
     cd flatpak
-
+    ```
+    ```
     flatpak-builder --user --install builddir ru.proninyaroslav.libretrack.yaml --force-clean
     ```
