@@ -136,6 +136,21 @@ Enter the following command in the terminal to build the project:
     ```
     sudo snap install output_file_name.snap --dangerous
     ```
+ - **Linux Flatpak package**
+
+    Note: for support system tray in GNOME, please install [gnome-shell-extension-appindicator](https://extensions.gnome.org/extension/615/appindicator-support/) or similar extension.
+
+    Before building, make sure that the `flatpak` and `flatpak-builder` dependencies are installed on the system.
+
+    Then run the following commands:
+
+    ```
+    flatpak install org.freedesktop.Sdk
+
+    cd flatpak
+
+    flatpak-builder --user --install builddir ru.proninyaroslav.libretrack.yaml --force-clean
+    ```
 
 ## 🎉 Contributing
 
