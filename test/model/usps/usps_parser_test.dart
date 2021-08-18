@@ -18,6 +18,7 @@
 
 import 'package:flutter_test/flutter_test.dart';
 import 'package:libretrack/core/entity/entity.dart';
+import 'package:libretrack/core/model/parser.dart';
 import 'package:libretrack/core/model/service_response.dart';
 import 'package:libretrack/core/model/tracking_service/tracking_service.dart';
 import 'package:xml/xml.dart';
@@ -113,6 +114,21 @@ void main() {
           },
           orElse: () => throw e,
         ),
+        orElse: () => throw result,
+      );
+    });
+
+    test('Invalid format', () {
+      const response = ServiceResponse(
+        transactionId: TransactionId('1'),
+        statusCode: 200,
+        payload: '',
+      );
+
+      final result = parser.parse(response);
+      result.maybeWhen(
+        (info, activity, alternateTracks) => throw result,
+        error: (e) => expect(e is ParseErrorFormat, isTrue),
         orElse: () => throw result,
       );
     });
