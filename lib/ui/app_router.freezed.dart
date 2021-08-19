@@ -1,5 +1,6 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'app_router.dart';
 
@@ -77,6 +78,18 @@ mixin _$AppRoutePath {
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? unknown,
+    TResult Function(HomeRoutePath subRoute)? home,
+    TResult Function()? addAccount,
+    TResult Function(TrackingServiceType serviceType)? editAccount,
+    TResult Function(String? initialTrackNumbers)? addParcels,
+    TResult Function(String trackNumber)? parcelDetails,
+    TResult Function(SettingsRoutePath? subRoute)? settings,
+    TResult Function()? about,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? unknown,
     TResult Function(HomeRoutePath subRoute)? home,
@@ -99,6 +112,18 @@ mixin _$AppRoutePath {
     required TResult Function(AppRoutePathParcelDetails value) parcelDetails,
     required TResult Function(AppRoutePathSettings value) settings,
     required TResult Function(AppRoutePathAbout value) about,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(AppRoutePathUnknown value)? unknown,
+    TResult Function(AppRoutePathHome value)? home,
+    TResult Function(AppRoutePathAddAccount value)? addAccount,
+    TResult Function(AppRoutePathEditAccount value)? editAccount,
+    TResult Function(AppRoutePathAddParcels value)? addParcels,
+    TResult Function(AppRoutePathParcelDetails value)? parcelDetails,
+    TResult Function(AppRoutePathSettings value)? settings,
+    TResult Function(AppRoutePathAbout value)? about,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -194,6 +219,21 @@ class _$AppRoutePathUnknown
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? unknown,
+    TResult Function(HomeRoutePath subRoute)? home,
+    TResult Function()? addAccount,
+    TResult Function(TrackingServiceType serviceType)? editAccount,
+    TResult Function(String? initialTrackNumbers)? addParcels,
+    TResult Function(String trackNumber)? parcelDetails,
+    TResult Function(SettingsRoutePath? subRoute)? settings,
+    TResult Function()? about,
+  }) {
+    return unknown?.call();
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? unknown,
     TResult Function(HomeRoutePath subRoute)? home,
@@ -224,6 +264,21 @@ class _$AppRoutePathUnknown
     required TResult Function(AppRoutePathAbout value) about,
   }) {
     return unknown(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(AppRoutePathUnknown value)? unknown,
+    TResult Function(AppRoutePathHome value)? home,
+    TResult Function(AppRoutePathAddAccount value)? addAccount,
+    TResult Function(AppRoutePathEditAccount value)? editAccount,
+    TResult Function(AppRoutePathAddParcels value)? addParcels,
+    TResult Function(AppRoutePathParcelDetails value)? parcelDetails,
+    TResult Function(AppRoutePathSettings value)? settings,
+    TResult Function(AppRoutePathAbout value)? about,
+  }) {
+    return unknown?.call(this);
   }
 
   @override
@@ -349,6 +404,21 @@ class _$AppRoutePathHome
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? unknown,
+    TResult Function(HomeRoutePath subRoute)? home,
+    TResult Function()? addAccount,
+    TResult Function(TrackingServiceType serviceType)? editAccount,
+    TResult Function(String? initialTrackNumbers)? addParcels,
+    TResult Function(String trackNumber)? parcelDetails,
+    TResult Function(SettingsRoutePath? subRoute)? settings,
+    TResult Function()? about,
+  }) {
+    return home?.call(subRoute);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? unknown,
     TResult Function(HomeRoutePath subRoute)? home,
@@ -379,6 +449,21 @@ class _$AppRoutePathHome
     required TResult Function(AppRoutePathAbout value) about,
   }) {
     return home(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(AppRoutePathUnknown value)? unknown,
+    TResult Function(AppRoutePathHome value)? home,
+    TResult Function(AppRoutePathAddAccount value)? addAccount,
+    TResult Function(AppRoutePathEditAccount value)? editAccount,
+    TResult Function(AppRoutePathAddParcels value)? addParcels,
+    TResult Function(AppRoutePathParcelDetails value)? parcelDetails,
+    TResult Function(AppRoutePathSettings value)? settings,
+    TResult Function(AppRoutePathAbout value)? about,
+  }) {
+    return home?.call(this);
   }
 
   @override
@@ -472,6 +557,21 @@ class _$AppRoutePathAddAccount
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? unknown,
+    TResult Function(HomeRoutePath subRoute)? home,
+    TResult Function()? addAccount,
+    TResult Function(TrackingServiceType serviceType)? editAccount,
+    TResult Function(String? initialTrackNumbers)? addParcels,
+    TResult Function(String trackNumber)? parcelDetails,
+    TResult Function(SettingsRoutePath? subRoute)? settings,
+    TResult Function()? about,
+  }) {
+    return addAccount?.call();
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? unknown,
     TResult Function(HomeRoutePath subRoute)? home,
@@ -502,6 +602,21 @@ class _$AppRoutePathAddAccount
     required TResult Function(AppRoutePathAbout value) about,
   }) {
     return addAccount(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(AppRoutePathUnknown value)? unknown,
+    TResult Function(AppRoutePathHome value)? home,
+    TResult Function(AppRoutePathAddAccount value)? addAccount,
+    TResult Function(AppRoutePathEditAccount value)? editAccount,
+    TResult Function(AppRoutePathAddParcels value)? addParcels,
+    TResult Function(AppRoutePathParcelDetails value)? parcelDetails,
+    TResult Function(AppRoutePathSettings value)? settings,
+    TResult Function(AppRoutePathAbout value)? about,
+  }) {
+    return addAccount?.call(this);
   }
 
   @override
@@ -619,6 +734,21 @@ class _$AppRoutePathEditAccount
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? unknown,
+    TResult Function(HomeRoutePath subRoute)? home,
+    TResult Function()? addAccount,
+    TResult Function(TrackingServiceType serviceType)? editAccount,
+    TResult Function(String? initialTrackNumbers)? addParcels,
+    TResult Function(String trackNumber)? parcelDetails,
+    TResult Function(SettingsRoutePath? subRoute)? settings,
+    TResult Function()? about,
+  }) {
+    return editAccount?.call(serviceType);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? unknown,
     TResult Function(HomeRoutePath subRoute)? home,
@@ -649,6 +779,21 @@ class _$AppRoutePathEditAccount
     required TResult Function(AppRoutePathAbout value) about,
   }) {
     return editAccount(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(AppRoutePathUnknown value)? unknown,
+    TResult Function(AppRoutePathHome value)? home,
+    TResult Function(AppRoutePathAddAccount value)? addAccount,
+    TResult Function(AppRoutePathEditAccount value)? editAccount,
+    TResult Function(AppRoutePathAddParcels value)? addParcels,
+    TResult Function(AppRoutePathParcelDetails value)? parcelDetails,
+    TResult Function(AppRoutePathSettings value)? settings,
+    TResult Function(AppRoutePathAbout value)? about,
+  }) {
+    return editAccount?.call(this);
   }
 
   @override
@@ -773,6 +918,21 @@ class _$AppRoutePathAddParcels
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? unknown,
+    TResult Function(HomeRoutePath subRoute)? home,
+    TResult Function()? addAccount,
+    TResult Function(TrackingServiceType serviceType)? editAccount,
+    TResult Function(String? initialTrackNumbers)? addParcels,
+    TResult Function(String trackNumber)? parcelDetails,
+    TResult Function(SettingsRoutePath? subRoute)? settings,
+    TResult Function()? about,
+  }) {
+    return addParcels?.call(initialTrackNumbers);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? unknown,
     TResult Function(HomeRoutePath subRoute)? home,
@@ -803,6 +963,21 @@ class _$AppRoutePathAddParcels
     required TResult Function(AppRoutePathAbout value) about,
   }) {
     return addParcels(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(AppRoutePathUnknown value)? unknown,
+    TResult Function(AppRoutePathHome value)? home,
+    TResult Function(AppRoutePathAddAccount value)? addAccount,
+    TResult Function(AppRoutePathEditAccount value)? editAccount,
+    TResult Function(AppRoutePathAddParcels value)? addParcels,
+    TResult Function(AppRoutePathParcelDetails value)? parcelDetails,
+    TResult Function(AppRoutePathSettings value)? settings,
+    TResult Function(AppRoutePathAbout value)? about,
+  }) {
+    return addParcels?.call(this);
   }
 
   @override
@@ -927,6 +1102,21 @@ class _$AppRoutePathParcelDetails
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? unknown,
+    TResult Function(HomeRoutePath subRoute)? home,
+    TResult Function()? addAccount,
+    TResult Function(TrackingServiceType serviceType)? editAccount,
+    TResult Function(String? initialTrackNumbers)? addParcels,
+    TResult Function(String trackNumber)? parcelDetails,
+    TResult Function(SettingsRoutePath? subRoute)? settings,
+    TResult Function()? about,
+  }) {
+    return parcelDetails?.call(trackNumber);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? unknown,
     TResult Function(HomeRoutePath subRoute)? home,
@@ -957,6 +1147,21 @@ class _$AppRoutePathParcelDetails
     required TResult Function(AppRoutePathAbout value) about,
   }) {
     return parcelDetails(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(AppRoutePathUnknown value)? unknown,
+    TResult Function(AppRoutePathHome value)? home,
+    TResult Function(AppRoutePathAddAccount value)? addAccount,
+    TResult Function(AppRoutePathEditAccount value)? editAccount,
+    TResult Function(AppRoutePathAddParcels value)? addParcels,
+    TResult Function(AppRoutePathParcelDetails value)? parcelDetails,
+    TResult Function(AppRoutePathSettings value)? settings,
+    TResult Function(AppRoutePathAbout value)? about,
+  }) {
+    return parcelDetails?.call(this);
   }
 
   @override
@@ -1093,6 +1298,21 @@ class _$AppRoutePathSettings
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? unknown,
+    TResult Function(HomeRoutePath subRoute)? home,
+    TResult Function()? addAccount,
+    TResult Function(TrackingServiceType serviceType)? editAccount,
+    TResult Function(String? initialTrackNumbers)? addParcels,
+    TResult Function(String trackNumber)? parcelDetails,
+    TResult Function(SettingsRoutePath? subRoute)? settings,
+    TResult Function()? about,
+  }) {
+    return settings?.call(subRoute);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? unknown,
     TResult Function(HomeRoutePath subRoute)? home,
@@ -1123,6 +1343,21 @@ class _$AppRoutePathSettings
     required TResult Function(AppRoutePathAbout value) about,
   }) {
     return settings(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(AppRoutePathUnknown value)? unknown,
+    TResult Function(AppRoutePathHome value)? home,
+    TResult Function(AppRoutePathAddAccount value)? addAccount,
+    TResult Function(AppRoutePathEditAccount value)? editAccount,
+    TResult Function(AppRoutePathAddParcels value)? addParcels,
+    TResult Function(AppRoutePathParcelDetails value)? parcelDetails,
+    TResult Function(AppRoutePathSettings value)? settings,
+    TResult Function(AppRoutePathAbout value)? about,
+  }) {
+    return settings?.call(this);
   }
 
   @override
@@ -1217,6 +1452,21 @@ class _$AppRoutePathAbout
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? unknown,
+    TResult Function(HomeRoutePath subRoute)? home,
+    TResult Function()? addAccount,
+    TResult Function(TrackingServiceType serviceType)? editAccount,
+    TResult Function(String? initialTrackNumbers)? addParcels,
+    TResult Function(String trackNumber)? parcelDetails,
+    TResult Function(SettingsRoutePath? subRoute)? settings,
+    TResult Function()? about,
+  }) {
+    return about?.call();
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? unknown,
     TResult Function(HomeRoutePath subRoute)? home,
@@ -1247,6 +1497,21 @@ class _$AppRoutePathAbout
     required TResult Function(AppRoutePathAbout value) about,
   }) {
     return about(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(AppRoutePathUnknown value)? unknown,
+    TResult Function(AppRoutePathHome value)? home,
+    TResult Function(AppRoutePathAddAccount value)? addAccount,
+    TResult Function(AppRoutePathEditAccount value)? editAccount,
+    TResult Function(AppRoutePathAddParcels value)? addParcels,
+    TResult Function(AppRoutePathParcelDetails value)? parcelDetails,
+    TResult Function(AppRoutePathSettings value)? settings,
+    TResult Function(AppRoutePathAbout value)? about,
+  }) {
+    return about?.call(this);
   }
 
   @override
@@ -1298,6 +1563,12 @@ mixin _$HomeRoutePath {
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? parcels,
+    TResult Function()? accounts,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? parcels,
     TResult Function()? accounts,
@@ -1308,6 +1579,12 @@ mixin _$HomeRoutePath {
   TResult map<TResult extends Object?>({
     required TResult Function(HomeRoutePathParcels value) parcels,
     required TResult Function(HomeRoutePathAccounts value) accounts,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(HomeRoutePathParcels value)? parcels,
+    TResult Function(HomeRoutePathAccounts value)? accounts,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -1392,6 +1669,15 @@ class _$HomeRoutePathParcels
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? parcels,
+    TResult Function()? accounts,
+  }) {
+    return parcels?.call();
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? parcels,
     TResult Function()? accounts,
@@ -1410,6 +1696,15 @@ class _$HomeRoutePathParcels
     required TResult Function(HomeRoutePathAccounts value) accounts,
   }) {
     return parcels(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(HomeRoutePathParcels value)? parcels,
+    TResult Function(HomeRoutePathAccounts value)? accounts,
+  }) {
+    return parcels?.call(this);
   }
 
   @override
@@ -1486,6 +1781,15 @@ class _$HomeRoutePathAccounts
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? parcels,
+    TResult Function()? accounts,
+  }) {
+    return accounts?.call();
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? parcels,
     TResult Function()? accounts,
@@ -1504,6 +1808,15 @@ class _$HomeRoutePathAccounts
     required TResult Function(HomeRoutePathAccounts value) accounts,
   }) {
     return accounts(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(HomeRoutePathParcels value)? parcels,
+    TResult Function(HomeRoutePathAccounts value)? accounts,
+  }) {
+    return accounts?.call(this);
   }
 
   @override
@@ -1549,6 +1862,12 @@ mixin _$SettingsRoutePath {
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? appearance,
+    TResult Function()? behavior,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? appearance,
     TResult Function()? behavior,
@@ -1559,6 +1878,12 @@ mixin _$SettingsRoutePath {
   TResult map<TResult extends Object?>({
     required TResult Function(SettingsRoutePathAppearance value) appearance,
     required TResult Function(SettingsRoutePathBehavior value) behavior,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(SettingsRoutePathAppearance value)? appearance,
+    TResult Function(SettingsRoutePathBehavior value)? behavior,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -1646,6 +1971,15 @@ class _$SettingsRoutePathAppearance
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? appearance,
+    TResult Function()? behavior,
+  }) {
+    return appearance?.call();
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? appearance,
     TResult Function()? behavior,
@@ -1664,6 +1998,15 @@ class _$SettingsRoutePathAppearance
     required TResult Function(SettingsRoutePathBehavior value) behavior,
   }) {
     return appearance(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(SettingsRoutePathAppearance value)? appearance,
+    TResult Function(SettingsRoutePathBehavior value)? behavior,
+  }) {
+    return appearance?.call(this);
   }
 
   @override
@@ -1741,6 +2084,15 @@ class _$SettingsRoutePathBehavior
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? appearance,
+    TResult Function()? behavior,
+  }) {
+    return behavior?.call();
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? appearance,
     TResult Function()? behavior,
@@ -1759,6 +2111,15 @@ class _$SettingsRoutePathBehavior
     required TResult Function(SettingsRoutePathBehavior value) behavior,
   }) {
     return behavior(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(SettingsRoutePathAppearance value)? appearance,
+    TResult Function(SettingsRoutePathBehavior value)? behavior,
+  }) {
+    return behavior?.call(this);
   }
 
   @override
@@ -1865,6 +2226,21 @@ mixin _$RouterState {
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? unknown,
+    TResult Function(HomeRoutePath subRoute)? home,
+    TResult Function()? addAccount,
+    TResult Function(TrackingServiceType serviceType)? editAccount,
+    TResult Function(TrackingNumbers? initialTrackNumbers)? addParcels,
+    TResult Function(String trackNumber)? parcelDetails,
+    TResult Function(String trackNumber)? addMissingParcel,
+    TResult Function(String trackNumber)? addParcelAndShow,
+    TResult Function(String trackNumber)? showAddedParcel,
+    TResult Function(SettingsRoutePath? subRoute)? settings,
+    TResult Function()? about,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? unknown,
     TResult Function(HomeRoutePath subRoute)? home,
@@ -1895,6 +2271,21 @@ mixin _$RouterState {
     required TResult Function(RouterStateShowAddedParcel value) showAddedParcel,
     required TResult Function(RouterStateSettings value) settings,
     required TResult Function(RouterStateAbout value) about,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(RouterStateUnknown value)? unknown,
+    TResult Function(RouterStateHome value)? home,
+    TResult Function(RouterStateAddAccount value)? addAccount,
+    TResult Function(RouterStateEditAccount value)? editAccount,
+    TResult Function(RouterStateAddParcels value)? addParcels,
+    TResult Function(RouterStateParcelDetails value)? parcelDetails,
+    TResult Function(RouterStateAddMissingParcel value)? addMissingParcel,
+    TResult Function(RouterStateAddParcelAndShow value)? addParcelAndShow,
+    TResult Function(RouterStateShowAddedParcel value)? showAddedParcel,
+    TResult Function(RouterStateSettings value)? settings,
+    TResult Function(RouterStateAbout value)? about,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -1996,6 +2387,24 @@ class _$RouterStateUnknown
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? unknown,
+    TResult Function(HomeRoutePath subRoute)? home,
+    TResult Function()? addAccount,
+    TResult Function(TrackingServiceType serviceType)? editAccount,
+    TResult Function(TrackingNumbers? initialTrackNumbers)? addParcels,
+    TResult Function(String trackNumber)? parcelDetails,
+    TResult Function(String trackNumber)? addMissingParcel,
+    TResult Function(String trackNumber)? addParcelAndShow,
+    TResult Function(String trackNumber)? showAddedParcel,
+    TResult Function(SettingsRoutePath? subRoute)? settings,
+    TResult Function()? about,
+  }) {
+    return unknown?.call();
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? unknown,
     TResult Function(HomeRoutePath subRoute)? home,
@@ -2034,6 +2443,24 @@ class _$RouterStateUnknown
     required TResult Function(RouterStateAbout value) about,
   }) {
     return unknown(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(RouterStateUnknown value)? unknown,
+    TResult Function(RouterStateHome value)? home,
+    TResult Function(RouterStateAddAccount value)? addAccount,
+    TResult Function(RouterStateEditAccount value)? editAccount,
+    TResult Function(RouterStateAddParcels value)? addParcels,
+    TResult Function(RouterStateParcelDetails value)? parcelDetails,
+    TResult Function(RouterStateAddMissingParcel value)? addMissingParcel,
+    TResult Function(RouterStateAddParcelAndShow value)? addParcelAndShow,
+    TResult Function(RouterStateShowAddedParcel value)? showAddedParcel,
+    TResult Function(RouterStateSettings value)? settings,
+    TResult Function(RouterStateAbout value)? about,
+  }) {
+    return unknown?.call(this);
   }
 
   @override
@@ -2165,6 +2592,24 @@ class _$RouterStateHome
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? unknown,
+    TResult Function(HomeRoutePath subRoute)? home,
+    TResult Function()? addAccount,
+    TResult Function(TrackingServiceType serviceType)? editAccount,
+    TResult Function(TrackingNumbers? initialTrackNumbers)? addParcels,
+    TResult Function(String trackNumber)? parcelDetails,
+    TResult Function(String trackNumber)? addMissingParcel,
+    TResult Function(String trackNumber)? addParcelAndShow,
+    TResult Function(String trackNumber)? showAddedParcel,
+    TResult Function(SettingsRoutePath? subRoute)? settings,
+    TResult Function()? about,
+  }) {
+    return home?.call(subRoute);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? unknown,
     TResult Function(HomeRoutePath subRoute)? home,
@@ -2203,6 +2648,24 @@ class _$RouterStateHome
     required TResult Function(RouterStateAbout value) about,
   }) {
     return home(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(RouterStateUnknown value)? unknown,
+    TResult Function(RouterStateHome value)? home,
+    TResult Function(RouterStateAddAccount value)? addAccount,
+    TResult Function(RouterStateEditAccount value)? editAccount,
+    TResult Function(RouterStateAddParcels value)? addParcels,
+    TResult Function(RouterStateParcelDetails value)? parcelDetails,
+    TResult Function(RouterStateAddMissingParcel value)? addMissingParcel,
+    TResult Function(RouterStateAddParcelAndShow value)? addParcelAndShow,
+    TResult Function(RouterStateShowAddedParcel value)? showAddedParcel,
+    TResult Function(RouterStateSettings value)? settings,
+    TResult Function(RouterStateAbout value)? about,
+  }) {
+    return home?.call(this);
   }
 
   @override
@@ -2302,6 +2765,24 @@ class _$RouterStateAddAccount
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? unknown,
+    TResult Function(HomeRoutePath subRoute)? home,
+    TResult Function()? addAccount,
+    TResult Function(TrackingServiceType serviceType)? editAccount,
+    TResult Function(TrackingNumbers? initialTrackNumbers)? addParcels,
+    TResult Function(String trackNumber)? parcelDetails,
+    TResult Function(String trackNumber)? addMissingParcel,
+    TResult Function(String trackNumber)? addParcelAndShow,
+    TResult Function(String trackNumber)? showAddedParcel,
+    TResult Function(SettingsRoutePath? subRoute)? settings,
+    TResult Function()? about,
+  }) {
+    return addAccount?.call();
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? unknown,
     TResult Function(HomeRoutePath subRoute)? home,
@@ -2340,6 +2821,24 @@ class _$RouterStateAddAccount
     required TResult Function(RouterStateAbout value) about,
   }) {
     return addAccount(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(RouterStateUnknown value)? unknown,
+    TResult Function(RouterStateHome value)? home,
+    TResult Function(RouterStateAddAccount value)? addAccount,
+    TResult Function(RouterStateEditAccount value)? editAccount,
+    TResult Function(RouterStateAddParcels value)? addParcels,
+    TResult Function(RouterStateParcelDetails value)? parcelDetails,
+    TResult Function(RouterStateAddMissingParcel value)? addMissingParcel,
+    TResult Function(RouterStateAddParcelAndShow value)? addParcelAndShow,
+    TResult Function(RouterStateShowAddedParcel value)? showAddedParcel,
+    TResult Function(RouterStateSettings value)? settings,
+    TResult Function(RouterStateAbout value)? about,
+  }) {
+    return addAccount?.call(this);
   }
 
   @override
@@ -2463,6 +2962,24 @@ class _$RouterStateEditAccount
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? unknown,
+    TResult Function(HomeRoutePath subRoute)? home,
+    TResult Function()? addAccount,
+    TResult Function(TrackingServiceType serviceType)? editAccount,
+    TResult Function(TrackingNumbers? initialTrackNumbers)? addParcels,
+    TResult Function(String trackNumber)? parcelDetails,
+    TResult Function(String trackNumber)? addMissingParcel,
+    TResult Function(String trackNumber)? addParcelAndShow,
+    TResult Function(String trackNumber)? showAddedParcel,
+    TResult Function(SettingsRoutePath? subRoute)? settings,
+    TResult Function()? about,
+  }) {
+    return editAccount?.call(serviceType);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? unknown,
     TResult Function(HomeRoutePath subRoute)? home,
@@ -2501,6 +3018,24 @@ class _$RouterStateEditAccount
     required TResult Function(RouterStateAbout value) about,
   }) {
     return editAccount(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(RouterStateUnknown value)? unknown,
+    TResult Function(RouterStateHome value)? home,
+    TResult Function(RouterStateAddAccount value)? addAccount,
+    TResult Function(RouterStateEditAccount value)? editAccount,
+    TResult Function(RouterStateAddParcels value)? addParcels,
+    TResult Function(RouterStateParcelDetails value)? parcelDetails,
+    TResult Function(RouterStateAddMissingParcel value)? addMissingParcel,
+    TResult Function(RouterStateAddParcelAndShow value)? addParcelAndShow,
+    TResult Function(RouterStateShowAddedParcel value)? showAddedParcel,
+    TResult Function(RouterStateSettings value)? settings,
+    TResult Function(RouterStateAbout value)? about,
+  }) {
+    return editAccount?.call(this);
   }
 
   @override
@@ -2644,6 +3179,24 @@ class _$RouterStateAddParcels
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? unknown,
+    TResult Function(HomeRoutePath subRoute)? home,
+    TResult Function()? addAccount,
+    TResult Function(TrackingServiceType serviceType)? editAccount,
+    TResult Function(TrackingNumbers? initialTrackNumbers)? addParcels,
+    TResult Function(String trackNumber)? parcelDetails,
+    TResult Function(String trackNumber)? addMissingParcel,
+    TResult Function(String trackNumber)? addParcelAndShow,
+    TResult Function(String trackNumber)? showAddedParcel,
+    TResult Function(SettingsRoutePath? subRoute)? settings,
+    TResult Function()? about,
+  }) {
+    return addParcels?.call(initialTrackNumbers);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? unknown,
     TResult Function(HomeRoutePath subRoute)? home,
@@ -2682,6 +3235,24 @@ class _$RouterStateAddParcels
     required TResult Function(RouterStateAbout value) about,
   }) {
     return addParcels(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(RouterStateUnknown value)? unknown,
+    TResult Function(RouterStateHome value)? home,
+    TResult Function(RouterStateAddAccount value)? addAccount,
+    TResult Function(RouterStateEditAccount value)? editAccount,
+    TResult Function(RouterStateAddParcels value)? addParcels,
+    TResult Function(RouterStateParcelDetails value)? parcelDetails,
+    TResult Function(RouterStateAddMissingParcel value)? addMissingParcel,
+    TResult Function(RouterStateAddParcelAndShow value)? addParcelAndShow,
+    TResult Function(RouterStateShowAddedParcel value)? showAddedParcel,
+    TResult Function(RouterStateSettings value)? settings,
+    TResult Function(RouterStateAbout value)? about,
+  }) {
+    return addParcels?.call(this);
   }
 
   @override
@@ -2813,6 +3384,24 @@ class _$RouterStateParcelDetails
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? unknown,
+    TResult Function(HomeRoutePath subRoute)? home,
+    TResult Function()? addAccount,
+    TResult Function(TrackingServiceType serviceType)? editAccount,
+    TResult Function(TrackingNumbers? initialTrackNumbers)? addParcels,
+    TResult Function(String trackNumber)? parcelDetails,
+    TResult Function(String trackNumber)? addMissingParcel,
+    TResult Function(String trackNumber)? addParcelAndShow,
+    TResult Function(String trackNumber)? showAddedParcel,
+    TResult Function(SettingsRoutePath? subRoute)? settings,
+    TResult Function()? about,
+  }) {
+    return parcelDetails?.call(trackNumber);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? unknown,
     TResult Function(HomeRoutePath subRoute)? home,
@@ -2851,6 +3440,24 @@ class _$RouterStateParcelDetails
     required TResult Function(RouterStateAbout value) about,
   }) {
     return parcelDetails(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(RouterStateUnknown value)? unknown,
+    TResult Function(RouterStateHome value)? home,
+    TResult Function(RouterStateAddAccount value)? addAccount,
+    TResult Function(RouterStateEditAccount value)? editAccount,
+    TResult Function(RouterStateAddParcels value)? addParcels,
+    TResult Function(RouterStateParcelDetails value)? parcelDetails,
+    TResult Function(RouterStateAddMissingParcel value)? addMissingParcel,
+    TResult Function(RouterStateAddParcelAndShow value)? addParcelAndShow,
+    TResult Function(RouterStateShowAddedParcel value)? showAddedParcel,
+    TResult Function(RouterStateSettings value)? settings,
+    TResult Function(RouterStateAbout value)? about,
+  }) {
+    return parcelDetails?.call(this);
   }
 
   @override
@@ -2982,6 +3589,24 @@ class _$RouterStateAddMissingParcel
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? unknown,
+    TResult Function(HomeRoutePath subRoute)? home,
+    TResult Function()? addAccount,
+    TResult Function(TrackingServiceType serviceType)? editAccount,
+    TResult Function(TrackingNumbers? initialTrackNumbers)? addParcels,
+    TResult Function(String trackNumber)? parcelDetails,
+    TResult Function(String trackNumber)? addMissingParcel,
+    TResult Function(String trackNumber)? addParcelAndShow,
+    TResult Function(String trackNumber)? showAddedParcel,
+    TResult Function(SettingsRoutePath? subRoute)? settings,
+    TResult Function()? about,
+  }) {
+    return addMissingParcel?.call(trackNumber);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? unknown,
     TResult Function(HomeRoutePath subRoute)? home,
@@ -3020,6 +3645,24 @@ class _$RouterStateAddMissingParcel
     required TResult Function(RouterStateAbout value) about,
   }) {
     return addMissingParcel(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(RouterStateUnknown value)? unknown,
+    TResult Function(RouterStateHome value)? home,
+    TResult Function(RouterStateAddAccount value)? addAccount,
+    TResult Function(RouterStateEditAccount value)? editAccount,
+    TResult Function(RouterStateAddParcels value)? addParcels,
+    TResult Function(RouterStateParcelDetails value)? parcelDetails,
+    TResult Function(RouterStateAddMissingParcel value)? addMissingParcel,
+    TResult Function(RouterStateAddParcelAndShow value)? addParcelAndShow,
+    TResult Function(RouterStateShowAddedParcel value)? showAddedParcel,
+    TResult Function(RouterStateSettings value)? settings,
+    TResult Function(RouterStateAbout value)? about,
+  }) {
+    return addMissingParcel?.call(this);
   }
 
   @override
@@ -3151,6 +3794,24 @@ class _$RouterStateAddParcelAndShow
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? unknown,
+    TResult Function(HomeRoutePath subRoute)? home,
+    TResult Function()? addAccount,
+    TResult Function(TrackingServiceType serviceType)? editAccount,
+    TResult Function(TrackingNumbers? initialTrackNumbers)? addParcels,
+    TResult Function(String trackNumber)? parcelDetails,
+    TResult Function(String trackNumber)? addMissingParcel,
+    TResult Function(String trackNumber)? addParcelAndShow,
+    TResult Function(String trackNumber)? showAddedParcel,
+    TResult Function(SettingsRoutePath? subRoute)? settings,
+    TResult Function()? about,
+  }) {
+    return addParcelAndShow?.call(trackNumber);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? unknown,
     TResult Function(HomeRoutePath subRoute)? home,
@@ -3189,6 +3850,24 @@ class _$RouterStateAddParcelAndShow
     required TResult Function(RouterStateAbout value) about,
   }) {
     return addParcelAndShow(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(RouterStateUnknown value)? unknown,
+    TResult Function(RouterStateHome value)? home,
+    TResult Function(RouterStateAddAccount value)? addAccount,
+    TResult Function(RouterStateEditAccount value)? editAccount,
+    TResult Function(RouterStateAddParcels value)? addParcels,
+    TResult Function(RouterStateParcelDetails value)? parcelDetails,
+    TResult Function(RouterStateAddMissingParcel value)? addMissingParcel,
+    TResult Function(RouterStateAddParcelAndShow value)? addParcelAndShow,
+    TResult Function(RouterStateShowAddedParcel value)? showAddedParcel,
+    TResult Function(RouterStateSettings value)? settings,
+    TResult Function(RouterStateAbout value)? about,
+  }) {
+    return addParcelAndShow?.call(this);
   }
 
   @override
@@ -3320,6 +3999,24 @@ class _$RouterStateShowAddedParcel
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? unknown,
+    TResult Function(HomeRoutePath subRoute)? home,
+    TResult Function()? addAccount,
+    TResult Function(TrackingServiceType serviceType)? editAccount,
+    TResult Function(TrackingNumbers? initialTrackNumbers)? addParcels,
+    TResult Function(String trackNumber)? parcelDetails,
+    TResult Function(String trackNumber)? addMissingParcel,
+    TResult Function(String trackNumber)? addParcelAndShow,
+    TResult Function(String trackNumber)? showAddedParcel,
+    TResult Function(SettingsRoutePath? subRoute)? settings,
+    TResult Function()? about,
+  }) {
+    return showAddedParcel?.call(trackNumber);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? unknown,
     TResult Function(HomeRoutePath subRoute)? home,
@@ -3358,6 +4055,24 @@ class _$RouterStateShowAddedParcel
     required TResult Function(RouterStateAbout value) about,
   }) {
     return showAddedParcel(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(RouterStateUnknown value)? unknown,
+    TResult Function(RouterStateHome value)? home,
+    TResult Function(RouterStateAddAccount value)? addAccount,
+    TResult Function(RouterStateEditAccount value)? editAccount,
+    TResult Function(RouterStateAddParcels value)? addParcels,
+    TResult Function(RouterStateParcelDetails value)? parcelDetails,
+    TResult Function(RouterStateAddMissingParcel value)? addMissingParcel,
+    TResult Function(RouterStateAddParcelAndShow value)? addParcelAndShow,
+    TResult Function(RouterStateShowAddedParcel value)? showAddedParcel,
+    TResult Function(RouterStateSettings value)? settings,
+    TResult Function(RouterStateAbout value)? about,
+  }) {
+    return showAddedParcel?.call(this);
   }
 
   @override
@@ -3499,6 +4214,24 @@ class _$RouterStateSettings
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? unknown,
+    TResult Function(HomeRoutePath subRoute)? home,
+    TResult Function()? addAccount,
+    TResult Function(TrackingServiceType serviceType)? editAccount,
+    TResult Function(TrackingNumbers? initialTrackNumbers)? addParcels,
+    TResult Function(String trackNumber)? parcelDetails,
+    TResult Function(String trackNumber)? addMissingParcel,
+    TResult Function(String trackNumber)? addParcelAndShow,
+    TResult Function(String trackNumber)? showAddedParcel,
+    TResult Function(SettingsRoutePath? subRoute)? settings,
+    TResult Function()? about,
+  }) {
+    return settings?.call(subRoute);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? unknown,
     TResult Function(HomeRoutePath subRoute)? home,
@@ -3537,6 +4270,24 @@ class _$RouterStateSettings
     required TResult Function(RouterStateAbout value) about,
   }) {
     return settings(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(RouterStateUnknown value)? unknown,
+    TResult Function(RouterStateHome value)? home,
+    TResult Function(RouterStateAddAccount value)? addAccount,
+    TResult Function(RouterStateEditAccount value)? editAccount,
+    TResult Function(RouterStateAddParcels value)? addParcels,
+    TResult Function(RouterStateParcelDetails value)? parcelDetails,
+    TResult Function(RouterStateAddMissingParcel value)? addMissingParcel,
+    TResult Function(RouterStateAddParcelAndShow value)? addParcelAndShow,
+    TResult Function(RouterStateShowAddedParcel value)? showAddedParcel,
+    TResult Function(RouterStateSettings value)? settings,
+    TResult Function(RouterStateAbout value)? about,
+  }) {
+    return settings?.call(this);
   }
 
   @override
@@ -3637,6 +4388,24 @@ class _$RouterStateAbout
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? unknown,
+    TResult Function(HomeRoutePath subRoute)? home,
+    TResult Function()? addAccount,
+    TResult Function(TrackingServiceType serviceType)? editAccount,
+    TResult Function(TrackingNumbers? initialTrackNumbers)? addParcels,
+    TResult Function(String trackNumber)? parcelDetails,
+    TResult Function(String trackNumber)? addMissingParcel,
+    TResult Function(String trackNumber)? addParcelAndShow,
+    TResult Function(String trackNumber)? showAddedParcel,
+    TResult Function(SettingsRoutePath? subRoute)? settings,
+    TResult Function()? about,
+  }) {
+    return about?.call();
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? unknown,
     TResult Function(HomeRoutePath subRoute)? home,
@@ -3675,6 +4444,24 @@ class _$RouterStateAbout
     required TResult Function(RouterStateAbout value) about,
   }) {
     return about(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(RouterStateUnknown value)? unknown,
+    TResult Function(RouterStateHome value)? home,
+    TResult Function(RouterStateAddAccount value)? addAccount,
+    TResult Function(RouterStateEditAccount value)? editAccount,
+    TResult Function(RouterStateAddParcels value)? addParcels,
+    TResult Function(RouterStateParcelDetails value)? parcelDetails,
+    TResult Function(RouterStateAddMissingParcel value)? addMissingParcel,
+    TResult Function(RouterStateAddParcelAndShow value)? addParcelAndShow,
+    TResult Function(RouterStateShowAddedParcel value)? showAddedParcel,
+    TResult Function(RouterStateSettings value)? settings,
+    TResult Function(RouterStateAbout value)? about,
+  }) {
+    return about?.call(this);
   }
 
   @override

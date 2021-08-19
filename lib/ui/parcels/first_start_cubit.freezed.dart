@@ -1,5 +1,6 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'first_start_cubit.dart';
 
@@ -42,6 +43,13 @@ mixin _$FirstStartState {
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? showAddAccountTip,
+    TResult Function()? hideAddAccountTip,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? showAddAccountTip,
@@ -56,6 +64,13 @@ mixin _$FirstStartState {
         showAddAccountTip,
     required TResult Function(FirstStartStateHideAddAccountTip value)
         hideAddAccountTip,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(FirstStartStateInitial value)? initial,
+    TResult Function(FirstStartStateShowAddAccountTip value)? showAddAccountTip,
+    TResult Function(FirstStartStateHideAddAccountTip value)? hideAddAccountTip,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -142,6 +157,16 @@ class _$FirstStartStateInitial
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? showAddAccountTip,
+    TResult Function()? hideAddAccountTip,
+  }) {
+    return initial?.call();
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? showAddAccountTip,
@@ -164,6 +189,16 @@ class _$FirstStartStateInitial
         hideAddAccountTip,
   }) {
     return initial(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(FirstStartStateInitial value)? initial,
+    TResult Function(FirstStartStateShowAddAccountTip value)? showAddAccountTip,
+    TResult Function(FirstStartStateHideAddAccountTip value)? hideAddAccountTip,
+  }) {
+    return initial?.call(this);
   }
 
   @override
@@ -247,6 +282,16 @@ class _$FirstStartStateShowAddAccountTip
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? showAddAccountTip,
+    TResult Function()? hideAddAccountTip,
+  }) {
+    return showAddAccountTip?.call();
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? showAddAccountTip,
@@ -269,6 +314,16 @@ class _$FirstStartStateShowAddAccountTip
         hideAddAccountTip,
   }) {
     return showAddAccountTip(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(FirstStartStateInitial value)? initial,
+    TResult Function(FirstStartStateShowAddAccountTip value)? showAddAccountTip,
+    TResult Function(FirstStartStateHideAddAccountTip value)? hideAddAccountTip,
+  }) {
+    return showAddAccountTip?.call(this);
   }
 
   @override
@@ -353,6 +408,16 @@ class _$FirstStartStateHideAddAccountTip
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? showAddAccountTip,
+    TResult Function()? hideAddAccountTip,
+  }) {
+    return hideAddAccountTip?.call();
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? showAddAccountTip,
@@ -375,6 +440,16 @@ class _$FirstStartStateHideAddAccountTip
         hideAddAccountTip,
   }) {
     return hideAddAccountTip(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(FirstStartStateInitial value)? initial,
+    TResult Function(FirstStartStateShowAddAccountTip value)? showAddAccountTip,
+    TResult Function(FirstStartStateHideAddAccountTip value)? hideAddAccountTip,
+  }) {
+    return hideAddAccountTip?.call(this);
   }
 
   @override

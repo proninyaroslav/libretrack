@@ -1,5 +1,6 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'error_report_cubit.dart';
 
@@ -47,6 +48,14 @@ mixin _$ErrorReportState {
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? inProgress,
+    TResult Function()? success,
+    TResult Function()? emailUnsupported,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? inProgress,
@@ -62,6 +71,14 @@ mixin _$ErrorReportState {
     required TResult Function(ErrorReportStateSuccess value) success,
     required TResult Function(ErrorReportStateEmailUnsupported value)
         emailUnsupported,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(ErrorReportStateInitial value)? initial,
+    TResult Function(ErrorReportStateInProgress value)? inProgress,
+    TResult Function(ErrorReportStateSuccess value)? success,
+    TResult Function(ErrorReportStateEmailUnsupported value)? emailUnsupported,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -142,6 +159,17 @@ class _$ErrorReportStateInitial implements ErrorReportStateInitial {
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? inProgress,
+    TResult Function()? success,
+    TResult Function()? emailUnsupported,
+  }) {
+    return initial?.call();
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? inProgress,
@@ -165,6 +193,17 @@ class _$ErrorReportStateInitial implements ErrorReportStateInitial {
         emailUnsupported,
   }) {
     return initial(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(ErrorReportStateInitial value)? initial,
+    TResult Function(ErrorReportStateInProgress value)? inProgress,
+    TResult Function(ErrorReportStateSuccess value)? success,
+    TResult Function(ErrorReportStateEmailUnsupported value)? emailUnsupported,
+  }) {
+    return initial?.call(this);
   }
 
   @override
@@ -238,6 +277,17 @@ class _$ErrorReportStateInProgress implements ErrorReportStateInProgress {
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? inProgress,
+    TResult Function()? success,
+    TResult Function()? emailUnsupported,
+  }) {
+    return inProgress?.call();
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? inProgress,
@@ -261,6 +311,17 @@ class _$ErrorReportStateInProgress implements ErrorReportStateInProgress {
         emailUnsupported,
   }) {
     return inProgress(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(ErrorReportStateInitial value)? initial,
+    TResult Function(ErrorReportStateInProgress value)? inProgress,
+    TResult Function(ErrorReportStateSuccess value)? success,
+    TResult Function(ErrorReportStateEmailUnsupported value)? emailUnsupported,
+  }) {
+    return inProgress?.call(this);
   }
 
   @override
@@ -333,6 +394,17 @@ class _$ErrorReportStateSuccess implements ErrorReportStateSuccess {
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? inProgress,
+    TResult Function()? success,
+    TResult Function()? emailUnsupported,
+  }) {
+    return success?.call();
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? inProgress,
@@ -356,6 +428,17 @@ class _$ErrorReportStateSuccess implements ErrorReportStateSuccess {
         emailUnsupported,
   }) {
     return success(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(ErrorReportStateInitial value)? initial,
+    TResult Function(ErrorReportStateInProgress value)? inProgress,
+    TResult Function(ErrorReportStateSuccess value)? success,
+    TResult Function(ErrorReportStateEmailUnsupported value)? emailUnsupported,
+  }) {
+    return success?.call(this);
   }
 
   @override
@@ -433,6 +516,17 @@ class _$ErrorReportStateEmailUnsupported
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? inProgress,
+    TResult Function()? success,
+    TResult Function()? emailUnsupported,
+  }) {
+    return emailUnsupported?.call();
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? inProgress,
@@ -456,6 +550,17 @@ class _$ErrorReportStateEmailUnsupported
         emailUnsupported,
   }) {
     return emailUnsupported(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(ErrorReportStateInitial value)? initial,
+    TResult Function(ErrorReportStateInProgress value)? inProgress,
+    TResult Function(ErrorReportStateSuccess value)? success,
+    TResult Function(ErrorReportStateEmailUnsupported value)? emailUnsupported,
+  }) {
+    return emailUnsupported?.call(this);
   }
 
   @override

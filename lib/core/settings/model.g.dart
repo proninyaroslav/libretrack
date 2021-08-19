@@ -6,85 +6,78 @@ part of 'model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$ParcelsSortAlphabetically _$_$ParcelsSortAlphabeticallyFromJson(
-    Map<String, dynamic> json) {
-  return _$ParcelsSortAlphabetically(
-    isDesc: json['isDesc'] as bool? ?? false,
-  );
-}
+_$ParcelsSortAlphabetically _$$ParcelsSortAlphabeticallyFromJson(
+        Map<String, dynamic> json) =>
+    _$ParcelsSortAlphabetically(
+      isDesc: json['isDesc'] as bool? ?? false,
+    );
 
-Map<String, dynamic> _$_$ParcelsSortAlphabeticallyToJson(
+Map<String, dynamic> _$$ParcelsSortAlphabeticallyToJson(
         _$ParcelsSortAlphabetically instance) =>
     <String, dynamic>{
       'isDesc': instance.isDesc,
     };
 
-_$ParcelsSortActivityDate _$_$ParcelsSortActivityDateFromJson(
-    Map<String, dynamic> json) {
-  return _$ParcelsSortActivityDate(
-    oldestFirst: json['oldestFirst'] as bool? ?? false,
-  );
-}
+_$ParcelsSortActivityDate _$$ParcelsSortActivityDateFromJson(
+        Map<String, dynamic> json) =>
+    _$ParcelsSortActivityDate(
+      oldestFirst: json['oldestFirst'] as bool? ?? false,
+    );
 
-Map<String, dynamic> _$_$ParcelsSortActivityDateToJson(
+Map<String, dynamic> _$$ParcelsSortActivityDateToJson(
         _$ParcelsSortActivityDate instance) =>
     <String, dynamic>{
       'oldestFirst': instance.oldestFirst,
     };
 
-_$ParcelsSortDateAdded _$_$ParcelsSortDateAddedFromJson(
-    Map<String, dynamic> json) {
-  return _$ParcelsSortDateAdded(
-    oldestFirst: json['oldestFirst'] as bool? ?? false,
-  );
-}
+_$ParcelsSortDateAdded _$$ParcelsSortDateAddedFromJson(
+        Map<String, dynamic> json) =>
+    _$ParcelsSortDateAdded(
+      oldestFirst: json['oldestFirst'] as bool? ?? false,
+    );
 
-Map<String, dynamic> _$_$ParcelsSortDateAddedToJson(
+Map<String, dynamic> _$$ParcelsSortDateAddedToJson(
         _$ParcelsSortDateAdded instance) =>
     <String, dynamic>{
       'oldestFirst': instance.oldestFirst,
     };
 
-_$ParcelsFilterSearch _$_$ParcelsFilterSearchFromJson(
-    Map<String, dynamic> json) {
-  return _$ParcelsFilterSearch(
-    query: json['query'] as String?,
-  );
-}
+_$ParcelsFilterSearch _$$ParcelsFilterSearchFromJson(
+        Map<String, dynamic> json) =>
+    _$ParcelsFilterSearch(
+      query: json['query'] as String?,
+    );
 
-Map<String, dynamic> _$_$ParcelsFilterSearchToJson(
+Map<String, dynamic> _$$ParcelsFilterSearchToJson(
         _$ParcelsFilterSearch instance) =>
     <String, dynamic>{
       'query': instance.query,
     };
 
-_$ParcelsFilterActive _$_$ParcelsFilterActiveFromJson(
-    Map<String, dynamic> json) {
-  return _$ParcelsFilterActive();
-}
+_$ParcelsFilterActive _$$ParcelsFilterActiveFromJson(
+        Map<String, dynamic> json) =>
+    _$ParcelsFilterActive();
 
-Map<String, dynamic> _$_$ParcelsFilterActiveToJson(
+Map<String, dynamic> _$$ParcelsFilterActiveToJson(
         _$ParcelsFilterActive instance) =>
     <String, dynamic>{};
 
-_$ParcelsFilterArchive _$_$ParcelsFilterArchiveFromJson(
-    Map<String, dynamic> json) {
-  return _$ParcelsFilterArchive();
-}
+_$ParcelsFilterArchive _$$ParcelsFilterArchiveFromJson(
+        Map<String, dynamic> json) =>
+    _$ParcelsFilterArchive();
 
-Map<String, dynamic> _$_$ParcelsFilterArchiveToJson(
+Map<String, dynamic> _$$ParcelsFilterArchiveToJson(
         _$ParcelsFilterArchive instance) =>
     <String, dynamic>{};
 
-_$ParcelsFilterStatus _$_$ParcelsFilterStatusFromJson(
-    Map<String, dynamic> json) {
-  return _$ParcelsFilterStatus(
-    statusType:
-        _$enumDecodeNullable(_$ShipmentStatusTypeEnumMap, json['statusType']),
-  );
-}
+_$ParcelsFilterStatus _$$ParcelsFilterStatusFromJson(
+        Map<String, dynamic> json) =>
+    _$ParcelsFilterStatus(
+      statusType:
+          _$enumDecodeNullable(_$ShipmentStatusTypeEnumMap, json['statusType']),
+    );
 
-Map<String, dynamic> _$_$ParcelsFilterStatusToJson(
+Map<String, dynamic> _$$ParcelsFilterStatusToJson(
         _$ParcelsFilterStatus instance) =>
     <String, dynamic>{
       'statusType': _$ShipmentStatusTypeEnumMap[instance.statusType],
@@ -148,32 +141,29 @@ const _$ShipmentStatusTypeEnumMap = {
   ShipmentStatusType.customsClearanceComplete: 'customsClearanceComplete',
 };
 
-_$ParcelsFilterNewInfo _$_$ParcelsFilterNewInfoFromJson(
-    Map<String, dynamic> json) {
-  return _$ParcelsFilterNewInfo();
-}
+_$ParcelsFilterNewInfo _$$ParcelsFilterNewInfoFromJson(
+        Map<String, dynamic> json) =>
+    _$ParcelsFilterNewInfo();
 
-Map<String, dynamic> _$_$ParcelsFilterNewInfoToJson(
+Map<String, dynamic> _$$ParcelsFilterNewInfoToJson(
         _$ParcelsFilterNewInfo instance) =>
     <String, dynamic>{};
 
-_$ParcelsFilterError _$_$ParcelsFilterErrorFromJson(Map<String, dynamic> json) {
-  return _$ParcelsFilterError();
-}
+_$ParcelsFilterError _$$ParcelsFilterErrorFromJson(Map<String, dynamic> json) =>
+    _$ParcelsFilterError();
 
-Map<String, dynamic> _$_$ParcelsFilterErrorToJson(
+Map<String, dynamic> _$$ParcelsFilterErrorToJson(
         _$ParcelsFilterError instance) =>
     <String, dynamic>{};
 
-_$ParcelsFilterPostalService _$_$ParcelsFilterPostalServiceFromJson(
-    Map<String, dynamic> json) {
-  return _$ParcelsFilterPostalService(
-    serviceType:
-        _$enumDecodeNullable(_$PostalServiceTypeEnumMap, json['serviceType']),
-  );
-}
+_$ParcelsFilterPostalService _$$ParcelsFilterPostalServiceFromJson(
+        Map<String, dynamic> json) =>
+    _$ParcelsFilterPostalService(
+      serviceType:
+          _$enumDecodeNullable(_$PostalServiceTypeEnumMap, json['serviceType']),
+    );
 
-Map<String, dynamic> _$_$ParcelsFilterPostalServiceToJson(
+Map<String, dynamic> _$$ParcelsFilterPostalServiceToJson(
         _$ParcelsFilterPostalService instance) =>
     <String, dynamic>{
       'serviceType': _$PostalServiceTypeEnumMap[instance.serviceType],
@@ -184,127 +174,112 @@ const _$PostalServiceTypeEnumMap = {
   PostalServiceType.russianPost: 'russianPost',
 };
 
-_$AppThemeTypeLight _$_$AppThemeTypeLightFromJson(Map<String, dynamic> json) {
-  return _$AppThemeTypeLight();
-}
+_$AppThemeTypeLight _$$AppThemeTypeLightFromJson(Map<String, dynamic> json) =>
+    _$AppThemeTypeLight();
 
-Map<String, dynamic> _$_$AppThemeTypeLightToJson(
-        _$AppThemeTypeLight instance) =>
+Map<String, dynamic> _$$AppThemeTypeLightToJson(_$AppThemeTypeLight instance) =>
     <String, dynamic>{};
 
-_$AppThemeTypeDark _$_$AppThemeTypeDarkFromJson(Map<String, dynamic> json) {
-  return _$AppThemeTypeDark();
-}
+_$AppThemeTypeDark _$$AppThemeTypeDarkFromJson(Map<String, dynamic> json) =>
+    _$AppThemeTypeDark();
 
-Map<String, dynamic> _$_$AppThemeTypeDarkToJson(_$AppThemeTypeDark instance) =>
+Map<String, dynamic> _$$AppThemeTypeDarkToJson(_$AppThemeTypeDark instance) =>
     <String, dynamic>{};
 
-_$AppThemeTypeSystem _$_$AppThemeTypeSystemFromJson(Map<String, dynamic> json) {
-  return _$AppThemeTypeSystem();
-}
+_$AppThemeTypeSystem _$$AppThemeTypeSystemFromJson(Map<String, dynamic> json) =>
+    _$AppThemeTypeSystem();
 
-Map<String, dynamic> _$_$AppThemeTypeSystemToJson(
+Map<String, dynamic> _$$AppThemeTypeSystemToJson(
         _$AppThemeTypeSystem instance) =>
     <String, dynamic>{};
 
-_$AppLocaleTypeSystem _$_$AppLocaleTypeSystemFromJson(
-    Map<String, dynamic> json) {
-  return _$AppLocaleTypeSystem();
-}
+_$AppLocaleTypeSystem _$$AppLocaleTypeSystemFromJson(
+        Map<String, dynamic> json) =>
+    _$AppLocaleTypeSystem();
 
-Map<String, dynamic> _$_$AppLocaleTypeSystemToJson(
+Map<String, dynamic> _$$AppLocaleTypeSystemToJson(
         _$AppLocaleTypeSystem instance) =>
     <String, dynamic>{};
 
-_$AppLocaleTypeInner _$_$AppLocaleTypeInnerFromJson(Map<String, dynamic> json) {
-  return _$AppLocaleTypeInner(
-    locale: Locale.fromJson(json['locale'] as Map<String, dynamic>),
-  );
-}
+_$AppLocaleTypeInner _$$AppLocaleTypeInnerFromJson(Map<String, dynamic> json) =>
+    _$AppLocaleTypeInner(
+      locale: Locale.fromJson(json['locale'] as Map<String, dynamic>),
+    );
 
-Map<String, dynamic> _$_$AppLocaleTypeInnerToJson(
+Map<String, dynamic> _$$AppLocaleTypeInnerToJson(
         _$AppLocaleTypeInner instance) =>
     <String, dynamic>{
       'locale': instance.locale.toJson(),
     };
 
-_$TrackingFreqLimitFifteenMin _$_$TrackingFreqLimitFifteenMinFromJson(
-    Map<String, dynamic> json) {
-  return _$TrackingFreqLimitFifteenMin();
-}
+_$TrackingFreqLimitFifteenMin _$$TrackingFreqLimitFifteenMinFromJson(
+        Map<String, dynamic> json) =>
+    _$TrackingFreqLimitFifteenMin();
 
-Map<String, dynamic> _$_$TrackingFreqLimitFifteenMinToJson(
+Map<String, dynamic> _$$TrackingFreqLimitFifteenMinToJson(
         _$TrackingFreqLimitFifteenMin instance) =>
     <String, dynamic>{};
 
-_$TrackingFreqLimitThirtyMin _$_$TrackingFreqLimitThirtyMinFromJson(
-    Map<String, dynamic> json) {
-  return _$TrackingFreqLimitThirtyMin();
-}
+_$TrackingFreqLimitThirtyMin _$$TrackingFreqLimitThirtyMinFromJson(
+        Map<String, dynamic> json) =>
+    _$TrackingFreqLimitThirtyMin();
 
-Map<String, dynamic> _$_$TrackingFreqLimitThirtyMinToJson(
+Map<String, dynamic> _$$TrackingFreqLimitThirtyMinToJson(
         _$TrackingFreqLimitThirtyMin instance) =>
     <String, dynamic>{};
 
-_$TrackingFreqLimitFortyFiveMin _$_$TrackingFreqLimitFortyFiveMinFromJson(
-    Map<String, dynamic> json) {
-  return _$TrackingFreqLimitFortyFiveMin();
-}
+_$TrackingFreqLimitFortyFiveMin _$$TrackingFreqLimitFortyFiveMinFromJson(
+        Map<String, dynamic> json) =>
+    _$TrackingFreqLimitFortyFiveMin();
 
-Map<String, dynamic> _$_$TrackingFreqLimitFortyFiveMinToJson(
+Map<String, dynamic> _$$TrackingFreqLimitFortyFiveMinToJson(
         _$TrackingFreqLimitFortyFiveMin instance) =>
     <String, dynamic>{};
 
-_$TrackingFreqLimitOneHour _$_$TrackingFreqLimitOneHourFromJson(
-    Map<String, dynamic> json) {
-  return _$TrackingFreqLimitOneHour();
-}
+_$TrackingFreqLimitOneHour _$$TrackingFreqLimitOneHourFromJson(
+        Map<String, dynamic> json) =>
+    _$TrackingFreqLimitOneHour();
 
-Map<String, dynamic> _$_$TrackingFreqLimitOneHourToJson(
+Map<String, dynamic> _$$TrackingFreqLimitOneHourToJson(
         _$TrackingFreqLimitOneHour instance) =>
     <String, dynamic>{};
 
-_$AutoTrackingFreqSixHours _$_$AutoTrackingFreqSixHoursFromJson(
-    Map<String, dynamic> json) {
-  return _$AutoTrackingFreqSixHours();
-}
+_$AutoTrackingFreqSixHours _$$AutoTrackingFreqSixHoursFromJson(
+        Map<String, dynamic> json) =>
+    _$AutoTrackingFreqSixHours();
 
-Map<String, dynamic> _$_$AutoTrackingFreqSixHoursToJson(
+Map<String, dynamic> _$$AutoTrackingFreqSixHoursToJson(
         _$AutoTrackingFreqSixHours instance) =>
     <String, dynamic>{};
 
-_$AutoTrackingFreqTwelveHours _$_$AutoTrackingFreqTwelveHoursFromJson(
-    Map<String, dynamic> json) {
-  return _$AutoTrackingFreqTwelveHours();
-}
+_$AutoTrackingFreqTwelveHours _$$AutoTrackingFreqTwelveHoursFromJson(
+        Map<String, dynamic> json) =>
+    _$AutoTrackingFreqTwelveHours();
 
-Map<String, dynamic> _$_$AutoTrackingFreqTwelveHoursToJson(
+Map<String, dynamic> _$$AutoTrackingFreqTwelveHoursToJson(
         _$AutoTrackingFreqTwelveHours instance) =>
     <String, dynamic>{};
 
-_$AutoTrackingFreqOneDay _$_$AutoTrackingFreqOneDayFromJson(
-    Map<String, dynamic> json) {
-  return _$AutoTrackingFreqOneDay();
-}
+_$AutoTrackingFreqOneDay _$$AutoTrackingFreqOneDayFromJson(
+        Map<String, dynamic> json) =>
+    _$AutoTrackingFreqOneDay();
 
-Map<String, dynamic> _$_$AutoTrackingFreqOneDayToJson(
+Map<String, dynamic> _$$AutoTrackingFreqOneDayToJson(
         _$AutoTrackingFreqOneDay instance) =>
     <String, dynamic>{};
 
-_$AutoTrackingFreqThreeDays _$_$AutoTrackingFreqThreeDaysFromJson(
-    Map<String, dynamic> json) {
-  return _$AutoTrackingFreqThreeDays();
-}
+_$AutoTrackingFreqThreeDays _$$AutoTrackingFreqThreeDaysFromJson(
+        Map<String, dynamic> json) =>
+    _$AutoTrackingFreqThreeDays();
 
-Map<String, dynamic> _$_$AutoTrackingFreqThreeDaysToJson(
+Map<String, dynamic> _$$AutoTrackingFreqThreeDaysToJson(
         _$AutoTrackingFreqThreeDays instance) =>
     <String, dynamic>{};
 
-_$AutoTrackingFreqOneWeek _$_$AutoTrackingFreqOneWeekFromJson(
-    Map<String, dynamic> json) {
-  return _$AutoTrackingFreqOneWeek();
-}
+_$AutoTrackingFreqOneWeek _$$AutoTrackingFreqOneWeekFromJson(
+        Map<String, dynamic> json) =>
+    _$AutoTrackingFreqOneWeek();
 
-Map<String, dynamic> _$_$AutoTrackingFreqOneWeekToJson(
+Map<String, dynamic> _$$AutoTrackingFreqOneWeekToJson(
         _$AutoTrackingFreqOneWeek instance) =>
     <String, dynamic>{};

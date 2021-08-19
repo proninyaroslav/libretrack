@@ -1,5 +1,6 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'http_client.dart';
 
@@ -50,6 +51,13 @@ mixin _$HttpResponse {
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(String body)? success,
+    TResult Function(int statusCode, String body)? httpError,
+    TResult Function(Exception e, StackTrace? stackTrace)? exception,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String body)? success,
     TResult Function(int statusCode, String body)? httpError,
@@ -62,6 +70,13 @@ mixin _$HttpResponse {
     required TResult Function(HttpResponseSuccess value) success,
     required TResult Function(HttpResponseError value) httpError,
     required TResult Function(HttpResponseException value) exception,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(HttpResponseSuccess value)? success,
+    TResult Function(HttpResponseError value)? httpError,
+    TResult Function(HttpResponseException value)? exception,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -174,6 +189,16 @@ class _$HttpResponseSuccess
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(String body)? success,
+    TResult Function(int statusCode, String body)? httpError,
+    TResult Function(Exception e, StackTrace? stackTrace)? exception,
+  }) {
+    return success?.call(body);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String body)? success,
     TResult Function(int statusCode, String body)? httpError,
@@ -194,6 +219,16 @@ class _$HttpResponseSuccess
     required TResult Function(HttpResponseException value) exception,
   }) {
     return success(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(HttpResponseSuccess value)? success,
+    TResult Function(HttpResponseError value)? httpError,
+    TResult Function(HttpResponseException value)? exception,
+  }) {
+    return success?.call(this);
   }
 
   @override
@@ -318,6 +353,16 @@ class _$HttpResponseError
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(String body)? success,
+    TResult Function(int statusCode, String body)? httpError,
+    TResult Function(Exception e, StackTrace? stackTrace)? exception,
+  }) {
+    return httpError?.call(statusCode, body);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String body)? success,
     TResult Function(int statusCode, String body)? httpError,
@@ -338,6 +383,16 @@ class _$HttpResponseError
     required TResult Function(HttpResponseException value) exception,
   }) {
     return httpError(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(HttpResponseSuccess value)? success,
+    TResult Function(HttpResponseError value)? httpError,
+    TResult Function(HttpResponseException value)? exception,
+  }) {
+    return httpError?.call(this);
   }
 
   @override
@@ -464,6 +519,16 @@ class _$HttpResponseException
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(String body)? success,
+    TResult Function(int statusCode, String body)? httpError,
+    TResult Function(Exception e, StackTrace? stackTrace)? exception,
+  }) {
+    return exception?.call(e, stackTrace);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String body)? success,
     TResult Function(int statusCode, String body)? httpError,
@@ -484,6 +549,16 @@ class _$HttpResponseException
     required TResult Function(HttpResponseException value) exception,
   }) {
     return exception(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(HttpResponseSuccess value)? success,
+    TResult Function(HttpResponseError value)? httpError,
+    TResult Function(HttpResponseException value)? exception,
+  }) {
+    return exception?.call(this);
   }
 
   @override

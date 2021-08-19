@@ -1,5 +1,6 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'service_list_cubit.dart';
 
@@ -51,6 +52,15 @@ mixin _$ServiceListState {
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(List<TrackingServiceType> nonExistenServices,
+            bool isAuthStorageEncrypted)?
+        loaded,
+    TResult Function(StorageError? error)? loadingFailed,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function(List<TrackingServiceType> nonExistenServices,
@@ -66,6 +76,13 @@ mixin _$ServiceListState {
     required TResult Function(ServiceListStateLoaded value) loaded,
     required TResult Function(ServiceListStateLoadingFailed value)
         loadingFailed,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(ServiceListStateInitial value)? initial,
+    TResult Function(ServiceListStateLoaded value)? loaded,
+    TResult Function(ServiceListStateLoadingFailed value)? loadingFailed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -154,6 +171,18 @@ class _$ServiceListStateInitial
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(List<TrackingServiceType> nonExistenServices,
+            bool isAuthStorageEncrypted)?
+        loaded,
+    TResult Function(StorageError? error)? loadingFailed,
+  }) {
+    return initial?.call();
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function(List<TrackingServiceType> nonExistenServices,
@@ -177,6 +206,16 @@ class _$ServiceListStateInitial
         loadingFailed,
   }) {
     return initial(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(ServiceListStateInitial value)? initial,
+    TResult Function(ServiceListStateLoaded value)? loaded,
+    TResult Function(ServiceListStateLoadingFailed value)? loadingFailed,
+  }) {
+    return initial?.call(this);
   }
 
   @override
@@ -303,6 +342,18 @@ class _$ServiceListStateLoaded
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(List<TrackingServiceType> nonExistenServices,
+            bool isAuthStorageEncrypted)?
+        loaded,
+    TResult Function(StorageError? error)? loadingFailed,
+  }) {
+    return loaded?.call(nonExistenServices, isAuthStorageEncrypted);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function(List<TrackingServiceType> nonExistenServices,
@@ -326,6 +377,16 @@ class _$ServiceListStateLoaded
         loadingFailed,
   }) {
     return loaded(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(ServiceListStateInitial value)? initial,
+    TResult Function(ServiceListStateLoaded value)? loaded,
+    TResult Function(ServiceListStateLoadingFailed value)? loadingFailed,
+  }) {
+    return loaded?.call(this);
   }
 
   @override
@@ -459,6 +520,18 @@ class _$ServiceListStateLoadingFailed
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(List<TrackingServiceType> nonExistenServices,
+            bool isAuthStorageEncrypted)?
+        loaded,
+    TResult Function(StorageError? error)? loadingFailed,
+  }) {
+    return loadingFailed?.call(error);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function(List<TrackingServiceType> nonExistenServices,
@@ -482,6 +555,16 @@ class _$ServiceListStateLoadingFailed
         loadingFailed,
   }) {
     return loadingFailed(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(ServiceListStateInitial value)? initial,
+    TResult Function(ServiceListStateLoaded value)? loaded,
+    TResult Function(ServiceListStateLoadingFailed value)? loadingFailed,
+  }) {
+    return loadingFailed?.call(this);
   }
 
   @override

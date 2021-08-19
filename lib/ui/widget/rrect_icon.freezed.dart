@@ -1,5 +1,6 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'rrect_icon.dart';
 
@@ -51,6 +52,13 @@ mixin _$RRectIconData {
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult Function(IconData iconData, Color iconColor, Color backgroundColor)?
+        $default, {
+    TResult Function(Widget icon, Color backgroundColor)? widget,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>(
     TResult Function(IconData iconData, Color iconColor, Color backgroundColor)?
         $default, {
@@ -62,6 +70,12 @@ mixin _$RRectIconData {
   TResult map<TResult extends Object?>(
     TResult Function(_RRectIconData value) $default, {
     required TResult Function(_RRectIconDataWidget value) widget,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult Function(_RRectIconData value)? $default, {
+    TResult Function(_RRectIconDataWidget value)? widget,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -210,6 +224,16 @@ class _$_RRectIconData implements _RRectIconData {
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult Function(IconData iconData, Color iconColor, Color backgroundColor)?
+        $default, {
+    TResult Function(Widget icon, Color backgroundColor)? widget,
+  }) {
+    return $default?.call(iconData, iconColor, backgroundColor);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>(
     TResult Function(IconData iconData, Color iconColor, Color backgroundColor)?
         $default, {
@@ -229,6 +253,15 @@ class _$_RRectIconData implements _RRectIconData {
     required TResult Function(_RRectIconDataWidget value) widget,
   }) {
     return $default(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult Function(_RRectIconData value)? $default, {
+    TResult Function(_RRectIconDataWidget value)? widget,
+  }) {
+    return $default?.call(this);
   }
 
   @override
@@ -351,6 +384,16 @@ class _$_RRectIconDataWidget implements _RRectIconDataWidget {
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult Function(IconData iconData, Color iconColor, Color backgroundColor)?
+        $default, {
+    TResult Function(Widget icon, Color backgroundColor)? widget,
+  }) {
+    return widget?.call(icon, backgroundColor);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>(
     TResult Function(IconData iconData, Color iconColor, Color backgroundColor)?
         $default, {
@@ -370,6 +413,15 @@ class _$_RRectIconDataWidget implements _RRectIconDataWidget {
     required TResult Function(_RRectIconDataWidget value) widget,
   }) {
     return widget(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult Function(_RRectIconData value)? $default, {
+    TResult Function(_RRectIconDataWidget value)? widget,
+  }) {
+    return widget?.call(this);
   }
 
   @override

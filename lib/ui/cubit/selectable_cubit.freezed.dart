@@ -1,5 +1,6 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'selectable_cubit.dart';
 
@@ -44,6 +45,13 @@ mixin _$SelectableState<T> {
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? noSelection,
+    TResult Function(Set<T> items)? selected,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? noSelection,
@@ -56,6 +64,13 @@ mixin _$SelectableState<T> {
     required TResult Function(SelectableStateInitial<T> value) initial,
     required TResult Function(SelectableStateNoSelection<T> value) noSelection,
     required TResult Function(SelectableStateSelected<T> value) selected,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(SelectableStateInitial<T> value)? initial,
+    TResult Function(SelectableStateNoSelection<T> value)? noSelection,
+    TResult Function(SelectableStateSelected<T> value)? selected,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -135,6 +150,16 @@ class _$SelectableStateInitial<T> implements SelectableStateInitial<T> {
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? noSelection,
+    TResult Function(Set<T> items)? selected,
+  }) {
+    return initial?.call();
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? noSelection,
@@ -155,6 +180,16 @@ class _$SelectableStateInitial<T> implements SelectableStateInitial<T> {
     required TResult Function(SelectableStateSelected<T> value) selected,
   }) {
     return initial(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(SelectableStateInitial<T> value)? initial,
+    TResult Function(SelectableStateNoSelection<T> value)? noSelection,
+    TResult Function(SelectableStateSelected<T> value)? selected,
+  }) {
+    return initial?.call(this);
   }
 
   @override
@@ -227,6 +262,16 @@ class _$SelectableStateNoSelection<T> implements SelectableStateNoSelection<T> {
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? noSelection,
+    TResult Function(Set<T> items)? selected,
+  }) {
+    return noSelection?.call();
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? noSelection,
@@ -247,6 +292,16 @@ class _$SelectableStateNoSelection<T> implements SelectableStateNoSelection<T> {
     required TResult Function(SelectableStateSelected<T> value) selected,
   }) {
     return noSelection(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(SelectableStateInitial<T> value)? initial,
+    TResult Function(SelectableStateNoSelection<T> value)? noSelection,
+    TResult Function(SelectableStateSelected<T> value)? selected,
+  }) {
+    return noSelection?.call(this);
   }
 
   @override
@@ -345,6 +400,16 @@ class _$SelectableStateSelected<T> implements SelectableStateSelected<T> {
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? noSelection,
+    TResult Function(Set<T> items)? selected,
+  }) {
+    return selected?.call(items);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? noSelection,
@@ -365,6 +430,16 @@ class _$SelectableStateSelected<T> implements SelectableStateSelected<T> {
     required TResult Function(SelectableStateSelected<T> value) selected,
   }) {
     return selected(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(SelectableStateInitial<T> value)? initial,
+    TResult Function(SelectableStateNoSelection<T> value)? noSelection,
+    TResult Function(SelectableStateSelected<T> value)? selected,
+  }) {
+    return selected?.call(this);
   }
 
   @override

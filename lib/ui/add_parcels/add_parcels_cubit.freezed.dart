@@ -1,5 +1,6 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'add_parcels_cubit.dart';
 
@@ -95,6 +96,21 @@ mixin _$AddParcelsState {
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames)?
+        initial,
+    TResult Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames)?
+        fieldChanged,
+    TResult Function()? adding,
+    TResult Function(List<TrackNumberInfo> addedTrackInfoList)? added,
+    TResult Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames)?
+        validationFailed,
+    TResult Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames,
+            Exception? exception, StackTrace? stackTrace)?
+        addFailed,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames)?
         initial,
@@ -119,6 +135,16 @@ mixin _$AddParcelsState {
     required TResult Function(AddParcelsStateValidationFailed value)
         validationFailed,
     required TResult Function(AddParcelsStateAddFailed value) addFailed,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(AddParcelsStateInitial value)? initial,
+    TResult Function(AddParcelsStateFieldChanged value)? fieldChanged,
+    TResult Function(AddParcelsStateAdding value)? adding,
+    TResult Function(AddParcelsStateAdded value)? added,
+    TResult Function(AddParcelsStateValidationFailed value)? validationFailed,
+    TResult Function(AddParcelsStateAddFailed value)? addFailed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -285,6 +311,24 @@ class _$AddParcelsStateInitial
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames)?
+        initial,
+    TResult Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames)?
+        fieldChanged,
+    TResult Function()? adding,
+    TResult Function(List<TrackNumberInfo> addedTrackInfoList)? added,
+    TResult Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames)?
+        validationFailed,
+    TResult Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames,
+            Exception? exception, StackTrace? stackTrace)?
+        addFailed,
+  }) {
+    return initial?.call(trackingNumbers, parcelNames);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames)?
         initial,
@@ -317,6 +361,19 @@ class _$AddParcelsStateInitial
     required TResult Function(AddParcelsStateAddFailed value) addFailed,
   }) {
     return initial(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(AddParcelsStateInitial value)? initial,
+    TResult Function(AddParcelsStateFieldChanged value)? fieldChanged,
+    TResult Function(AddParcelsStateAdding value)? adding,
+    TResult Function(AddParcelsStateAdded value)? added,
+    TResult Function(AddParcelsStateValidationFailed value)? validationFailed,
+    TResult Function(AddParcelsStateAddFailed value)? addFailed,
+  }) {
+    return initial?.call(this);
   }
 
   @override
@@ -482,6 +539,24 @@ class _$AddParcelsStateFieldChanged
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames)?
+        initial,
+    TResult Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames)?
+        fieldChanged,
+    TResult Function()? adding,
+    TResult Function(List<TrackNumberInfo> addedTrackInfoList)? added,
+    TResult Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames)?
+        validationFailed,
+    TResult Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames,
+            Exception? exception, StackTrace? stackTrace)?
+        addFailed,
+  }) {
+    return fieldChanged?.call(trackingNumbers, parcelNames);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames)?
         initial,
@@ -514,6 +589,19 @@ class _$AddParcelsStateFieldChanged
     required TResult Function(AddParcelsStateAddFailed value) addFailed,
   }) {
     return fieldChanged(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(AddParcelsStateInitial value)? initial,
+    TResult Function(AddParcelsStateFieldChanged value)? fieldChanged,
+    TResult Function(AddParcelsStateAdding value)? adding,
+    TResult Function(AddParcelsStateAdded value)? added,
+    TResult Function(AddParcelsStateValidationFailed value)? validationFailed,
+    TResult Function(AddParcelsStateAddFailed value)? addFailed,
+  }) {
+    return fieldChanged?.call(this);
   }
 
   @override
@@ -617,6 +705,24 @@ class _$AddParcelsStateAdding
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames)?
+        initial,
+    TResult Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames)?
+        fieldChanged,
+    TResult Function()? adding,
+    TResult Function(List<TrackNumberInfo> addedTrackInfoList)? added,
+    TResult Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames)?
+        validationFailed,
+    TResult Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames,
+            Exception? exception, StackTrace? stackTrace)?
+        addFailed,
+  }) {
+    return adding?.call();
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames)?
         initial,
@@ -649,6 +755,19 @@ class _$AddParcelsStateAdding
     required TResult Function(AddParcelsStateAddFailed value) addFailed,
   }) {
     return adding(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(AddParcelsStateInitial value)? initial,
+    TResult Function(AddParcelsStateFieldChanged value)? fieldChanged,
+    TResult Function(AddParcelsStateAdding value)? adding,
+    TResult Function(AddParcelsStateAdded value)? added,
+    TResult Function(AddParcelsStateValidationFailed value)? validationFailed,
+    TResult Function(AddParcelsStateAddFailed value)? addFailed,
+  }) {
+    return adding?.call(this);
   }
 
   @override
@@ -774,6 +893,24 @@ class _$AddParcelsStateAdded
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames)?
+        initial,
+    TResult Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames)?
+        fieldChanged,
+    TResult Function()? adding,
+    TResult Function(List<TrackNumberInfo> addedTrackInfoList)? added,
+    TResult Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames)?
+        validationFailed,
+    TResult Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames,
+            Exception? exception, StackTrace? stackTrace)?
+        addFailed,
+  }) {
+    return added?.call(addedTrackInfoList);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames)?
         initial,
@@ -806,6 +943,19 @@ class _$AddParcelsStateAdded
     required TResult Function(AddParcelsStateAddFailed value) addFailed,
   }) {
     return added(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(AddParcelsStateInitial value)? initial,
+    TResult Function(AddParcelsStateFieldChanged value)? fieldChanged,
+    TResult Function(AddParcelsStateAdding value)? adding,
+    TResult Function(AddParcelsStateAdded value)? added,
+    TResult Function(AddParcelsStateValidationFailed value)? validationFailed,
+    TResult Function(AddParcelsStateAddFailed value)? addFailed,
+  }) {
+    return added?.call(this);
   }
 
   @override
@@ -972,6 +1122,24 @@ class _$AddParcelsStateValidationFailed
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames)?
+        initial,
+    TResult Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames)?
+        fieldChanged,
+    TResult Function()? adding,
+    TResult Function(List<TrackNumberInfo> addedTrackInfoList)? added,
+    TResult Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames)?
+        validationFailed,
+    TResult Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames,
+            Exception? exception, StackTrace? stackTrace)?
+        addFailed,
+  }) {
+    return validationFailed?.call(trackingNumbers, parcelNames);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames)?
         initial,
@@ -1004,6 +1172,19 @@ class _$AddParcelsStateValidationFailed
     required TResult Function(AddParcelsStateAddFailed value) addFailed,
   }) {
     return validationFailed(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(AddParcelsStateInitial value)? initial,
+    TResult Function(AddParcelsStateFieldChanged value)? fieldChanged,
+    TResult Function(AddParcelsStateAdding value)? adding,
+    TResult Function(AddParcelsStateAdded value)? added,
+    TResult Function(AddParcelsStateValidationFailed value)? validationFailed,
+    TResult Function(AddParcelsStateAddFailed value)? addFailed,
+  }) {
+    return validationFailed?.call(this);
   }
 
   @override
@@ -1199,6 +1380,24 @@ class _$AddParcelsStateAddFailed
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames)?
+        initial,
+    TResult Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames)?
+        fieldChanged,
+    TResult Function()? adding,
+    TResult Function(List<TrackNumberInfo> addedTrackInfoList)? added,
+    TResult Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames)?
+        validationFailed,
+    TResult Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames,
+            Exception? exception, StackTrace? stackTrace)?
+        addFailed,
+  }) {
+    return addFailed?.call(trackingNumbers, parcelNames, exception, stackTrace);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames)?
         initial,
@@ -1231,6 +1430,19 @@ class _$AddParcelsStateAddFailed
     required TResult Function(AddParcelsStateAddFailed value) addFailed,
   }) {
     return addFailed(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(AddParcelsStateInitial value)? initial,
+    TResult Function(AddParcelsStateFieldChanged value)? fieldChanged,
+    TResult Function(AddParcelsStateAdding value)? adding,
+    TResult Function(AddParcelsStateAdded value)? added,
+    TResult Function(AddParcelsStateValidationFailed value)? validationFailed,
+    TResult Function(AddParcelsStateAddFailed value)? addFailed,
+  }) {
+    return addFailed?.call(this);
   }
 
   @override

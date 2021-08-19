@@ -1,5 +1,6 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'navigation_page.dart';
 
@@ -707,6 +708,13 @@ mixin _$NavItem {
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(String name, Widget icon, PageInfo pageInfo)? page,
+    TResult Function(String name, Widget icon, void Function() onPressed)?
+        action,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String name, Widget icon, PageInfo pageInfo)? page,
     TResult Function(String name, Widget icon, void Function() onPressed)?
@@ -718,6 +726,12 @@ mixin _$NavItem {
   TResult map<TResult extends Object?>({
     required TResult Function(_NavItem value) page,
     required TResult Function(_NavItemAction value) action,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_NavItem value)? page,
+    TResult Function(_NavItemAction value)? action,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -870,6 +884,16 @@ class _$_NavItem implements _NavItem {
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(String name, Widget icon, PageInfo pageInfo)? page,
+    TResult Function(String name, Widget icon, void Function() onPressed)?
+        action,
+  }) {
+    return page?.call(name, icon, pageInfo);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String name, Widget icon, PageInfo pageInfo)? page,
     TResult Function(String name, Widget icon, void Function() onPressed)?
@@ -889,6 +913,15 @@ class _$_NavItem implements _NavItem {
     required TResult Function(_NavItemAction value) action,
   }) {
     return page(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_NavItem value)? page,
+    TResult Function(_NavItemAction value)? action,
+  }) {
+    return page?.call(this);
   }
 
   @override
@@ -1020,6 +1053,16 @@ class _$_NavItemAction implements _NavItemAction {
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(String name, Widget icon, PageInfo pageInfo)? page,
+    TResult Function(String name, Widget icon, void Function() onPressed)?
+        action,
+  }) {
+    return action?.call(name, icon, onPressed);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String name, Widget icon, PageInfo pageInfo)? page,
     TResult Function(String name, Widget icon, void Function() onPressed)?
@@ -1039,6 +1082,15 @@ class _$_NavItemAction implements _NavItemAction {
     required TResult Function(_NavItemAction value) action,
   }) {
     return action(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_NavItem value)? page,
+    TResult Function(_NavItemAction value)? action,
+  }) {
+    return action?.call(this);
   }
 
   @override
@@ -1102,6 +1154,13 @@ mixin _$_BackdropContentType {
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? drawer,
+    TResult Function()? sheet,
+    TResult Function()? none,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? drawer,
     TResult Function()? sheet,
@@ -1114,6 +1173,13 @@ mixin _$_BackdropContentType {
     required TResult Function(_BackdropContentTypeDrawer value) drawer,
     required TResult Function(_BackdropContentTypeSheet value) sheet,
     required TResult Function(_BackdropContentTypeNone value) none,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_BackdropContentTypeDrawer value)? drawer,
+    TResult Function(_BackdropContentTypeSheet value)? sheet,
+    TResult Function(_BackdropContentTypeNone value)? none,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -1193,6 +1259,16 @@ class _$_BackdropContentTypeDrawer implements _BackdropContentTypeDrawer {
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? drawer,
+    TResult Function()? sheet,
+    TResult Function()? none,
+  }) {
+    return drawer?.call();
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? drawer,
     TResult Function()? sheet,
@@ -1213,6 +1289,16 @@ class _$_BackdropContentTypeDrawer implements _BackdropContentTypeDrawer {
     required TResult Function(_BackdropContentTypeNone value) none,
   }) {
     return drawer(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_BackdropContentTypeDrawer value)? drawer,
+    TResult Function(_BackdropContentTypeSheet value)? sheet,
+    TResult Function(_BackdropContentTypeNone value)? none,
+  }) {
+    return drawer?.call(this);
   }
 
   @override
@@ -1284,6 +1370,16 @@ class _$_BackdropContentTypeSheet implements _BackdropContentTypeSheet {
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? drawer,
+    TResult Function()? sheet,
+    TResult Function()? none,
+  }) {
+    return sheet?.call();
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? drawer,
     TResult Function()? sheet,
@@ -1304,6 +1400,16 @@ class _$_BackdropContentTypeSheet implements _BackdropContentTypeSheet {
     required TResult Function(_BackdropContentTypeNone value) none,
   }) {
     return sheet(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_BackdropContentTypeDrawer value)? drawer,
+    TResult Function(_BackdropContentTypeSheet value)? sheet,
+    TResult Function(_BackdropContentTypeNone value)? none,
+  }) {
+    return sheet?.call(this);
   }
 
   @override
@@ -1375,6 +1481,16 @@ class _$_BackdropContentTypeNone implements _BackdropContentTypeNone {
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? drawer,
+    TResult Function()? sheet,
+    TResult Function()? none,
+  }) {
+    return none?.call();
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? drawer,
     TResult Function()? sheet,
@@ -1395,6 +1511,16 @@ class _$_BackdropContentTypeNone implements _BackdropContentTypeNone {
     required TResult Function(_BackdropContentTypeNone value) none,
   }) {
     return none(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_BackdropContentTypeDrawer value)? drawer,
+    TResult Function(_BackdropContentTypeSheet value)? sheet,
+    TResult Function(_BackdropContentTypeNone value)? none,
+  }) {
+    return none?.call(this);
   }
 
   @override
@@ -1451,6 +1577,14 @@ mixin _$_BackLayerType {
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? top,
+    TResult Function()? start,
+    TResult Function()? end,
+    TResult Function()? none,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? top,
     TResult Function()? start,
@@ -1465,6 +1599,14 @@ mixin _$_BackLayerType {
     required TResult Function(_BackLayerTypeStart value) start,
     required TResult Function(_BackLayerTypeEnd value) end,
     required TResult Function(_BackLayerTypeNone value) none,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_BackLayerTypeTop value)? top,
+    TResult Function(_BackLayerTypeStart value)? start,
+    TResult Function(_BackLayerTypeEnd value)? end,
+    TResult Function(_BackLayerTypeNone value)? none,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -1545,6 +1687,17 @@ class _$_BackLayerTypeTop implements _BackLayerTypeTop {
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? top,
+    TResult Function()? start,
+    TResult Function()? end,
+    TResult Function()? none,
+  }) {
+    return top?.call();
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? top,
     TResult Function()? start,
@@ -1567,6 +1720,17 @@ class _$_BackLayerTypeTop implements _BackLayerTypeTop {
     required TResult Function(_BackLayerTypeNone value) none,
   }) {
     return top(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_BackLayerTypeTop value)? top,
+    TResult Function(_BackLayerTypeStart value)? start,
+    TResult Function(_BackLayerTypeEnd value)? end,
+    TResult Function(_BackLayerTypeNone value)? none,
+  }) {
+    return top?.call(this);
   }
 
   @override
@@ -1639,6 +1803,17 @@ class _$_BackLayerTypeStart implements _BackLayerTypeStart {
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? top,
+    TResult Function()? start,
+    TResult Function()? end,
+    TResult Function()? none,
+  }) {
+    return start?.call();
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? top,
     TResult Function()? start,
@@ -1661,6 +1836,17 @@ class _$_BackLayerTypeStart implements _BackLayerTypeStart {
     required TResult Function(_BackLayerTypeNone value) none,
   }) {
     return start(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_BackLayerTypeTop value)? top,
+    TResult Function(_BackLayerTypeStart value)? start,
+    TResult Function(_BackLayerTypeEnd value)? end,
+    TResult Function(_BackLayerTypeNone value)? none,
+  }) {
+    return start?.call(this);
   }
 
   @override
@@ -1733,6 +1919,17 @@ class _$_BackLayerTypeEnd implements _BackLayerTypeEnd {
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? top,
+    TResult Function()? start,
+    TResult Function()? end,
+    TResult Function()? none,
+  }) {
+    return end?.call();
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? top,
     TResult Function()? start,
@@ -1755,6 +1952,17 @@ class _$_BackLayerTypeEnd implements _BackLayerTypeEnd {
     required TResult Function(_BackLayerTypeNone value) none,
   }) {
     return end(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_BackLayerTypeTop value)? top,
+    TResult Function(_BackLayerTypeStart value)? start,
+    TResult Function(_BackLayerTypeEnd value)? end,
+    TResult Function(_BackLayerTypeNone value)? none,
+  }) {
+    return end?.call(this);
   }
 
   @override
@@ -1827,6 +2035,17 @@ class _$_BackLayerTypeNone implements _BackLayerTypeNone {
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? top,
+    TResult Function()? start,
+    TResult Function()? end,
+    TResult Function()? none,
+  }) {
+    return none?.call();
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? top,
     TResult Function()? start,
@@ -1849,6 +2068,17 @@ class _$_BackLayerTypeNone implements _BackLayerTypeNone {
     required TResult Function(_BackLayerTypeNone value) none,
   }) {
     return none(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_BackLayerTypeTop value)? top,
+    TResult Function(_BackLayerTypeStart value)? start,
+    TResult Function(_BackLayerTypeEnd value)? end,
+    TResult Function(_BackLayerTypeNone value)? none,
+  }) {
+    return none?.call(this);
   }
 
   @override
@@ -1898,6 +2128,12 @@ mixin _$_AppBarState {
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? normal,
+    TResult Function(int itemsCount)? contextual,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? normal,
     TResult Function(int itemsCount)? contextual,
@@ -1908,6 +2144,12 @@ mixin _$_AppBarState {
   TResult map<TResult extends Object?>({
     required TResult Function(_AppBarStateNormal value) normal,
     required TResult Function(_AppBarStateContextual value) contextual,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_AppBarStateNormal value)? normal,
+    TResult Function(_AppBarStateContextual value)? contextual,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -1983,6 +2225,15 @@ class _$_AppBarStateNormal implements _AppBarStateNormal {
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? normal,
+    TResult Function(int itemsCount)? contextual,
+  }) {
+    return normal?.call();
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? normal,
     TResult Function(int itemsCount)? contextual,
@@ -2001,6 +2252,15 @@ class _$_AppBarStateNormal implements _AppBarStateNormal {
     required TResult Function(_AppBarStateContextual value) contextual,
   }) {
     return normal(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_AppBarStateNormal value)? normal,
+    TResult Function(_AppBarStateContextual value)? contextual,
+  }) {
+    return normal?.call(this);
   }
 
   @override
@@ -2096,6 +2356,15 @@ class _$_AppBarStateContextual implements _AppBarStateContextual {
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? normal,
+    TResult Function(int itemsCount)? contextual,
+  }) {
+    return contextual?.call(itemsCount);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? normal,
     TResult Function(int itemsCount)? contextual,
@@ -2114,6 +2383,15 @@ class _$_AppBarStateContextual implements _AppBarStateContextual {
     required TResult Function(_AppBarStateContextual value) contextual,
   }) {
     return contextual(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_AppBarStateNormal value)? normal,
+    TResult Function(_AppBarStateContextual value)? contextual,
+  }) {
+    return contextual?.call(this);
   }
 
   @override

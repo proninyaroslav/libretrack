@@ -1,5 +1,6 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'parcel_details_cubit.dart';
 
@@ -58,6 +59,14 @@ mixin _$ParcelDetailsState {
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(String trackNumber)? notFound,
+    TResult Function(String trackNumber, StorageError? error)? loadingFailed,
+    TResult Function(String trackNumber, ParcelInfo info)? loaded,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function(String trackNumber)? notFound,
@@ -73,6 +82,14 @@ mixin _$ParcelDetailsState {
     required TResult Function(ParcelDetailsStateLoadingFailed value)
         loadingFailed,
     required TResult Function(ParcelDetailsStateLoaded value) loaded,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(ParcelDetailsStateInitial value)? initial,
+    TResult Function(ParcelDetailsStateNotFound value)? notFound,
+    TResult Function(ParcelDetailsStateLoadingFailed value)? loadingFailed,
+    TResult Function(ParcelDetailsStateLoaded value)? loaded,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -155,6 +172,17 @@ class _$ParcelDetailsStateInitial implements ParcelDetailsStateInitial {
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(String trackNumber)? notFound,
+    TResult Function(String trackNumber, StorageError? error)? loadingFailed,
+    TResult Function(String trackNumber, ParcelInfo info)? loaded,
+  }) {
+    return initial?.call();
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function(String trackNumber)? notFound,
@@ -178,6 +206,17 @@ class _$ParcelDetailsStateInitial implements ParcelDetailsStateInitial {
     required TResult Function(ParcelDetailsStateLoaded value) loaded,
   }) {
     return initial(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(ParcelDetailsStateInitial value)? initial,
+    TResult Function(ParcelDetailsStateNotFound value)? notFound,
+    TResult Function(ParcelDetailsStateLoadingFailed value)? loadingFailed,
+    TResult Function(ParcelDetailsStateLoaded value)? loaded,
+  }) {
+    return initial?.call(this);
   }
 
   @override
@@ -280,6 +319,17 @@ class _$ParcelDetailsStateNotFound implements ParcelDetailsStateNotFound {
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(String trackNumber)? notFound,
+    TResult Function(String trackNumber, StorageError? error)? loadingFailed,
+    TResult Function(String trackNumber, ParcelInfo info)? loaded,
+  }) {
+    return notFound?.call(trackNumber);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function(String trackNumber)? notFound,
@@ -303,6 +353,17 @@ class _$ParcelDetailsStateNotFound implements ParcelDetailsStateNotFound {
     required TResult Function(ParcelDetailsStateLoaded value) loaded,
   }) {
     return notFound(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(ParcelDetailsStateInitial value)? initial,
+    TResult Function(ParcelDetailsStateNotFound value)? notFound,
+    TResult Function(ParcelDetailsStateLoadingFailed value)? loadingFailed,
+    TResult Function(ParcelDetailsStateLoaded value)? loaded,
+  }) {
+    return notFound?.call(this);
   }
 
   @override
@@ -438,6 +499,17 @@ class _$ParcelDetailsStateLoadingFailed
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(String trackNumber)? notFound,
+    TResult Function(String trackNumber, StorageError? error)? loadingFailed,
+    TResult Function(String trackNumber, ParcelInfo info)? loaded,
+  }) {
+    return loadingFailed?.call(trackNumber, error);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function(String trackNumber)? notFound,
@@ -461,6 +533,17 @@ class _$ParcelDetailsStateLoadingFailed
     required TResult Function(ParcelDetailsStateLoaded value) loaded,
   }) {
     return loadingFailed(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(ParcelDetailsStateInitial value)? initial,
+    TResult Function(ParcelDetailsStateNotFound value)? notFound,
+    TResult Function(ParcelDetailsStateLoadingFailed value)? loadingFailed,
+    TResult Function(ParcelDetailsStateLoaded value)? loaded,
+  }) {
+    return loadingFailed?.call(this);
   }
 
   @override
@@ -591,6 +674,17 @@ class _$ParcelDetailsStateLoaded implements ParcelDetailsStateLoaded {
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(String trackNumber)? notFound,
+    TResult Function(String trackNumber, StorageError? error)? loadingFailed,
+    TResult Function(String trackNumber, ParcelInfo info)? loaded,
+  }) {
+    return loaded?.call(trackNumber, info);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function(String trackNumber)? notFound,
@@ -614,6 +708,17 @@ class _$ParcelDetailsStateLoaded implements ParcelDetailsStateLoaded {
     required TResult Function(ParcelDetailsStateLoaded value) loaded,
   }) {
     return loaded(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(ParcelDetailsStateInitial value)? initial,
+    TResult Function(ParcelDetailsStateNotFound value)? notFound,
+    TResult Function(ParcelDetailsStateLoadingFailed value)? loadingFailed,
+    TResult Function(ParcelDetailsStateLoaded value)? loaded,
+  }) {
+    return loaded?.call(this);
   }
 
   @override
@@ -678,6 +783,13 @@ mixin _$_BuildResult {
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult Function(ParcelInfo info)? $default, {
+    TResult Function()? notFound,
+    TResult Function(StorageError error)? failed,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>(
     TResult Function(ParcelInfo info)? $default, {
     TResult Function()? notFound,
@@ -690,6 +802,13 @@ mixin _$_BuildResult {
     TResult Function(_BuildResultData value) $default, {
     required TResult Function(_BuildResultNotFound value) notFound,
     required TResult Function(_BuildResultFailed value) failed,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult Function(_BuildResultData value)? $default, {
+    TResult Function(_BuildResultNotFound value)? notFound,
+    TResult Function(_BuildResultFailed value)? failed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -801,6 +920,16 @@ class _$_BuildResultData implements _BuildResultData {
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult Function(ParcelInfo info)? $default, {
+    TResult Function()? notFound,
+    TResult Function(StorageError error)? failed,
+  }) {
+    return $default?.call(info);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>(
     TResult Function(ParcelInfo info)? $default, {
     TResult Function()? notFound,
@@ -821,6 +950,16 @@ class _$_BuildResultData implements _BuildResultData {
     required TResult Function(_BuildResultFailed value) failed,
   }) {
     return $default(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult Function(_BuildResultData value)? $default, {
+    TResult Function(_BuildResultNotFound value)? notFound,
+    TResult Function(_BuildResultFailed value)? failed,
+  }) {
+    return $default?.call(this);
   }
 
   @override
@@ -897,6 +1036,16 @@ class _$_BuildResultNotFound implements _BuildResultNotFound {
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult Function(ParcelInfo info)? $default, {
+    TResult Function()? notFound,
+    TResult Function(StorageError error)? failed,
+  }) {
+    return notFound?.call();
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>(
     TResult Function(ParcelInfo info)? $default, {
     TResult Function()? notFound,
@@ -917,6 +1066,16 @@ class _$_BuildResultNotFound implements _BuildResultNotFound {
     required TResult Function(_BuildResultFailed value) failed,
   }) {
     return notFound(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult Function(_BuildResultData value)? $default, {
+    TResult Function(_BuildResultNotFound value)? notFound,
+    TResult Function(_BuildResultFailed value)? failed,
+  }) {
+    return notFound?.call(this);
   }
 
   @override
@@ -1021,6 +1180,16 @@ class _$_BuildResultFailed implements _BuildResultFailed {
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult Function(ParcelInfo info)? $default, {
+    TResult Function()? notFound,
+    TResult Function(StorageError error)? failed,
+  }) {
+    return failed?.call(error);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>(
     TResult Function(ParcelInfo info)? $default, {
     TResult Function()? notFound,
@@ -1041,6 +1210,16 @@ class _$_BuildResultFailed implements _BuildResultFailed {
     required TResult Function(_BuildResultFailed value) failed,
   }) {
     return failed(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult Function(_BuildResultData value)? $default, {
+    TResult Function(_BuildResultNotFound value)? notFound,
+    TResult Function(_BuildResultFailed value)? failed,
+  }) {
+    return failed?.call(this);
   }
 
   @override

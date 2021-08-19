@@ -1,5 +1,6 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'details_actions_cubit.dart';
 
@@ -173,6 +174,34 @@ mixin _$DetailsActionsState {
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? deleting,
+    TResult Function()? deleteSuccess,
+    TResult Function(StorageError error)? deleteFailed,
+    TResult Function()? markingAsRead,
+    TResult Function()? markAsReadSuccess,
+    TResult Function(StorageError error)? markAsReadFailed,
+    TResult Function()? movingToActive,
+    TResult Function()? moveToActiveSuccess,
+    TResult Function(StorageError error)? moveToActiveFailed,
+    TResult Function()? movingToArchive,
+    TResult Function()? moveToArchiveSuccess,
+    TResult Function(StorageError error)? moveToArchiveFailed,
+    TResult Function()? refreshing,
+    TResult Function()? refreshSuccess,
+    TResult Function(StorageError error)? refreshFailed,
+    TResult Function(Duration remainingTime)? refreshFreqLimited,
+    TResult Function()? sharingString,
+    TResult Function(String text)? shareStringSuccess,
+    TResult Function()? copyingTrack,
+    TResult Function(String trackNumber)? copyTrackSuccess,
+    TResult Function()? activating,
+    TResult Function()? activateSuccess,
+    TResult Function(StorageError error)? activateFailed,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? deleting,
@@ -247,6 +276,43 @@ mixin _$DetailsActionsState {
         activateSuccess,
     required TResult Function(DetailsActionsStateActivateFailed value)
         activateFailed,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(DetailsActionsStateInitial value)? initial,
+    TResult Function(DetailsActionsStateDeleting value)? deleting,
+    TResult Function(DetailsActionsStateDeleteSuccess value)? deleteSuccess,
+    TResult Function(DetailsActionsStateDeleteFailed value)? deleteFailed,
+    TResult Function(DetailsActionsStateMarkingAsRead value)? markingAsRead,
+    TResult Function(DetailsActionsStateMarkAsReadSuccess value)?
+        markAsReadSuccess,
+    TResult Function(DetailsActionsStateMarkAsReadFailed value)?
+        markAsReadFailed,
+    TResult Function(DetailsActionsStateMovingToActive value)? movingToActive,
+    TResult Function(DetailsActionsStateMoveToActiveSuccess value)?
+        moveToActiveSuccess,
+    TResult Function(DetailsActionsStateMoveToActiveFailed value)?
+        moveToActiveFailed,
+    TResult Function(DetailsActionsStateMovingToArchive value)? movingToArchive,
+    TResult Function(DetailsActionsStateMoveToArchiveSuccess value)?
+        moveToArchiveSuccess,
+    TResult Function(DetailsActionsStateMoveToArchiveFailed value)?
+        moveToArchiveFailed,
+    TResult Function(DetailsActionsStateRefreshing value)? refreshing,
+    TResult Function(DetailsActionsStateRefreshSuccess value)? refreshSuccess,
+    TResult Function(DetailsActionsStateRefreshFailed value)? refreshFailed,
+    TResult Function(DetailsActionsStateRefreshFreqLimited value)?
+        refreshFreqLimited,
+    TResult Function(DetailsActionsStateSharingString value)? sharingString,
+    TResult Function(DetailsActionsStateShareStringSuccess value)?
+        shareStringSuccess,
+    TResult Function(DetailsActionsStateCopyingTrack value)? copyingTrack,
+    TResult Function(DetailsActionsStateCopyTrackSuccess value)?
+        copyTrackSuccess,
+    TResult Function(DetailsActionsStateActivating value)? activating,
+    TResult Function(DetailsActionsStateActivateSuccess value)? activateSuccess,
+    TResult Function(DetailsActionsStateActivateFailed value)? activateFailed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -377,6 +443,37 @@ class _$DetailsActionsStateInitial implements DetailsActionsStateInitial {
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? deleting,
+    TResult Function()? deleteSuccess,
+    TResult Function(StorageError error)? deleteFailed,
+    TResult Function()? markingAsRead,
+    TResult Function()? markAsReadSuccess,
+    TResult Function(StorageError error)? markAsReadFailed,
+    TResult Function()? movingToActive,
+    TResult Function()? moveToActiveSuccess,
+    TResult Function(StorageError error)? moveToActiveFailed,
+    TResult Function()? movingToArchive,
+    TResult Function()? moveToArchiveSuccess,
+    TResult Function(StorageError error)? moveToArchiveFailed,
+    TResult Function()? refreshing,
+    TResult Function()? refreshSuccess,
+    TResult Function(StorageError error)? refreshFailed,
+    TResult Function(Duration remainingTime)? refreshFreqLimited,
+    TResult Function()? sharingString,
+    TResult Function(String text)? shareStringSuccess,
+    TResult Function()? copyingTrack,
+    TResult Function(String trackNumber)? copyTrackSuccess,
+    TResult Function()? activating,
+    TResult Function()? activateSuccess,
+    TResult Function(StorageError error)? activateFailed,
+  }) {
+    return initial?.call();
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? deleting,
@@ -459,6 +556,46 @@ class _$DetailsActionsStateInitial implements DetailsActionsStateInitial {
         activateFailed,
   }) {
     return initial(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(DetailsActionsStateInitial value)? initial,
+    TResult Function(DetailsActionsStateDeleting value)? deleting,
+    TResult Function(DetailsActionsStateDeleteSuccess value)? deleteSuccess,
+    TResult Function(DetailsActionsStateDeleteFailed value)? deleteFailed,
+    TResult Function(DetailsActionsStateMarkingAsRead value)? markingAsRead,
+    TResult Function(DetailsActionsStateMarkAsReadSuccess value)?
+        markAsReadSuccess,
+    TResult Function(DetailsActionsStateMarkAsReadFailed value)?
+        markAsReadFailed,
+    TResult Function(DetailsActionsStateMovingToActive value)? movingToActive,
+    TResult Function(DetailsActionsStateMoveToActiveSuccess value)?
+        moveToActiveSuccess,
+    TResult Function(DetailsActionsStateMoveToActiveFailed value)?
+        moveToActiveFailed,
+    TResult Function(DetailsActionsStateMovingToArchive value)? movingToArchive,
+    TResult Function(DetailsActionsStateMoveToArchiveSuccess value)?
+        moveToArchiveSuccess,
+    TResult Function(DetailsActionsStateMoveToArchiveFailed value)?
+        moveToArchiveFailed,
+    TResult Function(DetailsActionsStateRefreshing value)? refreshing,
+    TResult Function(DetailsActionsStateRefreshSuccess value)? refreshSuccess,
+    TResult Function(DetailsActionsStateRefreshFailed value)? refreshFailed,
+    TResult Function(DetailsActionsStateRefreshFreqLimited value)?
+        refreshFreqLimited,
+    TResult Function(DetailsActionsStateSharingString value)? sharingString,
+    TResult Function(DetailsActionsStateShareStringSuccess value)?
+        shareStringSuccess,
+    TResult Function(DetailsActionsStateCopyingTrack value)? copyingTrack,
+    TResult Function(DetailsActionsStateCopyTrackSuccess value)?
+        copyTrackSuccess,
+    TResult Function(DetailsActionsStateActivating value)? activating,
+    TResult Function(DetailsActionsStateActivateSuccess value)? activateSuccess,
+    TResult Function(DetailsActionsStateActivateFailed value)? activateFailed,
+  }) {
+    return initial?.call(this);
   }
 
   @override
@@ -582,6 +719,37 @@ class _$DetailsActionsStateDeleting implements DetailsActionsStateDeleting {
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? deleting,
+    TResult Function()? deleteSuccess,
+    TResult Function(StorageError error)? deleteFailed,
+    TResult Function()? markingAsRead,
+    TResult Function()? markAsReadSuccess,
+    TResult Function(StorageError error)? markAsReadFailed,
+    TResult Function()? movingToActive,
+    TResult Function()? moveToActiveSuccess,
+    TResult Function(StorageError error)? moveToActiveFailed,
+    TResult Function()? movingToArchive,
+    TResult Function()? moveToArchiveSuccess,
+    TResult Function(StorageError error)? moveToArchiveFailed,
+    TResult Function()? refreshing,
+    TResult Function()? refreshSuccess,
+    TResult Function(StorageError error)? refreshFailed,
+    TResult Function(Duration remainingTime)? refreshFreqLimited,
+    TResult Function()? sharingString,
+    TResult Function(String text)? shareStringSuccess,
+    TResult Function()? copyingTrack,
+    TResult Function(String trackNumber)? copyTrackSuccess,
+    TResult Function()? activating,
+    TResult Function()? activateSuccess,
+    TResult Function(StorageError error)? activateFailed,
+  }) {
+    return deleting?.call();
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? deleting,
@@ -664,6 +832,46 @@ class _$DetailsActionsStateDeleting implements DetailsActionsStateDeleting {
         activateFailed,
   }) {
     return deleting(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(DetailsActionsStateInitial value)? initial,
+    TResult Function(DetailsActionsStateDeleting value)? deleting,
+    TResult Function(DetailsActionsStateDeleteSuccess value)? deleteSuccess,
+    TResult Function(DetailsActionsStateDeleteFailed value)? deleteFailed,
+    TResult Function(DetailsActionsStateMarkingAsRead value)? markingAsRead,
+    TResult Function(DetailsActionsStateMarkAsReadSuccess value)?
+        markAsReadSuccess,
+    TResult Function(DetailsActionsStateMarkAsReadFailed value)?
+        markAsReadFailed,
+    TResult Function(DetailsActionsStateMovingToActive value)? movingToActive,
+    TResult Function(DetailsActionsStateMoveToActiveSuccess value)?
+        moveToActiveSuccess,
+    TResult Function(DetailsActionsStateMoveToActiveFailed value)?
+        moveToActiveFailed,
+    TResult Function(DetailsActionsStateMovingToArchive value)? movingToArchive,
+    TResult Function(DetailsActionsStateMoveToArchiveSuccess value)?
+        moveToArchiveSuccess,
+    TResult Function(DetailsActionsStateMoveToArchiveFailed value)?
+        moveToArchiveFailed,
+    TResult Function(DetailsActionsStateRefreshing value)? refreshing,
+    TResult Function(DetailsActionsStateRefreshSuccess value)? refreshSuccess,
+    TResult Function(DetailsActionsStateRefreshFailed value)? refreshFailed,
+    TResult Function(DetailsActionsStateRefreshFreqLimited value)?
+        refreshFreqLimited,
+    TResult Function(DetailsActionsStateSharingString value)? sharingString,
+    TResult Function(DetailsActionsStateShareStringSuccess value)?
+        shareStringSuccess,
+    TResult Function(DetailsActionsStateCopyingTrack value)? copyingTrack,
+    TResult Function(DetailsActionsStateCopyTrackSuccess value)?
+        copyTrackSuccess,
+    TResult Function(DetailsActionsStateActivating value)? activating,
+    TResult Function(DetailsActionsStateActivateSuccess value)? activateSuccess,
+    TResult Function(DetailsActionsStateActivateFailed value)? activateFailed,
+  }) {
+    return deleting?.call(this);
   }
 
   @override
@@ -790,6 +998,37 @@ class _$DetailsActionsStateDeleteSuccess
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? deleting,
+    TResult Function()? deleteSuccess,
+    TResult Function(StorageError error)? deleteFailed,
+    TResult Function()? markingAsRead,
+    TResult Function()? markAsReadSuccess,
+    TResult Function(StorageError error)? markAsReadFailed,
+    TResult Function()? movingToActive,
+    TResult Function()? moveToActiveSuccess,
+    TResult Function(StorageError error)? moveToActiveFailed,
+    TResult Function()? movingToArchive,
+    TResult Function()? moveToArchiveSuccess,
+    TResult Function(StorageError error)? moveToArchiveFailed,
+    TResult Function()? refreshing,
+    TResult Function()? refreshSuccess,
+    TResult Function(StorageError error)? refreshFailed,
+    TResult Function(Duration remainingTime)? refreshFreqLimited,
+    TResult Function()? sharingString,
+    TResult Function(String text)? shareStringSuccess,
+    TResult Function()? copyingTrack,
+    TResult Function(String trackNumber)? copyTrackSuccess,
+    TResult Function()? activating,
+    TResult Function()? activateSuccess,
+    TResult Function(StorageError error)? activateFailed,
+  }) {
+    return deleteSuccess?.call();
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? deleting,
@@ -872,6 +1111,46 @@ class _$DetailsActionsStateDeleteSuccess
         activateFailed,
   }) {
     return deleteSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(DetailsActionsStateInitial value)? initial,
+    TResult Function(DetailsActionsStateDeleting value)? deleting,
+    TResult Function(DetailsActionsStateDeleteSuccess value)? deleteSuccess,
+    TResult Function(DetailsActionsStateDeleteFailed value)? deleteFailed,
+    TResult Function(DetailsActionsStateMarkingAsRead value)? markingAsRead,
+    TResult Function(DetailsActionsStateMarkAsReadSuccess value)?
+        markAsReadSuccess,
+    TResult Function(DetailsActionsStateMarkAsReadFailed value)?
+        markAsReadFailed,
+    TResult Function(DetailsActionsStateMovingToActive value)? movingToActive,
+    TResult Function(DetailsActionsStateMoveToActiveSuccess value)?
+        moveToActiveSuccess,
+    TResult Function(DetailsActionsStateMoveToActiveFailed value)?
+        moveToActiveFailed,
+    TResult Function(DetailsActionsStateMovingToArchive value)? movingToArchive,
+    TResult Function(DetailsActionsStateMoveToArchiveSuccess value)?
+        moveToArchiveSuccess,
+    TResult Function(DetailsActionsStateMoveToArchiveFailed value)?
+        moveToArchiveFailed,
+    TResult Function(DetailsActionsStateRefreshing value)? refreshing,
+    TResult Function(DetailsActionsStateRefreshSuccess value)? refreshSuccess,
+    TResult Function(DetailsActionsStateRefreshFailed value)? refreshFailed,
+    TResult Function(DetailsActionsStateRefreshFreqLimited value)?
+        refreshFreqLimited,
+    TResult Function(DetailsActionsStateSharingString value)? sharingString,
+    TResult Function(DetailsActionsStateShareStringSuccess value)?
+        shareStringSuccess,
+    TResult Function(DetailsActionsStateCopyingTrack value)? copyingTrack,
+    TResult Function(DetailsActionsStateCopyTrackSuccess value)?
+        copyTrackSuccess,
+    TResult Function(DetailsActionsStateActivating value)? activating,
+    TResult Function(DetailsActionsStateActivateSuccess value)? activateSuccess,
+    TResult Function(DetailsActionsStateActivateFailed value)? activateFailed,
+  }) {
+    return deleteSuccess?.call(this);
   }
 
   @override
@@ -1033,6 +1312,37 @@ class _$DetailsActionsStateDeleteFailed
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? deleting,
+    TResult Function()? deleteSuccess,
+    TResult Function(StorageError error)? deleteFailed,
+    TResult Function()? markingAsRead,
+    TResult Function()? markAsReadSuccess,
+    TResult Function(StorageError error)? markAsReadFailed,
+    TResult Function()? movingToActive,
+    TResult Function()? moveToActiveSuccess,
+    TResult Function(StorageError error)? moveToActiveFailed,
+    TResult Function()? movingToArchive,
+    TResult Function()? moveToArchiveSuccess,
+    TResult Function(StorageError error)? moveToArchiveFailed,
+    TResult Function()? refreshing,
+    TResult Function()? refreshSuccess,
+    TResult Function(StorageError error)? refreshFailed,
+    TResult Function(Duration remainingTime)? refreshFreqLimited,
+    TResult Function()? sharingString,
+    TResult Function(String text)? shareStringSuccess,
+    TResult Function()? copyingTrack,
+    TResult Function(String trackNumber)? copyTrackSuccess,
+    TResult Function()? activating,
+    TResult Function()? activateSuccess,
+    TResult Function(StorageError error)? activateFailed,
+  }) {
+    return deleteFailed?.call(error);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? deleting,
@@ -1115,6 +1425,46 @@ class _$DetailsActionsStateDeleteFailed
         activateFailed,
   }) {
     return deleteFailed(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(DetailsActionsStateInitial value)? initial,
+    TResult Function(DetailsActionsStateDeleting value)? deleting,
+    TResult Function(DetailsActionsStateDeleteSuccess value)? deleteSuccess,
+    TResult Function(DetailsActionsStateDeleteFailed value)? deleteFailed,
+    TResult Function(DetailsActionsStateMarkingAsRead value)? markingAsRead,
+    TResult Function(DetailsActionsStateMarkAsReadSuccess value)?
+        markAsReadSuccess,
+    TResult Function(DetailsActionsStateMarkAsReadFailed value)?
+        markAsReadFailed,
+    TResult Function(DetailsActionsStateMovingToActive value)? movingToActive,
+    TResult Function(DetailsActionsStateMoveToActiveSuccess value)?
+        moveToActiveSuccess,
+    TResult Function(DetailsActionsStateMoveToActiveFailed value)?
+        moveToActiveFailed,
+    TResult Function(DetailsActionsStateMovingToArchive value)? movingToArchive,
+    TResult Function(DetailsActionsStateMoveToArchiveSuccess value)?
+        moveToArchiveSuccess,
+    TResult Function(DetailsActionsStateMoveToArchiveFailed value)?
+        moveToArchiveFailed,
+    TResult Function(DetailsActionsStateRefreshing value)? refreshing,
+    TResult Function(DetailsActionsStateRefreshSuccess value)? refreshSuccess,
+    TResult Function(DetailsActionsStateRefreshFailed value)? refreshFailed,
+    TResult Function(DetailsActionsStateRefreshFreqLimited value)?
+        refreshFreqLimited,
+    TResult Function(DetailsActionsStateSharingString value)? sharingString,
+    TResult Function(DetailsActionsStateShareStringSuccess value)?
+        shareStringSuccess,
+    TResult Function(DetailsActionsStateCopyingTrack value)? copyingTrack,
+    TResult Function(DetailsActionsStateCopyTrackSuccess value)?
+        copyTrackSuccess,
+    TResult Function(DetailsActionsStateActivating value)? activating,
+    TResult Function(DetailsActionsStateActivateSuccess value)? activateSuccess,
+    TResult Function(DetailsActionsStateActivateFailed value)? activateFailed,
+  }) {
+    return deleteFailed?.call(this);
   }
 
   @override
@@ -1247,6 +1597,37 @@ class _$DetailsActionsStateMarkingAsRead
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? deleting,
+    TResult Function()? deleteSuccess,
+    TResult Function(StorageError error)? deleteFailed,
+    TResult Function()? markingAsRead,
+    TResult Function()? markAsReadSuccess,
+    TResult Function(StorageError error)? markAsReadFailed,
+    TResult Function()? movingToActive,
+    TResult Function()? moveToActiveSuccess,
+    TResult Function(StorageError error)? moveToActiveFailed,
+    TResult Function()? movingToArchive,
+    TResult Function()? moveToArchiveSuccess,
+    TResult Function(StorageError error)? moveToArchiveFailed,
+    TResult Function()? refreshing,
+    TResult Function()? refreshSuccess,
+    TResult Function(StorageError error)? refreshFailed,
+    TResult Function(Duration remainingTime)? refreshFreqLimited,
+    TResult Function()? sharingString,
+    TResult Function(String text)? shareStringSuccess,
+    TResult Function()? copyingTrack,
+    TResult Function(String trackNumber)? copyTrackSuccess,
+    TResult Function()? activating,
+    TResult Function()? activateSuccess,
+    TResult Function(StorageError error)? activateFailed,
+  }) {
+    return markingAsRead?.call();
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? deleting,
@@ -1329,6 +1710,46 @@ class _$DetailsActionsStateMarkingAsRead
         activateFailed,
   }) {
     return markingAsRead(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(DetailsActionsStateInitial value)? initial,
+    TResult Function(DetailsActionsStateDeleting value)? deleting,
+    TResult Function(DetailsActionsStateDeleteSuccess value)? deleteSuccess,
+    TResult Function(DetailsActionsStateDeleteFailed value)? deleteFailed,
+    TResult Function(DetailsActionsStateMarkingAsRead value)? markingAsRead,
+    TResult Function(DetailsActionsStateMarkAsReadSuccess value)?
+        markAsReadSuccess,
+    TResult Function(DetailsActionsStateMarkAsReadFailed value)?
+        markAsReadFailed,
+    TResult Function(DetailsActionsStateMovingToActive value)? movingToActive,
+    TResult Function(DetailsActionsStateMoveToActiveSuccess value)?
+        moveToActiveSuccess,
+    TResult Function(DetailsActionsStateMoveToActiveFailed value)?
+        moveToActiveFailed,
+    TResult Function(DetailsActionsStateMovingToArchive value)? movingToArchive,
+    TResult Function(DetailsActionsStateMoveToArchiveSuccess value)?
+        moveToArchiveSuccess,
+    TResult Function(DetailsActionsStateMoveToArchiveFailed value)?
+        moveToArchiveFailed,
+    TResult Function(DetailsActionsStateRefreshing value)? refreshing,
+    TResult Function(DetailsActionsStateRefreshSuccess value)? refreshSuccess,
+    TResult Function(DetailsActionsStateRefreshFailed value)? refreshFailed,
+    TResult Function(DetailsActionsStateRefreshFreqLimited value)?
+        refreshFreqLimited,
+    TResult Function(DetailsActionsStateSharingString value)? sharingString,
+    TResult Function(DetailsActionsStateShareStringSuccess value)?
+        shareStringSuccess,
+    TResult Function(DetailsActionsStateCopyingTrack value)? copyingTrack,
+    TResult Function(DetailsActionsStateCopyTrackSuccess value)?
+        copyTrackSuccess,
+    TResult Function(DetailsActionsStateActivating value)? activating,
+    TResult Function(DetailsActionsStateActivateSuccess value)? activateSuccess,
+    TResult Function(DetailsActionsStateActivateFailed value)? activateFailed,
+  }) {
+    return markingAsRead?.call(this);
   }
 
   @override
@@ -1456,6 +1877,37 @@ class _$DetailsActionsStateMarkAsReadSuccess
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? deleting,
+    TResult Function()? deleteSuccess,
+    TResult Function(StorageError error)? deleteFailed,
+    TResult Function()? markingAsRead,
+    TResult Function()? markAsReadSuccess,
+    TResult Function(StorageError error)? markAsReadFailed,
+    TResult Function()? movingToActive,
+    TResult Function()? moveToActiveSuccess,
+    TResult Function(StorageError error)? moveToActiveFailed,
+    TResult Function()? movingToArchive,
+    TResult Function()? moveToArchiveSuccess,
+    TResult Function(StorageError error)? moveToArchiveFailed,
+    TResult Function()? refreshing,
+    TResult Function()? refreshSuccess,
+    TResult Function(StorageError error)? refreshFailed,
+    TResult Function(Duration remainingTime)? refreshFreqLimited,
+    TResult Function()? sharingString,
+    TResult Function(String text)? shareStringSuccess,
+    TResult Function()? copyingTrack,
+    TResult Function(String trackNumber)? copyTrackSuccess,
+    TResult Function()? activating,
+    TResult Function()? activateSuccess,
+    TResult Function(StorageError error)? activateFailed,
+  }) {
+    return markAsReadSuccess?.call();
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? deleting,
@@ -1538,6 +1990,46 @@ class _$DetailsActionsStateMarkAsReadSuccess
         activateFailed,
   }) {
     return markAsReadSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(DetailsActionsStateInitial value)? initial,
+    TResult Function(DetailsActionsStateDeleting value)? deleting,
+    TResult Function(DetailsActionsStateDeleteSuccess value)? deleteSuccess,
+    TResult Function(DetailsActionsStateDeleteFailed value)? deleteFailed,
+    TResult Function(DetailsActionsStateMarkingAsRead value)? markingAsRead,
+    TResult Function(DetailsActionsStateMarkAsReadSuccess value)?
+        markAsReadSuccess,
+    TResult Function(DetailsActionsStateMarkAsReadFailed value)?
+        markAsReadFailed,
+    TResult Function(DetailsActionsStateMovingToActive value)? movingToActive,
+    TResult Function(DetailsActionsStateMoveToActiveSuccess value)?
+        moveToActiveSuccess,
+    TResult Function(DetailsActionsStateMoveToActiveFailed value)?
+        moveToActiveFailed,
+    TResult Function(DetailsActionsStateMovingToArchive value)? movingToArchive,
+    TResult Function(DetailsActionsStateMoveToArchiveSuccess value)?
+        moveToArchiveSuccess,
+    TResult Function(DetailsActionsStateMoveToArchiveFailed value)?
+        moveToArchiveFailed,
+    TResult Function(DetailsActionsStateRefreshing value)? refreshing,
+    TResult Function(DetailsActionsStateRefreshSuccess value)? refreshSuccess,
+    TResult Function(DetailsActionsStateRefreshFailed value)? refreshFailed,
+    TResult Function(DetailsActionsStateRefreshFreqLimited value)?
+        refreshFreqLimited,
+    TResult Function(DetailsActionsStateSharingString value)? sharingString,
+    TResult Function(DetailsActionsStateShareStringSuccess value)?
+        shareStringSuccess,
+    TResult Function(DetailsActionsStateCopyingTrack value)? copyingTrack,
+    TResult Function(DetailsActionsStateCopyTrackSuccess value)?
+        copyTrackSuccess,
+    TResult Function(DetailsActionsStateActivating value)? activating,
+    TResult Function(DetailsActionsStateActivateSuccess value)? activateSuccess,
+    TResult Function(DetailsActionsStateActivateFailed value)? activateFailed,
+  }) {
+    return markAsReadSuccess?.call(this);
   }
 
   @override
@@ -1701,6 +2193,37 @@ class _$DetailsActionsStateMarkAsReadFailed
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? deleting,
+    TResult Function()? deleteSuccess,
+    TResult Function(StorageError error)? deleteFailed,
+    TResult Function()? markingAsRead,
+    TResult Function()? markAsReadSuccess,
+    TResult Function(StorageError error)? markAsReadFailed,
+    TResult Function()? movingToActive,
+    TResult Function()? moveToActiveSuccess,
+    TResult Function(StorageError error)? moveToActiveFailed,
+    TResult Function()? movingToArchive,
+    TResult Function()? moveToArchiveSuccess,
+    TResult Function(StorageError error)? moveToArchiveFailed,
+    TResult Function()? refreshing,
+    TResult Function()? refreshSuccess,
+    TResult Function(StorageError error)? refreshFailed,
+    TResult Function(Duration remainingTime)? refreshFreqLimited,
+    TResult Function()? sharingString,
+    TResult Function(String text)? shareStringSuccess,
+    TResult Function()? copyingTrack,
+    TResult Function(String trackNumber)? copyTrackSuccess,
+    TResult Function()? activating,
+    TResult Function()? activateSuccess,
+    TResult Function(StorageError error)? activateFailed,
+  }) {
+    return markAsReadFailed?.call(error);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? deleting,
@@ -1783,6 +2306,46 @@ class _$DetailsActionsStateMarkAsReadFailed
         activateFailed,
   }) {
     return markAsReadFailed(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(DetailsActionsStateInitial value)? initial,
+    TResult Function(DetailsActionsStateDeleting value)? deleting,
+    TResult Function(DetailsActionsStateDeleteSuccess value)? deleteSuccess,
+    TResult Function(DetailsActionsStateDeleteFailed value)? deleteFailed,
+    TResult Function(DetailsActionsStateMarkingAsRead value)? markingAsRead,
+    TResult Function(DetailsActionsStateMarkAsReadSuccess value)?
+        markAsReadSuccess,
+    TResult Function(DetailsActionsStateMarkAsReadFailed value)?
+        markAsReadFailed,
+    TResult Function(DetailsActionsStateMovingToActive value)? movingToActive,
+    TResult Function(DetailsActionsStateMoveToActiveSuccess value)?
+        moveToActiveSuccess,
+    TResult Function(DetailsActionsStateMoveToActiveFailed value)?
+        moveToActiveFailed,
+    TResult Function(DetailsActionsStateMovingToArchive value)? movingToArchive,
+    TResult Function(DetailsActionsStateMoveToArchiveSuccess value)?
+        moveToArchiveSuccess,
+    TResult Function(DetailsActionsStateMoveToArchiveFailed value)?
+        moveToArchiveFailed,
+    TResult Function(DetailsActionsStateRefreshing value)? refreshing,
+    TResult Function(DetailsActionsStateRefreshSuccess value)? refreshSuccess,
+    TResult Function(DetailsActionsStateRefreshFailed value)? refreshFailed,
+    TResult Function(DetailsActionsStateRefreshFreqLimited value)?
+        refreshFreqLimited,
+    TResult Function(DetailsActionsStateSharingString value)? sharingString,
+    TResult Function(DetailsActionsStateShareStringSuccess value)?
+        shareStringSuccess,
+    TResult Function(DetailsActionsStateCopyingTrack value)? copyingTrack,
+    TResult Function(DetailsActionsStateCopyTrackSuccess value)?
+        copyTrackSuccess,
+    TResult Function(DetailsActionsStateActivating value)? activating,
+    TResult Function(DetailsActionsStateActivateSuccess value)? activateSuccess,
+    TResult Function(DetailsActionsStateActivateFailed value)? activateFailed,
+  }) {
+    return markAsReadFailed?.call(this);
   }
 
   @override
@@ -1917,6 +2480,37 @@ class _$DetailsActionsStateMovingToActive
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? deleting,
+    TResult Function()? deleteSuccess,
+    TResult Function(StorageError error)? deleteFailed,
+    TResult Function()? markingAsRead,
+    TResult Function()? markAsReadSuccess,
+    TResult Function(StorageError error)? markAsReadFailed,
+    TResult Function()? movingToActive,
+    TResult Function()? moveToActiveSuccess,
+    TResult Function(StorageError error)? moveToActiveFailed,
+    TResult Function()? movingToArchive,
+    TResult Function()? moveToArchiveSuccess,
+    TResult Function(StorageError error)? moveToArchiveFailed,
+    TResult Function()? refreshing,
+    TResult Function()? refreshSuccess,
+    TResult Function(StorageError error)? refreshFailed,
+    TResult Function(Duration remainingTime)? refreshFreqLimited,
+    TResult Function()? sharingString,
+    TResult Function(String text)? shareStringSuccess,
+    TResult Function()? copyingTrack,
+    TResult Function(String trackNumber)? copyTrackSuccess,
+    TResult Function()? activating,
+    TResult Function()? activateSuccess,
+    TResult Function(StorageError error)? activateFailed,
+  }) {
+    return movingToActive?.call();
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? deleting,
@@ -1999,6 +2593,46 @@ class _$DetailsActionsStateMovingToActive
         activateFailed,
   }) {
     return movingToActive(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(DetailsActionsStateInitial value)? initial,
+    TResult Function(DetailsActionsStateDeleting value)? deleting,
+    TResult Function(DetailsActionsStateDeleteSuccess value)? deleteSuccess,
+    TResult Function(DetailsActionsStateDeleteFailed value)? deleteFailed,
+    TResult Function(DetailsActionsStateMarkingAsRead value)? markingAsRead,
+    TResult Function(DetailsActionsStateMarkAsReadSuccess value)?
+        markAsReadSuccess,
+    TResult Function(DetailsActionsStateMarkAsReadFailed value)?
+        markAsReadFailed,
+    TResult Function(DetailsActionsStateMovingToActive value)? movingToActive,
+    TResult Function(DetailsActionsStateMoveToActiveSuccess value)?
+        moveToActiveSuccess,
+    TResult Function(DetailsActionsStateMoveToActiveFailed value)?
+        moveToActiveFailed,
+    TResult Function(DetailsActionsStateMovingToArchive value)? movingToArchive,
+    TResult Function(DetailsActionsStateMoveToArchiveSuccess value)?
+        moveToArchiveSuccess,
+    TResult Function(DetailsActionsStateMoveToArchiveFailed value)?
+        moveToArchiveFailed,
+    TResult Function(DetailsActionsStateRefreshing value)? refreshing,
+    TResult Function(DetailsActionsStateRefreshSuccess value)? refreshSuccess,
+    TResult Function(DetailsActionsStateRefreshFailed value)? refreshFailed,
+    TResult Function(DetailsActionsStateRefreshFreqLimited value)?
+        refreshFreqLimited,
+    TResult Function(DetailsActionsStateSharingString value)? sharingString,
+    TResult Function(DetailsActionsStateShareStringSuccess value)?
+        shareStringSuccess,
+    TResult Function(DetailsActionsStateCopyingTrack value)? copyingTrack,
+    TResult Function(DetailsActionsStateCopyTrackSuccess value)?
+        copyTrackSuccess,
+    TResult Function(DetailsActionsStateActivating value)? activating,
+    TResult Function(DetailsActionsStateActivateSuccess value)? activateSuccess,
+    TResult Function(DetailsActionsStateActivateFailed value)? activateFailed,
+  }) {
+    return movingToActive?.call(this);
   }
 
   @override
@@ -2128,6 +2762,37 @@ class _$DetailsActionsStateMoveToActiveSuccess
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? deleting,
+    TResult Function()? deleteSuccess,
+    TResult Function(StorageError error)? deleteFailed,
+    TResult Function()? markingAsRead,
+    TResult Function()? markAsReadSuccess,
+    TResult Function(StorageError error)? markAsReadFailed,
+    TResult Function()? movingToActive,
+    TResult Function()? moveToActiveSuccess,
+    TResult Function(StorageError error)? moveToActiveFailed,
+    TResult Function()? movingToArchive,
+    TResult Function()? moveToArchiveSuccess,
+    TResult Function(StorageError error)? moveToArchiveFailed,
+    TResult Function()? refreshing,
+    TResult Function()? refreshSuccess,
+    TResult Function(StorageError error)? refreshFailed,
+    TResult Function(Duration remainingTime)? refreshFreqLimited,
+    TResult Function()? sharingString,
+    TResult Function(String text)? shareStringSuccess,
+    TResult Function()? copyingTrack,
+    TResult Function(String trackNumber)? copyTrackSuccess,
+    TResult Function()? activating,
+    TResult Function()? activateSuccess,
+    TResult Function(StorageError error)? activateFailed,
+  }) {
+    return moveToActiveSuccess?.call();
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? deleting,
@@ -2210,6 +2875,46 @@ class _$DetailsActionsStateMoveToActiveSuccess
         activateFailed,
   }) {
     return moveToActiveSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(DetailsActionsStateInitial value)? initial,
+    TResult Function(DetailsActionsStateDeleting value)? deleting,
+    TResult Function(DetailsActionsStateDeleteSuccess value)? deleteSuccess,
+    TResult Function(DetailsActionsStateDeleteFailed value)? deleteFailed,
+    TResult Function(DetailsActionsStateMarkingAsRead value)? markingAsRead,
+    TResult Function(DetailsActionsStateMarkAsReadSuccess value)?
+        markAsReadSuccess,
+    TResult Function(DetailsActionsStateMarkAsReadFailed value)?
+        markAsReadFailed,
+    TResult Function(DetailsActionsStateMovingToActive value)? movingToActive,
+    TResult Function(DetailsActionsStateMoveToActiveSuccess value)?
+        moveToActiveSuccess,
+    TResult Function(DetailsActionsStateMoveToActiveFailed value)?
+        moveToActiveFailed,
+    TResult Function(DetailsActionsStateMovingToArchive value)? movingToArchive,
+    TResult Function(DetailsActionsStateMoveToArchiveSuccess value)?
+        moveToArchiveSuccess,
+    TResult Function(DetailsActionsStateMoveToArchiveFailed value)?
+        moveToArchiveFailed,
+    TResult Function(DetailsActionsStateRefreshing value)? refreshing,
+    TResult Function(DetailsActionsStateRefreshSuccess value)? refreshSuccess,
+    TResult Function(DetailsActionsStateRefreshFailed value)? refreshFailed,
+    TResult Function(DetailsActionsStateRefreshFreqLimited value)?
+        refreshFreqLimited,
+    TResult Function(DetailsActionsStateSharingString value)? sharingString,
+    TResult Function(DetailsActionsStateShareStringSuccess value)?
+        shareStringSuccess,
+    TResult Function(DetailsActionsStateCopyingTrack value)? copyingTrack,
+    TResult Function(DetailsActionsStateCopyTrackSuccess value)?
+        copyTrackSuccess,
+    TResult Function(DetailsActionsStateActivating value)? activating,
+    TResult Function(DetailsActionsStateActivateSuccess value)? activateSuccess,
+    TResult Function(DetailsActionsStateActivateFailed value)? activateFailed,
+  }) {
+    return moveToActiveSuccess?.call(this);
   }
 
   @override
@@ -2373,6 +3078,37 @@ class _$DetailsActionsStateMoveToActiveFailed
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? deleting,
+    TResult Function()? deleteSuccess,
+    TResult Function(StorageError error)? deleteFailed,
+    TResult Function()? markingAsRead,
+    TResult Function()? markAsReadSuccess,
+    TResult Function(StorageError error)? markAsReadFailed,
+    TResult Function()? movingToActive,
+    TResult Function()? moveToActiveSuccess,
+    TResult Function(StorageError error)? moveToActiveFailed,
+    TResult Function()? movingToArchive,
+    TResult Function()? moveToArchiveSuccess,
+    TResult Function(StorageError error)? moveToArchiveFailed,
+    TResult Function()? refreshing,
+    TResult Function()? refreshSuccess,
+    TResult Function(StorageError error)? refreshFailed,
+    TResult Function(Duration remainingTime)? refreshFreqLimited,
+    TResult Function()? sharingString,
+    TResult Function(String text)? shareStringSuccess,
+    TResult Function()? copyingTrack,
+    TResult Function(String trackNumber)? copyTrackSuccess,
+    TResult Function()? activating,
+    TResult Function()? activateSuccess,
+    TResult Function(StorageError error)? activateFailed,
+  }) {
+    return moveToActiveFailed?.call(error);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? deleting,
@@ -2455,6 +3191,46 @@ class _$DetailsActionsStateMoveToActiveFailed
         activateFailed,
   }) {
     return moveToActiveFailed(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(DetailsActionsStateInitial value)? initial,
+    TResult Function(DetailsActionsStateDeleting value)? deleting,
+    TResult Function(DetailsActionsStateDeleteSuccess value)? deleteSuccess,
+    TResult Function(DetailsActionsStateDeleteFailed value)? deleteFailed,
+    TResult Function(DetailsActionsStateMarkingAsRead value)? markingAsRead,
+    TResult Function(DetailsActionsStateMarkAsReadSuccess value)?
+        markAsReadSuccess,
+    TResult Function(DetailsActionsStateMarkAsReadFailed value)?
+        markAsReadFailed,
+    TResult Function(DetailsActionsStateMovingToActive value)? movingToActive,
+    TResult Function(DetailsActionsStateMoveToActiveSuccess value)?
+        moveToActiveSuccess,
+    TResult Function(DetailsActionsStateMoveToActiveFailed value)?
+        moveToActiveFailed,
+    TResult Function(DetailsActionsStateMovingToArchive value)? movingToArchive,
+    TResult Function(DetailsActionsStateMoveToArchiveSuccess value)?
+        moveToArchiveSuccess,
+    TResult Function(DetailsActionsStateMoveToArchiveFailed value)?
+        moveToArchiveFailed,
+    TResult Function(DetailsActionsStateRefreshing value)? refreshing,
+    TResult Function(DetailsActionsStateRefreshSuccess value)? refreshSuccess,
+    TResult Function(DetailsActionsStateRefreshFailed value)? refreshFailed,
+    TResult Function(DetailsActionsStateRefreshFreqLimited value)?
+        refreshFreqLimited,
+    TResult Function(DetailsActionsStateSharingString value)? sharingString,
+    TResult Function(DetailsActionsStateShareStringSuccess value)?
+        shareStringSuccess,
+    TResult Function(DetailsActionsStateCopyingTrack value)? copyingTrack,
+    TResult Function(DetailsActionsStateCopyTrackSuccess value)?
+        copyTrackSuccess,
+    TResult Function(DetailsActionsStateActivating value)? activating,
+    TResult Function(DetailsActionsStateActivateSuccess value)? activateSuccess,
+    TResult Function(DetailsActionsStateActivateFailed value)? activateFailed,
+  }) {
+    return moveToActiveFailed?.call(this);
   }
 
   @override
@@ -2589,6 +3365,37 @@ class _$DetailsActionsStateMovingToArchive
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? deleting,
+    TResult Function()? deleteSuccess,
+    TResult Function(StorageError error)? deleteFailed,
+    TResult Function()? markingAsRead,
+    TResult Function()? markAsReadSuccess,
+    TResult Function(StorageError error)? markAsReadFailed,
+    TResult Function()? movingToActive,
+    TResult Function()? moveToActiveSuccess,
+    TResult Function(StorageError error)? moveToActiveFailed,
+    TResult Function()? movingToArchive,
+    TResult Function()? moveToArchiveSuccess,
+    TResult Function(StorageError error)? moveToArchiveFailed,
+    TResult Function()? refreshing,
+    TResult Function()? refreshSuccess,
+    TResult Function(StorageError error)? refreshFailed,
+    TResult Function(Duration remainingTime)? refreshFreqLimited,
+    TResult Function()? sharingString,
+    TResult Function(String text)? shareStringSuccess,
+    TResult Function()? copyingTrack,
+    TResult Function(String trackNumber)? copyTrackSuccess,
+    TResult Function()? activating,
+    TResult Function()? activateSuccess,
+    TResult Function(StorageError error)? activateFailed,
+  }) {
+    return movingToArchive?.call();
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? deleting,
@@ -2671,6 +3478,46 @@ class _$DetailsActionsStateMovingToArchive
         activateFailed,
   }) {
     return movingToArchive(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(DetailsActionsStateInitial value)? initial,
+    TResult Function(DetailsActionsStateDeleting value)? deleting,
+    TResult Function(DetailsActionsStateDeleteSuccess value)? deleteSuccess,
+    TResult Function(DetailsActionsStateDeleteFailed value)? deleteFailed,
+    TResult Function(DetailsActionsStateMarkingAsRead value)? markingAsRead,
+    TResult Function(DetailsActionsStateMarkAsReadSuccess value)?
+        markAsReadSuccess,
+    TResult Function(DetailsActionsStateMarkAsReadFailed value)?
+        markAsReadFailed,
+    TResult Function(DetailsActionsStateMovingToActive value)? movingToActive,
+    TResult Function(DetailsActionsStateMoveToActiveSuccess value)?
+        moveToActiveSuccess,
+    TResult Function(DetailsActionsStateMoveToActiveFailed value)?
+        moveToActiveFailed,
+    TResult Function(DetailsActionsStateMovingToArchive value)? movingToArchive,
+    TResult Function(DetailsActionsStateMoveToArchiveSuccess value)?
+        moveToArchiveSuccess,
+    TResult Function(DetailsActionsStateMoveToArchiveFailed value)?
+        moveToArchiveFailed,
+    TResult Function(DetailsActionsStateRefreshing value)? refreshing,
+    TResult Function(DetailsActionsStateRefreshSuccess value)? refreshSuccess,
+    TResult Function(DetailsActionsStateRefreshFailed value)? refreshFailed,
+    TResult Function(DetailsActionsStateRefreshFreqLimited value)?
+        refreshFreqLimited,
+    TResult Function(DetailsActionsStateSharingString value)? sharingString,
+    TResult Function(DetailsActionsStateShareStringSuccess value)?
+        shareStringSuccess,
+    TResult Function(DetailsActionsStateCopyingTrack value)? copyingTrack,
+    TResult Function(DetailsActionsStateCopyTrackSuccess value)?
+        copyTrackSuccess,
+    TResult Function(DetailsActionsStateActivating value)? activating,
+    TResult Function(DetailsActionsStateActivateSuccess value)? activateSuccess,
+    TResult Function(DetailsActionsStateActivateFailed value)? activateFailed,
+  }) {
+    return movingToArchive?.call(this);
   }
 
   @override
@@ -2800,6 +3647,37 @@ class _$DetailsActionsStateMoveToArchiveSuccess
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? deleting,
+    TResult Function()? deleteSuccess,
+    TResult Function(StorageError error)? deleteFailed,
+    TResult Function()? markingAsRead,
+    TResult Function()? markAsReadSuccess,
+    TResult Function(StorageError error)? markAsReadFailed,
+    TResult Function()? movingToActive,
+    TResult Function()? moveToActiveSuccess,
+    TResult Function(StorageError error)? moveToActiveFailed,
+    TResult Function()? movingToArchive,
+    TResult Function()? moveToArchiveSuccess,
+    TResult Function(StorageError error)? moveToArchiveFailed,
+    TResult Function()? refreshing,
+    TResult Function()? refreshSuccess,
+    TResult Function(StorageError error)? refreshFailed,
+    TResult Function(Duration remainingTime)? refreshFreqLimited,
+    TResult Function()? sharingString,
+    TResult Function(String text)? shareStringSuccess,
+    TResult Function()? copyingTrack,
+    TResult Function(String trackNumber)? copyTrackSuccess,
+    TResult Function()? activating,
+    TResult Function()? activateSuccess,
+    TResult Function(StorageError error)? activateFailed,
+  }) {
+    return moveToArchiveSuccess?.call();
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? deleting,
@@ -2882,6 +3760,46 @@ class _$DetailsActionsStateMoveToArchiveSuccess
         activateFailed,
   }) {
     return moveToArchiveSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(DetailsActionsStateInitial value)? initial,
+    TResult Function(DetailsActionsStateDeleting value)? deleting,
+    TResult Function(DetailsActionsStateDeleteSuccess value)? deleteSuccess,
+    TResult Function(DetailsActionsStateDeleteFailed value)? deleteFailed,
+    TResult Function(DetailsActionsStateMarkingAsRead value)? markingAsRead,
+    TResult Function(DetailsActionsStateMarkAsReadSuccess value)?
+        markAsReadSuccess,
+    TResult Function(DetailsActionsStateMarkAsReadFailed value)?
+        markAsReadFailed,
+    TResult Function(DetailsActionsStateMovingToActive value)? movingToActive,
+    TResult Function(DetailsActionsStateMoveToActiveSuccess value)?
+        moveToActiveSuccess,
+    TResult Function(DetailsActionsStateMoveToActiveFailed value)?
+        moveToActiveFailed,
+    TResult Function(DetailsActionsStateMovingToArchive value)? movingToArchive,
+    TResult Function(DetailsActionsStateMoveToArchiveSuccess value)?
+        moveToArchiveSuccess,
+    TResult Function(DetailsActionsStateMoveToArchiveFailed value)?
+        moveToArchiveFailed,
+    TResult Function(DetailsActionsStateRefreshing value)? refreshing,
+    TResult Function(DetailsActionsStateRefreshSuccess value)? refreshSuccess,
+    TResult Function(DetailsActionsStateRefreshFailed value)? refreshFailed,
+    TResult Function(DetailsActionsStateRefreshFreqLimited value)?
+        refreshFreqLimited,
+    TResult Function(DetailsActionsStateSharingString value)? sharingString,
+    TResult Function(DetailsActionsStateShareStringSuccess value)?
+        shareStringSuccess,
+    TResult Function(DetailsActionsStateCopyingTrack value)? copyingTrack,
+    TResult Function(DetailsActionsStateCopyTrackSuccess value)?
+        copyTrackSuccess,
+    TResult Function(DetailsActionsStateActivating value)? activating,
+    TResult Function(DetailsActionsStateActivateSuccess value)? activateSuccess,
+    TResult Function(DetailsActionsStateActivateFailed value)? activateFailed,
+  }) {
+    return moveToArchiveSuccess?.call(this);
   }
 
   @override
@@ -3046,6 +3964,37 @@ class _$DetailsActionsStateMoveToArchiveFailed
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? deleting,
+    TResult Function()? deleteSuccess,
+    TResult Function(StorageError error)? deleteFailed,
+    TResult Function()? markingAsRead,
+    TResult Function()? markAsReadSuccess,
+    TResult Function(StorageError error)? markAsReadFailed,
+    TResult Function()? movingToActive,
+    TResult Function()? moveToActiveSuccess,
+    TResult Function(StorageError error)? moveToActiveFailed,
+    TResult Function()? movingToArchive,
+    TResult Function()? moveToArchiveSuccess,
+    TResult Function(StorageError error)? moveToArchiveFailed,
+    TResult Function()? refreshing,
+    TResult Function()? refreshSuccess,
+    TResult Function(StorageError error)? refreshFailed,
+    TResult Function(Duration remainingTime)? refreshFreqLimited,
+    TResult Function()? sharingString,
+    TResult Function(String text)? shareStringSuccess,
+    TResult Function()? copyingTrack,
+    TResult Function(String trackNumber)? copyTrackSuccess,
+    TResult Function()? activating,
+    TResult Function()? activateSuccess,
+    TResult Function(StorageError error)? activateFailed,
+  }) {
+    return moveToArchiveFailed?.call(error);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? deleting,
@@ -3128,6 +4077,46 @@ class _$DetailsActionsStateMoveToArchiveFailed
         activateFailed,
   }) {
     return moveToArchiveFailed(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(DetailsActionsStateInitial value)? initial,
+    TResult Function(DetailsActionsStateDeleting value)? deleting,
+    TResult Function(DetailsActionsStateDeleteSuccess value)? deleteSuccess,
+    TResult Function(DetailsActionsStateDeleteFailed value)? deleteFailed,
+    TResult Function(DetailsActionsStateMarkingAsRead value)? markingAsRead,
+    TResult Function(DetailsActionsStateMarkAsReadSuccess value)?
+        markAsReadSuccess,
+    TResult Function(DetailsActionsStateMarkAsReadFailed value)?
+        markAsReadFailed,
+    TResult Function(DetailsActionsStateMovingToActive value)? movingToActive,
+    TResult Function(DetailsActionsStateMoveToActiveSuccess value)?
+        moveToActiveSuccess,
+    TResult Function(DetailsActionsStateMoveToActiveFailed value)?
+        moveToActiveFailed,
+    TResult Function(DetailsActionsStateMovingToArchive value)? movingToArchive,
+    TResult Function(DetailsActionsStateMoveToArchiveSuccess value)?
+        moveToArchiveSuccess,
+    TResult Function(DetailsActionsStateMoveToArchiveFailed value)?
+        moveToArchiveFailed,
+    TResult Function(DetailsActionsStateRefreshing value)? refreshing,
+    TResult Function(DetailsActionsStateRefreshSuccess value)? refreshSuccess,
+    TResult Function(DetailsActionsStateRefreshFailed value)? refreshFailed,
+    TResult Function(DetailsActionsStateRefreshFreqLimited value)?
+        refreshFreqLimited,
+    TResult Function(DetailsActionsStateSharingString value)? sharingString,
+    TResult Function(DetailsActionsStateShareStringSuccess value)?
+        shareStringSuccess,
+    TResult Function(DetailsActionsStateCopyingTrack value)? copyingTrack,
+    TResult Function(DetailsActionsStateCopyTrackSuccess value)?
+        copyTrackSuccess,
+    TResult Function(DetailsActionsStateActivating value)? activating,
+    TResult Function(DetailsActionsStateActivateSuccess value)? activateSuccess,
+    TResult Function(DetailsActionsStateActivateFailed value)? activateFailed,
+  }) {
+    return moveToArchiveFailed?.call(this);
   }
 
   @override
@@ -3260,6 +4249,37 @@ class _$DetailsActionsStateRefreshing implements DetailsActionsStateRefreshing {
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? deleting,
+    TResult Function()? deleteSuccess,
+    TResult Function(StorageError error)? deleteFailed,
+    TResult Function()? markingAsRead,
+    TResult Function()? markAsReadSuccess,
+    TResult Function(StorageError error)? markAsReadFailed,
+    TResult Function()? movingToActive,
+    TResult Function()? moveToActiveSuccess,
+    TResult Function(StorageError error)? moveToActiveFailed,
+    TResult Function()? movingToArchive,
+    TResult Function()? moveToArchiveSuccess,
+    TResult Function(StorageError error)? moveToArchiveFailed,
+    TResult Function()? refreshing,
+    TResult Function()? refreshSuccess,
+    TResult Function(StorageError error)? refreshFailed,
+    TResult Function(Duration remainingTime)? refreshFreqLimited,
+    TResult Function()? sharingString,
+    TResult Function(String text)? shareStringSuccess,
+    TResult Function()? copyingTrack,
+    TResult Function(String trackNumber)? copyTrackSuccess,
+    TResult Function()? activating,
+    TResult Function()? activateSuccess,
+    TResult Function(StorageError error)? activateFailed,
+  }) {
+    return refreshing?.call();
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? deleting,
@@ -3342,6 +4362,46 @@ class _$DetailsActionsStateRefreshing implements DetailsActionsStateRefreshing {
         activateFailed,
   }) {
     return refreshing(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(DetailsActionsStateInitial value)? initial,
+    TResult Function(DetailsActionsStateDeleting value)? deleting,
+    TResult Function(DetailsActionsStateDeleteSuccess value)? deleteSuccess,
+    TResult Function(DetailsActionsStateDeleteFailed value)? deleteFailed,
+    TResult Function(DetailsActionsStateMarkingAsRead value)? markingAsRead,
+    TResult Function(DetailsActionsStateMarkAsReadSuccess value)?
+        markAsReadSuccess,
+    TResult Function(DetailsActionsStateMarkAsReadFailed value)?
+        markAsReadFailed,
+    TResult Function(DetailsActionsStateMovingToActive value)? movingToActive,
+    TResult Function(DetailsActionsStateMoveToActiveSuccess value)?
+        moveToActiveSuccess,
+    TResult Function(DetailsActionsStateMoveToActiveFailed value)?
+        moveToActiveFailed,
+    TResult Function(DetailsActionsStateMovingToArchive value)? movingToArchive,
+    TResult Function(DetailsActionsStateMoveToArchiveSuccess value)?
+        moveToArchiveSuccess,
+    TResult Function(DetailsActionsStateMoveToArchiveFailed value)?
+        moveToArchiveFailed,
+    TResult Function(DetailsActionsStateRefreshing value)? refreshing,
+    TResult Function(DetailsActionsStateRefreshSuccess value)? refreshSuccess,
+    TResult Function(DetailsActionsStateRefreshFailed value)? refreshFailed,
+    TResult Function(DetailsActionsStateRefreshFreqLimited value)?
+        refreshFreqLimited,
+    TResult Function(DetailsActionsStateSharingString value)? sharingString,
+    TResult Function(DetailsActionsStateShareStringSuccess value)?
+        shareStringSuccess,
+    TResult Function(DetailsActionsStateCopyingTrack value)? copyingTrack,
+    TResult Function(DetailsActionsStateCopyTrackSuccess value)?
+        copyTrackSuccess,
+    TResult Function(DetailsActionsStateActivating value)? activating,
+    TResult Function(DetailsActionsStateActivateSuccess value)? activateSuccess,
+    TResult Function(DetailsActionsStateActivateFailed value)? activateFailed,
+  }) {
+    return refreshing?.call(this);
   }
 
   @override
@@ -3469,6 +4529,37 @@ class _$DetailsActionsStateRefreshSuccess
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? deleting,
+    TResult Function()? deleteSuccess,
+    TResult Function(StorageError error)? deleteFailed,
+    TResult Function()? markingAsRead,
+    TResult Function()? markAsReadSuccess,
+    TResult Function(StorageError error)? markAsReadFailed,
+    TResult Function()? movingToActive,
+    TResult Function()? moveToActiveSuccess,
+    TResult Function(StorageError error)? moveToActiveFailed,
+    TResult Function()? movingToArchive,
+    TResult Function()? moveToArchiveSuccess,
+    TResult Function(StorageError error)? moveToArchiveFailed,
+    TResult Function()? refreshing,
+    TResult Function()? refreshSuccess,
+    TResult Function(StorageError error)? refreshFailed,
+    TResult Function(Duration remainingTime)? refreshFreqLimited,
+    TResult Function()? sharingString,
+    TResult Function(String text)? shareStringSuccess,
+    TResult Function()? copyingTrack,
+    TResult Function(String trackNumber)? copyTrackSuccess,
+    TResult Function()? activating,
+    TResult Function()? activateSuccess,
+    TResult Function(StorageError error)? activateFailed,
+  }) {
+    return refreshSuccess?.call();
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? deleting,
@@ -3551,6 +4642,46 @@ class _$DetailsActionsStateRefreshSuccess
         activateFailed,
   }) {
     return refreshSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(DetailsActionsStateInitial value)? initial,
+    TResult Function(DetailsActionsStateDeleting value)? deleting,
+    TResult Function(DetailsActionsStateDeleteSuccess value)? deleteSuccess,
+    TResult Function(DetailsActionsStateDeleteFailed value)? deleteFailed,
+    TResult Function(DetailsActionsStateMarkingAsRead value)? markingAsRead,
+    TResult Function(DetailsActionsStateMarkAsReadSuccess value)?
+        markAsReadSuccess,
+    TResult Function(DetailsActionsStateMarkAsReadFailed value)?
+        markAsReadFailed,
+    TResult Function(DetailsActionsStateMovingToActive value)? movingToActive,
+    TResult Function(DetailsActionsStateMoveToActiveSuccess value)?
+        moveToActiveSuccess,
+    TResult Function(DetailsActionsStateMoveToActiveFailed value)?
+        moveToActiveFailed,
+    TResult Function(DetailsActionsStateMovingToArchive value)? movingToArchive,
+    TResult Function(DetailsActionsStateMoveToArchiveSuccess value)?
+        moveToArchiveSuccess,
+    TResult Function(DetailsActionsStateMoveToArchiveFailed value)?
+        moveToArchiveFailed,
+    TResult Function(DetailsActionsStateRefreshing value)? refreshing,
+    TResult Function(DetailsActionsStateRefreshSuccess value)? refreshSuccess,
+    TResult Function(DetailsActionsStateRefreshFailed value)? refreshFailed,
+    TResult Function(DetailsActionsStateRefreshFreqLimited value)?
+        refreshFreqLimited,
+    TResult Function(DetailsActionsStateSharingString value)? sharingString,
+    TResult Function(DetailsActionsStateShareStringSuccess value)?
+        shareStringSuccess,
+    TResult Function(DetailsActionsStateCopyingTrack value)? copyingTrack,
+    TResult Function(DetailsActionsStateCopyTrackSuccess value)?
+        copyTrackSuccess,
+    TResult Function(DetailsActionsStateActivating value)? activating,
+    TResult Function(DetailsActionsStateActivateSuccess value)? activateSuccess,
+    TResult Function(DetailsActionsStateActivateFailed value)? activateFailed,
+  }) {
+    return refreshSuccess?.call(this);
   }
 
   @override
@@ -3713,6 +4844,37 @@ class _$DetailsActionsStateRefreshFailed
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? deleting,
+    TResult Function()? deleteSuccess,
+    TResult Function(StorageError error)? deleteFailed,
+    TResult Function()? markingAsRead,
+    TResult Function()? markAsReadSuccess,
+    TResult Function(StorageError error)? markAsReadFailed,
+    TResult Function()? movingToActive,
+    TResult Function()? moveToActiveSuccess,
+    TResult Function(StorageError error)? moveToActiveFailed,
+    TResult Function()? movingToArchive,
+    TResult Function()? moveToArchiveSuccess,
+    TResult Function(StorageError error)? moveToArchiveFailed,
+    TResult Function()? refreshing,
+    TResult Function()? refreshSuccess,
+    TResult Function(StorageError error)? refreshFailed,
+    TResult Function(Duration remainingTime)? refreshFreqLimited,
+    TResult Function()? sharingString,
+    TResult Function(String text)? shareStringSuccess,
+    TResult Function()? copyingTrack,
+    TResult Function(String trackNumber)? copyTrackSuccess,
+    TResult Function()? activating,
+    TResult Function()? activateSuccess,
+    TResult Function(StorageError error)? activateFailed,
+  }) {
+    return refreshFailed?.call(error);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? deleting,
@@ -3795,6 +4957,46 @@ class _$DetailsActionsStateRefreshFailed
         activateFailed,
   }) {
     return refreshFailed(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(DetailsActionsStateInitial value)? initial,
+    TResult Function(DetailsActionsStateDeleting value)? deleting,
+    TResult Function(DetailsActionsStateDeleteSuccess value)? deleteSuccess,
+    TResult Function(DetailsActionsStateDeleteFailed value)? deleteFailed,
+    TResult Function(DetailsActionsStateMarkingAsRead value)? markingAsRead,
+    TResult Function(DetailsActionsStateMarkAsReadSuccess value)?
+        markAsReadSuccess,
+    TResult Function(DetailsActionsStateMarkAsReadFailed value)?
+        markAsReadFailed,
+    TResult Function(DetailsActionsStateMovingToActive value)? movingToActive,
+    TResult Function(DetailsActionsStateMoveToActiveSuccess value)?
+        moveToActiveSuccess,
+    TResult Function(DetailsActionsStateMoveToActiveFailed value)?
+        moveToActiveFailed,
+    TResult Function(DetailsActionsStateMovingToArchive value)? movingToArchive,
+    TResult Function(DetailsActionsStateMoveToArchiveSuccess value)?
+        moveToArchiveSuccess,
+    TResult Function(DetailsActionsStateMoveToArchiveFailed value)?
+        moveToArchiveFailed,
+    TResult Function(DetailsActionsStateRefreshing value)? refreshing,
+    TResult Function(DetailsActionsStateRefreshSuccess value)? refreshSuccess,
+    TResult Function(DetailsActionsStateRefreshFailed value)? refreshFailed,
+    TResult Function(DetailsActionsStateRefreshFreqLimited value)?
+        refreshFreqLimited,
+    TResult Function(DetailsActionsStateSharingString value)? sharingString,
+    TResult Function(DetailsActionsStateShareStringSuccess value)?
+        shareStringSuccess,
+    TResult Function(DetailsActionsStateCopyingTrack value)? copyingTrack,
+    TResult Function(DetailsActionsStateCopyTrackSuccess value)?
+        copyTrackSuccess,
+    TResult Function(DetailsActionsStateActivating value)? activating,
+    TResult Function(DetailsActionsStateActivateSuccess value)? activateSuccess,
+    TResult Function(DetailsActionsStateActivateFailed value)? activateFailed,
+  }) {
+    return refreshFailed?.call(this);
   }
 
   @override
@@ -3954,6 +5156,37 @@ class _$DetailsActionsStateRefreshFreqLimited
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? deleting,
+    TResult Function()? deleteSuccess,
+    TResult Function(StorageError error)? deleteFailed,
+    TResult Function()? markingAsRead,
+    TResult Function()? markAsReadSuccess,
+    TResult Function(StorageError error)? markAsReadFailed,
+    TResult Function()? movingToActive,
+    TResult Function()? moveToActiveSuccess,
+    TResult Function(StorageError error)? moveToActiveFailed,
+    TResult Function()? movingToArchive,
+    TResult Function()? moveToArchiveSuccess,
+    TResult Function(StorageError error)? moveToArchiveFailed,
+    TResult Function()? refreshing,
+    TResult Function()? refreshSuccess,
+    TResult Function(StorageError error)? refreshFailed,
+    TResult Function(Duration remainingTime)? refreshFreqLimited,
+    TResult Function()? sharingString,
+    TResult Function(String text)? shareStringSuccess,
+    TResult Function()? copyingTrack,
+    TResult Function(String trackNumber)? copyTrackSuccess,
+    TResult Function()? activating,
+    TResult Function()? activateSuccess,
+    TResult Function(StorageError error)? activateFailed,
+  }) {
+    return refreshFreqLimited?.call(remainingTime);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? deleting,
@@ -4036,6 +5269,46 @@ class _$DetailsActionsStateRefreshFreqLimited
         activateFailed,
   }) {
     return refreshFreqLimited(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(DetailsActionsStateInitial value)? initial,
+    TResult Function(DetailsActionsStateDeleting value)? deleting,
+    TResult Function(DetailsActionsStateDeleteSuccess value)? deleteSuccess,
+    TResult Function(DetailsActionsStateDeleteFailed value)? deleteFailed,
+    TResult Function(DetailsActionsStateMarkingAsRead value)? markingAsRead,
+    TResult Function(DetailsActionsStateMarkAsReadSuccess value)?
+        markAsReadSuccess,
+    TResult Function(DetailsActionsStateMarkAsReadFailed value)?
+        markAsReadFailed,
+    TResult Function(DetailsActionsStateMovingToActive value)? movingToActive,
+    TResult Function(DetailsActionsStateMoveToActiveSuccess value)?
+        moveToActiveSuccess,
+    TResult Function(DetailsActionsStateMoveToActiveFailed value)?
+        moveToActiveFailed,
+    TResult Function(DetailsActionsStateMovingToArchive value)? movingToArchive,
+    TResult Function(DetailsActionsStateMoveToArchiveSuccess value)?
+        moveToArchiveSuccess,
+    TResult Function(DetailsActionsStateMoveToArchiveFailed value)?
+        moveToArchiveFailed,
+    TResult Function(DetailsActionsStateRefreshing value)? refreshing,
+    TResult Function(DetailsActionsStateRefreshSuccess value)? refreshSuccess,
+    TResult Function(DetailsActionsStateRefreshFailed value)? refreshFailed,
+    TResult Function(DetailsActionsStateRefreshFreqLimited value)?
+        refreshFreqLimited,
+    TResult Function(DetailsActionsStateSharingString value)? sharingString,
+    TResult Function(DetailsActionsStateShareStringSuccess value)?
+        shareStringSuccess,
+    TResult Function(DetailsActionsStateCopyingTrack value)? copyingTrack,
+    TResult Function(DetailsActionsStateCopyTrackSuccess value)?
+        copyTrackSuccess,
+    TResult Function(DetailsActionsStateActivating value)? activating,
+    TResult Function(DetailsActionsStateActivateSuccess value)? activateSuccess,
+    TResult Function(DetailsActionsStateActivateFailed value)? activateFailed,
+  }) {
+    return refreshFreqLimited?.call(this);
   }
 
   @override
@@ -4171,6 +5444,37 @@ class _$DetailsActionsStateSharingString
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? deleting,
+    TResult Function()? deleteSuccess,
+    TResult Function(StorageError error)? deleteFailed,
+    TResult Function()? markingAsRead,
+    TResult Function()? markAsReadSuccess,
+    TResult Function(StorageError error)? markAsReadFailed,
+    TResult Function()? movingToActive,
+    TResult Function()? moveToActiveSuccess,
+    TResult Function(StorageError error)? moveToActiveFailed,
+    TResult Function()? movingToArchive,
+    TResult Function()? moveToArchiveSuccess,
+    TResult Function(StorageError error)? moveToArchiveFailed,
+    TResult Function()? refreshing,
+    TResult Function()? refreshSuccess,
+    TResult Function(StorageError error)? refreshFailed,
+    TResult Function(Duration remainingTime)? refreshFreqLimited,
+    TResult Function()? sharingString,
+    TResult Function(String text)? shareStringSuccess,
+    TResult Function()? copyingTrack,
+    TResult Function(String trackNumber)? copyTrackSuccess,
+    TResult Function()? activating,
+    TResult Function()? activateSuccess,
+    TResult Function(StorageError error)? activateFailed,
+  }) {
+    return sharingString?.call();
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? deleting,
@@ -4253,6 +5557,46 @@ class _$DetailsActionsStateSharingString
         activateFailed,
   }) {
     return sharingString(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(DetailsActionsStateInitial value)? initial,
+    TResult Function(DetailsActionsStateDeleting value)? deleting,
+    TResult Function(DetailsActionsStateDeleteSuccess value)? deleteSuccess,
+    TResult Function(DetailsActionsStateDeleteFailed value)? deleteFailed,
+    TResult Function(DetailsActionsStateMarkingAsRead value)? markingAsRead,
+    TResult Function(DetailsActionsStateMarkAsReadSuccess value)?
+        markAsReadSuccess,
+    TResult Function(DetailsActionsStateMarkAsReadFailed value)?
+        markAsReadFailed,
+    TResult Function(DetailsActionsStateMovingToActive value)? movingToActive,
+    TResult Function(DetailsActionsStateMoveToActiveSuccess value)?
+        moveToActiveSuccess,
+    TResult Function(DetailsActionsStateMoveToActiveFailed value)?
+        moveToActiveFailed,
+    TResult Function(DetailsActionsStateMovingToArchive value)? movingToArchive,
+    TResult Function(DetailsActionsStateMoveToArchiveSuccess value)?
+        moveToArchiveSuccess,
+    TResult Function(DetailsActionsStateMoveToArchiveFailed value)?
+        moveToArchiveFailed,
+    TResult Function(DetailsActionsStateRefreshing value)? refreshing,
+    TResult Function(DetailsActionsStateRefreshSuccess value)? refreshSuccess,
+    TResult Function(DetailsActionsStateRefreshFailed value)? refreshFailed,
+    TResult Function(DetailsActionsStateRefreshFreqLimited value)?
+        refreshFreqLimited,
+    TResult Function(DetailsActionsStateSharingString value)? sharingString,
+    TResult Function(DetailsActionsStateShareStringSuccess value)?
+        shareStringSuccess,
+    TResult Function(DetailsActionsStateCopyingTrack value)? copyingTrack,
+    TResult Function(DetailsActionsStateCopyTrackSuccess value)?
+        copyTrackSuccess,
+    TResult Function(DetailsActionsStateActivating value)? activating,
+    TResult Function(DetailsActionsStateActivateSuccess value)? activateSuccess,
+    TResult Function(DetailsActionsStateActivateFailed value)? activateFailed,
+  }) {
+    return sharingString?.call(this);
   }
 
   @override
@@ -4406,6 +5750,37 @@ class _$DetailsActionsStateShareStringSuccess
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? deleting,
+    TResult Function()? deleteSuccess,
+    TResult Function(StorageError error)? deleteFailed,
+    TResult Function()? markingAsRead,
+    TResult Function()? markAsReadSuccess,
+    TResult Function(StorageError error)? markAsReadFailed,
+    TResult Function()? movingToActive,
+    TResult Function()? moveToActiveSuccess,
+    TResult Function(StorageError error)? moveToActiveFailed,
+    TResult Function()? movingToArchive,
+    TResult Function()? moveToArchiveSuccess,
+    TResult Function(StorageError error)? moveToArchiveFailed,
+    TResult Function()? refreshing,
+    TResult Function()? refreshSuccess,
+    TResult Function(StorageError error)? refreshFailed,
+    TResult Function(Duration remainingTime)? refreshFreqLimited,
+    TResult Function()? sharingString,
+    TResult Function(String text)? shareStringSuccess,
+    TResult Function()? copyingTrack,
+    TResult Function(String trackNumber)? copyTrackSuccess,
+    TResult Function()? activating,
+    TResult Function()? activateSuccess,
+    TResult Function(StorageError error)? activateFailed,
+  }) {
+    return shareStringSuccess?.call(text);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? deleting,
@@ -4488,6 +5863,46 @@ class _$DetailsActionsStateShareStringSuccess
         activateFailed,
   }) {
     return shareStringSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(DetailsActionsStateInitial value)? initial,
+    TResult Function(DetailsActionsStateDeleting value)? deleting,
+    TResult Function(DetailsActionsStateDeleteSuccess value)? deleteSuccess,
+    TResult Function(DetailsActionsStateDeleteFailed value)? deleteFailed,
+    TResult Function(DetailsActionsStateMarkingAsRead value)? markingAsRead,
+    TResult Function(DetailsActionsStateMarkAsReadSuccess value)?
+        markAsReadSuccess,
+    TResult Function(DetailsActionsStateMarkAsReadFailed value)?
+        markAsReadFailed,
+    TResult Function(DetailsActionsStateMovingToActive value)? movingToActive,
+    TResult Function(DetailsActionsStateMoveToActiveSuccess value)?
+        moveToActiveSuccess,
+    TResult Function(DetailsActionsStateMoveToActiveFailed value)?
+        moveToActiveFailed,
+    TResult Function(DetailsActionsStateMovingToArchive value)? movingToArchive,
+    TResult Function(DetailsActionsStateMoveToArchiveSuccess value)?
+        moveToArchiveSuccess,
+    TResult Function(DetailsActionsStateMoveToArchiveFailed value)?
+        moveToArchiveFailed,
+    TResult Function(DetailsActionsStateRefreshing value)? refreshing,
+    TResult Function(DetailsActionsStateRefreshSuccess value)? refreshSuccess,
+    TResult Function(DetailsActionsStateRefreshFailed value)? refreshFailed,
+    TResult Function(DetailsActionsStateRefreshFreqLimited value)?
+        refreshFreqLimited,
+    TResult Function(DetailsActionsStateSharingString value)? sharingString,
+    TResult Function(DetailsActionsStateShareStringSuccess value)?
+        shareStringSuccess,
+    TResult Function(DetailsActionsStateCopyingTrack value)? copyingTrack,
+    TResult Function(DetailsActionsStateCopyTrackSuccess value)?
+        copyTrackSuccess,
+    TResult Function(DetailsActionsStateActivating value)? activating,
+    TResult Function(DetailsActionsStateActivateSuccess value)? activateSuccess,
+    TResult Function(DetailsActionsStateActivateFailed value)? activateFailed,
+  }) {
+    return shareStringSuccess?.call(this);
   }
 
   @override
@@ -4621,6 +6036,37 @@ class _$DetailsActionsStateCopyingTrack
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? deleting,
+    TResult Function()? deleteSuccess,
+    TResult Function(StorageError error)? deleteFailed,
+    TResult Function()? markingAsRead,
+    TResult Function()? markAsReadSuccess,
+    TResult Function(StorageError error)? markAsReadFailed,
+    TResult Function()? movingToActive,
+    TResult Function()? moveToActiveSuccess,
+    TResult Function(StorageError error)? moveToActiveFailed,
+    TResult Function()? movingToArchive,
+    TResult Function()? moveToArchiveSuccess,
+    TResult Function(StorageError error)? moveToArchiveFailed,
+    TResult Function()? refreshing,
+    TResult Function()? refreshSuccess,
+    TResult Function(StorageError error)? refreshFailed,
+    TResult Function(Duration remainingTime)? refreshFreqLimited,
+    TResult Function()? sharingString,
+    TResult Function(String text)? shareStringSuccess,
+    TResult Function()? copyingTrack,
+    TResult Function(String trackNumber)? copyTrackSuccess,
+    TResult Function()? activating,
+    TResult Function()? activateSuccess,
+    TResult Function(StorageError error)? activateFailed,
+  }) {
+    return copyingTrack?.call();
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? deleting,
@@ -4703,6 +6149,46 @@ class _$DetailsActionsStateCopyingTrack
         activateFailed,
   }) {
     return copyingTrack(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(DetailsActionsStateInitial value)? initial,
+    TResult Function(DetailsActionsStateDeleting value)? deleting,
+    TResult Function(DetailsActionsStateDeleteSuccess value)? deleteSuccess,
+    TResult Function(DetailsActionsStateDeleteFailed value)? deleteFailed,
+    TResult Function(DetailsActionsStateMarkingAsRead value)? markingAsRead,
+    TResult Function(DetailsActionsStateMarkAsReadSuccess value)?
+        markAsReadSuccess,
+    TResult Function(DetailsActionsStateMarkAsReadFailed value)?
+        markAsReadFailed,
+    TResult Function(DetailsActionsStateMovingToActive value)? movingToActive,
+    TResult Function(DetailsActionsStateMoveToActiveSuccess value)?
+        moveToActiveSuccess,
+    TResult Function(DetailsActionsStateMoveToActiveFailed value)?
+        moveToActiveFailed,
+    TResult Function(DetailsActionsStateMovingToArchive value)? movingToArchive,
+    TResult Function(DetailsActionsStateMoveToArchiveSuccess value)?
+        moveToArchiveSuccess,
+    TResult Function(DetailsActionsStateMoveToArchiveFailed value)?
+        moveToArchiveFailed,
+    TResult Function(DetailsActionsStateRefreshing value)? refreshing,
+    TResult Function(DetailsActionsStateRefreshSuccess value)? refreshSuccess,
+    TResult Function(DetailsActionsStateRefreshFailed value)? refreshFailed,
+    TResult Function(DetailsActionsStateRefreshFreqLimited value)?
+        refreshFreqLimited,
+    TResult Function(DetailsActionsStateSharingString value)? sharingString,
+    TResult Function(DetailsActionsStateShareStringSuccess value)?
+        shareStringSuccess,
+    TResult Function(DetailsActionsStateCopyingTrack value)? copyingTrack,
+    TResult Function(DetailsActionsStateCopyTrackSuccess value)?
+        copyTrackSuccess,
+    TResult Function(DetailsActionsStateActivating value)? activating,
+    TResult Function(DetailsActionsStateActivateSuccess value)? activateSuccess,
+    TResult Function(DetailsActionsStateActivateFailed value)? activateFailed,
+  }) {
+    return copyingTrack?.call(this);
   }
 
   @override
@@ -4857,6 +6343,37 @@ class _$DetailsActionsStateCopyTrackSuccess
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? deleting,
+    TResult Function()? deleteSuccess,
+    TResult Function(StorageError error)? deleteFailed,
+    TResult Function()? markingAsRead,
+    TResult Function()? markAsReadSuccess,
+    TResult Function(StorageError error)? markAsReadFailed,
+    TResult Function()? movingToActive,
+    TResult Function()? moveToActiveSuccess,
+    TResult Function(StorageError error)? moveToActiveFailed,
+    TResult Function()? movingToArchive,
+    TResult Function()? moveToArchiveSuccess,
+    TResult Function(StorageError error)? moveToArchiveFailed,
+    TResult Function()? refreshing,
+    TResult Function()? refreshSuccess,
+    TResult Function(StorageError error)? refreshFailed,
+    TResult Function(Duration remainingTime)? refreshFreqLimited,
+    TResult Function()? sharingString,
+    TResult Function(String text)? shareStringSuccess,
+    TResult Function()? copyingTrack,
+    TResult Function(String trackNumber)? copyTrackSuccess,
+    TResult Function()? activating,
+    TResult Function()? activateSuccess,
+    TResult Function(StorageError error)? activateFailed,
+  }) {
+    return copyTrackSuccess?.call(trackNumber);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? deleting,
@@ -4939,6 +6456,46 @@ class _$DetailsActionsStateCopyTrackSuccess
         activateFailed,
   }) {
     return copyTrackSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(DetailsActionsStateInitial value)? initial,
+    TResult Function(DetailsActionsStateDeleting value)? deleting,
+    TResult Function(DetailsActionsStateDeleteSuccess value)? deleteSuccess,
+    TResult Function(DetailsActionsStateDeleteFailed value)? deleteFailed,
+    TResult Function(DetailsActionsStateMarkingAsRead value)? markingAsRead,
+    TResult Function(DetailsActionsStateMarkAsReadSuccess value)?
+        markAsReadSuccess,
+    TResult Function(DetailsActionsStateMarkAsReadFailed value)?
+        markAsReadFailed,
+    TResult Function(DetailsActionsStateMovingToActive value)? movingToActive,
+    TResult Function(DetailsActionsStateMoveToActiveSuccess value)?
+        moveToActiveSuccess,
+    TResult Function(DetailsActionsStateMoveToActiveFailed value)?
+        moveToActiveFailed,
+    TResult Function(DetailsActionsStateMovingToArchive value)? movingToArchive,
+    TResult Function(DetailsActionsStateMoveToArchiveSuccess value)?
+        moveToArchiveSuccess,
+    TResult Function(DetailsActionsStateMoveToArchiveFailed value)?
+        moveToArchiveFailed,
+    TResult Function(DetailsActionsStateRefreshing value)? refreshing,
+    TResult Function(DetailsActionsStateRefreshSuccess value)? refreshSuccess,
+    TResult Function(DetailsActionsStateRefreshFailed value)? refreshFailed,
+    TResult Function(DetailsActionsStateRefreshFreqLimited value)?
+        refreshFreqLimited,
+    TResult Function(DetailsActionsStateSharingString value)? sharingString,
+    TResult Function(DetailsActionsStateShareStringSuccess value)?
+        shareStringSuccess,
+    TResult Function(DetailsActionsStateCopyingTrack value)? copyingTrack,
+    TResult Function(DetailsActionsStateCopyTrackSuccess value)?
+        copyTrackSuccess,
+    TResult Function(DetailsActionsStateActivating value)? activating,
+    TResult Function(DetailsActionsStateActivateSuccess value)? activateSuccess,
+    TResult Function(DetailsActionsStateActivateFailed value)? activateFailed,
+  }) {
+    return copyTrackSuccess?.call(this);
   }
 
   @override
@@ -5071,6 +6628,37 @@ class _$DetailsActionsStateActivating implements DetailsActionsStateActivating {
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? deleting,
+    TResult Function()? deleteSuccess,
+    TResult Function(StorageError error)? deleteFailed,
+    TResult Function()? markingAsRead,
+    TResult Function()? markAsReadSuccess,
+    TResult Function(StorageError error)? markAsReadFailed,
+    TResult Function()? movingToActive,
+    TResult Function()? moveToActiveSuccess,
+    TResult Function(StorageError error)? moveToActiveFailed,
+    TResult Function()? movingToArchive,
+    TResult Function()? moveToArchiveSuccess,
+    TResult Function(StorageError error)? moveToArchiveFailed,
+    TResult Function()? refreshing,
+    TResult Function()? refreshSuccess,
+    TResult Function(StorageError error)? refreshFailed,
+    TResult Function(Duration remainingTime)? refreshFreqLimited,
+    TResult Function()? sharingString,
+    TResult Function(String text)? shareStringSuccess,
+    TResult Function()? copyingTrack,
+    TResult Function(String trackNumber)? copyTrackSuccess,
+    TResult Function()? activating,
+    TResult Function()? activateSuccess,
+    TResult Function(StorageError error)? activateFailed,
+  }) {
+    return activating?.call();
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? deleting,
@@ -5153,6 +6741,46 @@ class _$DetailsActionsStateActivating implements DetailsActionsStateActivating {
         activateFailed,
   }) {
     return activating(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(DetailsActionsStateInitial value)? initial,
+    TResult Function(DetailsActionsStateDeleting value)? deleting,
+    TResult Function(DetailsActionsStateDeleteSuccess value)? deleteSuccess,
+    TResult Function(DetailsActionsStateDeleteFailed value)? deleteFailed,
+    TResult Function(DetailsActionsStateMarkingAsRead value)? markingAsRead,
+    TResult Function(DetailsActionsStateMarkAsReadSuccess value)?
+        markAsReadSuccess,
+    TResult Function(DetailsActionsStateMarkAsReadFailed value)?
+        markAsReadFailed,
+    TResult Function(DetailsActionsStateMovingToActive value)? movingToActive,
+    TResult Function(DetailsActionsStateMoveToActiveSuccess value)?
+        moveToActiveSuccess,
+    TResult Function(DetailsActionsStateMoveToActiveFailed value)?
+        moveToActiveFailed,
+    TResult Function(DetailsActionsStateMovingToArchive value)? movingToArchive,
+    TResult Function(DetailsActionsStateMoveToArchiveSuccess value)?
+        moveToArchiveSuccess,
+    TResult Function(DetailsActionsStateMoveToArchiveFailed value)?
+        moveToArchiveFailed,
+    TResult Function(DetailsActionsStateRefreshing value)? refreshing,
+    TResult Function(DetailsActionsStateRefreshSuccess value)? refreshSuccess,
+    TResult Function(DetailsActionsStateRefreshFailed value)? refreshFailed,
+    TResult Function(DetailsActionsStateRefreshFreqLimited value)?
+        refreshFreqLimited,
+    TResult Function(DetailsActionsStateSharingString value)? sharingString,
+    TResult Function(DetailsActionsStateShareStringSuccess value)?
+        shareStringSuccess,
+    TResult Function(DetailsActionsStateCopyingTrack value)? copyingTrack,
+    TResult Function(DetailsActionsStateCopyTrackSuccess value)?
+        copyTrackSuccess,
+    TResult Function(DetailsActionsStateActivating value)? activating,
+    TResult Function(DetailsActionsStateActivateSuccess value)? activateSuccess,
+    TResult Function(DetailsActionsStateActivateFailed value)? activateFailed,
+  }) {
+    return activating?.call(this);
   }
 
   @override
@@ -5280,6 +6908,37 @@ class _$DetailsActionsStateActivateSuccess
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? deleting,
+    TResult Function()? deleteSuccess,
+    TResult Function(StorageError error)? deleteFailed,
+    TResult Function()? markingAsRead,
+    TResult Function()? markAsReadSuccess,
+    TResult Function(StorageError error)? markAsReadFailed,
+    TResult Function()? movingToActive,
+    TResult Function()? moveToActiveSuccess,
+    TResult Function(StorageError error)? moveToActiveFailed,
+    TResult Function()? movingToArchive,
+    TResult Function()? moveToArchiveSuccess,
+    TResult Function(StorageError error)? moveToArchiveFailed,
+    TResult Function()? refreshing,
+    TResult Function()? refreshSuccess,
+    TResult Function(StorageError error)? refreshFailed,
+    TResult Function(Duration remainingTime)? refreshFreqLimited,
+    TResult Function()? sharingString,
+    TResult Function(String text)? shareStringSuccess,
+    TResult Function()? copyingTrack,
+    TResult Function(String trackNumber)? copyTrackSuccess,
+    TResult Function()? activating,
+    TResult Function()? activateSuccess,
+    TResult Function(StorageError error)? activateFailed,
+  }) {
+    return activateSuccess?.call();
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? deleting,
@@ -5362,6 +7021,46 @@ class _$DetailsActionsStateActivateSuccess
         activateFailed,
   }) {
     return activateSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(DetailsActionsStateInitial value)? initial,
+    TResult Function(DetailsActionsStateDeleting value)? deleting,
+    TResult Function(DetailsActionsStateDeleteSuccess value)? deleteSuccess,
+    TResult Function(DetailsActionsStateDeleteFailed value)? deleteFailed,
+    TResult Function(DetailsActionsStateMarkingAsRead value)? markingAsRead,
+    TResult Function(DetailsActionsStateMarkAsReadSuccess value)?
+        markAsReadSuccess,
+    TResult Function(DetailsActionsStateMarkAsReadFailed value)?
+        markAsReadFailed,
+    TResult Function(DetailsActionsStateMovingToActive value)? movingToActive,
+    TResult Function(DetailsActionsStateMoveToActiveSuccess value)?
+        moveToActiveSuccess,
+    TResult Function(DetailsActionsStateMoveToActiveFailed value)?
+        moveToActiveFailed,
+    TResult Function(DetailsActionsStateMovingToArchive value)? movingToArchive,
+    TResult Function(DetailsActionsStateMoveToArchiveSuccess value)?
+        moveToArchiveSuccess,
+    TResult Function(DetailsActionsStateMoveToArchiveFailed value)?
+        moveToArchiveFailed,
+    TResult Function(DetailsActionsStateRefreshing value)? refreshing,
+    TResult Function(DetailsActionsStateRefreshSuccess value)? refreshSuccess,
+    TResult Function(DetailsActionsStateRefreshFailed value)? refreshFailed,
+    TResult Function(DetailsActionsStateRefreshFreqLimited value)?
+        refreshFreqLimited,
+    TResult Function(DetailsActionsStateSharingString value)? sharingString,
+    TResult Function(DetailsActionsStateShareStringSuccess value)?
+        shareStringSuccess,
+    TResult Function(DetailsActionsStateCopyingTrack value)? copyingTrack,
+    TResult Function(DetailsActionsStateCopyTrackSuccess value)?
+        copyTrackSuccess,
+    TResult Function(DetailsActionsStateActivating value)? activating,
+    TResult Function(DetailsActionsStateActivateSuccess value)? activateSuccess,
+    TResult Function(DetailsActionsStateActivateFailed value)? activateFailed,
+  }) {
+    return activateSuccess?.call(this);
   }
 
   @override
@@ -5524,6 +7223,37 @@ class _$DetailsActionsStateActivateFailed
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? deleting,
+    TResult Function()? deleteSuccess,
+    TResult Function(StorageError error)? deleteFailed,
+    TResult Function()? markingAsRead,
+    TResult Function()? markAsReadSuccess,
+    TResult Function(StorageError error)? markAsReadFailed,
+    TResult Function()? movingToActive,
+    TResult Function()? moveToActiveSuccess,
+    TResult Function(StorageError error)? moveToActiveFailed,
+    TResult Function()? movingToArchive,
+    TResult Function()? moveToArchiveSuccess,
+    TResult Function(StorageError error)? moveToArchiveFailed,
+    TResult Function()? refreshing,
+    TResult Function()? refreshSuccess,
+    TResult Function(StorageError error)? refreshFailed,
+    TResult Function(Duration remainingTime)? refreshFreqLimited,
+    TResult Function()? sharingString,
+    TResult Function(String text)? shareStringSuccess,
+    TResult Function()? copyingTrack,
+    TResult Function(String trackNumber)? copyTrackSuccess,
+    TResult Function()? activating,
+    TResult Function()? activateSuccess,
+    TResult Function(StorageError error)? activateFailed,
+  }) {
+    return activateFailed?.call(error);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? deleting,
@@ -5606,6 +7336,46 @@ class _$DetailsActionsStateActivateFailed
         activateFailed,
   }) {
     return activateFailed(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(DetailsActionsStateInitial value)? initial,
+    TResult Function(DetailsActionsStateDeleting value)? deleting,
+    TResult Function(DetailsActionsStateDeleteSuccess value)? deleteSuccess,
+    TResult Function(DetailsActionsStateDeleteFailed value)? deleteFailed,
+    TResult Function(DetailsActionsStateMarkingAsRead value)? markingAsRead,
+    TResult Function(DetailsActionsStateMarkAsReadSuccess value)?
+        markAsReadSuccess,
+    TResult Function(DetailsActionsStateMarkAsReadFailed value)?
+        markAsReadFailed,
+    TResult Function(DetailsActionsStateMovingToActive value)? movingToActive,
+    TResult Function(DetailsActionsStateMoveToActiveSuccess value)?
+        moveToActiveSuccess,
+    TResult Function(DetailsActionsStateMoveToActiveFailed value)?
+        moveToActiveFailed,
+    TResult Function(DetailsActionsStateMovingToArchive value)? movingToArchive,
+    TResult Function(DetailsActionsStateMoveToArchiveSuccess value)?
+        moveToArchiveSuccess,
+    TResult Function(DetailsActionsStateMoveToArchiveFailed value)?
+        moveToArchiveFailed,
+    TResult Function(DetailsActionsStateRefreshing value)? refreshing,
+    TResult Function(DetailsActionsStateRefreshSuccess value)? refreshSuccess,
+    TResult Function(DetailsActionsStateRefreshFailed value)? refreshFailed,
+    TResult Function(DetailsActionsStateRefreshFreqLimited value)?
+        refreshFreqLimited,
+    TResult Function(DetailsActionsStateSharingString value)? sharingString,
+    TResult Function(DetailsActionsStateShareStringSuccess value)?
+        shareStringSuccess,
+    TResult Function(DetailsActionsStateCopyingTrack value)? copyingTrack,
+    TResult Function(DetailsActionsStateCopyTrackSuccess value)?
+        copyTrackSuccess,
+    TResult Function(DetailsActionsStateActivating value)? activating,
+    TResult Function(DetailsActionsStateActivateSuccess value)? activateSuccess,
+    TResult Function(DetailsActionsStateActivateFailed value)? activateFailed,
+  }) {
+    return activateFailed?.call(this);
   }
 
   @override

@@ -1,5 +1,6 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'ups_parser.dart';
 
@@ -50,6 +51,13 @@ mixin _$_DeliveryDetail {
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(_DateTime dateTime)? delivery,
+    TResult Function(_DateTime dateTime)? estimatedDelivery,
+    TResult Function(_DateTime dateTime)? scheduledDelivery,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(_DateTime dateTime)? delivery,
     TResult Function(_DateTime dateTime)? estimatedDelivery,
@@ -62,6 +70,13 @@ mixin _$_DeliveryDetail {
     required TResult Function(_DeliveryDetailDelivery value) delivery,
     required TResult Function(_DetailEstimatedDelivery value) estimatedDelivery,
     required TResult Function(_DetailScheduledDelivery value) scheduledDelivery,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_DeliveryDetailDelivery value)? delivery,
+    TResult Function(_DetailEstimatedDelivery value)? estimatedDelivery,
+    TResult Function(_DetailScheduledDelivery value)? scheduledDelivery,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -196,6 +211,16 @@ class _$_DeliveryDetailDelivery
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(_DateTime dateTime)? delivery,
+    TResult Function(_DateTime dateTime)? estimatedDelivery,
+    TResult Function(_DateTime dateTime)? scheduledDelivery,
+  }) {
+    return delivery?.call(dateTime);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(_DateTime dateTime)? delivery,
     TResult Function(_DateTime dateTime)? estimatedDelivery,
@@ -216,6 +241,16 @@ class _$_DeliveryDetailDelivery
     required TResult Function(_DetailScheduledDelivery value) scheduledDelivery,
   }) {
     return delivery(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_DeliveryDetailDelivery value)? delivery,
+    TResult Function(_DetailEstimatedDelivery value)? estimatedDelivery,
+    TResult Function(_DetailScheduledDelivery value)? scheduledDelivery,
+  }) {
+    return delivery?.call(this);
   }
 
   @override
@@ -334,6 +369,16 @@ class _$_DetailEstimatedDelivery
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(_DateTime dateTime)? delivery,
+    TResult Function(_DateTime dateTime)? estimatedDelivery,
+    TResult Function(_DateTime dateTime)? scheduledDelivery,
+  }) {
+    return estimatedDelivery?.call(dateTime);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(_DateTime dateTime)? delivery,
     TResult Function(_DateTime dateTime)? estimatedDelivery,
@@ -354,6 +399,16 @@ class _$_DetailEstimatedDelivery
     required TResult Function(_DetailScheduledDelivery value) scheduledDelivery,
   }) {
     return estimatedDelivery(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_DeliveryDetailDelivery value)? delivery,
+    TResult Function(_DetailEstimatedDelivery value)? estimatedDelivery,
+    TResult Function(_DetailScheduledDelivery value)? scheduledDelivery,
+  }) {
+    return estimatedDelivery?.call(this);
   }
 
   @override
@@ -472,6 +527,16 @@ class _$_DetailScheduledDelivery
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(_DateTime dateTime)? delivery,
+    TResult Function(_DateTime dateTime)? estimatedDelivery,
+    TResult Function(_DateTime dateTime)? scheduledDelivery,
+  }) {
+    return scheduledDelivery?.call(dateTime);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(_DateTime dateTime)? delivery,
     TResult Function(_DateTime dateTime)? estimatedDelivery,
@@ -492,6 +557,16 @@ class _$_DetailScheduledDelivery
     required TResult Function(_DetailScheduledDelivery value) scheduledDelivery,
   }) {
     return scheduledDelivery(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_DeliveryDetailDelivery value)? delivery,
+    TResult Function(_DetailEstimatedDelivery value)? estimatedDelivery,
+    TResult Function(_DetailScheduledDelivery value)? scheduledDelivery,
+  }) {
+    return scheduledDelivery?.call(this);
   }
 
   @override
@@ -552,6 +627,12 @@ mixin _$_ShipmentAddress {
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(Address address)? shipper,
+    TResult Function(Address address)? shipTo,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(Address address)? shipper,
     TResult Function(Address address)? shipTo,
@@ -562,6 +643,12 @@ mixin _$_ShipmentAddress {
   TResult map<TResult extends Object?>({
     required TResult Function(_ShipmentAddressShipper value) shipper,
     required TResult Function(_ShipmentAddressShipTo value) shipTo,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_ShipmentAddressShipper value)? shipper,
+    TResult Function(_ShipmentAddressShipTo value)? shipTo,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -705,6 +792,15 @@ class _$_ShipmentAddressShipper
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(Address address)? shipper,
+    TResult Function(Address address)? shipTo,
+  }) {
+    return shipper?.call(address);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(Address address)? shipper,
     TResult Function(Address address)? shipTo,
@@ -723,6 +819,15 @@ class _$_ShipmentAddressShipper
     required TResult Function(_ShipmentAddressShipTo value) shipTo,
   }) {
     return shipper(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_ShipmentAddressShipper value)? shipper,
+    TResult Function(_ShipmentAddressShipTo value)? shipTo,
+  }) {
+    return shipper?.call(this);
   }
 
   @override
@@ -840,6 +945,15 @@ class _$_ShipmentAddressShipTo
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(Address address)? shipper,
+    TResult Function(Address address)? shipTo,
+  }) {
+    return shipTo?.call(address);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(Address address)? shipper,
     TResult Function(Address address)? shipTo,
@@ -858,6 +972,15 @@ class _$_ShipmentAddressShipTo
     required TResult Function(_ShipmentAddressShipTo value) shipTo,
   }) {
     return shipTo(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_ShipmentAddressShipper value)? shipper,
+    TResult Function(_ShipmentAddressShipTo value)? shipTo,
+  }) {
+    return shipTo?.call(this);
   }
 
   @override

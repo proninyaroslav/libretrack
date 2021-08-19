@@ -1,5 +1,6 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'model.dart';
 
@@ -147,7 +148,7 @@ class _$_CrashInfo implements _CrashInfo {
       this.message});
 
   factory _$_CrashInfo.fromJson(Map<String, dynamic> json) =>
-      _$_$_CrashInfoFromJson(json);
+      _$$_CrashInfoFromJson(json);
 
   @override
   @ErrorConverter()
@@ -190,7 +191,7 @@ class _$_CrashInfo implements _CrashInfo {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CrashInfoToJson(this);
+    return _$$_CrashInfoToJson(this);
   }
 }
 
@@ -650,7 +651,7 @@ class _$_CrashReportData implements _CrashReportData {
       required this.deviceInfo});
 
   factory _$_CrashReportData.fromJson(Map<String, dynamic> json) =>
-      _$_$_CrashReportDataFromJson(json);
+      _$$_CrashReportDataFromJson(json);
 
   @override
   @CrashReportIdConverter()
@@ -729,7 +730,7 @@ class _$_CrashReportData implements _CrashReportData {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CrashReportDataToJson(this);
+    return _$$_CrashReportDataToJson(this);
   }
 }
 
@@ -798,6 +799,12 @@ mixin _$CrashReportSendResult {
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? success,
+    TResult Function()? emailUnsupported,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? success,
     TResult Function()? emailUnsupported,
@@ -808,6 +815,13 @@ mixin _$CrashReportSendResult {
   TResult map<TResult extends Object?>({
     required TResult Function(CrashReportSendResultSuccess value) success,
     required TResult Function(CrashReportSendResultEmailUnsupported value)
+        emailUnsupported,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(CrashReportSendResultSuccess value)? success,
+    TResult Function(CrashReportSendResultEmailUnsupported value)?
         emailUnsupported,
   }) =>
       throw _privateConstructorUsedError;
@@ -889,6 +903,15 @@ class _$CrashReportSendResultSuccess implements CrashReportSendResultSuccess {
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? success,
+    TResult Function()? emailUnsupported,
+  }) {
+    return success?.call();
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? success,
     TResult Function()? emailUnsupported,
@@ -908,6 +931,16 @@ class _$CrashReportSendResultSuccess implements CrashReportSendResultSuccess {
         emailUnsupported,
   }) {
     return success(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(CrashReportSendResultSuccess value)? success,
+    TResult Function(CrashReportSendResultEmailUnsupported value)?
+        emailUnsupported,
+  }) {
+    return success?.call(this);
   }
 
   @override
@@ -982,6 +1015,15 @@ class _$CrashReportSendResultEmailUnsupported
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? success,
+    TResult Function()? emailUnsupported,
+  }) {
+    return emailUnsupported?.call();
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? success,
     TResult Function()? emailUnsupported,
@@ -1001,6 +1043,16 @@ class _$CrashReportSendResultEmailUnsupported
         emailUnsupported,
   }) {
     return emailUnsupported(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(CrashReportSendResultSuccess value)? success,
+    TResult Function(CrashReportSendResultEmailUnsupported value)?
+        emailUnsupported,
+  }) {
+    return emailUnsupported?.call(this);
   }
 
   @override
@@ -1025,7 +1077,7 @@ abstract class CrashReportSendResultEmailUnsupported
 }
 
 ReportableInfo _$ReportableInfoFromJson(Map<String, dynamic> json) {
-  switch (json['runtimeType'] as String) {
+  switch (json['runtimeType'] as String?) {
     case 'unknown':
       return UnknownReportableInfo.fromJson(json);
     case 'android':
@@ -1042,7 +1094,8 @@ ReportableInfo _$ReportableInfoFromJson(Map<String, dynamic> json) {
       return WebReportableInfo.fromJson(json);
 
     default:
-      throw FallThroughError();
+      throw CheckedFromJsonException(json, 'runtimeType', 'ReportableInfo',
+          'Invalid union type "${json['runtimeType']}"!');
   }
 }
 
@@ -1163,6 +1216,30 @@ mixin _$ReportableInfo {
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? unknown,
+    TResult Function(
+            String? systemVersion,
+            List<String?> supportedAbis,
+            String? brand,
+            String? device,
+            String? model,
+            String? hardware,
+            String? product)?
+        android,
+    TResult Function(String? deviceName, String? deviceModel,
+            String? systemName, String? systemVersion)?
+        iOS,
+    TResult Function(String osName, String kernelVersion, String? osVersion)?
+        linux,
+    TResult Function(String osVersion)? windows,
+    TResult Function(
+            String arch, String kernelVersion, String osVersion, String model)?
+        macOS,
+    TResult Function(String browserName, String? platform, String? vendor)? web,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? unknown,
     TResult Function(
@@ -1196,6 +1273,17 @@ mixin _$ReportableInfo {
     required TResult Function(WindowsReportableInfo value) windows,
     required TResult Function(MacOSReportableInfo value) macOS,
     required TResult Function(WebReportableInfo value) web,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(UnknownReportableInfo value)? unknown,
+    TResult Function(AndroidReportableInfo value)? android,
+    TResult Function(IOSReportableInfo value)? iOS,
+    TResult Function(LinuxReportableInfo value)? linux,
+    TResult Function(WindowsReportableInfo value)? windows,
+    TResult Function(MacOSReportableInfo value)? macOS,
+    TResult Function(WebReportableInfo value)? web,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -1255,7 +1343,7 @@ class _$UnknownReportableInfo implements UnknownReportableInfo {
   const _$UnknownReportableInfo();
 
   factory _$UnknownReportableInfo.fromJson(Map<String, dynamic> json) =>
-      _$_$UnknownReportableInfoFromJson(json);
+      _$$UnknownReportableInfoFromJson(json);
 
   @override
   String toString() {
@@ -1298,6 +1386,33 @@ class _$UnknownReportableInfo implements UnknownReportableInfo {
         web,
   }) {
     return unknown();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? unknown,
+    TResult Function(
+            String? systemVersion,
+            List<String?> supportedAbis,
+            String? brand,
+            String? device,
+            String? model,
+            String? hardware,
+            String? product)?
+        android,
+    TResult Function(String? deviceName, String? deviceModel,
+            String? systemName, String? systemVersion)?
+        iOS,
+    TResult Function(String osName, String kernelVersion, String? osVersion)?
+        linux,
+    TResult Function(String osVersion)? windows,
+    TResult Function(
+            String arch, String kernelVersion, String osVersion, String model)?
+        macOS,
+    TResult Function(String browserName, String? platform, String? vendor)? web,
+  }) {
+    return unknown?.call();
   }
 
   @override
@@ -1347,6 +1462,20 @@ class _$UnknownReportableInfo implements UnknownReportableInfo {
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(UnknownReportableInfo value)? unknown,
+    TResult Function(AndroidReportableInfo value)? android,
+    TResult Function(IOSReportableInfo value)? iOS,
+    TResult Function(LinuxReportableInfo value)? linux,
+    TResult Function(WindowsReportableInfo value)? windows,
+    TResult Function(MacOSReportableInfo value)? macOS,
+    TResult Function(WebReportableInfo value)? web,
+  }) {
+    return unknown?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(UnknownReportableInfo value)? unknown,
     TResult Function(AndroidReportableInfo value)? android,
@@ -1365,7 +1494,7 @@ class _$UnknownReportableInfo implements UnknownReportableInfo {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$UnknownReportableInfoToJson(this)..['runtimeType'] = 'unknown';
+    return _$$UnknownReportableInfoToJson(this)..['runtimeType'] = 'unknown';
   }
 }
 
@@ -1458,7 +1587,7 @@ class _$AndroidReportableInfo implements AndroidReportableInfo {
       this.product});
 
   factory _$AndroidReportableInfo.fromJson(Map<String, dynamic> json) =>
-      _$_$AndroidReportableInfoFromJson(json);
+      _$$AndroidReportableInfoFromJson(json);
 
   @override
   final String? systemVersion;
@@ -1567,6 +1696,34 @@ class _$AndroidReportableInfo implements AndroidReportableInfo {
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? unknown,
+    TResult Function(
+            String? systemVersion,
+            List<String?> supportedAbis,
+            String? brand,
+            String? device,
+            String? model,
+            String? hardware,
+            String? product)?
+        android,
+    TResult Function(String? deviceName, String? deviceModel,
+            String? systemName, String? systemVersion)?
+        iOS,
+    TResult Function(String osName, String kernelVersion, String? osVersion)?
+        linux,
+    TResult Function(String osVersion)? windows,
+    TResult Function(
+            String arch, String kernelVersion, String osVersion, String model)?
+        macOS,
+    TResult Function(String browserName, String? platform, String? vendor)? web,
+  }) {
+    return android?.call(
+        systemVersion, supportedAbis, brand, device, model, hardware, product);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? unknown,
     TResult Function(
@@ -1613,6 +1770,20 @@ class _$AndroidReportableInfo implements AndroidReportableInfo {
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(UnknownReportableInfo value)? unknown,
+    TResult Function(AndroidReportableInfo value)? android,
+    TResult Function(IOSReportableInfo value)? iOS,
+    TResult Function(LinuxReportableInfo value)? linux,
+    TResult Function(WindowsReportableInfo value)? windows,
+    TResult Function(MacOSReportableInfo value)? macOS,
+    TResult Function(WebReportableInfo value)? web,
+  }) {
+    return android?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(UnknownReportableInfo value)? unknown,
     TResult Function(AndroidReportableInfo value)? android,
@@ -1631,7 +1802,7 @@ class _$AndroidReportableInfo implements AndroidReportableInfo {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$AndroidReportableInfoToJson(this)..['runtimeType'] = 'android';
+    return _$$AndroidReportableInfoToJson(this)..['runtimeType'] = 'android';
   }
 }
 
@@ -1731,7 +1902,7 @@ class _$IOSReportableInfo implements IOSReportableInfo {
       {this.deviceName, this.deviceModel, this.systemName, this.systemVersion});
 
   factory _$IOSReportableInfo.fromJson(Map<String, dynamic> json) =>
-      _$_$IOSReportableInfoFromJson(json);
+      _$$IOSReportableInfoFromJson(json);
 
   @override
   final String? deviceName;
@@ -1810,6 +1981,33 @@ class _$IOSReportableInfo implements IOSReportableInfo {
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? unknown,
+    TResult Function(
+            String? systemVersion,
+            List<String?> supportedAbis,
+            String? brand,
+            String? device,
+            String? model,
+            String? hardware,
+            String? product)?
+        android,
+    TResult Function(String? deviceName, String? deviceModel,
+            String? systemName, String? systemVersion)?
+        iOS,
+    TResult Function(String osName, String kernelVersion, String? osVersion)?
+        linux,
+    TResult Function(String osVersion)? windows,
+    TResult Function(
+            String arch, String kernelVersion, String osVersion, String model)?
+        macOS,
+    TResult Function(String browserName, String? platform, String? vendor)? web,
+  }) {
+    return iOS?.call(deviceName, deviceModel, systemName, systemVersion);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? unknown,
     TResult Function(
@@ -1855,6 +2053,20 @@ class _$IOSReportableInfo implements IOSReportableInfo {
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(UnknownReportableInfo value)? unknown,
+    TResult Function(AndroidReportableInfo value)? android,
+    TResult Function(IOSReportableInfo value)? iOS,
+    TResult Function(LinuxReportableInfo value)? linux,
+    TResult Function(WindowsReportableInfo value)? windows,
+    TResult Function(MacOSReportableInfo value)? macOS,
+    TResult Function(WebReportableInfo value)? web,
+  }) {
+    return iOS?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(UnknownReportableInfo value)? unknown,
     TResult Function(AndroidReportableInfo value)? android,
@@ -1873,7 +2085,7 @@ class _$IOSReportableInfo implements IOSReportableInfo {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$IOSReportableInfoToJson(this)..['runtimeType'] = 'iOS';
+    return _$$IOSReportableInfoToJson(this)..['runtimeType'] = 'iOS';
   }
 }
 
@@ -1945,7 +2157,7 @@ class _$LinuxReportableInfo implements LinuxReportableInfo {
       {required this.osName, required this.kernelVersion, this.osVersion});
 
   factory _$LinuxReportableInfo.fromJson(Map<String, dynamic> json) =>
-      _$_$LinuxReportableInfoFromJson(json);
+      _$$LinuxReportableInfoFromJson(json);
 
   @override
   final String osName;
@@ -2017,6 +2229,33 @@ class _$LinuxReportableInfo implements LinuxReportableInfo {
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? unknown,
+    TResult Function(
+            String? systemVersion,
+            List<String?> supportedAbis,
+            String? brand,
+            String? device,
+            String? model,
+            String? hardware,
+            String? product)?
+        android,
+    TResult Function(String? deviceName, String? deviceModel,
+            String? systemName, String? systemVersion)?
+        iOS,
+    TResult Function(String osName, String kernelVersion, String? osVersion)?
+        linux,
+    TResult Function(String osVersion)? windows,
+    TResult Function(
+            String arch, String kernelVersion, String osVersion, String model)?
+        macOS,
+    TResult Function(String browserName, String? platform, String? vendor)? web,
+  }) {
+    return linux?.call(osName, kernelVersion, osVersion);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? unknown,
     TResult Function(
@@ -2062,6 +2301,20 @@ class _$LinuxReportableInfo implements LinuxReportableInfo {
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(UnknownReportableInfo value)? unknown,
+    TResult Function(AndroidReportableInfo value)? android,
+    TResult Function(IOSReportableInfo value)? iOS,
+    TResult Function(LinuxReportableInfo value)? linux,
+    TResult Function(WindowsReportableInfo value)? windows,
+    TResult Function(MacOSReportableInfo value)? macOS,
+    TResult Function(WebReportableInfo value)? web,
+  }) {
+    return linux?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(UnknownReportableInfo value)? unknown,
     TResult Function(AndroidReportableInfo value)? android,
@@ -2080,7 +2333,7 @@ class _$LinuxReportableInfo implements LinuxReportableInfo {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$LinuxReportableInfoToJson(this)..['runtimeType'] = 'linux';
+    return _$$LinuxReportableInfoToJson(this)..['runtimeType'] = 'linux';
   }
 }
 
@@ -2139,7 +2392,7 @@ class _$WindowsReportableInfo implements WindowsReportableInfo {
   const _$WindowsReportableInfo({required this.osVersion});
 
   factory _$WindowsReportableInfo.fromJson(Map<String, dynamic> json) =>
-      _$_$WindowsReportableInfoFromJson(json);
+      _$$WindowsReportableInfoFromJson(json);
 
   @override
   final String osVersion;
@@ -2200,6 +2453,33 @@ class _$WindowsReportableInfo implements WindowsReportableInfo {
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? unknown,
+    TResult Function(
+            String? systemVersion,
+            List<String?> supportedAbis,
+            String? brand,
+            String? device,
+            String? model,
+            String? hardware,
+            String? product)?
+        android,
+    TResult Function(String? deviceName, String? deviceModel,
+            String? systemName, String? systemVersion)?
+        iOS,
+    TResult Function(String osName, String kernelVersion, String? osVersion)?
+        linux,
+    TResult Function(String osVersion)? windows,
+    TResult Function(
+            String arch, String kernelVersion, String osVersion, String model)?
+        macOS,
+    TResult Function(String browserName, String? platform, String? vendor)? web,
+  }) {
+    return windows?.call(osVersion);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? unknown,
     TResult Function(
@@ -2245,6 +2525,20 @@ class _$WindowsReportableInfo implements WindowsReportableInfo {
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(UnknownReportableInfo value)? unknown,
+    TResult Function(AndroidReportableInfo value)? android,
+    TResult Function(IOSReportableInfo value)? iOS,
+    TResult Function(LinuxReportableInfo value)? linux,
+    TResult Function(WindowsReportableInfo value)? windows,
+    TResult Function(MacOSReportableInfo value)? macOS,
+    TResult Function(WebReportableInfo value)? web,
+  }) {
+    return windows?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(UnknownReportableInfo value)? unknown,
     TResult Function(AndroidReportableInfo value)? android,
@@ -2263,7 +2557,7 @@ class _$WindowsReportableInfo implements WindowsReportableInfo {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$WindowsReportableInfoToJson(this)..['runtimeType'] = 'windows';
+    return _$$WindowsReportableInfoToJson(this)..['runtimeType'] = 'windows';
   }
 }
 
@@ -2338,7 +2632,7 @@ class _$MacOSReportableInfo implements MacOSReportableInfo {
       required this.model});
 
   factory _$MacOSReportableInfo.fromJson(Map<String, dynamic> json) =>
-      _$_$MacOSReportableInfoFromJson(json);
+      _$$MacOSReportableInfoFromJson(json);
 
   @override
   final String arch;
@@ -2415,6 +2709,33 @@ class _$MacOSReportableInfo implements MacOSReportableInfo {
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? unknown,
+    TResult Function(
+            String? systemVersion,
+            List<String?> supportedAbis,
+            String? brand,
+            String? device,
+            String? model,
+            String? hardware,
+            String? product)?
+        android,
+    TResult Function(String? deviceName, String? deviceModel,
+            String? systemName, String? systemVersion)?
+        iOS,
+    TResult Function(String osName, String kernelVersion, String? osVersion)?
+        linux,
+    TResult Function(String osVersion)? windows,
+    TResult Function(
+            String arch, String kernelVersion, String osVersion, String model)?
+        macOS,
+    TResult Function(String browserName, String? platform, String? vendor)? web,
+  }) {
+    return macOS?.call(arch, kernelVersion, osVersion, model);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? unknown,
     TResult Function(
@@ -2460,6 +2781,20 @@ class _$MacOSReportableInfo implements MacOSReportableInfo {
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(UnknownReportableInfo value)? unknown,
+    TResult Function(AndroidReportableInfo value)? android,
+    TResult Function(IOSReportableInfo value)? iOS,
+    TResult Function(LinuxReportableInfo value)? linux,
+    TResult Function(WindowsReportableInfo value)? windows,
+    TResult Function(MacOSReportableInfo value)? macOS,
+    TResult Function(WebReportableInfo value)? web,
+  }) {
+    return macOS?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(UnknownReportableInfo value)? unknown,
     TResult Function(AndroidReportableInfo value)? android,
@@ -2478,7 +2813,7 @@ class _$MacOSReportableInfo implements MacOSReportableInfo {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$MacOSReportableInfoToJson(this)..['runtimeType'] = 'macOS';
+    return _$$MacOSReportableInfoToJson(this)..['runtimeType'] = 'macOS';
   }
 }
 
@@ -2550,7 +2885,7 @@ class _$WebReportableInfo implements WebReportableInfo {
       {required this.browserName, this.platform, this.vendor});
 
   factory _$WebReportableInfo.fromJson(Map<String, dynamic> json) =>
-      _$_$WebReportableInfoFromJson(json);
+      _$$WebReportableInfoFromJson(json);
 
   @override
   final String browserName;
@@ -2626,6 +2961,33 @@ class _$WebReportableInfo implements WebReportableInfo {
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? unknown,
+    TResult Function(
+            String? systemVersion,
+            List<String?> supportedAbis,
+            String? brand,
+            String? device,
+            String? model,
+            String? hardware,
+            String? product)?
+        android,
+    TResult Function(String? deviceName, String? deviceModel,
+            String? systemName, String? systemVersion)?
+        iOS,
+    TResult Function(String osName, String kernelVersion, String? osVersion)?
+        linux,
+    TResult Function(String osVersion)? windows,
+    TResult Function(
+            String arch, String kernelVersion, String osVersion, String model)?
+        macOS,
+    TResult Function(String browserName, String? platform, String? vendor)? web,
+  }) {
+    return web?.call(browserName, platform, vendor);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? unknown,
     TResult Function(
@@ -2671,6 +3033,20 @@ class _$WebReportableInfo implements WebReportableInfo {
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(UnknownReportableInfo value)? unknown,
+    TResult Function(AndroidReportableInfo value)? android,
+    TResult Function(IOSReportableInfo value)? iOS,
+    TResult Function(LinuxReportableInfo value)? linux,
+    TResult Function(WindowsReportableInfo value)? windows,
+    TResult Function(MacOSReportableInfo value)? macOS,
+    TResult Function(WebReportableInfo value)? web,
+  }) {
+    return web?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(UnknownReportableInfo value)? unknown,
     TResult Function(AndroidReportableInfo value)? android,
@@ -2689,7 +3065,7 @@ class _$WebReportableInfo implements WebReportableInfo {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$WebReportableInfoToJson(this)..['runtimeType'] = 'web';
+    return _$$WebReportableInfoToJson(this)..['runtimeType'] = 'web';
   }
 }
 

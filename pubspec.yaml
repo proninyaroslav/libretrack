@@ -51,7 +51,7 @@ dependencies:
   image: ^3.0.2
   injectable: ^1.5.0
   jiffy: ^4.0.0
-  json_serializable: ^4.1.4
+  json_serializable: ^5.0.0
   logger: ^1.0.0
   material_design_icons_flutter: ^5.0.5955-rc.1
   package_info_plus: ^1.0.1
@@ -68,7 +68,7 @@ dependencies:
   xml: ^5.1.2
 
 dev_dependencies:
-  analyzer: ^1.5.0
+  analyzer: ^2.1.0
   bloc_test: ^8.1.0
   build_runner: ^2.0.1
   device_preview: ^0.7.1
@@ -77,9 +77,15 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   freezed: ^0.14.2
-  injectable_generator: ^1.4.1
+  injectable_generator: ^1.5.0
   intl_utils: ^2.1.0
   mocktail: ^0.1.0
+
+dependency_overrides:
+  # TODO: wait for fix https://github.com/localizely/intl_utils/issues/60
+  analyzer: ^2.1.0
+  # TODO: wait for the new Flutter version
+  meta: ^1.7.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

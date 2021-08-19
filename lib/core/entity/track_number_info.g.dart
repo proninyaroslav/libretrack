@@ -6,13 +6,13 @@ part of 'track_number_info.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-TrackNumberService _$TrackNumberServiceFromJson(Map<String, dynamic> json) {
-  return TrackNumberService(
-    trackNumber: json['trackNumber'] as String,
-    serviceType: _$enumDecode(_$PostalServiceTypeEnumMap, json['serviceType']),
-    isActive: json['isActive'] as bool,
-  );
-}
+TrackNumberService _$TrackNumberServiceFromJson(Map<String, dynamic> json) =>
+    TrackNumberService(
+      trackNumber: json['trackNumber'] as String,
+      serviceType:
+          _$enumDecode(_$PostalServiceTypeEnumMap, json['serviceType']),
+      isActive: json['isActive'] as bool? ?? true,
+    );
 
 Map<String, dynamic> _$TrackNumberServiceToJson(TrackNumberService instance) =>
     <String, dynamic>{

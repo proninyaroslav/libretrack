@@ -1,5 +1,6 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'app_cubit.dart';
 
@@ -48,6 +49,12 @@ mixin _$AppState {
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(AppThemeType theme, AppLocaleType locale)? initial,
+    TResult Function(AppThemeType theme, AppLocaleType locale)? changed,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(AppThemeType theme, AppLocaleType locale)? initial,
     TResult Function(AppThemeType theme, AppLocaleType locale)? changed,
@@ -58,6 +65,12 @@ mixin _$AppState {
   TResult map<TResult extends Object?>({
     required TResult Function(AppStateInitial value) initial,
     required TResult Function(AppStateChanged value) changed,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(AppStateInitial value)? initial,
+    TResult Function(AppStateChanged value)? changed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -213,6 +226,15 @@ class _$AppStateInitial implements AppStateInitial {
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(AppThemeType theme, AppLocaleType locale)? initial,
+    TResult Function(AppThemeType theme, AppLocaleType locale)? changed,
+  }) {
+    return initial?.call(theme, locale);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(AppThemeType theme, AppLocaleType locale)? initial,
     TResult Function(AppThemeType theme, AppLocaleType locale)? changed,
@@ -231,6 +253,15 @@ class _$AppStateInitial implements AppStateInitial {
     required TResult Function(AppStateChanged value) changed,
   }) {
     return initial(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(AppStateInitial value)? initial,
+    TResult Function(AppStateChanged value)? changed,
+  }) {
+    return initial?.call(this);
   }
 
   @override
@@ -352,6 +383,15 @@ class _$AppStateChanged implements AppStateChanged {
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(AppThemeType theme, AppLocaleType locale)? initial,
+    TResult Function(AppThemeType theme, AppLocaleType locale)? changed,
+  }) {
+    return changed?.call(theme, locale);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(AppThemeType theme, AppLocaleType locale)? initial,
     TResult Function(AppThemeType theme, AppLocaleType locale)? changed,
@@ -370,6 +410,15 @@ class _$AppStateChanged implements AppStateChanged {
     required TResult Function(AppStateChanged value) changed,
   }) {
     return changed(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(AppStateInitial value)? initial,
+    TResult Function(AppStateChanged value)? changed,
+  }) {
+    return changed?.call(this);
   }
 
   @override

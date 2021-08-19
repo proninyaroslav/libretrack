@@ -1,5 +1,6 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'settings_page.dart';
 
@@ -42,6 +43,13 @@ mixin _$_SettingsRouterState {
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? home,
+    TResult Function()? appearance,
+    TResult Function()? behavior,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? home,
     TResult Function()? appearance,
@@ -54,6 +62,13 @@ mixin _$_SettingsRouterState {
     required TResult Function(_SettingsRouterStateHome value) home,
     required TResult Function(_SettingsRouterStateAppearance value) appearance,
     required TResult Function(_SettingsRouterStateBehavior value) behavior,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_SettingsRouterStateHome value)? home,
+    TResult Function(_SettingsRouterStateAppearance value)? appearance,
+    TResult Function(_SettingsRouterStateBehavior value)? behavior,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -141,6 +156,16 @@ class _$_SettingsRouterStateHome
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? home,
+    TResult Function()? appearance,
+    TResult Function()? behavior,
+  }) {
+    return home?.call();
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? home,
     TResult Function()? appearance,
@@ -161,6 +186,16 @@ class _$_SettingsRouterStateHome
     required TResult Function(_SettingsRouterStateBehavior value) behavior,
   }) {
     return home(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_SettingsRouterStateHome value)? home,
+    TResult Function(_SettingsRouterStateAppearance value)? appearance,
+    TResult Function(_SettingsRouterStateBehavior value)? behavior,
+  }) {
+    return home?.call(this);
   }
 
   @override
@@ -243,6 +278,16 @@ class _$_SettingsRouterStateAppearance
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? home,
+    TResult Function()? appearance,
+    TResult Function()? behavior,
+  }) {
+    return appearance?.call();
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? home,
     TResult Function()? appearance,
@@ -263,6 +308,16 @@ class _$_SettingsRouterStateAppearance
     required TResult Function(_SettingsRouterStateBehavior value) behavior,
   }) {
     return appearance(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_SettingsRouterStateHome value)? home,
+    TResult Function(_SettingsRouterStateAppearance value)? appearance,
+    TResult Function(_SettingsRouterStateBehavior value)? behavior,
+  }) {
+    return appearance?.call(this);
   }
 
   @override
@@ -346,6 +401,16 @@ class _$_SettingsRouterStateBehavior
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? home,
+    TResult Function()? appearance,
+    TResult Function()? behavior,
+  }) {
+    return behavior?.call();
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? home,
     TResult Function()? appearance,
@@ -366,6 +431,16 @@ class _$_SettingsRouterStateBehavior
     required TResult Function(_SettingsRouterStateBehavior value) behavior,
   }) {
     return behavior(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_SettingsRouterStateHome value)? home,
+    TResult Function(_SettingsRouterStateAppearance value)? appearance,
+    TResult Function(_SettingsRouterStateBehavior value)? behavior,
+  }) {
+    return behavior?.call(this);
   }
 
   @override

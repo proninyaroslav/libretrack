@@ -1,5 +1,6 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'notification_manager.dart';
 
@@ -13,7 +14,7 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 NotificationAction _$NotificationActionFromJson(Map<String, dynamic> json) {
-  switch (json['runtimeType'] as String) {
+  switch (json['runtimeType'] as String?) {
     case 'openParcelDetails':
       return NotificationActionOpenParcelDetails.fromJson(json);
     case 'reportCrash':
@@ -22,7 +23,8 @@ NotificationAction _$NotificationActionFromJson(Map<String, dynamic> json) {
       return NotificationActionOpenParcelsList.fromJson(json);
 
     default:
-      throw FallThroughError();
+      throw CheckedFromJsonException(json, 'runtimeType', 'NotificationAction',
+          'Invalid union type "${json['runtimeType']}"!');
   }
 }
 
@@ -65,6 +67,13 @@ mixin _$NotificationAction {
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(String trackNumber)? openParcelDetails,
+    TResult Function(CrashInfo info)? reportCrash,
+    TResult Function()? openParcelsList,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String trackNumber)? openParcelDetails,
     TResult Function(CrashInfo info)? reportCrash,
@@ -79,6 +88,14 @@ mixin _$NotificationAction {
     required TResult Function(NotificationActionReportCrash value) reportCrash,
     required TResult Function(NotificationActionOpenParcelsList value)
         openParcelsList,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(NotificationActionOpenParcelDetails value)?
+        openParcelDetails,
+    TResult Function(NotificationActionReportCrash value)? reportCrash,
+    TResult Function(NotificationActionOpenParcelsList value)? openParcelsList,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -153,7 +170,7 @@ class _$NotificationActionOpenParcelDetails
 
   factory _$NotificationActionOpenParcelDetails.fromJson(
           Map<String, dynamic> json) =>
-      _$_$NotificationActionOpenParcelDetailsFromJson(json);
+      _$$NotificationActionOpenParcelDetailsFromJson(json);
 
   @override
   final String trackNumber;
@@ -195,6 +212,16 @@ class _$NotificationActionOpenParcelDetails
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(String trackNumber)? openParcelDetails,
+    TResult Function(CrashInfo info)? reportCrash,
+    TResult Function()? openParcelsList,
+  }) {
+    return openParcelDetails?.call(trackNumber);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String trackNumber)? openParcelDetails,
     TResult Function(CrashInfo info)? reportCrash,
@@ -221,6 +248,17 @@ class _$NotificationActionOpenParcelDetails
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(NotificationActionOpenParcelDetails value)?
+        openParcelDetails,
+    TResult Function(NotificationActionReportCrash value)? reportCrash,
+    TResult Function(NotificationActionOpenParcelsList value)? openParcelsList,
+  }) {
+    return openParcelDetails?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(NotificationActionOpenParcelDetails value)?
         openParcelDetails,
@@ -236,7 +274,7 @@ class _$NotificationActionOpenParcelDetails
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$NotificationActionOpenParcelDetailsToJson(this)
+    return _$$NotificationActionOpenParcelDetailsToJson(this)
       ..['runtimeType'] = 'openParcelDetails';
   }
 }
@@ -307,7 +345,7 @@ class _$NotificationActionReportCrash implements NotificationActionReportCrash {
   const _$NotificationActionReportCrash({required this.info});
 
   factory _$NotificationActionReportCrash.fromJson(Map<String, dynamic> json) =>
-      _$_$NotificationActionReportCrashFromJson(json);
+      _$$NotificationActionReportCrashFromJson(json);
 
   @override
   final CrashInfo info;
@@ -347,6 +385,16 @@ class _$NotificationActionReportCrash implements NotificationActionReportCrash {
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(String trackNumber)? openParcelDetails,
+    TResult Function(CrashInfo info)? reportCrash,
+    TResult Function()? openParcelsList,
+  }) {
+    return reportCrash?.call(info);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String trackNumber)? openParcelDetails,
     TResult Function(CrashInfo info)? reportCrash,
@@ -373,6 +421,17 @@ class _$NotificationActionReportCrash implements NotificationActionReportCrash {
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(NotificationActionOpenParcelDetails value)?
+        openParcelDetails,
+    TResult Function(NotificationActionReportCrash value)? reportCrash,
+    TResult Function(NotificationActionOpenParcelsList value)? openParcelsList,
+  }) {
+    return reportCrash?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(NotificationActionOpenParcelDetails value)?
         openParcelDetails,
@@ -388,7 +447,7 @@ class _$NotificationActionReportCrash implements NotificationActionReportCrash {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$NotificationActionReportCrashToJson(this)
+    return _$$NotificationActionReportCrashToJson(this)
       ..['runtimeType'] = 'reportCrash';
   }
 }
@@ -436,7 +495,7 @@ class _$NotificationActionOpenParcelsList
 
   factory _$NotificationActionOpenParcelsList.fromJson(
           Map<String, dynamic> json) =>
-      _$_$NotificationActionOpenParcelsListFromJson(json);
+      _$$NotificationActionOpenParcelsListFromJson(json);
 
   @override
   String toString() {
@@ -460,6 +519,16 @@ class _$NotificationActionOpenParcelsList
     required TResult Function() openParcelsList,
   }) {
     return openParcelsList();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(String trackNumber)? openParcelDetails,
+    TResult Function(CrashInfo info)? reportCrash,
+    TResult Function()? openParcelsList,
+  }) {
+    return openParcelsList?.call();
   }
 
   @override
@@ -490,6 +559,17 @@ class _$NotificationActionOpenParcelsList
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(NotificationActionOpenParcelDetails value)?
+        openParcelDetails,
+    TResult Function(NotificationActionReportCrash value)? reportCrash,
+    TResult Function(NotificationActionOpenParcelsList value)? openParcelsList,
+  }) {
+    return openParcelsList?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(NotificationActionOpenParcelDetails value)?
         openParcelDetails,
@@ -505,7 +585,7 @@ class _$NotificationActionOpenParcelsList
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$NotificationActionOpenParcelsListToJson(this)
+    return _$$NotificationActionOpenParcelsListToJson(this)
       ..['runtimeType'] = 'openParcelsList';
   }
 }

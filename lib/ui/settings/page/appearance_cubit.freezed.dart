@@ -1,5 +1,6 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'appearance_cubit.dart';
 
@@ -73,6 +74,16 @@ mixin _$AppearanceState {
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(AppearanceInfo info)? initial,
+    TResult Function(AppearanceInfo info)? themeChanged,
+    TResult Function(AppearanceInfo info)? trackingNotifyChanged,
+    TResult Function(AppearanceInfo info)? localeChanged,
+    TResult Function(AppearanceInfo info)? trackingErrorNotifyChanged,
+    TResult Function(AppearanceInfo info)? trayIconChanged,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(AppearanceInfo info)? initial,
     TResult Function(AppearanceInfo info)? themeChanged,
@@ -94,6 +105,18 @@ mixin _$AppearanceState {
         trackingErrorNotifyChanged,
     required TResult Function(AppearanceStateTrayIconChanged value)
         trayIconChanged,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(AppearanceStateInitial value)? initial,
+    TResult Function(AppearanceStateThemeChanged value)? themeChanged,
+    TResult Function(AppearanceStateTrackingNotifyChanged value)?
+        trackingNotifyChanged,
+    TResult Function(AppearanceStateLocaleChanged value)? localeChanged,
+    TResult Function(AppearanceStateTrackingErrorNotifyChanged value)?
+        trackingErrorNotifyChanged,
+    TResult Function(AppearanceStateTrayIconChanged value)? trayIconChanged,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -237,6 +260,19 @@ class _$AppearanceStateInitial implements AppearanceStateInitial {
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(AppearanceInfo info)? initial,
+    TResult Function(AppearanceInfo info)? themeChanged,
+    TResult Function(AppearanceInfo info)? trackingNotifyChanged,
+    TResult Function(AppearanceInfo info)? localeChanged,
+    TResult Function(AppearanceInfo info)? trackingErrorNotifyChanged,
+    TResult Function(AppearanceInfo info)? trayIconChanged,
+  }) {
+    return initial?.call(info);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(AppearanceInfo info)? initial,
     TResult Function(AppearanceInfo info)? themeChanged,
@@ -266,6 +302,21 @@ class _$AppearanceStateInitial implements AppearanceStateInitial {
         trayIconChanged,
   }) {
     return initial(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(AppearanceStateInitial value)? initial,
+    TResult Function(AppearanceStateThemeChanged value)? themeChanged,
+    TResult Function(AppearanceStateTrackingNotifyChanged value)?
+        trackingNotifyChanged,
+    TResult Function(AppearanceStateLocaleChanged value)? localeChanged,
+    TResult Function(AppearanceStateTrackingErrorNotifyChanged value)?
+        trackingErrorNotifyChanged,
+    TResult Function(AppearanceStateTrayIconChanged value)? trayIconChanged,
+  }) {
+    return initial?.call(this);
   }
 
   @override
@@ -385,6 +436,19 @@ class _$AppearanceStateThemeChanged implements AppearanceStateThemeChanged {
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(AppearanceInfo info)? initial,
+    TResult Function(AppearanceInfo info)? themeChanged,
+    TResult Function(AppearanceInfo info)? trackingNotifyChanged,
+    TResult Function(AppearanceInfo info)? localeChanged,
+    TResult Function(AppearanceInfo info)? trackingErrorNotifyChanged,
+    TResult Function(AppearanceInfo info)? trayIconChanged,
+  }) {
+    return themeChanged?.call(info);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(AppearanceInfo info)? initial,
     TResult Function(AppearanceInfo info)? themeChanged,
@@ -414,6 +478,21 @@ class _$AppearanceStateThemeChanged implements AppearanceStateThemeChanged {
         trayIconChanged,
   }) {
     return themeChanged(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(AppearanceStateInitial value)? initial,
+    TResult Function(AppearanceStateThemeChanged value)? themeChanged,
+    TResult Function(AppearanceStateTrackingNotifyChanged value)?
+        trackingNotifyChanged,
+    TResult Function(AppearanceStateLocaleChanged value)? localeChanged,
+    TResult Function(AppearanceStateTrackingErrorNotifyChanged value)?
+        trackingErrorNotifyChanged,
+    TResult Function(AppearanceStateTrayIconChanged value)? trayIconChanged,
+  }) {
+    return themeChanged?.call(this);
   }
 
   @override
@@ -536,6 +615,19 @@ class _$AppearanceStateTrackingNotifyChanged
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(AppearanceInfo info)? initial,
+    TResult Function(AppearanceInfo info)? themeChanged,
+    TResult Function(AppearanceInfo info)? trackingNotifyChanged,
+    TResult Function(AppearanceInfo info)? localeChanged,
+    TResult Function(AppearanceInfo info)? trackingErrorNotifyChanged,
+    TResult Function(AppearanceInfo info)? trayIconChanged,
+  }) {
+    return trackingNotifyChanged?.call(info);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(AppearanceInfo info)? initial,
     TResult Function(AppearanceInfo info)? themeChanged,
@@ -565,6 +657,21 @@ class _$AppearanceStateTrackingNotifyChanged
         trayIconChanged,
   }) {
     return trackingNotifyChanged(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(AppearanceStateInitial value)? initial,
+    TResult Function(AppearanceStateThemeChanged value)? themeChanged,
+    TResult Function(AppearanceStateTrackingNotifyChanged value)?
+        trackingNotifyChanged,
+    TResult Function(AppearanceStateLocaleChanged value)? localeChanged,
+    TResult Function(AppearanceStateTrackingErrorNotifyChanged value)?
+        trackingErrorNotifyChanged,
+    TResult Function(AppearanceStateTrayIconChanged value)? trayIconChanged,
+  }) {
+    return trackingNotifyChanged?.call(this);
   }
 
   @override
@@ -686,6 +793,19 @@ class _$AppearanceStateLocaleChanged implements AppearanceStateLocaleChanged {
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(AppearanceInfo info)? initial,
+    TResult Function(AppearanceInfo info)? themeChanged,
+    TResult Function(AppearanceInfo info)? trackingNotifyChanged,
+    TResult Function(AppearanceInfo info)? localeChanged,
+    TResult Function(AppearanceInfo info)? trackingErrorNotifyChanged,
+    TResult Function(AppearanceInfo info)? trayIconChanged,
+  }) {
+    return localeChanged?.call(info);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(AppearanceInfo info)? initial,
     TResult Function(AppearanceInfo info)? themeChanged,
@@ -715,6 +835,21 @@ class _$AppearanceStateLocaleChanged implements AppearanceStateLocaleChanged {
         trayIconChanged,
   }) {
     return localeChanged(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(AppearanceStateInitial value)? initial,
+    TResult Function(AppearanceStateThemeChanged value)? themeChanged,
+    TResult Function(AppearanceStateTrackingNotifyChanged value)?
+        trackingNotifyChanged,
+    TResult Function(AppearanceStateLocaleChanged value)? localeChanged,
+    TResult Function(AppearanceStateTrackingErrorNotifyChanged value)?
+        trackingErrorNotifyChanged,
+    TResult Function(AppearanceStateTrayIconChanged value)? trayIconChanged,
+  }) {
+    return localeChanged?.call(this);
   }
 
   @override
@@ -838,6 +973,19 @@ class _$AppearanceStateTrackingErrorNotifyChanged
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(AppearanceInfo info)? initial,
+    TResult Function(AppearanceInfo info)? themeChanged,
+    TResult Function(AppearanceInfo info)? trackingNotifyChanged,
+    TResult Function(AppearanceInfo info)? localeChanged,
+    TResult Function(AppearanceInfo info)? trackingErrorNotifyChanged,
+    TResult Function(AppearanceInfo info)? trayIconChanged,
+  }) {
+    return trackingErrorNotifyChanged?.call(info);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(AppearanceInfo info)? initial,
     TResult Function(AppearanceInfo info)? themeChanged,
@@ -867,6 +1015,21 @@ class _$AppearanceStateTrackingErrorNotifyChanged
         trayIconChanged,
   }) {
     return trackingErrorNotifyChanged(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(AppearanceStateInitial value)? initial,
+    TResult Function(AppearanceStateThemeChanged value)? themeChanged,
+    TResult Function(AppearanceStateTrackingNotifyChanged value)?
+        trackingNotifyChanged,
+    TResult Function(AppearanceStateLocaleChanged value)? localeChanged,
+    TResult Function(AppearanceStateTrackingErrorNotifyChanged value)?
+        trackingErrorNotifyChanged,
+    TResult Function(AppearanceStateTrayIconChanged value)? trayIconChanged,
+  }) {
+    return trackingErrorNotifyChanged?.call(this);
   }
 
   @override
@@ -990,6 +1153,19 @@ class _$AppearanceStateTrayIconChanged
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(AppearanceInfo info)? initial,
+    TResult Function(AppearanceInfo info)? themeChanged,
+    TResult Function(AppearanceInfo info)? trackingNotifyChanged,
+    TResult Function(AppearanceInfo info)? localeChanged,
+    TResult Function(AppearanceInfo info)? trackingErrorNotifyChanged,
+    TResult Function(AppearanceInfo info)? trayIconChanged,
+  }) {
+    return trayIconChanged?.call(info);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(AppearanceInfo info)? initial,
     TResult Function(AppearanceInfo info)? themeChanged,
@@ -1019,6 +1195,21 @@ class _$AppearanceStateTrayIconChanged
         trayIconChanged,
   }) {
     return trayIconChanged(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(AppearanceStateInitial value)? initial,
+    TResult Function(AppearanceStateThemeChanged value)? themeChanged,
+    TResult Function(AppearanceStateTrackingNotifyChanged value)?
+        trackingNotifyChanged,
+    TResult Function(AppearanceStateLocaleChanged value)? localeChanged,
+    TResult Function(AppearanceStateTrackingErrorNotifyChanged value)?
+        trackingErrorNotifyChanged,
+    TResult Function(AppearanceStateTrayIconChanged value)? trayIconChanged,
+  }) {
+    return trayIconChanged?.call(this);
   }
 
   @override

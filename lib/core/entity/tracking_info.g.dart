@@ -6,17 +6,16 @@ part of 'tracking_info.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_TrackingError _$_$_TrackingErrorFromJson(Map<String, dynamic> json) {
-  return _$_TrackingError(
-    type: _$enumDecode(_$TrackingErrorTypeEnumMap, json['type']),
-    isRetryable: json['isRetryable'] as bool,
-    message: json['message'] as String?,
-    code: json['code'] as String?,
-    stackTrace: json['stackTrace'] as String?,
-  );
-}
+_$_TrackingError _$$_TrackingErrorFromJson(Map<String, dynamic> json) =>
+    _$_TrackingError(
+      type: _$enumDecode(_$TrackingErrorTypeEnumMap, json['type']),
+      isRetryable: json['isRetryable'] as bool,
+      message: json['message'] as String?,
+      code: json['code'] as String?,
+      stackTrace: json['stackTrace'] as String?,
+    );
 
-Map<String, dynamic> _$_$_TrackingErrorToJson(_$_TrackingError instance) =>
+Map<String, dynamic> _$$_TrackingErrorToJson(_$_TrackingError instance) =>
     <String, dynamic>{
       'type': _$TrackingErrorTypeEnumMap[instance.type],
       'isRetryable': instance.isRetryable,

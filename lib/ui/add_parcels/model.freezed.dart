@@ -1,5 +1,6 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'model.dart';
 
@@ -210,6 +211,11 @@ mixin _$TrackingNumbersError {
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? empty,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? empty,
     required TResult orElse(),
@@ -218,6 +224,11 @@ mixin _$TrackingNumbersError {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(TrackingNumbersErrorEmpty value) empty,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(TrackingNumbersErrorEmpty value)? empty,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -301,6 +312,14 @@ class _$TrackingNumbersErrorEmpty
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? empty,
+  }) {
+    return empty?.call();
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? empty,
     required TResult orElse(),
@@ -317,6 +336,14 @@ class _$TrackingNumbersErrorEmpty
     required TResult Function(TrackingNumbersErrorEmpty value) empty,
   }) {
     return empty(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(TrackingNumbersErrorEmpty value)? empty,
+  }) {
+    return empty?.call(this);
   }
 
   @override
@@ -524,6 +551,12 @@ mixin _$TrackingNumbersParseResult {
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(List<String> trackList)? success,
+    TResult Function(TrackingNumbersError reason)? error,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(List<String> trackList)? success,
     TResult Function(TrackingNumbersError reason)? error,
@@ -534,6 +567,12 @@ mixin _$TrackingNumbersParseResult {
   TResult map<TResult extends Object?>({
     required TResult Function(TrackingNumbersParseResultSuccess value) success,
     required TResult Function(TrackingNumbersParseResultError value) error,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(TrackingNumbersParseResultSuccess value)? success,
+    TResult Function(TrackingNumbersParseResultError value)? error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -650,6 +689,15 @@ class _$TrackingNumbersParseResultSuccess
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(List<String> trackList)? success,
+    TResult Function(TrackingNumbersError reason)? error,
+  }) {
+    return success?.call(trackList);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(List<String> trackList)? success,
     TResult Function(TrackingNumbersError reason)? error,
@@ -668,6 +716,15 @@ class _$TrackingNumbersParseResultSuccess
     required TResult Function(TrackingNumbersParseResultError value) error,
   }) {
     return success(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(TrackingNumbersParseResultSuccess value)? success,
+    TResult Function(TrackingNumbersParseResultError value)? error,
+  }) {
+    return success?.call(this);
   }
 
   @override
@@ -791,6 +848,15 @@ class _$TrackingNumbersParseResultError
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(List<String> trackList)? success,
+    TResult Function(TrackingNumbersError reason)? error,
+  }) {
+    return error?.call(reason);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(List<String> trackList)? success,
     TResult Function(TrackingNumbersError reason)? error,
@@ -809,6 +875,15 @@ class _$TrackingNumbersParseResultError
     required TResult Function(TrackingNumbersParseResultError value) error,
   }) {
     return error(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(TrackingNumbersParseResultSuccess value)? success,
+    TResult Function(TrackingNumbersParseResultError value)? error,
+  }) {
+    return error?.call(this);
   }
 
   @override
@@ -866,6 +941,12 @@ mixin _$ParcelNamesParseResult {
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(List<String> namesList)? success,
+    TResult Function(ParcelNamesError reason)? error,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(List<String> namesList)? success,
     TResult Function(ParcelNamesError reason)? error,
@@ -876,6 +957,12 @@ mixin _$ParcelNamesParseResult {
   TResult map<TResult extends Object?>({
     required TResult Function(ParcelNamesParseResultSuccess value) success,
     required TResult Function(ParcelNamesParseResultError value) error,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(ParcelNamesParseResultSuccess value)? success,
+    TResult Function(ParcelNamesParseResultError value)? error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -992,6 +1079,15 @@ class _$ParcelNamesParseResultSuccess
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(List<String> namesList)? success,
+    TResult Function(ParcelNamesError reason)? error,
+  }) {
+    return success?.call(namesList);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(List<String> namesList)? success,
     TResult Function(ParcelNamesError reason)? error,
@@ -1010,6 +1106,15 @@ class _$ParcelNamesParseResultSuccess
     required TResult Function(ParcelNamesParseResultError value) error,
   }) {
     return success(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(ParcelNamesParseResultSuccess value)? success,
+    TResult Function(ParcelNamesParseResultError value)? error,
+  }) {
+    return success?.call(this);
   }
 
   @override
@@ -1122,6 +1227,15 @@ class _$ParcelNamesParseResultError
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(List<String> namesList)? success,
+    TResult Function(ParcelNamesError reason)? error,
+  }) {
+    return error?.call(reason);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(List<String> namesList)? success,
     TResult Function(ParcelNamesError reason)? error,
@@ -1140,6 +1254,15 @@ class _$ParcelNamesParseResultError
     required TResult Function(ParcelNamesParseResultError value) error,
   }) {
     return error(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(ParcelNamesParseResultSuccess value)? success,
+    TResult Function(ParcelNamesParseResultError value)? error,
+  }) {
+    return error?.call(this);
   }
 
   @override

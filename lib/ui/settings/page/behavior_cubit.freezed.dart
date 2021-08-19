@@ -1,5 +1,6 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'behavior_cubit.dart';
 
@@ -66,6 +67,15 @@ mixin _$BehaviorState {
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(BehaviorInfo info)? initial,
+    TResult Function(BehaviorInfo info)? trackingLimitChanged,
+    TResult Function(BehaviorInfo info)? autoTrackingChanged,
+    TResult Function(BehaviorInfo info)? autoTrackingFreqChanged,
+    TResult Function(BehaviorInfo info)? trackingHistorySizeChanged,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(BehaviorInfo info)? initial,
     TResult Function(BehaviorInfo info)? trackingLimitChanged,
@@ -85,6 +95,19 @@ mixin _$BehaviorState {
     required TResult Function(BehaviorStateAutoTrackingFreqChanged value)
         autoTrackingFreqChanged,
     required TResult Function(BehaviorStateTrackingHistorySizeChanged value)
+        trackingHistorySizeChanged,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(BehaviorStateInitial value)? initial,
+    TResult Function(BehaviorStateTrackingLimitChanged value)?
+        trackingLimitChanged,
+    TResult Function(BehaviorStateAutoTrackingChanged value)?
+        autoTrackingChanged,
+    TResult Function(BehaviorStateAutoTrackingFreqChanged value)?
+        autoTrackingFreqChanged,
+    TResult Function(BehaviorStateTrackingHistorySizeChanged value)?
         trackingHistorySizeChanged,
   }) =>
       throw _privateConstructorUsedError;
@@ -229,6 +252,18 @@ class _$BehaviorStateInitial implements BehaviorStateInitial {
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(BehaviorInfo info)? initial,
+    TResult Function(BehaviorInfo info)? trackingLimitChanged,
+    TResult Function(BehaviorInfo info)? autoTrackingChanged,
+    TResult Function(BehaviorInfo info)? autoTrackingFreqChanged,
+    TResult Function(BehaviorInfo info)? trackingHistorySizeChanged,
+  }) {
+    return initial?.call(info);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(BehaviorInfo info)? initial,
     TResult Function(BehaviorInfo info)? trackingLimitChanged,
@@ -257,6 +292,22 @@ class _$BehaviorStateInitial implements BehaviorStateInitial {
         trackingHistorySizeChanged,
   }) {
     return initial(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(BehaviorStateInitial value)? initial,
+    TResult Function(BehaviorStateTrackingLimitChanged value)?
+        trackingLimitChanged,
+    TResult Function(BehaviorStateAutoTrackingChanged value)?
+        autoTrackingChanged,
+    TResult Function(BehaviorStateAutoTrackingFreqChanged value)?
+        autoTrackingFreqChanged,
+    TResult Function(BehaviorStateTrackingHistorySizeChanged value)?
+        trackingHistorySizeChanged,
+  }) {
+    return initial?.call(this);
   }
 
   @override
@@ -378,6 +429,18 @@ class _$BehaviorStateTrackingLimitChanged
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(BehaviorInfo info)? initial,
+    TResult Function(BehaviorInfo info)? trackingLimitChanged,
+    TResult Function(BehaviorInfo info)? autoTrackingChanged,
+    TResult Function(BehaviorInfo info)? autoTrackingFreqChanged,
+    TResult Function(BehaviorInfo info)? trackingHistorySizeChanged,
+  }) {
+    return trackingLimitChanged?.call(info);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(BehaviorInfo info)? initial,
     TResult Function(BehaviorInfo info)? trackingLimitChanged,
@@ -406,6 +469,22 @@ class _$BehaviorStateTrackingLimitChanged
         trackingHistorySizeChanged,
   }) {
     return trackingLimitChanged(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(BehaviorStateInitial value)? initial,
+    TResult Function(BehaviorStateTrackingLimitChanged value)?
+        trackingLimitChanged,
+    TResult Function(BehaviorStateAutoTrackingChanged value)?
+        autoTrackingChanged,
+    TResult Function(BehaviorStateAutoTrackingFreqChanged value)?
+        autoTrackingFreqChanged,
+    TResult Function(BehaviorStateTrackingHistorySizeChanged value)?
+        trackingHistorySizeChanged,
+  }) {
+    return trackingLimitChanged?.call(this);
   }
 
   @override
@@ -527,6 +606,18 @@ class _$BehaviorStateAutoTrackingChanged
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(BehaviorInfo info)? initial,
+    TResult Function(BehaviorInfo info)? trackingLimitChanged,
+    TResult Function(BehaviorInfo info)? autoTrackingChanged,
+    TResult Function(BehaviorInfo info)? autoTrackingFreqChanged,
+    TResult Function(BehaviorInfo info)? trackingHistorySizeChanged,
+  }) {
+    return autoTrackingChanged?.call(info);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(BehaviorInfo info)? initial,
     TResult Function(BehaviorInfo info)? trackingLimitChanged,
@@ -555,6 +646,22 @@ class _$BehaviorStateAutoTrackingChanged
         trackingHistorySizeChanged,
   }) {
     return autoTrackingChanged(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(BehaviorStateInitial value)? initial,
+    TResult Function(BehaviorStateTrackingLimitChanged value)?
+        trackingLimitChanged,
+    TResult Function(BehaviorStateAutoTrackingChanged value)?
+        autoTrackingChanged,
+    TResult Function(BehaviorStateAutoTrackingFreqChanged value)?
+        autoTrackingFreqChanged,
+    TResult Function(BehaviorStateTrackingHistorySizeChanged value)?
+        trackingHistorySizeChanged,
+  }) {
+    return autoTrackingChanged?.call(this);
   }
 
   @override
@@ -677,6 +784,18 @@ class _$BehaviorStateAutoTrackingFreqChanged
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(BehaviorInfo info)? initial,
+    TResult Function(BehaviorInfo info)? trackingLimitChanged,
+    TResult Function(BehaviorInfo info)? autoTrackingChanged,
+    TResult Function(BehaviorInfo info)? autoTrackingFreqChanged,
+    TResult Function(BehaviorInfo info)? trackingHistorySizeChanged,
+  }) {
+    return autoTrackingFreqChanged?.call(info);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(BehaviorInfo info)? initial,
     TResult Function(BehaviorInfo info)? trackingLimitChanged,
@@ -705,6 +824,22 @@ class _$BehaviorStateAutoTrackingFreqChanged
         trackingHistorySizeChanged,
   }) {
     return autoTrackingFreqChanged(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(BehaviorStateInitial value)? initial,
+    TResult Function(BehaviorStateTrackingLimitChanged value)?
+        trackingLimitChanged,
+    TResult Function(BehaviorStateAutoTrackingChanged value)?
+        autoTrackingChanged,
+    TResult Function(BehaviorStateAutoTrackingFreqChanged value)?
+        autoTrackingFreqChanged,
+    TResult Function(BehaviorStateTrackingHistorySizeChanged value)?
+        trackingHistorySizeChanged,
+  }) {
+    return autoTrackingFreqChanged?.call(this);
   }
 
   @override
@@ -829,6 +964,18 @@ class _$BehaviorStateTrackingHistorySizeChanged
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(BehaviorInfo info)? initial,
+    TResult Function(BehaviorInfo info)? trackingLimitChanged,
+    TResult Function(BehaviorInfo info)? autoTrackingChanged,
+    TResult Function(BehaviorInfo info)? autoTrackingFreqChanged,
+    TResult Function(BehaviorInfo info)? trackingHistorySizeChanged,
+  }) {
+    return trackingHistorySizeChanged?.call(info);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(BehaviorInfo info)? initial,
     TResult Function(BehaviorInfo info)? trackingLimitChanged,
@@ -857,6 +1004,22 @@ class _$BehaviorStateTrackingHistorySizeChanged
         trackingHistorySizeChanged,
   }) {
     return trackingHistorySizeChanged(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(BehaviorStateInitial value)? initial,
+    TResult Function(BehaviorStateTrackingLimitChanged value)?
+        trackingLimitChanged,
+    TResult Function(BehaviorStateAutoTrackingChanged value)?
+        autoTrackingChanged,
+    TResult Function(BehaviorStateAutoTrackingFreqChanged value)?
+        autoTrackingFreqChanged,
+    TResult Function(BehaviorStateTrackingHistorySizeChanged value)?
+        trackingHistorySizeChanged,
+  }) {
+    return trackingHistorySizeChanged?.call(this);
   }
 
   @override

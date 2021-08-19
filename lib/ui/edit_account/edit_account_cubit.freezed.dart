@@ -1,5 +1,6 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'edit_account_cubit.dart';
 
@@ -52,6 +53,14 @@ mixin _$EditAccountState {
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? applying,
+    TResult Function()? applied,
+    TResult Function(Exception? exception, StackTrace? stackTrace)? applyFailed,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? applying,
@@ -66,6 +75,14 @@ mixin _$EditAccountState {
     required TResult Function(EditAccountStateApplying value) applying,
     required TResult Function(EditAccountStateApplied value) applied,
     required TResult Function(EditAccountStateApplyFailed value) applyFailed,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(EditAccountStateInitial value)? initial,
+    TResult Function(EditAccountStateApplying value)? applying,
+    TResult Function(EditAccountStateApplied value)? applied,
+    TResult Function(EditAccountStateApplyFailed value)? applyFailed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -155,6 +172,17 @@ class _$EditAccountStateInitial
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? applying,
+    TResult Function()? applied,
+    TResult Function(Exception? exception, StackTrace? stackTrace)? applyFailed,
+  }) {
+    return initial?.call();
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? applying,
@@ -177,6 +205,17 @@ class _$EditAccountStateInitial
     required TResult Function(EditAccountStateApplyFailed value) applyFailed,
   }) {
     return initial(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(EditAccountStateInitial value)? initial,
+    TResult Function(EditAccountStateApplying value)? applying,
+    TResult Function(EditAccountStateApplied value)? applied,
+    TResult Function(EditAccountStateApplyFailed value)? applyFailed,
+  }) {
+    return initial?.call(this);
   }
 
   @override
@@ -259,6 +298,17 @@ class _$EditAccountStateApplying
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? applying,
+    TResult Function()? applied,
+    TResult Function(Exception? exception, StackTrace? stackTrace)? applyFailed,
+  }) {
+    return applying?.call();
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? applying,
@@ -281,6 +331,17 @@ class _$EditAccountStateApplying
     required TResult Function(EditAccountStateApplyFailed value) applyFailed,
   }) {
     return applying(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(EditAccountStateInitial value)? initial,
+    TResult Function(EditAccountStateApplying value)? applying,
+    TResult Function(EditAccountStateApplied value)? applied,
+    TResult Function(EditAccountStateApplyFailed value)? applyFailed,
+  }) {
+    return applying?.call(this);
   }
 
   @override
@@ -362,6 +423,17 @@ class _$EditAccountStateApplied
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? applying,
+    TResult Function()? applied,
+    TResult Function(Exception? exception, StackTrace? stackTrace)? applyFailed,
+  }) {
+    return applied?.call();
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? applying,
@@ -384,6 +456,17 @@ class _$EditAccountStateApplied
     required TResult Function(EditAccountStateApplyFailed value) applyFailed,
   }) {
     return applied(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(EditAccountStateInitial value)? initial,
+    TResult Function(EditAccountStateApplying value)? applying,
+    TResult Function(EditAccountStateApplied value)? applied,
+    TResult Function(EditAccountStateApplyFailed value)? applyFailed,
+  }) {
+    return applied?.call(this);
   }
 
   @override
@@ -509,6 +592,17 @@ class _$EditAccountStateApplyFailed
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? applying,
+    TResult Function()? applied,
+    TResult Function(Exception? exception, StackTrace? stackTrace)? applyFailed,
+  }) {
+    return applyFailed?.call(exception, stackTrace);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? applying,
@@ -531,6 +625,17 @@ class _$EditAccountStateApplyFailed
     required TResult Function(EditAccountStateApplyFailed value) applyFailed,
   }) {
     return applyFailed(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(EditAccountStateInitial value)? initial,
+    TResult Function(EditAccountStateApplying value)? applying,
+    TResult Function(EditAccountStateApplied value)? applied,
+    TResult Function(EditAccountStateApplyFailed value)? applyFailed,
+  }) {
+    return applyFailed?.call(this);
   }
 
   @override

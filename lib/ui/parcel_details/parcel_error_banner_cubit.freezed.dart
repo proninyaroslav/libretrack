@@ -1,5 +1,6 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'parcel_error_banner_cubit.dart';
 
@@ -36,6 +37,11 @@ mixin _$ParcelErrorBannerState {
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(Set<ParcelErrorBanner> banners)? show,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(Set<ParcelErrorBanner> banners)? show,
     required TResult orElse(),
@@ -44,6 +50,11 @@ mixin _$ParcelErrorBannerState {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(ParcelErrorBannerStateShow value) show,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(ParcelErrorBannerStateShow value)? show,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -165,6 +176,14 @@ class _$ParcelErrorBannerStateShow implements ParcelErrorBannerStateShow {
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(Set<ParcelErrorBanner> banners)? show,
+  }) {
+    return show?.call(banners);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(Set<ParcelErrorBanner> banners)? show,
     required TResult orElse(),
@@ -181,6 +200,14 @@ class _$ParcelErrorBannerStateShow implements ParcelErrorBannerStateShow {
     required TResult Function(ParcelErrorBannerStateShow value) show,
   }) {
     return show(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(ParcelErrorBannerStateShow value)? show,
+  }) {
+    return show?.call(this);
   }
 
   @override
@@ -243,6 +270,14 @@ mixin _$ParcelErrorBanner {
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? hardError,
+    TResult Function()? missingAuthData,
+    TResult Function()? missingAccount,
+    TResult Function()? authError,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? hardError,
     TResult Function()? missingAuthData,
@@ -259,6 +294,14 @@ mixin _$ParcelErrorBanner {
     required TResult Function(ParcelErrorBannerMissingAccount value)
         missingAccount,
     required TResult Function(ParcelErrorBannerAuth value) authError,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(ParcelErrorBannerHardError value)? hardError,
+    TResult Function(ParcelErrorBannerMissingAuthData value)? missingAuthData,
+    TResult Function(ParcelErrorBannerMissingAccount value)? missingAccount,
+    TResult Function(ParcelErrorBannerAuth value)? authError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -340,6 +383,17 @@ class _$ParcelErrorBannerHardError implements ParcelErrorBannerHardError {
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? hardError,
+    TResult Function()? missingAuthData,
+    TResult Function()? missingAccount,
+    TResult Function()? authError,
+  }) {
+    return hardError?.call();
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? hardError,
     TResult Function()? missingAuthData,
@@ -364,6 +418,17 @@ class _$ParcelErrorBannerHardError implements ParcelErrorBannerHardError {
     required TResult Function(ParcelErrorBannerAuth value) authError,
   }) {
     return hardError(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(ParcelErrorBannerHardError value)? hardError,
+    TResult Function(ParcelErrorBannerMissingAuthData value)? missingAuthData,
+    TResult Function(ParcelErrorBannerMissingAccount value)? missingAccount,
+    TResult Function(ParcelErrorBannerAuth value)? authError,
+  }) {
+    return hardError?.call(this);
   }
 
   @override
@@ -441,6 +506,17 @@ class _$ParcelErrorBannerMissingAuthData
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? hardError,
+    TResult Function()? missingAuthData,
+    TResult Function()? missingAccount,
+    TResult Function()? authError,
+  }) {
+    return missingAuthData?.call();
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? hardError,
     TResult Function()? missingAuthData,
@@ -465,6 +541,17 @@ class _$ParcelErrorBannerMissingAuthData
     required TResult Function(ParcelErrorBannerAuth value) authError,
   }) {
     return missingAuthData(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(ParcelErrorBannerHardError value)? hardError,
+    TResult Function(ParcelErrorBannerMissingAuthData value)? missingAuthData,
+    TResult Function(ParcelErrorBannerMissingAccount value)? missingAccount,
+    TResult Function(ParcelErrorBannerAuth value)? authError,
+  }) {
+    return missingAuthData?.call(this);
   }
 
   @override
@@ -542,6 +629,17 @@ class _$ParcelErrorBannerMissingAccount
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? hardError,
+    TResult Function()? missingAuthData,
+    TResult Function()? missingAccount,
+    TResult Function()? authError,
+  }) {
+    return missingAccount?.call();
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? hardError,
     TResult Function()? missingAuthData,
@@ -566,6 +664,17 @@ class _$ParcelErrorBannerMissingAccount
     required TResult Function(ParcelErrorBannerAuth value) authError,
   }) {
     return missingAccount(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(ParcelErrorBannerHardError value)? hardError,
+    TResult Function(ParcelErrorBannerMissingAuthData value)? missingAuthData,
+    TResult Function(ParcelErrorBannerMissingAccount value)? missingAccount,
+    TResult Function(ParcelErrorBannerAuth value)? authError,
+  }) {
+    return missingAccount?.call(this);
   }
 
   @override
@@ -639,6 +748,17 @@ class _$ParcelErrorBannerAuth implements ParcelErrorBannerAuth {
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? hardError,
+    TResult Function()? missingAuthData,
+    TResult Function()? missingAccount,
+    TResult Function()? authError,
+  }) {
+    return authError?.call();
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? hardError,
     TResult Function()? missingAuthData,
@@ -663,6 +783,17 @@ class _$ParcelErrorBannerAuth implements ParcelErrorBannerAuth {
     required TResult Function(ParcelErrorBannerAuth value) authError,
   }) {
     return authError(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(ParcelErrorBannerHardError value)? hardError,
+    TResult Function(ParcelErrorBannerMissingAuthData value)? missingAuthData,
+    TResult Function(ParcelErrorBannerMissingAccount value)? missingAccount,
+    TResult Function(ParcelErrorBannerAuth value)? authError,
+  }) {
+    return authError?.call(this);
   }
 
   @override

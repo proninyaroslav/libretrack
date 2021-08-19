@@ -6,14 +6,12 @@ part of 'locale.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Locale _$_$_LocaleFromJson(Map<String, dynamic> json) {
-  return _$_Locale(
-    json['languageCode'] as String,
-    json['countryCode'] as String?,
-  );
-}
+_$_Locale _$$_LocaleFromJson(Map<String, dynamic> json) => _$_Locale(
+      json['languageCode'] as String,
+      json['countryCode'] as String?,
+    );
 
-Map<String, dynamic> _$_$_LocaleToJson(_$_Locale instance) => <String, dynamic>{
+Map<String, dynamic> _$$_LocaleToJson(_$_Locale instance) => <String, dynamic>{
       'languageCode': instance.languageCode,
       'countryCode': instance.countryCode,
     };

@@ -1,5 +1,6 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'edit_parcel_cubit.dart';
 
@@ -67,6 +68,17 @@ mixin _$EditParcelState {
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(ParcelName name)? initial,
+    TResult Function(ParcelName name)? fieldChanged,
+    TResult Function()? editing,
+    TResult Function(ParcelName name)? edited,
+    TResult Function(
+            ParcelName name, Exception? exception, StackTrace? stackTrace)?
+        editFailed,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(ParcelName name)? initial,
     TResult Function(ParcelName name)? fieldChanged,
@@ -85,6 +97,15 @@ mixin _$EditParcelState {
     required TResult Function(EditParcelStateEditing value) editing,
     required TResult Function(EditParcelStateEdited value) edited,
     required TResult Function(EditParcelStateEditFailed value) editFailed,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(EditParcelStateInitial value)? initial,
+    TResult Function(EditParcelStateFieldChanged value)? fieldChanged,
+    TResult Function(EditParcelStateEditing value)? editing,
+    TResult Function(EditParcelStateEdited value)? edited,
+    TResult Function(EditParcelStateEditFailed value)? editFailed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -215,6 +236,20 @@ class _$EditParcelStateInitial
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(ParcelName name)? initial,
+    TResult Function(ParcelName name)? fieldChanged,
+    TResult Function()? editing,
+    TResult Function(ParcelName name)? edited,
+    TResult Function(
+            ParcelName name, Exception? exception, StackTrace? stackTrace)?
+        editFailed,
+  }) {
+    return initial?.call(name);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(ParcelName name)? initial,
     TResult Function(ParcelName name)? fieldChanged,
@@ -241,6 +276,18 @@ class _$EditParcelStateInitial
     required TResult Function(EditParcelStateEditFailed value) editFailed,
   }) {
     return initial(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(EditParcelStateInitial value)? initial,
+    TResult Function(EditParcelStateFieldChanged value)? fieldChanged,
+    TResult Function(EditParcelStateEditing value)? editing,
+    TResult Function(EditParcelStateEdited value)? edited,
+    TResult Function(EditParcelStateEditFailed value)? editFailed,
+  }) {
+    return initial?.call(this);
   }
 
   @override
@@ -370,6 +417,20 @@ class _$EditParcelStateFieldChanged
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(ParcelName name)? initial,
+    TResult Function(ParcelName name)? fieldChanged,
+    TResult Function()? editing,
+    TResult Function(ParcelName name)? edited,
+    TResult Function(
+            ParcelName name, Exception? exception, StackTrace? stackTrace)?
+        editFailed,
+  }) {
+    return fieldChanged?.call(name);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(ParcelName name)? initial,
     TResult Function(ParcelName name)? fieldChanged,
@@ -396,6 +457,18 @@ class _$EditParcelStateFieldChanged
     required TResult Function(EditParcelStateEditFailed value) editFailed,
   }) {
     return fieldChanged(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(EditParcelStateInitial value)? initial,
+    TResult Function(EditParcelStateFieldChanged value)? fieldChanged,
+    TResult Function(EditParcelStateEditing value)? editing,
+    TResult Function(EditParcelStateEdited value)? edited,
+    TResult Function(EditParcelStateEditFailed value)? editFailed,
+  }) {
+    return fieldChanged?.call(this);
   }
 
   @override
@@ -486,6 +559,20 @@ class _$EditParcelStateEditing
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(ParcelName name)? initial,
+    TResult Function(ParcelName name)? fieldChanged,
+    TResult Function()? editing,
+    TResult Function(ParcelName name)? edited,
+    TResult Function(
+            ParcelName name, Exception? exception, StackTrace? stackTrace)?
+        editFailed,
+  }) {
+    return editing?.call();
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(ParcelName name)? initial,
     TResult Function(ParcelName name)? fieldChanged,
@@ -512,6 +599,18 @@ class _$EditParcelStateEditing
     required TResult Function(EditParcelStateEditFailed value) editFailed,
   }) {
     return editing(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(EditParcelStateInitial value)? initial,
+    TResult Function(EditParcelStateFieldChanged value)? fieldChanged,
+    TResult Function(EditParcelStateEditing value)? editing,
+    TResult Function(EditParcelStateEdited value)? edited,
+    TResult Function(EditParcelStateEditFailed value)? editFailed,
+  }) {
+    return editing?.call(this);
   }
 
   @override
@@ -633,6 +732,20 @@ class _$EditParcelStateEdited
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(ParcelName name)? initial,
+    TResult Function(ParcelName name)? fieldChanged,
+    TResult Function()? editing,
+    TResult Function(ParcelName name)? edited,
+    TResult Function(
+            ParcelName name, Exception? exception, StackTrace? stackTrace)?
+        editFailed,
+  }) {
+    return edited?.call(name);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(ParcelName name)? initial,
     TResult Function(ParcelName name)? fieldChanged,
@@ -659,6 +772,18 @@ class _$EditParcelStateEdited
     required TResult Function(EditParcelStateEditFailed value) editFailed,
   }) {
     return edited(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(EditParcelStateInitial value)? initial,
+    TResult Function(EditParcelStateFieldChanged value)? fieldChanged,
+    TResult Function(EditParcelStateEditing value)? editing,
+    TResult Function(EditParcelStateEdited value)? edited,
+    TResult Function(EditParcelStateEditFailed value)? editFailed,
+  }) {
+    return edited?.call(this);
   }
 
   @override
@@ -813,6 +938,20 @@ class _$EditParcelStateEditFailed
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(ParcelName name)? initial,
+    TResult Function(ParcelName name)? fieldChanged,
+    TResult Function()? editing,
+    TResult Function(ParcelName name)? edited,
+    TResult Function(
+            ParcelName name, Exception? exception, StackTrace? stackTrace)?
+        editFailed,
+  }) {
+    return editFailed?.call(name, exception, stackTrace);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(ParcelName name)? initial,
     TResult Function(ParcelName name)? fieldChanged,
@@ -839,6 +978,18 @@ class _$EditParcelStateEditFailed
     required TResult Function(EditParcelStateEditFailed value) editFailed,
   }) {
     return editFailed(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(EditParcelStateInitial value)? initial,
+    TResult Function(EditParcelStateFieldChanged value)? fieldChanged,
+    TResult Function(EditParcelStateEditing value)? editing,
+    TResult Function(EditParcelStateEdited value)? edited,
+    TResult Function(EditParcelStateEditFailed value)? editFailed,
+  }) {
+    return editFailed?.call(this);
   }
 
   @override

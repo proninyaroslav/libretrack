@@ -1,5 +1,6 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'accounts_actions_cubit.dart';
 
@@ -49,6 +50,14 @@ mixin _$AccountsActionsState {
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? deleting,
+    TResult Function()? deleteSuccess,
+    TResult Function(StorageError error)? deleteFailed,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? deleting,
@@ -65,6 +74,14 @@ mixin _$AccountsActionsState {
         deleteSuccess,
     required TResult Function(AccountsActionsStateDeleteFailed value)
         deleteFailed,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(AccountsActionsStateInitial value)? initial,
+    TResult Function(AccountsActionsStateDeleting value)? deleting,
+    TResult Function(AccountsActionsStateDeleteSuccess value)? deleteSuccess,
+    TResult Function(AccountsActionsStateDeleteFailed value)? deleteFailed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -156,6 +173,17 @@ class _$AccountsActionsStateInitial
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? deleting,
+    TResult Function()? deleteSuccess,
+    TResult Function(StorageError error)? deleteFailed,
+  }) {
+    return initial?.call();
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? deleting,
@@ -180,6 +208,17 @@ class _$AccountsActionsStateInitial
         deleteFailed,
   }) {
     return initial(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(AccountsActionsStateInitial value)? initial,
+    TResult Function(AccountsActionsStateDeleting value)? deleting,
+    TResult Function(AccountsActionsStateDeleteSuccess value)? deleteSuccess,
+    TResult Function(AccountsActionsStateDeleteFailed value)? deleteFailed,
+  }) {
+    return initial?.call(this);
   }
 
   @override
@@ -264,6 +303,17 @@ class _$AccountsActionsStateDeleting
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? deleting,
+    TResult Function()? deleteSuccess,
+    TResult Function(StorageError error)? deleteFailed,
+  }) {
+    return deleting?.call();
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? deleting,
@@ -288,6 +338,17 @@ class _$AccountsActionsStateDeleting
         deleteFailed,
   }) {
     return deleting(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(AccountsActionsStateInitial value)? initial,
+    TResult Function(AccountsActionsStateDeleting value)? deleting,
+    TResult Function(AccountsActionsStateDeleteSuccess value)? deleteSuccess,
+    TResult Function(AccountsActionsStateDeleteFailed value)? deleteFailed,
+  }) {
+    return deleting?.call(this);
   }
 
   @override
@@ -373,6 +434,17 @@ class _$AccountsActionsStateDeleteSuccess
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? deleting,
+    TResult Function()? deleteSuccess,
+    TResult Function(StorageError error)? deleteFailed,
+  }) {
+    return deleteSuccess?.call();
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? deleting,
@@ -397,6 +469,17 @@ class _$AccountsActionsStateDeleteSuccess
         deleteFailed,
   }) {
     return deleteSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(AccountsActionsStateInitial value)? initial,
+    TResult Function(AccountsActionsStateDeleting value)? deleting,
+    TResult Function(AccountsActionsStateDeleteSuccess value)? deleteSuccess,
+    TResult Function(AccountsActionsStateDeleteFailed value)? deleteFailed,
+  }) {
+    return deleteSuccess?.call(this);
   }
 
   @override
@@ -519,6 +602,17 @@ class _$AccountsActionsStateDeleteFailed
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? deleting,
+    TResult Function()? deleteSuccess,
+    TResult Function(StorageError error)? deleteFailed,
+  }) {
+    return deleteFailed?.call(error);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? deleting,
@@ -543,6 +637,17 @@ class _$AccountsActionsStateDeleteFailed
         deleteFailed,
   }) {
     return deleteFailed(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(AccountsActionsStateInitial value)? initial,
+    TResult Function(AccountsActionsStateDeleting value)? deleting,
+    TResult Function(AccountsActionsStateDeleteSuccess value)? deleteSuccess,
+    TResult Function(AccountsActionsStateDeleteFailed value)? deleteFailed,
+  }) {
+    return deleteFailed?.call(this);
   }
 
   @override

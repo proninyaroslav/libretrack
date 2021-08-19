@@ -1,5 +1,6 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'parcels_cubit.dart';
 
@@ -83,6 +84,23 @@ mixin _$ParcelsState {
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(ParcelsFilterBatch filters, ParcelsFilter? search,
+            ParcelsSort? sort)?
+        initial,
+    TResult Function(
+            List<ParcelInfo> active,
+            List<ParcelInfo> archive,
+            ParcelsFilterBatch filters,
+            ParcelsFilter? search,
+            ParcelsSort? sort)?
+        loaded,
+    TResult Function(StorageError? error, ParcelsFilterBatch filters,
+            ParcelsFilter? search, ParcelsSort? sort)?
+        loadingFailed,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(ParcelsFilterBatch filters, ParcelsFilter? search,
             ParcelsSort? sort)?
@@ -105,6 +123,13 @@ mixin _$ParcelsState {
     required TResult Function(ParcelsStateInitial value) initial,
     required TResult Function(ParcelsStateLoaded value) loaded,
     required TResult Function(ParcelsStateLoadingFailed value) loadingFailed,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(ParcelsStateInitial value)? initial,
+    TResult Function(ParcelsStateLoaded value)? loaded,
+    TResult Function(ParcelsStateLoadingFailed value)? loadingFailed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -312,6 +337,26 @@ class _$ParcelsStateInitial
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(ParcelsFilterBatch filters, ParcelsFilter? search,
+            ParcelsSort? sort)?
+        initial,
+    TResult Function(
+            List<ParcelInfo> active,
+            List<ParcelInfo> archive,
+            ParcelsFilterBatch filters,
+            ParcelsFilter? search,
+            ParcelsSort? sort)?
+        loaded,
+    TResult Function(StorageError? error, ParcelsFilterBatch filters,
+            ParcelsFilter? search, ParcelsSort? sort)?
+        loadingFailed,
+  }) {
+    return initial?.call(filters, search, sort);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(ParcelsFilterBatch filters, ParcelsFilter? search,
             ParcelsSort? sort)?
@@ -342,6 +387,16 @@ class _$ParcelsStateInitial
     required TResult Function(ParcelsStateLoadingFailed value) loadingFailed,
   }) {
     return initial(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(ParcelsStateInitial value)? initial,
+    TResult Function(ParcelsStateLoaded value)? loaded,
+    TResult Function(ParcelsStateLoadingFailed value)? loadingFailed,
+  }) {
+    return initial?.call(this);
   }
 
   @override
@@ -535,6 +590,26 @@ class _$ParcelsStateLoaded
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(ParcelsFilterBatch filters, ParcelsFilter? search,
+            ParcelsSort? sort)?
+        initial,
+    TResult Function(
+            List<ParcelInfo> active,
+            List<ParcelInfo> archive,
+            ParcelsFilterBatch filters,
+            ParcelsFilter? search,
+            ParcelsSort? sort)?
+        loaded,
+    TResult Function(StorageError? error, ParcelsFilterBatch filters,
+            ParcelsFilter? search, ParcelsSort? sort)?
+        loadingFailed,
+  }) {
+    return loaded?.call(active, archive, filters, search, sort);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(ParcelsFilterBatch filters, ParcelsFilter? search,
             ParcelsSort? sort)?
@@ -565,6 +640,16 @@ class _$ParcelsStateLoaded
     required TResult Function(ParcelsStateLoadingFailed value) loadingFailed,
   }) {
     return loaded(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(ParcelsStateInitial value)? initial,
+    TResult Function(ParcelsStateLoaded value)? loaded,
+    TResult Function(ParcelsStateLoadingFailed value)? loadingFailed,
+  }) {
+    return loaded?.call(this);
   }
 
   @override
@@ -759,6 +844,26 @@ class _$ParcelsStateLoadingFailed
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(ParcelsFilterBatch filters, ParcelsFilter? search,
+            ParcelsSort? sort)?
+        initial,
+    TResult Function(
+            List<ParcelInfo> active,
+            List<ParcelInfo> archive,
+            ParcelsFilterBatch filters,
+            ParcelsFilter? search,
+            ParcelsSort? sort)?
+        loaded,
+    TResult Function(StorageError? error, ParcelsFilterBatch filters,
+            ParcelsFilter? search, ParcelsSort? sort)?
+        loadingFailed,
+  }) {
+    return loadingFailed?.call(error, filters, search, sort);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(ParcelsFilterBatch filters, ParcelsFilter? search,
             ParcelsSort? sort)?
@@ -789,6 +894,16 @@ class _$ParcelsStateLoadingFailed
     required TResult Function(ParcelsStateLoadingFailed value) loadingFailed,
   }) {
     return loadingFailed(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(ParcelsStateInitial value)? initial,
+    TResult Function(ParcelsStateLoaded value)? loaded,
+    TResult Function(ParcelsStateLoadingFailed value)? loadingFailed,
+  }) {
+    return loadingFailed?.call(this);
   }
 
   @override
@@ -855,6 +970,12 @@ mixin _$_BuildResult {
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult Function(List<ParcelInfo> infoList)? $default, {
+    TResult Function(StorageError error)? failed,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>(
     TResult Function(List<ParcelInfo> infoList)? $default, {
     TResult Function(StorageError error)? failed,
@@ -865,6 +986,12 @@ mixin _$_BuildResult {
   TResult map<TResult extends Object?>(
     TResult Function(_BuildResultData value) $default, {
     required TResult Function(_BuildResultFailed value) failed,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult Function(_BuildResultData value)? $default, {
+    TResult Function(_BuildResultFailed value)? failed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -976,6 +1103,15 @@ class _$_BuildResultData
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult Function(List<ParcelInfo> infoList)? $default, {
+    TResult Function(StorageError error)? failed,
+  }) {
+    return $default?.call(infoList);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>(
     TResult Function(List<ParcelInfo> infoList)? $default, {
     TResult Function(StorageError error)? failed,
@@ -994,6 +1130,15 @@ class _$_BuildResultData
     required TResult Function(_BuildResultFailed value) failed,
   }) {
     return $default(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult Function(_BuildResultData value)? $default, {
+    TResult Function(_BuildResultFailed value)? failed,
+  }) {
+    return $default?.call(this);
   }
 
   @override
@@ -1112,6 +1257,15 @@ class _$_BuildResultFailed
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult Function(List<ParcelInfo> infoList)? $default, {
+    TResult Function(StorageError error)? failed,
+  }) {
+    return failed?.call(error);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>(
     TResult Function(List<ParcelInfo> infoList)? $default, {
     TResult Function(StorageError error)? failed,
@@ -1130,6 +1284,15 @@ class _$_BuildResultFailed
     required TResult Function(_BuildResultFailed value) failed,
   }) {
     return failed(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult Function(_BuildResultData value)? $default, {
+    TResult Function(_BuildResultFailed value)? failed,
+  }) {
+    return failed?.call(this);
   }
 
   @override

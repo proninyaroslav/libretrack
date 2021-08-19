@@ -1,5 +1,6 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'tracking_limiter.dart';
 
@@ -56,6 +57,13 @@ mixin _$TrackingLimiterState {
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(String trackNumber)? allowed,
+    TResult Function(String trackNumber, Duration remainingTime)? dissalowed,
+    TResult Function(String trackNumber, TrackingLimiterError error)? error,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String trackNumber)? allowed,
     TResult Function(String trackNumber, Duration remainingTime)? dissalowed,
@@ -68,6 +76,13 @@ mixin _$TrackingLimiterState {
     required TResult Function(TrackingLimiterStateAllowed value) allowed,
     required TResult Function(TrackingLimiterStateDissalowed value) dissalowed,
     required TResult Function(TrackingLimiterStateError value) error,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(TrackingLimiterStateAllowed value)? allowed,
+    TResult Function(TrackingLimiterStateDissalowed value)? dissalowed,
+    TResult Function(TrackingLimiterStateError value)? error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -196,6 +211,16 @@ class _$TrackingLimiterStateAllowed implements TrackingLimiterStateAllowed {
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(String trackNumber)? allowed,
+    TResult Function(String trackNumber, Duration remainingTime)? dissalowed,
+    TResult Function(String trackNumber, TrackingLimiterError error)? error,
+  }) {
+    return allowed?.call(trackNumber);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String trackNumber)? allowed,
     TResult Function(String trackNumber, Duration remainingTime)? dissalowed,
@@ -216,6 +241,16 @@ class _$TrackingLimiterStateAllowed implements TrackingLimiterStateAllowed {
     required TResult Function(TrackingLimiterStateError value) error,
   }) {
     return allowed(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(TrackingLimiterStateAllowed value)? allowed,
+    TResult Function(TrackingLimiterStateDissalowed value)? dissalowed,
+    TResult Function(TrackingLimiterStateError value)? error,
+  }) {
+    return allowed?.call(this);
   }
 
   @override
@@ -342,6 +377,16 @@ class _$TrackingLimiterStateDissalowed
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(String trackNumber)? allowed,
+    TResult Function(String trackNumber, Duration remainingTime)? dissalowed,
+    TResult Function(String trackNumber, TrackingLimiterError error)? error,
+  }) {
+    return dissalowed?.call(trackNumber, remainingTime);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String trackNumber)? allowed,
     TResult Function(String trackNumber, Duration remainingTime)? dissalowed,
@@ -362,6 +407,16 @@ class _$TrackingLimiterStateDissalowed
     required TResult Function(TrackingLimiterStateError value) error,
   }) {
     return dissalowed(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(TrackingLimiterStateAllowed value)? allowed,
+    TResult Function(TrackingLimiterStateDissalowed value)? dissalowed,
+    TResult Function(TrackingLimiterStateError value)? error,
+  }) {
+    return dissalowed?.call(this);
   }
 
   @override
@@ -495,6 +550,16 @@ class _$TrackingLimiterStateError implements TrackingLimiterStateError {
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(String trackNumber)? allowed,
+    TResult Function(String trackNumber, Duration remainingTime)? dissalowed,
+    TResult Function(String trackNumber, TrackingLimiterError error)? error,
+  }) {
+    return error?.call(trackNumber, this.error);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String trackNumber)? allowed,
     TResult Function(String trackNumber, Duration remainingTime)? dissalowed,
@@ -515,6 +580,16 @@ class _$TrackingLimiterStateError implements TrackingLimiterStateError {
     required TResult Function(TrackingLimiterStateError value) error,
   }) {
     return error(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(TrackingLimiterStateAllowed value)? allowed,
+    TResult Function(TrackingLimiterStateDissalowed value)? dissalowed,
+    TResult Function(TrackingLimiterStateError value)? error,
+  }) {
+    return error?.call(this);
   }
 
   @override
@@ -570,6 +645,11 @@ mixin _$TrackingLimiterError {
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(StorageError error)? storage,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(StorageError error)? storage,
     required TResult orElse(),
@@ -578,6 +658,11 @@ mixin _$TrackingLimiterError {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(TrackingLimiterErrorStorage value) storage,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(TrackingLimiterErrorStorage value)? storage,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -711,6 +796,14 @@ class _$TrackingLimiterErrorStorage implements TrackingLimiterErrorStorage {
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(StorageError error)? storage,
+  }) {
+    return storage?.call(error);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(StorageError error)? storage,
     required TResult orElse(),
@@ -727,6 +820,14 @@ class _$TrackingLimiterErrorStorage implements TrackingLimiterErrorStorage {
     required TResult Function(TrackingLimiterErrorStorage value) storage,
   }) {
     return storage(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(TrackingLimiterErrorStorage value)? storage,
+  }) {
+    return storage?.call(this);
   }
 
   @override

@@ -1,5 +1,6 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'model.dart';
 
@@ -13,7 +14,7 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 ParcelsSort _$ParcelsSortFromJson(Map<String, dynamic> json) {
-  switch (json['runtimeType'] as String) {
+  switch (json['runtimeType'] as String?) {
     case 'alphabetically':
       return ParcelsSortAlphabetically.fromJson(json);
     case 'activityDate':
@@ -22,7 +23,8 @@ ParcelsSort _$ParcelsSortFromJson(Map<String, dynamic> json) {
       return ParcelsSortDateAdded.fromJson(json);
 
     default:
-      throw FallThroughError();
+      throw CheckedFromJsonException(json, 'runtimeType', 'ParcelsSort',
+          'Invalid union type "${json['runtimeType']}"!');
   }
 }
 
@@ -66,6 +68,13 @@ mixin _$ParcelsSort {
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(bool isDesc)? alphabetically,
+    TResult Function(bool oldestFirst)? activityDate,
+    TResult Function(bool oldestFirst)? dateAdded,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(bool isDesc)? alphabetically,
     TResult Function(bool oldestFirst)? activityDate,
@@ -78,6 +87,13 @@ mixin _$ParcelsSort {
     required TResult Function(ParcelsSortAlphabetically value) alphabetically,
     required TResult Function(ParcelsSortActivityDate value) activityDate,
     required TResult Function(ParcelsSortDateAdded value) dateAdded,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(ParcelsSortAlphabetically value)? alphabetically,
+    TResult Function(ParcelsSortActivityDate value)? activityDate,
+    TResult Function(ParcelsSortDateAdded value)? dateAdded,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -146,7 +162,7 @@ class _$ParcelsSortAlphabetically implements ParcelsSortAlphabetically {
   const _$ParcelsSortAlphabetically({this.isDesc = false});
 
   factory _$ParcelsSortAlphabetically.fromJson(Map<String, dynamic> json) =>
-      _$_$ParcelsSortAlphabeticallyFromJson(json);
+      _$$ParcelsSortAlphabeticallyFromJson(json);
 
   @JsonKey(defaultValue: false)
   @override
@@ -187,6 +203,16 @@ class _$ParcelsSortAlphabetically implements ParcelsSortAlphabetically {
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(bool isDesc)? alphabetically,
+    TResult Function(bool oldestFirst)? activityDate,
+    TResult Function(bool oldestFirst)? dateAdded,
+  }) {
+    return alphabetically?.call(isDesc);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(bool isDesc)? alphabetically,
     TResult Function(bool oldestFirst)? activityDate,
@@ -211,6 +237,16 @@ class _$ParcelsSortAlphabetically implements ParcelsSortAlphabetically {
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(ParcelsSortAlphabetically value)? alphabetically,
+    TResult Function(ParcelsSortActivityDate value)? activityDate,
+    TResult Function(ParcelsSortDateAdded value)? dateAdded,
+  }) {
+    return alphabetically?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(ParcelsSortAlphabetically value)? alphabetically,
     TResult Function(ParcelsSortActivityDate value)? activityDate,
@@ -225,7 +261,7 @@ class _$ParcelsSortAlphabetically implements ParcelsSortAlphabetically {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$ParcelsSortAlphabeticallyToJson(this)
+    return _$$ParcelsSortAlphabeticallyToJson(this)
       ..['runtimeType'] = 'alphabetically';
   }
 }
@@ -281,7 +317,7 @@ class _$ParcelsSortActivityDate implements ParcelsSortActivityDate {
   const _$ParcelsSortActivityDate({this.oldestFirst = false});
 
   factory _$ParcelsSortActivityDate.fromJson(Map<String, dynamic> json) =>
-      _$_$ParcelsSortActivityDateFromJson(json);
+      _$$ParcelsSortActivityDateFromJson(json);
 
   @JsonKey(defaultValue: false)
   @override
@@ -323,6 +359,16 @@ class _$ParcelsSortActivityDate implements ParcelsSortActivityDate {
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(bool isDesc)? alphabetically,
+    TResult Function(bool oldestFirst)? activityDate,
+    TResult Function(bool oldestFirst)? dateAdded,
+  }) {
+    return activityDate?.call(oldestFirst);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(bool isDesc)? alphabetically,
     TResult Function(bool oldestFirst)? activityDate,
@@ -347,6 +393,16 @@ class _$ParcelsSortActivityDate implements ParcelsSortActivityDate {
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(ParcelsSortAlphabetically value)? alphabetically,
+    TResult Function(ParcelsSortActivityDate value)? activityDate,
+    TResult Function(ParcelsSortDateAdded value)? dateAdded,
+  }) {
+    return activityDate?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(ParcelsSortAlphabetically value)? alphabetically,
     TResult Function(ParcelsSortActivityDate value)? activityDate,
@@ -361,7 +417,7 @@ class _$ParcelsSortActivityDate implements ParcelsSortActivityDate {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$ParcelsSortActivityDateToJson(this)
+    return _$$ParcelsSortActivityDateToJson(this)
       ..['runtimeType'] = 'activityDate';
   }
 }
@@ -417,7 +473,7 @@ class _$ParcelsSortDateAdded implements ParcelsSortDateAdded {
   const _$ParcelsSortDateAdded({this.oldestFirst = false});
 
   factory _$ParcelsSortDateAdded.fromJson(Map<String, dynamic> json) =>
-      _$_$ParcelsSortDateAddedFromJson(json);
+      _$$ParcelsSortDateAddedFromJson(json);
 
   @JsonKey(defaultValue: false)
   @override
@@ -459,6 +515,16 @@ class _$ParcelsSortDateAdded implements ParcelsSortDateAdded {
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(bool isDesc)? alphabetically,
+    TResult Function(bool oldestFirst)? activityDate,
+    TResult Function(bool oldestFirst)? dateAdded,
+  }) {
+    return dateAdded?.call(oldestFirst);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(bool isDesc)? alphabetically,
     TResult Function(bool oldestFirst)? activityDate,
@@ -483,6 +549,16 @@ class _$ParcelsSortDateAdded implements ParcelsSortDateAdded {
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(ParcelsSortAlphabetically value)? alphabetically,
+    TResult Function(ParcelsSortActivityDate value)? activityDate,
+    TResult Function(ParcelsSortDateAdded value)? dateAdded,
+  }) {
+    return dateAdded?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(ParcelsSortAlphabetically value)? alphabetically,
     TResult Function(ParcelsSortActivityDate value)? activityDate,
@@ -497,7 +573,7 @@ class _$ParcelsSortDateAdded implements ParcelsSortDateAdded {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$ParcelsSortDateAddedToJson(this)..['runtimeType'] = 'dateAdded';
+    return _$$ParcelsSortDateAddedToJson(this)..['runtimeType'] = 'dateAdded';
   }
 }
 
@@ -515,7 +591,7 @@ abstract class ParcelsSortDateAdded implements ParcelsSort {
 }
 
 ParcelsFilter _$ParcelsFilterFromJson(Map<String, dynamic> json) {
-  switch (json['runtimeType'] as String) {
+  switch (json['runtimeType'] as String?) {
     case 'search':
       return ParcelsFilterSearch.fromJson(json);
     case 'active':
@@ -532,7 +608,8 @@ ParcelsFilter _$ParcelsFilterFromJson(Map<String, dynamic> json) {
       return ParcelsFilterPostalService.fromJson(json);
 
     default:
-      throw FallThroughError();
+      throw CheckedFromJsonException(json, 'runtimeType', 'ParcelsFilter',
+          'Invalid union type "${json['runtimeType']}"!');
   }
 }
 
@@ -596,6 +673,17 @@ mixin _$ParcelsFilter {
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(String? query)? search,
+    TResult Function()? active,
+    TResult Function()? archive,
+    TResult Function(ShipmentStatusType? statusType)? status,
+    TResult Function()? newInfo,
+    TResult Function()? error,
+    TResult Function(PostalServiceType? serviceType)? postalService,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String? query)? search,
     TResult Function()? active,
@@ -616,6 +704,17 @@ mixin _$ParcelsFilter {
     required TResult Function(ParcelsFilterNewInfo value) newInfo,
     required TResult Function(ParcelsFilterError value) error,
     required TResult Function(ParcelsFilterPostalService value) postalService,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(ParcelsFilterSearch value)? search,
+    TResult Function(ParcelsFilterActive value)? active,
+    TResult Function(ParcelsFilterArchive value)? archive,
+    TResult Function(ParcelsFilterStatus value)? status,
+    TResult Function(ParcelsFilterNewInfo value)? newInfo,
+    TResult Function(ParcelsFilterError value)? error,
+    TResult Function(ParcelsFilterPostalService value)? postalService,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -688,7 +787,7 @@ class _$ParcelsFilterSearch implements ParcelsFilterSearch {
   const _$ParcelsFilterSearch({this.query});
 
   factory _$ParcelsFilterSearch.fromJson(Map<String, dynamic> json) =>
-      _$_$ParcelsFilterSearchFromJson(json);
+      _$$ParcelsFilterSearchFromJson(json);
 
   @override
   final String? query;
@@ -731,6 +830,20 @@ class _$ParcelsFilterSearch implements ParcelsFilterSearch {
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(String? query)? search,
+    TResult Function()? active,
+    TResult Function()? archive,
+    TResult Function(ShipmentStatusType? statusType)? status,
+    TResult Function()? newInfo,
+    TResult Function()? error,
+    TResult Function(PostalServiceType? serviceType)? postalService,
+  }) {
+    return search?.call(query);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String? query)? search,
     TResult Function()? active,
@@ -763,6 +876,20 @@ class _$ParcelsFilterSearch implements ParcelsFilterSearch {
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(ParcelsFilterSearch value)? search,
+    TResult Function(ParcelsFilterActive value)? active,
+    TResult Function(ParcelsFilterArchive value)? archive,
+    TResult Function(ParcelsFilterStatus value)? status,
+    TResult Function(ParcelsFilterNewInfo value)? newInfo,
+    TResult Function(ParcelsFilterError value)? error,
+    TResult Function(ParcelsFilterPostalService value)? postalService,
+  }) {
+    return search?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(ParcelsFilterSearch value)? search,
     TResult Function(ParcelsFilterActive value)? active,
@@ -781,7 +908,7 @@ class _$ParcelsFilterSearch implements ParcelsFilterSearch {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$ParcelsFilterSearchToJson(this)..['runtimeType'] = 'search';
+    return _$$ParcelsFilterSearchToJson(this)..['runtimeType'] = 'search';
   }
 }
 
@@ -822,7 +949,7 @@ class _$ParcelsFilterActive implements ParcelsFilterActive {
   const _$ParcelsFilterActive();
 
   factory _$ParcelsFilterActive.fromJson(Map<String, dynamic> json) =>
-      _$_$ParcelsFilterActiveFromJson(json);
+      _$$ParcelsFilterActiveFromJson(json);
 
   @override
   String toString() {
@@ -849,6 +976,20 @@ class _$ParcelsFilterActive implements ParcelsFilterActive {
     required TResult Function(PostalServiceType? serviceType) postalService,
   }) {
     return active();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(String? query)? search,
+    TResult Function()? active,
+    TResult Function()? archive,
+    TResult Function(ShipmentStatusType? statusType)? status,
+    TResult Function()? newInfo,
+    TResult Function()? error,
+    TResult Function(PostalServiceType? serviceType)? postalService,
+  }) {
+    return active?.call();
   }
 
   @override
@@ -885,6 +1026,20 @@ class _$ParcelsFilterActive implements ParcelsFilterActive {
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(ParcelsFilterSearch value)? search,
+    TResult Function(ParcelsFilterActive value)? active,
+    TResult Function(ParcelsFilterArchive value)? archive,
+    TResult Function(ParcelsFilterStatus value)? status,
+    TResult Function(ParcelsFilterNewInfo value)? newInfo,
+    TResult Function(ParcelsFilterError value)? error,
+    TResult Function(ParcelsFilterPostalService value)? postalService,
+  }) {
+    return active?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(ParcelsFilterSearch value)? search,
     TResult Function(ParcelsFilterActive value)? active,
@@ -903,7 +1058,7 @@ class _$ParcelsFilterActive implements ParcelsFilterActive {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$ParcelsFilterActiveToJson(this)..['runtimeType'] = 'active';
+    return _$$ParcelsFilterActiveToJson(this)..['runtimeType'] = 'active';
   }
 }
 
@@ -939,7 +1094,7 @@ class _$ParcelsFilterArchive implements ParcelsFilterArchive {
   const _$ParcelsFilterArchive();
 
   factory _$ParcelsFilterArchive.fromJson(Map<String, dynamic> json) =>
-      _$_$ParcelsFilterArchiveFromJson(json);
+      _$$ParcelsFilterArchiveFromJson(json);
 
   @override
   String toString() {
@@ -966,6 +1121,20 @@ class _$ParcelsFilterArchive implements ParcelsFilterArchive {
     required TResult Function(PostalServiceType? serviceType) postalService,
   }) {
     return archive();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(String? query)? search,
+    TResult Function()? active,
+    TResult Function()? archive,
+    TResult Function(ShipmentStatusType? statusType)? status,
+    TResult Function()? newInfo,
+    TResult Function()? error,
+    TResult Function(PostalServiceType? serviceType)? postalService,
+  }) {
+    return archive?.call();
   }
 
   @override
@@ -1002,6 +1171,20 @@ class _$ParcelsFilterArchive implements ParcelsFilterArchive {
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(ParcelsFilterSearch value)? search,
+    TResult Function(ParcelsFilterActive value)? active,
+    TResult Function(ParcelsFilterArchive value)? archive,
+    TResult Function(ParcelsFilterStatus value)? status,
+    TResult Function(ParcelsFilterNewInfo value)? newInfo,
+    TResult Function(ParcelsFilterError value)? error,
+    TResult Function(ParcelsFilterPostalService value)? postalService,
+  }) {
+    return archive?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(ParcelsFilterSearch value)? search,
     TResult Function(ParcelsFilterActive value)? active,
@@ -1020,7 +1203,7 @@ class _$ParcelsFilterArchive implements ParcelsFilterArchive {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$ParcelsFilterArchiveToJson(this)..['runtimeType'] = 'archive';
+    return _$$ParcelsFilterArchiveToJson(this)..['runtimeType'] = 'archive';
   }
 }
 
@@ -1069,7 +1252,7 @@ class _$ParcelsFilterStatus implements ParcelsFilterStatus {
   const _$ParcelsFilterStatus({this.statusType});
 
   factory _$ParcelsFilterStatus.fromJson(Map<String, dynamic> json) =>
-      _$_$ParcelsFilterStatusFromJson(json);
+      _$$ParcelsFilterStatusFromJson(json);
 
   @override
   final ShipmentStatusType? statusType;
@@ -1113,6 +1296,20 @@ class _$ParcelsFilterStatus implements ParcelsFilterStatus {
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(String? query)? search,
+    TResult Function()? active,
+    TResult Function()? archive,
+    TResult Function(ShipmentStatusType? statusType)? status,
+    TResult Function()? newInfo,
+    TResult Function()? error,
+    TResult Function(PostalServiceType? serviceType)? postalService,
+  }) {
+    return status?.call(statusType);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String? query)? search,
     TResult Function()? active,
@@ -1145,6 +1342,20 @@ class _$ParcelsFilterStatus implements ParcelsFilterStatus {
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(ParcelsFilterSearch value)? search,
+    TResult Function(ParcelsFilterActive value)? active,
+    TResult Function(ParcelsFilterArchive value)? archive,
+    TResult Function(ParcelsFilterStatus value)? status,
+    TResult Function(ParcelsFilterNewInfo value)? newInfo,
+    TResult Function(ParcelsFilterError value)? error,
+    TResult Function(ParcelsFilterPostalService value)? postalService,
+  }) {
+    return status?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(ParcelsFilterSearch value)? search,
     TResult Function(ParcelsFilterActive value)? active,
@@ -1163,7 +1374,7 @@ class _$ParcelsFilterStatus implements ParcelsFilterStatus {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$ParcelsFilterStatusToJson(this)..['runtimeType'] = 'status';
+    return _$$ParcelsFilterStatusToJson(this)..['runtimeType'] = 'status';
   }
 }
 
@@ -1205,7 +1416,7 @@ class _$ParcelsFilterNewInfo implements ParcelsFilterNewInfo {
   const _$ParcelsFilterNewInfo();
 
   factory _$ParcelsFilterNewInfo.fromJson(Map<String, dynamic> json) =>
-      _$_$ParcelsFilterNewInfoFromJson(json);
+      _$$ParcelsFilterNewInfoFromJson(json);
 
   @override
   String toString() {
@@ -1232,6 +1443,20 @@ class _$ParcelsFilterNewInfo implements ParcelsFilterNewInfo {
     required TResult Function(PostalServiceType? serviceType) postalService,
   }) {
     return newInfo();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(String? query)? search,
+    TResult Function()? active,
+    TResult Function()? archive,
+    TResult Function(ShipmentStatusType? statusType)? status,
+    TResult Function()? newInfo,
+    TResult Function()? error,
+    TResult Function(PostalServiceType? serviceType)? postalService,
+  }) {
+    return newInfo?.call();
   }
 
   @override
@@ -1268,6 +1493,20 @@ class _$ParcelsFilterNewInfo implements ParcelsFilterNewInfo {
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(ParcelsFilterSearch value)? search,
+    TResult Function(ParcelsFilterActive value)? active,
+    TResult Function(ParcelsFilterArchive value)? archive,
+    TResult Function(ParcelsFilterStatus value)? status,
+    TResult Function(ParcelsFilterNewInfo value)? newInfo,
+    TResult Function(ParcelsFilterError value)? error,
+    TResult Function(ParcelsFilterPostalService value)? postalService,
+  }) {
+    return newInfo?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(ParcelsFilterSearch value)? search,
     TResult Function(ParcelsFilterActive value)? active,
@@ -1286,7 +1525,7 @@ class _$ParcelsFilterNewInfo implements ParcelsFilterNewInfo {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$ParcelsFilterNewInfoToJson(this)..['runtimeType'] = 'newInfo';
+    return _$$ParcelsFilterNewInfoToJson(this)..['runtimeType'] = 'newInfo';
   }
 }
 
@@ -1322,7 +1561,7 @@ class _$ParcelsFilterError implements ParcelsFilterError {
   const _$ParcelsFilterError();
 
   factory _$ParcelsFilterError.fromJson(Map<String, dynamic> json) =>
-      _$_$ParcelsFilterErrorFromJson(json);
+      _$$ParcelsFilterErrorFromJson(json);
 
   @override
   String toString() {
@@ -1349,6 +1588,20 @@ class _$ParcelsFilterError implements ParcelsFilterError {
     required TResult Function(PostalServiceType? serviceType) postalService,
   }) {
     return error();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(String? query)? search,
+    TResult Function()? active,
+    TResult Function()? archive,
+    TResult Function(ShipmentStatusType? statusType)? status,
+    TResult Function()? newInfo,
+    TResult Function()? error,
+    TResult Function(PostalServiceType? serviceType)? postalService,
+  }) {
+    return error?.call();
   }
 
   @override
@@ -1385,6 +1638,20 @@ class _$ParcelsFilterError implements ParcelsFilterError {
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(ParcelsFilterSearch value)? search,
+    TResult Function(ParcelsFilterActive value)? active,
+    TResult Function(ParcelsFilterArchive value)? archive,
+    TResult Function(ParcelsFilterStatus value)? status,
+    TResult Function(ParcelsFilterNewInfo value)? newInfo,
+    TResult Function(ParcelsFilterError value)? error,
+    TResult Function(ParcelsFilterPostalService value)? postalService,
+  }) {
+    return error?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(ParcelsFilterSearch value)? search,
     TResult Function(ParcelsFilterActive value)? active,
@@ -1403,7 +1670,7 @@ class _$ParcelsFilterError implements ParcelsFilterError {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$ParcelsFilterErrorToJson(this)..['runtimeType'] = 'error';
+    return _$$ParcelsFilterErrorToJson(this)..['runtimeType'] = 'error';
   }
 }
 
@@ -1453,7 +1720,7 @@ class _$ParcelsFilterPostalService implements ParcelsFilterPostalService {
   const _$ParcelsFilterPostalService({this.serviceType});
 
   factory _$ParcelsFilterPostalService.fromJson(Map<String, dynamic> json) =>
-      _$_$ParcelsFilterPostalServiceFromJson(json);
+      _$$ParcelsFilterPostalServiceFromJson(json);
 
   @override
   final PostalServiceType? serviceType;
@@ -1499,6 +1766,20 @@ class _$ParcelsFilterPostalService implements ParcelsFilterPostalService {
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(String? query)? search,
+    TResult Function()? active,
+    TResult Function()? archive,
+    TResult Function(ShipmentStatusType? statusType)? status,
+    TResult Function()? newInfo,
+    TResult Function()? error,
+    TResult Function(PostalServiceType? serviceType)? postalService,
+  }) {
+    return postalService?.call(serviceType);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String? query)? search,
     TResult Function()? active,
@@ -1531,6 +1812,20 @@ class _$ParcelsFilterPostalService implements ParcelsFilterPostalService {
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(ParcelsFilterSearch value)? search,
+    TResult Function(ParcelsFilterActive value)? active,
+    TResult Function(ParcelsFilterArchive value)? archive,
+    TResult Function(ParcelsFilterStatus value)? status,
+    TResult Function(ParcelsFilterNewInfo value)? newInfo,
+    TResult Function(ParcelsFilterError value)? error,
+    TResult Function(ParcelsFilterPostalService value)? postalService,
+  }) {
+    return postalService?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(ParcelsFilterSearch value)? search,
     TResult Function(ParcelsFilterActive value)? active,
@@ -1549,7 +1844,7 @@ class _$ParcelsFilterPostalService implements ParcelsFilterPostalService {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$ParcelsFilterPostalServiceToJson(this)
+    return _$$ParcelsFilterPostalServiceToJson(this)
       ..['runtimeType'] = 'postalService';
   }
 }
@@ -1568,7 +1863,7 @@ abstract class ParcelsFilterPostalService implements ParcelsFilter {
 }
 
 AppThemeType _$AppThemeTypeFromJson(Map<String, dynamic> json) {
-  switch (json['runtimeType'] as String) {
+  switch (json['runtimeType'] as String?) {
     case 'light':
       return AppThemeTypeLight.fromJson(json);
     case 'dark':
@@ -1577,7 +1872,8 @@ AppThemeType _$AppThemeTypeFromJson(Map<String, dynamic> json) {
       return AppThemeTypeSystem.fromJson(json);
 
     default:
-      throw FallThroughError();
+      throw CheckedFromJsonException(json, 'runtimeType', 'AppThemeType',
+          'Invalid union type "${json['runtimeType']}"!');
   }
 }
 
@@ -1615,6 +1911,13 @@ mixin _$AppThemeType {
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? light,
+    TResult Function()? dark,
+    TResult Function()? system,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? light,
     TResult Function()? dark,
@@ -1627,6 +1930,13 @@ mixin _$AppThemeType {
     required TResult Function(AppThemeTypeLight value) light,
     required TResult Function(AppThemeTypeDark value) dark,
     required TResult Function(AppThemeTypeSystem value) system,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(AppThemeTypeLight value)? light,
+    TResult Function(AppThemeTypeDark value)? dark,
+    TResult Function(AppThemeTypeSystem value)? system,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -1681,7 +1991,7 @@ class _$AppThemeTypeLight implements AppThemeTypeLight {
   const _$AppThemeTypeLight();
 
   factory _$AppThemeTypeLight.fromJson(Map<String, dynamic> json) =>
-      _$_$AppThemeTypeLightFromJson(json);
+      _$$AppThemeTypeLightFromJson(json);
 
   @override
   String toString() {
@@ -1704,6 +2014,16 @@ class _$AppThemeTypeLight implements AppThemeTypeLight {
     required TResult Function() system,
   }) {
     return light();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? light,
+    TResult Function()? dark,
+    TResult Function()? system,
+  }) {
+    return light?.call();
   }
 
   @override
@@ -1732,6 +2052,16 @@ class _$AppThemeTypeLight implements AppThemeTypeLight {
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(AppThemeTypeLight value)? light,
+    TResult Function(AppThemeTypeDark value)? dark,
+    TResult Function(AppThemeTypeSystem value)? system,
+  }) {
+    return light?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(AppThemeTypeLight value)? light,
     TResult Function(AppThemeTypeDark value)? dark,
@@ -1746,7 +2076,7 @@ class _$AppThemeTypeLight implements AppThemeTypeLight {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$AppThemeTypeLightToJson(this)..['runtimeType'] = 'light';
+    return _$$AppThemeTypeLightToJson(this)..['runtimeType'] = 'light';
   }
 }
 
@@ -1782,7 +2112,7 @@ class _$AppThemeTypeDark implements AppThemeTypeDark {
   const _$AppThemeTypeDark();
 
   factory _$AppThemeTypeDark.fromJson(Map<String, dynamic> json) =>
-      _$_$AppThemeTypeDarkFromJson(json);
+      _$$AppThemeTypeDarkFromJson(json);
 
   @override
   String toString() {
@@ -1805,6 +2135,16 @@ class _$AppThemeTypeDark implements AppThemeTypeDark {
     required TResult Function() system,
   }) {
     return dark();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? light,
+    TResult Function()? dark,
+    TResult Function()? system,
+  }) {
+    return dark?.call();
   }
 
   @override
@@ -1833,6 +2173,16 @@ class _$AppThemeTypeDark implements AppThemeTypeDark {
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(AppThemeTypeLight value)? light,
+    TResult Function(AppThemeTypeDark value)? dark,
+    TResult Function(AppThemeTypeSystem value)? system,
+  }) {
+    return dark?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(AppThemeTypeLight value)? light,
     TResult Function(AppThemeTypeDark value)? dark,
@@ -1847,7 +2197,7 @@ class _$AppThemeTypeDark implements AppThemeTypeDark {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$AppThemeTypeDarkToJson(this)..['runtimeType'] = 'dark';
+    return _$$AppThemeTypeDarkToJson(this)..['runtimeType'] = 'dark';
   }
 }
 
@@ -1883,7 +2233,7 @@ class _$AppThemeTypeSystem implements AppThemeTypeSystem {
   const _$AppThemeTypeSystem();
 
   factory _$AppThemeTypeSystem.fromJson(Map<String, dynamic> json) =>
-      _$_$AppThemeTypeSystemFromJson(json);
+      _$$AppThemeTypeSystemFromJson(json);
 
   @override
   String toString() {
@@ -1906,6 +2256,16 @@ class _$AppThemeTypeSystem implements AppThemeTypeSystem {
     required TResult Function() system,
   }) {
     return system();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? light,
+    TResult Function()? dark,
+    TResult Function()? system,
+  }) {
+    return system?.call();
   }
 
   @override
@@ -1934,6 +2294,16 @@ class _$AppThemeTypeSystem implements AppThemeTypeSystem {
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(AppThemeTypeLight value)? light,
+    TResult Function(AppThemeTypeDark value)? dark,
+    TResult Function(AppThemeTypeSystem value)? system,
+  }) {
+    return system?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(AppThemeTypeLight value)? light,
     TResult Function(AppThemeTypeDark value)? dark,
@@ -1948,7 +2318,7 @@ class _$AppThemeTypeSystem implements AppThemeTypeSystem {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$AppThemeTypeSystemToJson(this)..['runtimeType'] = 'system';
+    return _$$AppThemeTypeSystemToJson(this)..['runtimeType'] = 'system';
   }
 }
 
@@ -1960,14 +2330,15 @@ abstract class AppThemeTypeSystem implements AppThemeType {
 }
 
 AppLocaleType _$AppLocaleTypeFromJson(Map<String, dynamic> json) {
-  switch (json['runtimeType'] as String) {
+  switch (json['runtimeType'] as String?) {
     case 'system':
       return AppLocaleTypeSystem.fromJson(json);
     case 'inner':
       return AppLocaleTypeInner.fromJson(json);
 
     default:
-      throw FallThroughError();
+      throw CheckedFromJsonException(json, 'runtimeType', 'AppLocaleType',
+          'Invalid union type "${json['runtimeType']}"!');
   }
 }
 
@@ -2002,6 +2373,12 @@ mixin _$AppLocaleType {
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? system,
+    TResult Function(Locale locale)? inner,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? system,
     TResult Function(Locale locale)? inner,
@@ -2012,6 +2389,12 @@ mixin _$AppLocaleType {
   TResult map<TResult extends Object?>({
     required TResult Function(AppLocaleTypeSystem value) system,
     required TResult Function(AppLocaleTypeInner value) inner,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(AppLocaleTypeSystem value)? system,
+    TResult Function(AppLocaleTypeInner value)? inner,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -2066,7 +2449,7 @@ class _$AppLocaleTypeSystem implements AppLocaleTypeSystem {
   const _$AppLocaleTypeSystem();
 
   factory _$AppLocaleTypeSystem.fromJson(Map<String, dynamic> json) =>
-      _$_$AppLocaleTypeSystemFromJson(json);
+      _$$AppLocaleTypeSystemFromJson(json);
 
   @override
   String toString() {
@@ -2088,6 +2471,15 @@ class _$AppLocaleTypeSystem implements AppLocaleTypeSystem {
     required TResult Function(Locale locale) inner,
   }) {
     return system();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? system,
+    TResult Function(Locale locale)? inner,
+  }) {
+    return system?.call();
   }
 
   @override
@@ -2114,6 +2506,15 @@ class _$AppLocaleTypeSystem implements AppLocaleTypeSystem {
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(AppLocaleTypeSystem value)? system,
+    TResult Function(AppLocaleTypeInner value)? inner,
+  }) {
+    return system?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(AppLocaleTypeSystem value)? system,
     TResult Function(AppLocaleTypeInner value)? inner,
@@ -2127,7 +2528,7 @@ class _$AppLocaleTypeSystem implements AppLocaleTypeSystem {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$AppLocaleTypeSystemToJson(this)..['runtimeType'] = 'system';
+    return _$$AppLocaleTypeSystemToJson(this)..['runtimeType'] = 'system';
   }
 }
 
@@ -2185,7 +2586,7 @@ class _$AppLocaleTypeInner implements AppLocaleTypeInner {
   const _$AppLocaleTypeInner({required this.locale});
 
   factory _$AppLocaleTypeInner.fromJson(Map<String, dynamic> json) =>
-      _$_$AppLocaleTypeInnerFromJson(json);
+      _$$AppLocaleTypeInnerFromJson(json);
 
   @override
   final Locale locale;
@@ -2223,6 +2624,15 @@ class _$AppLocaleTypeInner implements AppLocaleTypeInner {
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? system,
+    TResult Function(Locale locale)? inner,
+  }) {
+    return inner?.call(locale);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? system,
     TResult Function(Locale locale)? inner,
@@ -2245,6 +2655,15 @@ class _$AppLocaleTypeInner implements AppLocaleTypeInner {
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(AppLocaleTypeSystem value)? system,
+    TResult Function(AppLocaleTypeInner value)? inner,
+  }) {
+    return inner?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(AppLocaleTypeSystem value)? system,
     TResult Function(AppLocaleTypeInner value)? inner,
@@ -2258,7 +2677,7 @@ class _$AppLocaleTypeInner implements AppLocaleTypeInner {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$AppLocaleTypeInnerToJson(this)..['runtimeType'] = 'inner';
+    return _$$AppLocaleTypeInnerToJson(this)..['runtimeType'] = 'inner';
   }
 }
 
@@ -2276,7 +2695,7 @@ abstract class AppLocaleTypeInner implements AppLocaleType {
 }
 
 TrackingFreqLimit _$TrackingFreqLimitFromJson(Map<String, dynamic> json) {
-  switch (json['runtimeType'] as String) {
+  switch (json['runtimeType'] as String?) {
     case 'fifteenMin':
       return TrackingFreqLimitFifteenMin.fromJson(json);
     case 'thirtyMin':
@@ -2287,7 +2706,8 @@ TrackingFreqLimit _$TrackingFreqLimitFromJson(Map<String, dynamic> json) {
       return TrackingFreqLimitOneHour.fromJson(json);
 
     default:
-      throw FallThroughError();
+      throw CheckedFromJsonException(json, 'runtimeType', 'TrackingFreqLimit',
+          'Invalid union type "${json['runtimeType']}"!');
   }
 }
 
@@ -2330,6 +2750,14 @@ mixin _$TrackingFreqLimit {
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? fifteenMin,
+    TResult Function()? thirtyMin,
+    TResult Function()? fortyFiveMin,
+    TResult Function()? oneHour,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? fifteenMin,
     TResult Function()? thirtyMin,
@@ -2344,6 +2772,14 @@ mixin _$TrackingFreqLimit {
     required TResult Function(TrackingFreqLimitThirtyMin value) thirtyMin,
     required TResult Function(TrackingFreqLimitFortyFiveMin value) fortyFiveMin,
     required TResult Function(TrackingFreqLimitOneHour value) oneHour,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(TrackingFreqLimitFifteenMin value)? fifteenMin,
+    TResult Function(TrackingFreqLimitThirtyMin value)? thirtyMin,
+    TResult Function(TrackingFreqLimitFortyFiveMin value)? fortyFiveMin,
+    TResult Function(TrackingFreqLimitOneHour value)? oneHour,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -2402,7 +2838,7 @@ class _$TrackingFreqLimitFifteenMin implements TrackingFreqLimitFifteenMin {
   const _$TrackingFreqLimitFifteenMin();
 
   factory _$TrackingFreqLimitFifteenMin.fromJson(Map<String, dynamic> json) =>
-      _$_$TrackingFreqLimitFifteenMinFromJson(json);
+      _$$TrackingFreqLimitFifteenMinFromJson(json);
 
   @override
   String toString() {
@@ -2426,6 +2862,17 @@ class _$TrackingFreqLimitFifteenMin implements TrackingFreqLimitFifteenMin {
     required TResult Function() oneHour,
   }) {
     return fifteenMin();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? fifteenMin,
+    TResult Function()? thirtyMin,
+    TResult Function()? fortyFiveMin,
+    TResult Function()? oneHour,
+  }) {
+    return fifteenMin?.call();
   }
 
   @override
@@ -2456,6 +2903,17 @@ class _$TrackingFreqLimitFifteenMin implements TrackingFreqLimitFifteenMin {
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(TrackingFreqLimitFifteenMin value)? fifteenMin,
+    TResult Function(TrackingFreqLimitThirtyMin value)? thirtyMin,
+    TResult Function(TrackingFreqLimitFortyFiveMin value)? fortyFiveMin,
+    TResult Function(TrackingFreqLimitOneHour value)? oneHour,
+  }) {
+    return fifteenMin?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(TrackingFreqLimitFifteenMin value)? fifteenMin,
     TResult Function(TrackingFreqLimitThirtyMin value)? thirtyMin,
@@ -2471,7 +2929,7 @@ class _$TrackingFreqLimitFifteenMin implements TrackingFreqLimitFifteenMin {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$TrackingFreqLimitFifteenMinToJson(this)
+    return _$$TrackingFreqLimitFifteenMinToJson(this)
       ..['runtimeType'] = 'fifteenMin';
   }
 }
@@ -2509,7 +2967,7 @@ class _$TrackingFreqLimitThirtyMin implements TrackingFreqLimitThirtyMin {
   const _$TrackingFreqLimitThirtyMin();
 
   factory _$TrackingFreqLimitThirtyMin.fromJson(Map<String, dynamic> json) =>
-      _$_$TrackingFreqLimitThirtyMinFromJson(json);
+      _$$TrackingFreqLimitThirtyMinFromJson(json);
 
   @override
   String toString() {
@@ -2533,6 +2991,17 @@ class _$TrackingFreqLimitThirtyMin implements TrackingFreqLimitThirtyMin {
     required TResult Function() oneHour,
   }) {
     return thirtyMin();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? fifteenMin,
+    TResult Function()? thirtyMin,
+    TResult Function()? fortyFiveMin,
+    TResult Function()? oneHour,
+  }) {
+    return thirtyMin?.call();
   }
 
   @override
@@ -2563,6 +3032,17 @@ class _$TrackingFreqLimitThirtyMin implements TrackingFreqLimitThirtyMin {
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(TrackingFreqLimitFifteenMin value)? fifteenMin,
+    TResult Function(TrackingFreqLimitThirtyMin value)? thirtyMin,
+    TResult Function(TrackingFreqLimitFortyFiveMin value)? fortyFiveMin,
+    TResult Function(TrackingFreqLimitOneHour value)? oneHour,
+  }) {
+    return thirtyMin?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(TrackingFreqLimitFifteenMin value)? fifteenMin,
     TResult Function(TrackingFreqLimitThirtyMin value)? thirtyMin,
@@ -2578,7 +3058,7 @@ class _$TrackingFreqLimitThirtyMin implements TrackingFreqLimitThirtyMin {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$TrackingFreqLimitThirtyMinToJson(this)
+    return _$$TrackingFreqLimitThirtyMinToJson(this)
       ..['runtimeType'] = 'thirtyMin';
   }
 }
@@ -2618,7 +3098,7 @@ class _$TrackingFreqLimitFortyFiveMin implements TrackingFreqLimitFortyFiveMin {
   const _$TrackingFreqLimitFortyFiveMin();
 
   factory _$TrackingFreqLimitFortyFiveMin.fromJson(Map<String, dynamic> json) =>
-      _$_$TrackingFreqLimitFortyFiveMinFromJson(json);
+      _$$TrackingFreqLimitFortyFiveMinFromJson(json);
 
   @override
   String toString() {
@@ -2642,6 +3122,17 @@ class _$TrackingFreqLimitFortyFiveMin implements TrackingFreqLimitFortyFiveMin {
     required TResult Function() oneHour,
   }) {
     return fortyFiveMin();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? fifteenMin,
+    TResult Function()? thirtyMin,
+    TResult Function()? fortyFiveMin,
+    TResult Function()? oneHour,
+  }) {
+    return fortyFiveMin?.call();
   }
 
   @override
@@ -2672,6 +3163,17 @@ class _$TrackingFreqLimitFortyFiveMin implements TrackingFreqLimitFortyFiveMin {
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(TrackingFreqLimitFifteenMin value)? fifteenMin,
+    TResult Function(TrackingFreqLimitThirtyMin value)? thirtyMin,
+    TResult Function(TrackingFreqLimitFortyFiveMin value)? fortyFiveMin,
+    TResult Function(TrackingFreqLimitOneHour value)? oneHour,
+  }) {
+    return fortyFiveMin?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(TrackingFreqLimitFifteenMin value)? fifteenMin,
     TResult Function(TrackingFreqLimitThirtyMin value)? thirtyMin,
@@ -2687,7 +3189,7 @@ class _$TrackingFreqLimitFortyFiveMin implements TrackingFreqLimitFortyFiveMin {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$TrackingFreqLimitFortyFiveMinToJson(this)
+    return _$$TrackingFreqLimitFortyFiveMinToJson(this)
       ..['runtimeType'] = 'fortyFiveMin';
   }
 }
@@ -2726,7 +3228,7 @@ class _$TrackingFreqLimitOneHour implements TrackingFreqLimitOneHour {
   const _$TrackingFreqLimitOneHour();
 
   factory _$TrackingFreqLimitOneHour.fromJson(Map<String, dynamic> json) =>
-      _$_$TrackingFreqLimitOneHourFromJson(json);
+      _$$TrackingFreqLimitOneHourFromJson(json);
 
   @override
   String toString() {
@@ -2750,6 +3252,17 @@ class _$TrackingFreqLimitOneHour implements TrackingFreqLimitOneHour {
     required TResult Function() oneHour,
   }) {
     return oneHour();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? fifteenMin,
+    TResult Function()? thirtyMin,
+    TResult Function()? fortyFiveMin,
+    TResult Function()? oneHour,
+  }) {
+    return oneHour?.call();
   }
 
   @override
@@ -2780,6 +3293,17 @@ class _$TrackingFreqLimitOneHour implements TrackingFreqLimitOneHour {
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(TrackingFreqLimitFifteenMin value)? fifteenMin,
+    TResult Function(TrackingFreqLimitThirtyMin value)? thirtyMin,
+    TResult Function(TrackingFreqLimitFortyFiveMin value)? fortyFiveMin,
+    TResult Function(TrackingFreqLimitOneHour value)? oneHour,
+  }) {
+    return oneHour?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(TrackingFreqLimitFifteenMin value)? fifteenMin,
     TResult Function(TrackingFreqLimitThirtyMin value)? thirtyMin,
@@ -2795,8 +3319,7 @@ class _$TrackingFreqLimitOneHour implements TrackingFreqLimitOneHour {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$TrackingFreqLimitOneHourToJson(this)
-      ..['runtimeType'] = 'oneHour';
+    return _$$TrackingFreqLimitOneHourToJson(this)..['runtimeType'] = 'oneHour';
   }
 }
 
@@ -2808,7 +3331,7 @@ abstract class TrackingFreqLimitOneHour implements TrackingFreqLimit {
 }
 
 AutoTrackingFreq _$AutoTrackingFreqFromJson(Map<String, dynamic> json) {
-  switch (json['runtimeType'] as String) {
+  switch (json['runtimeType'] as String?) {
     case 'sixHours':
       return AutoTrackingFreqSixHours.fromJson(json);
     case 'twelveHours':
@@ -2821,7 +3344,8 @@ AutoTrackingFreq _$AutoTrackingFreqFromJson(Map<String, dynamic> json) {
       return AutoTrackingFreqOneWeek.fromJson(json);
 
     default:
-      throw FallThroughError();
+      throw CheckedFromJsonException(json, 'runtimeType', 'AutoTrackingFreq',
+          'Invalid union type "${json['runtimeType']}"!');
   }
 }
 
@@ -2869,6 +3393,15 @@ mixin _$AutoTrackingFreq {
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? sixHours,
+    TResult Function()? twelveHours,
+    TResult Function()? oneDay,
+    TResult Function()? threeDays,
+    TResult Function()? oneWeek,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? sixHours,
     TResult Function()? twelveHours,
@@ -2885,6 +3418,15 @@ mixin _$AutoTrackingFreq {
     required TResult Function(AutoTrackingFreqOneDay value) oneDay,
     required TResult Function(AutoTrackingFreqThreeDays value) threeDays,
     required TResult Function(AutoTrackingFreqOneWeek value) oneWeek,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(AutoTrackingFreqSixHours value)? sixHours,
+    TResult Function(AutoTrackingFreqTwelveHours value)? twelveHours,
+    TResult Function(AutoTrackingFreqOneDay value)? oneDay,
+    TResult Function(AutoTrackingFreqThreeDays value)? threeDays,
+    TResult Function(AutoTrackingFreqOneWeek value)? oneWeek,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -2943,7 +3485,7 @@ class _$AutoTrackingFreqSixHours implements AutoTrackingFreqSixHours {
   const _$AutoTrackingFreqSixHours();
 
   factory _$AutoTrackingFreqSixHours.fromJson(Map<String, dynamic> json) =>
-      _$_$AutoTrackingFreqSixHoursFromJson(json);
+      _$$AutoTrackingFreqSixHoursFromJson(json);
 
   @override
   String toString() {
@@ -2968,6 +3510,18 @@ class _$AutoTrackingFreqSixHours implements AutoTrackingFreqSixHours {
     required TResult Function() oneWeek,
   }) {
     return sixHours();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? sixHours,
+    TResult Function()? twelveHours,
+    TResult Function()? oneDay,
+    TResult Function()? threeDays,
+    TResult Function()? oneWeek,
+  }) {
+    return sixHours?.call();
   }
 
   @override
@@ -3000,6 +3554,18 @@ class _$AutoTrackingFreqSixHours implements AutoTrackingFreqSixHours {
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(AutoTrackingFreqSixHours value)? sixHours,
+    TResult Function(AutoTrackingFreqTwelveHours value)? twelveHours,
+    TResult Function(AutoTrackingFreqOneDay value)? oneDay,
+    TResult Function(AutoTrackingFreqThreeDays value)? threeDays,
+    TResult Function(AutoTrackingFreqOneWeek value)? oneWeek,
+  }) {
+    return sixHours?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(AutoTrackingFreqSixHours value)? sixHours,
     TResult Function(AutoTrackingFreqTwelveHours value)? twelveHours,
@@ -3016,7 +3582,7 @@ class _$AutoTrackingFreqSixHours implements AutoTrackingFreqSixHours {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$AutoTrackingFreqSixHoursToJson(this)
+    return _$$AutoTrackingFreqSixHoursToJson(this)
       ..['runtimeType'] = 'sixHours';
   }
 }
@@ -3055,7 +3621,7 @@ class _$AutoTrackingFreqTwelveHours implements AutoTrackingFreqTwelveHours {
   const _$AutoTrackingFreqTwelveHours();
 
   factory _$AutoTrackingFreqTwelveHours.fromJson(Map<String, dynamic> json) =>
-      _$_$AutoTrackingFreqTwelveHoursFromJson(json);
+      _$$AutoTrackingFreqTwelveHoursFromJson(json);
 
   @override
   String toString() {
@@ -3080,6 +3646,18 @@ class _$AutoTrackingFreqTwelveHours implements AutoTrackingFreqTwelveHours {
     required TResult Function() oneWeek,
   }) {
     return twelveHours();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? sixHours,
+    TResult Function()? twelveHours,
+    TResult Function()? oneDay,
+    TResult Function()? threeDays,
+    TResult Function()? oneWeek,
+  }) {
+    return twelveHours?.call();
   }
 
   @override
@@ -3112,6 +3690,18 @@ class _$AutoTrackingFreqTwelveHours implements AutoTrackingFreqTwelveHours {
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(AutoTrackingFreqSixHours value)? sixHours,
+    TResult Function(AutoTrackingFreqTwelveHours value)? twelveHours,
+    TResult Function(AutoTrackingFreqOneDay value)? oneDay,
+    TResult Function(AutoTrackingFreqThreeDays value)? threeDays,
+    TResult Function(AutoTrackingFreqOneWeek value)? oneWeek,
+  }) {
+    return twelveHours?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(AutoTrackingFreqSixHours value)? sixHours,
     TResult Function(AutoTrackingFreqTwelveHours value)? twelveHours,
@@ -3128,7 +3718,7 @@ class _$AutoTrackingFreqTwelveHours implements AutoTrackingFreqTwelveHours {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$AutoTrackingFreqTwelveHoursToJson(this)
+    return _$$AutoTrackingFreqTwelveHoursToJson(this)
       ..['runtimeType'] = 'twelveHours';
   }
 }
@@ -3165,7 +3755,7 @@ class _$AutoTrackingFreqOneDay implements AutoTrackingFreqOneDay {
   const _$AutoTrackingFreqOneDay();
 
   factory _$AutoTrackingFreqOneDay.fromJson(Map<String, dynamic> json) =>
-      _$_$AutoTrackingFreqOneDayFromJson(json);
+      _$$AutoTrackingFreqOneDayFromJson(json);
 
   @override
   String toString() {
@@ -3190,6 +3780,18 @@ class _$AutoTrackingFreqOneDay implements AutoTrackingFreqOneDay {
     required TResult Function() oneWeek,
   }) {
     return oneDay();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? sixHours,
+    TResult Function()? twelveHours,
+    TResult Function()? oneDay,
+    TResult Function()? threeDays,
+    TResult Function()? oneWeek,
+  }) {
+    return oneDay?.call();
   }
 
   @override
@@ -3222,6 +3824,18 @@ class _$AutoTrackingFreqOneDay implements AutoTrackingFreqOneDay {
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(AutoTrackingFreqSixHours value)? sixHours,
+    TResult Function(AutoTrackingFreqTwelveHours value)? twelveHours,
+    TResult Function(AutoTrackingFreqOneDay value)? oneDay,
+    TResult Function(AutoTrackingFreqThreeDays value)? threeDays,
+    TResult Function(AutoTrackingFreqOneWeek value)? oneWeek,
+  }) {
+    return oneDay?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(AutoTrackingFreqSixHours value)? sixHours,
     TResult Function(AutoTrackingFreqTwelveHours value)? twelveHours,
@@ -3238,7 +3852,7 @@ class _$AutoTrackingFreqOneDay implements AutoTrackingFreqOneDay {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$AutoTrackingFreqOneDayToJson(this)..['runtimeType'] = 'oneDay';
+    return _$$AutoTrackingFreqOneDayToJson(this)..['runtimeType'] = 'oneDay';
   }
 }
 
@@ -3275,7 +3889,7 @@ class _$AutoTrackingFreqThreeDays implements AutoTrackingFreqThreeDays {
   const _$AutoTrackingFreqThreeDays();
 
   factory _$AutoTrackingFreqThreeDays.fromJson(Map<String, dynamic> json) =>
-      _$_$AutoTrackingFreqThreeDaysFromJson(json);
+      _$$AutoTrackingFreqThreeDaysFromJson(json);
 
   @override
   String toString() {
@@ -3300,6 +3914,18 @@ class _$AutoTrackingFreqThreeDays implements AutoTrackingFreqThreeDays {
     required TResult Function() oneWeek,
   }) {
     return threeDays();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? sixHours,
+    TResult Function()? twelveHours,
+    TResult Function()? oneDay,
+    TResult Function()? threeDays,
+    TResult Function()? oneWeek,
+  }) {
+    return threeDays?.call();
   }
 
   @override
@@ -3332,6 +3958,18 @@ class _$AutoTrackingFreqThreeDays implements AutoTrackingFreqThreeDays {
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(AutoTrackingFreqSixHours value)? sixHours,
+    TResult Function(AutoTrackingFreqTwelveHours value)? twelveHours,
+    TResult Function(AutoTrackingFreqOneDay value)? oneDay,
+    TResult Function(AutoTrackingFreqThreeDays value)? threeDays,
+    TResult Function(AutoTrackingFreqOneWeek value)? oneWeek,
+  }) {
+    return threeDays?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(AutoTrackingFreqSixHours value)? sixHours,
     TResult Function(AutoTrackingFreqTwelveHours value)? twelveHours,
@@ -3348,7 +3986,7 @@ class _$AutoTrackingFreqThreeDays implements AutoTrackingFreqThreeDays {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$AutoTrackingFreqThreeDaysToJson(this)
+    return _$$AutoTrackingFreqThreeDaysToJson(this)
       ..['runtimeType'] = 'threeDays';
   }
 }
@@ -3385,7 +4023,7 @@ class _$AutoTrackingFreqOneWeek implements AutoTrackingFreqOneWeek {
   const _$AutoTrackingFreqOneWeek();
 
   factory _$AutoTrackingFreqOneWeek.fromJson(Map<String, dynamic> json) =>
-      _$_$AutoTrackingFreqOneWeekFromJson(json);
+      _$$AutoTrackingFreqOneWeekFromJson(json);
 
   @override
   String toString() {
@@ -3410,6 +4048,18 @@ class _$AutoTrackingFreqOneWeek implements AutoTrackingFreqOneWeek {
     required TResult Function() oneWeek,
   }) {
     return oneWeek();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? sixHours,
+    TResult Function()? twelveHours,
+    TResult Function()? oneDay,
+    TResult Function()? threeDays,
+    TResult Function()? oneWeek,
+  }) {
+    return oneWeek?.call();
   }
 
   @override
@@ -3442,6 +4092,18 @@ class _$AutoTrackingFreqOneWeek implements AutoTrackingFreqOneWeek {
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(AutoTrackingFreqSixHours value)? sixHours,
+    TResult Function(AutoTrackingFreqTwelveHours value)? twelveHours,
+    TResult Function(AutoTrackingFreqOneDay value)? oneDay,
+    TResult Function(AutoTrackingFreqThreeDays value)? threeDays,
+    TResult Function(AutoTrackingFreqOneWeek value)? oneWeek,
+  }) {
+    return oneWeek?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(AutoTrackingFreqSixHours value)? sixHours,
     TResult Function(AutoTrackingFreqTwelveHours value)? twelveHours,
@@ -3458,7 +4120,7 @@ class _$AutoTrackingFreqOneWeek implements AutoTrackingFreqOneWeek {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$AutoTrackingFreqOneWeekToJson(this)..['runtimeType'] = 'oneWeek';
+    return _$$AutoTrackingFreqOneWeekToJson(this)..['runtimeType'] = 'oneWeek';
   }
 }
 

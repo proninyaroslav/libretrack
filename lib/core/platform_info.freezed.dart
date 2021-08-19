@@ -1,5 +1,6 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'platform_info.dart';
 
@@ -334,6 +335,30 @@ mixin _$DeviceInfo {
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? unknown,
+    TResult Function(
+            String? systemVersion,
+            List<String?> supportedAbis,
+            String? brand,
+            String? device,
+            String? model,
+            String? hardware,
+            String? product)?
+        android,
+    TResult Function(String? deviceName, String? deviceModel,
+            String? systemName, String? systemVersion)?
+        iOS,
+    TResult Function(String osName, String kernelVersion, String? osVersion)?
+        linux,
+    TResult Function(String osVersion)? windows,
+    TResult Function(
+            String arch, String kernelVersion, String osVersion, String model)?
+        macOS,
+    TResult Function(String browserName, String? platform, String? vendor)? web,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? unknown,
     TResult Function(
@@ -367,6 +392,17 @@ mixin _$DeviceInfo {
     required TResult Function(WindowsDeviceInfo value) windows,
     required TResult Function(MacOSDeviceInfo value) macOS,
     required TResult Function(WebDeviceInfo value) web,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(UnknownDeviceInfo value)? unknown,
+    TResult Function(AndroidDeviceInfo value)? android,
+    TResult Function(IOSDeviceInfo value)? iOS,
+    TResult Function(LinuxDeviceInfo value)? linux,
+    TResult Function(WindowsDeviceInfo value)? windows,
+    TResult Function(MacOSDeviceInfo value)? macOS,
+    TResult Function(WebDeviceInfo value)? web,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -476,6 +512,33 @@ class _$UnknownDeviceInfo
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? unknown,
+    TResult Function(
+            String? systemVersion,
+            List<String?> supportedAbis,
+            String? brand,
+            String? device,
+            String? model,
+            String? hardware,
+            String? product)?
+        android,
+    TResult Function(String? deviceName, String? deviceModel,
+            String? systemName, String? systemVersion)?
+        iOS,
+    TResult Function(String osName, String kernelVersion, String? osVersion)?
+        linux,
+    TResult Function(String osVersion)? windows,
+    TResult Function(
+            String arch, String kernelVersion, String osVersion, String model)?
+        macOS,
+    TResult Function(String browserName, String? platform, String? vendor)? web,
+  }) {
+    return unknown?.call();
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? unknown,
     TResult Function(
@@ -517,6 +580,20 @@ class _$UnknownDeviceInfo
     required TResult Function(WebDeviceInfo value) web,
   }) {
     return unknown(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(UnknownDeviceInfo value)? unknown,
+    TResult Function(AndroidDeviceInfo value)? android,
+    TResult Function(IOSDeviceInfo value)? iOS,
+    TResult Function(LinuxDeviceInfo value)? linux,
+    TResult Function(WindowsDeviceInfo value)? windows,
+    TResult Function(MacOSDeviceInfo value)? macOS,
+    TResult Function(WebDeviceInfo value)? web,
+  }) {
+    return unknown?.call(this);
   }
 
   @override
@@ -745,6 +822,34 @@ class _$AndroidDeviceInfo
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? unknown,
+    TResult Function(
+            String? systemVersion,
+            List<String?> supportedAbis,
+            String? brand,
+            String? device,
+            String? model,
+            String? hardware,
+            String? product)?
+        android,
+    TResult Function(String? deviceName, String? deviceModel,
+            String? systemName, String? systemVersion)?
+        iOS,
+    TResult Function(String osName, String kernelVersion, String? osVersion)?
+        linux,
+    TResult Function(String osVersion)? windows,
+    TResult Function(
+            String arch, String kernelVersion, String osVersion, String model)?
+        macOS,
+    TResult Function(String browserName, String? platform, String? vendor)? web,
+  }) {
+    return android?.call(
+        systemVersion, supportedAbis, brand, device, model, hardware, product);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? unknown,
     TResult Function(
@@ -787,6 +892,20 @@ class _$AndroidDeviceInfo
     required TResult Function(WebDeviceInfo value) web,
   }) {
     return android(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(UnknownDeviceInfo value)? unknown,
+    TResult Function(AndroidDeviceInfo value)? android,
+    TResult Function(IOSDeviceInfo value)? iOS,
+    TResult Function(LinuxDeviceInfo value)? linux,
+    TResult Function(WindowsDeviceInfo value)? windows,
+    TResult Function(MacOSDeviceInfo value)? macOS,
+    TResult Function(WebDeviceInfo value)? web,
+  }) {
+    return android?.call(this);
   }
 
   @override
@@ -987,6 +1106,33 @@ class _$IOSDeviceInfo with DiagnosticableTreeMixin implements IOSDeviceInfo {
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? unknown,
+    TResult Function(
+            String? systemVersion,
+            List<String?> supportedAbis,
+            String? brand,
+            String? device,
+            String? model,
+            String? hardware,
+            String? product)?
+        android,
+    TResult Function(String? deviceName, String? deviceModel,
+            String? systemName, String? systemVersion)?
+        iOS,
+    TResult Function(String osName, String kernelVersion, String? osVersion)?
+        linux,
+    TResult Function(String osVersion)? windows,
+    TResult Function(
+            String arch, String kernelVersion, String osVersion, String model)?
+        macOS,
+    TResult Function(String browserName, String? platform, String? vendor)? web,
+  }) {
+    return iOS?.call(deviceName, deviceModel, systemName, systemVersion);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? unknown,
     TResult Function(
@@ -1028,6 +1174,20 @@ class _$IOSDeviceInfo with DiagnosticableTreeMixin implements IOSDeviceInfo {
     required TResult Function(WebDeviceInfo value) web,
   }) {
     return iOS(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(UnknownDeviceInfo value)? unknown,
+    TResult Function(AndroidDeviceInfo value)? android,
+    TResult Function(IOSDeviceInfo value)? iOS,
+    TResult Function(LinuxDeviceInfo value)? linux,
+    TResult Function(WindowsDeviceInfo value)? windows,
+    TResult Function(MacOSDeviceInfo value)? macOS,
+    TResult Function(WebDeviceInfo value)? web,
+  }) {
+    return iOS?.call(this);
   }
 
   @override
@@ -1194,6 +1354,33 @@ class _$LinuxDeviceInfo
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? unknown,
+    TResult Function(
+            String? systemVersion,
+            List<String?> supportedAbis,
+            String? brand,
+            String? device,
+            String? model,
+            String? hardware,
+            String? product)?
+        android,
+    TResult Function(String? deviceName, String? deviceModel,
+            String? systemName, String? systemVersion)?
+        iOS,
+    TResult Function(String osName, String kernelVersion, String? osVersion)?
+        linux,
+    TResult Function(String osVersion)? windows,
+    TResult Function(
+            String arch, String kernelVersion, String osVersion, String model)?
+        macOS,
+    TResult Function(String browserName, String? platform, String? vendor)? web,
+  }) {
+    return linux?.call(osName, kernelVersion, osVersion);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? unknown,
     TResult Function(
@@ -1235,6 +1422,20 @@ class _$LinuxDeviceInfo
     required TResult Function(WebDeviceInfo value) web,
   }) {
     return linux(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(UnknownDeviceInfo value)? unknown,
+    TResult Function(AndroidDeviceInfo value)? android,
+    TResult Function(IOSDeviceInfo value)? iOS,
+    TResult Function(LinuxDeviceInfo value)? linux,
+    TResult Function(WindowsDeviceInfo value)? windows,
+    TResult Function(MacOSDeviceInfo value)? macOS,
+    TResult Function(WebDeviceInfo value)? web,
+  }) {
+    return linux?.call(this);
   }
 
   @override
@@ -1375,6 +1576,33 @@ class _$WindowsDeviceInfo
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? unknown,
+    TResult Function(
+            String? systemVersion,
+            List<String?> supportedAbis,
+            String? brand,
+            String? device,
+            String? model,
+            String? hardware,
+            String? product)?
+        android,
+    TResult Function(String? deviceName, String? deviceModel,
+            String? systemName, String? systemVersion)?
+        iOS,
+    TResult Function(String osName, String kernelVersion, String? osVersion)?
+        linux,
+    TResult Function(String osVersion)? windows,
+    TResult Function(
+            String arch, String kernelVersion, String osVersion, String model)?
+        macOS,
+    TResult Function(String browserName, String? platform, String? vendor)? web,
+  }) {
+    return windows?.call(osVersion);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? unknown,
     TResult Function(
@@ -1416,6 +1644,20 @@ class _$WindowsDeviceInfo
     required TResult Function(WebDeviceInfo value) web,
   }) {
     return windows(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(UnknownDeviceInfo value)? unknown,
+    TResult Function(AndroidDeviceInfo value)? android,
+    TResult Function(IOSDeviceInfo value)? iOS,
+    TResult Function(LinuxDeviceInfo value)? linux,
+    TResult Function(WindowsDeviceInfo value)? windows,
+    TResult Function(MacOSDeviceInfo value)? macOS,
+    TResult Function(WebDeviceInfo value)? web,
+  }) {
+    return windows?.call(this);
   }
 
   @override
@@ -1591,6 +1833,33 @@ class _$MacOSDeviceInfo
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? unknown,
+    TResult Function(
+            String? systemVersion,
+            List<String?> supportedAbis,
+            String? brand,
+            String? device,
+            String? model,
+            String? hardware,
+            String? product)?
+        android,
+    TResult Function(String? deviceName, String? deviceModel,
+            String? systemName, String? systemVersion)?
+        iOS,
+    TResult Function(String osName, String kernelVersion, String? osVersion)?
+        linux,
+    TResult Function(String osVersion)? windows,
+    TResult Function(
+            String arch, String kernelVersion, String osVersion, String model)?
+        macOS,
+    TResult Function(String browserName, String? platform, String? vendor)? web,
+  }) {
+    return macOS?.call(arch, kernelVersion, osVersion, model);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? unknown,
     TResult Function(
@@ -1632,6 +1901,20 @@ class _$MacOSDeviceInfo
     required TResult Function(WebDeviceInfo value) web,
   }) {
     return macOS(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(UnknownDeviceInfo value)? unknown,
+    TResult Function(AndroidDeviceInfo value)? android,
+    TResult Function(IOSDeviceInfo value)? iOS,
+    TResult Function(LinuxDeviceInfo value)? linux,
+    TResult Function(WindowsDeviceInfo value)? windows,
+    TResult Function(MacOSDeviceInfo value)? macOS,
+    TResult Function(WebDeviceInfo value)? web,
+  }) {
+    return macOS?.call(this);
   }
 
   @override
@@ -1800,6 +2083,33 @@ class _$WebDeviceInfo with DiagnosticableTreeMixin implements WebDeviceInfo {
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? unknown,
+    TResult Function(
+            String? systemVersion,
+            List<String?> supportedAbis,
+            String? brand,
+            String? device,
+            String? model,
+            String? hardware,
+            String? product)?
+        android,
+    TResult Function(String? deviceName, String? deviceModel,
+            String? systemName, String? systemVersion)?
+        iOS,
+    TResult Function(String osName, String kernelVersion, String? osVersion)?
+        linux,
+    TResult Function(String osVersion)? windows,
+    TResult Function(
+            String arch, String kernelVersion, String osVersion, String model)?
+        macOS,
+    TResult Function(String browserName, String? platform, String? vendor)? web,
+  }) {
+    return web?.call(browserName, platform, vendor);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? unknown,
     TResult Function(
@@ -1841,6 +2151,20 @@ class _$WebDeviceInfo with DiagnosticableTreeMixin implements WebDeviceInfo {
     required TResult Function(WebDeviceInfo value) web,
   }) {
     return web(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(UnknownDeviceInfo value)? unknown,
+    TResult Function(AndroidDeviceInfo value)? android,
+    TResult Function(IOSDeviceInfo value)? iOS,
+    TResult Function(LinuxDeviceInfo value)? linux,
+    TResult Function(WindowsDeviceInfo value)? windows,
+    TResult Function(MacOSDeviceInfo value)? macOS,
+    TResult Function(WebDeviceInfo value)? web,
+  }) {
+    return web?.call(this);
   }
 
   @override

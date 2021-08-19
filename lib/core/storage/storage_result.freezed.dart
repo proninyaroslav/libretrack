@@ -1,5 +1,6 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'storage_result.dart';
 
@@ -41,6 +42,12 @@ mixin _$StorageResult<T> {
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult Function(T value)? $default, {
+    TResult Function(StorageError value)? error,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>(
     TResult Function(T value)? $default, {
     TResult Function(StorageError value)? error,
@@ -51,6 +58,12 @@ mixin _$StorageResult<T> {
   TResult map<TResult extends Object?>(
     TResult Function(StorageResultValue<T> value) $default, {
     required TResult Function(StorageResultError<T> value) error,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult Function(StorageResultValue<T> value)? $default, {
+    TResult Function(StorageResultError<T> value)? error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -153,6 +166,15 @@ class _$StorageResultValue<T> implements StorageResultValue<T> {
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult Function(T value)? $default, {
+    TResult Function(StorageError value)? error,
+  }) {
+    return $default?.call(value);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>(
     TResult Function(T value)? $default, {
     TResult Function(StorageError value)? error,
@@ -171,6 +193,15 @@ class _$StorageResultValue<T> implements StorageResultValue<T> {
     required TResult Function(StorageResultError<T> value) error,
   }) {
     return $default(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult Function(StorageResultValue<T> value)? $default, {
+    TResult Function(StorageResultError<T> value)? error,
+  }) {
+    return $default?.call(this);
   }
 
   @override
@@ -279,6 +310,15 @@ class _$StorageResultError<T> implements StorageResultError<T> {
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult Function(T value)? $default, {
+    TResult Function(StorageError value)? error,
+  }) {
+    return error?.call(value);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>(
     TResult Function(T value)? $default, {
     TResult Function(StorageError value)? error,
@@ -297,6 +337,15 @@ class _$StorageResultError<T> implements StorageResultError<T> {
     required TResult Function(StorageResultError<T> value) error,
   }) {
     return error(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult Function(StorageResultValue<T> value)? $default, {
+    TResult Function(StorageResultError<T> value)? error,
+  }) {
+    return error?.call(this);
   }
 
   @override
@@ -351,6 +400,11 @@ mixin _$StorageError {
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(Exception? exception, StackTrace? stackTrace)? database,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(Exception? exception, StackTrace? stackTrace)? database,
     required TResult orElse(),
@@ -359,6 +413,11 @@ mixin _$StorageError {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(StorageErrorDatabase value) database,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(StorageErrorDatabase value)? database,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -496,6 +555,14 @@ class _$StorageErrorDatabase implements StorageErrorDatabase {
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(Exception? exception, StackTrace? stackTrace)? database,
+  }) {
+    return database?.call(exception, stackTrace);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(Exception? exception, StackTrace? stackTrace)? database,
     required TResult orElse(),
@@ -512,6 +579,14 @@ class _$StorageErrorDatabase implements StorageErrorDatabase {
     required TResult Function(StorageErrorDatabase value) database,
   }) {
     return database(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(StorageErrorDatabase value)? database,
+  }) {
+    return database?.call(this);
   }
 
   @override

@@ -1,5 +1,6 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'tracking_service.dart';
 
@@ -66,6 +67,17 @@ mixin _$TrackingServiceResult {
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult Function(TrackingRequest request, ShipmentInfo info,
+            List<ShipmentActivityInfo> activity, List<String>? alternateTracks)?
+        $default, {
+    TResult Function(TrackingRequest request)? noInfo,
+    TResult Function(TrackingRequest request, TrackingServiceError error,
+            bool isRetryable)?
+        error,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>(
     TResult Function(TrackingRequest request, ShipmentInfo info,
             List<ShipmentActivityInfo> activity, List<String>? alternateTracks)?
@@ -82,6 +94,13 @@ mixin _$TrackingServiceResult {
     TResult Function(TrackingServiceResultData value) $default, {
     required TResult Function(TrackingServiceResultNoInfo value) noInfo,
     required TResult Function(TrackingResultError value) error,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult Function(TrackingServiceResultData value)? $default, {
+    TResult Function(TrackingServiceResultNoInfo value)? noInfo,
+    TResult Function(TrackingResultError value)? error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -265,6 +284,20 @@ class _$TrackingServiceResultData
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult Function(TrackingRequest request, ShipmentInfo info,
+            List<ShipmentActivityInfo> activity, List<String>? alternateTracks)?
+        $default, {
+    TResult Function(TrackingRequest request)? noInfo,
+    TResult Function(TrackingRequest request, TrackingServiceError error,
+            bool isRetryable)?
+        error,
+  }) {
+    return $default?.call(request, info, activity, alternateTracks);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>(
     TResult Function(TrackingRequest request, ShipmentInfo info,
             List<ShipmentActivityInfo> activity, List<String>? alternateTracks)?
@@ -289,6 +322,16 @@ class _$TrackingServiceResultData
     required TResult Function(TrackingResultError value) error,
   }) {
     return $default(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult Function(TrackingServiceResultData value)? $default, {
+    TResult Function(TrackingServiceResultNoInfo value)? noInfo,
+    TResult Function(TrackingResultError value)? error,
+  }) {
+    return $default?.call(this);
   }
 
   @override
@@ -417,6 +460,20 @@ class _$TrackingServiceResultNoInfo
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult Function(TrackingRequest request, ShipmentInfo info,
+            List<ShipmentActivityInfo> activity, List<String>? alternateTracks)?
+        $default, {
+    TResult Function(TrackingRequest request)? noInfo,
+    TResult Function(TrackingRequest request, TrackingServiceError error,
+            bool isRetryable)?
+        error,
+  }) {
+    return noInfo?.call(request);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>(
     TResult Function(TrackingRequest request, ShipmentInfo info,
             List<ShipmentActivityInfo> activity, List<String>? alternateTracks)?
@@ -441,6 +498,16 @@ class _$TrackingServiceResultNoInfo
     required TResult Function(TrackingResultError value) error,
   }) {
     return noInfo(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult Function(TrackingServiceResultData value)? $default, {
+    TResult Function(TrackingServiceResultNoInfo value)? noInfo,
+    TResult Function(TrackingResultError value)? error,
+  }) {
+    return noInfo?.call(this);
   }
 
   @override
@@ -596,6 +663,20 @@ class _$TrackingResultError
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult Function(TrackingRequest request, ShipmentInfo info,
+            List<ShipmentActivityInfo> activity, List<String>? alternateTracks)?
+        $default, {
+    TResult Function(TrackingRequest request)? noInfo,
+    TResult Function(TrackingRequest request, TrackingServiceError error,
+            bool isRetryable)?
+        error,
+  }) {
+    return error?.call(request, this.error, isRetryable);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>(
     TResult Function(TrackingRequest request, ShipmentInfo info,
             List<ShipmentActivityInfo> activity, List<String>? alternateTracks)?
@@ -620,6 +701,16 @@ class _$TrackingResultError
     required TResult Function(TrackingResultError value) error,
   }) {
     return error(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult Function(TrackingServiceResultData value)? $default, {
+    TResult Function(TrackingServiceResultNoInfo value)? noInfo,
+    TResult Function(TrackingResultError value)? error,
+  }) {
+    return error?.call(this);
   }
 
   @override
@@ -682,6 +773,12 @@ mixin _$TrackingServiceError {
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(FetchError e)? fetch,
+    TResult Function(ParseError e)? parse,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(FetchError e)? fetch,
     TResult Function(ParseError e)? parse,
@@ -692,6 +789,12 @@ mixin _$TrackingServiceError {
   TResult map<TResult extends Object?>({
     required TResult Function(TrackingServiceErrorFetch value) fetch,
     required TResult Function(TrackingServiceErrorParse value) parse,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(TrackingServiceErrorFetch value)? fetch,
+    TResult Function(TrackingServiceErrorParse value)? parse,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -814,6 +917,15 @@ class _$TrackingServiceErrorFetch
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(FetchError e)? fetch,
+    TResult Function(ParseError e)? parse,
+  }) {
+    return fetch?.call(e);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(FetchError e)? fetch,
     TResult Function(ParseError e)? parse,
@@ -832,6 +944,15 @@ class _$TrackingServiceErrorFetch
     required TResult Function(TrackingServiceErrorParse value) parse,
   }) {
     return fetch(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(TrackingServiceErrorFetch value)? fetch,
+    TResult Function(TrackingServiceErrorParse value)? parse,
+  }) {
+    return fetch?.call(this);
   }
 
   @override
@@ -952,6 +1073,15 @@ class _$TrackingServiceErrorParse
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(FetchError e)? fetch,
+    TResult Function(ParseError e)? parse,
+  }) {
+    return parse?.call(e);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(FetchError e)? fetch,
     TResult Function(ParseError e)? parse,
@@ -970,6 +1100,15 @@ class _$TrackingServiceErrorParse
     required TResult Function(TrackingServiceErrorParse value) parse,
   }) {
     return parse(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(TrackingServiceErrorFetch value)? fetch,
+    TResult Function(TrackingServiceErrorParse value)? parse,
+  }) {
+    return parse?.call(this);
   }
 
   @override

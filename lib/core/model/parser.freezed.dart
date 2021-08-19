@@ -1,5 +1,6 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'parser.dart';
 
@@ -53,6 +54,15 @@ mixin _$ParseResult {
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult Function(ShipmentInfo info, List<ShipmentActivityInfo> activity,
+            List<String>? alternateTracks)?
+        $default, {
+    TResult Function()? noInfo,
+    TResult Function(ParseError error)? error,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>(
     TResult Function(ShipmentInfo info, List<ShipmentActivityInfo> activity,
             List<String>? alternateTracks)?
@@ -67,6 +77,13 @@ mixin _$ParseResult {
     TResult Function(ParseResultData value) $default, {
     required TResult Function(ParseResultNoInfo value) noInfo,
     required TResult Function(ParseResultError value) error,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult Function(ParseResultData value)? $default, {
+    TResult Function(ParseResultNoInfo value)? noInfo,
+    TResult Function(ParseResultError value)? error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -210,6 +227,18 @@ class _$ParseResultData
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult Function(ShipmentInfo info, List<ShipmentActivityInfo> activity,
+            List<String>? alternateTracks)?
+        $default, {
+    TResult Function()? noInfo,
+    TResult Function(ParseError error)? error,
+  }) {
+    return $default?.call(info, activity, alternateTracks);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>(
     TResult Function(ShipmentInfo info, List<ShipmentActivityInfo> activity,
             List<String>? alternateTracks)?
@@ -232,6 +261,16 @@ class _$ParseResultData
     required TResult Function(ParseResultError value) error,
   }) {
     return $default(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult Function(ParseResultData value)? $default, {
+    TResult Function(ParseResultNoInfo value)? noInfo,
+    TResult Function(ParseResultError value)? error,
+  }) {
+    return $default?.call(this);
   }
 
   @override
@@ -322,6 +361,18 @@ class _$ParseResultNoInfo
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult Function(ShipmentInfo info, List<ShipmentActivityInfo> activity,
+            List<String>? alternateTracks)?
+        $default, {
+    TResult Function()? noInfo,
+    TResult Function(ParseError error)? error,
+  }) {
+    return noInfo?.call();
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>(
     TResult Function(ShipmentInfo info, List<ShipmentActivityInfo> activity,
             List<String>? alternateTracks)?
@@ -344,6 +395,16 @@ class _$ParseResultNoInfo
     required TResult Function(ParseResultError value) error,
   }) {
     return noInfo(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult Function(ParseResultData value)? $default, {
+    TResult Function(ParseResultNoInfo value)? noInfo,
+    TResult Function(ParseResultError value)? error,
+  }) {
+    return noInfo?.call(this);
   }
 
   @override
@@ -460,6 +521,18 @@ class _$ParseResultError
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult Function(ShipmentInfo info, List<ShipmentActivityInfo> activity,
+            List<String>? alternateTracks)?
+        $default, {
+    TResult Function()? noInfo,
+    TResult Function(ParseError error)? error,
+  }) {
+    return error?.call(this.error);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>(
     TResult Function(ShipmentInfo info, List<ShipmentActivityInfo> activity,
             List<String>? alternateTracks)?
@@ -482,6 +555,16 @@ class _$ParseResultError
     required TResult Function(ParseResultError value) error,
   }) {
     return error(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult Function(ParseResultData value)? $default, {
+    TResult Function(ParseResultNoInfo value)? noInfo,
+    TResult Function(ParseResultError value)? error,
+  }) {
+    return error?.call(this);
   }
 
   @override
@@ -567,6 +650,16 @@ mixin _$ParseError {
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(String message)? format,
+    TResult Function(String? code, String? message)? serviceTemporary,
+    TResult Function(String? code, String? message)? serviceHard,
+    TResult Function(String? code, String? message)? auth,
+    TResult Function(String? code, String? message)? badRequest,
+    TResult Function()? invalidTrackNumber,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String message)? format,
     TResult Function(String? code, String? message)? serviceTemporary,
@@ -587,6 +680,16 @@ mixin _$ParseError {
     required TResult Function(ParseErrorBadRequest value) badRequest,
     required TResult Function(ParseErrorInvalidTrackNumber value)
         invalidTrackNumber,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(ParseErrorFormat value)? format,
+    TResult Function(ParseErrorServiceTemporary value)? serviceTemporary,
+    TResult Function(ParseErrorServiceHard value)? serviceHard,
+    TResult Function(ParseErrorAuth value)? auth,
+    TResult Function(ParseErrorBadRequest value)? badRequest,
+    TResult Function(ParseErrorInvalidTrackNumber value)? invalidTrackNumber,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -705,6 +808,19 @@ class _$ParseErrorFormat
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(String message)? format,
+    TResult Function(String? code, String? message)? serviceTemporary,
+    TResult Function(String? code, String? message)? serviceHard,
+    TResult Function(String? code, String? message)? auth,
+    TResult Function(String? code, String? message)? badRequest,
+    TResult Function()? invalidTrackNumber,
+  }) {
+    return format?.call(message);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String message)? format,
     TResult Function(String? code, String? message)? serviceTemporary,
@@ -733,6 +849,19 @@ class _$ParseErrorFormat
         invalidTrackNumber,
   }) {
     return format(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(ParseErrorFormat value)? format,
+    TResult Function(ParseErrorServiceTemporary value)? serviceTemporary,
+    TResult Function(ParseErrorServiceHard value)? serviceHard,
+    TResult Function(ParseErrorAuth value)? auth,
+    TResult Function(ParseErrorBadRequest value)? badRequest,
+    TResult Function(ParseErrorInvalidTrackNumber value)? invalidTrackNumber,
+  }) {
+    return format?.call(this);
   }
 
   @override
@@ -864,6 +993,19 @@ class _$ParseErrorServiceTemporary
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(String message)? format,
+    TResult Function(String? code, String? message)? serviceTemporary,
+    TResult Function(String? code, String? message)? serviceHard,
+    TResult Function(String? code, String? message)? auth,
+    TResult Function(String? code, String? message)? badRequest,
+    TResult Function()? invalidTrackNumber,
+  }) {
+    return serviceTemporary?.call(code, message);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String message)? format,
     TResult Function(String? code, String? message)? serviceTemporary,
@@ -892,6 +1034,19 @@ class _$ParseErrorServiceTemporary
         invalidTrackNumber,
   }) {
     return serviceTemporary(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(ParseErrorFormat value)? format,
+    TResult Function(ParseErrorServiceTemporary value)? serviceTemporary,
+    TResult Function(ParseErrorServiceHard value)? serviceHard,
+    TResult Function(ParseErrorAuth value)? auth,
+    TResult Function(ParseErrorBadRequest value)? badRequest,
+    TResult Function(ParseErrorInvalidTrackNumber value)? invalidTrackNumber,
+  }) {
+    return serviceTemporary?.call(this);
   }
 
   @override
@@ -1023,6 +1178,19 @@ class _$ParseErrorServiceHard
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(String message)? format,
+    TResult Function(String? code, String? message)? serviceTemporary,
+    TResult Function(String? code, String? message)? serviceHard,
+    TResult Function(String? code, String? message)? auth,
+    TResult Function(String? code, String? message)? badRequest,
+    TResult Function()? invalidTrackNumber,
+  }) {
+    return serviceHard?.call(code, message);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String message)? format,
     TResult Function(String? code, String? message)? serviceTemporary,
@@ -1051,6 +1219,19 @@ class _$ParseErrorServiceHard
         invalidTrackNumber,
   }) {
     return serviceHard(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(ParseErrorFormat value)? format,
+    TResult Function(ParseErrorServiceTemporary value)? serviceTemporary,
+    TResult Function(ParseErrorServiceHard value)? serviceHard,
+    TResult Function(ParseErrorAuth value)? auth,
+    TResult Function(ParseErrorBadRequest value)? badRequest,
+    TResult Function(ParseErrorInvalidTrackNumber value)? invalidTrackNumber,
+  }) {
+    return serviceHard?.call(this);
   }
 
   @override
@@ -1178,6 +1359,19 @@ class _$ParseErrorAuth with DiagnosticableTreeMixin implements ParseErrorAuth {
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(String message)? format,
+    TResult Function(String? code, String? message)? serviceTemporary,
+    TResult Function(String? code, String? message)? serviceHard,
+    TResult Function(String? code, String? message)? auth,
+    TResult Function(String? code, String? message)? badRequest,
+    TResult Function()? invalidTrackNumber,
+  }) {
+    return auth?.call(code, message);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String message)? format,
     TResult Function(String? code, String? message)? serviceTemporary,
@@ -1206,6 +1400,19 @@ class _$ParseErrorAuth with DiagnosticableTreeMixin implements ParseErrorAuth {
         invalidTrackNumber,
   }) {
     return auth(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(ParseErrorFormat value)? format,
+    TResult Function(ParseErrorServiceTemporary value)? serviceTemporary,
+    TResult Function(ParseErrorServiceHard value)? serviceHard,
+    TResult Function(ParseErrorAuth value)? auth,
+    TResult Function(ParseErrorBadRequest value)? badRequest,
+    TResult Function(ParseErrorInvalidTrackNumber value)? invalidTrackNumber,
+  }) {
+    return auth?.call(this);
   }
 
   @override
@@ -1337,6 +1544,19 @@ class _$ParseErrorBadRequest
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(String message)? format,
+    TResult Function(String? code, String? message)? serviceTemporary,
+    TResult Function(String? code, String? message)? serviceHard,
+    TResult Function(String? code, String? message)? auth,
+    TResult Function(String? code, String? message)? badRequest,
+    TResult Function()? invalidTrackNumber,
+  }) {
+    return badRequest?.call(code, message);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String message)? format,
     TResult Function(String? code, String? message)? serviceTemporary,
@@ -1365,6 +1585,19 @@ class _$ParseErrorBadRequest
         invalidTrackNumber,
   }) {
     return badRequest(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(ParseErrorFormat value)? format,
+    TResult Function(ParseErrorServiceTemporary value)? serviceTemporary,
+    TResult Function(ParseErrorServiceHard value)? serviceHard,
+    TResult Function(ParseErrorAuth value)? auth,
+    TResult Function(ParseErrorBadRequest value)? badRequest,
+    TResult Function(ParseErrorInvalidTrackNumber value)? invalidTrackNumber,
+  }) {
+    return badRequest?.call(this);
   }
 
   @override
@@ -1460,6 +1693,19 @@ class _$ParseErrorInvalidTrackNumber
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(String message)? format,
+    TResult Function(String? code, String? message)? serviceTemporary,
+    TResult Function(String? code, String? message)? serviceHard,
+    TResult Function(String? code, String? message)? auth,
+    TResult Function(String? code, String? message)? badRequest,
+    TResult Function()? invalidTrackNumber,
+  }) {
+    return invalidTrackNumber?.call();
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String message)? format,
     TResult Function(String? code, String? message)? serviceTemporary,
@@ -1488,6 +1734,19 @@ class _$ParseErrorInvalidTrackNumber
         invalidTrackNumber,
   }) {
     return invalidTrackNumber(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(ParseErrorFormat value)? format,
+    TResult Function(ParseErrorServiceTemporary value)? serviceTemporary,
+    TResult Function(ParseErrorServiceHard value)? serviceHard,
+    TResult Function(ParseErrorAuth value)? auth,
+    TResult Function(ParseErrorBadRequest value)? badRequest,
+    TResult Function(ParseErrorInvalidTrackNumber value)? invalidTrackNumber,
+  }) {
+    return invalidTrackNumber?.call(this);
   }
 
   @override

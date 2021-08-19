@@ -1,5 +1,6 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'tracking_task.dart';
 
@@ -59,6 +60,18 @@ mixin _$TrackingTaskState {
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(List<TrackingInfo> trackingInfoList)? loading,
+    TResult Function(
+            List<TrackingTaskResult> result,
+            List<TrackingInfo> trackingInfoList,
+            List<TrackingResponseInfo> responseInfoList,
+            List<TrackNumberService>? unsupportedServices,
+            List<TrackNumberService>? disabledServices)?
+        loaded,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(List<TrackingInfo> trackingInfoList)? loading,
     TResult Function(
@@ -75,6 +88,12 @@ mixin _$TrackingTaskState {
   TResult map<TResult extends Object?>({
     required TResult Function(TrackingTaskStateLoading value) loading,
     required TResult Function(TrackingTaskStateLoaded value) loaded,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(TrackingTaskStateLoading value)? loading,
+    TResult Function(TrackingTaskStateLoaded value)? loaded,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -215,6 +234,21 @@ class _$TrackingTaskStateLoading
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(List<TrackingInfo> trackingInfoList)? loading,
+    TResult Function(
+            List<TrackingTaskResult> result,
+            List<TrackingInfo> trackingInfoList,
+            List<TrackingResponseInfo> responseInfoList,
+            List<TrackNumberService>? unsupportedServices,
+            List<TrackNumberService>? disabledServices)?
+        loaded,
+  }) {
+    return loading?.call(trackingInfoList);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(List<TrackingInfo> trackingInfoList)? loading,
     TResult Function(
@@ -239,6 +273,15 @@ class _$TrackingTaskStateLoading
     required TResult Function(TrackingTaskStateLoaded value) loaded,
   }) {
     return loading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(TrackingTaskStateLoading value)? loading,
+    TResult Function(TrackingTaskStateLoaded value)? loaded,
+  }) {
+    return loading?.call(this);
   }
 
   @override
@@ -426,6 +469,22 @@ class _$TrackingTaskStateLoaded
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(List<TrackingInfo> trackingInfoList)? loading,
+    TResult Function(
+            List<TrackingTaskResult> result,
+            List<TrackingInfo> trackingInfoList,
+            List<TrackingResponseInfo> responseInfoList,
+            List<TrackNumberService>? unsupportedServices,
+            List<TrackNumberService>? disabledServices)?
+        loaded,
+  }) {
+    return loaded?.call(result, trackingInfoList, responseInfoList,
+        unsupportedServices, disabledServices);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(List<TrackingInfo> trackingInfoList)? loading,
     TResult Function(
@@ -451,6 +510,15 @@ class _$TrackingTaskStateLoaded
     required TResult Function(TrackingTaskStateLoaded value) loaded,
   }) {
     return loaded(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(TrackingTaskStateLoading value)? loading,
+    TResult Function(TrackingTaskStateLoaded value)? loaded,
+  }) {
+    return loaded?.call(this);
   }
 
   @override
@@ -1105,6 +1173,12 @@ mixin _$_FailedRequestReason {
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? missingService,
+    TResult Function()? missingAuthData,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? missingService,
     TResult Function()? missingAuthData,
@@ -1117,6 +1191,12 @@ mixin _$_FailedRequestReason {
         missingService,
     required TResult Function(_FailedRequestMissingAuthData value)
         missingAuthData,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_FailedRequestMissingService value)? missingService,
+    TResult Function(_FailedRequestMissingAuthData value)? missingAuthData,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -1205,6 +1285,15 @@ class _$_FailedRequestMissingService
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? missingService,
+    TResult Function()? missingAuthData,
+  }) {
+    return missingService?.call();
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? missingService,
     TResult Function()? missingAuthData,
@@ -1225,6 +1314,15 @@ class _$_FailedRequestMissingService
         missingAuthData,
   }) {
     return missingService(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_FailedRequestMissingService value)? missingService,
+    TResult Function(_FailedRequestMissingAuthData value)? missingAuthData,
+  }) {
+    return missingService?.call(this);
   }
 
   @override
@@ -1306,6 +1404,15 @@ class _$_FailedRequestMissingAuthData
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? missingService,
+    TResult Function()? missingAuthData,
+  }) {
+    return missingAuthData?.call();
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? missingService,
     TResult Function()? missingAuthData,
@@ -1326,6 +1433,15 @@ class _$_FailedRequestMissingAuthData
         missingAuthData,
   }) {
     return missingAuthData(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_FailedRequestMissingService value)? missingService,
+    TResult Function(_FailedRequestMissingAuthData value)? missingAuthData,
+  }) {
+    return missingAuthData?.call(this);
   }
 
   @override

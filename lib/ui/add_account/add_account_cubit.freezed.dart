@@ -1,5 +1,6 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'add_account_cubit.dart';
 
@@ -52,6 +53,14 @@ mixin _$AddAccountState {
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? adding,
+    TResult Function()? added,
+    TResult Function(Exception? exception, StackTrace? stackTrace)? addFailed,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? adding,
@@ -66,6 +75,14 @@ mixin _$AddAccountState {
     required TResult Function(AddAccountStateAdding value) adding,
     required TResult Function(AddAccountStateAdded value) added,
     required TResult Function(AddAccountStateAddFailed value) addFailed,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(AddAccountStateInitial value)? initial,
+    TResult Function(AddAccountStateAdding value)? adding,
+    TResult Function(AddAccountStateAdded value)? added,
+    TResult Function(AddAccountStateAddFailed value)? addFailed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -155,6 +172,17 @@ class _$AddAccountStateInitial
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? adding,
+    TResult Function()? added,
+    TResult Function(Exception? exception, StackTrace? stackTrace)? addFailed,
+  }) {
+    return initial?.call();
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? adding,
@@ -177,6 +205,17 @@ class _$AddAccountStateInitial
     required TResult Function(AddAccountStateAddFailed value) addFailed,
   }) {
     return initial(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(AddAccountStateInitial value)? initial,
+    TResult Function(AddAccountStateAdding value)? adding,
+    TResult Function(AddAccountStateAdded value)? added,
+    TResult Function(AddAccountStateAddFailed value)? addFailed,
+  }) {
+    return initial?.call(this);
   }
 
   @override
@@ -258,6 +297,17 @@ class _$AddAccountStateAdding
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? adding,
+    TResult Function()? added,
+    TResult Function(Exception? exception, StackTrace? stackTrace)? addFailed,
+  }) {
+    return adding?.call();
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? adding,
@@ -280,6 +330,17 @@ class _$AddAccountStateAdding
     required TResult Function(AddAccountStateAddFailed value) addFailed,
   }) {
     return adding(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(AddAccountStateInitial value)? initial,
+    TResult Function(AddAccountStateAdding value)? adding,
+    TResult Function(AddAccountStateAdded value)? added,
+    TResult Function(AddAccountStateAddFailed value)? addFailed,
+  }) {
+    return adding?.call(this);
   }
 
   @override
@@ -361,6 +422,17 @@ class _$AddAccountStateAdded
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? adding,
+    TResult Function()? added,
+    TResult Function(Exception? exception, StackTrace? stackTrace)? addFailed,
+  }) {
+    return added?.call();
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? adding,
@@ -383,6 +455,17 @@ class _$AddAccountStateAdded
     required TResult Function(AddAccountStateAddFailed value) addFailed,
   }) {
     return added(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(AddAccountStateInitial value)? initial,
+    TResult Function(AddAccountStateAdding value)? adding,
+    TResult Function(AddAccountStateAdded value)? added,
+    TResult Function(AddAccountStateAddFailed value)? addFailed,
+  }) {
+    return added?.call(this);
   }
 
   @override
@@ -507,6 +590,17 @@ class _$AddAccountStateAddFailed
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? adding,
+    TResult Function()? added,
+    TResult Function(Exception? exception, StackTrace? stackTrace)? addFailed,
+  }) {
+    return addFailed?.call(exception, stackTrace);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? adding,
@@ -529,6 +623,17 @@ class _$AddAccountStateAddFailed
     required TResult Function(AddAccountStateAddFailed value) addFailed,
   }) {
     return addFailed(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(AddAccountStateInitial value)? initial,
+    TResult Function(AddAccountStateAdding value)? adding,
+    TResult Function(AddAccountStateAdded value)? added,
+    TResult Function(AddAccountStateAddFailed value)? addFailed,
+  }) {
+    return addFailed?.call(this);
   }
 
   @override

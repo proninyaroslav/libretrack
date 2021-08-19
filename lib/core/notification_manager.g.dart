@@ -7,36 +7,33 @@ part of 'notification_manager.dart';
 // **************************************************************************
 
 _$NotificationActionOpenParcelDetails
-    _$_$NotificationActionOpenParcelDetailsFromJson(Map<String, dynamic> json) {
-  return _$NotificationActionOpenParcelDetails(
-    trackNumber: json['trackNumber'] as String,
-  );
-}
+    _$$NotificationActionOpenParcelDetailsFromJson(Map<String, dynamic> json) =>
+        _$NotificationActionOpenParcelDetails(
+          trackNumber: json['trackNumber'] as String,
+        );
 
-Map<String, dynamic> _$_$NotificationActionOpenParcelDetailsToJson(
+Map<String, dynamic> _$$NotificationActionOpenParcelDetailsToJson(
         _$NotificationActionOpenParcelDetails instance) =>
     <String, dynamic>{
       'trackNumber': instance.trackNumber,
     };
 
-_$NotificationActionReportCrash _$_$NotificationActionReportCrashFromJson(
-    Map<String, dynamic> json) {
-  return _$NotificationActionReportCrash(
-    info: CrashInfo.fromJson(json['info'] as Map<String, dynamic>),
-  );
-}
+_$NotificationActionReportCrash _$$NotificationActionReportCrashFromJson(
+        Map<String, dynamic> json) =>
+    _$NotificationActionReportCrash(
+      info: CrashInfo.fromJson(json['info'] as Map<String, dynamic>),
+    );
 
-Map<String, dynamic> _$_$NotificationActionReportCrashToJson(
+Map<String, dynamic> _$$NotificationActionReportCrashToJson(
         _$NotificationActionReportCrash instance) =>
     <String, dynamic>{
       'info': instance.info.toJson(),
     };
 
 _$NotificationActionOpenParcelsList
-    _$_$NotificationActionOpenParcelsListFromJson(Map<String, dynamic> json) {
-  return _$NotificationActionOpenParcelsList();
-}
+    _$$NotificationActionOpenParcelsListFromJson(Map<String, dynamic> json) =>
+        _$NotificationActionOpenParcelsList();
 
-Map<String, dynamic> _$_$NotificationActionOpenParcelsListToJson(
+Map<String, dynamic> _$$NotificationActionOpenParcelsListToJson(
         _$NotificationActionOpenParcelsList instance) =>
     <String, dynamic>{};
