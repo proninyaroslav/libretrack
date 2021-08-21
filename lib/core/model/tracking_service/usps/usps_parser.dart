@@ -139,7 +139,8 @@ class USPSParser extends Parser {
           break;
         case ShipmentStatusType.delivered:
           deliveryDate ??= eventDate;
-          signedForByName ??= detail.getElement('Name')?.innerText;
+          final name = detail.getElement('Name')?.innerText ?? '';
+          signedForByName ??= name.isEmpty ? null : name;
           break;
         default:
           break;
