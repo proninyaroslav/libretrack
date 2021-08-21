@@ -19,6 +19,7 @@
 import 'package:injectable/injectable.dart';
 import 'package:libretrack/core/entity/entity.dart';
 
+import '../date_time_provider.dart';
 import 'parser.dart';
 import 'tracking_service/tracking_service.dart';
 
@@ -28,6 +29,10 @@ abstract class ParserFactory {
 
 @Injectable(as: ParserFactory)
 class ParserFactoryImpl implements ParserFactory {
+  final DateTimeProvider _dateTimeProvider;
+
+  ParserFactoryImpl(this._dateTimeProvider);
+
   @override
   Parser parserOf(TrackingServiceInfo info) {
     switch (info.type) {
@@ -36,8 +41,7 @@ class ParserFactoryImpl implements ParserFactory {
       case TrackingServiceType.russianPost:
         return RussianPostParser();
       case TrackingServiceType.usps:
-        // TODO: Handle this case.
-        throw UnimplementedError();
+        return USPSParser(_dateTimeProvider);
     }
   }
 }
