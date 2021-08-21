@@ -18,6 +18,7 @@
 
 import 'package:injectable/injectable.dart';
 import 'package:libretrack/core/entity/entity.dart';
+import 'package:libretrack/core/model/tracking_service/usps/usps_request_builder.dart';
 import 'package:libretrack/env.dart';
 
 import 'request_builder.dart';
@@ -68,5 +69,8 @@ RequestBuilder _mapServiceToBuilder({
     case TrackingServiceType.russianPost:
       final rpAuthData = RussianPostAuthData.from(authData);
       return RussianPostRequestBuilder(rpAuthData);
+    case TrackingServiceType.usps:
+      final uspsAuthData = USPSAuthData.from(authData);
+      return USPSRequestBuilder(uspsAuthData);
   }
 }

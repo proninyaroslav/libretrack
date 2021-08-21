@@ -22,3 +22,6 @@ export 'russian_post/russian_post_service_info.dart';
 export 'ups/ups_parser.dart';
 export 'ups/ups_request_builder.dart';
 export 'ups/ups_service_info.dart';
+export 'usps/usps_parser.dart';
+export 'usps/usps_request_builder.dart';
+export 'usps/usps_service_info.dart';

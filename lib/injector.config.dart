@@ -92,7 +92,8 @@ _i1.GetIt $initGetIt(_i1.GetIt get,
   gh.factory<_i8.HttpClientFactory>(
       () => _i8.HttpClientFactoryImpl(get<_i3.Client>()));
   gh.factory<_i9.ParcelErrorBannerCubit>(() => _i9.ParcelErrorBannerCubit());
-  gh.factory<_i10.ParserFactory>(() => _i10.ParserFactoryImpl());
+  gh.factory<_i10.ParserFactory>(
+      () => _i10.ParserFactoryImpl(get<_i5.DateTimeProvider>()));
   gh.factory<_i11.PlatformInfo>(() => _i11.PlatformInfoImpl());
   gh.factory<_i12.RequestFactory>(() => _i12.RequestFactoryImpl(),
       registerFor: {_prod});

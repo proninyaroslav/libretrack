@@ -50,4 +50,5 @@ K _$enumDecode<K, V>(
 const _$PostalServiceTypeEnumMap = {
   PostalServiceType.ups: 'ups',
   PostalServiceType.russianPost: 'russianPost',
+  PostalServiceType.usps: 'usps',
 };

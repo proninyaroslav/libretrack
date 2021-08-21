@@ -103,6 +103,21 @@ void main() {
           orElse: () => throw result,
         );
       });
+
+      test('Invalid format', () {
+        const response = ServiceResponse(
+          transactionId: TransactionId('1'),
+          statusCode: 200,
+          payload: '',
+        );
+
+        final result = parser.parse(response);
+        result.maybeWhen(
+          (info, activity, alternateTracks) => throw result,
+          error: (e) => expect(e is ParseErrorFormat, isTrue),
+          orElse: () => throw result,
+        );
+      });
     });
 
     group('Fault |', () {

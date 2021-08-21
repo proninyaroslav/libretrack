@@ -28,6 +28,8 @@ enum TrackingServiceType {
   ups,
   @JsonValue('russianPost')
   russianPost,
+  @JsonValue('usps')
+  usps,
 }
 
 extension PostalServiceTypeMapper on TrackingServiceType {
@@ -36,7 +38,9 @@ extension PostalServiceTypeMapper on TrackingServiceType {
       case TrackingServiceType.ups:
         return {PostalServiceType.ups};
       case TrackingServiceType.russianPost:
-       return {PostalServiceType.russianPost};
+        return {PostalServiceType.russianPost};
+      case TrackingServiceType.usps:
+        return {PostalServiceType.usps};
     }
   }
 }

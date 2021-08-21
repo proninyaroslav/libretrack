@@ -61,6 +61,7 @@ void main() {
           nonExistenServices: [
             TrackingServiceType.ups,
             TrackingServiceType.russianPost,
+            TrackingServiceType.usps,
           ],
           isAuthStorageEncrypted: true,
         ),
