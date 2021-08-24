@@ -200,7 +200,10 @@ class _StatusFilterList extends StatelessWidget {
         ),
       ),
       ...ShipmentStatusType.values
-          .map((type) => _makeMenuItem(context, type))
+          .map((type) => ShipmentStatusMetadataMapper.of(context, type))
+          .where((metadata) => metadata.localizedName != null)
+          .sorted((a, b) => a.localizedName!.compareTo(b.localizedName!))
+          .map(_makeMenuItem)
           .where((item) => item != null)
           .map((item) => item!),
     ];
@@ -216,25 +219,19 @@ class _StatusFilterList extends StatelessWidget {
   }
 
   DropdownMenuItem<ShipmentStatusType>? _makeMenuItem(
-    BuildContext context,
-    ShipmentStatusType type,
+    ShipmentStatusMetadata metadata,
   ) {
-    final metadata = ShipmentStatusMetadataMapper.of(context, type);
-    if (metadata.localizedName == null) {
-      return null;
-    } else {
-      return DropdownMenuItem(
-        value: type,
-        child: ListTile(
-          contentPadding: EdgeInsets.zero,
-          leading: RRectIcon(
-            iconData: metadata.iconData,
-            size: 32.0,
-          ),
-          title: Text(metadata.localizedName!),
+    return DropdownMenuItem(
+      value: metadata.type,
+      child: ListTile(
+        contentPadding: EdgeInsets.zero,
+        leading: RRectIcon(
+          iconData: metadata.iconData,
+          size: 32.0,
         ),
-      );
-    }
+        title: Text(metadata.localizedName!),
+      ),
+    );
   }
 }
 
@@ -298,7 +295,9 @@ class _PostalServiceFilter extends StatelessWidget {
         ),
       ),
       ...PostalServiceType.values
-          .map((type) => _makeMenuItem(context, type))
+          .map((type) => PostalServiceMetadataMapper.of(context, type))
+          .sorted((a, b) => a.localizedName.compareTo(b.localizedName))
+          .map(_makeMenuItem)
           .where((item) => item != null)
           .map((item) => item!),
     ];
@@ -314,12 +313,10 @@ class _PostalServiceFilter extends StatelessWidget {
   }
 
   DropdownMenuItem<PostalServiceType>? _makeMenuItem(
-    BuildContext context,
-    PostalServiceType type,
+    PostalServiceMetadata metadata,
   ) {
-    final metadata = PostalServiceMetadataMapper.of(context, type);
     return DropdownMenuItem(
-      value: type,
+      value: metadata.type,
       child: ListTile(
         contentPadding: EdgeInsets.zero,
         leading: RRectIcon(
