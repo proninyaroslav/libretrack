@@ -37,7 +37,7 @@ dependencies:
   floor: ^1.1.0
   flutter:
     sdk: flutter
-  flutter_bloc: ^7.1.0
+  flutter_bloc: ^7.2.0
   flutter_linkify: ^5.0.0
   flutter_local_notifications: ^9.0.0-dev.2
   flutter_localizations:
@@ -88,6 +88,8 @@ dependency_overrides:
   analyzer: ^2.1.0
   # TODO: wait for the new Flutter version
   meta: ^1.7.0
+  # TODO: wait for fix https://github.com/aloisdeniel/flutter_device_preview/issues/140
+  provider: ^6.0.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
