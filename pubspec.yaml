@@ -49,7 +49,8 @@ dependencies:
   freezed_annotation: ^0.14.2
   http: ^0.13.0
   image: ^3.0.2
-  injectable: ^1.5.0
+  # TODO: wait for fix https://github.com/Milad-Akarie/injectable/issues/237
+  injectable: 1.4.1
   jiffy: ^4.0.0
   json_serializable: ^5.0.0
   logger: ^1.0.0
@@ -77,7 +78,8 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   freezed: ^0.14.2
-  injectable_generator: ^1.5.0
+  # TODO: wait for fix https://github.com/Milad-Akarie/injectable/issues/237
+  injectable_generator: 1.4.1
   intl_utils: ^2.1.0
   mocktail: ^0.1.0
 

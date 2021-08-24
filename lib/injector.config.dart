@@ -100,20 +100,21 @@ _i1.GetIt $initGetIt(_i1.GetIt get,
   gh.factory<_i12.RequestFactory>(() => _i12.DevRequestFactoryImpl(),
       registerFor: {_dev, _test});
   gh.factory<_i13.SelectableParcelsCubit>(() => _i13.SelectableParcelsCubit());
-  gh.factoryAsync<_i14.ServiceAuthStorage>(() async =>
-      _i14.ServiceAuthStorageImpl(await get.getAsync<_i15.AppDatabase>(),
-          get<_i6.FlutterSecureStorage>(), get<_i11.PlatformInfo>()));
+  gh.factory<_i14.ServiceAuthStorage>(() => _i14.ServiceAuthStorageImpl(
+      get<_i15.AppDatabase>(),
+      get<_i6.FlutterSecureStorage>(),
+      get<_i11.PlatformInfo>()));
   gh.factory<_i16.TrackingIdGenerator>(() => _i16.TrackingIdGeneratorImpl());
   gh.factory<_i17.TransactionIdGenerator>(
       () => _i17.TransactionIdGeneratorImpl());
   gh.factory<_i18.WorkersProvider>(() => _i18.WorkersProviderImpl());
   gh.factory<_i19.AboutCubit>(() => _i19.AboutCubit(get<_i11.PlatformInfo>()));
-  gh.factoryAsync<_i20.AccountsActionsCubit>(() async =>
-      _i20.AccountsActionsCubit(await get.getAsync<_i21.ServiceRepository>()));
-  gh.factoryAsync<_i22.AccountsCubit>(() async =>
-      _i22.AccountsCubit(await get.getAsync<_i21.ServiceRepository>()));
-  gh.factoryAsync<_i23.AddAccountCubit>(() async =>
-      _i23.AddAccountCubit(await get.getAsync<_i21.ServiceRepository>()));
+  gh.factory<_i20.AccountsActionsCubit>(
+      () => _i20.AccountsActionsCubit(get<_i21.ServiceRepository>()));
+  gh.factory<_i22.AccountsCubit>(
+      () => _i22.AccountsCubit(get<_i21.ServiceRepository>()));
+  gh.factory<_i23.AddAccountCubit>(
+      () => _i23.AddAccountCubit(get<_i21.ServiceRepository>()));
   gh.factory<_i24.CrashReportBuilder>(
       () => _i24.ProdCrashReportBuilder(
           get<_i11.PlatformInfo>(), get<_i4.CrashReportIdGenerator>()),
@@ -128,169 +129,153 @@ _i1.GetIt $initGetIt(_i1.GetIt get,
       registerFor: {_test});
   gh.factory<_i25.CrashReportSender>(
       () => _i25.CrashReportSenderImpl(get<_i11.PlatformInfo>()));
-  gh.factoryAsync<_i26.EditAccountCubit>(() async =>
-      _i26.EditAccountCubit(await get.getAsync<_i21.ServiceRepository>()));
-  gh.factoryAsync<_i27.EditParcelCubit>(() async =>
-      _i27.EditParcelCubit(await get.getAsync<_i28.TrackNumberRepository>()));
+  gh.factory<_i26.EditAccountCubit>(
+      () => _i26.EditAccountCubit(get<_i21.ServiceRepository>()));
+  gh.factory<_i27.EditParcelCubit>(
+      () => _i27.EditParcelCubit(get<_i28.TrackNumberRepository>()));
   gh.factory<_i29.Fetcher>(() => _i29.FetcherImpl(
       get<_i8.HttpClientFactory>(), get<_i5.DateTimeProvider>()));
-  gh.factoryAsync<_i30.FirstStartCubit>(() async => _i30.FirstStartCubit(
-      await get.getAsync<_i21.ServiceRepository>(),
-      await get.getAsync<_i31.AppSettings>()));
-  gh.factoryAsync<_i32.ParcelDetailsCubit>(() async => _i32.ParcelDetailsCubit(
-      await get.getAsync<_i28.TrackNumberRepository>(),
-      await get.getAsync<_i33.ShipmentRepository>(),
-      await get.getAsync<_i34.TrackingRepository>()));
-  gh.factoryAsync<_i35.ParcelsCubit>(() async => _i35.ParcelsCubit(
-      await get.getAsync<_i28.TrackNumberRepository>(),
-      await get.getAsync<_i34.TrackingRepository>(),
-      await get.getAsync<_i33.ShipmentRepository>(),
-      await get.getAsync<_i31.AppSettings>()));
-  gh.factoryAsync<_i36.ServiceInfoCubit>(() async =>
-      _i36.ServiceInfoCubit(await get.getAsync<_i21.ServiceRepository>()));
-  gh.factoryAsync<_i37.ServiceListCubit>(() async =>
-      _i37.ServiceListCubit(await get.getAsync<_i21.ServiceRepository>()));
-  gh.factoryAsync<_i38.SystemTray>(() async => _i38.SystemTray(
-      get<_i11.PlatformInfo>(), await get.getAsync<_i31.AppSettings>()));
-  gh.factoryAsync<_i39.TrackingLimiter>(() async => _i39.TrackingLimiterImpl(
-      await get.getAsync<_i31.AppSettings>(),
-      await get.getAsync<_i34.TrackingRepository>(),
+  gh.factory<_i30.FirstStartCubit>(() => _i30.FirstStartCubit(
+      get<_i21.ServiceRepository>(), get<_i31.AppSettings>()));
+  gh.factory<_i32.ParcelDetailsCubit>(() => _i32.ParcelDetailsCubit(
+      get<_i28.TrackNumberRepository>(),
+      get<_i33.ShipmentRepository>(),
+      get<_i34.TrackingRepository>()));
+  gh.factory<_i35.ParcelsCubit>(() => _i35.ParcelsCubit(
+      get<_i28.TrackNumberRepository>(),
+      get<_i34.TrackingRepository>(),
+      get<_i33.ShipmentRepository>(),
+      get<_i31.AppSettings>()));
+  gh.factory<_i36.ServiceInfoCubit>(
+      () => _i36.ServiceInfoCubit(get<_i21.ServiceRepository>()));
+  gh.factory<_i37.ServiceListCubit>(
+      () => _i37.ServiceListCubit(get<_i21.ServiceRepository>()));
+  gh.factory<_i38.SystemTray>(
+      () => _i38.SystemTray(get<_i11.PlatformInfo>(), get<_i31.AppSettings>()));
+  gh.factory<_i39.TrackingLimiter>(() => _i39.TrackingLimiterImpl(
+      get<_i31.AppSettings>(),
+      get<_i34.TrackingRepository>(),
       get<_i5.DateTimeProvider>()));
-  gh.factoryAsync<_i40.TrackingNotifyTask>(() async => _i40.TrackingNotifyTask(
-      await get.getAsync<_i41.NotificationManager>(),
-      await get.getAsync<_i28.TrackNumberRepository>(),
-      await get.getAsync<_i31.AppSettings>()));
+  gh.factory<_i40.TrackingNotifyTask>(() => _i40.TrackingNotifyTask(
+      get<_i41.NotificationManager>(),
+      get<_i28.TrackNumberRepository>(),
+      get<_i31.AppSettings>()));
   gh.factory<_i42.TrackingService>(() => _i42.TrackingServiceImpl(
       get<_i12.RequestFactory>(),
       get<_i29.Fetcher>(),
       get<_i10.ParserFactory>()));
-  gh.factoryAsync<_i43.TrackingTask>(() async => _i43.TrackingTask(
+  gh.factory<_i43.TrackingTask>(() => _i43.TrackingTask(
       trackingService: get<_i42.TrackingService>(),
-      serviceRepo: await get.getAsync<_i21.ServiceRepository>(),
-      shipmentRepo: await get.getAsync<_i33.ShipmentRepository>(),
+      serviceRepo: get<_i21.ServiceRepository>(),
+      shipmentRepo: get<_i33.ShipmentRepository>(),
       transactionIdGenerator: get<_i17.TransactionIdGenerator>(),
       trackingIdGenerator: get<_i16.TrackingIdGenerator>(),
       dateTimeProvider: get<_i5.DateTimeProvider>()));
-  gh.factoryAsync<_i44.TrackingWorker>(() async => _i44.TrackingWorker(
-      trackingTask: await get.getAsync<_i43.TrackingTask>(),
-      trackNumberRepo: await get.getAsync<_i28.TrackNumberRepository>(),
-      shipmentRepo: await get.getAsync<_i33.ShipmentRepository>(),
-      trackingRepo: await get.getAsync<_i34.TrackingRepository>(),
-      notifyTask: await get.getAsync<_i40.TrackingNotifyTask>(),
+  gh.factory<_i44.TrackingWorker>(() => _i44.TrackingWorker(
+      trackingTask: get<_i43.TrackingTask>(),
+      trackNumberRepo: get<_i28.TrackNumberRepository>(),
+      shipmentRepo: get<_i33.ShipmentRepository>(),
+      trackingRepo: get<_i34.TrackingRepository>(),
+      notifyTask: get<_i40.TrackingNotifyTask>(),
       platformInfo: get<_i11.PlatformInfo>(),
-      pref: await get.getAsync<_i31.AppSettings>(),
-      trackingLimiter: await get.getAsync<_i39.TrackingLimiter>()));
-  gh.factoryAsync<_i45.AppearanceSettingsCubit>(() async =>
-      _i45.AppearanceSettingsCubit(
-          await get.getAsync<_i31.AppSettings>(),
-          await get.getAsync<_i46.AppCubit>(),
-          await get.getAsync<_i38.SystemTray>()));
+      pref: get<_i31.AppSettings>(),
+      trackingLimiter: get<_i39.TrackingLimiter>()));
+  gh.factory<_i45.AppearanceSettingsCubit>(() => _i45.AppearanceSettingsCubit(
+      get<_i31.AppSettings>(), get<_i46.AppCubit>(), get<_i38.SystemTray>()));
   gh.factory<_i47.CrashReportManager>(() => _i47.CrashReportManagerImpl(
       get<_i24.CrashReportBuilder>(), get<_i25.CrashReportSender>()));
   gh.factory<_i48.ErrorReportCubit>(
       () => _i48.ErrorReportCubit(get<_i47.CrashReportManager>()));
-  gh.factoryAsync<_i49.TrackingAllWorker>(() async => _i49.TrackingAllWorker(
-      await get.getAsync<_i44.TrackingWorker>(),
-      await get.getAsync<_i28.TrackNumberRepository>(),
+  gh.factory<_i49.TrackingAllWorker>(() => _i49.TrackingAllWorker(
+      get<_i44.TrackingWorker>(),
+      get<_i28.TrackNumberRepository>(),
       get<_i11.PlatformInfo>(),
-      await get.getAsync<_i31.AppSettings>()));
-  gh.factoryAsync<_i50.TrackingPeriodicWorker>(() async =>
-      _i50.TrackingPeriodicWorker(
-          await get.getAsync<_i44.TrackingWorker>(),
-          await get.getAsync<_i51.WorkerManager>(),
-          await get.getAsync<_i34.TrackingRepository>(),
-          await get.getAsync<_i28.TrackNumberRepository>(),
-          await get.getAsync<_i31.AppSettings>(),
-          get<_i11.PlatformInfo>(),
-          get<_i5.DateTimeProvider>()));
-  gh.factoryAsync<_i52.AddParcelsCubit>(() async => _i52.AddParcelsCubit(
-      await get.getAsync<_i28.TrackNumberRepository>(),
-      await get.getAsync<_i53.TrackingScheduler>(),
+      get<_i31.AppSettings>()));
+  gh.factory<_i50.TrackingPeriodicWorker>(() => _i50.TrackingPeriodicWorker(
+      get<_i44.TrackingWorker>(),
+      get<_i51.WorkerManager>(),
+      get<_i34.TrackingRepository>(),
+      get<_i28.TrackNumberRepository>(),
+      get<_i31.AppSettings>(),
+      get<_i11.PlatformInfo>(),
       get<_i5.DateTimeProvider>()));
-  gh.factoryAsync<_i54.BehaviorSettingsCubit>(() async =>
-      _i54.BehaviorSettingsCubit(await get.getAsync<_i31.AppSettings>(),
-          await get.getAsync<_i53.TrackingScheduler>()));
-  gh.factoryAsync<_i55.DetailsActionsCubit>(() async =>
-      _i55.DetailsActionsCubit(
-          await get.getAsync<_i28.TrackNumberRepository>(),
-          await get.getAsync<_i34.TrackingRepository>(),
-          await get.getAsync<_i53.TrackingScheduler>()));
-  gh.factoryAsync<_i56.ParcelsActionsCubit>(() async =>
-      _i56.ParcelsActionsCubit(
-          await get.getAsync<_i28.TrackNumberRepository>(),
-          await get.getAsync<_i34.TrackingRepository>(),
-          await get.getAsync<_i53.TrackingScheduler>()));
+  gh.factory<_i52.AddParcelsCubit>(() => _i52.AddParcelsCubit(
+      get<_i28.TrackNumberRepository>(),
+      get<_i53.TrackingScheduler>(),
+      get<_i5.DateTimeProvider>()));
+  gh.factory<_i54.BehaviorSettingsCubit>(() => _i54.BehaviorSettingsCubit(
+      get<_i31.AppSettings>(), get<_i53.TrackingScheduler>()));
+  gh.factory<_i55.DetailsActionsCubit>(() => _i55.DetailsActionsCubit(
+      get<_i28.TrackNumberRepository>(),
+      get<_i34.TrackingRepository>(),
+      get<_i53.TrackingScheduler>()));
+  gh.factory<_i56.ParcelsActionsCubit>(() => _i56.ParcelsActionsCubit(
+      get<_i28.TrackNumberRepository>(),
+      get<_i34.TrackingRepository>(),
+      get<_i53.TrackingScheduler>()));
   gh.singletonAsync<_i15.AppDatabase>(() => appDatabaseModule.inMemoryDb,
       registerFor: {_test});
   gh.singletonAsync<_i15.AppDatabase>(() => appDatabaseModule.db,
       registerFor: {_prod, _dev});
-  gh.singletonAsync<_i57.AppDatabaseIsolateBinder>(
-      () async =>
-          _i57.AppDatabaseIsolateBinder(await get.getAsync<_i15.AppDatabase>()),
+  gh.singletonWithDependencies<_i57.AppDatabaseIsolateBinder>(
+      () => _i57.AppDatabaseIsolateBinder(get<_i15.AppDatabase>()),
       dependsOn: [_i15.AppDatabase]);
-  gh.singletonAsync<_i21.ServiceRepository>(
-      () async => _i21.ServiceRepositoryImpl(
-          await get.getAsync<_i15.AppDatabase>(),
-          await get.getAsync<_i14.ServiceAuthStorage>()),
+  gh.singletonWithDependencies<_i21.ServiceRepository>(
+      () => _i21.ServiceRepositoryImpl(
+          get<_i15.AppDatabase>(), get<_i14.ServiceAuthStorage>()),
       dependsOn: [_i15.AppDatabase]);
   gh.singletonAsync<_i58.SharedPreferences>(() => sharedPreferencesModule.pref,
       registerFor: {_prod, _dev});
   gh.singletonAsync<_i58.SharedPreferences>(
       () => sharedPreferencesModule.testPref,
       registerFor: {_test});
-  gh.singletonAsync<_i33.ShipmentRepository>(
-      () async =>
-          _i33.ShipmentRepositoryImpl(await get.getAsync<_i15.AppDatabase>()),
+  gh.singletonWithDependencies<_i33.ShipmentRepository>(
+      () => _i33.ShipmentRepositoryImpl(get<_i15.AppDatabase>()),
       dependsOn: [_i15.AppDatabase]);
-  gh.singletonAsync<_i28.TrackNumberRepository>(
-      () async => _i28.TrackNumberRepositoryImpl(
-          await get.getAsync<_i15.AppDatabase>()),
+  gh.singletonWithDependencies<_i28.TrackNumberRepository>(
+      () => _i28.TrackNumberRepositoryImpl(get<_i15.AppDatabase>()),
       dependsOn: [_i15.AppDatabase]);
-  gh.singletonAsync<_i34.TrackingRepository>(
-      () async =>
-          _i34.TrackingRepositoryImpl(await get.getAsync<_i15.AppDatabase>()),
+  gh.singletonWithDependencies<_i34.TrackingRepository>(
+      () => _i34.TrackingRepositoryImpl(get<_i15.AppDatabase>()),
       dependsOn: [_i15.AppDatabase]);
-  gh.singletonAsync<_i59.WorkManagerRepository>(
-      () async => _i59.WorkManagerRepositoryImpl(
-          await get.getAsync<_i15.AppDatabase>()),
+  gh.singletonWithDependencies<_i59.WorkManagerRepository>(
+      () => _i59.WorkManagerRepositoryImpl(get<_i15.AppDatabase>()),
       dependsOn: [_i15.AppDatabase]);
-  gh.singletonAsync<_i31.AppSettings>(
-      () async =>
-          _i31.AppSettingsImpl(await get.getAsync<_i58.SharedPreferences>()),
+  gh.singletonWithDependencies<_i31.AppSettings>(
+      () => _i31.AppSettingsImpl(get<_i58.SharedPreferences>()),
       dependsOn: [_i58.SharedPreferences]);
-  gh.singletonAsync<_i41.NotificationManager>(
-      () async => _i41.NotificationManagerImpl(
-          get<_i11.PlatformInfo>(), await get.getAsync<_i31.AppSettings>()),
+  gh.singletonWithDependencies<_i41.NotificationManager>(
+      () => _i41.NotificationManagerImpl(
+          get<_i11.PlatformInfo>(), get<_i31.AppSettings>()),
       dependsOn: [_i31.AppSettings]);
-  gh.singletonAsync<_i60.WorkManager>(
-      () async => _i60.DebugWorkManagerImpl(
-          await get.getAsync<_i59.WorkManagerRepository>(),
+  gh.singletonWithDependencies<_i60.WorkManager>(
+      () => _i60.DebugWorkManagerImpl(
+          get<_i59.WorkManagerRepository>(),
           get<_i11.PlatformInfo>(),
           get<_i5.DateTimeProvider>(),
           get<_i18.WorkersProvider>()),
       dependsOn: [_i59.WorkManagerRepository],
       registerFor: {_dev, _test});
-  gh.singletonAsync<_i60.WorkManager>(
-      () async => _i60.WorkManagerImpl(
-          await get.getAsync<_i59.WorkManagerRepository>(),
+  gh.singletonWithDependencies<_i60.WorkManager>(
+      () => _i60.WorkManagerImpl(
+          get<_i59.WorkManagerRepository>(),
           get<_i11.PlatformInfo>(),
           get<_i18.WorkersProvider>(),
           get<_i5.DateTimeProvider>()),
       dependsOn: [_i59.WorkManagerRepository],
       registerFor: {_prod});
-  gh.singletonAsync<_i51.WorkerManager>(
-      () async =>
-          _i51.WorkerManagerImpl(await get.getAsync<_i60.WorkManager>()),
+  gh.singletonWithDependencies<_i51.WorkerManager>(
+      () => _i51.WorkerManagerImpl(get<_i60.WorkManager>()),
       dependsOn: [_i60.WorkManager]);
-  gh.singletonAsync<_i46.AppCubit>(
-      () async => _i46.AppCubit(await get.getAsync<_i31.AppSettings>()),
+  gh.singletonWithDependencies<_i46.AppCubit>(
+      () => _i46.AppCubit(get<_i31.AppSettings>()),
       dependsOn: [_i31.AppSettings]);
-  gh.singletonAsync<_i53.TrackingScheduler>(
-      () async => _i53.TrackingSchedulerImpl(
-          await get.getAsync<_i51.WorkerManager>(),
-          await get.getAsync<_i28.TrackNumberRepository>(),
-          await get.getAsync<_i39.TrackingLimiter>(),
-          await get.getAsync<_i31.AppSettings>()),
+  gh.singletonWithDependencies<_i53.TrackingScheduler>(
+      () => _i53.TrackingSchedulerImpl(
+          get<_i51.WorkerManager>(),
+          get<_i28.TrackNumberRepository>(),
+          get<_i39.TrackingLimiter>(),
+          get<_i31.AppSettings>()),
       dependsOn: [_i51.WorkerManager]);
   return get;
 }
