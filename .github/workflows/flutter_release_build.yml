@@ -89,40 +89,26 @@ jobs:
           asset_name: ${{ env.TARBALL_NAME }}
           asset_content_type: application/gzip
 
-  build-linux-snap-amd64:
+  build-linux-snap:
 
     runs-on: ubuntu-latest
 
     env:
-      SNAP_NAME: libretrack_${{ github.event.release.tag_name }}_linux_unsigned_amd64.snap
+      SNAP_NAME: libretrack_${{ github.event.release.tag_name }}_linux_unsigned_${{ matrix.platform }}.snap
+
+    strategy:
+      matrix:
+        platform:
+        - amd64
+        - arm64
 
     steps:
     - uses: actions/checkout@v2
-    - uses: snapcore/action-build@v1
-      id: snapcraft
-    - uses: actions/upload-release-asset@v1
-      name: Upload assets
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-          upload_url: ${{ github.event.release.upload_url }}
-          asset_path: ${{ steps.snapcraft.outputs.snap }}
-          asset_name: ${{ env.SNAP_NAME }}
-          asset_content_type: application/octet-stream
-
-  build-linux-snap-arm64:
-
-    runs-on: ubuntu-latest
-
-    env:
-      SNAP_NAME: libretrack_${{ github.event.release.tag_name }}_linux_unsigned_arm64.snap
-
-    steps:
-    - uses: actions/checkout@v2
-    - uses: snapcore/action-build@v1
+    - uses: docker/setup-qemu-action@v1
+    - uses: diddlesnaps/snapcraft-multiarch-action@v1
       id: snapcraft
       with:
-        snapcraft-args: --target-arch arm64 --destructive-mode
+        architecture: ${{ matrix.platform }}
     - uses: actions/upload-release-asset@v1
       name: Upload assets
       env:
