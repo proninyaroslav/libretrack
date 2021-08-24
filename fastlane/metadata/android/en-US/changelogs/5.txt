@@ -1,0 +1,5 @@
+* Added USPS support
+* Added Italian translation
+* [Linux] System tray icon is disabled by default
+* Bugfixes:
+    - [Linux] Sharing and opening links in Flatpak

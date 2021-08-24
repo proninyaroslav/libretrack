@@ -1,3 +1,11 @@
+### Version 1.3.0 (2021-08-24)
+
+* Added USPS support
+* Added Italian translation
+* [Linux] System tray icon is disabled by default
+* Bugfixes:
+    - [Linux] Sharing and opening links in Flatpak
+
 ### Version 1.2.0 (2021-08-12)
 
 * Added:
