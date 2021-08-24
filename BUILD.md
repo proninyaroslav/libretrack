@@ -26,7 +26,7 @@ Enter the following command in the terminal to build the project:
     - **libsecret**
     - **libjsoncpp**
     - **libappindicator** (GTK3)
-    - **libsqlite3**
+    - **libsqlite3** (and development version)
     - **gettext** (for build only)
 
     Development versions for these packages are also required for building.
