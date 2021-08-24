@@ -17,12 +17,14 @@
 // along with LibreTrack.  If not, see <http://www.gnu.org/licenses/>.
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:libretrack/ui/toast.dart';
 import 'package:libretrack/ui/widget/widget.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../../locale.dart';
+import '../../logger.dart';
 import '../theme.dart';
 import 'about_cubit.dart';
 
@@ -174,9 +176,10 @@ class _ChangelogButton extends StatelessWidget {
       ),
       onPressed: () async {
         final url = S.of(context).appChangelogUrl;
-        if (await canLaunch(url)) {
-          launch(url);
-        } else {
+        try {
+          await launch(url);
+        } on PlatformException catch (e, stackTrace) {
+          log().w('Unable to open cnagelog URL', e, stackTrace);
           Toast.of(context).show(
             text: S.of(context).openLinkFailed,
           );

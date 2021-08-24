@@ -18,7 +18,9 @@
 
 import 'dart:convert';
 
+import 'package:flutter/services.dart';
 import 'package:injectable/injectable.dart';
+import 'package:libretrack/logger.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:flutter_mailer/flutter_mailer.dart';
 
@@ -75,11 +77,13 @@ class CrashReportSenderImpl implements CrashReportSender {
       query: 'subject=${report.subject}&body=$body',
     ).toString();
 
-    if (!await canLaunch(uri)) {
-      return const CrashReportSendResult.emailUnsupported();
-    }
-    return await launch(uri)
+    try {
+      return await launch(uri)
         ? const CrashReportSendResult.success()
         : const CrashReportSendResult.emailUnsupported();
+    } on PlatformException catch (e, stackTrace) {
+      log().w('Unable to launch email client', e, stackTrace);
+      return const CrashReportSendResult.emailUnsupported();
+    }
   }
 }

@@ -17,9 +17,12 @@
 // along with LibreTrack.  If not, see <http://www.gnu.org/licenses/>.
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_linkify/flutter_linkify.dart';
 import 'package:libretrack/locale.dart';
 import 'package:url_launcher/url_launcher.dart';
+
+import '../../logger.dart';
 
 class LinkText extends StatelessWidget {
   final String text;
@@ -39,9 +42,10 @@ class LinkText extends StatelessWidget {
       color: Theme.of(context).accentColor,
     );
     Future<void> onOpen(LinkableElement link) async {
-      if (await canLaunch(link.url)) {
+      try {
         await launch(link.url);
-      } else {
+      } on PlatformException catch (e, stackTrace) {
+        log().w('Unable to open $link', e, stackTrace);
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
             content: Text(S.of(context).openLinkFailed),
