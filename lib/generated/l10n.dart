@@ -2355,6 +2355,16 @@ class S {
     );
   }
 
+  /// `Some environments may not support the system tray by default. For example, to work in GNOME, install this extension (or similar): https://extensions.gnome.org/extension/615/appindicator-support/`
+  String get linuxTrayIconWarning {
+    return Intl.message(
+      'Some environments may not support the system tray by default. For example, to work in GNOME, install this extension (or similar): https://extensions.gnome.org/extension/615/appindicator-support/',
+      name: 'linuxTrayIconWarning',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `You need to enter your UPS account authorization information. You can register it here: https://www.ups.com/doapp/signup?loc=en_US\nTo obtain an Access Key, go the link and follow the instructions: https://www.ups.com/upsdeveloperkit/manageaccesskeys?loc=en_US`
   String get upsAddAccountDescription {
     return Intl.message(

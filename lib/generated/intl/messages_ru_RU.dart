@@ -183,6 +183,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Неверный трек номер или почтовая служба не поддерживается"),
         "kilogramUnitShort": m7,
         "lastTrackingDate": m8,
+        "linuxTrayIconWarning": MessageLookupByLibrary.simpleMessage(
+            "В некоторых средах системный трей может не поддерживаться по умолчанию. Например, для работы в GNOME установите это расширение (или аналогичное): https://extensions.gnome.org/extension/615/appindicator-support/"),
         "literUnitShort": m9,
         "loadPageFailed": MessageLookupByLibrary.simpleMessage(
             "Не удалось загрузить страницу"),

@@ -227,9 +227,18 @@ class AppearanceSettingsPage extends StatelessWidget {
         return current is AppearanceStateTrayIconChanged;
       },
       builder: (context, state) {
+        final textTheme = Theme.of(context).textTheme;
         return SwitchListTile(
           value: state.info.trayIcon,
           title: Text(S.of(context).settingsSystemTrayIcon),
+          subtitle: getIt<PlatformInfo>().isLinux
+              ? LinkText(
+                  text: S.of(context).linuxTrayIconWarning,
+                  style: textTheme.bodyText2!.copyWith(
+                    color: textTheme.caption!.color,
+                  ),
+                )
+              : null,
           secondary: const Icon(Icons.monitor),
           onChanged: (value) =>
               context.read<AppearanceSettingsCubit>().trayIcon(enable: value),

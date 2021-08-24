@@ -181,6 +181,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Invalid tracking number or postal service not supported"),
         "kilogramUnitShort": m7,
         "lastTrackingDate": m8,
+        "linuxTrayIconWarning": MessageLookupByLibrary.simpleMessage(
+            "Some environments may not support the system tray by default. For example, to work in GNOME, install this extension (or similar): https://extensions.gnome.org/extension/615/appindicator-support/"),
         "literUnitShort": m9,
         "loadPageFailed":
             MessageLookupByLibrary.simpleMessage("Failed to load page"),
