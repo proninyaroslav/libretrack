@@ -71,7 +71,7 @@ abstract class AppSettingsDefault {
 
   static const trackingErrorNotifications = true;
 
-  static const trayIcon = true;
+  static const trayIcon = false;
 }
 
 @Singleton(as: AppSettings, dependsOn: [SharedPreferences])
