@@ -28,13 +28,13 @@ import 'model.dart';
 class ServiceAuthForm extends StatefulWidget {
   final TrackingServiceType type;
   final AuthData? initValue;
-  final bool isDataEncrypted;
+  final bool isDataSecured;
 
   const ServiceAuthForm({
     Key? key,
     required this.type,
     this.initValue,
-    required this.isDataEncrypted,
+    required this.isDataSecured,
   }) : super(key: key);
 
   @override
@@ -67,7 +67,7 @@ class ServiceAuthFormState extends State<ServiceAuthForm> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         _HelperDescription(text: helperDescription),
-        _EncryptedDataMessage(isEncrypted: widget.isDataEncrypted),
+        _SecuredDataMessage(isSecured: widget.isDataSecured),
         _Form(key: _formKey, fields: fields),
       ],
     );
@@ -223,12 +223,12 @@ class _HelperDescription extends StatelessWidget {
   }
 }
 
-class _EncryptedDataMessage extends StatelessWidget {
-  final bool isEncrypted;
+class _SecuredDataMessage extends StatelessWidget {
+  final bool isSecured;
 
-  const _EncryptedDataMessage({
+  const _SecuredDataMessage({
     Key? key,
-    required this.isEncrypted,
+    required this.isSecured,
   }) : super(key: key);
 
   @override
@@ -261,7 +261,7 @@ class _EncryptedDataMessage extends StatelessWidget {
   }
 
   IconData _getIcon(BuildContext context) {
-    if (isEncrypted) {
+    if (isSecured) {
       return Icons.lock;
     } else {
       return Icons.no_encryption;
@@ -269,7 +269,7 @@ class _EncryptedDataMessage extends StatelessWidget {
   }
 
   Color _getColor(BuildContext context) {
-    if (isEncrypted) {
+    if (isSecured) {
       return AppTheme.palette(context).ok;
     } else {
       return Theme.of(context).errorColor;
@@ -277,10 +277,10 @@ class _EncryptedDataMessage extends StatelessWidget {
   }
 
   String _getMessage(BuildContext context) {
-    if (isEncrypted) {
-      return S.of(context).dataIsEncrypted;
+    if (isSecured) {
+      return S.of(context).dataIsSecured;
     } else {
-      return S.of(context).encryptionIsNotSupported;
+      return S.of(context).secureStorageIsNotSupported;
     }
   }
 }

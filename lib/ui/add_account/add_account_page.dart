@@ -76,7 +76,7 @@ class _AddAccountPageState extends State<AddAccountPage> {
 
   Widget _buildStepper(
     List<TrackingServiceType> nonExistenServices,
-    bool isAuthStorageEncrypted,
+    bool isAuthStorageSecured,
   ) {
     if (nonExistenServices.isEmpty) {
       return EmptyListStub(
@@ -94,7 +94,7 @@ class _AddAccountPageState extends State<AddAccountPage> {
               height: double.infinity,
               child: _Stepper(
                 services: nonExistenServices,
-                isAuthStorageEncrypted: isAuthStorageEncrypted,
+                isAuthStorageSecured: isAuthStorageSecured,
               ),
             ),
           ),
@@ -139,12 +139,12 @@ void _showErrorReportFailedDialog(BuildContext context) {
 
 class _Stepper extends StatefulWidget {
   final List<TrackingServiceType> services;
-  final bool isAuthStorageEncrypted;
+  final bool isAuthStorageSecured;
 
   const _Stepper({
     Key? key,
     required this.services,
-    required this.isAuthStorageEncrypted,
+    required this.isAuthStorageSecured,
   }) : super(key: key);
 
   @override
@@ -198,7 +198,7 @@ class _StepperState extends State<_Stepper> {
                 ServiceAuthForm(
                   key: _serviceAuthFormKey,
                   type: _selectedService!,
-                  isDataEncrypted: widget.isAuthStorageEncrypted,
+                  isDataSecured: widget.isAuthStorageSecured,
                 ),
               const SizedBox(height: 32.0),
               BlocListener<ErrorReportCubit, ErrorReportState>(

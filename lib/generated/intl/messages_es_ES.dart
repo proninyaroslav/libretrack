@@ -141,8 +141,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "crashDialogReport": MessageLookupByLibrary.simpleMessage("Reportar"),
         "crashDialogSummary": MessageLookupByLibrary.simpleMessage(
             "Se ha producido un error en la aplicación. Puedes informar a los desarrolladores"),
-        "dataIsEncrypted": MessageLookupByLibrary.simpleMessage(
-            "Los datos se almacenan cifrados"),
+        "dataIsSecured": MessageLookupByLibrary.simpleMessage(
+            "Los datos se almacenan de forma segura"),
         "defaultNotifyChannelDescription": MessageLookupByLibrary.simpleMessage(
             "Todas las notificaciones que no son adecuadas para las otras categorías"),
         "defaultNotifyChannelTitle":
@@ -161,8 +161,6 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Error al editar cuenta"),
         "editParcelFailed":
             MessageLookupByLibrary.simpleMessage("Error al editar el paquete"),
-        "encryptionIsNotSupported": MessageLookupByLibrary.simpleMessage(
-            "No admite el cifrado. Los datos se almacenan sin cifrar"),
         "enterAuthData": MessageLookupByLibrary.simpleMessage(
             "Ingrese su fecha de autorización"),
         "error": MessageLookupByLibrary.simpleMessage("Error"),
@@ -253,6 +251,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "refreshAll": MessageLookupByLibrary.simpleMessage("Actualizar todo"),
         "refreshParcelsFailed": m21,
         "secondsShortFormat": m22,
+        "secureStorageIsNotSupported": MessageLookupByLibrary.simpleMessage(
+            "No se admite el almacenamiento seguro. Los datos se almacenan sin protección"),
         "selectAccountType": MessageLookupByLibrary.simpleMessage(
             "Por favor, selecciona su tipo de cuenta"),
         "selectAll": MessageLookupByLibrary.simpleMessage("Seleccionar todo"),

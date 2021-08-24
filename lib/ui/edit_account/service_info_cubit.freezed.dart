@@ -24,11 +24,11 @@ class _$ServiceInfoStateTearOff {
   _ServiceInfoStateLoaded loaded(
       {required TrackingServiceInfo info,
       required AuthData authData,
-      required bool isAuthStorageEncrypted}) {
+      required bool isAuthStorageSecured}) {
     return _ServiceInfoStateLoaded(
       info: info,
       authData: authData,
-      isAuthStorageEncrypted: isAuthStorageEncrypted,
+      isAuthStorageSecured: isAuthStorageSecured,
     );
   }
 
@@ -48,7 +48,7 @@ mixin _$ServiceInfoState {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function(TrackingServiceInfo info, AuthData authData,
-            bool isAuthStorageEncrypted)
+            bool isAuthStorageSecured)
         loaded,
     required TResult Function(StorageError? error) loadingFailed,
   }) =>
@@ -57,7 +57,7 @@ mixin _$ServiceInfoState {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function(TrackingServiceInfo info, AuthData authData,
-            bool isAuthStorageEncrypted)?
+            bool isAuthStorageSecured)?
         loaded,
     TResult Function(StorageError? error)? loadingFailed,
   }) =>
@@ -66,7 +66,7 @@ mixin _$ServiceInfoState {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function(TrackingServiceInfo info, AuthData authData,
-            bool isAuthStorageEncrypted)?
+            bool isAuthStorageSecured)?
         loaded,
     TResult Function(StorageError? error)? loadingFailed,
     required TResult orElse(),
@@ -165,7 +165,7 @@ class _$_ServiceInfoStateInitial
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function(TrackingServiceInfo info, AuthData authData,
-            bool isAuthStorageEncrypted)
+            bool isAuthStorageSecured)
         loaded,
     required TResult Function(StorageError? error) loadingFailed,
   }) {
@@ -177,7 +177,7 @@ class _$_ServiceInfoStateInitial
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function(TrackingServiceInfo info, AuthData authData,
-            bool isAuthStorageEncrypted)?
+            bool isAuthStorageSecured)?
         loaded,
     TResult Function(StorageError? error)? loadingFailed,
   }) {
@@ -189,7 +189,7 @@ class _$_ServiceInfoStateInitial
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function(TrackingServiceInfo info, AuthData authData,
-            bool isAuthStorageEncrypted)?
+            bool isAuthStorageSecured)?
         loaded,
     TResult Function(StorageError? error)? loadingFailed,
     required TResult orElse(),
@@ -246,9 +246,7 @@ abstract class _$ServiceInfoStateLoadedCopyWith<$Res> {
           $Res Function(_ServiceInfoStateLoaded) then) =
       __$ServiceInfoStateLoadedCopyWithImpl<$Res>;
   $Res call(
-      {TrackingServiceInfo info,
-      AuthData authData,
-      bool isAuthStorageEncrypted});
+      {TrackingServiceInfo info, AuthData authData, bool isAuthStorageSecured});
 }
 
 /// @nodoc
@@ -266,7 +264,7 @@ class __$ServiceInfoStateLoadedCopyWithImpl<$Res>
   $Res call({
     Object? info = freezed,
     Object? authData = freezed,
-    Object? isAuthStorageEncrypted = freezed,
+    Object? isAuthStorageSecured = freezed,
   }) {
     return _then(_ServiceInfoStateLoaded(
       info: info == freezed
@@ -277,9 +275,9 @@ class __$ServiceInfoStateLoadedCopyWithImpl<$Res>
           ? _value.authData
           : authData // ignore: cast_nullable_to_non_nullable
               as AuthData,
-      isAuthStorageEncrypted: isAuthStorageEncrypted == freezed
-          ? _value.isAuthStorageEncrypted
-          : isAuthStorageEncrypted // ignore: cast_nullable_to_non_nullable
+      isAuthStorageSecured: isAuthStorageSecured == freezed
+          ? _value.isAuthStorageSecured
+          : isAuthStorageSecured // ignore: cast_nullable_to_non_nullable
               as bool,
     ));
   }
@@ -293,18 +291,18 @@ class _$_ServiceInfoStateLoaded
   const _$_ServiceInfoStateLoaded(
       {required this.info,
       required this.authData,
-      required this.isAuthStorageEncrypted});
+      required this.isAuthStorageSecured});
 
   @override
   final TrackingServiceInfo info;
   @override
   final AuthData authData;
   @override
-  final bool isAuthStorageEncrypted;
+  final bool isAuthStorageSecured;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'ServiceInfoState.loaded(info: $info, authData: $authData, isAuthStorageEncrypted: $isAuthStorageEncrypted)';
+    return 'ServiceInfoState.loaded(info: $info, authData: $authData, isAuthStorageSecured: $isAuthStorageSecured)';
   }
 
   @override
@@ -314,8 +312,7 @@ class _$_ServiceInfoStateLoaded
       ..add(DiagnosticsProperty('type', 'ServiceInfoState.loaded'))
       ..add(DiagnosticsProperty('info', info))
       ..add(DiagnosticsProperty('authData', authData))
-      ..add(DiagnosticsProperty(
-          'isAuthStorageEncrypted', isAuthStorageEncrypted));
+      ..add(DiagnosticsProperty('isAuthStorageSecured', isAuthStorageSecured));
   }
 
   @override
@@ -327,9 +324,9 @@ class _$_ServiceInfoStateLoaded
             (identical(other.authData, authData) ||
                 const DeepCollectionEquality()
                     .equals(other.authData, authData)) &&
-            (identical(other.isAuthStorageEncrypted, isAuthStorageEncrypted) ||
-                const DeepCollectionEquality().equals(
-                    other.isAuthStorageEncrypted, isAuthStorageEncrypted)));
+            (identical(other.isAuthStorageSecured, isAuthStorageSecured) ||
+                const DeepCollectionEquality()
+                    .equals(other.isAuthStorageSecured, isAuthStorageSecured)));
   }
 
   @override
@@ -337,7 +334,7 @@ class _$_ServiceInfoStateLoaded
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(info) ^
       const DeepCollectionEquality().hash(authData) ^
-      const DeepCollectionEquality().hash(isAuthStorageEncrypted);
+      const DeepCollectionEquality().hash(isAuthStorageSecured);
 
   @JsonKey(ignore: true)
   @override
@@ -350,11 +347,11 @@ class _$_ServiceInfoStateLoaded
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function(TrackingServiceInfo info, AuthData authData,
-            bool isAuthStorageEncrypted)
+            bool isAuthStorageSecured)
         loaded,
     required TResult Function(StorageError? error) loadingFailed,
   }) {
-    return loaded(info, authData, isAuthStorageEncrypted);
+    return loaded(info, authData, isAuthStorageSecured);
   }
 
   @override
@@ -362,11 +359,11 @@ class _$_ServiceInfoStateLoaded
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function(TrackingServiceInfo info, AuthData authData,
-            bool isAuthStorageEncrypted)?
+            bool isAuthStorageSecured)?
         loaded,
     TResult Function(StorageError? error)? loadingFailed,
   }) {
-    return loaded?.call(info, authData, isAuthStorageEncrypted);
+    return loaded?.call(info, authData, isAuthStorageSecured);
   }
 
   @override
@@ -374,13 +371,13 @@ class _$_ServiceInfoStateLoaded
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function(TrackingServiceInfo info, AuthData authData,
-            bool isAuthStorageEncrypted)?
+            bool isAuthStorageSecured)?
         loaded,
     TResult Function(StorageError? error)? loadingFailed,
     required TResult orElse(),
   }) {
     if (loaded != null) {
-      return loaded(info, authData, isAuthStorageEncrypted);
+      return loaded(info, authData, isAuthStorageSecured);
     }
     return orElse();
   }
@@ -425,11 +422,11 @@ abstract class _ServiceInfoStateLoaded implements ServiceInfoState {
   const factory _ServiceInfoStateLoaded(
       {required TrackingServiceInfo info,
       required AuthData authData,
-      required bool isAuthStorageEncrypted}) = _$_ServiceInfoStateLoaded;
+      required bool isAuthStorageSecured}) = _$_ServiceInfoStateLoaded;
 
   TrackingServiceInfo get info => throw _privateConstructorUsedError;
   AuthData get authData => throw _privateConstructorUsedError;
-  bool get isAuthStorageEncrypted => throw _privateConstructorUsedError;
+  bool get isAuthStorageSecured => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   _$ServiceInfoStateLoadedCopyWith<_ServiceInfoStateLoaded> get copyWith =>
       throw _privateConstructorUsedError;
@@ -529,7 +526,7 @@ class _$ServiceInfoStateLoadingFailed
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function(TrackingServiceInfo info, AuthData authData,
-            bool isAuthStorageEncrypted)
+            bool isAuthStorageSecured)
         loaded,
     required TResult Function(StorageError? error) loadingFailed,
   }) {
@@ -541,7 +538,7 @@ class _$ServiceInfoStateLoadingFailed
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function(TrackingServiceInfo info, AuthData authData,
-            bool isAuthStorageEncrypted)?
+            bool isAuthStorageSecured)?
         loaded,
     TResult Function(StorageError? error)? loadingFailed,
   }) {
@@ -553,7 +550,7 @@ class _$ServiceInfoStateLoadingFailed
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function(TrackingServiceInfo info, AuthData authData,
-            bool isAuthStorageEncrypted)?
+            bool isAuthStorageSecured)?
         loaded,
     TResult Function(StorageError? error)? loadingFailed,
     required TResult orElse(),

@@ -32,7 +32,7 @@ class ServiceListState with _$ServiceListState {
 
   const factory ServiceListState.loaded({
     required List<TrackingServiceType> nonExistenServices,
-    required bool isAuthStorageEncrypted,
+    required bool isAuthStorageSecured,
   }) = ServiceListStateLoaded;
 
   const factory ServiceListState.loadingFailed({
@@ -60,7 +60,7 @@ class ServiceListCubit extends Cubit<ServiceListState> {
         emit(
           ServiceListState.loaded(
             nonExistenServices: nonExistenServices,
-            isAuthStorageEncrypted: _serviceRepo.isAuthStorageEncrypted,
+            isAuthStorageSecured: _serviceRepo.isAuthStorageSecured,
           ),
         );
       },

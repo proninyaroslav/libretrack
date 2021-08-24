@@ -143,8 +143,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "crashDialogReport": MessageLookupByLibrary.simpleMessage("Сообщить"),
         "crashDialogSummary": MessageLookupByLibrary.simpleMessage(
             "В приложении произошла ошибка. Вы можете сообщить об этом разработчикам"),
-        "dataIsEncrypted": MessageLookupByLibrary.simpleMessage(
-            "Данные хранятся в зашифрованном виде"),
+        "dataIsSecured": MessageLookupByLibrary.simpleMessage(
+            "Данные хранятся в защищённом виде"),
         "defaultNotifyChannelDescription": MessageLookupByLibrary.simpleMessage(
             "Все уведомления, не подходящие для других категорий"),
         "defaultNotifyChannelTitle":
@@ -164,8 +164,6 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Не удалось изменить аккаунт"),
         "editParcelFailed": MessageLookupByLibrary.simpleMessage(
             "Не удалось отредактировать посылку"),
-        "encryptionIsNotSupported": MessageLookupByLibrary.simpleMessage(
-            "Шифрование не поддерживается. Данные хранятся в незашифрованном виде"),
         "enterAuthData":
             MessageLookupByLibrary.simpleMessage("Введите данные авторизации"),
         "error": MessageLookupByLibrary.simpleMessage("Ошибка"),
@@ -263,6 +261,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "russianPostAddAccountDescription": MessageLookupByLibrary.simpleMessage(
             "1) Зарегистрируйтесь на сайте Почты России: https://www.pochta.ru/\n2) Перейдите в Настройки доступа, включите API отслеживания и согласитесь с условиями сервиса: https://tracking.pochta.ru/access-settings\n3) Скопируйте в Настройках доступа логин (сгенерирован автоматически). Пароль будет отправлен на e-mail, указанный при регистрации."),
         "secondsShortFormat": m22,
+        "secureStorageIsNotSupported": MessageLookupByLibrary.simpleMessage(
+            "Защищённое хранилище не поддерживается. Данные хранятся в незащищённом виде"),
         "selectAccountType":
             MessageLookupByLibrary.simpleMessage("Выберите тип аккаунта"),
         "selectAll": MessageLookupByLibrary.simpleMessage("Выбрать все"),

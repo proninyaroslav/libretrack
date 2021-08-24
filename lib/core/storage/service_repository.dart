@@ -58,7 +58,7 @@ abstract class ServiceRepository {
 
   Stream<StorageResult<List<TrackingServiceInfo>>> observeAllServices();
 
-  bool get isAuthStorageEncrypted;
+  bool get isAuthStorageSecured;
 }
 
 @Singleton(as: ServiceRepository, dependsOn: [AppDatabase])
@@ -222,5 +222,5 @@ class ServiceRepositoryImpl implements ServiceRepository {
   }
 
   @override
-  bool get isAuthStorageEncrypted => _authStorage.isSecureStorageSupported;
+  bool get isAuthStorageSecured => _authStorage.isSecureStorageSupported;
 }

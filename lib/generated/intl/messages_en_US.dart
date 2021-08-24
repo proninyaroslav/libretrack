@@ -142,8 +142,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "crashDialogReport": MessageLookupByLibrary.simpleMessage("Report"),
         "crashDialogSummary": MessageLookupByLibrary.simpleMessage(
             "An app error occurred. You can report it to the developers"),
-        "dataIsEncrypted":
-            MessageLookupByLibrary.simpleMessage("Data is stored encrypted"),
+        "dataIsSecured":
+            MessageLookupByLibrary.simpleMessage("Data is stored securely"),
         "defaultNotifyChannelDescription": MessageLookupByLibrary.simpleMessage(
             "All notifications that don\'t suitable for the other categories"),
         "defaultNotifyChannelTitle":
@@ -162,8 +162,6 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Failed to edit account"),
         "editParcelFailed":
             MessageLookupByLibrary.simpleMessage("Failed to edit package"),
-        "encryptionIsNotSupported": MessageLookupByLibrary.simpleMessage(
-            "Encryption is not supported. Data is stored unencrypted"),
         "enterAuthData": MessageLookupByLibrary.simpleMessage(
             "Enter your authorization data"),
         "error": MessageLookupByLibrary.simpleMessage("Error"),
@@ -255,6 +253,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "russianPostAddAccountDescription": MessageLookupByLibrary.simpleMessage(
             "1. Register on the Russian Post website: https://www.pochta.ru/\n2. Go to Access Settings, enable the tracking API and agree to the terms of service: https://tracking.pochta.ru/access-settings\n3. In the Access Settings, copy the login (generated automatically). The password will be sent to the e-mail, provided during registration."),
         "secondsShortFormat": m22,
+        "secureStorageIsNotSupported": MessageLookupByLibrary.simpleMessage(
+            "Secure storage is not supported. Data is stored unprotected"),
         "selectAccountType":
             MessageLookupByLibrary.simpleMessage("Please select account type"),
         "selectAll": MessageLookupByLibrary.simpleMessage("Select all"),

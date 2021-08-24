@@ -33,7 +33,7 @@ class ServiceInfoState with _$ServiceInfoState {
   const factory ServiceInfoState.loaded({
     required TrackingServiceInfo info,
     required AuthData authData,
-    required bool isAuthStorageEncrypted,
+    required bool isAuthStorageSecured,
   }) = _ServiceInfoStateLoaded;
 
   const factory ServiceInfoState.loadingFailed({
@@ -74,7 +74,7 @@ class ServiceInfoCubit extends Cubit<ServiceInfoState> {
       emit(ServiceInfoState.loaded(
         info: info,
         authData: authData,
-        isAuthStorageEncrypted: _serviceRepo.isAuthStorageEncrypted,
+        isAuthStorageSecured: _serviceRepo.isAuthStorageSecured,
       ));
     }
   }

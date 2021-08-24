@@ -892,21 +892,21 @@ class S {
     );
   }
 
-  /// `Data is stored encrypted`
-  String get dataIsEncrypted {
+  /// `Data is stored securely`
+  String get dataIsSecured {
     return Intl.message(
-      'Data is stored encrypted',
-      name: 'dataIsEncrypted',
+      'Data is stored securely',
+      name: 'dataIsSecured',
       desc: '',
       args: [],
     );
   }
 
-  /// `Encryption is not supported. Data is stored unencrypted`
-  String get encryptionIsNotSupported {
+  /// `Secure storage is not supported. Data is stored unprotected`
+  String get secureStorageIsNotSupported {
     return Intl.message(
-      'Encryption is not supported. Data is stored unencrypted',
-      name: 'encryptionIsNotSupported',
+      'Secure storage is not supported. Data is stored unprotected',
+      name: 'secureStorageIsNotSupported',
       desc: '',
       args: [],
     );

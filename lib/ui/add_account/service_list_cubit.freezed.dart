@@ -23,10 +23,10 @@ class _$ServiceListStateTearOff {
 
   ServiceListStateLoaded loaded(
       {required List<TrackingServiceType> nonExistenServices,
-      required bool isAuthStorageEncrypted}) {
+      required bool isAuthStorageSecured}) {
     return ServiceListStateLoaded(
       nonExistenServices: nonExistenServices,
-      isAuthStorageEncrypted: isAuthStorageEncrypted,
+      isAuthStorageSecured: isAuthStorageSecured,
     );
   }
 
@@ -46,7 +46,7 @@ mixin _$ServiceListState {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function(List<TrackingServiceType> nonExistenServices,
-            bool isAuthStorageEncrypted)
+            bool isAuthStorageSecured)
         loaded,
     required TResult Function(StorageError? error) loadingFailed,
   }) =>
@@ -55,7 +55,7 @@ mixin _$ServiceListState {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function(List<TrackingServiceType> nonExistenServices,
-            bool isAuthStorageEncrypted)?
+            bool isAuthStorageSecured)?
         loaded,
     TResult Function(StorageError? error)? loadingFailed,
   }) =>
@@ -64,7 +64,7 @@ mixin _$ServiceListState {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function(List<TrackingServiceType> nonExistenServices,
-            bool isAuthStorageEncrypted)?
+            bool isAuthStorageSecured)?
         loaded,
     TResult Function(StorageError? error)? loadingFailed,
     required TResult orElse(),
@@ -162,7 +162,7 @@ class _$ServiceListStateInitial
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function(List<TrackingServiceType> nonExistenServices,
-            bool isAuthStorageEncrypted)
+            bool isAuthStorageSecured)
         loaded,
     required TResult Function(StorageError? error) loadingFailed,
   }) {
@@ -174,7 +174,7 @@ class _$ServiceListStateInitial
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function(List<TrackingServiceType> nonExistenServices,
-            bool isAuthStorageEncrypted)?
+            bool isAuthStorageSecured)?
         loaded,
     TResult Function(StorageError? error)? loadingFailed,
   }) {
@@ -186,7 +186,7 @@ class _$ServiceListStateInitial
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function(List<TrackingServiceType> nonExistenServices,
-            bool isAuthStorageEncrypted)?
+            bool isAuthStorageSecured)?
         loaded,
     TResult Function(StorageError? error)? loadingFailed,
     required TResult orElse(),
@@ -244,7 +244,7 @@ abstract class $ServiceListStateLoadedCopyWith<$Res> {
       _$ServiceListStateLoadedCopyWithImpl<$Res>;
   $Res call(
       {List<TrackingServiceType> nonExistenServices,
-      bool isAuthStorageEncrypted});
+      bool isAuthStorageSecured});
 }
 
 /// @nodoc
@@ -261,16 +261,16 @@ class _$ServiceListStateLoadedCopyWithImpl<$Res>
   @override
   $Res call({
     Object? nonExistenServices = freezed,
-    Object? isAuthStorageEncrypted = freezed,
+    Object? isAuthStorageSecured = freezed,
   }) {
     return _then(ServiceListStateLoaded(
       nonExistenServices: nonExistenServices == freezed
           ? _value.nonExistenServices
           : nonExistenServices // ignore: cast_nullable_to_non_nullable
               as List<TrackingServiceType>,
-      isAuthStorageEncrypted: isAuthStorageEncrypted == freezed
-          ? _value.isAuthStorageEncrypted
-          : isAuthStorageEncrypted // ignore: cast_nullable_to_non_nullable
+      isAuthStorageSecured: isAuthStorageSecured == freezed
+          ? _value.isAuthStorageSecured
+          : isAuthStorageSecured // ignore: cast_nullable_to_non_nullable
               as bool,
     ));
   }
@@ -282,16 +282,16 @@ class _$ServiceListStateLoaded
     with DiagnosticableTreeMixin
     implements ServiceListStateLoaded {
   const _$ServiceListStateLoaded(
-      {required this.nonExistenServices, required this.isAuthStorageEncrypted});
+      {required this.nonExistenServices, required this.isAuthStorageSecured});
 
   @override
   final List<TrackingServiceType> nonExistenServices;
   @override
-  final bool isAuthStorageEncrypted;
+  final bool isAuthStorageSecured;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'ServiceListState.loaded(nonExistenServices: $nonExistenServices, isAuthStorageEncrypted: $isAuthStorageEncrypted)';
+    return 'ServiceListState.loaded(nonExistenServices: $nonExistenServices, isAuthStorageSecured: $isAuthStorageSecured)';
   }
 
   @override
@@ -300,8 +300,7 @@ class _$ServiceListStateLoaded
     properties
       ..add(DiagnosticsProperty('type', 'ServiceListState.loaded'))
       ..add(DiagnosticsProperty('nonExistenServices', nonExistenServices))
-      ..add(DiagnosticsProperty(
-          'isAuthStorageEncrypted', isAuthStorageEncrypted));
+      ..add(DiagnosticsProperty('isAuthStorageSecured', isAuthStorageSecured));
   }
 
   @override
@@ -311,16 +310,16 @@ class _$ServiceListStateLoaded
             (identical(other.nonExistenServices, nonExistenServices) ||
                 const DeepCollectionEquality()
                     .equals(other.nonExistenServices, nonExistenServices)) &&
-            (identical(other.isAuthStorageEncrypted, isAuthStorageEncrypted) ||
-                const DeepCollectionEquality().equals(
-                    other.isAuthStorageEncrypted, isAuthStorageEncrypted)));
+            (identical(other.isAuthStorageSecured, isAuthStorageSecured) ||
+                const DeepCollectionEquality()
+                    .equals(other.isAuthStorageSecured, isAuthStorageSecured)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(nonExistenServices) ^
-      const DeepCollectionEquality().hash(isAuthStorageEncrypted);
+      const DeepCollectionEquality().hash(isAuthStorageSecured);
 
   @JsonKey(ignore: true)
   @override
@@ -333,11 +332,11 @@ class _$ServiceListStateLoaded
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function(List<TrackingServiceType> nonExistenServices,
-            bool isAuthStorageEncrypted)
+            bool isAuthStorageSecured)
         loaded,
     required TResult Function(StorageError? error) loadingFailed,
   }) {
-    return loaded(nonExistenServices, isAuthStorageEncrypted);
+    return loaded(nonExistenServices, isAuthStorageSecured);
   }
 
   @override
@@ -345,11 +344,11 @@ class _$ServiceListStateLoaded
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function(List<TrackingServiceType> nonExistenServices,
-            bool isAuthStorageEncrypted)?
+            bool isAuthStorageSecured)?
         loaded,
     TResult Function(StorageError? error)? loadingFailed,
   }) {
-    return loaded?.call(nonExistenServices, isAuthStorageEncrypted);
+    return loaded?.call(nonExistenServices, isAuthStorageSecured);
   }
 
   @override
@@ -357,13 +356,13 @@ class _$ServiceListStateLoaded
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function(List<TrackingServiceType> nonExistenServices,
-            bool isAuthStorageEncrypted)?
+            bool isAuthStorageSecured)?
         loaded,
     TResult Function(StorageError? error)? loadingFailed,
     required TResult orElse(),
   }) {
     if (loaded != null) {
-      return loaded(nonExistenServices, isAuthStorageEncrypted);
+      return loaded(nonExistenServices, isAuthStorageSecured);
     }
     return orElse();
   }
@@ -407,11 +406,11 @@ class _$ServiceListStateLoaded
 abstract class ServiceListStateLoaded implements ServiceListState {
   const factory ServiceListStateLoaded(
       {required List<TrackingServiceType> nonExistenServices,
-      required bool isAuthStorageEncrypted}) = _$ServiceListStateLoaded;
+      required bool isAuthStorageSecured}) = _$ServiceListStateLoaded;
 
   List<TrackingServiceType> get nonExistenServices =>
       throw _privateConstructorUsedError;
-  bool get isAuthStorageEncrypted => throw _privateConstructorUsedError;
+  bool get isAuthStorageSecured => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $ServiceListStateLoadedCopyWith<ServiceListStateLoaded> get copyWith =>
       throw _privateConstructorUsedError;
@@ -511,7 +510,7 @@ class _$ServiceListStateLoadingFailed
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function(List<TrackingServiceType> nonExistenServices,
-            bool isAuthStorageEncrypted)
+            bool isAuthStorageSecured)
         loaded,
     required TResult Function(StorageError? error) loadingFailed,
   }) {
@@ -523,7 +522,7 @@ class _$ServiceListStateLoadingFailed
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function(List<TrackingServiceType> nonExistenServices,
-            bool isAuthStorageEncrypted)?
+            bool isAuthStorageSecured)?
         loaded,
     TResult Function(StorageError? error)? loadingFailed,
   }) {
@@ -535,7 +534,7 @@ class _$ServiceListStateLoadingFailed
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function(List<TrackingServiceType> nonExistenServices,
-            bool isAuthStorageEncrypted)?
+            bool isAuthStorageSecured)?
         loaded,
     TResult Function(StorageError? error)? loadingFailed,
     required TResult orElse(),

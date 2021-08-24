@@ -87,7 +87,7 @@ void main() {
             ),
           ),
         );
-        when(() => mockServiceRepo.isAuthStorageEncrypted).thenReturn(true);
+        when(() => mockServiceRepo.isAuthStorageSecured).thenReturn(true);
         await cubit.loadService(TrackingServiceType.ups);
         await cubit.loadService(TrackingServiceType.russianPost);
       },
@@ -98,7 +98,7 @@ void main() {
             type: TrackingServiceType.ups,
           ),
           authData: AuthData({'login': 'foo', 'password': 'bar'}),
-          isAuthStorageEncrypted: true,
+          isAuthStorageSecured: true,
         ),
         const ServiceInfoState.initial(),
         const ServiceInfoState.loaded(
@@ -106,7 +106,7 @@ void main() {
             type: TrackingServiceType.russianPost,
           ),
           authData: AuthData({'login': 'foo', 'password': 'baz'}),
-          isAuthStorageEncrypted: true,
+          isAuthStorageSecured: true,
         ),
       ],
     );

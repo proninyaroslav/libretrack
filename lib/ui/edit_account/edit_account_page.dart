@@ -225,12 +225,12 @@ class _DialogContent extends StatelessWidget {
             loadingFailed: (error) => LoadingPageError(
               onRefresh: onPageRefresh,
             ),
-            loaded: (info, authData, isAuthDataEncrypted) {
+            loaded: (info, authData, isAuthDataSecured) {
               return ServiceAuthForm(
                 key: serviceAuthFormKey,
                 type: info.type,
                 initValue: authData,
-                isDataEncrypted: isAuthDataEncrypted,
+                isDataSecured: isAuthDataSecured,
               );
             },
           ),

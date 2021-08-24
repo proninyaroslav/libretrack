@@ -52,7 +52,7 @@ void main() {
         when(() => mockServiceRepo.getAllServices()).thenAnswer(
           (_) async => const StorageResult([]),
         );
-        when(() => mockServiceRepo.isAuthStorageEncrypted).thenReturn(true);
+        when(() => mockServiceRepo.isAuthStorageSecured).thenReturn(true);
         await cubit.loadServices();
       },
       expect: () => [
@@ -63,7 +63,7 @@ void main() {
             TrackingServiceType.russianPost,
             TrackingServiceType.usps,
           ],
-          isAuthStorageEncrypted: true,
+          isAuthStorageSecured: true,
         ),
       ],
     );

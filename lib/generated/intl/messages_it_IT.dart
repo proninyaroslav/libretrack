@@ -141,8 +141,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "crashDialogReport": MessageLookupByLibrary.simpleMessage("Report"),
         "crashDialogSummary": MessageLookupByLibrary.simpleMessage(
             "Si è verificato un errore dell\'app. Puoi segnalarlo agli sviluppatori"),
-        "dataIsEncrypted": MessageLookupByLibrary.simpleMessage(
-            "I dati memorizzati sono crittografati"),
+        "dataIsSecured": MessageLookupByLibrary.simpleMessage(
+            "I dati sono archiviati in modo sicuro "),
         "defaultNotifyChannelDescription": MessageLookupByLibrary.simpleMessage(
             "Tutte le notifiche non adatte alle altre categorie"),
         "defaultNotifyChannelTitle":
@@ -161,8 +161,6 @@ class MessageLookup extends MessageLookupByLibrary {
             "Impossibile modificare l\'account"),
         "editParcelFailed": MessageLookupByLibrary.simpleMessage(
             "Impossibile modificare il pacco"),
-        "encryptionIsNotSupported": MessageLookupByLibrary.simpleMessage(
-            "La crittografia non è supportata. I dati archiviati non vengono crittografati"),
         "enterAuthData": MessageLookupByLibrary.simpleMessage(
             "Inserisci i tuoi dati di autorizzazione"),
         "error": MessageLookupByLibrary.simpleMessage("Errore"),
@@ -260,6 +258,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "russianPostAddAccountDescription": MessageLookupByLibrary.simpleMessage(
             "1. Registrati sul sito web delle Poste Russe: https://www.pochta.ru/\n2. Vai su Impostazioni di accesso, abilita l\'API di tracciamento e accetta i termini di servizio: https://tracking.pochta.ru/access-settings\n3. Nelle Impostazioni di accesso, copia il login (generato automaticamente). La password verrà inviata all\'e-mail, fornita durante la registrazione."),
         "secondsShortFormat": m22,
+        "secureStorageIsNotSupported": MessageLookupByLibrary.simpleMessage(
+            "La archiviazione sicura non è supportata. I dati vengono archiviati non protetti"),
         "selectAccountType": MessageLookupByLibrary.simpleMessage(
             "Seleziona il tipo di account"),
         "selectAll": MessageLookupByLibrary.simpleMessage("Seleziona tutto"),
