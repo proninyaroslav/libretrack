@@ -461,7 +461,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "username": MessageLookupByLibrary.simpleMessage("Имя пользователя"),
         "usps": MessageLookupByLibrary.simpleMessage("USPS"),
         "uspsAddAccountDescription": MessageLookupByLibrary.simpleMessage(
-            "1) Зарегистрируйтесь на сайте USPS Web Tools API Portal: https://www.usps.com/business/web-tools-apis/web-tools-registration.htm\n2) Во время регистрации, на вопрос «How will you be using the USPS Web Tools?» ответьте «Exclusively on my Web site».\n3) После регистрации данные для авторизации будут отправлены на указанный e-mail. Скопируйте строки «Username» и «Company» (кооторая была указана при регистрации)."),
+            "1) Зарегистрируйтесь на сайте USPS Web Tools API Portal: https://www.usps.com/business/web-tools-apis/web-tools-registration.htm\n2) Во время регистрации, на вопрос «How will you be using the USPS Web Tools?» ответьте «Exclusively on my Web site».\n3) После регистрации данные для авторизации будут отправлены на указанный e-mail. Скопируйте строки «Username» и «Company» (которая была указана при регистрации)."),
         "whoDeliveresParcel":
             MessageLookupByLibrary.simpleMessage("Кто доставляет посылку"),
         "yes": MessageLookupByLibrary.simpleMessage("Да")
