@@ -1,0 +1,24 @@
+# Slovak translations for LibreTrack package.
+# Copyright (C) 2021 THE LibreTrack'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the LibreTrack package.
+# Automatically generated, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: LibreTrack\n"
+"Report-Msgid-Bugs-To: https://github.com/proninyaroslav/libretrack/issues\n"
+"POT-Creation-Date: 2021-07-24 12:05+0300\n"
+"PO-Revision-Date: 2021-07-24 12:05+0300\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: sk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+
+msgid "Show/Hide"
+msgstr "Ukázať/Skryť"
+
+msgid "Quit"
+msgstr "Ukončiť"
