@@ -115,9 +115,8 @@ class AddParcelsCubit extends Cubit<AddParcelsState> {
       initial: _submit,
       fieldChanged: _submit,
       validationFailed: _submit,
-      addFailed: (trackingNumbers, parcelNames, exception, stackTrace) {
-        _submit(trackingNumbers, parcelNames);
-      },
+      addFailed: (trackingNumbers, parcelNames, exception, stackTrace) =>
+          _submit(trackingNumbers, parcelNames),
       adding: () {},
       added: (_) {},
     );
