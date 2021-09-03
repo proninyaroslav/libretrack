@@ -31,7 +31,7 @@ Enter the following command in the terminal to build the project:
 
     Development versions for these packages are also required for building.
     
-    To enable Linux support, enter the following command:
+    To enable Linux support, enter the following command (runs once):
     
     ```
     flutter config --enable-linux-desktop
