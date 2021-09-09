@@ -3,7 +3,7 @@
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:drawable="@color/primary" />
     <item
-        android:drawable="@mipmap/ic_launcher"
+        android:drawable="@drawable/ic_splash_icon"
         android:width="144dp"
         android:height="144dp"
         android:gravity="center" />

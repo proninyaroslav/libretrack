@@ -24,7 +24,7 @@ dependencies:
   animate_icons: ^2.0.0
   backdrop: ^0.6.0
   barcode_widget: ^2.0.0
-  bloc: ^7.0.0
+  bloc: ^7.1.0
   collection: ^1.15.0
   connectivity_plus: ^1.0.6
   cupertino_icons: ^1.0.2
