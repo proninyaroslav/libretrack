@@ -61,7 +61,7 @@ dependencies:
   responsive_builder: ^0.4.1
   share_plus: ^2.1.2
   shared_preferences: ^2.0.4
-  smooth_page_indicator: ^0.3.0-nullsafety.0
+  smooth_page_indicator: ^1.0.0+2
   superellipse_shape: ^0.2.0-nullsafety.0
   url_launcher: ^6.0.2
   uuid: ^3.0.1
@@ -69,7 +69,7 @@ dependencies:
   xml: ^5.1.2
 
 dev_dependencies:
-  analyzer: ^2.1.0
+  analyzer: ^2.2.0
   bloc_test: ^8.1.0
   build_runner: ^2.0.1
   device_preview: ^0.7.1
@@ -84,10 +84,8 @@ dev_dependencies:
   mocktail: ^0.1.0
 
 dependency_overrides:
-  # TODO: wait for fix https://github.com/localizely/intl_utils/issues/60
-  analyzer: ^2.1.0
-  # TODO: wait for the new Flutter version
-  meta: ^1.7.0
+  # TODO: wait for fix https://github.com/vitusortner/floor/issues/594
+  analyzer: ^2.2.0
   # TODO: wait for fix https://github.com/aloisdeniel/flutter_device_preview/issues/140
   provider: ^6.0.0
 

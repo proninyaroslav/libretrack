@@ -801,14 +801,12 @@ class _AnimatedTopBackLayer extends StatefulWidget {
   _AnimatedTopBackLayerState createState() => _AnimatedTopBackLayerState();
 }
 
-class _AnimatedTopBackLayerState extends State<_AnimatedTopBackLayer>
-    with TickerProviderStateMixin {
+class _AnimatedTopBackLayerState extends State<_AnimatedTopBackLayer> {
   @override
   Widget build(BuildContext context) {
     if (Backdrop.of(context).isBackLayerRevealed) {
       return AnimatedSize(
         duration: _backLayerDuration,
-        vsync: this,
         child: widget.child,
       );
     } else {

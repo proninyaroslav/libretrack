@@ -106,14 +106,14 @@ class _ClickableTrackNumber extends StatelessWidget {
               const SizedBox(width: 8.0),
               Container(
                 decoration: BoxDecoration(
-                  color: Theme.of(context).accentColor,
+                  color: Theme.of(context).colorScheme.secondary,
                   shape: BoxShape.circle,
                 ),
                 padding: const EdgeInsets.all(4.0),
                 child: Icon(
                   Icons.copy,
                   size: 15.0,
-                  color: Theme.of(context).accentIconTheme.color,
+                  color: Theme.of(context).colorScheme.onSecondary,
                 ),
               ),
             ],

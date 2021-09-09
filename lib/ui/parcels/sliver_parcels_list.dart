@@ -603,13 +603,11 @@ class _ParcelItemSelectionControl extends StatefulWidget {
 }
 
 class _ParcelItemSelectionControlState
-    extends State<_ParcelItemSelectionControl>
-    with SingleTickerProviderStateMixin {
+    extends State<_ParcelItemSelectionControl> {
   @override
   Widget build(BuildContext context) {
     return ClipRect(
       child: AnimatedSize(
-        vsync: this,
         duration: const Duration(milliseconds: 200),
         child: SizedBox(
           width: widget.show ? null : 0,
@@ -618,7 +616,7 @@ class _ParcelItemSelectionControlState
             child: Checkbox(
               value: widget.isSelected,
               fillColor: MaterialStateProperty.all(
-                Theme.of(context).accentColor,
+                Theme.of(context).colorScheme.secondary,
               ),
               checkColor: Theme.of(context).cardColor,
               onChanged: (value) => widget.onSelected?.call(),

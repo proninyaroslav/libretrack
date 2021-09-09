@@ -39,7 +39,7 @@ class LinkText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final linkStyle = TextStyle(
-      color: Theme.of(context).accentColor,
+      color: Theme.of(context).colorScheme.secondary,
     );
     Future<void> onOpen(LinkableElement link) async {
       try {

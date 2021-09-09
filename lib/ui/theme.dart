@@ -23,18 +23,16 @@ import 'package:flutter/services.dart';
 class AppTheme {
   static final _lightThemeData = ThemeData(
     visualDensity: VisualDensity.adaptivePlatformDensity,
-    fixTextFieldOutlineLabel: true,
     brightness: Brightness.light,
     primarySwatch: paletteLight.primarySwatch,
     primaryColor: paletteLight.primary,
     primaryColorDark: paletteLight.primaryDark,
     primaryColorLight: paletteLight.primaryLight,
-    accentColor: paletteLight.accent,
     errorColor: paletteLight.error,
     inputDecorationTheme: inputTheme,
     cardTheme: cardTheme,
     snackBarTheme: snackBarTheme,
-    toggleableActiveColor: paletteLight.accent,
+    toggleableActiveColor: paletteLight.secondary,
     outlinedButtonTheme: OutlinedButtonThemeData(
       style: OutlinedButton.styleFrom(
         shape: outlinedButtonShape,
@@ -46,19 +44,17 @@ class AppTheme {
 
   static final _darkThemeData = ThemeData(
     visualDensity: VisualDensity.adaptivePlatformDensity,
-    fixTextFieldOutlineLabel: true,
     brightness: Brightness.dark,
     applyElevationOverlayColor: true,
     primarySwatch: paletteDark.primarySwatch,
     primaryColor: paletteDark.primary,
     primaryColorDark: paletteDark.primaryDark,
     primaryColorLight: paletteDark.primaryLight,
-    accentColor: paletteDark.accent,
     errorColor: paletteDark.error,
     inputDecorationTheme: inputTheme,
     cardTheme: cardTheme,
     snackBarTheme: snackBarTheme,
-    toggleableActiveColor: paletteDark.accent,
+    toggleableActiveColor: paletteDark.secondary,
     outlinedButtonTheme: OutlinedButtonThemeData(
       style: OutlinedButton.styleFrom(
         shape: outlinedButtonShape,
@@ -84,11 +80,35 @@ class AppTheme {
     behavior: SnackBarBehavior.floating,
   );
 
+  static final _onSecondaryLight =
+      ThemeData.estimateBrightnessForColor(paletteLight.secondary) ==
+              Brightness.dark
+          ? Colors.white
+          : Colors.black;
+
+  static final _onSecondaryDark =
+      ThemeData.estimateBrightnessForColor(paletteDark.secondary) ==
+              Brightness.dark
+          ? Colors.white
+          : Colors.black;
+
   static ThemeData getThemeData({bool dark = false}) {
     if (dark) {
-      return _darkThemeData;
+      return _darkThemeData.copyWith(
+        colorScheme: _darkThemeData.colorScheme.copyWith(
+          secondary: paletteDark.secondary,
+          secondaryVariant: paletteDark.secondaryDark,
+          onSecondary: _onSecondaryDark,
+        ),
+      );
     } else {
-      return _lightThemeData;
+      return _lightThemeData.copyWith(
+        colorScheme: _lightThemeData.colorScheme.copyWith(
+          secondary: paletteLight.secondary,
+          secondaryVariant: paletteLight.secondaryDark,
+          onSecondary: _onSecondaryLight,
+        ),
+      );
     }
   }
 
@@ -107,7 +127,6 @@ class AppTheme {
   );
 
   static const appBarTheme = AppBarTheme(
-    backwardsCompatibility: false,
     systemOverlayStyle: SystemUiOverlayStyle.light,
   );
 
@@ -149,11 +168,11 @@ abstract class AppPalette {
 
   Color get primaryDark;
 
-  Color get accent;
+  Color get secondary;
 
-  Color get accentLight;
+  Color get secondaryLight;
 
-  Color get accentDark;
+  Color get secondaryDark;
 
   Color get newInfo;
 
@@ -195,13 +214,13 @@ class AppPaletteLight implements AppPalette {
   Color get primaryDark => const Color(0xFF000051);
 
   @override
-  Color get accent => Colors.amberAccent.shade400;
+  Color get secondary => Colors.amberAccent.shade400;
 
   @override
-  Color get accentLight => Colors.amberAccent.shade100;
+  Color get secondaryLight => Colors.amberAccent.shade100;
 
   @override
-  Color get accentDark => Colors.amberAccent.shade700;
+  Color get secondaryDark => Colors.amberAccent.shade700;
 
   @override
   Color get newInfo => Colors.red;
@@ -247,13 +266,13 @@ class AppPaletteDark implements AppPalette {
   Color get primaryDark => indigo.shade500;
 
   @override
-  Color get accent => Colors.amberAccent;
+  Color get secondary => Colors.amberAccent;
 
   @override
-  Color get accentLight => Colors.amberAccent.shade50;
+  Color get secondaryLight => Colors.amberAccent.shade100;
 
   @override
-  Color get accentDark => Colors.amberAccent.shade400;
+  Color get secondaryDark => Colors.amberAccent.shade400;
 
   @override
   Color get newInfo => Colors.red;

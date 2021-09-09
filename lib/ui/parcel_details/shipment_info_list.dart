@@ -538,14 +538,14 @@ class _AlternateTrackNumberItem extends StatelessWidget {
               children: [
                 Container(
                   decoration: BoxDecoration(
-                    color: Theme.of(context).accentColor,
+                    color: Theme.of(context).colorScheme.secondary,
                     shape: BoxShape.circle,
                   ),
                   padding: const EdgeInsets.all(2.0),
                   child: Icon(
                     Icons.add,
                     size: 18.0,
-                    color: Theme.of(context).accentIconTheme.color,
+                    color: Theme.of(context).colorScheme.onSecondary,
                   ),
                 ),
                 const SizedBox(width: 8.0),
