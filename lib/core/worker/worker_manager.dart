@@ -40,7 +40,7 @@ abstract class WorkerManager {
   });
 }
 
-@Singleton(as: WorkerManager, dependsOn: [WorkManager])
+@Singleton(as: WorkerManager)
 class WorkerManagerImpl implements WorkerManager {
   final WorkManager _workManager;
 

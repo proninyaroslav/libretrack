@@ -61,7 +61,7 @@ abstract class ServiceRepository {
   bool get isAuthStorageSecured;
 }
 
-@Singleton(as: ServiceRepository, dependsOn: [AppDatabase])
+@Singleton(as: ServiceRepository)
 class ServiceRepositoryImpl implements ServiceRepository {
   final AppDatabase _db;
   final ServiceAuthStorage _authStorage;

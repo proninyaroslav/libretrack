@@ -34,7 +34,7 @@ abstract class WorkManagerRepository {
   Future<List<WorkInfo>> getAll();
 }
 
-@Singleton(as: WorkManagerRepository, dependsOn: [AppDatabase])
+@Singleton(as: WorkManagerRepository)
 class WorkManagerRepositoryImpl implements WorkManagerRepository {
   final AppDatabase _db;
 

@@ -78,7 +78,7 @@ abstract class TrackingRepository {
   });
 }
 
-@Singleton(as: TrackingRepository, dependsOn: [AppDatabase])
+@Singleton(as: TrackingRepository)
 class TrackingRepositoryImpl extends TrackingRepository {
   final AppDatabase _db;
 

@@ -87,7 +87,7 @@ NotificationAction? _parsePayload(String? payload) {
 }
 
 // TODO: Web and Desktop support
-@Singleton(as: NotificationManager, dependsOn: [AppSettings])
+@Singleton(as: NotificationManager)
 class NotificationManagerImpl implements NotificationManager {
   static final _ledColor = AppTheme.paletteLight.primary;
   static const _ledOnMs = 1;

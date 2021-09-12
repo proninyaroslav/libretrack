@@ -63,11 +63,7 @@ abstract class WorkManager {
   Future<void> cancelById(String workId);
 }
 
-@Singleton(
-  as: WorkManager,
-  env: [Env.prod],
-  dependsOn: [WorkManagerRepository],
-)
+@Singleton(as: WorkManager, env: [Env.prod])
 class WorkManagerImpl extends _WorkManagerImpl {
   WorkManagerImpl(
     WorkManagerRepository repo,
@@ -83,11 +79,7 @@ class WorkManagerImpl extends _WorkManagerImpl {
         );
 }
 
-@Singleton(
-  as: WorkManager,
-  env: [Env.dev, Env.test],
-  dependsOn: [WorkManagerRepository],
-)
+@Singleton(as: WorkManager, env: [Env.dev, Env.test])
 class DebugWorkManagerImpl extends _WorkManagerImpl {
   DebugWorkManagerImpl(
     WorkManagerRepository repo,

@@ -77,7 +77,7 @@ abstract class ShipmentRepository {
   );
 }
 
-@Singleton(as: ShipmentRepository, dependsOn: [AppDatabase])
+@Singleton(as: ShipmentRepository)
 class ShipmentRepositoryImpl extends ShipmentRepository {
   final AppDatabase _db;
 

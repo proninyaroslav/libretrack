@@ -36,7 +36,7 @@ class AppState with _$AppState {
   }) = AppStateChanged;
 }
 
-@Singleton(dependsOn: [AppSettings])
+@singleton
 class AppCubit extends Cubit<AppState> {
   AppCubit(AppSettings pref)
       : super(

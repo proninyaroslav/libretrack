@@ -24,6 +24,6 @@ final GetIt getIt = GetIt.instance;
 
 @injectableInit
 Future<void> initInjector(String environment) async {
-  $initGetIt(getIt, environment: environment);
+  await $initGetIt(getIt, environment: environment);
   await getIt.allReady();
 }

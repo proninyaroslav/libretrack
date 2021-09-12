@@ -25,7 +25,7 @@ import 'package:injectable/injectable.dart';
 import 'package:libretrack/core/storage/database.dart';
 
 /// Helper class that binds database events between Isolates
-@Singleton(dependsOn: [AppDatabase])
+@singleton
 class AppDatabaseIsolateBinder {
   static const _portName = 'libretrack_app_database_changed';
 

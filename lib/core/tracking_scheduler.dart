@@ -66,7 +66,7 @@ class EnqueueOneshotError with _$EnqueueOneshotError {
       EnqueueOneshotErrorLimiter;
 }
 
-@Singleton(as: TrackingScheduler, dependsOn: [WorkerManager])
+@Singleton(as: TrackingScheduler)
 class TrackingSchedulerImpl implements TrackingScheduler {
   final WorkerManager _workerManager;
   final TrackNumberRepository _trackRepo;

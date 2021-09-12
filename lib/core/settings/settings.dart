@@ -74,7 +74,7 @@ abstract class AppSettingsDefault {
   static const trayIcon = false;
 }
 
-@Singleton(as: AppSettings, dependsOn: [SharedPreferences])
+@Singleton(as: AppSettings)
 class AppSettingsImpl implements AppSettings {
   final SharedPreferences pref;
 
@@ -264,9 +264,11 @@ abstract class _AppSettingsKey {
 @module
 abstract class SharedPreferencesModule {
   @Singleton(env: [Env.prod, Env.dev])
+  @preResolve
   Future<SharedPreferences> get pref async => SharedPreferences.getInstance();
 
   @Singleton(env: [Env.test])
+  @preResolve
   Future<SharedPreferences> get testPref async => TestSharedPreferences();
 }
 

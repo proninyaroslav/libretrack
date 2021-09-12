@@ -94,7 +94,7 @@ abstract class TrackNumberRepository {
   );
 }
 
-@Singleton(as: TrackNumberRepository, dependsOn: [AppDatabase])
+@Singleton(as: TrackNumberRepository)
 class TrackNumberRepositoryImpl implements TrackNumberRepository {
   final AppDatabase _db;
 

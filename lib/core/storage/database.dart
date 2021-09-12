@@ -63,12 +63,14 @@ abstract class AppDatabase extends FloorDatabase {
 @module
 abstract class AppDatabaseModule {
   @Singleton(env: [Env.prod, Env.dev])
+  @preResolve
   Future<AppDatabase> get db async => $FloorAppDatabase
       .databaseBuilder('libretrack.db')
       .addMigrations(migrations)
       .build();
 
   @Singleton(env: [Env.test])
+  @preResolve
   Future<AppDatabase> get inMemoryDb async =>
       $FloorAppDatabase.inMemoryDatabaseBuilder().build();
 }
