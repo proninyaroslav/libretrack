@@ -86,7 +86,7 @@ NotificationAction? _parsePayload(String? payload) {
       : NotificationAction.fromJson(json as Map<String, dynamic>);
 }
 
-// TODO: Web and Desktop support
+// TODO: Web/Windows/macOS support
 @Singleton(as: NotificationManager)
 class NotificationManagerImpl implements NotificationManager {
   static final _ledColor = AppTheme.paletteLight.primary;
