@@ -21,6 +21,7 @@ export 'adaptive_scaffold.dart';
 export 'app_logo_icons.dart';
 export 'border_tab_indicator.dart';
 export 'custom_expansion_tile.dart';
+export 'custom_swiper_control.dart';
 export 'delete_parcel_dialog.dart';
 export 'dialog_scrollable_content.dart';
 export 'empty_list_stub.dart';
