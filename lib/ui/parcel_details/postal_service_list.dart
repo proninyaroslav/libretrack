@@ -163,15 +163,10 @@ class _PostalServicePageView extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       height: 80,
-      // Disable default scroll indicator, see
-      // https://github.com/flutter/flutter/issues/36474#issuecomment-513325171
-      child: NotificationListener<ScrollNotification>(
-        onNotification: (notification) => true,
-        child: PageView(
-          key: const PageStorageKey('postal_service_list'),
-          controller: controller,
-          children: children,
-        ),
+      child: PageView(
+        key: const PageStorageKey('postal_service_list'),
+        controller: controller,
+        children: children,
       ),
     );
   }

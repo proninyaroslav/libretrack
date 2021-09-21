@@ -316,6 +316,10 @@ class _Details extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scrollbar(
+        // Remove PageView scrollbar inside ListView
+        scrollbarOrientation: Directionality.of(context) == TextDirection.ltr
+            ? ScrollbarOrientation.right
+            : ScrollbarOrientation.left,
         child: ListView(
           key: const PageStorageKey('details_list'),
           padding: const EdgeInsets.all(8.0),
