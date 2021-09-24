@@ -234,6 +234,8 @@
     "openDetails": "Открыть подробности",
     "shareFailed": "Не удалось поделиться",
     "linuxTrayIconWarning": "В некоторых средах системный трей может не поддерживаться по умолчанию. Например, для работы в GNOME установите это расширение (или аналогичное): https://extensions.gnome.org/extension/615/appindicator-support/",
+    "previousPage": "Предыдущая страница",
+    "nextPage": "Следующая страница",
     "upsAddAccountDescription": "Необходимо ввести данные авторизации аккаунта UPS. Вы можете зарегистрировать его здесь: https://www.ups.com/doapp/signup?loc=ru_RU\nДля получения ключа доступа перейдите по ссылке и следуйте инструкциям: https://www.ups.com/upsdeveloperkit/manageaccesskeys?loc=ru_RU",
     "ups": "UPS",
     "russianPost": "Почта России",

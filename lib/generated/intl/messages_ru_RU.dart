@@ -201,6 +201,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "moveToArchive":
             MessageLookupByLibrary.simpleMessage("Переместить в архив"),
         "name": MessageLookupByLibrary.simpleMessage("Имя"),
+        "nextPage": MessageLookupByLibrary.simpleMessage("Следующая страница"),
         "no": MessageLookupByLibrary.simpleMessage("Нет"),
         "noAccounts": MessageLookupByLibrary.simpleMessage("Нет аккаунтов"),
         "noParcels": MessageLookupByLibrary.simpleMessage("Нет посылок"),
@@ -254,6 +255,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "postalService":
             MessageLookupByLibrary.simpleMessage("Почтовый сервис"),
         "poundUnitShort": m20,
+        "previousPage":
+            MessageLookupByLibrary.simpleMessage("Предыдущая страница"),
         "projectIssuesPage": MessageLookupByLibrary.simpleMessage(
             "https://github.com/proninyaroslav/libretrack/issues"),
         "refresh": MessageLookupByLibrary.simpleMessage("Обновить"),

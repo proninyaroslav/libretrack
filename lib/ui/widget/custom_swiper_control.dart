@@ -2,6 +2,8 @@ import 'package:card_swiper/card_swiper.dart';
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
+import '../../locale.dart';
+
 class CustomSwiperControl extends SwiperPlugin {
   final EdgeInsets padding;
   final EdgeInsets? margin;
@@ -37,16 +39,17 @@ class CustomSwiperControl extends SwiperPlugin {
       child = Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          _buildButton(config, prevColor, MdiIcons.chevronLeft, true),
-          _buildButton(config, nextColor, MdiIcons.chevronRight, false)
+          _buildButton(context, config, prevColor, MdiIcons.chevronLeft, true),
+          _buildButton(
+              context, config, nextColor, MdiIcons.chevronRight, false),
         ],
       );
     } else {
       child = Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          _buildButton(config, prevColor, MdiIcons.chevronDown, true),
-          _buildButton(config, nextColor, MdiIcons.chevronUp, false)
+          _buildButton(context, config, prevColor, MdiIcons.chevronDown, true),
+          _buildButton(context, config, nextColor, MdiIcons.chevronUp, false),
         ],
       );
     }
@@ -60,6 +63,7 @@ class CustomSwiperControl extends SwiperPlugin {
   }
 
   Widget _buildButton(
+    BuildContext context,
     SwiperPluginConfig? config,
     Color color,
     IconData iconDaga,
@@ -78,7 +82,8 @@ class CustomSwiperControl extends SwiperPlugin {
         padding: padding,
         child: Icon(
           iconDaga,
-          semanticLabel: previous ? 'Previous' : 'Next',
+          semanticLabel:
+              previous ? S.of(context).previousPage : S.of(context).nextPage,
           size: 25.0,
           color: color,
         ),
