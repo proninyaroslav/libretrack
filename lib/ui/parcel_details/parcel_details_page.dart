@@ -103,7 +103,7 @@ class _ParcelDetailsPageState extends State<ParcelDetailsPage> {
   }
 }
 
-class _Body extends StatelessWidget {
+class _Body extends StatefulWidget {
   final _PageType currentPage;
   final OnAddParcelCallback? onAddMissingParcel;
   final OnAddParcelCallback? onAddParcel;
@@ -116,6 +116,30 @@ class _Body extends StatelessWidget {
     this.onAddParcel,
     this.onShowErrors,
   }) : super(key: key);
+
+  @override
+  State<_Body> createState() => _BodyState();
+}
+
+class _BodyState extends State<_Body> {
+  late final ScrollController _detailsScrollController;
+  late final ScrollController _historyScrollController;
+
+  @override
+  void initState() {
+    super.initState();
+
+    _detailsScrollController = ScrollController();
+    _historyScrollController = ScrollController();
+  }
+
+  @override
+  void dispose() {
+    _detailsScrollController.dispose();
+    _historyScrollController.dispose();
+
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -143,7 +167,7 @@ class _Body extends StatelessWidget {
               child: CircularProgressIndicator(),
             ),
             notFound: (trackNumber) => _ParcelNotFound(
-              onAddPressed: () => onAddMissingParcel?.call(trackNumber),
+              onAddPressed: () => widget.onAddMissingParcel?.call(trackNumber),
             ),
             loadingFailed: (trackNumber, e) => LoadingPageError(
               onRefresh: () {
@@ -152,16 +176,22 @@ class _Body extends StatelessWidget {
             ),
             loaded: (trackNumber, info) {
               return FadeIndexedStack(
-                index: currentPage.index,
+                index: widget.currentPage.index,
                 duration: const Duration(milliseconds: 200),
                 children: [
-                  _Details(
-                    info: info,
-                    onShowErrors: onShowErrors,
-                    onAddParcel: onAddParcel,
+                  PrimaryScrollController(
+                    controller: _detailsScrollController,
+                    child: _Details(
+                      info: info,
+                      onShowErrors: widget.onShowErrors,
+                      onAddParcel: widget.onAddParcel,
+                    ),
                   ),
-                  TrackingHistory(
-                    trackingHistory: info.trackingHistory,
+                  PrimaryScrollController(
+                    controller: _historyScrollController,
+                    child: TrackingHistory(
+                      trackingHistory: info.trackingHistory,
+                    ),
                   ),
                 ],
               );
@@ -286,6 +316,10 @@ class _Details extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scrollbar(
+        // Remove PageView scrollbar inside ListView
+        notificationPredicate: (notification) {
+          return notification.metrics.axis == Axis.vertical;
+        },
         child: ListView(
           key: const PageStorageKey('details_list'),
           padding: const EdgeInsets.all(8.0),

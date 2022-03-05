@@ -197,6 +197,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "moveToArchive":
             MessageLookupByLibrary.simpleMessage("Move to archive"),
         "name": MessageLookupByLibrary.simpleMessage("Name"),
+        "nextPage": MessageLookupByLibrary.simpleMessage("Next page"),
         "no": MessageLookupByLibrary.simpleMessage("No"),
         "noAccounts": MessageLookupByLibrary.simpleMessage("No accounts"),
         "noParcels": MessageLookupByLibrary.simpleMessage("No packages"),
@@ -246,6 +247,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "password": MessageLookupByLibrary.simpleMessage("Password"),
         "postalService": MessageLookupByLibrary.simpleMessage("Postal service"),
         "poundUnitShort": m20,
+        "previousPage": MessageLookupByLibrary.simpleMessage("Previous page"),
         "projectIssuesPage": MessageLookupByLibrary.simpleMessage(
             "https://github.com/proninyaroslav/libretrack/issues"),
         "refresh": MessageLookupByLibrary.simpleMessage("Refresh"),

@@ -141,6 +141,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "8.1.2"
+  card_swiper:
+    dependency: "direct main"
+    description:
+      name: card_swiper
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.4"
   characters:
     dependency: transitive
     description:

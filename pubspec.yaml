@@ -25,6 +25,7 @@ dependencies:
   backdrop: ^0.6.0
   barcode_widget: ^2.0.0
   bloc: ^7.1.0
+  card_swiper: ^1.0.4
   collection: ^1.15.0
   connectivity_plus: ^1.0.6
   cupertino_icons: ^1.0.2

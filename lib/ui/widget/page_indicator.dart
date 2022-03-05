@@ -16,6 +16,7 @@
 // You should have received a copy of the GNU General Public License
 // along with LibreTrack.  If not, see <http://www.gnu.org/licenses/>.
 
+import 'package:card_swiper/card_swiper.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
@@ -37,20 +38,30 @@ class PageIndicator extends StatelessWidget {
       return const SizedBox.shrink();
     }
     final theme = Theme.of(context);
-    return Center(
-      child: Padding(
-        padding: padding,
-        child: SmoothPageIndicator(
-          controller: controller,
-          count: pageCount,
-          effect: ScrollingDotsEffect(
-            dotWidth: 6.0,
-            dotHeight: 6.0,
-            dotColor: theme.disabledColor,
-            activeDotColor: theme.indicatorColor,
-          ),
+    return Padding(
+      padding: padding,
+      child: SmoothPageIndicator(
+        controller: controller,
+        count: pageCount,
+        effect: ScrollingDotsEffect(
+          dotWidth: 6.0,
+          dotHeight: 6.0,
+          dotColor: theme.disabledColor,
+          activeDotColor: theme.indicatorColor,
         ),
       ),
+    );
+  }
+}
+
+class SwiperIndicatorPaginationBuilder extends SwiperPlugin {
+  const SwiperIndicatorPaginationBuilder();
+
+  @override
+  Widget build(BuildContext context, SwiperPluginConfig? config) {
+    return PageIndicator(
+      pageCount: config!.itemCount!,
+      controller: config.pageController!,
     );
   }
 }

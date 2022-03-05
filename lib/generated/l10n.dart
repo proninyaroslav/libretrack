@@ -2365,6 +2365,26 @@ class S {
     );
   }
 
+  /// `Previous page`
+  String get previousPage {
+    return Intl.message(
+      'Previous page',
+      name: 'previousPage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Next page`
+  String get nextPage {
+    return Intl.message(
+      'Next page',
+      name: 'nextPage',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `You need to enter your UPS account authorization information. You can register it here: https://www.ups.com/doapp/signup?loc=en_US\nTo obtain an Access Key, go the link and follow the instructions: https://www.ups.com/upsdeveloperkit/manageaccesskeys?loc=en_US`
   String get upsAddAccountDescription {
     return Intl.message(

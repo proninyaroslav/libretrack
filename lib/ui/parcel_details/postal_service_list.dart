@@ -16,6 +16,7 @@
 // You should have received a copy of the GNU General Public License
 // along with LibreTrack.  If not, see <http://www.gnu.org/licenses/>.
 
+import 'package:card_swiper/card_swiper.dart' hide PageIndicator;
 import 'package:flutter/material.dart';
 import 'package:libretrack/core/entity/entity.dart';
 import 'package:libretrack/ui/utils/utils.dart';
@@ -40,22 +41,6 @@ class PostalServiceList extends StatefulWidget {
 
 class _PostalServiceListState extends State<PostalServiceList>
     with AutomaticKeepAliveClientMixin {
-  late PageController _pageController;
-
-  @override
-  void initState() {
-    super.initState();
-
-    _pageController = PageController();
-  }
-
-  @override
-  void dispose() {
-    _pageController.dispose();
-
-    super.dispose();
-  }
-
   @override
   bool get wantKeepAlive => true;
 
@@ -82,13 +67,7 @@ class _PostalServiceListState extends State<PostalServiceList>
                 ),
               ),
               _PostalServicePageView(
-                controller: _pageController,
                 children: children,
-              ),
-              PageIndicator(
-                controller: _pageController,
-                pageCount: children.length,
-                padding: const EdgeInsets.fromLTRB(8.0, 0.0, 8.0, 8.0),
               ),
             ],
           );
@@ -150,27 +129,33 @@ class _PostalServiceListState extends State<PostalServiceList>
 }
 
 class _PostalServicePageView extends StatelessWidget {
-  final PageController controller;
   final List<Widget> children;
 
   const _PostalServicePageView({
     Key? key,
-    required this.controller,
     required this.children,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 80,
-      // Disable default scroll indicator, see
-      // https://github.com/flutter/flutter/issues/36474#issuecomment-513325171
-      child: NotificationListener<ScrollNotification>(
-        onNotification: (notification) => true,
-        child: PageView(
-          key: const PageStorageKey('postal_service_list'),
-          controller: controller,
-          children: children,
+      height: 88,
+      child: Swiper(
+        itemBuilder: (context, index) {
+          return Padding(
+            padding: children.length == 1
+                ? EdgeInsets.zero
+                : const EdgeInsets.symmetric(horizontal: 40.0),
+            child: children[index],
+          );
+        },
+        itemCount: children.length,
+        pagination: const SwiperPagination(
+          margin: EdgeInsets.symmetric(horizontal: 8.0),
+          builder: SwiperIndicatorPaginationBuilder(),
+        ),
+        control: const CustomSwiperControl(
+          margin: EdgeInsets.symmetric(horizontal: 8.0),
         ),
       ),
     );

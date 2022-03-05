@@ -24,6 +24,7 @@ import 'package:libretrack/ui/parcel_details/parcel_details.dart';
 import 'package:libretrack/ui/widget/custom_actions_row.dart';
 import 'package:libretrack/ui/widget/widget.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
+import 'package:responsive_builder/responsive_builder.dart';
 
 import '../../locale.dart';
 
@@ -58,8 +59,11 @@ class ParcelActions extends StatelessWidget {
           },
           orElse: () => <CustomAction>[],
         );
+        final size = MediaQuery.of(context).size;
+        final type = getDeviceType(size);
         return CustomActionsRow(
-          availableWidth: MediaQuery.of(context).size.width / 2,
+          availableWidth:
+              size.width / (type == DeviceScreenType.mobile ? 2 : 3),
           actionWidth: 48,
           actions: actions,
         );
