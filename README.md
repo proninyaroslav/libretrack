@@ -63,6 +63,7 @@ Track postal items directly on your device using accounts of postal services. Th
  - **Itialian** *(thanks albanobattistella)*
  - **Russian**
  - **Spanish** *(thanks sguinetti)*
+ - **French** *(thanks BNouailhac)*
 
 ## 💰 Donation
 

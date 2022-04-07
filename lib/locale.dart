@@ -31,6 +31,7 @@ class AppLocale {
     Locale('it', 'IT'),
     Locale('ru', 'RU'),
     Locale('sk', 'SK'),
+    Locale('fr'),
   ];
 
   static const Iterable<LocalizationsDelegate<dynamic>> localizationsDelegates =
