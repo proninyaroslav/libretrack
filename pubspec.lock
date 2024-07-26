@@ -1059,7 +1059,7 @@ packages:
       path: "."
       ref: fix-uri-path
       resolved-ref: ade703987e0dc26749c4291ad66d790e7d9dfa44
-      url: "git@github.com:kreativityapps/receive_sharing_intent.git"
+      url: "https://github.com/kreativityapps/receive_sharing_intent.git"
     source: git
     version: "1.8.0"
   responsive_builder:

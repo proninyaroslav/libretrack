@@ -75,7 +75,7 @@ dependency_overrides:
   #TODO: https://github.com/KasemJaffer/receive_sharing_intent/issues/306
   receive_sharing_intent:
     git:
-      url: git@github.com:kreativityapps/receive_sharing_intent.git
+      url: https://github.com/kreativityapps/receive_sharing_intent.git
       ref: fix-uri-path
 
 dev_dependencies:
