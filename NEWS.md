@@ -1,3 +1,9 @@
+### Version 1.4.0 (2024-07-26)
+
+* Android 14 support
+* Migrate to Flutter 3
+* New translations: Slovak, French
+
 ### Version 1.3.0 (2021-08-24)
 
 * Added USPS support
