@@ -63,6 +63,7 @@ Track postal items directly on your device using accounts of postal services. Th
  - **Itialian** *(thanks albanobattistella)*
  - **Russian**
  - **Spanish** *(thanks sguinetti)*
+ - **French** *(thanks BNouailhac)*
 
 ## 💰 Donation
 
@@ -77,7 +78,8 @@ If you like LibreTrack you can support developer with these methods. If you have
 in the gift card details https://smile.amazon.com/gp/product/B004LLIKVU/
  - **Liberapay**: [![liberapay](https://liberapay.com/assets/widgets/donate.svg)](https://liberapay.com/proninyaroslav/donate)
  - **Bitcoin**: `1Af9DgxtWvVp6bFiYQw2MeWtRzTXshRYpB`
- - **Nano**: `nano_1b13t35x5dwu39xcs3xj4ozfsniozfnxdqwjijy6efnkda6sc3hqie914fja`
+ - **Nano**: `nano_1jtaa1njf3pn66pi48uqbak3rpbn373px6xeugynwxm1yb5hyfb6ure15pyy`
+ - **Monero**: `48j4Mo7J7t51EeBf35Lpdmehmi9chUwzSXxHrnjpRJ6fPQafPWvSCdFafw3rA5ZRWievfYEDToNso8VppbJf2RVH9cdZmHa`
 
 ## ⚙️ Building
 
