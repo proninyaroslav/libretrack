@@ -1,6 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'service_info_cubit.dart';
 
@@ -11,36 +12,7 @@ part of 'service_info_cubit.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$ServiceInfoStateTearOff {
-  const _$ServiceInfoStateTearOff();
-
-  _ServiceInfoStateInitial initial() {
-    return const _ServiceInfoStateInitial();
-  }
-
-  _ServiceInfoStateLoaded loaded(
-      {required TrackingServiceInfo info,
-      required AuthData authData,
-      required bool isAuthStorageSecured}) {
-    return _ServiceInfoStateLoaded(
-      info: info,
-      authData: authData,
-      isAuthStorageSecured: isAuthStorageSecured,
-    );
-  }
-
-  ServiceInfoStateLoadingFailed loadingFailed({StorageError? error}) {
-    return ServiceInfoStateLoadingFailed(
-      error: error,
-    );
-  }
-}
-
-/// @nodoc
-const $ServiceInfoState = _$ServiceInfoStateTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$ServiceInfoState {
@@ -55,11 +27,11 @@ mixin _$ServiceInfoState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function(TrackingServiceInfo info, AuthData authData,
+    TResult? Function()? initial,
+    TResult? Function(TrackingServiceInfo info, AuthData authData,
             bool isAuthStorageSecured)?
         loaded,
-    TResult Function(StorageError? error)? loadingFailed,
+    TResult? Function(StorageError? error)? loadingFailed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -82,9 +54,9 @@ mixin _$ServiceInfoState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_ServiceInfoStateInitial value)? initial,
-    TResult Function(_ServiceInfoStateLoaded value)? loaded,
-    TResult Function(ServiceInfoStateLoadingFailed value)? loadingFailed,
+    TResult? Function(_ServiceInfoStateInitial value)? initial,
+    TResult? Function(_ServiceInfoStateLoaded value)? loaded,
+    TResult? Function(ServiceInfoStateLoadingFailed value)? loadingFailed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -101,45 +73,44 @@ mixin _$ServiceInfoState {
 abstract class $ServiceInfoStateCopyWith<$Res> {
   factory $ServiceInfoStateCopyWith(
           ServiceInfoState value, $Res Function(ServiceInfoState) then) =
-      _$ServiceInfoStateCopyWithImpl<$Res>;
+      _$ServiceInfoStateCopyWithImpl<$Res, ServiceInfoState>;
 }
 
 /// @nodoc
-class _$ServiceInfoStateCopyWithImpl<$Res>
+class _$ServiceInfoStateCopyWithImpl<$Res, $Val extends ServiceInfoState>
     implements $ServiceInfoStateCopyWith<$Res> {
   _$ServiceInfoStateCopyWithImpl(this._value, this._then);
 
-  final ServiceInfoState _value;
   // ignore: unused_field
-  final $Res Function(ServiceInfoState) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 }
 
 /// @nodoc
-abstract class _$ServiceInfoStateInitialCopyWith<$Res> {
-  factory _$ServiceInfoStateInitialCopyWith(_ServiceInfoStateInitial value,
-          $Res Function(_ServiceInfoStateInitial) then) =
-      __$ServiceInfoStateInitialCopyWithImpl<$Res>;
+abstract class _$$ServiceInfoStateInitialImplCopyWith<$Res> {
+  factory _$$ServiceInfoStateInitialImplCopyWith(
+          _$ServiceInfoStateInitialImpl value,
+          $Res Function(_$ServiceInfoStateInitialImpl) then) =
+      __$$ServiceInfoStateInitialImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$ServiceInfoStateInitialCopyWithImpl<$Res>
-    extends _$ServiceInfoStateCopyWithImpl<$Res>
-    implements _$ServiceInfoStateInitialCopyWith<$Res> {
-  __$ServiceInfoStateInitialCopyWithImpl(_ServiceInfoStateInitial _value,
-      $Res Function(_ServiceInfoStateInitial) _then)
-      : super(_value, (v) => _then(v as _ServiceInfoStateInitial));
-
-  @override
-  _ServiceInfoStateInitial get _value =>
-      super._value as _ServiceInfoStateInitial;
+class __$$ServiceInfoStateInitialImplCopyWithImpl<$Res>
+    extends _$ServiceInfoStateCopyWithImpl<$Res, _$ServiceInfoStateInitialImpl>
+    implements _$$ServiceInfoStateInitialImplCopyWith<$Res> {
+  __$$ServiceInfoStateInitialImplCopyWithImpl(
+      _$ServiceInfoStateInitialImpl _value,
+      $Res Function(_$ServiceInfoStateInitialImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_ServiceInfoStateInitial
+class _$ServiceInfoStateInitialImpl
     with DiagnosticableTreeMixin
     implements _ServiceInfoStateInitial {
-  const _$_ServiceInfoStateInitial();
+  const _$ServiceInfoStateInitialImpl();
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
@@ -149,12 +120,14 @@ class _$_ServiceInfoStateInitial
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
-    properties..add(DiagnosticsProperty('type', 'ServiceInfoState.initial'));
+    properties.add(DiagnosticsProperty('type', 'ServiceInfoState.initial'));
   }
 
   @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) || (other is _ServiceInfoStateInitial);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ServiceInfoStateInitialImpl);
   }
 
   @override
@@ -175,11 +148,11 @@ class _$_ServiceInfoStateInitial
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function(TrackingServiceInfo info, AuthData authData,
+    TResult? Function()? initial,
+    TResult? Function(TrackingServiceInfo info, AuthData authData,
             bool isAuthStorageSecured)?
         loaded,
-    TResult Function(StorageError? error)? loadingFailed,
+    TResult? Function(StorageError? error)? loadingFailed,
   }) {
     return initial?.call();
   }
@@ -214,9 +187,9 @@ class _$_ServiceInfoStateInitial
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_ServiceInfoStateInitial value)? initial,
-    TResult Function(_ServiceInfoStateLoaded value)? loaded,
-    TResult Function(ServiceInfoStateLoadingFailed value)? loadingFailed,
+    TResult? Function(_ServiceInfoStateInitial value)? initial,
+    TResult? Function(_ServiceInfoStateLoaded value)? loaded,
+    TResult? Function(ServiceInfoStateLoadingFailed value)? loadingFailed,
   }) {
     return initial?.call(this);
   }
@@ -237,45 +210,46 @@ class _$_ServiceInfoStateInitial
 }
 
 abstract class _ServiceInfoStateInitial implements ServiceInfoState {
-  const factory _ServiceInfoStateInitial() = _$_ServiceInfoStateInitial;
+  const factory _ServiceInfoStateInitial() = _$ServiceInfoStateInitialImpl;
 }
 
 /// @nodoc
-abstract class _$ServiceInfoStateLoadedCopyWith<$Res> {
-  factory _$ServiceInfoStateLoadedCopyWith(_ServiceInfoStateLoaded value,
-          $Res Function(_ServiceInfoStateLoaded) then) =
-      __$ServiceInfoStateLoadedCopyWithImpl<$Res>;
+abstract class _$$ServiceInfoStateLoadedImplCopyWith<$Res> {
+  factory _$$ServiceInfoStateLoadedImplCopyWith(
+          _$ServiceInfoStateLoadedImpl value,
+          $Res Function(_$ServiceInfoStateLoadedImpl) then) =
+      __$$ServiceInfoStateLoadedImplCopyWithImpl<$Res>;
+  @useResult
   $Res call(
       {TrackingServiceInfo info, AuthData authData, bool isAuthStorageSecured});
 }
 
 /// @nodoc
-class __$ServiceInfoStateLoadedCopyWithImpl<$Res>
-    extends _$ServiceInfoStateCopyWithImpl<$Res>
-    implements _$ServiceInfoStateLoadedCopyWith<$Res> {
-  __$ServiceInfoStateLoadedCopyWithImpl(_ServiceInfoStateLoaded _value,
-      $Res Function(_ServiceInfoStateLoaded) _then)
-      : super(_value, (v) => _then(v as _ServiceInfoStateLoaded));
+class __$$ServiceInfoStateLoadedImplCopyWithImpl<$Res>
+    extends _$ServiceInfoStateCopyWithImpl<$Res, _$ServiceInfoStateLoadedImpl>
+    implements _$$ServiceInfoStateLoadedImplCopyWith<$Res> {
+  __$$ServiceInfoStateLoadedImplCopyWithImpl(
+      _$ServiceInfoStateLoadedImpl _value,
+      $Res Function(_$ServiceInfoStateLoadedImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _ServiceInfoStateLoaded get _value => super._value as _ServiceInfoStateLoaded;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? info = freezed,
-    Object? authData = freezed,
-    Object? isAuthStorageSecured = freezed,
+    Object? info = null,
+    Object? authData = null,
+    Object? isAuthStorageSecured = null,
   }) {
-    return _then(_ServiceInfoStateLoaded(
-      info: info == freezed
+    return _then(_$ServiceInfoStateLoadedImpl(
+      info: null == info
           ? _value.info
           : info // ignore: cast_nullable_to_non_nullable
               as TrackingServiceInfo,
-      authData: authData == freezed
+      authData: null == authData
           ? _value.authData
           : authData // ignore: cast_nullable_to_non_nullable
               as AuthData,
-      isAuthStorageSecured: isAuthStorageSecured == freezed
+      isAuthStorageSecured: null == isAuthStorageSecured
           ? _value.isAuthStorageSecured
           : isAuthStorageSecured // ignore: cast_nullable_to_non_nullable
               as bool,
@@ -285,10 +259,10 @@ class __$ServiceInfoStateLoadedCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_ServiceInfoStateLoaded
+class _$ServiceInfoStateLoadedImpl
     with DiagnosticableTreeMixin
     implements _ServiceInfoStateLoaded {
-  const _$_ServiceInfoStateLoaded(
+  const _$ServiceInfoStateLoadedImpl(
       {required this.info,
       required this.authData,
       required this.isAuthStorageSecured});
@@ -316,31 +290,26 @@ class _$_ServiceInfoStateLoaded
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is _ServiceInfoStateLoaded &&
-            (identical(other.info, info) ||
-                const DeepCollectionEquality().equals(other.info, info)) &&
-            (identical(other.authData, authData) ||
-                const DeepCollectionEquality()
-                    .equals(other.authData, authData)) &&
+        (other.runtimeType == runtimeType &&
+            other is _$ServiceInfoStateLoadedImpl &&
+            (identical(other.info, info) || other.info == info) &&
+            const DeepCollectionEquality().equals(other.authData, authData) &&
             (identical(other.isAuthStorageSecured, isAuthStorageSecured) ||
-                const DeepCollectionEquality()
-                    .equals(other.isAuthStorageSecured, isAuthStorageSecured)));
+                other.isAuthStorageSecured == isAuthStorageSecured));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(info) ^
-      const DeepCollectionEquality().hash(authData) ^
-      const DeepCollectionEquality().hash(isAuthStorageSecured);
+  int get hashCode => Object.hash(runtimeType, info,
+      const DeepCollectionEquality().hash(authData), isAuthStorageSecured);
 
   @JsonKey(ignore: true)
   @override
-  _$ServiceInfoStateLoadedCopyWith<_ServiceInfoStateLoaded> get copyWith =>
-      __$ServiceInfoStateLoadedCopyWithImpl<_ServiceInfoStateLoaded>(
-          this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$ServiceInfoStateLoadedImplCopyWith<_$ServiceInfoStateLoadedImpl>
+      get copyWith => __$$ServiceInfoStateLoadedImplCopyWithImpl<
+          _$ServiceInfoStateLoadedImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -357,11 +326,11 @@ class _$_ServiceInfoStateLoaded
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function(TrackingServiceInfo info, AuthData authData,
+    TResult? Function()? initial,
+    TResult? Function(TrackingServiceInfo info, AuthData authData,
             bool isAuthStorageSecured)?
         loaded,
-    TResult Function(StorageError? error)? loadingFailed,
+    TResult? Function(StorageError? error)? loadingFailed,
   }) {
     return loaded?.call(info, authData, isAuthStorageSecured);
   }
@@ -396,9 +365,9 @@ class _$_ServiceInfoStateLoaded
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_ServiceInfoStateInitial value)? initial,
-    TResult Function(_ServiceInfoStateLoaded value)? loaded,
-    TResult Function(ServiceInfoStateLoadingFailed value)? loadingFailed,
+    TResult? Function(_ServiceInfoStateInitial value)? initial,
+    TResult? Function(_ServiceInfoStateLoaded value)? loaded,
+    TResult? Function(ServiceInfoStateLoadingFailed value)? loadingFailed,
   }) {
     return loaded?.call(this);
   }
@@ -420,48 +389,47 @@ class _$_ServiceInfoStateLoaded
 
 abstract class _ServiceInfoStateLoaded implements ServiceInfoState {
   const factory _ServiceInfoStateLoaded(
-      {required TrackingServiceInfo info,
-      required AuthData authData,
-      required bool isAuthStorageSecured}) = _$_ServiceInfoStateLoaded;
+      {required final TrackingServiceInfo info,
+      required final AuthData authData,
+      required final bool isAuthStorageSecured}) = _$ServiceInfoStateLoadedImpl;
 
-  TrackingServiceInfo get info => throw _privateConstructorUsedError;
-  AuthData get authData => throw _privateConstructorUsedError;
-  bool get isAuthStorageSecured => throw _privateConstructorUsedError;
+  TrackingServiceInfo get info;
+  AuthData get authData;
+  bool get isAuthStorageSecured;
   @JsonKey(ignore: true)
-  _$ServiceInfoStateLoadedCopyWith<_ServiceInfoStateLoaded> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$ServiceInfoStateLoadedImplCopyWith<_$ServiceInfoStateLoadedImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $ServiceInfoStateLoadingFailedCopyWith<$Res> {
-  factory $ServiceInfoStateLoadingFailedCopyWith(
-          ServiceInfoStateLoadingFailed value,
-          $Res Function(ServiceInfoStateLoadingFailed) then) =
-      _$ServiceInfoStateLoadingFailedCopyWithImpl<$Res>;
+abstract class _$$ServiceInfoStateLoadingFailedImplCopyWith<$Res> {
+  factory _$$ServiceInfoStateLoadingFailedImplCopyWith(
+          _$ServiceInfoStateLoadingFailedImpl value,
+          $Res Function(_$ServiceInfoStateLoadingFailedImpl) then) =
+      __$$ServiceInfoStateLoadingFailedImplCopyWithImpl<$Res>;
+  @useResult
   $Res call({StorageError? error});
 
   $StorageErrorCopyWith<$Res>? get error;
 }
 
 /// @nodoc
-class _$ServiceInfoStateLoadingFailedCopyWithImpl<$Res>
-    extends _$ServiceInfoStateCopyWithImpl<$Res>
-    implements $ServiceInfoStateLoadingFailedCopyWith<$Res> {
-  _$ServiceInfoStateLoadingFailedCopyWithImpl(
-      ServiceInfoStateLoadingFailed _value,
-      $Res Function(ServiceInfoStateLoadingFailed) _then)
-      : super(_value, (v) => _then(v as ServiceInfoStateLoadingFailed));
+class __$$ServiceInfoStateLoadingFailedImplCopyWithImpl<$Res>
+    extends _$ServiceInfoStateCopyWithImpl<$Res,
+        _$ServiceInfoStateLoadingFailedImpl>
+    implements _$$ServiceInfoStateLoadingFailedImplCopyWith<$Res> {
+  __$$ServiceInfoStateLoadingFailedImplCopyWithImpl(
+      _$ServiceInfoStateLoadingFailedImpl _value,
+      $Res Function(_$ServiceInfoStateLoadingFailedImpl) _then)
+      : super(_value, _then);
 
-  @override
-  ServiceInfoStateLoadingFailed get _value =>
-      super._value as ServiceInfoStateLoadingFailed;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? error = freezed,
   }) {
-    return _then(ServiceInfoStateLoadingFailed(
-      error: error == freezed
+    return _then(_$ServiceInfoStateLoadingFailedImpl(
+      error: freezed == error
           ? _value.error
           : error // ignore: cast_nullable_to_non_nullable
               as StorageError?,
@@ -469,6 +437,7 @@ class _$ServiceInfoStateLoadingFailedCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $StorageErrorCopyWith<$Res>? get error {
     if (_value.error == null) {
       return null;
@@ -482,10 +451,10 @@ class _$ServiceInfoStateLoadingFailedCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$ServiceInfoStateLoadingFailed
+class _$ServiceInfoStateLoadingFailedImpl
     with DiagnosticableTreeMixin
     implements ServiceInfoStateLoadingFailed {
-  const _$ServiceInfoStateLoadingFailed({this.error});
+  const _$ServiceInfoStateLoadingFailedImpl({this.error});
 
   @override
   final StorageError? error;
@@ -504,22 +473,23 @@ class _$ServiceInfoStateLoadingFailed
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is ServiceInfoStateLoadingFailed &&
-            (identical(other.error, error) ||
-                const DeepCollectionEquality().equals(other.error, error)));
+        (other.runtimeType == runtimeType &&
+            other is _$ServiceInfoStateLoadingFailedImpl &&
+            (identical(other.error, error) || other.error == error));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(error);
+  int get hashCode => Object.hash(runtimeType, error);
 
   @JsonKey(ignore: true)
   @override
-  $ServiceInfoStateLoadingFailedCopyWith<ServiceInfoStateLoadingFailed>
-      get copyWith => _$ServiceInfoStateLoadingFailedCopyWithImpl<
-          ServiceInfoStateLoadingFailed>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$ServiceInfoStateLoadingFailedImplCopyWith<
+          _$ServiceInfoStateLoadingFailedImpl>
+      get copyWith => __$$ServiceInfoStateLoadingFailedImplCopyWithImpl<
+          _$ServiceInfoStateLoadingFailedImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -536,11 +506,11 @@ class _$ServiceInfoStateLoadingFailed
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function(TrackingServiceInfo info, AuthData authData,
+    TResult? Function()? initial,
+    TResult? Function(TrackingServiceInfo info, AuthData authData,
             bool isAuthStorageSecured)?
         loaded,
-    TResult Function(StorageError? error)? loadingFailed,
+    TResult? Function(StorageError? error)? loadingFailed,
   }) {
     return loadingFailed?.call(error);
   }
@@ -575,9 +545,9 @@ class _$ServiceInfoStateLoadingFailed
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_ServiceInfoStateInitial value)? initial,
-    TResult Function(_ServiceInfoStateLoaded value)? loaded,
-    TResult Function(ServiceInfoStateLoadingFailed value)? loadingFailed,
+    TResult? Function(_ServiceInfoStateInitial value)? initial,
+    TResult? Function(_ServiceInfoStateLoaded value)? loaded,
+    TResult? Function(ServiceInfoStateLoadingFailed value)? loadingFailed,
   }) {
     return loadingFailed?.call(this);
   }
@@ -598,11 +568,12 @@ class _$ServiceInfoStateLoadingFailed
 }
 
 abstract class ServiceInfoStateLoadingFailed implements ServiceInfoState {
-  const factory ServiceInfoStateLoadingFailed({StorageError? error}) =
-      _$ServiceInfoStateLoadingFailed;
+  const factory ServiceInfoStateLoadingFailed({final StorageError? error}) =
+      _$ServiceInfoStateLoadingFailedImpl;
 
-  StorageError? get error => throw _privateConstructorUsedError;
+  StorageError? get error;
   @JsonKey(ignore: true)
-  $ServiceInfoStateLoadingFailedCopyWith<ServiceInfoStateLoadingFailed>
+  _$$ServiceInfoStateLoadingFailedImplCopyWith<
+          _$ServiceInfoStateLoadingFailedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

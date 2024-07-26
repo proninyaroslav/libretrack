@@ -33,9 +33,9 @@ class EditAccountPage extends StatefulWidget {
   final TrackingServiceType serviceType;
 
   const EditAccountPage({
-    Key? key,
+    super.key,
     required this.serviceType,
-  }) : super(key: key);
+  });
 
   @override
   EditAccountPageState createState() => EditAccountPageState();
@@ -108,7 +108,7 @@ class EditAccountPageState extends State<EditAccountPage> {
     StackTrace? stackTrace,
   ) {
     const msg = 'Failed to edit account';
-    log().e(MdiIcons.signal2G, e, stackTrace);
+    log().e(MdiIcons.signal2G, error: e, stackTrace: stackTrace);
 
     final reportCubit = context.read<ErrorReportCubit>();
     showDialog(
@@ -158,7 +158,7 @@ class EditAccountPageState extends State<EditAccountPage> {
 class _ApplyButton extends StatelessWidget {
   final VoidCallback? onPressed;
 
-  const _ApplyButton({Key? key, this.onPressed}) : super(key: key);
+  const _ApplyButton({this.onPressed});
 
   @override
   Widget build(BuildContext context) {
@@ -196,10 +196,9 @@ class _DialogContent extends StatelessWidget {
   final VoidCallback? onPageRefresh;
 
   const _DialogContent({
-    Key? key,
     this.serviceAuthFormKey,
     this.onPageRefresh,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -212,7 +211,8 @@ class _DialogContent extends StatelessWidget {
             state.maybeWhen(
               loadingFailed: (error) {
                 error?.when(database: (e, stackTrace) {
-                  log().e('Unable to load account data', e, stackTrace);
+                  log().e('Unable to load account data',
+                      error: e, stackTrace: stackTrace);
                 });
               },
               orElse: () {},

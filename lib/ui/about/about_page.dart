@@ -29,7 +29,7 @@ import '../theme.dart';
 import 'about_cubit.dart';
 
 class AboutPage extends StatefulWidget {
-  const AboutPage({Key? key}) : super(key: key);
+  const AboutPage({super.key});
 
   @override
   _AboutPageState createState() => _AboutPageState();
@@ -73,11 +73,10 @@ class _AboutDialog extends StatelessWidget {
   final Widget appIcon;
 
   const _AboutDialog({
-    Key? key,
     required this.appName,
     required this.appVersion,
     required this.appIcon,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -124,11 +123,10 @@ class _Header extends StatelessWidget {
   final Widget appIcon;
 
   const _Header({
-    Key? key,
     required this.appName,
     required this.appVersion,
     required this.appIcon,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -146,11 +144,11 @@ class _Header extends StatelessWidget {
               children: [
                 Text(
                   appName,
-                  style: Theme.of(context).textTheme.headline5,
+                  style: Theme.of(context).textTheme.headlineSmall,
                 ),
                 Text(
                   appVersion,
-                  style: Theme.of(context).textTheme.bodyText2,
+                  style: Theme.of(context).textTheme.bodyMedium,
                 ),
                 const SizedBox(height: _textVerticalSeparation),
               ],
@@ -163,9 +161,7 @@ class _Header extends StatelessWidget {
 }
 
 class _ChangelogButton extends StatelessWidget {
-  const _ChangelogButton({
-    Key? key,
-  }) : super(key: key);
+  const _ChangelogButton();
 
   @override
   Widget build(BuildContext context) {
@@ -179,7 +175,8 @@ class _ChangelogButton extends StatelessWidget {
         try {
           await launch(url);
         } on PlatformException catch (e, stackTrace) {
-          log().w('Unable to open cnagelog URL', e, stackTrace);
+          log().w('Unable to open cnagelog URL',
+              error: e, stackTrace: stackTrace);
           Toast.of(context).show(
             text: S.of(context).openLinkFailed,
           );

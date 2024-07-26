@@ -18,15 +18,15 @@
 
 import 'dart:collection';
 
+import 'package:collection/collection.dart';
 import 'package:floor/floor.dart';
-import 'package:freezed_annotation/freezed_annotation.dart';
 
 import 'converter/tracking_service_type_converter.dart';
 import 'entity.dart';
 
 class AuthData extends MapView<String, String>
     with UnmodifiableMapMixin<String, String> {
-  const AuthData(Map<String, String> map) : super(map);
+  const AuthData(super.map);
 
   const AuthData.empty() : super(const {});
 }

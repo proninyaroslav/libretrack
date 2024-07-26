@@ -27,7 +27,6 @@ import 'package:libretrack/core/work_manager/work_manager.dart';
 
 import '../../logger.dart';
 import 'registered_workers.dart';
-import 'worker.dart';
 
 /// Own implementation of [WorkManager], which is used if the
 /// `workmanager` plugin isn't available for this platform or
@@ -268,7 +267,8 @@ class ConstraintsManagerImpl implements ConstraintsManager {
     return _checkConnectivityResult(result, type);
   }
 
-  bool _checkConnectivityResult(ConnectivityResult result, NetworkType? type) {
+  bool _checkConnectivityResult(
+      List<ConnectivityResult> result, NetworkType? type) {
     if (type == NetworkType.notRequired) {
       return true;
     }
@@ -278,11 +278,11 @@ class ConstraintsManagerImpl implements ConstraintsManager {
     }
     switch (type) {
       case NetworkType.connected:
-        return result != ConnectivityResult.none;
+        return !result.contains(ConnectivityResult.none);
       case NetworkType.metered:
-        return result == ConnectivityResult.mobile;
+        return result.contains(ConnectivityResult.mobile);
       case NetworkType.unmetered:
-        return result != ConnectivityResult.mobile;
+        return !result.contains(ConnectivityResult.mobile);
       default:
         throw UnsupportedError('Unknown network type');
     }

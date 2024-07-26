@@ -22,7 +22,6 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:libretrack/core/entity/entity.dart';
 import 'package:libretrack/core/work_manager/registered_workers.dart';
 import 'package:libretrack/core/work_manager/work_manager.dart';
-import 'package:libretrack/core/work_manager/worker.dart';
 import 'package:libretrack/core/worker/tracking_worker.dart';
 import 'package:libretrack/core/worker/worker_manager.dart';
 import 'package:mocktail/mocktail.dart';

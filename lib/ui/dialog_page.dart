@@ -26,13 +26,13 @@ class DialogPage<T> extends Page<T> {
 
   const DialogPage({
     required this.child,
-    LocalKey? key,
-    String? name,
-    Object? arguments,
+    super.key,
+    super.name,
+    super.arguments,
     this.useSafeArea = true,
     this.barrierDismissible = true,
     this.barrierColor = Colors.black54,
-  }) : super(key: key, name: name, arguments: arguments);
+  });
 
   @override
   Route<T> createRoute(BuildContext context) {

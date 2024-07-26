@@ -1,6 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'tracking_scheduler.dart';
 
@@ -11,42 +12,11 @@ part of 'tracking_scheduler.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$EnqueueOneshotResultTearOff {
-  const _$EnqueueOneshotResultTearOff();
-
-  EnqueueOneshotResultSuccess success({required String trackNumber}) {
-    return EnqueueOneshotResultSuccess(
-      trackNumber: trackNumber,
-    );
-  }
-
-  EnqueueOneshotResultDissalowed dissalowed(
-      {required String trackNumber, required Duration remainingLimitTime}) {
-    return EnqueueOneshotResultDissalowed(
-      trackNumber: trackNumber,
-      remainingLimitTime: remainingLimitTime,
-    );
-  }
-
-  EnqueueOneshotResultError error(
-      {required String trackNumber, required EnqueueOneshotError error}) {
-    return EnqueueOneshotResultError(
-      trackNumber: trackNumber,
-      error: error,
-    );
-  }
-}
-
-/// @nodoc
-const $EnqueueOneshotResult = _$EnqueueOneshotResultTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$EnqueueOneshotResult {
   String get trackNumber => throw _privateConstructorUsedError;
-
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(String trackNumber) success,
@@ -58,10 +28,10 @@ mixin _$EnqueueOneshotResult {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(String trackNumber)? success,
-    TResult Function(String trackNumber, Duration remainingLimitTime)?
+    TResult? Function(String trackNumber)? success,
+    TResult? Function(String trackNumber, Duration remainingLimitTime)?
         dissalowed,
-    TResult Function(String trackNumber, EnqueueOneshotError error)? error,
+    TResult? Function(String trackNumber, EnqueueOneshotError error)? error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -82,9 +52,9 @@ mixin _$EnqueueOneshotResult {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(EnqueueOneshotResultSuccess value)? success,
-    TResult Function(EnqueueOneshotResultDissalowed value)? dissalowed,
-    TResult Function(EnqueueOneshotResultError value)? error,
+    TResult? Function(EnqueueOneshotResultSuccess value)? success,
+    TResult? Function(EnqueueOneshotResultDissalowed value)? dissalowed,
+    TResult? Function(EnqueueOneshotResultError value)? error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -105,61 +75,65 @@ mixin _$EnqueueOneshotResult {
 abstract class $EnqueueOneshotResultCopyWith<$Res> {
   factory $EnqueueOneshotResultCopyWith(EnqueueOneshotResult value,
           $Res Function(EnqueueOneshotResult) then) =
-      _$EnqueueOneshotResultCopyWithImpl<$Res>;
+      _$EnqueueOneshotResultCopyWithImpl<$Res, EnqueueOneshotResult>;
+  @useResult
   $Res call({String trackNumber});
 }
 
 /// @nodoc
-class _$EnqueueOneshotResultCopyWithImpl<$Res>
+class _$EnqueueOneshotResultCopyWithImpl<$Res,
+        $Val extends EnqueueOneshotResult>
     implements $EnqueueOneshotResultCopyWith<$Res> {
   _$EnqueueOneshotResultCopyWithImpl(this._value, this._then);
 
-  final EnqueueOneshotResult _value;
   // ignore: unused_field
-  final $Res Function(EnqueueOneshotResult) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? trackNumber = freezed,
+    Object? trackNumber = null,
   }) {
     return _then(_value.copyWith(
-      trackNumber: trackNumber == freezed
+      trackNumber: null == trackNumber
           ? _value.trackNumber
           : trackNumber // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class $EnqueueOneshotResultSuccessCopyWith<$Res>
+abstract class _$$EnqueueOneshotResultSuccessImplCopyWith<$Res>
     implements $EnqueueOneshotResultCopyWith<$Res> {
-  factory $EnqueueOneshotResultSuccessCopyWith(
-          EnqueueOneshotResultSuccess value,
-          $Res Function(EnqueueOneshotResultSuccess) then) =
-      _$EnqueueOneshotResultSuccessCopyWithImpl<$Res>;
+  factory _$$EnqueueOneshotResultSuccessImplCopyWith(
+          _$EnqueueOneshotResultSuccessImpl value,
+          $Res Function(_$EnqueueOneshotResultSuccessImpl) then) =
+      __$$EnqueueOneshotResultSuccessImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({String trackNumber});
 }
 
 /// @nodoc
-class _$EnqueueOneshotResultSuccessCopyWithImpl<$Res>
-    extends _$EnqueueOneshotResultCopyWithImpl<$Res>
-    implements $EnqueueOneshotResultSuccessCopyWith<$Res> {
-  _$EnqueueOneshotResultSuccessCopyWithImpl(EnqueueOneshotResultSuccess _value,
-      $Res Function(EnqueueOneshotResultSuccess) _then)
-      : super(_value, (v) => _then(v as EnqueueOneshotResultSuccess));
+class __$$EnqueueOneshotResultSuccessImplCopyWithImpl<$Res>
+    extends _$EnqueueOneshotResultCopyWithImpl<$Res,
+        _$EnqueueOneshotResultSuccessImpl>
+    implements _$$EnqueueOneshotResultSuccessImplCopyWith<$Res> {
+  __$$EnqueueOneshotResultSuccessImplCopyWithImpl(
+      _$EnqueueOneshotResultSuccessImpl _value,
+      $Res Function(_$EnqueueOneshotResultSuccessImpl) _then)
+      : super(_value, _then);
 
-  @override
-  EnqueueOneshotResultSuccess get _value =>
-      super._value as EnqueueOneshotResultSuccess;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? trackNumber = freezed,
+    Object? trackNumber = null,
   }) {
-    return _then(EnqueueOneshotResultSuccess(
-      trackNumber: trackNumber == freezed
+    return _then(_$EnqueueOneshotResultSuccessImpl(
+      trackNumber: null == trackNumber
           ? _value.trackNumber
           : trackNumber // ignore: cast_nullable_to_non_nullable
               as String,
@@ -169,8 +143,8 @@ class _$EnqueueOneshotResultSuccessCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$EnqueueOneshotResultSuccess implements EnqueueOneshotResultSuccess {
-  const _$EnqueueOneshotResultSuccess({required this.trackNumber});
+class _$EnqueueOneshotResultSuccessImpl implements EnqueueOneshotResultSuccess {
+  const _$EnqueueOneshotResultSuccessImpl({required this.trackNumber});
 
   @override
   final String trackNumber;
@@ -181,23 +155,23 @@ class _$EnqueueOneshotResultSuccess implements EnqueueOneshotResultSuccess {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is EnqueueOneshotResultSuccess &&
+        (other.runtimeType == runtimeType &&
+            other is _$EnqueueOneshotResultSuccessImpl &&
             (identical(other.trackNumber, trackNumber) ||
-                const DeepCollectionEquality()
-                    .equals(other.trackNumber, trackNumber)));
+                other.trackNumber == trackNumber));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(trackNumber);
+  int get hashCode => Object.hash(runtimeType, trackNumber);
 
   @JsonKey(ignore: true)
   @override
-  $EnqueueOneshotResultSuccessCopyWith<EnqueueOneshotResultSuccess>
-      get copyWith => _$EnqueueOneshotResultSuccessCopyWithImpl<
-          EnqueueOneshotResultSuccess>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$EnqueueOneshotResultSuccessImplCopyWith<_$EnqueueOneshotResultSuccessImpl>
+      get copyWith => __$$EnqueueOneshotResultSuccessImplCopyWithImpl<
+          _$EnqueueOneshotResultSuccessImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -214,10 +188,10 @@ class _$EnqueueOneshotResultSuccess implements EnqueueOneshotResultSuccess {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(String trackNumber)? success,
-    TResult Function(String trackNumber, Duration remainingLimitTime)?
+    TResult? Function(String trackNumber)? success,
+    TResult? Function(String trackNumber, Duration remainingLimitTime)?
         dissalowed,
-    TResult Function(String trackNumber, EnqueueOneshotError error)? error,
+    TResult? Function(String trackNumber, EnqueueOneshotError error)? error,
   }) {
     return success?.call(trackNumber);
   }
@@ -250,9 +224,9 @@ class _$EnqueueOneshotResultSuccess implements EnqueueOneshotResultSuccess {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(EnqueueOneshotResultSuccess value)? success,
-    TResult Function(EnqueueOneshotResultDissalowed value)? dissalowed,
-    TResult Function(EnqueueOneshotResultError value)? error,
+    TResult? Function(EnqueueOneshotResultSuccess value)? success,
+    TResult? Function(EnqueueOneshotResultDissalowed value)? dissalowed,
+    TResult? Function(EnqueueOneshotResultError value)? error,
   }) {
     return success?.call(this);
   }
@@ -273,52 +247,51 @@ class _$EnqueueOneshotResultSuccess implements EnqueueOneshotResultSuccess {
 }
 
 abstract class EnqueueOneshotResultSuccess implements EnqueueOneshotResult {
-  const factory EnqueueOneshotResultSuccess({required String trackNumber}) =
-      _$EnqueueOneshotResultSuccess;
+  const factory EnqueueOneshotResultSuccess(
+      {required final String trackNumber}) = _$EnqueueOneshotResultSuccessImpl;
 
   @override
-  String get trackNumber => throw _privateConstructorUsedError;
+  String get trackNumber;
   @override
   @JsonKey(ignore: true)
-  $EnqueueOneshotResultSuccessCopyWith<EnqueueOneshotResultSuccess>
+  _$$EnqueueOneshotResultSuccessImplCopyWith<_$EnqueueOneshotResultSuccessImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $EnqueueOneshotResultDissalowedCopyWith<$Res>
+abstract class _$$EnqueueOneshotResultDissalowedImplCopyWith<$Res>
     implements $EnqueueOneshotResultCopyWith<$Res> {
-  factory $EnqueueOneshotResultDissalowedCopyWith(
-          EnqueueOneshotResultDissalowed value,
-          $Res Function(EnqueueOneshotResultDissalowed) then) =
-      _$EnqueueOneshotResultDissalowedCopyWithImpl<$Res>;
+  factory _$$EnqueueOneshotResultDissalowedImplCopyWith(
+          _$EnqueueOneshotResultDissalowedImpl value,
+          $Res Function(_$EnqueueOneshotResultDissalowedImpl) then) =
+      __$$EnqueueOneshotResultDissalowedImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({String trackNumber, Duration remainingLimitTime});
 }
 
 /// @nodoc
-class _$EnqueueOneshotResultDissalowedCopyWithImpl<$Res>
-    extends _$EnqueueOneshotResultCopyWithImpl<$Res>
-    implements $EnqueueOneshotResultDissalowedCopyWith<$Res> {
-  _$EnqueueOneshotResultDissalowedCopyWithImpl(
-      EnqueueOneshotResultDissalowed _value,
-      $Res Function(EnqueueOneshotResultDissalowed) _then)
-      : super(_value, (v) => _then(v as EnqueueOneshotResultDissalowed));
+class __$$EnqueueOneshotResultDissalowedImplCopyWithImpl<$Res>
+    extends _$EnqueueOneshotResultCopyWithImpl<$Res,
+        _$EnqueueOneshotResultDissalowedImpl>
+    implements _$$EnqueueOneshotResultDissalowedImplCopyWith<$Res> {
+  __$$EnqueueOneshotResultDissalowedImplCopyWithImpl(
+      _$EnqueueOneshotResultDissalowedImpl _value,
+      $Res Function(_$EnqueueOneshotResultDissalowedImpl) _then)
+      : super(_value, _then);
 
-  @override
-  EnqueueOneshotResultDissalowed get _value =>
-      super._value as EnqueueOneshotResultDissalowed;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? trackNumber = freezed,
-    Object? remainingLimitTime = freezed,
+    Object? trackNumber = null,
+    Object? remainingLimitTime = null,
   }) {
-    return _then(EnqueueOneshotResultDissalowed(
-      trackNumber: trackNumber == freezed
+    return _then(_$EnqueueOneshotResultDissalowedImpl(
+      trackNumber: null == trackNumber
           ? _value.trackNumber
           : trackNumber // ignore: cast_nullable_to_non_nullable
               as String,
-      remainingLimitTime: remainingLimitTime == freezed
+      remainingLimitTime: null == remainingLimitTime
           ? _value.remainingLimitTime
           : remainingLimitTime // ignore: cast_nullable_to_non_nullable
               as Duration,
@@ -328,9 +301,9 @@ class _$EnqueueOneshotResultDissalowedCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$EnqueueOneshotResultDissalowed
+class _$EnqueueOneshotResultDissalowedImpl
     implements EnqueueOneshotResultDissalowed {
-  const _$EnqueueOneshotResultDissalowed(
+  const _$EnqueueOneshotResultDissalowedImpl(
       {required this.trackNumber, required this.remainingLimitTime});
 
   @override
@@ -344,28 +317,26 @@ class _$EnqueueOneshotResultDissalowed
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is EnqueueOneshotResultDissalowed &&
+        (other.runtimeType == runtimeType &&
+            other is _$EnqueueOneshotResultDissalowedImpl &&
             (identical(other.trackNumber, trackNumber) ||
-                const DeepCollectionEquality()
-                    .equals(other.trackNumber, trackNumber)) &&
+                other.trackNumber == trackNumber) &&
             (identical(other.remainingLimitTime, remainingLimitTime) ||
-                const DeepCollectionEquality()
-                    .equals(other.remainingLimitTime, remainingLimitTime)));
+                other.remainingLimitTime == remainingLimitTime));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(trackNumber) ^
-      const DeepCollectionEquality().hash(remainingLimitTime);
+  int get hashCode => Object.hash(runtimeType, trackNumber, remainingLimitTime);
 
   @JsonKey(ignore: true)
   @override
-  $EnqueueOneshotResultDissalowedCopyWith<EnqueueOneshotResultDissalowed>
-      get copyWith => _$EnqueueOneshotResultDissalowedCopyWithImpl<
-          EnqueueOneshotResultDissalowed>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$EnqueueOneshotResultDissalowedImplCopyWith<
+          _$EnqueueOneshotResultDissalowedImpl>
+      get copyWith => __$$EnqueueOneshotResultDissalowedImplCopyWithImpl<
+          _$EnqueueOneshotResultDissalowedImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -382,10 +353,10 @@ class _$EnqueueOneshotResultDissalowed
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(String trackNumber)? success,
-    TResult Function(String trackNumber, Duration remainingLimitTime)?
+    TResult? Function(String trackNumber)? success,
+    TResult? Function(String trackNumber, Duration remainingLimitTime)?
         dissalowed,
-    TResult Function(String trackNumber, EnqueueOneshotError error)? error,
+    TResult? Function(String trackNumber, EnqueueOneshotError error)? error,
   }) {
     return dissalowed?.call(trackNumber, remainingLimitTime);
   }
@@ -418,9 +389,9 @@ class _$EnqueueOneshotResultDissalowed
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(EnqueueOneshotResultSuccess value)? success,
-    TResult Function(EnqueueOneshotResultDissalowed value)? dissalowed,
-    TResult Function(EnqueueOneshotResultError value)? error,
+    TResult? Function(EnqueueOneshotResultSuccess value)? success,
+    TResult? Function(EnqueueOneshotResultDissalowed value)? dissalowed,
+    TResult? Function(EnqueueOneshotResultError value)? error,
   }) {
     return dissalowed?.call(this);
   }
@@ -442,53 +413,56 @@ class _$EnqueueOneshotResultDissalowed
 
 abstract class EnqueueOneshotResultDissalowed implements EnqueueOneshotResult {
   const factory EnqueueOneshotResultDissalowed(
-      {required String trackNumber,
-      required Duration remainingLimitTime}) = _$EnqueueOneshotResultDissalowed;
+          {required final String trackNumber,
+          required final Duration remainingLimitTime}) =
+      _$EnqueueOneshotResultDissalowedImpl;
 
   @override
-  String get trackNumber => throw _privateConstructorUsedError;
-  Duration get remainingLimitTime => throw _privateConstructorUsedError;
+  String get trackNumber;
+  Duration get remainingLimitTime;
   @override
   @JsonKey(ignore: true)
-  $EnqueueOneshotResultDissalowedCopyWith<EnqueueOneshotResultDissalowed>
+  _$$EnqueueOneshotResultDissalowedImplCopyWith<
+          _$EnqueueOneshotResultDissalowedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $EnqueueOneshotResultErrorCopyWith<$Res>
+abstract class _$$EnqueueOneshotResultErrorImplCopyWith<$Res>
     implements $EnqueueOneshotResultCopyWith<$Res> {
-  factory $EnqueueOneshotResultErrorCopyWith(EnqueueOneshotResultError value,
-          $Res Function(EnqueueOneshotResultError) then) =
-      _$EnqueueOneshotResultErrorCopyWithImpl<$Res>;
+  factory _$$EnqueueOneshotResultErrorImplCopyWith(
+          _$EnqueueOneshotResultErrorImpl value,
+          $Res Function(_$EnqueueOneshotResultErrorImpl) then) =
+      __$$EnqueueOneshotResultErrorImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({String trackNumber, EnqueueOneshotError error});
 
   $EnqueueOneshotErrorCopyWith<$Res> get error;
 }
 
 /// @nodoc
-class _$EnqueueOneshotResultErrorCopyWithImpl<$Res>
-    extends _$EnqueueOneshotResultCopyWithImpl<$Res>
-    implements $EnqueueOneshotResultErrorCopyWith<$Res> {
-  _$EnqueueOneshotResultErrorCopyWithImpl(EnqueueOneshotResultError _value,
-      $Res Function(EnqueueOneshotResultError) _then)
-      : super(_value, (v) => _then(v as EnqueueOneshotResultError));
+class __$$EnqueueOneshotResultErrorImplCopyWithImpl<$Res>
+    extends _$EnqueueOneshotResultCopyWithImpl<$Res,
+        _$EnqueueOneshotResultErrorImpl>
+    implements _$$EnqueueOneshotResultErrorImplCopyWith<$Res> {
+  __$$EnqueueOneshotResultErrorImplCopyWithImpl(
+      _$EnqueueOneshotResultErrorImpl _value,
+      $Res Function(_$EnqueueOneshotResultErrorImpl) _then)
+      : super(_value, _then);
 
-  @override
-  EnqueueOneshotResultError get _value =>
-      super._value as EnqueueOneshotResultError;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? trackNumber = freezed,
-    Object? error = freezed,
+    Object? trackNumber = null,
+    Object? error = null,
   }) {
-    return _then(EnqueueOneshotResultError(
-      trackNumber: trackNumber == freezed
+    return _then(_$EnqueueOneshotResultErrorImpl(
+      trackNumber: null == trackNumber
           ? _value.trackNumber
           : trackNumber // ignore: cast_nullable_to_non_nullable
               as String,
-      error: error == freezed
+      error: null == error
           ? _value.error
           : error // ignore: cast_nullable_to_non_nullable
               as EnqueueOneshotError,
@@ -496,6 +470,7 @@ class _$EnqueueOneshotResultErrorCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $EnqueueOneshotErrorCopyWith<$Res> get error {
     return $EnqueueOneshotErrorCopyWith<$Res>(_value.error, (value) {
       return _then(_value.copyWith(error: value));
@@ -505,8 +480,8 @@ class _$EnqueueOneshotResultErrorCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$EnqueueOneshotResultError implements EnqueueOneshotResultError {
-  const _$EnqueueOneshotResultError(
+class _$EnqueueOneshotResultErrorImpl implements EnqueueOneshotResultError {
+  const _$EnqueueOneshotResultErrorImpl(
       {required this.trackNumber, required this.error});
 
   @override
@@ -520,27 +495,24 @@ class _$EnqueueOneshotResultError implements EnqueueOneshotResultError {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is EnqueueOneshotResultError &&
+        (other.runtimeType == runtimeType &&
+            other is _$EnqueueOneshotResultErrorImpl &&
             (identical(other.trackNumber, trackNumber) ||
-                const DeepCollectionEquality()
-                    .equals(other.trackNumber, trackNumber)) &&
-            (identical(other.error, error) ||
-                const DeepCollectionEquality().equals(other.error, error)));
+                other.trackNumber == trackNumber) &&
+            (identical(other.error, error) || other.error == error));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(trackNumber) ^
-      const DeepCollectionEquality().hash(error);
+  int get hashCode => Object.hash(runtimeType, trackNumber, error);
 
   @JsonKey(ignore: true)
   @override
-  $EnqueueOneshotResultErrorCopyWith<EnqueueOneshotResultError> get copyWith =>
-      _$EnqueueOneshotResultErrorCopyWithImpl<EnqueueOneshotResultError>(
-          this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$EnqueueOneshotResultErrorImplCopyWith<_$EnqueueOneshotResultErrorImpl>
+      get copyWith => __$$EnqueueOneshotResultErrorImplCopyWithImpl<
+          _$EnqueueOneshotResultErrorImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -557,10 +529,10 @@ class _$EnqueueOneshotResultError implements EnqueueOneshotResultError {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(String trackNumber)? success,
-    TResult Function(String trackNumber, Duration remainingLimitTime)?
+    TResult? Function(String trackNumber)? success,
+    TResult? Function(String trackNumber, Duration remainingLimitTime)?
         dissalowed,
-    TResult Function(String trackNumber, EnqueueOneshotError error)? error,
+    TResult? Function(String trackNumber, EnqueueOneshotError error)? error,
   }) {
     return error?.call(trackNumber, this.error);
   }
@@ -593,9 +565,9 @@ class _$EnqueueOneshotResultError implements EnqueueOneshotResultError {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(EnqueueOneshotResultSuccess value)? success,
-    TResult Function(EnqueueOneshotResultDissalowed value)? dissalowed,
-    TResult Function(EnqueueOneshotResultError value)? error,
+    TResult? Function(EnqueueOneshotResultSuccess value)? success,
+    TResult? Function(EnqueueOneshotResultDissalowed value)? dissalowed,
+    TResult? Function(EnqueueOneshotResultError value)? error,
   }) {
     return error?.call(this);
   }
@@ -617,40 +589,22 @@ class _$EnqueueOneshotResultError implements EnqueueOneshotResultError {
 
 abstract class EnqueueOneshotResultError implements EnqueueOneshotResult {
   const factory EnqueueOneshotResultError(
-      {required String trackNumber,
-      required EnqueueOneshotError error}) = _$EnqueueOneshotResultError;
+          {required final String trackNumber,
+          required final EnqueueOneshotError error}) =
+      _$EnqueueOneshotResultErrorImpl;
 
   @override
-  String get trackNumber => throw _privateConstructorUsedError;
-  EnqueueOneshotError get error => throw _privateConstructorUsedError;
+  String get trackNumber;
+  EnqueueOneshotError get error;
   @override
   @JsonKey(ignore: true)
-  $EnqueueOneshotResultErrorCopyWith<EnqueueOneshotResultError> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$EnqueueOneshotResultErrorImplCopyWith<_$EnqueueOneshotResultErrorImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
-
-/// @nodoc
-class _$EnqueueOneshotErrorTearOff {
-  const _$EnqueueOneshotErrorTearOff();
-
-  EnqueueOneshotErrorStorage storage(StorageError error) {
-    return EnqueueOneshotErrorStorage(
-      error,
-    );
-  }
-
-  EnqueueOneshotErrorLimiter limiter(TrackingLimiterError error) {
-    return EnqueueOneshotErrorLimiter(
-      error,
-    );
-  }
-}
-
-/// @nodoc
-const $EnqueueOneshotError = _$EnqueueOneshotErrorTearOff();
 
 /// @nodoc
 mixin _$EnqueueOneshotError {
+  Object get error => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(StorageError error) storage,
@@ -659,8 +613,8 @@ mixin _$EnqueueOneshotError {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(StorageError error)? storage,
-    TResult Function(TrackingLimiterError error)? limiter,
+    TResult? Function(StorageError error)? storage,
+    TResult? Function(TrackingLimiterError error)? limiter,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -678,8 +632,8 @@ mixin _$EnqueueOneshotError {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(EnqueueOneshotErrorStorage value)? storage,
-    TResult Function(EnqueueOneshotErrorLimiter value)? limiter,
+    TResult? Function(EnqueueOneshotErrorStorage value)? storage,
+    TResult? Function(EnqueueOneshotErrorLimiter value)? limiter,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -695,47 +649,49 @@ mixin _$EnqueueOneshotError {
 abstract class $EnqueueOneshotErrorCopyWith<$Res> {
   factory $EnqueueOneshotErrorCopyWith(
           EnqueueOneshotError value, $Res Function(EnqueueOneshotError) then) =
-      _$EnqueueOneshotErrorCopyWithImpl<$Res>;
+      _$EnqueueOneshotErrorCopyWithImpl<$Res, EnqueueOneshotError>;
 }
 
 /// @nodoc
-class _$EnqueueOneshotErrorCopyWithImpl<$Res>
+class _$EnqueueOneshotErrorCopyWithImpl<$Res, $Val extends EnqueueOneshotError>
     implements $EnqueueOneshotErrorCopyWith<$Res> {
   _$EnqueueOneshotErrorCopyWithImpl(this._value, this._then);
 
-  final EnqueueOneshotError _value;
   // ignore: unused_field
-  final $Res Function(EnqueueOneshotError) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 }
 
 /// @nodoc
-abstract class $EnqueueOneshotErrorStorageCopyWith<$Res> {
-  factory $EnqueueOneshotErrorStorageCopyWith(EnqueueOneshotErrorStorage value,
-          $Res Function(EnqueueOneshotErrorStorage) then) =
-      _$EnqueueOneshotErrorStorageCopyWithImpl<$Res>;
+abstract class _$$EnqueueOneshotErrorStorageImplCopyWith<$Res> {
+  factory _$$EnqueueOneshotErrorStorageImplCopyWith(
+          _$EnqueueOneshotErrorStorageImpl value,
+          $Res Function(_$EnqueueOneshotErrorStorageImpl) then) =
+      __$$EnqueueOneshotErrorStorageImplCopyWithImpl<$Res>;
+  @useResult
   $Res call({StorageError error});
 
   $StorageErrorCopyWith<$Res> get error;
 }
 
 /// @nodoc
-class _$EnqueueOneshotErrorStorageCopyWithImpl<$Res>
-    extends _$EnqueueOneshotErrorCopyWithImpl<$Res>
-    implements $EnqueueOneshotErrorStorageCopyWith<$Res> {
-  _$EnqueueOneshotErrorStorageCopyWithImpl(EnqueueOneshotErrorStorage _value,
-      $Res Function(EnqueueOneshotErrorStorage) _then)
-      : super(_value, (v) => _then(v as EnqueueOneshotErrorStorage));
+class __$$EnqueueOneshotErrorStorageImplCopyWithImpl<$Res>
+    extends _$EnqueueOneshotErrorCopyWithImpl<$Res,
+        _$EnqueueOneshotErrorStorageImpl>
+    implements _$$EnqueueOneshotErrorStorageImplCopyWith<$Res> {
+  __$$EnqueueOneshotErrorStorageImplCopyWithImpl(
+      _$EnqueueOneshotErrorStorageImpl _value,
+      $Res Function(_$EnqueueOneshotErrorStorageImpl) _then)
+      : super(_value, _then);
 
-  @override
-  EnqueueOneshotErrorStorage get _value =>
-      super._value as EnqueueOneshotErrorStorage;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? error = freezed,
+    Object? error = null,
   }) {
-    return _then(EnqueueOneshotErrorStorage(
-      error == freezed
+    return _then(_$EnqueueOneshotErrorStorageImpl(
+      null == error
           ? _value.error
           : error // ignore: cast_nullable_to_non_nullable
               as StorageError,
@@ -743,6 +699,7 @@ class _$EnqueueOneshotErrorStorageCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $StorageErrorCopyWith<$Res> get error {
     return $StorageErrorCopyWith<$Res>(_value.error, (value) {
       return _then(_value.copyWith(error: value));
@@ -752,8 +709,8 @@ class _$EnqueueOneshotErrorStorageCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$EnqueueOneshotErrorStorage implements EnqueueOneshotErrorStorage {
-  const _$EnqueueOneshotErrorStorage(this.error);
+class _$EnqueueOneshotErrorStorageImpl implements EnqueueOneshotErrorStorage {
+  const _$EnqueueOneshotErrorStorageImpl(this.error);
 
   @override
   final StorageError error;
@@ -764,23 +721,22 @@ class _$EnqueueOneshotErrorStorage implements EnqueueOneshotErrorStorage {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is EnqueueOneshotErrorStorage &&
-            (identical(other.error, error) ||
-                const DeepCollectionEquality().equals(other.error, error)));
+        (other.runtimeType == runtimeType &&
+            other is _$EnqueueOneshotErrorStorageImpl &&
+            (identical(other.error, error) || other.error == error));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(error);
+  int get hashCode => Object.hash(runtimeType, error);
 
   @JsonKey(ignore: true)
   @override
-  $EnqueueOneshotErrorStorageCopyWith<EnqueueOneshotErrorStorage>
-      get copyWith =>
-          _$EnqueueOneshotErrorStorageCopyWithImpl<EnqueueOneshotErrorStorage>(
-              this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$EnqueueOneshotErrorStorageImplCopyWith<_$EnqueueOneshotErrorStorageImpl>
+      get copyWith => __$$EnqueueOneshotErrorStorageImplCopyWithImpl<
+          _$EnqueueOneshotErrorStorageImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -794,8 +750,8 @@ class _$EnqueueOneshotErrorStorage implements EnqueueOneshotErrorStorage {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(StorageError error)? storage,
-    TResult Function(TrackingLimiterError error)? limiter,
+    TResult? Function(StorageError error)? storage,
+    TResult? Function(TrackingLimiterError error)? limiter,
   }) {
     return storage?.call(error);
   }
@@ -825,8 +781,8 @@ class _$EnqueueOneshotErrorStorage implements EnqueueOneshotErrorStorage {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(EnqueueOneshotErrorStorage value)? storage,
-    TResult Function(EnqueueOneshotErrorLimiter value)? limiter,
+    TResult? Function(EnqueueOneshotErrorStorage value)? storage,
+    TResult? Function(EnqueueOneshotErrorLimiter value)? limiter,
   }) {
     return storage?.call(this);
   }
@@ -846,43 +802,45 @@ class _$EnqueueOneshotErrorStorage implements EnqueueOneshotErrorStorage {
 }
 
 abstract class EnqueueOneshotErrorStorage implements EnqueueOneshotError {
-  const factory EnqueueOneshotErrorStorage(StorageError error) =
-      _$EnqueueOneshotErrorStorage;
+  const factory EnqueueOneshotErrorStorage(final StorageError error) =
+      _$EnqueueOneshotErrorStorageImpl;
 
-  StorageError get error => throw _privateConstructorUsedError;
+  @override
+  StorageError get error;
   @JsonKey(ignore: true)
-  $EnqueueOneshotErrorStorageCopyWith<EnqueueOneshotErrorStorage>
+  _$$EnqueueOneshotErrorStorageImplCopyWith<_$EnqueueOneshotErrorStorageImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $EnqueueOneshotErrorLimiterCopyWith<$Res> {
-  factory $EnqueueOneshotErrorLimiterCopyWith(EnqueueOneshotErrorLimiter value,
-          $Res Function(EnqueueOneshotErrorLimiter) then) =
-      _$EnqueueOneshotErrorLimiterCopyWithImpl<$Res>;
+abstract class _$$EnqueueOneshotErrorLimiterImplCopyWith<$Res> {
+  factory _$$EnqueueOneshotErrorLimiterImplCopyWith(
+          _$EnqueueOneshotErrorLimiterImpl value,
+          $Res Function(_$EnqueueOneshotErrorLimiterImpl) then) =
+      __$$EnqueueOneshotErrorLimiterImplCopyWithImpl<$Res>;
+  @useResult
   $Res call({TrackingLimiterError error});
 
   $TrackingLimiterErrorCopyWith<$Res> get error;
 }
 
 /// @nodoc
-class _$EnqueueOneshotErrorLimiterCopyWithImpl<$Res>
-    extends _$EnqueueOneshotErrorCopyWithImpl<$Res>
-    implements $EnqueueOneshotErrorLimiterCopyWith<$Res> {
-  _$EnqueueOneshotErrorLimiterCopyWithImpl(EnqueueOneshotErrorLimiter _value,
-      $Res Function(EnqueueOneshotErrorLimiter) _then)
-      : super(_value, (v) => _then(v as EnqueueOneshotErrorLimiter));
+class __$$EnqueueOneshotErrorLimiterImplCopyWithImpl<$Res>
+    extends _$EnqueueOneshotErrorCopyWithImpl<$Res,
+        _$EnqueueOneshotErrorLimiterImpl>
+    implements _$$EnqueueOneshotErrorLimiterImplCopyWith<$Res> {
+  __$$EnqueueOneshotErrorLimiterImplCopyWithImpl(
+      _$EnqueueOneshotErrorLimiterImpl _value,
+      $Res Function(_$EnqueueOneshotErrorLimiterImpl) _then)
+      : super(_value, _then);
 
-  @override
-  EnqueueOneshotErrorLimiter get _value =>
-      super._value as EnqueueOneshotErrorLimiter;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? error = freezed,
+    Object? error = null,
   }) {
-    return _then(EnqueueOneshotErrorLimiter(
-      error == freezed
+    return _then(_$EnqueueOneshotErrorLimiterImpl(
+      null == error
           ? _value.error
           : error // ignore: cast_nullable_to_non_nullable
               as TrackingLimiterError,
@@ -890,6 +848,7 @@ class _$EnqueueOneshotErrorLimiterCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $TrackingLimiterErrorCopyWith<$Res> get error {
     return $TrackingLimiterErrorCopyWith<$Res>(_value.error, (value) {
       return _then(_value.copyWith(error: value));
@@ -899,8 +858,8 @@ class _$EnqueueOneshotErrorLimiterCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$EnqueueOneshotErrorLimiter implements EnqueueOneshotErrorLimiter {
-  const _$EnqueueOneshotErrorLimiter(this.error);
+class _$EnqueueOneshotErrorLimiterImpl implements EnqueueOneshotErrorLimiter {
+  const _$EnqueueOneshotErrorLimiterImpl(this.error);
 
   @override
   final TrackingLimiterError error;
@@ -911,23 +870,22 @@ class _$EnqueueOneshotErrorLimiter implements EnqueueOneshotErrorLimiter {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is EnqueueOneshotErrorLimiter &&
-            (identical(other.error, error) ||
-                const DeepCollectionEquality().equals(other.error, error)));
+        (other.runtimeType == runtimeType &&
+            other is _$EnqueueOneshotErrorLimiterImpl &&
+            (identical(other.error, error) || other.error == error));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(error);
+  int get hashCode => Object.hash(runtimeType, error);
 
   @JsonKey(ignore: true)
   @override
-  $EnqueueOneshotErrorLimiterCopyWith<EnqueueOneshotErrorLimiter>
-      get copyWith =>
-          _$EnqueueOneshotErrorLimiterCopyWithImpl<EnqueueOneshotErrorLimiter>(
-              this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$EnqueueOneshotErrorLimiterImplCopyWith<_$EnqueueOneshotErrorLimiterImpl>
+      get copyWith => __$$EnqueueOneshotErrorLimiterImplCopyWithImpl<
+          _$EnqueueOneshotErrorLimiterImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -941,8 +899,8 @@ class _$EnqueueOneshotErrorLimiter implements EnqueueOneshotErrorLimiter {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(StorageError error)? storage,
-    TResult Function(TrackingLimiterError error)? limiter,
+    TResult? Function(StorageError error)? storage,
+    TResult? Function(TrackingLimiterError error)? limiter,
   }) {
     return limiter?.call(error);
   }
@@ -972,8 +930,8 @@ class _$EnqueueOneshotErrorLimiter implements EnqueueOneshotErrorLimiter {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(EnqueueOneshotErrorStorage value)? storage,
-    TResult Function(EnqueueOneshotErrorLimiter value)? limiter,
+    TResult? Function(EnqueueOneshotErrorStorage value)? storage,
+    TResult? Function(EnqueueOneshotErrorLimiter value)? limiter,
   }) {
     return limiter?.call(this);
   }
@@ -993,11 +951,12 @@ class _$EnqueueOneshotErrorLimiter implements EnqueueOneshotErrorLimiter {
 }
 
 abstract class EnqueueOneshotErrorLimiter implements EnqueueOneshotError {
-  const factory EnqueueOneshotErrorLimiter(TrackingLimiterError error) =
-      _$EnqueueOneshotErrorLimiter;
+  const factory EnqueueOneshotErrorLimiter(final TrackingLimiterError error) =
+      _$EnqueueOneshotErrorLimiterImpl;
 
-  TrackingLimiterError get error => throw _privateConstructorUsedError;
+  @override
+  TrackingLimiterError get error;
   @JsonKey(ignore: true)
-  $EnqueueOneshotErrorLimiterCopyWith<EnqueueOneshotErrorLimiter>
+  _$$EnqueueOneshotErrorLimiterImplCopyWith<_$EnqueueOneshotErrorLimiterImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

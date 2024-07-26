@@ -41,12 +41,12 @@ class SliverParcelsPage extends StatelessWidget {
   final VoidCallback? onPageRefresh;
 
   const SliverParcelsPage({
-    Key? key,
+    super.key,
     required this.type,
     this.onSelectionChanged,
     this.onParcelDetails,
     this.onPageRefresh,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -56,7 +56,8 @@ class SliverParcelsPage extends StatelessWidget {
           loadingFailed: (value) {
             value.error?.when(
               database: (e, stackTrace) {
-                log().e('Unable to load parcels list', e, stackTrace);
+                log().e('Unable to load parcels list',
+                    error: e, stackTrace: stackTrace);
               },
             );
           },
@@ -96,7 +97,7 @@ class SliverParcelsPage extends StatelessWidget {
                   icon: MdiIcons.packageVariant,
                   text: Text(
                     S.of(context).noParcels,
-                    style: Theme.of(context).textTheme.headline5,
+                    style: Theme.of(context).textTheme.headlineSmall,
                   ),
                 ),
               );
@@ -189,10 +190,9 @@ class _MarkAllAsReadButton extends StatelessWidget {
   final VoidCallback? onPressed;
 
   const _MarkAllAsReadButton({
-    Key? key,
     required this.show,
     this.onPressed,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -221,7 +221,7 @@ class _MarkAllAsReadButton extends StatelessWidget {
               S.of(context).markAllAsRead,
               style: Theme.of(context)
                   .primaryTextTheme
-                  .button!
+                  .labelLarge!
                   .copyWith(fontSize: 18.0),
             ),
             tooltip: S.of(context).markAllAsRead,

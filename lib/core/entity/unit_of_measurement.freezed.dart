@@ -1,6 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'unit_of_measurement.dart';
 
@@ -11,23 +12,7 @@ part of 'unit_of_measurement.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$UnitOfMeasurementTearOff {
-  const _$UnitOfMeasurementTearOff();
-
-  _UnitOfMeasurement call(
-      {required double value, required Measurement measurement}) {
-    return _UnitOfMeasurement(
-      value: value,
-      measurement: measurement,
-    );
-  }
-}
-
-/// @nodoc
-const $UnitOfMeasurement = _$UnitOfMeasurementTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$UnitOfMeasurement {
@@ -43,69 +28,71 @@ mixin _$UnitOfMeasurement {
 abstract class $UnitOfMeasurementCopyWith<$Res> {
   factory $UnitOfMeasurementCopyWith(
           UnitOfMeasurement value, $Res Function(UnitOfMeasurement) then) =
-      _$UnitOfMeasurementCopyWithImpl<$Res>;
+      _$UnitOfMeasurementCopyWithImpl<$Res, UnitOfMeasurement>;
+  @useResult
   $Res call({double value, Measurement measurement});
 }
 
 /// @nodoc
-class _$UnitOfMeasurementCopyWithImpl<$Res>
+class _$UnitOfMeasurementCopyWithImpl<$Res, $Val extends UnitOfMeasurement>
     implements $UnitOfMeasurementCopyWith<$Res> {
   _$UnitOfMeasurementCopyWithImpl(this._value, this._then);
 
-  final UnitOfMeasurement _value;
   // ignore: unused_field
-  final $Res Function(UnitOfMeasurement) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? value = freezed,
-    Object? measurement = freezed,
+    Object? value = null,
+    Object? measurement = null,
   }) {
     return _then(_value.copyWith(
-      value: value == freezed
+      value: null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
               as double,
-      measurement: measurement == freezed
+      measurement: null == measurement
           ? _value.measurement
           : measurement // ignore: cast_nullable_to_non_nullable
               as Measurement,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$UnitOfMeasurementCopyWith<$Res>
+abstract class _$$UnitOfMeasurementImplCopyWith<$Res>
     implements $UnitOfMeasurementCopyWith<$Res> {
-  factory _$UnitOfMeasurementCopyWith(
-          _UnitOfMeasurement value, $Res Function(_UnitOfMeasurement) then) =
-      __$UnitOfMeasurementCopyWithImpl<$Res>;
+  factory _$$UnitOfMeasurementImplCopyWith(_$UnitOfMeasurementImpl value,
+          $Res Function(_$UnitOfMeasurementImpl) then) =
+      __$$UnitOfMeasurementImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({double value, Measurement measurement});
 }
 
 /// @nodoc
-class __$UnitOfMeasurementCopyWithImpl<$Res>
-    extends _$UnitOfMeasurementCopyWithImpl<$Res>
-    implements _$UnitOfMeasurementCopyWith<$Res> {
-  __$UnitOfMeasurementCopyWithImpl(
-      _UnitOfMeasurement _value, $Res Function(_UnitOfMeasurement) _then)
-      : super(_value, (v) => _then(v as _UnitOfMeasurement));
+class __$$UnitOfMeasurementImplCopyWithImpl<$Res>
+    extends _$UnitOfMeasurementCopyWithImpl<$Res, _$UnitOfMeasurementImpl>
+    implements _$$UnitOfMeasurementImplCopyWith<$Res> {
+  __$$UnitOfMeasurementImplCopyWithImpl(_$UnitOfMeasurementImpl _value,
+      $Res Function(_$UnitOfMeasurementImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _UnitOfMeasurement get _value => super._value as _UnitOfMeasurement;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? value = freezed,
-    Object? measurement = freezed,
+    Object? value = null,
+    Object? measurement = null,
   }) {
-    return _then(_UnitOfMeasurement(
-      value: value == freezed
+    return _then(_$UnitOfMeasurementImpl(
+      value: null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
               as double,
-      measurement: measurement == freezed
+      measurement: null == measurement
           ? _value.measurement
           : measurement // ignore: cast_nullable_to_non_nullable
               as Measurement,
@@ -115,10 +102,11 @@ class __$UnitOfMeasurementCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_UnitOfMeasurement
+class _$UnitOfMeasurementImpl
     with DiagnosticableTreeMixin
     implements _UnitOfMeasurement {
-  const _$_UnitOfMeasurement({required this.value, required this.measurement});
+  const _$UnitOfMeasurementImpl(
+      {required this.value, required this.measurement});
 
   @override
   final double value;
@@ -140,39 +128,37 @@ class _$_UnitOfMeasurement
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is _UnitOfMeasurement &&
-            (identical(other.value, value) ||
-                const DeepCollectionEquality().equals(other.value, value)) &&
+        (other.runtimeType == runtimeType &&
+            other is _$UnitOfMeasurementImpl &&
+            (identical(other.value, value) || other.value == value) &&
             (identical(other.measurement, measurement) ||
-                const DeepCollectionEquality()
-                    .equals(other.measurement, measurement)));
+                other.measurement == measurement));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(value) ^
-      const DeepCollectionEquality().hash(measurement);
+  int get hashCode => Object.hash(runtimeType, value, measurement);
 
   @JsonKey(ignore: true)
   @override
-  _$UnitOfMeasurementCopyWith<_UnitOfMeasurement> get copyWith =>
-      __$UnitOfMeasurementCopyWithImpl<_UnitOfMeasurement>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$UnitOfMeasurementImplCopyWith<_$UnitOfMeasurementImpl> get copyWith =>
+      __$$UnitOfMeasurementImplCopyWithImpl<_$UnitOfMeasurementImpl>(
+          this, _$identity);
 }
 
 abstract class _UnitOfMeasurement implements UnitOfMeasurement {
   const factory _UnitOfMeasurement(
-      {required double value,
-      required Measurement measurement}) = _$_UnitOfMeasurement;
+      {required final double value,
+      required final Measurement measurement}) = _$UnitOfMeasurementImpl;
 
   @override
-  double get value => throw _privateConstructorUsedError;
+  double get value;
   @override
-  Measurement get measurement => throw _privateConstructorUsedError;
+  Measurement get measurement;
   @override
   @JsonKey(ignore: true)
-  _$UnitOfMeasurementCopyWith<_UnitOfMeasurement> get copyWith =>
+  _$$UnitOfMeasurementImplCopyWith<_$UnitOfMeasurementImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

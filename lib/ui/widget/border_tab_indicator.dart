@@ -3,7 +3,6 @@
 // found in the LICENSE file.
 
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class BorderTabIndicator extends Decoration {
   const BorderTabIndicator({

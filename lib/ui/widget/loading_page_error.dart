@@ -23,9 +23,9 @@ class LoadingPageError extends StatelessWidget {
   final VoidCallback? onRefresh;
 
   const LoadingPageError({
-    Key? key,
+    super.key,
     this.onRefresh,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -50,7 +50,7 @@ class LoadingPageError extends StatelessWidget {
                     S.of(context).loadPageFailed,
                     style: Theme.of(context)
                         .textTheme
-                        .headline5!
+                        .headlineSmall!
                         .copyWith(color: Colors.blueGrey),
                   ),
                 ),

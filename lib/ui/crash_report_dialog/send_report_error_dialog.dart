@@ -23,7 +23,7 @@ import 'package:libretrack/ui/widget/widget.dart';
 import '../../locale.dart';
 
 class SendReportErrorDialog extends StatelessWidget {
-  const SendReportErrorDialog({Key? key}) : super(key: key);
+  const SendReportErrorDialog({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -38,7 +38,7 @@ class SendReportErrorDialog extends StatelessWidget {
                 S.of(context).projectIssuesPage,
               ),
           selectable: true,
-          style: Theme.of(context).textTheme.subtitle1,
+          style: Theme.of(context).textTheme.titleMedium,
         ),
       ),
       actions: [

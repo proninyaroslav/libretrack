@@ -95,7 +95,8 @@ void main() {
     });
 
     test('Get all', () async {
-      expect(await repo.getAllTracks(), const StorageResult([]));
+      expect(
+          await repo.getAllTracks(), const StorageResult(<TrackNumberInfo>[]));
 
       final expectedInfoList =
           range(10).map((i) => TrackNumberInfo(i.toString())).toList();
@@ -217,7 +218,7 @@ void main() {
       await trackRepo.deleteTrack(trackInfo);
       expect(
         await trackRepo.getTrackNumberServices(trackInfo.trackNumber),
-        const StorageResult([]),
+        const StorageResult(<TrackNumberService>[]),
       );
     });
 
@@ -243,7 +244,7 @@ void main() {
       await trackRepo.deleteTrack(trackInfo);
       expect(
         await trackRepo.getTrackNumberServices(trackInfo.trackNumber),
-        const StorageResult([]),
+        const StorageResult(<TrackNumberService>[]),
       );
     });
 
@@ -271,7 +272,7 @@ void main() {
 
       expect(
         await trackRepo.getActiveTrackNumberServicesByList(trackNumberList),
-        const StorageResult([]),
+        const StorageResult(<TrackNumberService>[]),
       );
 
       expect(

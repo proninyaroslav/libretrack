@@ -1,6 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'app_router.dart';
 
@@ -11,57 +12,7 @@ part of 'app_router.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$AppRoutePathTearOff {
-  const _$AppRoutePathTearOff();
-
-  AppRoutePathUnknown unknown() {
-    return const AppRoutePathUnknown();
-  }
-
-  AppRoutePathHome home(HomeRoutePath subRoute) {
-    return AppRoutePathHome(
-      subRoute,
-    );
-  }
-
-  AppRoutePathAddAccount addAccount() {
-    return const AppRoutePathAddAccount();
-  }
-
-  AppRoutePathEditAccount editAccount(TrackingServiceType serviceType) {
-    return AppRoutePathEditAccount(
-      serviceType,
-    );
-  }
-
-  AppRoutePathAddParcels addParcels({String? initialTrackNumbers}) {
-    return AppRoutePathAddParcels(
-      initialTrackNumbers: initialTrackNumbers,
-    );
-  }
-
-  AppRoutePathParcelDetails parcelDetails(String trackNumber) {
-    return AppRoutePathParcelDetails(
-      trackNumber,
-    );
-  }
-
-  AppRoutePathSettings settings({SettingsRoutePath? subRoute}) {
-    return AppRoutePathSettings(
-      subRoute: subRoute,
-    );
-  }
-
-  AppRoutePathAbout about() {
-    return const AppRoutePathAbout();
-  }
-}
-
-/// @nodoc
-const $AppRoutePath = _$AppRoutePathTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$AppRoutePath {
@@ -79,14 +30,14 @@ mixin _$AppRoutePath {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? unknown,
-    TResult Function(HomeRoutePath subRoute)? home,
-    TResult Function()? addAccount,
-    TResult Function(TrackingServiceType serviceType)? editAccount,
-    TResult Function(String? initialTrackNumbers)? addParcels,
-    TResult Function(String trackNumber)? parcelDetails,
-    TResult Function(SettingsRoutePath? subRoute)? settings,
-    TResult Function()? about,
+    TResult? Function()? unknown,
+    TResult? Function(HomeRoutePath subRoute)? home,
+    TResult? Function()? addAccount,
+    TResult? Function(TrackingServiceType serviceType)? editAccount,
+    TResult? Function(String? initialTrackNumbers)? addParcels,
+    TResult? Function(String trackNumber)? parcelDetails,
+    TResult? Function(SettingsRoutePath? subRoute)? settings,
+    TResult? Function()? about,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -116,14 +67,14 @@ mixin _$AppRoutePath {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(AppRoutePathUnknown value)? unknown,
-    TResult Function(AppRoutePathHome value)? home,
-    TResult Function(AppRoutePathAddAccount value)? addAccount,
-    TResult Function(AppRoutePathEditAccount value)? editAccount,
-    TResult Function(AppRoutePathAddParcels value)? addParcels,
-    TResult Function(AppRoutePathParcelDetails value)? parcelDetails,
-    TResult Function(AppRoutePathSettings value)? settings,
-    TResult Function(AppRoutePathAbout value)? about,
+    TResult? Function(AppRoutePathUnknown value)? unknown,
+    TResult? Function(AppRoutePathHome value)? home,
+    TResult? Function(AppRoutePathAddAccount value)? addAccount,
+    TResult? Function(AppRoutePathEditAccount value)? editAccount,
+    TResult? Function(AppRoutePathAddParcels value)? addParcels,
+    TResult? Function(AppRoutePathParcelDetails value)? parcelDetails,
+    TResult? Function(AppRoutePathSettings value)? settings,
+    TResult? Function(AppRoutePathAbout value)? about,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -145,43 +96,42 @@ mixin _$AppRoutePath {
 abstract class $AppRoutePathCopyWith<$Res> {
   factory $AppRoutePathCopyWith(
           AppRoutePath value, $Res Function(AppRoutePath) then) =
-      _$AppRoutePathCopyWithImpl<$Res>;
+      _$AppRoutePathCopyWithImpl<$Res, AppRoutePath>;
 }
 
 /// @nodoc
-class _$AppRoutePathCopyWithImpl<$Res> implements $AppRoutePathCopyWith<$Res> {
+class _$AppRoutePathCopyWithImpl<$Res, $Val extends AppRoutePath>
+    implements $AppRoutePathCopyWith<$Res> {
   _$AppRoutePathCopyWithImpl(this._value, this._then);
 
-  final AppRoutePath _value;
   // ignore: unused_field
-  final $Res Function(AppRoutePath) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 }
 
 /// @nodoc
-abstract class $AppRoutePathUnknownCopyWith<$Res> {
-  factory $AppRoutePathUnknownCopyWith(
-          AppRoutePathUnknown value, $Res Function(AppRoutePathUnknown) then) =
-      _$AppRoutePathUnknownCopyWithImpl<$Res>;
+abstract class _$$AppRoutePathUnknownImplCopyWith<$Res> {
+  factory _$$AppRoutePathUnknownImplCopyWith(_$AppRoutePathUnknownImpl value,
+          $Res Function(_$AppRoutePathUnknownImpl) then) =
+      __$$AppRoutePathUnknownImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$AppRoutePathUnknownCopyWithImpl<$Res>
-    extends _$AppRoutePathCopyWithImpl<$Res>
-    implements $AppRoutePathUnknownCopyWith<$Res> {
-  _$AppRoutePathUnknownCopyWithImpl(
-      AppRoutePathUnknown _value, $Res Function(AppRoutePathUnknown) _then)
-      : super(_value, (v) => _then(v as AppRoutePathUnknown));
-
-  @override
-  AppRoutePathUnknown get _value => super._value as AppRoutePathUnknown;
+class __$$AppRoutePathUnknownImplCopyWithImpl<$Res>
+    extends _$AppRoutePathCopyWithImpl<$Res, _$AppRoutePathUnknownImpl>
+    implements _$$AppRoutePathUnknownImplCopyWith<$Res> {
+  __$$AppRoutePathUnknownImplCopyWithImpl(_$AppRoutePathUnknownImpl _value,
+      $Res Function(_$AppRoutePathUnknownImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$AppRoutePathUnknown
+class _$AppRoutePathUnknownImpl
     with DiagnosticableTreeMixin
     implements AppRoutePathUnknown {
-  const _$AppRoutePathUnknown();
+  const _$AppRoutePathUnknownImpl();
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
@@ -191,12 +141,14 @@ class _$AppRoutePathUnknown
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
-    properties..add(DiagnosticsProperty('type', 'AppRoutePath.unknown'));
+    properties.add(DiagnosticsProperty('type', 'AppRoutePath.unknown'));
   }
 
   @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) || (other is AppRoutePathUnknown);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AppRoutePathUnknownImpl);
   }
 
   @override
@@ -220,14 +172,14 @@ class _$AppRoutePathUnknown
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? unknown,
-    TResult Function(HomeRoutePath subRoute)? home,
-    TResult Function()? addAccount,
-    TResult Function(TrackingServiceType serviceType)? editAccount,
-    TResult Function(String? initialTrackNumbers)? addParcels,
-    TResult Function(String trackNumber)? parcelDetails,
-    TResult Function(SettingsRoutePath? subRoute)? settings,
-    TResult Function()? about,
+    TResult? Function()? unknown,
+    TResult? Function(HomeRoutePath subRoute)? home,
+    TResult? Function()? addAccount,
+    TResult? Function(TrackingServiceType serviceType)? editAccount,
+    TResult? Function(String? initialTrackNumbers)? addParcels,
+    TResult? Function(String trackNumber)? parcelDetails,
+    TResult? Function(SettingsRoutePath? subRoute)? settings,
+    TResult? Function()? about,
   }) {
     return unknown?.call();
   }
@@ -269,14 +221,14 @@ class _$AppRoutePathUnknown
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(AppRoutePathUnknown value)? unknown,
-    TResult Function(AppRoutePathHome value)? home,
-    TResult Function(AppRoutePathAddAccount value)? addAccount,
-    TResult Function(AppRoutePathEditAccount value)? editAccount,
-    TResult Function(AppRoutePathAddParcels value)? addParcels,
-    TResult Function(AppRoutePathParcelDetails value)? parcelDetails,
-    TResult Function(AppRoutePathSettings value)? settings,
-    TResult Function(AppRoutePathAbout value)? about,
+    TResult? Function(AppRoutePathUnknown value)? unknown,
+    TResult? Function(AppRoutePathHome value)? home,
+    TResult? Function(AppRoutePathAddAccount value)? addAccount,
+    TResult? Function(AppRoutePathEditAccount value)? editAccount,
+    TResult? Function(AppRoutePathAddParcels value)? addParcels,
+    TResult? Function(AppRoutePathParcelDetails value)? parcelDetails,
+    TResult? Function(AppRoutePathSettings value)? settings,
+    TResult? Function(AppRoutePathAbout value)? about,
   }) {
     return unknown?.call(this);
   }
@@ -302,36 +254,35 @@ class _$AppRoutePathUnknown
 }
 
 abstract class AppRoutePathUnknown implements AppRoutePath {
-  const factory AppRoutePathUnknown() = _$AppRoutePathUnknown;
+  const factory AppRoutePathUnknown() = _$AppRoutePathUnknownImpl;
 }
 
 /// @nodoc
-abstract class $AppRoutePathHomeCopyWith<$Res> {
-  factory $AppRoutePathHomeCopyWith(
-          AppRoutePathHome value, $Res Function(AppRoutePathHome) then) =
-      _$AppRoutePathHomeCopyWithImpl<$Res>;
+abstract class _$$AppRoutePathHomeImplCopyWith<$Res> {
+  factory _$$AppRoutePathHomeImplCopyWith(_$AppRoutePathHomeImpl value,
+          $Res Function(_$AppRoutePathHomeImpl) then) =
+      __$$AppRoutePathHomeImplCopyWithImpl<$Res>;
+  @useResult
   $Res call({HomeRoutePath subRoute});
 
   $HomeRoutePathCopyWith<$Res> get subRoute;
 }
 
 /// @nodoc
-class _$AppRoutePathHomeCopyWithImpl<$Res>
-    extends _$AppRoutePathCopyWithImpl<$Res>
-    implements $AppRoutePathHomeCopyWith<$Res> {
-  _$AppRoutePathHomeCopyWithImpl(
-      AppRoutePathHome _value, $Res Function(AppRoutePathHome) _then)
-      : super(_value, (v) => _then(v as AppRoutePathHome));
+class __$$AppRoutePathHomeImplCopyWithImpl<$Res>
+    extends _$AppRoutePathCopyWithImpl<$Res, _$AppRoutePathHomeImpl>
+    implements _$$AppRoutePathHomeImplCopyWith<$Res> {
+  __$$AppRoutePathHomeImplCopyWithImpl(_$AppRoutePathHomeImpl _value,
+      $Res Function(_$AppRoutePathHomeImpl) _then)
+      : super(_value, _then);
 
-  @override
-  AppRoutePathHome get _value => super._value as AppRoutePathHome;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? subRoute = freezed,
+    Object? subRoute = null,
   }) {
-    return _then(AppRoutePathHome(
-      subRoute == freezed
+    return _then(_$AppRoutePathHomeImpl(
+      null == subRoute
           ? _value.subRoute
           : subRoute // ignore: cast_nullable_to_non_nullable
               as HomeRoutePath,
@@ -339,6 +290,7 @@ class _$AppRoutePathHomeCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $HomeRoutePathCopyWith<$Res> get subRoute {
     return $HomeRoutePathCopyWith<$Res>(_value.subRoute, (value) {
       return _then(_value.copyWith(subRoute: value));
@@ -348,10 +300,10 @@ class _$AppRoutePathHomeCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$AppRoutePathHome
+class _$AppRoutePathHomeImpl
     with DiagnosticableTreeMixin
     implements AppRoutePathHome {
-  const _$AppRoutePathHome(this.subRoute);
+  const _$AppRoutePathHomeImpl(this.subRoute);
 
   @override
   final HomeRoutePath subRoute;
@@ -370,22 +322,23 @@ class _$AppRoutePathHome
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is AppRoutePathHome &&
+        (other.runtimeType == runtimeType &&
+            other is _$AppRoutePathHomeImpl &&
             (identical(other.subRoute, subRoute) ||
-                const DeepCollectionEquality()
-                    .equals(other.subRoute, subRoute)));
+                other.subRoute == subRoute));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(subRoute);
+  int get hashCode => Object.hash(runtimeType, subRoute);
 
   @JsonKey(ignore: true)
   @override
-  $AppRoutePathHomeCopyWith<AppRoutePathHome> get copyWith =>
-      _$AppRoutePathHomeCopyWithImpl<AppRoutePathHome>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$AppRoutePathHomeImplCopyWith<_$AppRoutePathHomeImpl> get copyWith =>
+      __$$AppRoutePathHomeImplCopyWithImpl<_$AppRoutePathHomeImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -405,14 +358,14 @@ class _$AppRoutePathHome
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? unknown,
-    TResult Function(HomeRoutePath subRoute)? home,
-    TResult Function()? addAccount,
-    TResult Function(TrackingServiceType serviceType)? editAccount,
-    TResult Function(String? initialTrackNumbers)? addParcels,
-    TResult Function(String trackNumber)? parcelDetails,
-    TResult Function(SettingsRoutePath? subRoute)? settings,
-    TResult Function()? about,
+    TResult? Function()? unknown,
+    TResult? Function(HomeRoutePath subRoute)? home,
+    TResult? Function()? addAccount,
+    TResult? Function(TrackingServiceType serviceType)? editAccount,
+    TResult? Function(String? initialTrackNumbers)? addParcels,
+    TResult? Function(String trackNumber)? parcelDetails,
+    TResult? Function(SettingsRoutePath? subRoute)? settings,
+    TResult? Function()? about,
   }) {
     return home?.call(subRoute);
   }
@@ -454,14 +407,14 @@ class _$AppRoutePathHome
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(AppRoutePathUnknown value)? unknown,
-    TResult Function(AppRoutePathHome value)? home,
-    TResult Function(AppRoutePathAddAccount value)? addAccount,
-    TResult Function(AppRoutePathEditAccount value)? editAccount,
-    TResult Function(AppRoutePathAddParcels value)? addParcels,
-    TResult Function(AppRoutePathParcelDetails value)? parcelDetails,
-    TResult Function(AppRoutePathSettings value)? settings,
-    TResult Function(AppRoutePathAbout value)? about,
+    TResult? Function(AppRoutePathUnknown value)? unknown,
+    TResult? Function(AppRoutePathHome value)? home,
+    TResult? Function(AppRoutePathAddAccount value)? addAccount,
+    TResult? Function(AppRoutePathEditAccount value)? editAccount,
+    TResult? Function(AppRoutePathAddParcels value)? addParcels,
+    TResult? Function(AppRoutePathParcelDetails value)? parcelDetails,
+    TResult? Function(AppRoutePathSettings value)? settings,
+    TResult? Function(AppRoutePathAbout value)? about,
   }) {
     return home?.call(this);
   }
@@ -487,39 +440,39 @@ class _$AppRoutePathHome
 }
 
 abstract class AppRoutePathHome implements AppRoutePath {
-  const factory AppRoutePathHome(HomeRoutePath subRoute) = _$AppRoutePathHome;
+  const factory AppRoutePathHome(final HomeRoutePath subRoute) =
+      _$AppRoutePathHomeImpl;
 
-  HomeRoutePath get subRoute => throw _privateConstructorUsedError;
+  HomeRoutePath get subRoute;
   @JsonKey(ignore: true)
-  $AppRoutePathHomeCopyWith<AppRoutePathHome> get copyWith =>
+  _$$AppRoutePathHomeImplCopyWith<_$AppRoutePathHomeImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $AppRoutePathAddAccountCopyWith<$Res> {
-  factory $AppRoutePathAddAccountCopyWith(AppRoutePathAddAccount value,
-          $Res Function(AppRoutePathAddAccount) then) =
-      _$AppRoutePathAddAccountCopyWithImpl<$Res>;
+abstract class _$$AppRoutePathAddAccountImplCopyWith<$Res> {
+  factory _$$AppRoutePathAddAccountImplCopyWith(
+          _$AppRoutePathAddAccountImpl value,
+          $Res Function(_$AppRoutePathAddAccountImpl) then) =
+      __$$AppRoutePathAddAccountImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$AppRoutePathAddAccountCopyWithImpl<$Res>
-    extends _$AppRoutePathCopyWithImpl<$Res>
-    implements $AppRoutePathAddAccountCopyWith<$Res> {
-  _$AppRoutePathAddAccountCopyWithImpl(AppRoutePathAddAccount _value,
-      $Res Function(AppRoutePathAddAccount) _then)
-      : super(_value, (v) => _then(v as AppRoutePathAddAccount));
-
-  @override
-  AppRoutePathAddAccount get _value => super._value as AppRoutePathAddAccount;
+class __$$AppRoutePathAddAccountImplCopyWithImpl<$Res>
+    extends _$AppRoutePathCopyWithImpl<$Res, _$AppRoutePathAddAccountImpl>
+    implements _$$AppRoutePathAddAccountImplCopyWith<$Res> {
+  __$$AppRoutePathAddAccountImplCopyWithImpl(
+      _$AppRoutePathAddAccountImpl _value,
+      $Res Function(_$AppRoutePathAddAccountImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$AppRoutePathAddAccount
+class _$AppRoutePathAddAccountImpl
     with DiagnosticableTreeMixin
     implements AppRoutePathAddAccount {
-  const _$AppRoutePathAddAccount();
+  const _$AppRoutePathAddAccountImpl();
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
@@ -529,12 +482,14 @@ class _$AppRoutePathAddAccount
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
-    properties..add(DiagnosticsProperty('type', 'AppRoutePath.addAccount'));
+    properties.add(DiagnosticsProperty('type', 'AppRoutePath.addAccount'));
   }
 
   @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) || (other is AppRoutePathAddAccount);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AppRoutePathAddAccountImpl);
   }
 
   @override
@@ -558,14 +513,14 @@ class _$AppRoutePathAddAccount
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? unknown,
-    TResult Function(HomeRoutePath subRoute)? home,
-    TResult Function()? addAccount,
-    TResult Function(TrackingServiceType serviceType)? editAccount,
-    TResult Function(String? initialTrackNumbers)? addParcels,
-    TResult Function(String trackNumber)? parcelDetails,
-    TResult Function(SettingsRoutePath? subRoute)? settings,
-    TResult Function()? about,
+    TResult? Function()? unknown,
+    TResult? Function(HomeRoutePath subRoute)? home,
+    TResult? Function()? addAccount,
+    TResult? Function(TrackingServiceType serviceType)? editAccount,
+    TResult? Function(String? initialTrackNumbers)? addParcels,
+    TResult? Function(String trackNumber)? parcelDetails,
+    TResult? Function(SettingsRoutePath? subRoute)? settings,
+    TResult? Function()? about,
   }) {
     return addAccount?.call();
   }
@@ -607,14 +562,14 @@ class _$AppRoutePathAddAccount
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(AppRoutePathUnknown value)? unknown,
-    TResult Function(AppRoutePathHome value)? home,
-    TResult Function(AppRoutePathAddAccount value)? addAccount,
-    TResult Function(AppRoutePathEditAccount value)? editAccount,
-    TResult Function(AppRoutePathAddParcels value)? addParcels,
-    TResult Function(AppRoutePathParcelDetails value)? parcelDetails,
-    TResult Function(AppRoutePathSettings value)? settings,
-    TResult Function(AppRoutePathAbout value)? about,
+    TResult? Function(AppRoutePathUnknown value)? unknown,
+    TResult? Function(AppRoutePathHome value)? home,
+    TResult? Function(AppRoutePathAddAccount value)? addAccount,
+    TResult? Function(AppRoutePathEditAccount value)? editAccount,
+    TResult? Function(AppRoutePathAddParcels value)? addParcels,
+    TResult? Function(AppRoutePathParcelDetails value)? parcelDetails,
+    TResult? Function(AppRoutePathSettings value)? settings,
+    TResult? Function(AppRoutePathAbout value)? about,
   }) {
     return addAccount?.call(this);
   }
@@ -640,34 +595,35 @@ class _$AppRoutePathAddAccount
 }
 
 abstract class AppRoutePathAddAccount implements AppRoutePath {
-  const factory AppRoutePathAddAccount() = _$AppRoutePathAddAccount;
+  const factory AppRoutePathAddAccount() = _$AppRoutePathAddAccountImpl;
 }
 
 /// @nodoc
-abstract class $AppRoutePathEditAccountCopyWith<$Res> {
-  factory $AppRoutePathEditAccountCopyWith(AppRoutePathEditAccount value,
-          $Res Function(AppRoutePathEditAccount) then) =
-      _$AppRoutePathEditAccountCopyWithImpl<$Res>;
+abstract class _$$AppRoutePathEditAccountImplCopyWith<$Res> {
+  factory _$$AppRoutePathEditAccountImplCopyWith(
+          _$AppRoutePathEditAccountImpl value,
+          $Res Function(_$AppRoutePathEditAccountImpl) then) =
+      __$$AppRoutePathEditAccountImplCopyWithImpl<$Res>;
+  @useResult
   $Res call({TrackingServiceType serviceType});
 }
 
 /// @nodoc
-class _$AppRoutePathEditAccountCopyWithImpl<$Res>
-    extends _$AppRoutePathCopyWithImpl<$Res>
-    implements $AppRoutePathEditAccountCopyWith<$Res> {
-  _$AppRoutePathEditAccountCopyWithImpl(AppRoutePathEditAccount _value,
-      $Res Function(AppRoutePathEditAccount) _then)
-      : super(_value, (v) => _then(v as AppRoutePathEditAccount));
+class __$$AppRoutePathEditAccountImplCopyWithImpl<$Res>
+    extends _$AppRoutePathCopyWithImpl<$Res, _$AppRoutePathEditAccountImpl>
+    implements _$$AppRoutePathEditAccountImplCopyWith<$Res> {
+  __$$AppRoutePathEditAccountImplCopyWithImpl(
+      _$AppRoutePathEditAccountImpl _value,
+      $Res Function(_$AppRoutePathEditAccountImpl) _then)
+      : super(_value, _then);
 
-  @override
-  AppRoutePathEditAccount get _value => super._value as AppRoutePathEditAccount;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? serviceType = freezed,
+    Object? serviceType = null,
   }) {
-    return _then(AppRoutePathEditAccount(
-      serviceType == freezed
+    return _then(_$AppRoutePathEditAccountImpl(
+      null == serviceType
           ? _value.serviceType
           : serviceType // ignore: cast_nullable_to_non_nullable
               as TrackingServiceType,
@@ -677,10 +633,10 @@ class _$AppRoutePathEditAccountCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$AppRoutePathEditAccount
+class _$AppRoutePathEditAccountImpl
     with DiagnosticableTreeMixin
     implements AppRoutePathEditAccount {
-  const _$AppRoutePathEditAccount(this.serviceType);
+  const _$AppRoutePathEditAccountImpl(this.serviceType);
 
   @override
   final TrackingServiceType serviceType;
@@ -699,23 +655,23 @@ class _$AppRoutePathEditAccount
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is AppRoutePathEditAccount &&
+        (other.runtimeType == runtimeType &&
+            other is _$AppRoutePathEditAccountImpl &&
             (identical(other.serviceType, serviceType) ||
-                const DeepCollectionEquality()
-                    .equals(other.serviceType, serviceType)));
+                other.serviceType == serviceType));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(serviceType);
+  int get hashCode => Object.hash(runtimeType, serviceType);
 
   @JsonKey(ignore: true)
   @override
-  $AppRoutePathEditAccountCopyWith<AppRoutePathEditAccount> get copyWith =>
-      _$AppRoutePathEditAccountCopyWithImpl<AppRoutePathEditAccount>(
-          this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$AppRoutePathEditAccountImplCopyWith<_$AppRoutePathEditAccountImpl>
+      get copyWith => __$$AppRoutePathEditAccountImplCopyWithImpl<
+          _$AppRoutePathEditAccountImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -735,14 +691,14 @@ class _$AppRoutePathEditAccount
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? unknown,
-    TResult Function(HomeRoutePath subRoute)? home,
-    TResult Function()? addAccount,
-    TResult Function(TrackingServiceType serviceType)? editAccount,
-    TResult Function(String? initialTrackNumbers)? addParcels,
-    TResult Function(String trackNumber)? parcelDetails,
-    TResult Function(SettingsRoutePath? subRoute)? settings,
-    TResult Function()? about,
+    TResult? Function()? unknown,
+    TResult? Function(HomeRoutePath subRoute)? home,
+    TResult? Function()? addAccount,
+    TResult? Function(TrackingServiceType serviceType)? editAccount,
+    TResult? Function(String? initialTrackNumbers)? addParcels,
+    TResult? Function(String trackNumber)? parcelDetails,
+    TResult? Function(SettingsRoutePath? subRoute)? settings,
+    TResult? Function()? about,
   }) {
     return editAccount?.call(serviceType);
   }
@@ -784,14 +740,14 @@ class _$AppRoutePathEditAccount
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(AppRoutePathUnknown value)? unknown,
-    TResult Function(AppRoutePathHome value)? home,
-    TResult Function(AppRoutePathAddAccount value)? addAccount,
-    TResult Function(AppRoutePathEditAccount value)? editAccount,
-    TResult Function(AppRoutePathAddParcels value)? addParcels,
-    TResult Function(AppRoutePathParcelDetails value)? parcelDetails,
-    TResult Function(AppRoutePathSettings value)? settings,
-    TResult Function(AppRoutePathAbout value)? about,
+    TResult? Function(AppRoutePathUnknown value)? unknown,
+    TResult? Function(AppRoutePathHome value)? home,
+    TResult? Function(AppRoutePathAddAccount value)? addAccount,
+    TResult? Function(AppRoutePathEditAccount value)? editAccount,
+    TResult? Function(AppRoutePathAddParcels value)? addParcels,
+    TResult? Function(AppRoutePathParcelDetails value)? parcelDetails,
+    TResult? Function(AppRoutePathSettings value)? settings,
+    TResult? Function(AppRoutePathAbout value)? about,
   }) {
     return editAccount?.call(this);
   }
@@ -817,40 +773,41 @@ class _$AppRoutePathEditAccount
 }
 
 abstract class AppRoutePathEditAccount implements AppRoutePath {
-  const factory AppRoutePathEditAccount(TrackingServiceType serviceType) =
-      _$AppRoutePathEditAccount;
+  const factory AppRoutePathEditAccount(final TrackingServiceType serviceType) =
+      _$AppRoutePathEditAccountImpl;
 
-  TrackingServiceType get serviceType => throw _privateConstructorUsedError;
+  TrackingServiceType get serviceType;
   @JsonKey(ignore: true)
-  $AppRoutePathEditAccountCopyWith<AppRoutePathEditAccount> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$AppRoutePathEditAccountImplCopyWith<_$AppRoutePathEditAccountImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $AppRoutePathAddParcelsCopyWith<$Res> {
-  factory $AppRoutePathAddParcelsCopyWith(AppRoutePathAddParcels value,
-          $Res Function(AppRoutePathAddParcels) then) =
-      _$AppRoutePathAddParcelsCopyWithImpl<$Res>;
+abstract class _$$AppRoutePathAddParcelsImplCopyWith<$Res> {
+  factory _$$AppRoutePathAddParcelsImplCopyWith(
+          _$AppRoutePathAddParcelsImpl value,
+          $Res Function(_$AppRoutePathAddParcelsImpl) then) =
+      __$$AppRoutePathAddParcelsImplCopyWithImpl<$Res>;
+  @useResult
   $Res call({String? initialTrackNumbers});
 }
 
 /// @nodoc
-class _$AppRoutePathAddParcelsCopyWithImpl<$Res>
-    extends _$AppRoutePathCopyWithImpl<$Res>
-    implements $AppRoutePathAddParcelsCopyWith<$Res> {
-  _$AppRoutePathAddParcelsCopyWithImpl(AppRoutePathAddParcels _value,
-      $Res Function(AppRoutePathAddParcels) _then)
-      : super(_value, (v) => _then(v as AppRoutePathAddParcels));
+class __$$AppRoutePathAddParcelsImplCopyWithImpl<$Res>
+    extends _$AppRoutePathCopyWithImpl<$Res, _$AppRoutePathAddParcelsImpl>
+    implements _$$AppRoutePathAddParcelsImplCopyWith<$Res> {
+  __$$AppRoutePathAddParcelsImplCopyWithImpl(
+      _$AppRoutePathAddParcelsImpl _value,
+      $Res Function(_$AppRoutePathAddParcelsImpl) _then)
+      : super(_value, _then);
 
-  @override
-  AppRoutePathAddParcels get _value => super._value as AppRoutePathAddParcels;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? initialTrackNumbers = freezed,
   }) {
-    return _then(AppRoutePathAddParcels(
-      initialTrackNumbers: initialTrackNumbers == freezed
+    return _then(_$AppRoutePathAddParcelsImpl(
+      initialTrackNumbers: freezed == initialTrackNumbers
           ? _value.initialTrackNumbers
           : initialTrackNumbers // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -860,10 +817,10 @@ class _$AppRoutePathAddParcelsCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$AppRoutePathAddParcels
+class _$AppRoutePathAddParcelsImpl
     with DiagnosticableTreeMixin
     implements AppRoutePathAddParcels {
-  const _$AppRoutePathAddParcels({this.initialTrackNumbers});
+  const _$AppRoutePathAddParcelsImpl({this.initialTrackNumbers});
 
   @override
   final String? initialTrackNumbers;
@@ -882,24 +839,23 @@ class _$AppRoutePathAddParcels
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is AppRoutePathAddParcels &&
+        (other.runtimeType == runtimeType &&
+            other is _$AppRoutePathAddParcelsImpl &&
             (identical(other.initialTrackNumbers, initialTrackNumbers) ||
-                const DeepCollectionEquality()
-                    .equals(other.initialTrackNumbers, initialTrackNumbers)));
+                other.initialTrackNumbers == initialTrackNumbers));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(initialTrackNumbers);
+  int get hashCode => Object.hash(runtimeType, initialTrackNumbers);
 
   @JsonKey(ignore: true)
   @override
-  $AppRoutePathAddParcelsCopyWith<AppRoutePathAddParcels> get copyWith =>
-      _$AppRoutePathAddParcelsCopyWithImpl<AppRoutePathAddParcels>(
-          this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$AppRoutePathAddParcelsImplCopyWith<_$AppRoutePathAddParcelsImpl>
+      get copyWith => __$$AppRoutePathAddParcelsImplCopyWithImpl<
+          _$AppRoutePathAddParcelsImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -919,14 +875,14 @@ class _$AppRoutePathAddParcels
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? unknown,
-    TResult Function(HomeRoutePath subRoute)? home,
-    TResult Function()? addAccount,
-    TResult Function(TrackingServiceType serviceType)? editAccount,
-    TResult Function(String? initialTrackNumbers)? addParcels,
-    TResult Function(String trackNumber)? parcelDetails,
-    TResult Function(SettingsRoutePath? subRoute)? settings,
-    TResult Function()? about,
+    TResult? Function()? unknown,
+    TResult? Function(HomeRoutePath subRoute)? home,
+    TResult? Function()? addAccount,
+    TResult? Function(TrackingServiceType serviceType)? editAccount,
+    TResult? Function(String? initialTrackNumbers)? addParcels,
+    TResult? Function(String trackNumber)? parcelDetails,
+    TResult? Function(SettingsRoutePath? subRoute)? settings,
+    TResult? Function()? about,
   }) {
     return addParcels?.call(initialTrackNumbers);
   }
@@ -968,14 +924,14 @@ class _$AppRoutePathAddParcels
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(AppRoutePathUnknown value)? unknown,
-    TResult Function(AppRoutePathHome value)? home,
-    TResult Function(AppRoutePathAddAccount value)? addAccount,
-    TResult Function(AppRoutePathEditAccount value)? editAccount,
-    TResult Function(AppRoutePathAddParcels value)? addParcels,
-    TResult Function(AppRoutePathParcelDetails value)? parcelDetails,
-    TResult Function(AppRoutePathSettings value)? settings,
-    TResult Function(AppRoutePathAbout value)? about,
+    TResult? Function(AppRoutePathUnknown value)? unknown,
+    TResult? Function(AppRoutePathHome value)? home,
+    TResult? Function(AppRoutePathAddAccount value)? addAccount,
+    TResult? Function(AppRoutePathEditAccount value)? editAccount,
+    TResult? Function(AppRoutePathAddParcels value)? addParcels,
+    TResult? Function(AppRoutePathParcelDetails value)? parcelDetails,
+    TResult? Function(AppRoutePathSettings value)? settings,
+    TResult? Function(AppRoutePathAbout value)? about,
   }) {
     return addParcels?.call(this);
   }
@@ -1001,41 +957,41 @@ class _$AppRoutePathAddParcels
 }
 
 abstract class AppRoutePathAddParcels implements AppRoutePath {
-  const factory AppRoutePathAddParcels({String? initialTrackNumbers}) =
-      _$AppRoutePathAddParcels;
+  const factory AppRoutePathAddParcels({final String? initialTrackNumbers}) =
+      _$AppRoutePathAddParcelsImpl;
 
-  String? get initialTrackNumbers => throw _privateConstructorUsedError;
+  String? get initialTrackNumbers;
   @JsonKey(ignore: true)
-  $AppRoutePathAddParcelsCopyWith<AppRoutePathAddParcels> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$AppRoutePathAddParcelsImplCopyWith<_$AppRoutePathAddParcelsImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $AppRoutePathParcelDetailsCopyWith<$Res> {
-  factory $AppRoutePathParcelDetailsCopyWith(AppRoutePathParcelDetails value,
-          $Res Function(AppRoutePathParcelDetails) then) =
-      _$AppRoutePathParcelDetailsCopyWithImpl<$Res>;
+abstract class _$$AppRoutePathParcelDetailsImplCopyWith<$Res> {
+  factory _$$AppRoutePathParcelDetailsImplCopyWith(
+          _$AppRoutePathParcelDetailsImpl value,
+          $Res Function(_$AppRoutePathParcelDetailsImpl) then) =
+      __$$AppRoutePathParcelDetailsImplCopyWithImpl<$Res>;
+  @useResult
   $Res call({String trackNumber});
 }
 
 /// @nodoc
-class _$AppRoutePathParcelDetailsCopyWithImpl<$Res>
-    extends _$AppRoutePathCopyWithImpl<$Res>
-    implements $AppRoutePathParcelDetailsCopyWith<$Res> {
-  _$AppRoutePathParcelDetailsCopyWithImpl(AppRoutePathParcelDetails _value,
-      $Res Function(AppRoutePathParcelDetails) _then)
-      : super(_value, (v) => _then(v as AppRoutePathParcelDetails));
+class __$$AppRoutePathParcelDetailsImplCopyWithImpl<$Res>
+    extends _$AppRoutePathCopyWithImpl<$Res, _$AppRoutePathParcelDetailsImpl>
+    implements _$$AppRoutePathParcelDetailsImplCopyWith<$Res> {
+  __$$AppRoutePathParcelDetailsImplCopyWithImpl(
+      _$AppRoutePathParcelDetailsImpl _value,
+      $Res Function(_$AppRoutePathParcelDetailsImpl) _then)
+      : super(_value, _then);
 
-  @override
-  AppRoutePathParcelDetails get _value =>
-      super._value as AppRoutePathParcelDetails;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? trackNumber = freezed,
+    Object? trackNumber = null,
   }) {
-    return _then(AppRoutePathParcelDetails(
-      trackNumber == freezed
+    return _then(_$AppRoutePathParcelDetailsImpl(
+      null == trackNumber
           ? _value.trackNumber
           : trackNumber // ignore: cast_nullable_to_non_nullable
               as String,
@@ -1045,10 +1001,10 @@ class _$AppRoutePathParcelDetailsCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$AppRoutePathParcelDetails
+class _$AppRoutePathParcelDetailsImpl
     with DiagnosticableTreeMixin
     implements AppRoutePathParcelDetails {
-  const _$AppRoutePathParcelDetails(this.trackNumber);
+  const _$AppRoutePathParcelDetailsImpl(this.trackNumber);
 
   @override
   final String trackNumber;
@@ -1067,23 +1023,23 @@ class _$AppRoutePathParcelDetails
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is AppRoutePathParcelDetails &&
+        (other.runtimeType == runtimeType &&
+            other is _$AppRoutePathParcelDetailsImpl &&
             (identical(other.trackNumber, trackNumber) ||
-                const DeepCollectionEquality()
-                    .equals(other.trackNumber, trackNumber)));
+                other.trackNumber == trackNumber));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(trackNumber);
+  int get hashCode => Object.hash(runtimeType, trackNumber);
 
   @JsonKey(ignore: true)
   @override
-  $AppRoutePathParcelDetailsCopyWith<AppRoutePathParcelDetails> get copyWith =>
-      _$AppRoutePathParcelDetailsCopyWithImpl<AppRoutePathParcelDetails>(
-          this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$AppRoutePathParcelDetailsImplCopyWith<_$AppRoutePathParcelDetailsImpl>
+      get copyWith => __$$AppRoutePathParcelDetailsImplCopyWithImpl<
+          _$AppRoutePathParcelDetailsImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1103,14 +1059,14 @@ class _$AppRoutePathParcelDetails
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? unknown,
-    TResult Function(HomeRoutePath subRoute)? home,
-    TResult Function()? addAccount,
-    TResult Function(TrackingServiceType serviceType)? editAccount,
-    TResult Function(String? initialTrackNumbers)? addParcels,
-    TResult Function(String trackNumber)? parcelDetails,
-    TResult Function(SettingsRoutePath? subRoute)? settings,
-    TResult Function()? about,
+    TResult? Function()? unknown,
+    TResult? Function(HomeRoutePath subRoute)? home,
+    TResult? Function()? addAccount,
+    TResult? Function(TrackingServiceType serviceType)? editAccount,
+    TResult? Function(String? initialTrackNumbers)? addParcels,
+    TResult? Function(String trackNumber)? parcelDetails,
+    TResult? Function(SettingsRoutePath? subRoute)? settings,
+    TResult? Function()? about,
   }) {
     return parcelDetails?.call(trackNumber);
   }
@@ -1152,14 +1108,14 @@ class _$AppRoutePathParcelDetails
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(AppRoutePathUnknown value)? unknown,
-    TResult Function(AppRoutePathHome value)? home,
-    TResult Function(AppRoutePathAddAccount value)? addAccount,
-    TResult Function(AppRoutePathEditAccount value)? editAccount,
-    TResult Function(AppRoutePathAddParcels value)? addParcels,
-    TResult Function(AppRoutePathParcelDetails value)? parcelDetails,
-    TResult Function(AppRoutePathSettings value)? settings,
-    TResult Function(AppRoutePathAbout value)? about,
+    TResult? Function(AppRoutePathUnknown value)? unknown,
+    TResult? Function(AppRoutePathHome value)? home,
+    TResult? Function(AppRoutePathAddAccount value)? addAccount,
+    TResult? Function(AppRoutePathEditAccount value)? editAccount,
+    TResult? Function(AppRoutePathAddParcels value)? addParcels,
+    TResult? Function(AppRoutePathParcelDetails value)? parcelDetails,
+    TResult? Function(AppRoutePathSettings value)? settings,
+    TResult? Function(AppRoutePathAbout value)? about,
   }) {
     return parcelDetails?.call(this);
   }
@@ -1185,42 +1141,41 @@ class _$AppRoutePathParcelDetails
 }
 
 abstract class AppRoutePathParcelDetails implements AppRoutePath {
-  const factory AppRoutePathParcelDetails(String trackNumber) =
-      _$AppRoutePathParcelDetails;
+  const factory AppRoutePathParcelDetails(final String trackNumber) =
+      _$AppRoutePathParcelDetailsImpl;
 
-  String get trackNumber => throw _privateConstructorUsedError;
+  String get trackNumber;
   @JsonKey(ignore: true)
-  $AppRoutePathParcelDetailsCopyWith<AppRoutePathParcelDetails> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$AppRoutePathParcelDetailsImplCopyWith<_$AppRoutePathParcelDetailsImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $AppRoutePathSettingsCopyWith<$Res> {
-  factory $AppRoutePathSettingsCopyWith(AppRoutePathSettings value,
-          $Res Function(AppRoutePathSettings) then) =
-      _$AppRoutePathSettingsCopyWithImpl<$Res>;
+abstract class _$$AppRoutePathSettingsImplCopyWith<$Res> {
+  factory _$$AppRoutePathSettingsImplCopyWith(_$AppRoutePathSettingsImpl value,
+          $Res Function(_$AppRoutePathSettingsImpl) then) =
+      __$$AppRoutePathSettingsImplCopyWithImpl<$Res>;
+  @useResult
   $Res call({SettingsRoutePath? subRoute});
 
   $SettingsRoutePathCopyWith<$Res>? get subRoute;
 }
 
 /// @nodoc
-class _$AppRoutePathSettingsCopyWithImpl<$Res>
-    extends _$AppRoutePathCopyWithImpl<$Res>
-    implements $AppRoutePathSettingsCopyWith<$Res> {
-  _$AppRoutePathSettingsCopyWithImpl(
-      AppRoutePathSettings _value, $Res Function(AppRoutePathSettings) _then)
-      : super(_value, (v) => _then(v as AppRoutePathSettings));
+class __$$AppRoutePathSettingsImplCopyWithImpl<$Res>
+    extends _$AppRoutePathCopyWithImpl<$Res, _$AppRoutePathSettingsImpl>
+    implements _$$AppRoutePathSettingsImplCopyWith<$Res> {
+  __$$AppRoutePathSettingsImplCopyWithImpl(_$AppRoutePathSettingsImpl _value,
+      $Res Function(_$AppRoutePathSettingsImpl) _then)
+      : super(_value, _then);
 
-  @override
-  AppRoutePathSettings get _value => super._value as AppRoutePathSettings;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? subRoute = freezed,
   }) {
-    return _then(AppRoutePathSettings(
-      subRoute: subRoute == freezed
+    return _then(_$AppRoutePathSettingsImpl(
+      subRoute: freezed == subRoute
           ? _value.subRoute
           : subRoute // ignore: cast_nullable_to_non_nullable
               as SettingsRoutePath?,
@@ -1228,6 +1183,7 @@ class _$AppRoutePathSettingsCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $SettingsRoutePathCopyWith<$Res>? get subRoute {
     if (_value.subRoute == null) {
       return null;
@@ -1241,10 +1197,10 @@ class _$AppRoutePathSettingsCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$AppRoutePathSettings
+class _$AppRoutePathSettingsImpl
     with DiagnosticableTreeMixin
     implements AppRoutePathSettings {
-  const _$AppRoutePathSettings({this.subRoute});
+  const _$AppRoutePathSettingsImpl({this.subRoute});
 
   @override
   final SettingsRoutePath? subRoute;
@@ -1263,23 +1219,24 @@ class _$AppRoutePathSettings
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is AppRoutePathSettings &&
+        (other.runtimeType == runtimeType &&
+            other is _$AppRoutePathSettingsImpl &&
             (identical(other.subRoute, subRoute) ||
-                const DeepCollectionEquality()
-                    .equals(other.subRoute, subRoute)));
+                other.subRoute == subRoute));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(subRoute);
+  int get hashCode => Object.hash(runtimeType, subRoute);
 
   @JsonKey(ignore: true)
   @override
-  $AppRoutePathSettingsCopyWith<AppRoutePathSettings> get copyWith =>
-      _$AppRoutePathSettingsCopyWithImpl<AppRoutePathSettings>(
-          this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$AppRoutePathSettingsImplCopyWith<_$AppRoutePathSettingsImpl>
+      get copyWith =>
+          __$$AppRoutePathSettingsImplCopyWithImpl<_$AppRoutePathSettingsImpl>(
+              this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1299,14 +1256,14 @@ class _$AppRoutePathSettings
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? unknown,
-    TResult Function(HomeRoutePath subRoute)? home,
-    TResult Function()? addAccount,
-    TResult Function(TrackingServiceType serviceType)? editAccount,
-    TResult Function(String? initialTrackNumbers)? addParcels,
-    TResult Function(String trackNumber)? parcelDetails,
-    TResult Function(SettingsRoutePath? subRoute)? settings,
-    TResult Function()? about,
+    TResult? Function()? unknown,
+    TResult? Function(HomeRoutePath subRoute)? home,
+    TResult? Function()? addAccount,
+    TResult? Function(TrackingServiceType serviceType)? editAccount,
+    TResult? Function(String? initialTrackNumbers)? addParcels,
+    TResult? Function(String trackNumber)? parcelDetails,
+    TResult? Function(SettingsRoutePath? subRoute)? settings,
+    TResult? Function()? about,
   }) {
     return settings?.call(subRoute);
   }
@@ -1348,14 +1305,14 @@ class _$AppRoutePathSettings
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(AppRoutePathUnknown value)? unknown,
-    TResult Function(AppRoutePathHome value)? home,
-    TResult Function(AppRoutePathAddAccount value)? addAccount,
-    TResult Function(AppRoutePathEditAccount value)? editAccount,
-    TResult Function(AppRoutePathAddParcels value)? addParcels,
-    TResult Function(AppRoutePathParcelDetails value)? parcelDetails,
-    TResult Function(AppRoutePathSettings value)? settings,
-    TResult Function(AppRoutePathAbout value)? about,
+    TResult? Function(AppRoutePathUnknown value)? unknown,
+    TResult? Function(AppRoutePathHome value)? home,
+    TResult? Function(AppRoutePathAddAccount value)? addAccount,
+    TResult? Function(AppRoutePathEditAccount value)? editAccount,
+    TResult? Function(AppRoutePathAddParcels value)? addParcels,
+    TResult? Function(AppRoutePathParcelDetails value)? parcelDetails,
+    TResult? Function(AppRoutePathSettings value)? settings,
+    TResult? Function(AppRoutePathAbout value)? about,
   }) {
     return settings?.call(this);
   }
@@ -1381,40 +1338,37 @@ class _$AppRoutePathSettings
 }
 
 abstract class AppRoutePathSettings implements AppRoutePath {
-  const factory AppRoutePathSettings({SettingsRoutePath? subRoute}) =
-      _$AppRoutePathSettings;
+  const factory AppRoutePathSettings({final SettingsRoutePath? subRoute}) =
+      _$AppRoutePathSettingsImpl;
 
-  SettingsRoutePath? get subRoute => throw _privateConstructorUsedError;
+  SettingsRoutePath? get subRoute;
   @JsonKey(ignore: true)
-  $AppRoutePathSettingsCopyWith<AppRoutePathSettings> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$AppRoutePathSettingsImplCopyWith<_$AppRoutePathSettingsImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $AppRoutePathAboutCopyWith<$Res> {
-  factory $AppRoutePathAboutCopyWith(
-          AppRoutePathAbout value, $Res Function(AppRoutePathAbout) then) =
-      _$AppRoutePathAboutCopyWithImpl<$Res>;
+abstract class _$$AppRoutePathAboutImplCopyWith<$Res> {
+  factory _$$AppRoutePathAboutImplCopyWith(_$AppRoutePathAboutImpl value,
+          $Res Function(_$AppRoutePathAboutImpl) then) =
+      __$$AppRoutePathAboutImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$AppRoutePathAboutCopyWithImpl<$Res>
-    extends _$AppRoutePathCopyWithImpl<$Res>
-    implements $AppRoutePathAboutCopyWith<$Res> {
-  _$AppRoutePathAboutCopyWithImpl(
-      AppRoutePathAbout _value, $Res Function(AppRoutePathAbout) _then)
-      : super(_value, (v) => _then(v as AppRoutePathAbout));
-
-  @override
-  AppRoutePathAbout get _value => super._value as AppRoutePathAbout;
+class __$$AppRoutePathAboutImplCopyWithImpl<$Res>
+    extends _$AppRoutePathCopyWithImpl<$Res, _$AppRoutePathAboutImpl>
+    implements _$$AppRoutePathAboutImplCopyWith<$Res> {
+  __$$AppRoutePathAboutImplCopyWithImpl(_$AppRoutePathAboutImpl _value,
+      $Res Function(_$AppRoutePathAboutImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$AppRoutePathAbout
+class _$AppRoutePathAboutImpl
     with DiagnosticableTreeMixin
     implements AppRoutePathAbout {
-  const _$AppRoutePathAbout();
+  const _$AppRoutePathAboutImpl();
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
@@ -1424,12 +1378,13 @@ class _$AppRoutePathAbout
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
-    properties..add(DiagnosticsProperty('type', 'AppRoutePath.about'));
+    properties.add(DiagnosticsProperty('type', 'AppRoutePath.about'));
   }
 
   @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) || (other is AppRoutePathAbout);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$AppRoutePathAboutImpl);
   }
 
   @override
@@ -1453,14 +1408,14 @@ class _$AppRoutePathAbout
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? unknown,
-    TResult Function(HomeRoutePath subRoute)? home,
-    TResult Function()? addAccount,
-    TResult Function(TrackingServiceType serviceType)? editAccount,
-    TResult Function(String? initialTrackNumbers)? addParcels,
-    TResult Function(String trackNumber)? parcelDetails,
-    TResult Function(SettingsRoutePath? subRoute)? settings,
-    TResult Function()? about,
+    TResult? Function()? unknown,
+    TResult? Function(HomeRoutePath subRoute)? home,
+    TResult? Function()? addAccount,
+    TResult? Function(TrackingServiceType serviceType)? editAccount,
+    TResult? Function(String? initialTrackNumbers)? addParcels,
+    TResult? Function(String trackNumber)? parcelDetails,
+    TResult? Function(SettingsRoutePath? subRoute)? settings,
+    TResult? Function()? about,
   }) {
     return about?.call();
   }
@@ -1502,14 +1457,14 @@ class _$AppRoutePathAbout
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(AppRoutePathUnknown value)? unknown,
-    TResult Function(AppRoutePathHome value)? home,
-    TResult Function(AppRoutePathAddAccount value)? addAccount,
-    TResult Function(AppRoutePathEditAccount value)? editAccount,
-    TResult Function(AppRoutePathAddParcels value)? addParcels,
-    TResult Function(AppRoutePathParcelDetails value)? parcelDetails,
-    TResult Function(AppRoutePathSettings value)? settings,
-    TResult Function(AppRoutePathAbout value)? about,
+    TResult? Function(AppRoutePathUnknown value)? unknown,
+    TResult? Function(AppRoutePathHome value)? home,
+    TResult? Function(AppRoutePathAddAccount value)? addAccount,
+    TResult? Function(AppRoutePathEditAccount value)? editAccount,
+    TResult? Function(AppRoutePathAddParcels value)? addParcels,
+    TResult? Function(AppRoutePathParcelDetails value)? parcelDetails,
+    TResult? Function(AppRoutePathSettings value)? settings,
+    TResult? Function(AppRoutePathAbout value)? about,
   }) {
     return about?.call(this);
   }
@@ -1535,24 +1490,8 @@ class _$AppRoutePathAbout
 }
 
 abstract class AppRoutePathAbout implements AppRoutePath {
-  const factory AppRoutePathAbout() = _$AppRoutePathAbout;
+  const factory AppRoutePathAbout() = _$AppRoutePathAboutImpl;
 }
-
-/// @nodoc
-class _$HomeRoutePathTearOff {
-  const _$HomeRoutePathTearOff();
-
-  HomeRoutePathParcels parcels() {
-    return const HomeRoutePathParcels();
-  }
-
-  HomeRoutePathAccounts accounts() {
-    return const HomeRoutePathAccounts();
-  }
-}
-
-/// @nodoc
-const $HomeRoutePath = _$HomeRoutePathTearOff();
 
 /// @nodoc
 mixin _$HomeRoutePath {
@@ -1564,8 +1503,8 @@ mixin _$HomeRoutePath {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? parcels,
-    TResult Function()? accounts,
+    TResult? Function()? parcels,
+    TResult? Function()? accounts,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -1583,8 +1522,8 @@ mixin _$HomeRoutePath {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(HomeRoutePathParcels value)? parcels,
-    TResult Function(HomeRoutePathAccounts value)? accounts,
+    TResult? Function(HomeRoutePathParcels value)? parcels,
+    TResult? Function(HomeRoutePathAccounts value)? accounts,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -1600,44 +1539,42 @@ mixin _$HomeRoutePath {
 abstract class $HomeRoutePathCopyWith<$Res> {
   factory $HomeRoutePathCopyWith(
           HomeRoutePath value, $Res Function(HomeRoutePath) then) =
-      _$HomeRoutePathCopyWithImpl<$Res>;
+      _$HomeRoutePathCopyWithImpl<$Res, HomeRoutePath>;
 }
 
 /// @nodoc
-class _$HomeRoutePathCopyWithImpl<$Res>
+class _$HomeRoutePathCopyWithImpl<$Res, $Val extends HomeRoutePath>
     implements $HomeRoutePathCopyWith<$Res> {
   _$HomeRoutePathCopyWithImpl(this._value, this._then);
 
-  final HomeRoutePath _value;
   // ignore: unused_field
-  final $Res Function(HomeRoutePath) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 }
 
 /// @nodoc
-abstract class $HomeRoutePathParcelsCopyWith<$Res> {
-  factory $HomeRoutePathParcelsCopyWith(HomeRoutePathParcels value,
-          $Res Function(HomeRoutePathParcels) then) =
-      _$HomeRoutePathParcelsCopyWithImpl<$Res>;
+abstract class _$$HomeRoutePathParcelsImplCopyWith<$Res> {
+  factory _$$HomeRoutePathParcelsImplCopyWith(_$HomeRoutePathParcelsImpl value,
+          $Res Function(_$HomeRoutePathParcelsImpl) then) =
+      __$$HomeRoutePathParcelsImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$HomeRoutePathParcelsCopyWithImpl<$Res>
-    extends _$HomeRoutePathCopyWithImpl<$Res>
-    implements $HomeRoutePathParcelsCopyWith<$Res> {
-  _$HomeRoutePathParcelsCopyWithImpl(
-      HomeRoutePathParcels _value, $Res Function(HomeRoutePathParcels) _then)
-      : super(_value, (v) => _then(v as HomeRoutePathParcels));
-
-  @override
-  HomeRoutePathParcels get _value => super._value as HomeRoutePathParcels;
+class __$$HomeRoutePathParcelsImplCopyWithImpl<$Res>
+    extends _$HomeRoutePathCopyWithImpl<$Res, _$HomeRoutePathParcelsImpl>
+    implements _$$HomeRoutePathParcelsImplCopyWith<$Res> {
+  __$$HomeRoutePathParcelsImplCopyWithImpl(_$HomeRoutePathParcelsImpl _value,
+      $Res Function(_$HomeRoutePathParcelsImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$HomeRoutePathParcels
+class _$HomeRoutePathParcelsImpl
     with DiagnosticableTreeMixin
     implements HomeRoutePathParcels {
-  const _$HomeRoutePathParcels();
+  const _$HomeRoutePathParcelsImpl();
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
@@ -1647,12 +1584,14 @@ class _$HomeRoutePathParcels
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
-    properties..add(DiagnosticsProperty('type', 'HomeRoutePath.parcels'));
+    properties.add(DiagnosticsProperty('type', 'HomeRoutePath.parcels'));
   }
 
   @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) || (other is HomeRoutePathParcels);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$HomeRoutePathParcelsImpl);
   }
 
   @override
@@ -1670,8 +1609,8 @@ class _$HomeRoutePathParcels
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? parcels,
-    TResult Function()? accounts,
+    TResult? Function()? parcels,
+    TResult? Function()? accounts,
   }) {
     return parcels?.call();
   }
@@ -1701,8 +1640,8 @@ class _$HomeRoutePathParcels
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(HomeRoutePathParcels value)? parcels,
-    TResult Function(HomeRoutePathAccounts value)? accounts,
+    TResult? Function(HomeRoutePathParcels value)? parcels,
+    TResult? Function(HomeRoutePathAccounts value)? accounts,
   }) {
     return parcels?.call(this);
   }
@@ -1722,34 +1661,32 @@ class _$HomeRoutePathParcels
 }
 
 abstract class HomeRoutePathParcels implements HomeRoutePath {
-  const factory HomeRoutePathParcels() = _$HomeRoutePathParcels;
+  const factory HomeRoutePathParcels() = _$HomeRoutePathParcelsImpl;
 }
 
 /// @nodoc
-abstract class $HomeRoutePathAccountsCopyWith<$Res> {
-  factory $HomeRoutePathAccountsCopyWith(HomeRoutePathAccounts value,
-          $Res Function(HomeRoutePathAccounts) then) =
-      _$HomeRoutePathAccountsCopyWithImpl<$Res>;
+abstract class _$$HomeRoutePathAccountsImplCopyWith<$Res> {
+  factory _$$HomeRoutePathAccountsImplCopyWith(
+          _$HomeRoutePathAccountsImpl value,
+          $Res Function(_$HomeRoutePathAccountsImpl) then) =
+      __$$HomeRoutePathAccountsImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$HomeRoutePathAccountsCopyWithImpl<$Res>
-    extends _$HomeRoutePathCopyWithImpl<$Res>
-    implements $HomeRoutePathAccountsCopyWith<$Res> {
-  _$HomeRoutePathAccountsCopyWithImpl(
-      HomeRoutePathAccounts _value, $Res Function(HomeRoutePathAccounts) _then)
-      : super(_value, (v) => _then(v as HomeRoutePathAccounts));
-
-  @override
-  HomeRoutePathAccounts get _value => super._value as HomeRoutePathAccounts;
+class __$$HomeRoutePathAccountsImplCopyWithImpl<$Res>
+    extends _$HomeRoutePathCopyWithImpl<$Res, _$HomeRoutePathAccountsImpl>
+    implements _$$HomeRoutePathAccountsImplCopyWith<$Res> {
+  __$$HomeRoutePathAccountsImplCopyWithImpl(_$HomeRoutePathAccountsImpl _value,
+      $Res Function(_$HomeRoutePathAccountsImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$HomeRoutePathAccounts
+class _$HomeRoutePathAccountsImpl
     with DiagnosticableTreeMixin
     implements HomeRoutePathAccounts {
-  const _$HomeRoutePathAccounts();
+  const _$HomeRoutePathAccountsImpl();
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
@@ -1759,12 +1696,14 @@ class _$HomeRoutePathAccounts
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
-    properties..add(DiagnosticsProperty('type', 'HomeRoutePath.accounts'));
+    properties.add(DiagnosticsProperty('type', 'HomeRoutePath.accounts'));
   }
 
   @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) || (other is HomeRoutePathAccounts);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$HomeRoutePathAccountsImpl);
   }
 
   @override
@@ -1782,8 +1721,8 @@ class _$HomeRoutePathAccounts
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? parcels,
-    TResult Function()? accounts,
+    TResult? Function()? parcels,
+    TResult? Function()? accounts,
   }) {
     return accounts?.call();
   }
@@ -1813,8 +1752,8 @@ class _$HomeRoutePathAccounts
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(HomeRoutePathParcels value)? parcels,
-    TResult Function(HomeRoutePathAccounts value)? accounts,
+    TResult? Function(HomeRoutePathParcels value)? parcels,
+    TResult? Function(HomeRoutePathAccounts value)? accounts,
   }) {
     return accounts?.call(this);
   }
@@ -1834,24 +1773,8 @@ class _$HomeRoutePathAccounts
 }
 
 abstract class HomeRoutePathAccounts implements HomeRoutePath {
-  const factory HomeRoutePathAccounts() = _$HomeRoutePathAccounts;
+  const factory HomeRoutePathAccounts() = _$HomeRoutePathAccountsImpl;
 }
-
-/// @nodoc
-class _$SettingsRoutePathTearOff {
-  const _$SettingsRoutePathTearOff();
-
-  SettingsRoutePathAppearance appearance() {
-    return const SettingsRoutePathAppearance();
-  }
-
-  SettingsRoutePathBehavior behavior() {
-    return const SettingsRoutePathBehavior();
-  }
-}
-
-/// @nodoc
-const $SettingsRoutePath = _$SettingsRoutePathTearOff();
 
 /// @nodoc
 mixin _$SettingsRoutePath {
@@ -1863,8 +1786,8 @@ mixin _$SettingsRoutePath {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? appearance,
-    TResult Function()? behavior,
+    TResult? Function()? appearance,
+    TResult? Function()? behavior,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -1882,8 +1805,8 @@ mixin _$SettingsRoutePath {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(SettingsRoutePathAppearance value)? appearance,
-    TResult Function(SettingsRoutePathBehavior value)? behavior,
+    TResult? Function(SettingsRoutePathAppearance value)? appearance,
+    TResult? Function(SettingsRoutePathBehavior value)? behavior,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -1899,46 +1822,45 @@ mixin _$SettingsRoutePath {
 abstract class $SettingsRoutePathCopyWith<$Res> {
   factory $SettingsRoutePathCopyWith(
           SettingsRoutePath value, $Res Function(SettingsRoutePath) then) =
-      _$SettingsRoutePathCopyWithImpl<$Res>;
+      _$SettingsRoutePathCopyWithImpl<$Res, SettingsRoutePath>;
 }
 
 /// @nodoc
-class _$SettingsRoutePathCopyWithImpl<$Res>
+class _$SettingsRoutePathCopyWithImpl<$Res, $Val extends SettingsRoutePath>
     implements $SettingsRoutePathCopyWith<$Res> {
   _$SettingsRoutePathCopyWithImpl(this._value, this._then);
 
-  final SettingsRoutePath _value;
   // ignore: unused_field
-  final $Res Function(SettingsRoutePath) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 }
 
 /// @nodoc
-abstract class $SettingsRoutePathAppearanceCopyWith<$Res> {
-  factory $SettingsRoutePathAppearanceCopyWith(
-          SettingsRoutePathAppearance value,
-          $Res Function(SettingsRoutePathAppearance) then) =
-      _$SettingsRoutePathAppearanceCopyWithImpl<$Res>;
+abstract class _$$SettingsRoutePathAppearanceImplCopyWith<$Res> {
+  factory _$$SettingsRoutePathAppearanceImplCopyWith(
+          _$SettingsRoutePathAppearanceImpl value,
+          $Res Function(_$SettingsRoutePathAppearanceImpl) then) =
+      __$$SettingsRoutePathAppearanceImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$SettingsRoutePathAppearanceCopyWithImpl<$Res>
-    extends _$SettingsRoutePathCopyWithImpl<$Res>
-    implements $SettingsRoutePathAppearanceCopyWith<$Res> {
-  _$SettingsRoutePathAppearanceCopyWithImpl(SettingsRoutePathAppearance _value,
-      $Res Function(SettingsRoutePathAppearance) _then)
-      : super(_value, (v) => _then(v as SettingsRoutePathAppearance));
-
-  @override
-  SettingsRoutePathAppearance get _value =>
-      super._value as SettingsRoutePathAppearance;
+class __$$SettingsRoutePathAppearanceImplCopyWithImpl<$Res>
+    extends _$SettingsRoutePathCopyWithImpl<$Res,
+        _$SettingsRoutePathAppearanceImpl>
+    implements _$$SettingsRoutePathAppearanceImplCopyWith<$Res> {
+  __$$SettingsRoutePathAppearanceImplCopyWithImpl(
+      _$SettingsRoutePathAppearanceImpl _value,
+      $Res Function(_$SettingsRoutePathAppearanceImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$SettingsRoutePathAppearance
+class _$SettingsRoutePathAppearanceImpl
     with DiagnosticableTreeMixin
     implements SettingsRoutePathAppearance {
-  const _$SettingsRoutePathAppearance();
+  const _$SettingsRoutePathAppearanceImpl();
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
@@ -1948,13 +1870,14 @@ class _$SettingsRoutePathAppearance
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'SettingsRoutePath.appearance'));
+    properties.add(DiagnosticsProperty('type', 'SettingsRoutePath.appearance'));
   }
 
   @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) || (other is SettingsRoutePathAppearance);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$SettingsRoutePathAppearanceImpl);
   }
 
   @override
@@ -1972,8 +1895,8 @@ class _$SettingsRoutePathAppearance
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? appearance,
-    TResult Function()? behavior,
+    TResult? Function()? appearance,
+    TResult? Function()? behavior,
   }) {
     return appearance?.call();
   }
@@ -2003,8 +1926,8 @@ class _$SettingsRoutePathAppearance
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(SettingsRoutePathAppearance value)? appearance,
-    TResult Function(SettingsRoutePathBehavior value)? behavior,
+    TResult? Function(SettingsRoutePathAppearance value)? appearance,
+    TResult? Function(SettingsRoutePathBehavior value)? behavior,
   }) {
     return appearance?.call(this);
   }
@@ -2024,35 +1947,35 @@ class _$SettingsRoutePathAppearance
 }
 
 abstract class SettingsRoutePathAppearance implements SettingsRoutePath {
-  const factory SettingsRoutePathAppearance() = _$SettingsRoutePathAppearance;
+  const factory SettingsRoutePathAppearance() =
+      _$SettingsRoutePathAppearanceImpl;
 }
 
 /// @nodoc
-abstract class $SettingsRoutePathBehaviorCopyWith<$Res> {
-  factory $SettingsRoutePathBehaviorCopyWith(SettingsRoutePathBehavior value,
-          $Res Function(SettingsRoutePathBehavior) then) =
-      _$SettingsRoutePathBehaviorCopyWithImpl<$Res>;
+abstract class _$$SettingsRoutePathBehaviorImplCopyWith<$Res> {
+  factory _$$SettingsRoutePathBehaviorImplCopyWith(
+          _$SettingsRoutePathBehaviorImpl value,
+          $Res Function(_$SettingsRoutePathBehaviorImpl) then) =
+      __$$SettingsRoutePathBehaviorImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$SettingsRoutePathBehaviorCopyWithImpl<$Res>
-    extends _$SettingsRoutePathCopyWithImpl<$Res>
-    implements $SettingsRoutePathBehaviorCopyWith<$Res> {
-  _$SettingsRoutePathBehaviorCopyWithImpl(SettingsRoutePathBehavior _value,
-      $Res Function(SettingsRoutePathBehavior) _then)
-      : super(_value, (v) => _then(v as SettingsRoutePathBehavior));
-
-  @override
-  SettingsRoutePathBehavior get _value =>
-      super._value as SettingsRoutePathBehavior;
+class __$$SettingsRoutePathBehaviorImplCopyWithImpl<$Res>
+    extends _$SettingsRoutePathCopyWithImpl<$Res,
+        _$SettingsRoutePathBehaviorImpl>
+    implements _$$SettingsRoutePathBehaviorImplCopyWith<$Res> {
+  __$$SettingsRoutePathBehaviorImplCopyWithImpl(
+      _$SettingsRoutePathBehaviorImpl _value,
+      $Res Function(_$SettingsRoutePathBehaviorImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$SettingsRoutePathBehavior
+class _$SettingsRoutePathBehaviorImpl
     with DiagnosticableTreeMixin
     implements SettingsRoutePathBehavior {
-  const _$SettingsRoutePathBehavior();
+  const _$SettingsRoutePathBehaviorImpl();
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
@@ -2062,12 +1985,14 @@ class _$SettingsRoutePathBehavior
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
-    properties..add(DiagnosticsProperty('type', 'SettingsRoutePath.behavior'));
+    properties.add(DiagnosticsProperty('type', 'SettingsRoutePath.behavior'));
   }
 
   @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) || (other is SettingsRoutePathBehavior);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$SettingsRoutePathBehaviorImpl);
   }
 
   @override
@@ -2085,8 +2010,8 @@ class _$SettingsRoutePathBehavior
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? appearance,
-    TResult Function()? behavior,
+    TResult? Function()? appearance,
+    TResult? Function()? behavior,
   }) {
     return behavior?.call();
   }
@@ -2116,8 +2041,8 @@ class _$SettingsRoutePathBehavior
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(SettingsRoutePathAppearance value)? appearance,
-    TResult Function(SettingsRoutePathBehavior value)? behavior,
+    TResult? Function(SettingsRoutePathAppearance value)? appearance,
+    TResult? Function(SettingsRoutePathBehavior value)? behavior,
   }) {
     return behavior?.call(this);
   }
@@ -2137,76 +2062,8 @@ class _$SettingsRoutePathBehavior
 }
 
 abstract class SettingsRoutePathBehavior implements SettingsRoutePath {
-  const factory SettingsRoutePathBehavior() = _$SettingsRoutePathBehavior;
+  const factory SettingsRoutePathBehavior() = _$SettingsRoutePathBehaviorImpl;
 }
-
-/// @nodoc
-class _$RouterStateTearOff {
-  const _$RouterStateTearOff();
-
-  RouterStateUnknown unknown() {
-    return const RouterStateUnknown();
-  }
-
-  RouterStateHome home(HomeRoutePath subRoute) {
-    return RouterStateHome(
-      subRoute,
-    );
-  }
-
-  RouterStateAddAccount addAccount() {
-    return const RouterStateAddAccount();
-  }
-
-  RouterStateEditAccount editAccount(TrackingServiceType serviceType) {
-    return RouterStateEditAccount(
-      serviceType,
-    );
-  }
-
-  RouterStateAddParcels addParcels({TrackingNumbers? initialTrackNumbers}) {
-    return RouterStateAddParcels(
-      initialTrackNumbers: initialTrackNumbers,
-    );
-  }
-
-  RouterStateParcelDetails parcelDetails(String trackNumber) {
-    return RouterStateParcelDetails(
-      trackNumber,
-    );
-  }
-
-  RouterStateAddMissingParcel addMissingParcel(String trackNumber) {
-    return RouterStateAddMissingParcel(
-      trackNumber,
-    );
-  }
-
-  RouterStateAddParcelAndShow addParcelAndShow(String trackNumber) {
-    return RouterStateAddParcelAndShow(
-      trackNumber,
-    );
-  }
-
-  RouterStateShowAddedParcel showAddedParcel(String trackNumber) {
-    return RouterStateShowAddedParcel(
-      trackNumber,
-    );
-  }
-
-  RouterStateSettings settings({SettingsRoutePath? subRoute}) {
-    return RouterStateSettings(
-      subRoute: subRoute,
-    );
-  }
-
-  RouterStateAbout about() {
-    return const RouterStateAbout();
-  }
-}
-
-/// @nodoc
-const $RouterState = _$RouterStateTearOff();
 
 /// @nodoc
 mixin _$RouterState {
@@ -2227,17 +2084,17 @@ mixin _$RouterState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? unknown,
-    TResult Function(HomeRoutePath subRoute)? home,
-    TResult Function()? addAccount,
-    TResult Function(TrackingServiceType serviceType)? editAccount,
-    TResult Function(TrackingNumbers? initialTrackNumbers)? addParcels,
-    TResult Function(String trackNumber)? parcelDetails,
-    TResult Function(String trackNumber)? addMissingParcel,
-    TResult Function(String trackNumber)? addParcelAndShow,
-    TResult Function(String trackNumber)? showAddedParcel,
-    TResult Function(SettingsRoutePath? subRoute)? settings,
-    TResult Function()? about,
+    TResult? Function()? unknown,
+    TResult? Function(HomeRoutePath subRoute)? home,
+    TResult? Function()? addAccount,
+    TResult? Function(TrackingServiceType serviceType)? editAccount,
+    TResult? Function(TrackingNumbers? initialTrackNumbers)? addParcels,
+    TResult? Function(String trackNumber)? parcelDetails,
+    TResult? Function(String trackNumber)? addMissingParcel,
+    TResult? Function(String trackNumber)? addParcelAndShow,
+    TResult? Function(String trackNumber)? showAddedParcel,
+    TResult? Function(SettingsRoutePath? subRoute)? settings,
+    TResult? Function()? about,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -2275,17 +2132,17 @@ mixin _$RouterState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(RouterStateUnknown value)? unknown,
-    TResult Function(RouterStateHome value)? home,
-    TResult Function(RouterStateAddAccount value)? addAccount,
-    TResult Function(RouterStateEditAccount value)? editAccount,
-    TResult Function(RouterStateAddParcels value)? addParcels,
-    TResult Function(RouterStateParcelDetails value)? parcelDetails,
-    TResult Function(RouterStateAddMissingParcel value)? addMissingParcel,
-    TResult Function(RouterStateAddParcelAndShow value)? addParcelAndShow,
-    TResult Function(RouterStateShowAddedParcel value)? showAddedParcel,
-    TResult Function(RouterStateSettings value)? settings,
-    TResult Function(RouterStateAbout value)? about,
+    TResult? Function(RouterStateUnknown value)? unknown,
+    TResult? Function(RouterStateHome value)? home,
+    TResult? Function(RouterStateAddAccount value)? addAccount,
+    TResult? Function(RouterStateEditAccount value)? editAccount,
+    TResult? Function(RouterStateAddParcels value)? addParcels,
+    TResult? Function(RouterStateParcelDetails value)? parcelDetails,
+    TResult? Function(RouterStateAddMissingParcel value)? addMissingParcel,
+    TResult? Function(RouterStateAddParcelAndShow value)? addParcelAndShow,
+    TResult? Function(RouterStateShowAddedParcel value)? showAddedParcel,
+    TResult? Function(RouterStateSettings value)? settings,
+    TResult? Function(RouterStateAbout value)? about,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -2310,43 +2167,42 @@ mixin _$RouterState {
 abstract class $RouterStateCopyWith<$Res> {
   factory $RouterStateCopyWith(
           RouterState value, $Res Function(RouterState) then) =
-      _$RouterStateCopyWithImpl<$Res>;
+      _$RouterStateCopyWithImpl<$Res, RouterState>;
 }
 
 /// @nodoc
-class _$RouterStateCopyWithImpl<$Res> implements $RouterStateCopyWith<$Res> {
+class _$RouterStateCopyWithImpl<$Res, $Val extends RouterState>
+    implements $RouterStateCopyWith<$Res> {
   _$RouterStateCopyWithImpl(this._value, this._then);
 
-  final RouterState _value;
   // ignore: unused_field
-  final $Res Function(RouterState) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 }
 
 /// @nodoc
-abstract class $RouterStateUnknownCopyWith<$Res> {
-  factory $RouterStateUnknownCopyWith(
-          RouterStateUnknown value, $Res Function(RouterStateUnknown) then) =
-      _$RouterStateUnknownCopyWithImpl<$Res>;
+abstract class _$$RouterStateUnknownImplCopyWith<$Res> {
+  factory _$$RouterStateUnknownImplCopyWith(_$RouterStateUnknownImpl value,
+          $Res Function(_$RouterStateUnknownImpl) then) =
+      __$$RouterStateUnknownImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$RouterStateUnknownCopyWithImpl<$Res>
-    extends _$RouterStateCopyWithImpl<$Res>
-    implements $RouterStateUnknownCopyWith<$Res> {
-  _$RouterStateUnknownCopyWithImpl(
-      RouterStateUnknown _value, $Res Function(RouterStateUnknown) _then)
-      : super(_value, (v) => _then(v as RouterStateUnknown));
-
-  @override
-  RouterStateUnknown get _value => super._value as RouterStateUnknown;
+class __$$RouterStateUnknownImplCopyWithImpl<$Res>
+    extends _$RouterStateCopyWithImpl<$Res, _$RouterStateUnknownImpl>
+    implements _$$RouterStateUnknownImplCopyWith<$Res> {
+  __$$RouterStateUnknownImplCopyWithImpl(_$RouterStateUnknownImpl _value,
+      $Res Function(_$RouterStateUnknownImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$RouterStateUnknown
+class _$RouterStateUnknownImpl
     with DiagnosticableTreeMixin
     implements RouterStateUnknown {
-  const _$RouterStateUnknown();
+  const _$RouterStateUnknownImpl();
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
@@ -2356,12 +2212,13 @@ class _$RouterStateUnknown
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
-    properties..add(DiagnosticsProperty('type', 'RouterState.unknown'));
+    properties.add(DiagnosticsProperty('type', 'RouterState.unknown'));
   }
 
   @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) || (other is RouterStateUnknown);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$RouterStateUnknownImpl);
   }
 
   @override
@@ -2388,17 +2245,17 @@ class _$RouterStateUnknown
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? unknown,
-    TResult Function(HomeRoutePath subRoute)? home,
-    TResult Function()? addAccount,
-    TResult Function(TrackingServiceType serviceType)? editAccount,
-    TResult Function(TrackingNumbers? initialTrackNumbers)? addParcels,
-    TResult Function(String trackNumber)? parcelDetails,
-    TResult Function(String trackNumber)? addMissingParcel,
-    TResult Function(String trackNumber)? addParcelAndShow,
-    TResult Function(String trackNumber)? showAddedParcel,
-    TResult Function(SettingsRoutePath? subRoute)? settings,
-    TResult Function()? about,
+    TResult? Function()? unknown,
+    TResult? Function(HomeRoutePath subRoute)? home,
+    TResult? Function()? addAccount,
+    TResult? Function(TrackingServiceType serviceType)? editAccount,
+    TResult? Function(TrackingNumbers? initialTrackNumbers)? addParcels,
+    TResult? Function(String trackNumber)? parcelDetails,
+    TResult? Function(String trackNumber)? addMissingParcel,
+    TResult? Function(String trackNumber)? addParcelAndShow,
+    TResult? Function(String trackNumber)? showAddedParcel,
+    TResult? Function(SettingsRoutePath? subRoute)? settings,
+    TResult? Function()? about,
   }) {
     return unknown?.call();
   }
@@ -2448,17 +2305,17 @@ class _$RouterStateUnknown
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(RouterStateUnknown value)? unknown,
-    TResult Function(RouterStateHome value)? home,
-    TResult Function(RouterStateAddAccount value)? addAccount,
-    TResult Function(RouterStateEditAccount value)? editAccount,
-    TResult Function(RouterStateAddParcels value)? addParcels,
-    TResult Function(RouterStateParcelDetails value)? parcelDetails,
-    TResult Function(RouterStateAddMissingParcel value)? addMissingParcel,
-    TResult Function(RouterStateAddParcelAndShow value)? addParcelAndShow,
-    TResult Function(RouterStateShowAddedParcel value)? showAddedParcel,
-    TResult Function(RouterStateSettings value)? settings,
-    TResult Function(RouterStateAbout value)? about,
+    TResult? Function(RouterStateUnknown value)? unknown,
+    TResult? Function(RouterStateHome value)? home,
+    TResult? Function(RouterStateAddAccount value)? addAccount,
+    TResult? Function(RouterStateEditAccount value)? editAccount,
+    TResult? Function(RouterStateAddParcels value)? addParcels,
+    TResult? Function(RouterStateParcelDetails value)? parcelDetails,
+    TResult? Function(RouterStateAddMissingParcel value)? addMissingParcel,
+    TResult? Function(RouterStateAddParcelAndShow value)? addParcelAndShow,
+    TResult? Function(RouterStateShowAddedParcel value)? showAddedParcel,
+    TResult? Function(RouterStateSettings value)? settings,
+    TResult? Function(RouterStateAbout value)? about,
   }) {
     return unknown?.call(this);
   }
@@ -2487,36 +2344,35 @@ class _$RouterStateUnknown
 }
 
 abstract class RouterStateUnknown implements RouterState {
-  const factory RouterStateUnknown() = _$RouterStateUnknown;
+  const factory RouterStateUnknown() = _$RouterStateUnknownImpl;
 }
 
 /// @nodoc
-abstract class $RouterStateHomeCopyWith<$Res> {
-  factory $RouterStateHomeCopyWith(
-          RouterStateHome value, $Res Function(RouterStateHome) then) =
-      _$RouterStateHomeCopyWithImpl<$Res>;
+abstract class _$$RouterStateHomeImplCopyWith<$Res> {
+  factory _$$RouterStateHomeImplCopyWith(_$RouterStateHomeImpl value,
+          $Res Function(_$RouterStateHomeImpl) then) =
+      __$$RouterStateHomeImplCopyWithImpl<$Res>;
+  @useResult
   $Res call({HomeRoutePath subRoute});
 
   $HomeRoutePathCopyWith<$Res> get subRoute;
 }
 
 /// @nodoc
-class _$RouterStateHomeCopyWithImpl<$Res>
-    extends _$RouterStateCopyWithImpl<$Res>
-    implements $RouterStateHomeCopyWith<$Res> {
-  _$RouterStateHomeCopyWithImpl(
-      RouterStateHome _value, $Res Function(RouterStateHome) _then)
-      : super(_value, (v) => _then(v as RouterStateHome));
+class __$$RouterStateHomeImplCopyWithImpl<$Res>
+    extends _$RouterStateCopyWithImpl<$Res, _$RouterStateHomeImpl>
+    implements _$$RouterStateHomeImplCopyWith<$Res> {
+  __$$RouterStateHomeImplCopyWithImpl(
+      _$RouterStateHomeImpl _value, $Res Function(_$RouterStateHomeImpl) _then)
+      : super(_value, _then);
 
-  @override
-  RouterStateHome get _value => super._value as RouterStateHome;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? subRoute = freezed,
+    Object? subRoute = null,
   }) {
-    return _then(RouterStateHome(
-      subRoute == freezed
+    return _then(_$RouterStateHomeImpl(
+      null == subRoute
           ? _value.subRoute
           : subRoute // ignore: cast_nullable_to_non_nullable
               as HomeRoutePath,
@@ -2524,6 +2380,7 @@ class _$RouterStateHomeCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $HomeRoutePathCopyWith<$Res> get subRoute {
     return $HomeRoutePathCopyWith<$Res>(_value.subRoute, (value) {
       return _then(_value.copyWith(subRoute: value));
@@ -2533,10 +2390,10 @@ class _$RouterStateHomeCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$RouterStateHome
+class _$RouterStateHomeImpl
     with DiagnosticableTreeMixin
     implements RouterStateHome {
-  const _$RouterStateHome(this.subRoute);
+  const _$RouterStateHomeImpl(this.subRoute);
 
   @override
   final HomeRoutePath subRoute;
@@ -2555,22 +2412,23 @@ class _$RouterStateHome
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is RouterStateHome &&
+        (other.runtimeType == runtimeType &&
+            other is _$RouterStateHomeImpl &&
             (identical(other.subRoute, subRoute) ||
-                const DeepCollectionEquality()
-                    .equals(other.subRoute, subRoute)));
+                other.subRoute == subRoute));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(subRoute);
+  int get hashCode => Object.hash(runtimeType, subRoute);
 
   @JsonKey(ignore: true)
   @override
-  $RouterStateHomeCopyWith<RouterStateHome> get copyWith =>
-      _$RouterStateHomeCopyWithImpl<RouterStateHome>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$RouterStateHomeImplCopyWith<_$RouterStateHomeImpl> get copyWith =>
+      __$$RouterStateHomeImplCopyWithImpl<_$RouterStateHomeImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -2593,17 +2451,17 @@ class _$RouterStateHome
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? unknown,
-    TResult Function(HomeRoutePath subRoute)? home,
-    TResult Function()? addAccount,
-    TResult Function(TrackingServiceType serviceType)? editAccount,
-    TResult Function(TrackingNumbers? initialTrackNumbers)? addParcels,
-    TResult Function(String trackNumber)? parcelDetails,
-    TResult Function(String trackNumber)? addMissingParcel,
-    TResult Function(String trackNumber)? addParcelAndShow,
-    TResult Function(String trackNumber)? showAddedParcel,
-    TResult Function(SettingsRoutePath? subRoute)? settings,
-    TResult Function()? about,
+    TResult? Function()? unknown,
+    TResult? Function(HomeRoutePath subRoute)? home,
+    TResult? Function()? addAccount,
+    TResult? Function(TrackingServiceType serviceType)? editAccount,
+    TResult? Function(TrackingNumbers? initialTrackNumbers)? addParcels,
+    TResult? Function(String trackNumber)? parcelDetails,
+    TResult? Function(String trackNumber)? addMissingParcel,
+    TResult? Function(String trackNumber)? addParcelAndShow,
+    TResult? Function(String trackNumber)? showAddedParcel,
+    TResult? Function(SettingsRoutePath? subRoute)? settings,
+    TResult? Function()? about,
   }) {
     return home?.call(subRoute);
   }
@@ -2653,17 +2511,17 @@ class _$RouterStateHome
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(RouterStateUnknown value)? unknown,
-    TResult Function(RouterStateHome value)? home,
-    TResult Function(RouterStateAddAccount value)? addAccount,
-    TResult Function(RouterStateEditAccount value)? editAccount,
-    TResult Function(RouterStateAddParcels value)? addParcels,
-    TResult Function(RouterStateParcelDetails value)? parcelDetails,
-    TResult Function(RouterStateAddMissingParcel value)? addMissingParcel,
-    TResult Function(RouterStateAddParcelAndShow value)? addParcelAndShow,
-    TResult Function(RouterStateShowAddedParcel value)? showAddedParcel,
-    TResult Function(RouterStateSettings value)? settings,
-    TResult Function(RouterStateAbout value)? about,
+    TResult? Function(RouterStateUnknown value)? unknown,
+    TResult? Function(RouterStateHome value)? home,
+    TResult? Function(RouterStateAddAccount value)? addAccount,
+    TResult? Function(RouterStateEditAccount value)? editAccount,
+    TResult? Function(RouterStateAddParcels value)? addParcels,
+    TResult? Function(RouterStateParcelDetails value)? parcelDetails,
+    TResult? Function(RouterStateAddMissingParcel value)? addMissingParcel,
+    TResult? Function(RouterStateAddParcelAndShow value)? addParcelAndShow,
+    TResult? Function(RouterStateShowAddedParcel value)? showAddedParcel,
+    TResult? Function(RouterStateSettings value)? settings,
+    TResult? Function(RouterStateAbout value)? about,
   }) {
     return home?.call(this);
   }
@@ -2692,39 +2550,38 @@ class _$RouterStateHome
 }
 
 abstract class RouterStateHome implements RouterState {
-  const factory RouterStateHome(HomeRoutePath subRoute) = _$RouterStateHome;
+  const factory RouterStateHome(final HomeRoutePath subRoute) =
+      _$RouterStateHomeImpl;
 
-  HomeRoutePath get subRoute => throw _privateConstructorUsedError;
+  HomeRoutePath get subRoute;
   @JsonKey(ignore: true)
-  $RouterStateHomeCopyWith<RouterStateHome> get copyWith =>
+  _$$RouterStateHomeImplCopyWith<_$RouterStateHomeImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $RouterStateAddAccountCopyWith<$Res> {
-  factory $RouterStateAddAccountCopyWith(RouterStateAddAccount value,
-          $Res Function(RouterStateAddAccount) then) =
-      _$RouterStateAddAccountCopyWithImpl<$Res>;
+abstract class _$$RouterStateAddAccountImplCopyWith<$Res> {
+  factory _$$RouterStateAddAccountImplCopyWith(
+          _$RouterStateAddAccountImpl value,
+          $Res Function(_$RouterStateAddAccountImpl) then) =
+      __$$RouterStateAddAccountImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$RouterStateAddAccountCopyWithImpl<$Res>
-    extends _$RouterStateCopyWithImpl<$Res>
-    implements $RouterStateAddAccountCopyWith<$Res> {
-  _$RouterStateAddAccountCopyWithImpl(
-      RouterStateAddAccount _value, $Res Function(RouterStateAddAccount) _then)
-      : super(_value, (v) => _then(v as RouterStateAddAccount));
-
-  @override
-  RouterStateAddAccount get _value => super._value as RouterStateAddAccount;
+class __$$RouterStateAddAccountImplCopyWithImpl<$Res>
+    extends _$RouterStateCopyWithImpl<$Res, _$RouterStateAddAccountImpl>
+    implements _$$RouterStateAddAccountImplCopyWith<$Res> {
+  __$$RouterStateAddAccountImplCopyWithImpl(_$RouterStateAddAccountImpl _value,
+      $Res Function(_$RouterStateAddAccountImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$RouterStateAddAccount
+class _$RouterStateAddAccountImpl
     with DiagnosticableTreeMixin
     implements RouterStateAddAccount {
-  const _$RouterStateAddAccount();
+  const _$RouterStateAddAccountImpl();
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
@@ -2734,12 +2591,14 @@ class _$RouterStateAddAccount
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
-    properties..add(DiagnosticsProperty('type', 'RouterState.addAccount'));
+    properties.add(DiagnosticsProperty('type', 'RouterState.addAccount'));
   }
 
   @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) || (other is RouterStateAddAccount);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$RouterStateAddAccountImpl);
   }
 
   @override
@@ -2766,17 +2625,17 @@ class _$RouterStateAddAccount
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? unknown,
-    TResult Function(HomeRoutePath subRoute)? home,
-    TResult Function()? addAccount,
-    TResult Function(TrackingServiceType serviceType)? editAccount,
-    TResult Function(TrackingNumbers? initialTrackNumbers)? addParcels,
-    TResult Function(String trackNumber)? parcelDetails,
-    TResult Function(String trackNumber)? addMissingParcel,
-    TResult Function(String trackNumber)? addParcelAndShow,
-    TResult Function(String trackNumber)? showAddedParcel,
-    TResult Function(SettingsRoutePath? subRoute)? settings,
-    TResult Function()? about,
+    TResult? Function()? unknown,
+    TResult? Function(HomeRoutePath subRoute)? home,
+    TResult? Function()? addAccount,
+    TResult? Function(TrackingServiceType serviceType)? editAccount,
+    TResult? Function(TrackingNumbers? initialTrackNumbers)? addParcels,
+    TResult? Function(String trackNumber)? parcelDetails,
+    TResult? Function(String trackNumber)? addMissingParcel,
+    TResult? Function(String trackNumber)? addParcelAndShow,
+    TResult? Function(String trackNumber)? showAddedParcel,
+    TResult? Function(SettingsRoutePath? subRoute)? settings,
+    TResult? Function()? about,
   }) {
     return addAccount?.call();
   }
@@ -2826,17 +2685,17 @@ class _$RouterStateAddAccount
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(RouterStateUnknown value)? unknown,
-    TResult Function(RouterStateHome value)? home,
-    TResult Function(RouterStateAddAccount value)? addAccount,
-    TResult Function(RouterStateEditAccount value)? editAccount,
-    TResult Function(RouterStateAddParcels value)? addParcels,
-    TResult Function(RouterStateParcelDetails value)? parcelDetails,
-    TResult Function(RouterStateAddMissingParcel value)? addMissingParcel,
-    TResult Function(RouterStateAddParcelAndShow value)? addParcelAndShow,
-    TResult Function(RouterStateShowAddedParcel value)? showAddedParcel,
-    TResult Function(RouterStateSettings value)? settings,
-    TResult Function(RouterStateAbout value)? about,
+    TResult? Function(RouterStateUnknown value)? unknown,
+    TResult? Function(RouterStateHome value)? home,
+    TResult? Function(RouterStateAddAccount value)? addAccount,
+    TResult? Function(RouterStateEditAccount value)? editAccount,
+    TResult? Function(RouterStateAddParcels value)? addParcels,
+    TResult? Function(RouterStateParcelDetails value)? parcelDetails,
+    TResult? Function(RouterStateAddMissingParcel value)? addMissingParcel,
+    TResult? Function(RouterStateAddParcelAndShow value)? addParcelAndShow,
+    TResult? Function(RouterStateShowAddedParcel value)? showAddedParcel,
+    TResult? Function(RouterStateSettings value)? settings,
+    TResult? Function(RouterStateAbout value)? about,
   }) {
     return addAccount?.call(this);
   }
@@ -2865,34 +2724,35 @@ class _$RouterStateAddAccount
 }
 
 abstract class RouterStateAddAccount implements RouterState {
-  const factory RouterStateAddAccount() = _$RouterStateAddAccount;
+  const factory RouterStateAddAccount() = _$RouterStateAddAccountImpl;
 }
 
 /// @nodoc
-abstract class $RouterStateEditAccountCopyWith<$Res> {
-  factory $RouterStateEditAccountCopyWith(RouterStateEditAccount value,
-          $Res Function(RouterStateEditAccount) then) =
-      _$RouterStateEditAccountCopyWithImpl<$Res>;
+abstract class _$$RouterStateEditAccountImplCopyWith<$Res> {
+  factory _$$RouterStateEditAccountImplCopyWith(
+          _$RouterStateEditAccountImpl value,
+          $Res Function(_$RouterStateEditAccountImpl) then) =
+      __$$RouterStateEditAccountImplCopyWithImpl<$Res>;
+  @useResult
   $Res call({TrackingServiceType serviceType});
 }
 
 /// @nodoc
-class _$RouterStateEditAccountCopyWithImpl<$Res>
-    extends _$RouterStateCopyWithImpl<$Res>
-    implements $RouterStateEditAccountCopyWith<$Res> {
-  _$RouterStateEditAccountCopyWithImpl(RouterStateEditAccount _value,
-      $Res Function(RouterStateEditAccount) _then)
-      : super(_value, (v) => _then(v as RouterStateEditAccount));
+class __$$RouterStateEditAccountImplCopyWithImpl<$Res>
+    extends _$RouterStateCopyWithImpl<$Res, _$RouterStateEditAccountImpl>
+    implements _$$RouterStateEditAccountImplCopyWith<$Res> {
+  __$$RouterStateEditAccountImplCopyWithImpl(
+      _$RouterStateEditAccountImpl _value,
+      $Res Function(_$RouterStateEditAccountImpl) _then)
+      : super(_value, _then);
 
-  @override
-  RouterStateEditAccount get _value => super._value as RouterStateEditAccount;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? serviceType = freezed,
+    Object? serviceType = null,
   }) {
-    return _then(RouterStateEditAccount(
-      serviceType == freezed
+    return _then(_$RouterStateEditAccountImpl(
+      null == serviceType
           ? _value.serviceType
           : serviceType // ignore: cast_nullable_to_non_nullable
               as TrackingServiceType,
@@ -2902,10 +2762,10 @@ class _$RouterStateEditAccountCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$RouterStateEditAccount
+class _$RouterStateEditAccountImpl
     with DiagnosticableTreeMixin
     implements RouterStateEditAccount {
-  const _$RouterStateEditAccount(this.serviceType);
+  const _$RouterStateEditAccountImpl(this.serviceType);
 
   @override
   final TrackingServiceType serviceType;
@@ -2924,23 +2784,23 @@ class _$RouterStateEditAccount
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is RouterStateEditAccount &&
+        (other.runtimeType == runtimeType &&
+            other is _$RouterStateEditAccountImpl &&
             (identical(other.serviceType, serviceType) ||
-                const DeepCollectionEquality()
-                    .equals(other.serviceType, serviceType)));
+                other.serviceType == serviceType));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(serviceType);
+  int get hashCode => Object.hash(runtimeType, serviceType);
 
   @JsonKey(ignore: true)
   @override
-  $RouterStateEditAccountCopyWith<RouterStateEditAccount> get copyWith =>
-      _$RouterStateEditAccountCopyWithImpl<RouterStateEditAccount>(
-          this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$RouterStateEditAccountImplCopyWith<_$RouterStateEditAccountImpl>
+      get copyWith => __$$RouterStateEditAccountImplCopyWithImpl<
+          _$RouterStateEditAccountImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -2963,17 +2823,17 @@ class _$RouterStateEditAccount
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? unknown,
-    TResult Function(HomeRoutePath subRoute)? home,
-    TResult Function()? addAccount,
-    TResult Function(TrackingServiceType serviceType)? editAccount,
-    TResult Function(TrackingNumbers? initialTrackNumbers)? addParcels,
-    TResult Function(String trackNumber)? parcelDetails,
-    TResult Function(String trackNumber)? addMissingParcel,
-    TResult Function(String trackNumber)? addParcelAndShow,
-    TResult Function(String trackNumber)? showAddedParcel,
-    TResult Function(SettingsRoutePath? subRoute)? settings,
-    TResult Function()? about,
+    TResult? Function()? unknown,
+    TResult? Function(HomeRoutePath subRoute)? home,
+    TResult? Function()? addAccount,
+    TResult? Function(TrackingServiceType serviceType)? editAccount,
+    TResult? Function(TrackingNumbers? initialTrackNumbers)? addParcels,
+    TResult? Function(String trackNumber)? parcelDetails,
+    TResult? Function(String trackNumber)? addMissingParcel,
+    TResult? Function(String trackNumber)? addParcelAndShow,
+    TResult? Function(String trackNumber)? showAddedParcel,
+    TResult? Function(SettingsRoutePath? subRoute)? settings,
+    TResult? Function()? about,
   }) {
     return editAccount?.call(serviceType);
   }
@@ -3023,17 +2883,17 @@ class _$RouterStateEditAccount
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(RouterStateUnknown value)? unknown,
-    TResult Function(RouterStateHome value)? home,
-    TResult Function(RouterStateAddAccount value)? addAccount,
-    TResult Function(RouterStateEditAccount value)? editAccount,
-    TResult Function(RouterStateAddParcels value)? addParcels,
-    TResult Function(RouterStateParcelDetails value)? parcelDetails,
-    TResult Function(RouterStateAddMissingParcel value)? addMissingParcel,
-    TResult Function(RouterStateAddParcelAndShow value)? addParcelAndShow,
-    TResult Function(RouterStateShowAddedParcel value)? showAddedParcel,
-    TResult Function(RouterStateSettings value)? settings,
-    TResult Function(RouterStateAbout value)? about,
+    TResult? Function(RouterStateUnknown value)? unknown,
+    TResult? Function(RouterStateHome value)? home,
+    TResult? Function(RouterStateAddAccount value)? addAccount,
+    TResult? Function(RouterStateEditAccount value)? editAccount,
+    TResult? Function(RouterStateAddParcels value)? addParcels,
+    TResult? Function(RouterStateParcelDetails value)? parcelDetails,
+    TResult? Function(RouterStateAddMissingParcel value)? addMissingParcel,
+    TResult? Function(RouterStateAddParcelAndShow value)? addParcelAndShow,
+    TResult? Function(RouterStateShowAddedParcel value)? showAddedParcel,
+    TResult? Function(RouterStateSettings value)? settings,
+    TResult? Function(RouterStateAbout value)? about,
   }) {
     return editAccount?.call(this);
   }
@@ -3062,42 +2922,42 @@ class _$RouterStateEditAccount
 }
 
 abstract class RouterStateEditAccount implements RouterState {
-  const factory RouterStateEditAccount(TrackingServiceType serviceType) =
-      _$RouterStateEditAccount;
+  const factory RouterStateEditAccount(final TrackingServiceType serviceType) =
+      _$RouterStateEditAccountImpl;
 
-  TrackingServiceType get serviceType => throw _privateConstructorUsedError;
+  TrackingServiceType get serviceType;
   @JsonKey(ignore: true)
-  $RouterStateEditAccountCopyWith<RouterStateEditAccount> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$RouterStateEditAccountImplCopyWith<_$RouterStateEditAccountImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $RouterStateAddParcelsCopyWith<$Res> {
-  factory $RouterStateAddParcelsCopyWith(RouterStateAddParcels value,
-          $Res Function(RouterStateAddParcels) then) =
-      _$RouterStateAddParcelsCopyWithImpl<$Res>;
+abstract class _$$RouterStateAddParcelsImplCopyWith<$Res> {
+  factory _$$RouterStateAddParcelsImplCopyWith(
+          _$RouterStateAddParcelsImpl value,
+          $Res Function(_$RouterStateAddParcelsImpl) then) =
+      __$$RouterStateAddParcelsImplCopyWithImpl<$Res>;
+  @useResult
   $Res call({TrackingNumbers? initialTrackNumbers});
 
   $TrackingNumbersCopyWith<$Res>? get initialTrackNumbers;
 }
 
 /// @nodoc
-class _$RouterStateAddParcelsCopyWithImpl<$Res>
-    extends _$RouterStateCopyWithImpl<$Res>
-    implements $RouterStateAddParcelsCopyWith<$Res> {
-  _$RouterStateAddParcelsCopyWithImpl(
-      RouterStateAddParcels _value, $Res Function(RouterStateAddParcels) _then)
-      : super(_value, (v) => _then(v as RouterStateAddParcels));
+class __$$RouterStateAddParcelsImplCopyWithImpl<$Res>
+    extends _$RouterStateCopyWithImpl<$Res, _$RouterStateAddParcelsImpl>
+    implements _$$RouterStateAddParcelsImplCopyWith<$Res> {
+  __$$RouterStateAddParcelsImplCopyWithImpl(_$RouterStateAddParcelsImpl _value,
+      $Res Function(_$RouterStateAddParcelsImpl) _then)
+      : super(_value, _then);
 
-  @override
-  RouterStateAddParcels get _value => super._value as RouterStateAddParcels;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? initialTrackNumbers = freezed,
   }) {
-    return _then(RouterStateAddParcels(
-      initialTrackNumbers: initialTrackNumbers == freezed
+    return _then(_$RouterStateAddParcelsImpl(
+      initialTrackNumbers: freezed == initialTrackNumbers
           ? _value.initialTrackNumbers
           : initialTrackNumbers // ignore: cast_nullable_to_non_nullable
               as TrackingNumbers?,
@@ -3105,6 +2965,7 @@ class _$RouterStateAddParcelsCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $TrackingNumbersCopyWith<$Res>? get initialTrackNumbers {
     if (_value.initialTrackNumbers == null) {
       return null;
@@ -3118,10 +2979,10 @@ class _$RouterStateAddParcelsCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$RouterStateAddParcels
+class _$RouterStateAddParcelsImpl
     with DiagnosticableTreeMixin
     implements RouterStateAddParcels {
-  const _$RouterStateAddParcels({this.initialTrackNumbers});
+  const _$RouterStateAddParcelsImpl({this.initialTrackNumbers});
 
   @override
   final TrackingNumbers? initialTrackNumbers;
@@ -3140,24 +3001,23 @@ class _$RouterStateAddParcels
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is RouterStateAddParcels &&
+        (other.runtimeType == runtimeType &&
+            other is _$RouterStateAddParcelsImpl &&
             (identical(other.initialTrackNumbers, initialTrackNumbers) ||
-                const DeepCollectionEquality()
-                    .equals(other.initialTrackNumbers, initialTrackNumbers)));
+                other.initialTrackNumbers == initialTrackNumbers));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(initialTrackNumbers);
+  int get hashCode => Object.hash(runtimeType, initialTrackNumbers);
 
   @JsonKey(ignore: true)
   @override
-  $RouterStateAddParcelsCopyWith<RouterStateAddParcels> get copyWith =>
-      _$RouterStateAddParcelsCopyWithImpl<RouterStateAddParcels>(
-          this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$RouterStateAddParcelsImplCopyWith<_$RouterStateAddParcelsImpl>
+      get copyWith => __$$RouterStateAddParcelsImplCopyWithImpl<
+          _$RouterStateAddParcelsImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -3180,17 +3040,17 @@ class _$RouterStateAddParcels
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? unknown,
-    TResult Function(HomeRoutePath subRoute)? home,
-    TResult Function()? addAccount,
-    TResult Function(TrackingServiceType serviceType)? editAccount,
-    TResult Function(TrackingNumbers? initialTrackNumbers)? addParcels,
-    TResult Function(String trackNumber)? parcelDetails,
-    TResult Function(String trackNumber)? addMissingParcel,
-    TResult Function(String trackNumber)? addParcelAndShow,
-    TResult Function(String trackNumber)? showAddedParcel,
-    TResult Function(SettingsRoutePath? subRoute)? settings,
-    TResult Function()? about,
+    TResult? Function()? unknown,
+    TResult? Function(HomeRoutePath subRoute)? home,
+    TResult? Function()? addAccount,
+    TResult? Function(TrackingServiceType serviceType)? editAccount,
+    TResult? Function(TrackingNumbers? initialTrackNumbers)? addParcels,
+    TResult? Function(String trackNumber)? parcelDetails,
+    TResult? Function(String trackNumber)? addMissingParcel,
+    TResult? Function(String trackNumber)? addParcelAndShow,
+    TResult? Function(String trackNumber)? showAddedParcel,
+    TResult? Function(SettingsRoutePath? subRoute)? settings,
+    TResult? Function()? about,
   }) {
     return addParcels?.call(initialTrackNumbers);
   }
@@ -3240,17 +3100,17 @@ class _$RouterStateAddParcels
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(RouterStateUnknown value)? unknown,
-    TResult Function(RouterStateHome value)? home,
-    TResult Function(RouterStateAddAccount value)? addAccount,
-    TResult Function(RouterStateEditAccount value)? editAccount,
-    TResult Function(RouterStateAddParcels value)? addParcels,
-    TResult Function(RouterStateParcelDetails value)? parcelDetails,
-    TResult Function(RouterStateAddMissingParcel value)? addMissingParcel,
-    TResult Function(RouterStateAddParcelAndShow value)? addParcelAndShow,
-    TResult Function(RouterStateShowAddedParcel value)? showAddedParcel,
-    TResult Function(RouterStateSettings value)? settings,
-    TResult Function(RouterStateAbout value)? about,
+    TResult? Function(RouterStateUnknown value)? unknown,
+    TResult? Function(RouterStateHome value)? home,
+    TResult? Function(RouterStateAddAccount value)? addAccount,
+    TResult? Function(RouterStateEditAccount value)? editAccount,
+    TResult? Function(RouterStateAddParcels value)? addParcels,
+    TResult? Function(RouterStateParcelDetails value)? parcelDetails,
+    TResult? Function(RouterStateAddMissingParcel value)? addMissingParcel,
+    TResult? Function(RouterStateAddParcelAndShow value)? addParcelAndShow,
+    TResult? Function(RouterStateShowAddedParcel value)? showAddedParcel,
+    TResult? Function(RouterStateSettings value)? settings,
+    TResult? Function(RouterStateAbout value)? about,
   }) {
     return addParcels?.call(this);
   }
@@ -3279,42 +3139,42 @@ class _$RouterStateAddParcels
 }
 
 abstract class RouterStateAddParcels implements RouterState {
-  const factory RouterStateAddParcels({TrackingNumbers? initialTrackNumbers}) =
-      _$RouterStateAddParcels;
+  const factory RouterStateAddParcels(
+          {final TrackingNumbers? initialTrackNumbers}) =
+      _$RouterStateAddParcelsImpl;
 
-  TrackingNumbers? get initialTrackNumbers =>
-      throw _privateConstructorUsedError;
+  TrackingNumbers? get initialTrackNumbers;
   @JsonKey(ignore: true)
-  $RouterStateAddParcelsCopyWith<RouterStateAddParcels> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$RouterStateAddParcelsImplCopyWith<_$RouterStateAddParcelsImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $RouterStateParcelDetailsCopyWith<$Res> {
-  factory $RouterStateParcelDetailsCopyWith(RouterStateParcelDetails value,
-          $Res Function(RouterStateParcelDetails) then) =
-      _$RouterStateParcelDetailsCopyWithImpl<$Res>;
+abstract class _$$RouterStateParcelDetailsImplCopyWith<$Res> {
+  factory _$$RouterStateParcelDetailsImplCopyWith(
+          _$RouterStateParcelDetailsImpl value,
+          $Res Function(_$RouterStateParcelDetailsImpl) then) =
+      __$$RouterStateParcelDetailsImplCopyWithImpl<$Res>;
+  @useResult
   $Res call({String trackNumber});
 }
 
 /// @nodoc
-class _$RouterStateParcelDetailsCopyWithImpl<$Res>
-    extends _$RouterStateCopyWithImpl<$Res>
-    implements $RouterStateParcelDetailsCopyWith<$Res> {
-  _$RouterStateParcelDetailsCopyWithImpl(RouterStateParcelDetails _value,
-      $Res Function(RouterStateParcelDetails) _then)
-      : super(_value, (v) => _then(v as RouterStateParcelDetails));
+class __$$RouterStateParcelDetailsImplCopyWithImpl<$Res>
+    extends _$RouterStateCopyWithImpl<$Res, _$RouterStateParcelDetailsImpl>
+    implements _$$RouterStateParcelDetailsImplCopyWith<$Res> {
+  __$$RouterStateParcelDetailsImplCopyWithImpl(
+      _$RouterStateParcelDetailsImpl _value,
+      $Res Function(_$RouterStateParcelDetailsImpl) _then)
+      : super(_value, _then);
 
-  @override
-  RouterStateParcelDetails get _value =>
-      super._value as RouterStateParcelDetails;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? trackNumber = freezed,
+    Object? trackNumber = null,
   }) {
-    return _then(RouterStateParcelDetails(
-      trackNumber == freezed
+    return _then(_$RouterStateParcelDetailsImpl(
+      null == trackNumber
           ? _value.trackNumber
           : trackNumber // ignore: cast_nullable_to_non_nullable
               as String,
@@ -3324,10 +3184,10 @@ class _$RouterStateParcelDetailsCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$RouterStateParcelDetails
+class _$RouterStateParcelDetailsImpl
     with DiagnosticableTreeMixin
     implements RouterStateParcelDetails {
-  const _$RouterStateParcelDetails(this.trackNumber);
+  const _$RouterStateParcelDetailsImpl(this.trackNumber);
 
   @override
   final String trackNumber;
@@ -3346,23 +3206,23 @@ class _$RouterStateParcelDetails
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is RouterStateParcelDetails &&
+        (other.runtimeType == runtimeType &&
+            other is _$RouterStateParcelDetailsImpl &&
             (identical(other.trackNumber, trackNumber) ||
-                const DeepCollectionEquality()
-                    .equals(other.trackNumber, trackNumber)));
+                other.trackNumber == trackNumber));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(trackNumber);
+  int get hashCode => Object.hash(runtimeType, trackNumber);
 
   @JsonKey(ignore: true)
   @override
-  $RouterStateParcelDetailsCopyWith<RouterStateParcelDetails> get copyWith =>
-      _$RouterStateParcelDetailsCopyWithImpl<RouterStateParcelDetails>(
-          this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$RouterStateParcelDetailsImplCopyWith<_$RouterStateParcelDetailsImpl>
+      get copyWith => __$$RouterStateParcelDetailsImplCopyWithImpl<
+          _$RouterStateParcelDetailsImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -3385,17 +3245,17 @@ class _$RouterStateParcelDetails
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? unknown,
-    TResult Function(HomeRoutePath subRoute)? home,
-    TResult Function()? addAccount,
-    TResult Function(TrackingServiceType serviceType)? editAccount,
-    TResult Function(TrackingNumbers? initialTrackNumbers)? addParcels,
-    TResult Function(String trackNumber)? parcelDetails,
-    TResult Function(String trackNumber)? addMissingParcel,
-    TResult Function(String trackNumber)? addParcelAndShow,
-    TResult Function(String trackNumber)? showAddedParcel,
-    TResult Function(SettingsRoutePath? subRoute)? settings,
-    TResult Function()? about,
+    TResult? Function()? unknown,
+    TResult? Function(HomeRoutePath subRoute)? home,
+    TResult? Function()? addAccount,
+    TResult? Function(TrackingServiceType serviceType)? editAccount,
+    TResult? Function(TrackingNumbers? initialTrackNumbers)? addParcels,
+    TResult? Function(String trackNumber)? parcelDetails,
+    TResult? Function(String trackNumber)? addMissingParcel,
+    TResult? Function(String trackNumber)? addParcelAndShow,
+    TResult? Function(String trackNumber)? showAddedParcel,
+    TResult? Function(SettingsRoutePath? subRoute)? settings,
+    TResult? Function()? about,
   }) {
     return parcelDetails?.call(trackNumber);
   }
@@ -3445,17 +3305,17 @@ class _$RouterStateParcelDetails
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(RouterStateUnknown value)? unknown,
-    TResult Function(RouterStateHome value)? home,
-    TResult Function(RouterStateAddAccount value)? addAccount,
-    TResult Function(RouterStateEditAccount value)? editAccount,
-    TResult Function(RouterStateAddParcels value)? addParcels,
-    TResult Function(RouterStateParcelDetails value)? parcelDetails,
-    TResult Function(RouterStateAddMissingParcel value)? addMissingParcel,
-    TResult Function(RouterStateAddParcelAndShow value)? addParcelAndShow,
-    TResult Function(RouterStateShowAddedParcel value)? showAddedParcel,
-    TResult Function(RouterStateSettings value)? settings,
-    TResult Function(RouterStateAbout value)? about,
+    TResult? Function(RouterStateUnknown value)? unknown,
+    TResult? Function(RouterStateHome value)? home,
+    TResult? Function(RouterStateAddAccount value)? addAccount,
+    TResult? Function(RouterStateEditAccount value)? editAccount,
+    TResult? Function(RouterStateAddParcels value)? addParcels,
+    TResult? Function(RouterStateParcelDetails value)? parcelDetails,
+    TResult? Function(RouterStateAddMissingParcel value)? addMissingParcel,
+    TResult? Function(RouterStateAddParcelAndShow value)? addParcelAndShow,
+    TResult? Function(RouterStateShowAddedParcel value)? showAddedParcel,
+    TResult? Function(RouterStateSettings value)? settings,
+    TResult? Function(RouterStateAbout value)? about,
   }) {
     return parcelDetails?.call(this);
   }
@@ -3484,42 +3344,41 @@ class _$RouterStateParcelDetails
 }
 
 abstract class RouterStateParcelDetails implements RouterState {
-  const factory RouterStateParcelDetails(String trackNumber) =
-      _$RouterStateParcelDetails;
+  const factory RouterStateParcelDetails(final String trackNumber) =
+      _$RouterStateParcelDetailsImpl;
 
-  String get trackNumber => throw _privateConstructorUsedError;
+  String get trackNumber;
   @JsonKey(ignore: true)
-  $RouterStateParcelDetailsCopyWith<RouterStateParcelDetails> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$RouterStateParcelDetailsImplCopyWith<_$RouterStateParcelDetailsImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $RouterStateAddMissingParcelCopyWith<$Res> {
-  factory $RouterStateAddMissingParcelCopyWith(
-          RouterStateAddMissingParcel value,
-          $Res Function(RouterStateAddMissingParcel) then) =
-      _$RouterStateAddMissingParcelCopyWithImpl<$Res>;
+abstract class _$$RouterStateAddMissingParcelImplCopyWith<$Res> {
+  factory _$$RouterStateAddMissingParcelImplCopyWith(
+          _$RouterStateAddMissingParcelImpl value,
+          $Res Function(_$RouterStateAddMissingParcelImpl) then) =
+      __$$RouterStateAddMissingParcelImplCopyWithImpl<$Res>;
+  @useResult
   $Res call({String trackNumber});
 }
 
 /// @nodoc
-class _$RouterStateAddMissingParcelCopyWithImpl<$Res>
-    extends _$RouterStateCopyWithImpl<$Res>
-    implements $RouterStateAddMissingParcelCopyWith<$Res> {
-  _$RouterStateAddMissingParcelCopyWithImpl(RouterStateAddMissingParcel _value,
-      $Res Function(RouterStateAddMissingParcel) _then)
-      : super(_value, (v) => _then(v as RouterStateAddMissingParcel));
+class __$$RouterStateAddMissingParcelImplCopyWithImpl<$Res>
+    extends _$RouterStateCopyWithImpl<$Res, _$RouterStateAddMissingParcelImpl>
+    implements _$$RouterStateAddMissingParcelImplCopyWith<$Res> {
+  __$$RouterStateAddMissingParcelImplCopyWithImpl(
+      _$RouterStateAddMissingParcelImpl _value,
+      $Res Function(_$RouterStateAddMissingParcelImpl) _then)
+      : super(_value, _then);
 
-  @override
-  RouterStateAddMissingParcel get _value =>
-      super._value as RouterStateAddMissingParcel;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? trackNumber = freezed,
+    Object? trackNumber = null,
   }) {
-    return _then(RouterStateAddMissingParcel(
-      trackNumber == freezed
+    return _then(_$RouterStateAddMissingParcelImpl(
+      null == trackNumber
           ? _value.trackNumber
           : trackNumber // ignore: cast_nullable_to_non_nullable
               as String,
@@ -3529,10 +3388,10 @@ class _$RouterStateAddMissingParcelCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$RouterStateAddMissingParcel
+class _$RouterStateAddMissingParcelImpl
     with DiagnosticableTreeMixin
     implements RouterStateAddMissingParcel {
-  const _$RouterStateAddMissingParcel(this.trackNumber);
+  const _$RouterStateAddMissingParcelImpl(this.trackNumber);
 
   @override
   final String trackNumber;
@@ -3551,23 +3410,23 @@ class _$RouterStateAddMissingParcel
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is RouterStateAddMissingParcel &&
+        (other.runtimeType == runtimeType &&
+            other is _$RouterStateAddMissingParcelImpl &&
             (identical(other.trackNumber, trackNumber) ||
-                const DeepCollectionEquality()
-                    .equals(other.trackNumber, trackNumber)));
+                other.trackNumber == trackNumber));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(trackNumber);
+  int get hashCode => Object.hash(runtimeType, trackNumber);
 
   @JsonKey(ignore: true)
   @override
-  $RouterStateAddMissingParcelCopyWith<RouterStateAddMissingParcel>
-      get copyWith => _$RouterStateAddMissingParcelCopyWithImpl<
-          RouterStateAddMissingParcel>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$RouterStateAddMissingParcelImplCopyWith<_$RouterStateAddMissingParcelImpl>
+      get copyWith => __$$RouterStateAddMissingParcelImplCopyWithImpl<
+          _$RouterStateAddMissingParcelImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -3590,17 +3449,17 @@ class _$RouterStateAddMissingParcel
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? unknown,
-    TResult Function(HomeRoutePath subRoute)? home,
-    TResult Function()? addAccount,
-    TResult Function(TrackingServiceType serviceType)? editAccount,
-    TResult Function(TrackingNumbers? initialTrackNumbers)? addParcels,
-    TResult Function(String trackNumber)? parcelDetails,
-    TResult Function(String trackNumber)? addMissingParcel,
-    TResult Function(String trackNumber)? addParcelAndShow,
-    TResult Function(String trackNumber)? showAddedParcel,
-    TResult Function(SettingsRoutePath? subRoute)? settings,
-    TResult Function()? about,
+    TResult? Function()? unknown,
+    TResult? Function(HomeRoutePath subRoute)? home,
+    TResult? Function()? addAccount,
+    TResult? Function(TrackingServiceType serviceType)? editAccount,
+    TResult? Function(TrackingNumbers? initialTrackNumbers)? addParcels,
+    TResult? Function(String trackNumber)? parcelDetails,
+    TResult? Function(String trackNumber)? addMissingParcel,
+    TResult? Function(String trackNumber)? addParcelAndShow,
+    TResult? Function(String trackNumber)? showAddedParcel,
+    TResult? Function(SettingsRoutePath? subRoute)? settings,
+    TResult? Function()? about,
   }) {
     return addMissingParcel?.call(trackNumber);
   }
@@ -3650,17 +3509,17 @@ class _$RouterStateAddMissingParcel
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(RouterStateUnknown value)? unknown,
-    TResult Function(RouterStateHome value)? home,
-    TResult Function(RouterStateAddAccount value)? addAccount,
-    TResult Function(RouterStateEditAccount value)? editAccount,
-    TResult Function(RouterStateAddParcels value)? addParcels,
-    TResult Function(RouterStateParcelDetails value)? parcelDetails,
-    TResult Function(RouterStateAddMissingParcel value)? addMissingParcel,
-    TResult Function(RouterStateAddParcelAndShow value)? addParcelAndShow,
-    TResult Function(RouterStateShowAddedParcel value)? showAddedParcel,
-    TResult Function(RouterStateSettings value)? settings,
-    TResult Function(RouterStateAbout value)? about,
+    TResult? Function(RouterStateUnknown value)? unknown,
+    TResult? Function(RouterStateHome value)? home,
+    TResult? Function(RouterStateAddAccount value)? addAccount,
+    TResult? Function(RouterStateEditAccount value)? editAccount,
+    TResult? Function(RouterStateAddParcels value)? addParcels,
+    TResult? Function(RouterStateParcelDetails value)? parcelDetails,
+    TResult? Function(RouterStateAddMissingParcel value)? addMissingParcel,
+    TResult? Function(RouterStateAddParcelAndShow value)? addParcelAndShow,
+    TResult? Function(RouterStateShowAddedParcel value)? showAddedParcel,
+    TResult? Function(RouterStateSettings value)? settings,
+    TResult? Function(RouterStateAbout value)? about,
   }) {
     return addMissingParcel?.call(this);
   }
@@ -3689,42 +3548,41 @@ class _$RouterStateAddMissingParcel
 }
 
 abstract class RouterStateAddMissingParcel implements RouterState {
-  const factory RouterStateAddMissingParcel(String trackNumber) =
-      _$RouterStateAddMissingParcel;
+  const factory RouterStateAddMissingParcel(final String trackNumber) =
+      _$RouterStateAddMissingParcelImpl;
 
-  String get trackNumber => throw _privateConstructorUsedError;
+  String get trackNumber;
   @JsonKey(ignore: true)
-  $RouterStateAddMissingParcelCopyWith<RouterStateAddMissingParcel>
+  _$$RouterStateAddMissingParcelImplCopyWith<_$RouterStateAddMissingParcelImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $RouterStateAddParcelAndShowCopyWith<$Res> {
-  factory $RouterStateAddParcelAndShowCopyWith(
-          RouterStateAddParcelAndShow value,
-          $Res Function(RouterStateAddParcelAndShow) then) =
-      _$RouterStateAddParcelAndShowCopyWithImpl<$Res>;
+abstract class _$$RouterStateAddParcelAndShowImplCopyWith<$Res> {
+  factory _$$RouterStateAddParcelAndShowImplCopyWith(
+          _$RouterStateAddParcelAndShowImpl value,
+          $Res Function(_$RouterStateAddParcelAndShowImpl) then) =
+      __$$RouterStateAddParcelAndShowImplCopyWithImpl<$Res>;
+  @useResult
   $Res call({String trackNumber});
 }
 
 /// @nodoc
-class _$RouterStateAddParcelAndShowCopyWithImpl<$Res>
-    extends _$RouterStateCopyWithImpl<$Res>
-    implements $RouterStateAddParcelAndShowCopyWith<$Res> {
-  _$RouterStateAddParcelAndShowCopyWithImpl(RouterStateAddParcelAndShow _value,
-      $Res Function(RouterStateAddParcelAndShow) _then)
-      : super(_value, (v) => _then(v as RouterStateAddParcelAndShow));
+class __$$RouterStateAddParcelAndShowImplCopyWithImpl<$Res>
+    extends _$RouterStateCopyWithImpl<$Res, _$RouterStateAddParcelAndShowImpl>
+    implements _$$RouterStateAddParcelAndShowImplCopyWith<$Res> {
+  __$$RouterStateAddParcelAndShowImplCopyWithImpl(
+      _$RouterStateAddParcelAndShowImpl _value,
+      $Res Function(_$RouterStateAddParcelAndShowImpl) _then)
+      : super(_value, _then);
 
-  @override
-  RouterStateAddParcelAndShow get _value =>
-      super._value as RouterStateAddParcelAndShow;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? trackNumber = freezed,
+    Object? trackNumber = null,
   }) {
-    return _then(RouterStateAddParcelAndShow(
-      trackNumber == freezed
+    return _then(_$RouterStateAddParcelAndShowImpl(
+      null == trackNumber
           ? _value.trackNumber
           : trackNumber // ignore: cast_nullable_to_non_nullable
               as String,
@@ -3734,10 +3592,10 @@ class _$RouterStateAddParcelAndShowCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$RouterStateAddParcelAndShow
+class _$RouterStateAddParcelAndShowImpl
     with DiagnosticableTreeMixin
     implements RouterStateAddParcelAndShow {
-  const _$RouterStateAddParcelAndShow(this.trackNumber);
+  const _$RouterStateAddParcelAndShowImpl(this.trackNumber);
 
   @override
   final String trackNumber;
@@ -3756,23 +3614,23 @@ class _$RouterStateAddParcelAndShow
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is RouterStateAddParcelAndShow &&
+        (other.runtimeType == runtimeType &&
+            other is _$RouterStateAddParcelAndShowImpl &&
             (identical(other.trackNumber, trackNumber) ||
-                const DeepCollectionEquality()
-                    .equals(other.trackNumber, trackNumber)));
+                other.trackNumber == trackNumber));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(trackNumber);
+  int get hashCode => Object.hash(runtimeType, trackNumber);
 
   @JsonKey(ignore: true)
   @override
-  $RouterStateAddParcelAndShowCopyWith<RouterStateAddParcelAndShow>
-      get copyWith => _$RouterStateAddParcelAndShowCopyWithImpl<
-          RouterStateAddParcelAndShow>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$RouterStateAddParcelAndShowImplCopyWith<_$RouterStateAddParcelAndShowImpl>
+      get copyWith => __$$RouterStateAddParcelAndShowImplCopyWithImpl<
+          _$RouterStateAddParcelAndShowImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -3795,17 +3653,17 @@ class _$RouterStateAddParcelAndShow
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? unknown,
-    TResult Function(HomeRoutePath subRoute)? home,
-    TResult Function()? addAccount,
-    TResult Function(TrackingServiceType serviceType)? editAccount,
-    TResult Function(TrackingNumbers? initialTrackNumbers)? addParcels,
-    TResult Function(String trackNumber)? parcelDetails,
-    TResult Function(String trackNumber)? addMissingParcel,
-    TResult Function(String trackNumber)? addParcelAndShow,
-    TResult Function(String trackNumber)? showAddedParcel,
-    TResult Function(SettingsRoutePath? subRoute)? settings,
-    TResult Function()? about,
+    TResult? Function()? unknown,
+    TResult? Function(HomeRoutePath subRoute)? home,
+    TResult? Function()? addAccount,
+    TResult? Function(TrackingServiceType serviceType)? editAccount,
+    TResult? Function(TrackingNumbers? initialTrackNumbers)? addParcels,
+    TResult? Function(String trackNumber)? parcelDetails,
+    TResult? Function(String trackNumber)? addMissingParcel,
+    TResult? Function(String trackNumber)? addParcelAndShow,
+    TResult? Function(String trackNumber)? showAddedParcel,
+    TResult? Function(SettingsRoutePath? subRoute)? settings,
+    TResult? Function()? about,
   }) {
     return addParcelAndShow?.call(trackNumber);
   }
@@ -3855,17 +3713,17 @@ class _$RouterStateAddParcelAndShow
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(RouterStateUnknown value)? unknown,
-    TResult Function(RouterStateHome value)? home,
-    TResult Function(RouterStateAddAccount value)? addAccount,
-    TResult Function(RouterStateEditAccount value)? editAccount,
-    TResult Function(RouterStateAddParcels value)? addParcels,
-    TResult Function(RouterStateParcelDetails value)? parcelDetails,
-    TResult Function(RouterStateAddMissingParcel value)? addMissingParcel,
-    TResult Function(RouterStateAddParcelAndShow value)? addParcelAndShow,
-    TResult Function(RouterStateShowAddedParcel value)? showAddedParcel,
-    TResult Function(RouterStateSettings value)? settings,
-    TResult Function(RouterStateAbout value)? about,
+    TResult? Function(RouterStateUnknown value)? unknown,
+    TResult? Function(RouterStateHome value)? home,
+    TResult? Function(RouterStateAddAccount value)? addAccount,
+    TResult? Function(RouterStateEditAccount value)? editAccount,
+    TResult? Function(RouterStateAddParcels value)? addParcels,
+    TResult? Function(RouterStateParcelDetails value)? parcelDetails,
+    TResult? Function(RouterStateAddMissingParcel value)? addMissingParcel,
+    TResult? Function(RouterStateAddParcelAndShow value)? addParcelAndShow,
+    TResult? Function(RouterStateShowAddedParcel value)? showAddedParcel,
+    TResult? Function(RouterStateSettings value)? settings,
+    TResult? Function(RouterStateAbout value)? about,
   }) {
     return addParcelAndShow?.call(this);
   }
@@ -3894,41 +3752,41 @@ class _$RouterStateAddParcelAndShow
 }
 
 abstract class RouterStateAddParcelAndShow implements RouterState {
-  const factory RouterStateAddParcelAndShow(String trackNumber) =
-      _$RouterStateAddParcelAndShow;
+  const factory RouterStateAddParcelAndShow(final String trackNumber) =
+      _$RouterStateAddParcelAndShowImpl;
 
-  String get trackNumber => throw _privateConstructorUsedError;
+  String get trackNumber;
   @JsonKey(ignore: true)
-  $RouterStateAddParcelAndShowCopyWith<RouterStateAddParcelAndShow>
+  _$$RouterStateAddParcelAndShowImplCopyWith<_$RouterStateAddParcelAndShowImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $RouterStateShowAddedParcelCopyWith<$Res> {
-  factory $RouterStateShowAddedParcelCopyWith(RouterStateShowAddedParcel value,
-          $Res Function(RouterStateShowAddedParcel) then) =
-      _$RouterStateShowAddedParcelCopyWithImpl<$Res>;
+abstract class _$$RouterStateShowAddedParcelImplCopyWith<$Res> {
+  factory _$$RouterStateShowAddedParcelImplCopyWith(
+          _$RouterStateShowAddedParcelImpl value,
+          $Res Function(_$RouterStateShowAddedParcelImpl) then) =
+      __$$RouterStateShowAddedParcelImplCopyWithImpl<$Res>;
+  @useResult
   $Res call({String trackNumber});
 }
 
 /// @nodoc
-class _$RouterStateShowAddedParcelCopyWithImpl<$Res>
-    extends _$RouterStateCopyWithImpl<$Res>
-    implements $RouterStateShowAddedParcelCopyWith<$Res> {
-  _$RouterStateShowAddedParcelCopyWithImpl(RouterStateShowAddedParcel _value,
-      $Res Function(RouterStateShowAddedParcel) _then)
-      : super(_value, (v) => _then(v as RouterStateShowAddedParcel));
+class __$$RouterStateShowAddedParcelImplCopyWithImpl<$Res>
+    extends _$RouterStateCopyWithImpl<$Res, _$RouterStateShowAddedParcelImpl>
+    implements _$$RouterStateShowAddedParcelImplCopyWith<$Res> {
+  __$$RouterStateShowAddedParcelImplCopyWithImpl(
+      _$RouterStateShowAddedParcelImpl _value,
+      $Res Function(_$RouterStateShowAddedParcelImpl) _then)
+      : super(_value, _then);
 
-  @override
-  RouterStateShowAddedParcel get _value =>
-      super._value as RouterStateShowAddedParcel;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? trackNumber = freezed,
+    Object? trackNumber = null,
   }) {
-    return _then(RouterStateShowAddedParcel(
-      trackNumber == freezed
+    return _then(_$RouterStateShowAddedParcelImpl(
+      null == trackNumber
           ? _value.trackNumber
           : trackNumber // ignore: cast_nullable_to_non_nullable
               as String,
@@ -3938,10 +3796,10 @@ class _$RouterStateShowAddedParcelCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$RouterStateShowAddedParcel
+class _$RouterStateShowAddedParcelImpl
     with DiagnosticableTreeMixin
     implements RouterStateShowAddedParcel {
-  const _$RouterStateShowAddedParcel(this.trackNumber);
+  const _$RouterStateShowAddedParcelImpl(this.trackNumber);
 
   @override
   final String trackNumber;
@@ -3960,24 +3818,23 @@ class _$RouterStateShowAddedParcel
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is RouterStateShowAddedParcel &&
+        (other.runtimeType == runtimeType &&
+            other is _$RouterStateShowAddedParcelImpl &&
             (identical(other.trackNumber, trackNumber) ||
-                const DeepCollectionEquality()
-                    .equals(other.trackNumber, trackNumber)));
+                other.trackNumber == trackNumber));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(trackNumber);
+  int get hashCode => Object.hash(runtimeType, trackNumber);
 
   @JsonKey(ignore: true)
   @override
-  $RouterStateShowAddedParcelCopyWith<RouterStateShowAddedParcel>
-      get copyWith =>
-          _$RouterStateShowAddedParcelCopyWithImpl<RouterStateShowAddedParcel>(
-              this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$RouterStateShowAddedParcelImplCopyWith<_$RouterStateShowAddedParcelImpl>
+      get copyWith => __$$RouterStateShowAddedParcelImplCopyWithImpl<
+          _$RouterStateShowAddedParcelImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -4000,17 +3857,17 @@ class _$RouterStateShowAddedParcel
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? unknown,
-    TResult Function(HomeRoutePath subRoute)? home,
-    TResult Function()? addAccount,
-    TResult Function(TrackingServiceType serviceType)? editAccount,
-    TResult Function(TrackingNumbers? initialTrackNumbers)? addParcels,
-    TResult Function(String trackNumber)? parcelDetails,
-    TResult Function(String trackNumber)? addMissingParcel,
-    TResult Function(String trackNumber)? addParcelAndShow,
-    TResult Function(String trackNumber)? showAddedParcel,
-    TResult Function(SettingsRoutePath? subRoute)? settings,
-    TResult Function()? about,
+    TResult? Function()? unknown,
+    TResult? Function(HomeRoutePath subRoute)? home,
+    TResult? Function()? addAccount,
+    TResult? Function(TrackingServiceType serviceType)? editAccount,
+    TResult? Function(TrackingNumbers? initialTrackNumbers)? addParcels,
+    TResult? Function(String trackNumber)? parcelDetails,
+    TResult? Function(String trackNumber)? addMissingParcel,
+    TResult? Function(String trackNumber)? addParcelAndShow,
+    TResult? Function(String trackNumber)? showAddedParcel,
+    TResult? Function(SettingsRoutePath? subRoute)? settings,
+    TResult? Function()? about,
   }) {
     return showAddedParcel?.call(trackNumber);
   }
@@ -4060,17 +3917,17 @@ class _$RouterStateShowAddedParcel
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(RouterStateUnknown value)? unknown,
-    TResult Function(RouterStateHome value)? home,
-    TResult Function(RouterStateAddAccount value)? addAccount,
-    TResult Function(RouterStateEditAccount value)? editAccount,
-    TResult Function(RouterStateAddParcels value)? addParcels,
-    TResult Function(RouterStateParcelDetails value)? parcelDetails,
-    TResult Function(RouterStateAddMissingParcel value)? addMissingParcel,
-    TResult Function(RouterStateAddParcelAndShow value)? addParcelAndShow,
-    TResult Function(RouterStateShowAddedParcel value)? showAddedParcel,
-    TResult Function(RouterStateSettings value)? settings,
-    TResult Function(RouterStateAbout value)? about,
+    TResult? Function(RouterStateUnknown value)? unknown,
+    TResult? Function(RouterStateHome value)? home,
+    TResult? Function(RouterStateAddAccount value)? addAccount,
+    TResult? Function(RouterStateEditAccount value)? editAccount,
+    TResult? Function(RouterStateAddParcels value)? addParcels,
+    TResult? Function(RouterStateParcelDetails value)? parcelDetails,
+    TResult? Function(RouterStateAddMissingParcel value)? addMissingParcel,
+    TResult? Function(RouterStateAddParcelAndShow value)? addParcelAndShow,
+    TResult? Function(RouterStateShowAddedParcel value)? showAddedParcel,
+    TResult? Function(RouterStateSettings value)? settings,
+    TResult? Function(RouterStateAbout value)? about,
   }) {
     return showAddedParcel?.call(this);
   }
@@ -4099,42 +3956,41 @@ class _$RouterStateShowAddedParcel
 }
 
 abstract class RouterStateShowAddedParcel implements RouterState {
-  const factory RouterStateShowAddedParcel(String trackNumber) =
-      _$RouterStateShowAddedParcel;
+  const factory RouterStateShowAddedParcel(final String trackNumber) =
+      _$RouterStateShowAddedParcelImpl;
 
-  String get trackNumber => throw _privateConstructorUsedError;
+  String get trackNumber;
   @JsonKey(ignore: true)
-  $RouterStateShowAddedParcelCopyWith<RouterStateShowAddedParcel>
+  _$$RouterStateShowAddedParcelImplCopyWith<_$RouterStateShowAddedParcelImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $RouterStateSettingsCopyWith<$Res> {
-  factory $RouterStateSettingsCopyWith(
-          RouterStateSettings value, $Res Function(RouterStateSettings) then) =
-      _$RouterStateSettingsCopyWithImpl<$Res>;
+abstract class _$$RouterStateSettingsImplCopyWith<$Res> {
+  factory _$$RouterStateSettingsImplCopyWith(_$RouterStateSettingsImpl value,
+          $Res Function(_$RouterStateSettingsImpl) then) =
+      __$$RouterStateSettingsImplCopyWithImpl<$Res>;
+  @useResult
   $Res call({SettingsRoutePath? subRoute});
 
   $SettingsRoutePathCopyWith<$Res>? get subRoute;
 }
 
 /// @nodoc
-class _$RouterStateSettingsCopyWithImpl<$Res>
-    extends _$RouterStateCopyWithImpl<$Res>
-    implements $RouterStateSettingsCopyWith<$Res> {
-  _$RouterStateSettingsCopyWithImpl(
-      RouterStateSettings _value, $Res Function(RouterStateSettings) _then)
-      : super(_value, (v) => _then(v as RouterStateSettings));
+class __$$RouterStateSettingsImplCopyWithImpl<$Res>
+    extends _$RouterStateCopyWithImpl<$Res, _$RouterStateSettingsImpl>
+    implements _$$RouterStateSettingsImplCopyWith<$Res> {
+  __$$RouterStateSettingsImplCopyWithImpl(_$RouterStateSettingsImpl _value,
+      $Res Function(_$RouterStateSettingsImpl) _then)
+      : super(_value, _then);
 
-  @override
-  RouterStateSettings get _value => super._value as RouterStateSettings;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? subRoute = freezed,
   }) {
-    return _then(RouterStateSettings(
-      subRoute: subRoute == freezed
+    return _then(_$RouterStateSettingsImpl(
+      subRoute: freezed == subRoute
           ? _value.subRoute
           : subRoute // ignore: cast_nullable_to_non_nullable
               as SettingsRoutePath?,
@@ -4142,6 +3998,7 @@ class _$RouterStateSettingsCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $SettingsRoutePathCopyWith<$Res>? get subRoute {
     if (_value.subRoute == null) {
       return null;
@@ -4155,10 +4012,10 @@ class _$RouterStateSettingsCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$RouterStateSettings
+class _$RouterStateSettingsImpl
     with DiagnosticableTreeMixin
     implements RouterStateSettings {
-  const _$RouterStateSettings({this.subRoute});
+  const _$RouterStateSettingsImpl({this.subRoute});
 
   @override
   final SettingsRoutePath? subRoute;
@@ -4177,22 +4034,23 @@ class _$RouterStateSettings
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is RouterStateSettings &&
+        (other.runtimeType == runtimeType &&
+            other is _$RouterStateSettingsImpl &&
             (identical(other.subRoute, subRoute) ||
-                const DeepCollectionEquality()
-                    .equals(other.subRoute, subRoute)));
+                other.subRoute == subRoute));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(subRoute);
+  int get hashCode => Object.hash(runtimeType, subRoute);
 
   @JsonKey(ignore: true)
   @override
-  $RouterStateSettingsCopyWith<RouterStateSettings> get copyWith =>
-      _$RouterStateSettingsCopyWithImpl<RouterStateSettings>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$RouterStateSettingsImplCopyWith<_$RouterStateSettingsImpl> get copyWith =>
+      __$$RouterStateSettingsImplCopyWithImpl<_$RouterStateSettingsImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -4215,17 +4073,17 @@ class _$RouterStateSettings
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? unknown,
-    TResult Function(HomeRoutePath subRoute)? home,
-    TResult Function()? addAccount,
-    TResult Function(TrackingServiceType serviceType)? editAccount,
-    TResult Function(TrackingNumbers? initialTrackNumbers)? addParcels,
-    TResult Function(String trackNumber)? parcelDetails,
-    TResult Function(String trackNumber)? addMissingParcel,
-    TResult Function(String trackNumber)? addParcelAndShow,
-    TResult Function(String trackNumber)? showAddedParcel,
-    TResult Function(SettingsRoutePath? subRoute)? settings,
-    TResult Function()? about,
+    TResult? Function()? unknown,
+    TResult? Function(HomeRoutePath subRoute)? home,
+    TResult? Function()? addAccount,
+    TResult? Function(TrackingServiceType serviceType)? editAccount,
+    TResult? Function(TrackingNumbers? initialTrackNumbers)? addParcels,
+    TResult? Function(String trackNumber)? parcelDetails,
+    TResult? Function(String trackNumber)? addMissingParcel,
+    TResult? Function(String trackNumber)? addParcelAndShow,
+    TResult? Function(String trackNumber)? showAddedParcel,
+    TResult? Function(SettingsRoutePath? subRoute)? settings,
+    TResult? Function()? about,
   }) {
     return settings?.call(subRoute);
   }
@@ -4275,17 +4133,17 @@ class _$RouterStateSettings
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(RouterStateUnknown value)? unknown,
-    TResult Function(RouterStateHome value)? home,
-    TResult Function(RouterStateAddAccount value)? addAccount,
-    TResult Function(RouterStateEditAccount value)? editAccount,
-    TResult Function(RouterStateAddParcels value)? addParcels,
-    TResult Function(RouterStateParcelDetails value)? parcelDetails,
-    TResult Function(RouterStateAddMissingParcel value)? addMissingParcel,
-    TResult Function(RouterStateAddParcelAndShow value)? addParcelAndShow,
-    TResult Function(RouterStateShowAddedParcel value)? showAddedParcel,
-    TResult Function(RouterStateSettings value)? settings,
-    TResult Function(RouterStateAbout value)? about,
+    TResult? Function(RouterStateUnknown value)? unknown,
+    TResult? Function(RouterStateHome value)? home,
+    TResult? Function(RouterStateAddAccount value)? addAccount,
+    TResult? Function(RouterStateEditAccount value)? editAccount,
+    TResult? Function(RouterStateAddParcels value)? addParcels,
+    TResult? Function(RouterStateParcelDetails value)? parcelDetails,
+    TResult? Function(RouterStateAddMissingParcel value)? addMissingParcel,
+    TResult? Function(RouterStateAddParcelAndShow value)? addParcelAndShow,
+    TResult? Function(RouterStateShowAddedParcel value)? showAddedParcel,
+    TResult? Function(RouterStateSettings value)? settings,
+    TResult? Function(RouterStateAbout value)? about,
   }) {
     return settings?.call(this);
   }
@@ -4314,40 +4172,37 @@ class _$RouterStateSettings
 }
 
 abstract class RouterStateSettings implements RouterState {
-  const factory RouterStateSettings({SettingsRoutePath? subRoute}) =
-      _$RouterStateSettings;
+  const factory RouterStateSettings({final SettingsRoutePath? subRoute}) =
+      _$RouterStateSettingsImpl;
 
-  SettingsRoutePath? get subRoute => throw _privateConstructorUsedError;
+  SettingsRoutePath? get subRoute;
   @JsonKey(ignore: true)
-  $RouterStateSettingsCopyWith<RouterStateSettings> get copyWith =>
+  _$$RouterStateSettingsImplCopyWith<_$RouterStateSettingsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $RouterStateAboutCopyWith<$Res> {
-  factory $RouterStateAboutCopyWith(
-          RouterStateAbout value, $Res Function(RouterStateAbout) then) =
-      _$RouterStateAboutCopyWithImpl<$Res>;
+abstract class _$$RouterStateAboutImplCopyWith<$Res> {
+  factory _$$RouterStateAboutImplCopyWith(_$RouterStateAboutImpl value,
+          $Res Function(_$RouterStateAboutImpl) then) =
+      __$$RouterStateAboutImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$RouterStateAboutCopyWithImpl<$Res>
-    extends _$RouterStateCopyWithImpl<$Res>
-    implements $RouterStateAboutCopyWith<$Res> {
-  _$RouterStateAboutCopyWithImpl(
-      RouterStateAbout _value, $Res Function(RouterStateAbout) _then)
-      : super(_value, (v) => _then(v as RouterStateAbout));
-
-  @override
-  RouterStateAbout get _value => super._value as RouterStateAbout;
+class __$$RouterStateAboutImplCopyWithImpl<$Res>
+    extends _$RouterStateCopyWithImpl<$Res, _$RouterStateAboutImpl>
+    implements _$$RouterStateAboutImplCopyWith<$Res> {
+  __$$RouterStateAboutImplCopyWithImpl(_$RouterStateAboutImpl _value,
+      $Res Function(_$RouterStateAboutImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$RouterStateAbout
+class _$RouterStateAboutImpl
     with DiagnosticableTreeMixin
     implements RouterStateAbout {
-  const _$RouterStateAbout();
+  const _$RouterStateAboutImpl();
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
@@ -4357,12 +4212,13 @@ class _$RouterStateAbout
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
-    properties..add(DiagnosticsProperty('type', 'RouterState.about'));
+    properties.add(DiagnosticsProperty('type', 'RouterState.about'));
   }
 
   @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) || (other is RouterStateAbout);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$RouterStateAboutImpl);
   }
 
   @override
@@ -4389,17 +4245,17 @@ class _$RouterStateAbout
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? unknown,
-    TResult Function(HomeRoutePath subRoute)? home,
-    TResult Function()? addAccount,
-    TResult Function(TrackingServiceType serviceType)? editAccount,
-    TResult Function(TrackingNumbers? initialTrackNumbers)? addParcels,
-    TResult Function(String trackNumber)? parcelDetails,
-    TResult Function(String trackNumber)? addMissingParcel,
-    TResult Function(String trackNumber)? addParcelAndShow,
-    TResult Function(String trackNumber)? showAddedParcel,
-    TResult Function(SettingsRoutePath? subRoute)? settings,
-    TResult Function()? about,
+    TResult? Function()? unknown,
+    TResult? Function(HomeRoutePath subRoute)? home,
+    TResult? Function()? addAccount,
+    TResult? Function(TrackingServiceType serviceType)? editAccount,
+    TResult? Function(TrackingNumbers? initialTrackNumbers)? addParcels,
+    TResult? Function(String trackNumber)? parcelDetails,
+    TResult? Function(String trackNumber)? addMissingParcel,
+    TResult? Function(String trackNumber)? addParcelAndShow,
+    TResult? Function(String trackNumber)? showAddedParcel,
+    TResult? Function(SettingsRoutePath? subRoute)? settings,
+    TResult? Function()? about,
   }) {
     return about?.call();
   }
@@ -4449,17 +4305,17 @@ class _$RouterStateAbout
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(RouterStateUnknown value)? unknown,
-    TResult Function(RouterStateHome value)? home,
-    TResult Function(RouterStateAddAccount value)? addAccount,
-    TResult Function(RouterStateEditAccount value)? editAccount,
-    TResult Function(RouterStateAddParcels value)? addParcels,
-    TResult Function(RouterStateParcelDetails value)? parcelDetails,
-    TResult Function(RouterStateAddMissingParcel value)? addMissingParcel,
-    TResult Function(RouterStateAddParcelAndShow value)? addParcelAndShow,
-    TResult Function(RouterStateShowAddedParcel value)? showAddedParcel,
-    TResult Function(RouterStateSettings value)? settings,
-    TResult Function(RouterStateAbout value)? about,
+    TResult? Function(RouterStateUnknown value)? unknown,
+    TResult? Function(RouterStateHome value)? home,
+    TResult? Function(RouterStateAddAccount value)? addAccount,
+    TResult? Function(RouterStateEditAccount value)? editAccount,
+    TResult? Function(RouterStateAddParcels value)? addParcels,
+    TResult? Function(RouterStateParcelDetails value)? parcelDetails,
+    TResult? Function(RouterStateAddMissingParcel value)? addMissingParcel,
+    TResult? Function(RouterStateAddParcelAndShow value)? addParcelAndShow,
+    TResult? Function(RouterStateShowAddedParcel value)? showAddedParcel,
+    TResult? Function(RouterStateSettings value)? settings,
+    TResult? Function(RouterStateAbout value)? about,
   }) {
     return about?.call(this);
   }
@@ -4488,5 +4344,5 @@ class _$RouterStateAbout
 }
 
 abstract class RouterStateAbout implements RouterState {
-  const factory RouterStateAbout() = _$RouterStateAbout;
+  const factory RouterStateAbout() = _$RouterStateAboutImpl;
 }

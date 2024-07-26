@@ -18,6 +18,7 @@
 
 import 'dart:async';
 
+import 'package:collection/collection.dart';
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -41,10 +42,10 @@ class App extends StatefulWidget {
   final GlobalKey<NavigatorState> navigatorKey;
 
   const App({
-    Key? key,
+    super.key,
     required this.enableDevicePreview,
     required this.navigatorKey,
-  }) : super(key: key);
+  });
 
   @override
   _AppState createState() => _AppState();
@@ -78,7 +79,8 @@ class _AppState extends State<App> {
         tray.showWindow();
       },
       onError: (e, StackTrace stackTrace) {
-        log().e('Unable to handle notification action', e, stackTrace);
+        log().e('Unable to handle notification action',
+            error: e, stackTrace: stackTrace);
       },
     );
 
@@ -102,8 +104,8 @@ class _AppState extends State<App> {
         onError: (e, StackTrace stackTrace) {
           log().e(
             'Unable to launch the app from the notification',
-            e,
-            stackTrace,
+            error: e,
+            stackTrace: stackTrace,
           );
         },
       );
@@ -112,27 +114,37 @@ class _AppState extends State<App> {
     // TODO: iOS/Desktop/Web support
     if (platform.isAndroid) {
       _sharedTextIntentSubscription =
-          ReceiveSharingIntent.getTextStream().listen(
-        (value) {
+          ReceiveSharingIntent.instance.getMediaStream().listen(
+        (list) {
           _routerDelegate.setNewRoutePath(
-            AppRoutePath.addParcels(initialTrackNumbers: value),
+            AppRoutePath.addParcels(
+                initialTrackNumbers: list
+                    .firstWhereOrNull(
+                        (value) => value.type == SharedMediaType.text)
+                    ?.path),
           );
         },
         onError: (e, StackTrace stackTrace) {
-          log().e('Unable to getting shared text', e, stackTrace);
+          log().e('Unable to getting shared text',
+              error: e, stackTrace: stackTrace);
         },
       );
 
-      ReceiveSharingIntent.getInitialText().then(
-        (value) {
-          if (value != null) {
+      ReceiveSharingIntent.instance.getInitialMedia().then(
+        (list) {
+          if (list.isNotEmpty) {
             _routerDelegate.setNewRoutePath(
-              AppRoutePath.addParcels(initialTrackNumbers: value),
+              AppRoutePath.addParcels(
+                  initialTrackNumbers: list
+                      .firstWhereOrNull(
+                          (value) => value.type == SharedMediaType.text)
+                      ?.path),
             );
           }
         },
         onError: (e, StackTrace stackTrace) {
-          log().e('Unable to getting initial shared text', e, stackTrace);
+          log().e('Unable to getting initial shared text',
+              error: e, stackTrace: stackTrace);
         },
       );
     }
@@ -156,7 +168,9 @@ class _AppState extends State<App> {
       openParcelsList: () => const AppRoutePath.home(
         HomeRoutePath.parcels(),
       ),
-      orElse: () {},
+      orElse: () {
+        return null;
+      },
     );
   }
 

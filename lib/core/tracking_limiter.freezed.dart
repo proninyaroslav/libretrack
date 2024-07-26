@@ -1,6 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'tracking_limiter.dart';
 
@@ -11,42 +12,11 @@ part of 'tracking_limiter.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$TrackingLimiterStateTearOff {
-  const _$TrackingLimiterStateTearOff();
-
-  TrackingLimiterStateAllowed allowed({required String trackNumber}) {
-    return TrackingLimiterStateAllowed(
-      trackNumber: trackNumber,
-    );
-  }
-
-  TrackingLimiterStateDissalowed dissalowed(
-      {required String trackNumber, required Duration remainingTime}) {
-    return TrackingLimiterStateDissalowed(
-      trackNumber: trackNumber,
-      remainingTime: remainingTime,
-    );
-  }
-
-  TrackingLimiterStateError error(
-      {required String trackNumber, required TrackingLimiterError error}) {
-    return TrackingLimiterStateError(
-      trackNumber: trackNumber,
-      error: error,
-    );
-  }
-}
-
-/// @nodoc
-const $TrackingLimiterState = _$TrackingLimiterStateTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$TrackingLimiterState {
   String get trackNumber => throw _privateConstructorUsedError;
-
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(String trackNumber) allowed,
@@ -58,9 +28,9 @@ mixin _$TrackingLimiterState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(String trackNumber)? allowed,
-    TResult Function(String trackNumber, Duration remainingTime)? dissalowed,
-    TResult Function(String trackNumber, TrackingLimiterError error)? error,
+    TResult? Function(String trackNumber)? allowed,
+    TResult? Function(String trackNumber, Duration remainingTime)? dissalowed,
+    TResult? Function(String trackNumber, TrackingLimiterError error)? error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -80,9 +50,9 @@ mixin _$TrackingLimiterState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(TrackingLimiterStateAllowed value)? allowed,
-    TResult Function(TrackingLimiterStateDissalowed value)? dissalowed,
-    TResult Function(TrackingLimiterStateError value)? error,
+    TResult? Function(TrackingLimiterStateAllowed value)? allowed,
+    TResult? Function(TrackingLimiterStateDissalowed value)? dissalowed,
+    TResult? Function(TrackingLimiterStateError value)? error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -103,61 +73,65 @@ mixin _$TrackingLimiterState {
 abstract class $TrackingLimiterStateCopyWith<$Res> {
   factory $TrackingLimiterStateCopyWith(TrackingLimiterState value,
           $Res Function(TrackingLimiterState) then) =
-      _$TrackingLimiterStateCopyWithImpl<$Res>;
+      _$TrackingLimiterStateCopyWithImpl<$Res, TrackingLimiterState>;
+  @useResult
   $Res call({String trackNumber});
 }
 
 /// @nodoc
-class _$TrackingLimiterStateCopyWithImpl<$Res>
+class _$TrackingLimiterStateCopyWithImpl<$Res,
+        $Val extends TrackingLimiterState>
     implements $TrackingLimiterStateCopyWith<$Res> {
   _$TrackingLimiterStateCopyWithImpl(this._value, this._then);
 
-  final TrackingLimiterState _value;
   // ignore: unused_field
-  final $Res Function(TrackingLimiterState) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? trackNumber = freezed,
+    Object? trackNumber = null,
   }) {
     return _then(_value.copyWith(
-      trackNumber: trackNumber == freezed
+      trackNumber: null == trackNumber
           ? _value.trackNumber
           : trackNumber // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class $TrackingLimiterStateAllowedCopyWith<$Res>
+abstract class _$$TrackingLimiterStateAllowedImplCopyWith<$Res>
     implements $TrackingLimiterStateCopyWith<$Res> {
-  factory $TrackingLimiterStateAllowedCopyWith(
-          TrackingLimiterStateAllowed value,
-          $Res Function(TrackingLimiterStateAllowed) then) =
-      _$TrackingLimiterStateAllowedCopyWithImpl<$Res>;
+  factory _$$TrackingLimiterStateAllowedImplCopyWith(
+          _$TrackingLimiterStateAllowedImpl value,
+          $Res Function(_$TrackingLimiterStateAllowedImpl) then) =
+      __$$TrackingLimiterStateAllowedImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({String trackNumber});
 }
 
 /// @nodoc
-class _$TrackingLimiterStateAllowedCopyWithImpl<$Res>
-    extends _$TrackingLimiterStateCopyWithImpl<$Res>
-    implements $TrackingLimiterStateAllowedCopyWith<$Res> {
-  _$TrackingLimiterStateAllowedCopyWithImpl(TrackingLimiterStateAllowed _value,
-      $Res Function(TrackingLimiterStateAllowed) _then)
-      : super(_value, (v) => _then(v as TrackingLimiterStateAllowed));
+class __$$TrackingLimiterStateAllowedImplCopyWithImpl<$Res>
+    extends _$TrackingLimiterStateCopyWithImpl<$Res,
+        _$TrackingLimiterStateAllowedImpl>
+    implements _$$TrackingLimiterStateAllowedImplCopyWith<$Res> {
+  __$$TrackingLimiterStateAllowedImplCopyWithImpl(
+      _$TrackingLimiterStateAllowedImpl _value,
+      $Res Function(_$TrackingLimiterStateAllowedImpl) _then)
+      : super(_value, _then);
 
-  @override
-  TrackingLimiterStateAllowed get _value =>
-      super._value as TrackingLimiterStateAllowed;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? trackNumber = freezed,
+    Object? trackNumber = null,
   }) {
-    return _then(TrackingLimiterStateAllowed(
-      trackNumber: trackNumber == freezed
+    return _then(_$TrackingLimiterStateAllowedImpl(
+      trackNumber: null == trackNumber
           ? _value.trackNumber
           : trackNumber // ignore: cast_nullable_to_non_nullable
               as String,
@@ -167,8 +141,8 @@ class _$TrackingLimiterStateAllowedCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$TrackingLimiterStateAllowed implements TrackingLimiterStateAllowed {
-  const _$TrackingLimiterStateAllowed({required this.trackNumber});
+class _$TrackingLimiterStateAllowedImpl implements TrackingLimiterStateAllowed {
+  const _$TrackingLimiterStateAllowedImpl({required this.trackNumber});
 
   @override
   final String trackNumber;
@@ -179,23 +153,23 @@ class _$TrackingLimiterStateAllowed implements TrackingLimiterStateAllowed {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is TrackingLimiterStateAllowed &&
+        (other.runtimeType == runtimeType &&
+            other is _$TrackingLimiterStateAllowedImpl &&
             (identical(other.trackNumber, trackNumber) ||
-                const DeepCollectionEquality()
-                    .equals(other.trackNumber, trackNumber)));
+                other.trackNumber == trackNumber));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(trackNumber);
+  int get hashCode => Object.hash(runtimeType, trackNumber);
 
   @JsonKey(ignore: true)
   @override
-  $TrackingLimiterStateAllowedCopyWith<TrackingLimiterStateAllowed>
-      get copyWith => _$TrackingLimiterStateAllowedCopyWithImpl<
-          TrackingLimiterStateAllowed>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$TrackingLimiterStateAllowedImplCopyWith<_$TrackingLimiterStateAllowedImpl>
+      get copyWith => __$$TrackingLimiterStateAllowedImplCopyWithImpl<
+          _$TrackingLimiterStateAllowedImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -212,9 +186,9 @@ class _$TrackingLimiterStateAllowed implements TrackingLimiterStateAllowed {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(String trackNumber)? allowed,
-    TResult Function(String trackNumber, Duration remainingTime)? dissalowed,
-    TResult Function(String trackNumber, TrackingLimiterError error)? error,
+    TResult? Function(String trackNumber)? allowed,
+    TResult? Function(String trackNumber, Duration remainingTime)? dissalowed,
+    TResult? Function(String trackNumber, TrackingLimiterError error)? error,
   }) {
     return allowed?.call(trackNumber);
   }
@@ -246,9 +220,9 @@ class _$TrackingLimiterStateAllowed implements TrackingLimiterStateAllowed {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(TrackingLimiterStateAllowed value)? allowed,
-    TResult Function(TrackingLimiterStateDissalowed value)? dissalowed,
-    TResult Function(TrackingLimiterStateError value)? error,
+    TResult? Function(TrackingLimiterStateAllowed value)? allowed,
+    TResult? Function(TrackingLimiterStateDissalowed value)? dissalowed,
+    TResult? Function(TrackingLimiterStateError value)? error,
   }) {
     return allowed?.call(this);
   }
@@ -269,52 +243,51 @@ class _$TrackingLimiterStateAllowed implements TrackingLimiterStateAllowed {
 }
 
 abstract class TrackingLimiterStateAllowed implements TrackingLimiterState {
-  const factory TrackingLimiterStateAllowed({required String trackNumber}) =
-      _$TrackingLimiterStateAllowed;
+  const factory TrackingLimiterStateAllowed(
+      {required final String trackNumber}) = _$TrackingLimiterStateAllowedImpl;
 
   @override
-  String get trackNumber => throw _privateConstructorUsedError;
+  String get trackNumber;
   @override
   @JsonKey(ignore: true)
-  $TrackingLimiterStateAllowedCopyWith<TrackingLimiterStateAllowed>
+  _$$TrackingLimiterStateAllowedImplCopyWith<_$TrackingLimiterStateAllowedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $TrackingLimiterStateDissalowedCopyWith<$Res>
+abstract class _$$TrackingLimiterStateDissalowedImplCopyWith<$Res>
     implements $TrackingLimiterStateCopyWith<$Res> {
-  factory $TrackingLimiterStateDissalowedCopyWith(
-          TrackingLimiterStateDissalowed value,
-          $Res Function(TrackingLimiterStateDissalowed) then) =
-      _$TrackingLimiterStateDissalowedCopyWithImpl<$Res>;
+  factory _$$TrackingLimiterStateDissalowedImplCopyWith(
+          _$TrackingLimiterStateDissalowedImpl value,
+          $Res Function(_$TrackingLimiterStateDissalowedImpl) then) =
+      __$$TrackingLimiterStateDissalowedImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({String trackNumber, Duration remainingTime});
 }
 
 /// @nodoc
-class _$TrackingLimiterStateDissalowedCopyWithImpl<$Res>
-    extends _$TrackingLimiterStateCopyWithImpl<$Res>
-    implements $TrackingLimiterStateDissalowedCopyWith<$Res> {
-  _$TrackingLimiterStateDissalowedCopyWithImpl(
-      TrackingLimiterStateDissalowed _value,
-      $Res Function(TrackingLimiterStateDissalowed) _then)
-      : super(_value, (v) => _then(v as TrackingLimiterStateDissalowed));
+class __$$TrackingLimiterStateDissalowedImplCopyWithImpl<$Res>
+    extends _$TrackingLimiterStateCopyWithImpl<$Res,
+        _$TrackingLimiterStateDissalowedImpl>
+    implements _$$TrackingLimiterStateDissalowedImplCopyWith<$Res> {
+  __$$TrackingLimiterStateDissalowedImplCopyWithImpl(
+      _$TrackingLimiterStateDissalowedImpl _value,
+      $Res Function(_$TrackingLimiterStateDissalowedImpl) _then)
+      : super(_value, _then);
 
-  @override
-  TrackingLimiterStateDissalowed get _value =>
-      super._value as TrackingLimiterStateDissalowed;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? trackNumber = freezed,
-    Object? remainingTime = freezed,
+    Object? trackNumber = null,
+    Object? remainingTime = null,
   }) {
-    return _then(TrackingLimiterStateDissalowed(
-      trackNumber: trackNumber == freezed
+    return _then(_$TrackingLimiterStateDissalowedImpl(
+      trackNumber: null == trackNumber
           ? _value.trackNumber
           : trackNumber // ignore: cast_nullable_to_non_nullable
               as String,
-      remainingTime: remainingTime == freezed
+      remainingTime: null == remainingTime
           ? _value.remainingTime
           : remainingTime // ignore: cast_nullable_to_non_nullable
               as Duration,
@@ -324,9 +297,9 @@ class _$TrackingLimiterStateDissalowedCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$TrackingLimiterStateDissalowed
+class _$TrackingLimiterStateDissalowedImpl
     implements TrackingLimiterStateDissalowed {
-  const _$TrackingLimiterStateDissalowed(
+  const _$TrackingLimiterStateDissalowedImpl(
       {required this.trackNumber, required this.remainingTime});
 
   @override
@@ -340,28 +313,26 @@ class _$TrackingLimiterStateDissalowed
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is TrackingLimiterStateDissalowed &&
+        (other.runtimeType == runtimeType &&
+            other is _$TrackingLimiterStateDissalowedImpl &&
             (identical(other.trackNumber, trackNumber) ||
-                const DeepCollectionEquality()
-                    .equals(other.trackNumber, trackNumber)) &&
+                other.trackNumber == trackNumber) &&
             (identical(other.remainingTime, remainingTime) ||
-                const DeepCollectionEquality()
-                    .equals(other.remainingTime, remainingTime)));
+                other.remainingTime == remainingTime));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(trackNumber) ^
-      const DeepCollectionEquality().hash(remainingTime);
+  int get hashCode => Object.hash(runtimeType, trackNumber, remainingTime);
 
   @JsonKey(ignore: true)
   @override
-  $TrackingLimiterStateDissalowedCopyWith<TrackingLimiterStateDissalowed>
-      get copyWith => _$TrackingLimiterStateDissalowedCopyWithImpl<
-          TrackingLimiterStateDissalowed>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$TrackingLimiterStateDissalowedImplCopyWith<
+          _$TrackingLimiterStateDissalowedImpl>
+      get copyWith => __$$TrackingLimiterStateDissalowedImplCopyWithImpl<
+          _$TrackingLimiterStateDissalowedImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -378,9 +349,9 @@ class _$TrackingLimiterStateDissalowed
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(String trackNumber)? allowed,
-    TResult Function(String trackNumber, Duration remainingTime)? dissalowed,
-    TResult Function(String trackNumber, TrackingLimiterError error)? error,
+    TResult? Function(String trackNumber)? allowed,
+    TResult? Function(String trackNumber, Duration remainingTime)? dissalowed,
+    TResult? Function(String trackNumber, TrackingLimiterError error)? error,
   }) {
     return dissalowed?.call(trackNumber, remainingTime);
   }
@@ -412,9 +383,9 @@ class _$TrackingLimiterStateDissalowed
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(TrackingLimiterStateAllowed value)? allowed,
-    TResult Function(TrackingLimiterStateDissalowed value)? dissalowed,
-    TResult Function(TrackingLimiterStateError value)? error,
+    TResult? Function(TrackingLimiterStateAllowed value)? allowed,
+    TResult? Function(TrackingLimiterStateDissalowed value)? dissalowed,
+    TResult? Function(TrackingLimiterStateError value)? error,
   }) {
     return dissalowed?.call(this);
   }
@@ -436,53 +407,56 @@ class _$TrackingLimiterStateDissalowed
 
 abstract class TrackingLimiterStateDissalowed implements TrackingLimiterState {
   const factory TrackingLimiterStateDissalowed(
-      {required String trackNumber,
-      required Duration remainingTime}) = _$TrackingLimiterStateDissalowed;
+          {required final String trackNumber,
+          required final Duration remainingTime}) =
+      _$TrackingLimiterStateDissalowedImpl;
 
   @override
-  String get trackNumber => throw _privateConstructorUsedError;
-  Duration get remainingTime => throw _privateConstructorUsedError;
+  String get trackNumber;
+  Duration get remainingTime;
   @override
   @JsonKey(ignore: true)
-  $TrackingLimiterStateDissalowedCopyWith<TrackingLimiterStateDissalowed>
+  _$$TrackingLimiterStateDissalowedImplCopyWith<
+          _$TrackingLimiterStateDissalowedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $TrackingLimiterStateErrorCopyWith<$Res>
+abstract class _$$TrackingLimiterStateErrorImplCopyWith<$Res>
     implements $TrackingLimiterStateCopyWith<$Res> {
-  factory $TrackingLimiterStateErrorCopyWith(TrackingLimiterStateError value,
-          $Res Function(TrackingLimiterStateError) then) =
-      _$TrackingLimiterStateErrorCopyWithImpl<$Res>;
+  factory _$$TrackingLimiterStateErrorImplCopyWith(
+          _$TrackingLimiterStateErrorImpl value,
+          $Res Function(_$TrackingLimiterStateErrorImpl) then) =
+      __$$TrackingLimiterStateErrorImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({String trackNumber, TrackingLimiterError error});
 
   $TrackingLimiterErrorCopyWith<$Res> get error;
 }
 
 /// @nodoc
-class _$TrackingLimiterStateErrorCopyWithImpl<$Res>
-    extends _$TrackingLimiterStateCopyWithImpl<$Res>
-    implements $TrackingLimiterStateErrorCopyWith<$Res> {
-  _$TrackingLimiterStateErrorCopyWithImpl(TrackingLimiterStateError _value,
-      $Res Function(TrackingLimiterStateError) _then)
-      : super(_value, (v) => _then(v as TrackingLimiterStateError));
+class __$$TrackingLimiterStateErrorImplCopyWithImpl<$Res>
+    extends _$TrackingLimiterStateCopyWithImpl<$Res,
+        _$TrackingLimiterStateErrorImpl>
+    implements _$$TrackingLimiterStateErrorImplCopyWith<$Res> {
+  __$$TrackingLimiterStateErrorImplCopyWithImpl(
+      _$TrackingLimiterStateErrorImpl _value,
+      $Res Function(_$TrackingLimiterStateErrorImpl) _then)
+      : super(_value, _then);
 
-  @override
-  TrackingLimiterStateError get _value =>
-      super._value as TrackingLimiterStateError;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? trackNumber = freezed,
-    Object? error = freezed,
+    Object? trackNumber = null,
+    Object? error = null,
   }) {
-    return _then(TrackingLimiterStateError(
-      trackNumber: trackNumber == freezed
+    return _then(_$TrackingLimiterStateErrorImpl(
+      trackNumber: null == trackNumber
           ? _value.trackNumber
           : trackNumber // ignore: cast_nullable_to_non_nullable
               as String,
-      error: error == freezed
+      error: null == error
           ? _value.error
           : error // ignore: cast_nullable_to_non_nullable
               as TrackingLimiterError,
@@ -490,6 +464,7 @@ class _$TrackingLimiterStateErrorCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $TrackingLimiterErrorCopyWith<$Res> get error {
     return $TrackingLimiterErrorCopyWith<$Res>(_value.error, (value) {
       return _then(_value.copyWith(error: value));
@@ -499,8 +474,8 @@ class _$TrackingLimiterStateErrorCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$TrackingLimiterStateError implements TrackingLimiterStateError {
-  const _$TrackingLimiterStateError(
+class _$TrackingLimiterStateErrorImpl implements TrackingLimiterStateError {
+  const _$TrackingLimiterStateErrorImpl(
       {required this.trackNumber, required this.error});
 
   @override
@@ -514,27 +489,24 @@ class _$TrackingLimiterStateError implements TrackingLimiterStateError {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is TrackingLimiterStateError &&
+        (other.runtimeType == runtimeType &&
+            other is _$TrackingLimiterStateErrorImpl &&
             (identical(other.trackNumber, trackNumber) ||
-                const DeepCollectionEquality()
-                    .equals(other.trackNumber, trackNumber)) &&
-            (identical(other.error, error) ||
-                const DeepCollectionEquality().equals(other.error, error)));
+                other.trackNumber == trackNumber) &&
+            (identical(other.error, error) || other.error == error));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(trackNumber) ^
-      const DeepCollectionEquality().hash(error);
+  int get hashCode => Object.hash(runtimeType, trackNumber, error);
 
   @JsonKey(ignore: true)
   @override
-  $TrackingLimiterStateErrorCopyWith<TrackingLimiterStateError> get copyWith =>
-      _$TrackingLimiterStateErrorCopyWithImpl<TrackingLimiterStateError>(
-          this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$TrackingLimiterStateErrorImplCopyWith<_$TrackingLimiterStateErrorImpl>
+      get copyWith => __$$TrackingLimiterStateErrorImplCopyWithImpl<
+          _$TrackingLimiterStateErrorImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -551,9 +523,9 @@ class _$TrackingLimiterStateError implements TrackingLimiterStateError {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(String trackNumber)? allowed,
-    TResult Function(String trackNumber, Duration remainingTime)? dissalowed,
-    TResult Function(String trackNumber, TrackingLimiterError error)? error,
+    TResult? Function(String trackNumber)? allowed,
+    TResult? Function(String trackNumber, Duration remainingTime)? dissalowed,
+    TResult? Function(String trackNumber, TrackingLimiterError error)? error,
   }) {
     return error?.call(trackNumber, this.error);
   }
@@ -585,9 +557,9 @@ class _$TrackingLimiterStateError implements TrackingLimiterStateError {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(TrackingLimiterStateAllowed value)? allowed,
-    TResult Function(TrackingLimiterStateDissalowed value)? dissalowed,
-    TResult Function(TrackingLimiterStateError value)? error,
+    TResult? Function(TrackingLimiterStateAllowed value)? allowed,
+    TResult? Function(TrackingLimiterStateDissalowed value)? dissalowed,
+    TResult? Function(TrackingLimiterStateError value)? error,
   }) {
     return error?.call(this);
   }
@@ -609,36 +581,22 @@ class _$TrackingLimiterStateError implements TrackingLimiterStateError {
 
 abstract class TrackingLimiterStateError implements TrackingLimiterState {
   const factory TrackingLimiterStateError(
-      {required String trackNumber,
-      required TrackingLimiterError error}) = _$TrackingLimiterStateError;
+          {required final String trackNumber,
+          required final TrackingLimiterError error}) =
+      _$TrackingLimiterStateErrorImpl;
 
   @override
-  String get trackNumber => throw _privateConstructorUsedError;
-  TrackingLimiterError get error => throw _privateConstructorUsedError;
+  String get trackNumber;
+  TrackingLimiterError get error;
   @override
   @JsonKey(ignore: true)
-  $TrackingLimiterStateErrorCopyWith<TrackingLimiterStateError> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$TrackingLimiterStateErrorImplCopyWith<_$TrackingLimiterStateErrorImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
-
-/// @nodoc
-class _$TrackingLimiterErrorTearOff {
-  const _$TrackingLimiterErrorTearOff();
-
-  TrackingLimiterErrorStorage storage(StorageError error) {
-    return TrackingLimiterErrorStorage(
-      error,
-    );
-  }
-}
-
-/// @nodoc
-const $TrackingLimiterError = _$TrackingLimiterErrorTearOff();
 
 /// @nodoc
 mixin _$TrackingLimiterError {
   StorageError get error => throw _privateConstructorUsedError;
-
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(StorageError error) storage,
@@ -646,7 +604,7 @@ mixin _$TrackingLimiterError {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(StorageError error)? storage,
+    TResult? Function(StorageError error)? storage,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -662,7 +620,7 @@ mixin _$TrackingLimiterError {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(TrackingLimiterErrorStorage value)? storage,
+    TResult? Function(TrackingLimiterErrorStorage value)? storage,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -681,49 +639,55 @@ mixin _$TrackingLimiterError {
 abstract class $TrackingLimiterErrorCopyWith<$Res> {
   factory $TrackingLimiterErrorCopyWith(TrackingLimiterError value,
           $Res Function(TrackingLimiterError) then) =
-      _$TrackingLimiterErrorCopyWithImpl<$Res>;
+      _$TrackingLimiterErrorCopyWithImpl<$Res, TrackingLimiterError>;
+  @useResult
   $Res call({StorageError error});
 
   $StorageErrorCopyWith<$Res> get error;
 }
 
 /// @nodoc
-class _$TrackingLimiterErrorCopyWithImpl<$Res>
+class _$TrackingLimiterErrorCopyWithImpl<$Res,
+        $Val extends TrackingLimiterError>
     implements $TrackingLimiterErrorCopyWith<$Res> {
   _$TrackingLimiterErrorCopyWithImpl(this._value, this._then);
 
-  final TrackingLimiterError _value;
   // ignore: unused_field
-  final $Res Function(TrackingLimiterError) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? error = freezed,
+    Object? error = null,
   }) {
     return _then(_value.copyWith(
-      error: error == freezed
+      error: null == error
           ? _value.error
           : error // ignore: cast_nullable_to_non_nullable
               as StorageError,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $StorageErrorCopyWith<$Res> get error {
     return $StorageErrorCopyWith<$Res>(_value.error, (value) {
-      return _then(_value.copyWith(error: value));
+      return _then(_value.copyWith(error: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class $TrackingLimiterErrorStorageCopyWith<$Res>
+abstract class _$$TrackingLimiterErrorStorageImplCopyWith<$Res>
     implements $TrackingLimiterErrorCopyWith<$Res> {
-  factory $TrackingLimiterErrorStorageCopyWith(
-          TrackingLimiterErrorStorage value,
-          $Res Function(TrackingLimiterErrorStorage) then) =
-      _$TrackingLimiterErrorStorageCopyWithImpl<$Res>;
+  factory _$$TrackingLimiterErrorStorageImplCopyWith(
+          _$TrackingLimiterErrorStorageImpl value,
+          $Res Function(_$TrackingLimiterErrorStorageImpl) then) =
+      __$$TrackingLimiterErrorStorageImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({StorageError error});
 
   @override
@@ -731,23 +695,22 @@ abstract class $TrackingLimiterErrorStorageCopyWith<$Res>
 }
 
 /// @nodoc
-class _$TrackingLimiterErrorStorageCopyWithImpl<$Res>
-    extends _$TrackingLimiterErrorCopyWithImpl<$Res>
-    implements $TrackingLimiterErrorStorageCopyWith<$Res> {
-  _$TrackingLimiterErrorStorageCopyWithImpl(TrackingLimiterErrorStorage _value,
-      $Res Function(TrackingLimiterErrorStorage) _then)
-      : super(_value, (v) => _then(v as TrackingLimiterErrorStorage));
+class __$$TrackingLimiterErrorStorageImplCopyWithImpl<$Res>
+    extends _$TrackingLimiterErrorCopyWithImpl<$Res,
+        _$TrackingLimiterErrorStorageImpl>
+    implements _$$TrackingLimiterErrorStorageImplCopyWith<$Res> {
+  __$$TrackingLimiterErrorStorageImplCopyWithImpl(
+      _$TrackingLimiterErrorStorageImpl _value,
+      $Res Function(_$TrackingLimiterErrorStorageImpl) _then)
+      : super(_value, _then);
 
-  @override
-  TrackingLimiterErrorStorage get _value =>
-      super._value as TrackingLimiterErrorStorage;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? error = freezed,
+    Object? error = null,
   }) {
-    return _then(TrackingLimiterErrorStorage(
-      error == freezed
+    return _then(_$TrackingLimiterErrorStorageImpl(
+      null == error
           ? _value.error
           : error // ignore: cast_nullable_to_non_nullable
               as StorageError,
@@ -757,8 +720,8 @@ class _$TrackingLimiterErrorStorageCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$TrackingLimiterErrorStorage implements TrackingLimiterErrorStorage {
-  const _$TrackingLimiterErrorStorage(this.error);
+class _$TrackingLimiterErrorStorageImpl implements TrackingLimiterErrorStorage {
+  const _$TrackingLimiterErrorStorageImpl(this.error);
 
   @override
   final StorageError error;
@@ -769,22 +732,22 @@ class _$TrackingLimiterErrorStorage implements TrackingLimiterErrorStorage {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is TrackingLimiterErrorStorage &&
-            (identical(other.error, error) ||
-                const DeepCollectionEquality().equals(other.error, error)));
+        (other.runtimeType == runtimeType &&
+            other is _$TrackingLimiterErrorStorageImpl &&
+            (identical(other.error, error) || other.error == error));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(error);
+  int get hashCode => Object.hash(runtimeType, error);
 
   @JsonKey(ignore: true)
   @override
-  $TrackingLimiterErrorStorageCopyWith<TrackingLimiterErrorStorage>
-      get copyWith => _$TrackingLimiterErrorStorageCopyWithImpl<
-          TrackingLimiterErrorStorage>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$TrackingLimiterErrorStorageImplCopyWith<_$TrackingLimiterErrorStorageImpl>
+      get copyWith => __$$TrackingLimiterErrorStorageImplCopyWithImpl<
+          _$TrackingLimiterErrorStorageImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -797,7 +760,7 @@ class _$TrackingLimiterErrorStorage implements TrackingLimiterErrorStorage {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(StorageError error)? storage,
+    TResult? Function(StorageError error)? storage,
   }) {
     return storage?.call(error);
   }
@@ -825,7 +788,7 @@ class _$TrackingLimiterErrorStorage implements TrackingLimiterErrorStorage {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(TrackingLimiterErrorStorage value)? storage,
+    TResult? Function(TrackingLimiterErrorStorage value)? storage,
   }) {
     return storage?.call(this);
   }
@@ -844,13 +807,13 @@ class _$TrackingLimiterErrorStorage implements TrackingLimiterErrorStorage {
 }
 
 abstract class TrackingLimiterErrorStorage implements TrackingLimiterError {
-  const factory TrackingLimiterErrorStorage(StorageError error) =
-      _$TrackingLimiterErrorStorage;
+  const factory TrackingLimiterErrorStorage(final StorageError error) =
+      _$TrackingLimiterErrorStorageImpl;
 
   @override
-  StorageError get error => throw _privateConstructorUsedError;
+  StorageError get error;
   @override
   @JsonKey(ignore: true)
-  $TrackingLimiterErrorStorageCopyWith<TrackingLimiterErrorStorage>
+  _$$TrackingLimiterErrorStorageImplCopyWith<_$TrackingLimiterErrorStorageImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

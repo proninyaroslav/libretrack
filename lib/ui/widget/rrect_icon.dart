@@ -32,10 +32,10 @@ class RRectIcon extends StatelessWidget {
   final double size;
 
   const RRectIcon({
-    Key? key,
+    super.key,
     required this.iconData,
     this.size = defaultSize,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

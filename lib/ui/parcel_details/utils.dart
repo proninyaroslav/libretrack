@@ -22,11 +22,11 @@ import 'package:libretrack/ui/utils/utils.dart';
 String formatDateTime(DateTime dateTime) {
   final now = DateTime.now();
   if (dateTime.year != now.year) {
-    return Jiffy(dateTime).yMMMdjm;
+    return Jiffy.parseFromDateTime(dateTime).yMMMdjm;
   } else if (dateTime.month != now.month) {
     return UiUtils.formatMMMMdjm.format(dateTime);
   } else if (dateTime.day == now.day) {
-    return Jiffy(dateTime).jm;
+    return Jiffy.parseFromDateTime(dateTime).jm;
   } else {
     return UiUtils.formatMMMMdjm.format(dateTime);
   }

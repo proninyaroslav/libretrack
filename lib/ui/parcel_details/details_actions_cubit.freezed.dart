@@ -1,6 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'details_actions_cubit.dart';
 
@@ -11,137 +12,7 @@ part of 'details_actions_cubit.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$DetailsActionsStateTearOff {
-  const _$DetailsActionsStateTearOff();
-
-  DetailsActionsStateInitial initial() {
-    return const DetailsActionsStateInitial();
-  }
-
-  DetailsActionsStateDeleting deleting() {
-    return const DetailsActionsStateDeleting();
-  }
-
-  DetailsActionsStateDeleteSuccess deleteSuccess() {
-    return const DetailsActionsStateDeleteSuccess();
-  }
-
-  DetailsActionsStateDeleteFailed deleteFailed({required StorageError error}) {
-    return DetailsActionsStateDeleteFailed(
-      error: error,
-    );
-  }
-
-  DetailsActionsStateMarkingAsRead markingAsRead() {
-    return const DetailsActionsStateMarkingAsRead();
-  }
-
-  DetailsActionsStateMarkAsReadSuccess markAsReadSuccess() {
-    return const DetailsActionsStateMarkAsReadSuccess();
-  }
-
-  DetailsActionsStateMarkAsReadFailed markAsReadFailed(
-      {required StorageError error}) {
-    return DetailsActionsStateMarkAsReadFailed(
-      error: error,
-    );
-  }
-
-  DetailsActionsStateMovingToActive movingToActive() {
-    return const DetailsActionsStateMovingToActive();
-  }
-
-  DetailsActionsStateMoveToActiveSuccess moveToActiveSuccess() {
-    return const DetailsActionsStateMoveToActiveSuccess();
-  }
-
-  DetailsActionsStateMoveToActiveFailed moveToActiveFailed(
-      {required StorageError error}) {
-    return DetailsActionsStateMoveToActiveFailed(
-      error: error,
-    );
-  }
-
-  DetailsActionsStateMovingToArchive movingToArchive() {
-    return const DetailsActionsStateMovingToArchive();
-  }
-
-  DetailsActionsStateMoveToArchiveSuccess moveToArchiveSuccess() {
-    return const DetailsActionsStateMoveToArchiveSuccess();
-  }
-
-  DetailsActionsStateMoveToArchiveFailed moveToArchiveFailed(
-      {required StorageError error}) {
-    return DetailsActionsStateMoveToArchiveFailed(
-      error: error,
-    );
-  }
-
-  DetailsActionsStateRefreshing refreshing() {
-    return const DetailsActionsStateRefreshing();
-  }
-
-  DetailsActionsStateRefreshSuccess refreshSuccess() {
-    return const DetailsActionsStateRefreshSuccess();
-  }
-
-  DetailsActionsStateRefreshFailed refreshFailed(
-      {required StorageError error}) {
-    return DetailsActionsStateRefreshFailed(
-      error: error,
-    );
-  }
-
-  DetailsActionsStateRefreshFreqLimited refreshFreqLimited(
-      {required Duration remainingTime}) {
-    return DetailsActionsStateRefreshFreqLimited(
-      remainingTime: remainingTime,
-    );
-  }
-
-  DetailsActionsStateSharingString sharingString() {
-    return const DetailsActionsStateSharingString();
-  }
-
-  DetailsActionsStateShareStringSuccess shareStringSuccess(
-      {required String text}) {
-    return DetailsActionsStateShareStringSuccess(
-      text: text,
-    );
-  }
-
-  DetailsActionsStateCopyingTrack copyingTrack() {
-    return const DetailsActionsStateCopyingTrack();
-  }
-
-  DetailsActionsStateCopyTrackSuccess copyTrackSuccess(
-      {required String trackNumber}) {
-    return DetailsActionsStateCopyTrackSuccess(
-      trackNumber: trackNumber,
-    );
-  }
-
-  DetailsActionsStateActivating activating() {
-    return const DetailsActionsStateActivating();
-  }
-
-  DetailsActionsStateActivateSuccess activateSuccess() {
-    return const DetailsActionsStateActivateSuccess();
-  }
-
-  DetailsActionsStateActivateFailed activateFailed(
-      {required StorageError error}) {
-    return DetailsActionsStateActivateFailed(
-      error: error,
-    );
-  }
-}
-
-/// @nodoc
-const $DetailsActionsState = _$DetailsActionsStateTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$DetailsActionsState {
@@ -175,30 +46,30 @@ mixin _$DetailsActionsState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? deleting,
-    TResult Function()? deleteSuccess,
-    TResult Function(StorageError error)? deleteFailed,
-    TResult Function()? markingAsRead,
-    TResult Function()? markAsReadSuccess,
-    TResult Function(StorageError error)? markAsReadFailed,
-    TResult Function()? movingToActive,
-    TResult Function()? moveToActiveSuccess,
-    TResult Function(StorageError error)? moveToActiveFailed,
-    TResult Function()? movingToArchive,
-    TResult Function()? moveToArchiveSuccess,
-    TResult Function(StorageError error)? moveToArchiveFailed,
-    TResult Function()? refreshing,
-    TResult Function()? refreshSuccess,
-    TResult Function(StorageError error)? refreshFailed,
-    TResult Function(Duration remainingTime)? refreshFreqLimited,
-    TResult Function()? sharingString,
-    TResult Function(String text)? shareStringSuccess,
-    TResult Function()? copyingTrack,
-    TResult Function(String trackNumber)? copyTrackSuccess,
-    TResult Function()? activating,
-    TResult Function()? activateSuccess,
-    TResult Function(StorageError error)? activateFailed,
+    TResult? Function()? initial,
+    TResult? Function()? deleting,
+    TResult? Function()? deleteSuccess,
+    TResult? Function(StorageError error)? deleteFailed,
+    TResult? Function()? markingAsRead,
+    TResult? Function()? markAsReadSuccess,
+    TResult? Function(StorageError error)? markAsReadFailed,
+    TResult? Function()? movingToActive,
+    TResult? Function()? moveToActiveSuccess,
+    TResult? Function(StorageError error)? moveToActiveFailed,
+    TResult? Function()? movingToArchive,
+    TResult? Function()? moveToArchiveSuccess,
+    TResult? Function(StorageError error)? moveToArchiveFailed,
+    TResult? Function()? refreshing,
+    TResult? Function()? refreshSuccess,
+    TResult? Function(StorageError error)? refreshFailed,
+    TResult? Function(Duration remainingTime)? refreshFreqLimited,
+    TResult? Function()? sharingString,
+    TResult? Function(String text)? shareStringSuccess,
+    TResult? Function()? copyingTrack,
+    TResult? Function(String trackNumber)? copyTrackSuccess,
+    TResult? Function()? activating,
+    TResult? Function()? activateSuccess,
+    TResult? Function(StorageError error)? activateFailed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -280,39 +151,41 @@ mixin _$DetailsActionsState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(DetailsActionsStateInitial value)? initial,
-    TResult Function(DetailsActionsStateDeleting value)? deleting,
-    TResult Function(DetailsActionsStateDeleteSuccess value)? deleteSuccess,
-    TResult Function(DetailsActionsStateDeleteFailed value)? deleteFailed,
-    TResult Function(DetailsActionsStateMarkingAsRead value)? markingAsRead,
-    TResult Function(DetailsActionsStateMarkAsReadSuccess value)?
+    TResult? Function(DetailsActionsStateInitial value)? initial,
+    TResult? Function(DetailsActionsStateDeleting value)? deleting,
+    TResult? Function(DetailsActionsStateDeleteSuccess value)? deleteSuccess,
+    TResult? Function(DetailsActionsStateDeleteFailed value)? deleteFailed,
+    TResult? Function(DetailsActionsStateMarkingAsRead value)? markingAsRead,
+    TResult? Function(DetailsActionsStateMarkAsReadSuccess value)?
         markAsReadSuccess,
-    TResult Function(DetailsActionsStateMarkAsReadFailed value)?
+    TResult? Function(DetailsActionsStateMarkAsReadFailed value)?
         markAsReadFailed,
-    TResult Function(DetailsActionsStateMovingToActive value)? movingToActive,
-    TResult Function(DetailsActionsStateMoveToActiveSuccess value)?
+    TResult? Function(DetailsActionsStateMovingToActive value)? movingToActive,
+    TResult? Function(DetailsActionsStateMoveToActiveSuccess value)?
         moveToActiveSuccess,
-    TResult Function(DetailsActionsStateMoveToActiveFailed value)?
+    TResult? Function(DetailsActionsStateMoveToActiveFailed value)?
         moveToActiveFailed,
-    TResult Function(DetailsActionsStateMovingToArchive value)? movingToArchive,
-    TResult Function(DetailsActionsStateMoveToArchiveSuccess value)?
+    TResult? Function(DetailsActionsStateMovingToArchive value)?
+        movingToArchive,
+    TResult? Function(DetailsActionsStateMoveToArchiveSuccess value)?
         moveToArchiveSuccess,
-    TResult Function(DetailsActionsStateMoveToArchiveFailed value)?
+    TResult? Function(DetailsActionsStateMoveToArchiveFailed value)?
         moveToArchiveFailed,
-    TResult Function(DetailsActionsStateRefreshing value)? refreshing,
-    TResult Function(DetailsActionsStateRefreshSuccess value)? refreshSuccess,
-    TResult Function(DetailsActionsStateRefreshFailed value)? refreshFailed,
-    TResult Function(DetailsActionsStateRefreshFreqLimited value)?
+    TResult? Function(DetailsActionsStateRefreshing value)? refreshing,
+    TResult? Function(DetailsActionsStateRefreshSuccess value)? refreshSuccess,
+    TResult? Function(DetailsActionsStateRefreshFailed value)? refreshFailed,
+    TResult? Function(DetailsActionsStateRefreshFreqLimited value)?
         refreshFreqLimited,
-    TResult Function(DetailsActionsStateSharingString value)? sharingString,
-    TResult Function(DetailsActionsStateShareStringSuccess value)?
+    TResult? Function(DetailsActionsStateSharingString value)? sharingString,
+    TResult? Function(DetailsActionsStateShareStringSuccess value)?
         shareStringSuccess,
-    TResult Function(DetailsActionsStateCopyingTrack value)? copyingTrack,
-    TResult Function(DetailsActionsStateCopyTrackSuccess value)?
+    TResult? Function(DetailsActionsStateCopyingTrack value)? copyingTrack,
+    TResult? Function(DetailsActionsStateCopyTrackSuccess value)?
         copyTrackSuccess,
-    TResult Function(DetailsActionsStateActivating value)? activating,
-    TResult Function(DetailsActionsStateActivateSuccess value)? activateSuccess,
-    TResult Function(DetailsActionsStateActivateFailed value)? activateFailed,
+    TResult? Function(DetailsActionsStateActivating value)? activating,
+    TResult? Function(DetailsActionsStateActivateSuccess value)?
+        activateSuccess,
+    TResult? Function(DetailsActionsStateActivateFailed value)? activateFailed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -359,43 +232,43 @@ mixin _$DetailsActionsState {
 abstract class $DetailsActionsStateCopyWith<$Res> {
   factory $DetailsActionsStateCopyWith(
           DetailsActionsState value, $Res Function(DetailsActionsState) then) =
-      _$DetailsActionsStateCopyWithImpl<$Res>;
+      _$DetailsActionsStateCopyWithImpl<$Res, DetailsActionsState>;
 }
 
 /// @nodoc
-class _$DetailsActionsStateCopyWithImpl<$Res>
+class _$DetailsActionsStateCopyWithImpl<$Res, $Val extends DetailsActionsState>
     implements $DetailsActionsStateCopyWith<$Res> {
   _$DetailsActionsStateCopyWithImpl(this._value, this._then);
 
-  final DetailsActionsState _value;
   // ignore: unused_field
-  final $Res Function(DetailsActionsState) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 }
 
 /// @nodoc
-abstract class $DetailsActionsStateInitialCopyWith<$Res> {
-  factory $DetailsActionsStateInitialCopyWith(DetailsActionsStateInitial value,
-          $Res Function(DetailsActionsStateInitial) then) =
-      _$DetailsActionsStateInitialCopyWithImpl<$Res>;
+abstract class _$$DetailsActionsStateInitialImplCopyWith<$Res> {
+  factory _$$DetailsActionsStateInitialImplCopyWith(
+          _$DetailsActionsStateInitialImpl value,
+          $Res Function(_$DetailsActionsStateInitialImpl) then) =
+      __$$DetailsActionsStateInitialImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$DetailsActionsStateInitialCopyWithImpl<$Res>
-    extends _$DetailsActionsStateCopyWithImpl<$Res>
-    implements $DetailsActionsStateInitialCopyWith<$Res> {
-  _$DetailsActionsStateInitialCopyWithImpl(DetailsActionsStateInitial _value,
-      $Res Function(DetailsActionsStateInitial) _then)
-      : super(_value, (v) => _then(v as DetailsActionsStateInitial));
-
-  @override
-  DetailsActionsStateInitial get _value =>
-      super._value as DetailsActionsStateInitial;
+class __$$DetailsActionsStateInitialImplCopyWithImpl<$Res>
+    extends _$DetailsActionsStateCopyWithImpl<$Res,
+        _$DetailsActionsStateInitialImpl>
+    implements _$$DetailsActionsStateInitialImplCopyWith<$Res> {
+  __$$DetailsActionsStateInitialImplCopyWithImpl(
+      _$DetailsActionsStateInitialImpl _value,
+      $Res Function(_$DetailsActionsStateInitialImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$DetailsActionsStateInitial implements DetailsActionsStateInitial {
-  const _$DetailsActionsStateInitial();
+class _$DetailsActionsStateInitialImpl implements DetailsActionsStateInitial {
+  const _$DetailsActionsStateInitialImpl();
 
   @override
   String toString() {
@@ -403,8 +276,10 @@ class _$DetailsActionsStateInitial implements DetailsActionsStateInitial {
   }
 
   @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) || (other is DetailsActionsStateInitial);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$DetailsActionsStateInitialImpl);
   }
 
   @override
@@ -444,30 +319,30 @@ class _$DetailsActionsStateInitial implements DetailsActionsStateInitial {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? deleting,
-    TResult Function()? deleteSuccess,
-    TResult Function(StorageError error)? deleteFailed,
-    TResult Function()? markingAsRead,
-    TResult Function()? markAsReadSuccess,
-    TResult Function(StorageError error)? markAsReadFailed,
-    TResult Function()? movingToActive,
-    TResult Function()? moveToActiveSuccess,
-    TResult Function(StorageError error)? moveToActiveFailed,
-    TResult Function()? movingToArchive,
-    TResult Function()? moveToArchiveSuccess,
-    TResult Function(StorageError error)? moveToArchiveFailed,
-    TResult Function()? refreshing,
-    TResult Function()? refreshSuccess,
-    TResult Function(StorageError error)? refreshFailed,
-    TResult Function(Duration remainingTime)? refreshFreqLimited,
-    TResult Function()? sharingString,
-    TResult Function(String text)? shareStringSuccess,
-    TResult Function()? copyingTrack,
-    TResult Function(String trackNumber)? copyTrackSuccess,
-    TResult Function()? activating,
-    TResult Function()? activateSuccess,
-    TResult Function(StorageError error)? activateFailed,
+    TResult? Function()? initial,
+    TResult? Function()? deleting,
+    TResult? Function()? deleteSuccess,
+    TResult? Function(StorageError error)? deleteFailed,
+    TResult? Function()? markingAsRead,
+    TResult? Function()? markAsReadSuccess,
+    TResult? Function(StorageError error)? markAsReadFailed,
+    TResult? Function()? movingToActive,
+    TResult? Function()? moveToActiveSuccess,
+    TResult? Function(StorageError error)? moveToActiveFailed,
+    TResult? Function()? movingToArchive,
+    TResult? Function()? moveToArchiveSuccess,
+    TResult? Function(StorageError error)? moveToArchiveFailed,
+    TResult? Function()? refreshing,
+    TResult? Function()? refreshSuccess,
+    TResult? Function(StorageError error)? refreshFailed,
+    TResult? Function(Duration remainingTime)? refreshFreqLimited,
+    TResult? Function()? sharingString,
+    TResult? Function(String text)? shareStringSuccess,
+    TResult? Function()? copyingTrack,
+    TResult? Function(String trackNumber)? copyTrackSuccess,
+    TResult? Function()? activating,
+    TResult? Function()? activateSuccess,
+    TResult? Function(StorageError error)? activateFailed,
   }) {
     return initial?.call();
   }
@@ -561,39 +436,41 @@ class _$DetailsActionsStateInitial implements DetailsActionsStateInitial {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(DetailsActionsStateInitial value)? initial,
-    TResult Function(DetailsActionsStateDeleting value)? deleting,
-    TResult Function(DetailsActionsStateDeleteSuccess value)? deleteSuccess,
-    TResult Function(DetailsActionsStateDeleteFailed value)? deleteFailed,
-    TResult Function(DetailsActionsStateMarkingAsRead value)? markingAsRead,
-    TResult Function(DetailsActionsStateMarkAsReadSuccess value)?
+    TResult? Function(DetailsActionsStateInitial value)? initial,
+    TResult? Function(DetailsActionsStateDeleting value)? deleting,
+    TResult? Function(DetailsActionsStateDeleteSuccess value)? deleteSuccess,
+    TResult? Function(DetailsActionsStateDeleteFailed value)? deleteFailed,
+    TResult? Function(DetailsActionsStateMarkingAsRead value)? markingAsRead,
+    TResult? Function(DetailsActionsStateMarkAsReadSuccess value)?
         markAsReadSuccess,
-    TResult Function(DetailsActionsStateMarkAsReadFailed value)?
+    TResult? Function(DetailsActionsStateMarkAsReadFailed value)?
         markAsReadFailed,
-    TResult Function(DetailsActionsStateMovingToActive value)? movingToActive,
-    TResult Function(DetailsActionsStateMoveToActiveSuccess value)?
+    TResult? Function(DetailsActionsStateMovingToActive value)? movingToActive,
+    TResult? Function(DetailsActionsStateMoveToActiveSuccess value)?
         moveToActiveSuccess,
-    TResult Function(DetailsActionsStateMoveToActiveFailed value)?
+    TResult? Function(DetailsActionsStateMoveToActiveFailed value)?
         moveToActiveFailed,
-    TResult Function(DetailsActionsStateMovingToArchive value)? movingToArchive,
-    TResult Function(DetailsActionsStateMoveToArchiveSuccess value)?
+    TResult? Function(DetailsActionsStateMovingToArchive value)?
+        movingToArchive,
+    TResult? Function(DetailsActionsStateMoveToArchiveSuccess value)?
         moveToArchiveSuccess,
-    TResult Function(DetailsActionsStateMoveToArchiveFailed value)?
+    TResult? Function(DetailsActionsStateMoveToArchiveFailed value)?
         moveToArchiveFailed,
-    TResult Function(DetailsActionsStateRefreshing value)? refreshing,
-    TResult Function(DetailsActionsStateRefreshSuccess value)? refreshSuccess,
-    TResult Function(DetailsActionsStateRefreshFailed value)? refreshFailed,
-    TResult Function(DetailsActionsStateRefreshFreqLimited value)?
+    TResult? Function(DetailsActionsStateRefreshing value)? refreshing,
+    TResult? Function(DetailsActionsStateRefreshSuccess value)? refreshSuccess,
+    TResult? Function(DetailsActionsStateRefreshFailed value)? refreshFailed,
+    TResult? Function(DetailsActionsStateRefreshFreqLimited value)?
         refreshFreqLimited,
-    TResult Function(DetailsActionsStateSharingString value)? sharingString,
-    TResult Function(DetailsActionsStateShareStringSuccess value)?
+    TResult? Function(DetailsActionsStateSharingString value)? sharingString,
+    TResult? Function(DetailsActionsStateShareStringSuccess value)?
         shareStringSuccess,
-    TResult Function(DetailsActionsStateCopyingTrack value)? copyingTrack,
-    TResult Function(DetailsActionsStateCopyTrackSuccess value)?
+    TResult? Function(DetailsActionsStateCopyingTrack value)? copyingTrack,
+    TResult? Function(DetailsActionsStateCopyTrackSuccess value)?
         copyTrackSuccess,
-    TResult Function(DetailsActionsStateActivating value)? activating,
-    TResult Function(DetailsActionsStateActivateSuccess value)? activateSuccess,
-    TResult Function(DetailsActionsStateActivateFailed value)? activateFailed,
+    TResult? Function(DetailsActionsStateActivating value)? activating,
+    TResult? Function(DetailsActionsStateActivateSuccess value)?
+        activateSuccess,
+    TResult? Function(DetailsActionsStateActivateFailed value)? activateFailed,
   }) {
     return initial?.call(this);
   }
@@ -644,34 +521,32 @@ class _$DetailsActionsStateInitial implements DetailsActionsStateInitial {
 }
 
 abstract class DetailsActionsStateInitial implements DetailsActionsState {
-  const factory DetailsActionsStateInitial() = _$DetailsActionsStateInitial;
+  const factory DetailsActionsStateInitial() = _$DetailsActionsStateInitialImpl;
 }
 
 /// @nodoc
-abstract class $DetailsActionsStateDeletingCopyWith<$Res> {
-  factory $DetailsActionsStateDeletingCopyWith(
-          DetailsActionsStateDeleting value,
-          $Res Function(DetailsActionsStateDeleting) then) =
-      _$DetailsActionsStateDeletingCopyWithImpl<$Res>;
+abstract class _$$DetailsActionsStateDeletingImplCopyWith<$Res> {
+  factory _$$DetailsActionsStateDeletingImplCopyWith(
+          _$DetailsActionsStateDeletingImpl value,
+          $Res Function(_$DetailsActionsStateDeletingImpl) then) =
+      __$$DetailsActionsStateDeletingImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$DetailsActionsStateDeletingCopyWithImpl<$Res>
-    extends _$DetailsActionsStateCopyWithImpl<$Res>
-    implements $DetailsActionsStateDeletingCopyWith<$Res> {
-  _$DetailsActionsStateDeletingCopyWithImpl(DetailsActionsStateDeleting _value,
-      $Res Function(DetailsActionsStateDeleting) _then)
-      : super(_value, (v) => _then(v as DetailsActionsStateDeleting));
-
-  @override
-  DetailsActionsStateDeleting get _value =>
-      super._value as DetailsActionsStateDeleting;
+class __$$DetailsActionsStateDeletingImplCopyWithImpl<$Res>
+    extends _$DetailsActionsStateCopyWithImpl<$Res,
+        _$DetailsActionsStateDeletingImpl>
+    implements _$$DetailsActionsStateDeletingImplCopyWith<$Res> {
+  __$$DetailsActionsStateDeletingImplCopyWithImpl(
+      _$DetailsActionsStateDeletingImpl _value,
+      $Res Function(_$DetailsActionsStateDeletingImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$DetailsActionsStateDeleting implements DetailsActionsStateDeleting {
-  const _$DetailsActionsStateDeleting();
+class _$DetailsActionsStateDeletingImpl implements DetailsActionsStateDeleting {
+  const _$DetailsActionsStateDeletingImpl();
 
   @override
   String toString() {
@@ -679,8 +554,10 @@ class _$DetailsActionsStateDeleting implements DetailsActionsStateDeleting {
   }
 
   @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) || (other is DetailsActionsStateDeleting);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$DetailsActionsStateDeletingImpl);
   }
 
   @override
@@ -720,30 +597,30 @@ class _$DetailsActionsStateDeleting implements DetailsActionsStateDeleting {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? deleting,
-    TResult Function()? deleteSuccess,
-    TResult Function(StorageError error)? deleteFailed,
-    TResult Function()? markingAsRead,
-    TResult Function()? markAsReadSuccess,
-    TResult Function(StorageError error)? markAsReadFailed,
-    TResult Function()? movingToActive,
-    TResult Function()? moveToActiveSuccess,
-    TResult Function(StorageError error)? moveToActiveFailed,
-    TResult Function()? movingToArchive,
-    TResult Function()? moveToArchiveSuccess,
-    TResult Function(StorageError error)? moveToArchiveFailed,
-    TResult Function()? refreshing,
-    TResult Function()? refreshSuccess,
-    TResult Function(StorageError error)? refreshFailed,
-    TResult Function(Duration remainingTime)? refreshFreqLimited,
-    TResult Function()? sharingString,
-    TResult Function(String text)? shareStringSuccess,
-    TResult Function()? copyingTrack,
-    TResult Function(String trackNumber)? copyTrackSuccess,
-    TResult Function()? activating,
-    TResult Function()? activateSuccess,
-    TResult Function(StorageError error)? activateFailed,
+    TResult? Function()? initial,
+    TResult? Function()? deleting,
+    TResult? Function()? deleteSuccess,
+    TResult? Function(StorageError error)? deleteFailed,
+    TResult? Function()? markingAsRead,
+    TResult? Function()? markAsReadSuccess,
+    TResult? Function(StorageError error)? markAsReadFailed,
+    TResult? Function()? movingToActive,
+    TResult? Function()? moveToActiveSuccess,
+    TResult? Function(StorageError error)? moveToActiveFailed,
+    TResult? Function()? movingToArchive,
+    TResult? Function()? moveToArchiveSuccess,
+    TResult? Function(StorageError error)? moveToArchiveFailed,
+    TResult? Function()? refreshing,
+    TResult? Function()? refreshSuccess,
+    TResult? Function(StorageError error)? refreshFailed,
+    TResult? Function(Duration remainingTime)? refreshFreqLimited,
+    TResult? Function()? sharingString,
+    TResult? Function(String text)? shareStringSuccess,
+    TResult? Function()? copyingTrack,
+    TResult? Function(String trackNumber)? copyTrackSuccess,
+    TResult? Function()? activating,
+    TResult? Function()? activateSuccess,
+    TResult? Function(StorageError error)? activateFailed,
   }) {
     return deleting?.call();
   }
@@ -837,39 +714,41 @@ class _$DetailsActionsStateDeleting implements DetailsActionsStateDeleting {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(DetailsActionsStateInitial value)? initial,
-    TResult Function(DetailsActionsStateDeleting value)? deleting,
-    TResult Function(DetailsActionsStateDeleteSuccess value)? deleteSuccess,
-    TResult Function(DetailsActionsStateDeleteFailed value)? deleteFailed,
-    TResult Function(DetailsActionsStateMarkingAsRead value)? markingAsRead,
-    TResult Function(DetailsActionsStateMarkAsReadSuccess value)?
+    TResult? Function(DetailsActionsStateInitial value)? initial,
+    TResult? Function(DetailsActionsStateDeleting value)? deleting,
+    TResult? Function(DetailsActionsStateDeleteSuccess value)? deleteSuccess,
+    TResult? Function(DetailsActionsStateDeleteFailed value)? deleteFailed,
+    TResult? Function(DetailsActionsStateMarkingAsRead value)? markingAsRead,
+    TResult? Function(DetailsActionsStateMarkAsReadSuccess value)?
         markAsReadSuccess,
-    TResult Function(DetailsActionsStateMarkAsReadFailed value)?
+    TResult? Function(DetailsActionsStateMarkAsReadFailed value)?
         markAsReadFailed,
-    TResult Function(DetailsActionsStateMovingToActive value)? movingToActive,
-    TResult Function(DetailsActionsStateMoveToActiveSuccess value)?
+    TResult? Function(DetailsActionsStateMovingToActive value)? movingToActive,
+    TResult? Function(DetailsActionsStateMoveToActiveSuccess value)?
         moveToActiveSuccess,
-    TResult Function(DetailsActionsStateMoveToActiveFailed value)?
+    TResult? Function(DetailsActionsStateMoveToActiveFailed value)?
         moveToActiveFailed,
-    TResult Function(DetailsActionsStateMovingToArchive value)? movingToArchive,
-    TResult Function(DetailsActionsStateMoveToArchiveSuccess value)?
+    TResult? Function(DetailsActionsStateMovingToArchive value)?
+        movingToArchive,
+    TResult? Function(DetailsActionsStateMoveToArchiveSuccess value)?
         moveToArchiveSuccess,
-    TResult Function(DetailsActionsStateMoveToArchiveFailed value)?
+    TResult? Function(DetailsActionsStateMoveToArchiveFailed value)?
         moveToArchiveFailed,
-    TResult Function(DetailsActionsStateRefreshing value)? refreshing,
-    TResult Function(DetailsActionsStateRefreshSuccess value)? refreshSuccess,
-    TResult Function(DetailsActionsStateRefreshFailed value)? refreshFailed,
-    TResult Function(DetailsActionsStateRefreshFreqLimited value)?
+    TResult? Function(DetailsActionsStateRefreshing value)? refreshing,
+    TResult? Function(DetailsActionsStateRefreshSuccess value)? refreshSuccess,
+    TResult? Function(DetailsActionsStateRefreshFailed value)? refreshFailed,
+    TResult? Function(DetailsActionsStateRefreshFreqLimited value)?
         refreshFreqLimited,
-    TResult Function(DetailsActionsStateSharingString value)? sharingString,
-    TResult Function(DetailsActionsStateShareStringSuccess value)?
+    TResult? Function(DetailsActionsStateSharingString value)? sharingString,
+    TResult? Function(DetailsActionsStateShareStringSuccess value)?
         shareStringSuccess,
-    TResult Function(DetailsActionsStateCopyingTrack value)? copyingTrack,
-    TResult Function(DetailsActionsStateCopyTrackSuccess value)?
+    TResult? Function(DetailsActionsStateCopyingTrack value)? copyingTrack,
+    TResult? Function(DetailsActionsStateCopyTrackSuccess value)?
         copyTrackSuccess,
-    TResult Function(DetailsActionsStateActivating value)? activating,
-    TResult Function(DetailsActionsStateActivateSuccess value)? activateSuccess,
-    TResult Function(DetailsActionsStateActivateFailed value)? activateFailed,
+    TResult? Function(DetailsActionsStateActivating value)? activating,
+    TResult? Function(DetailsActionsStateActivateSuccess value)?
+        activateSuccess,
+    TResult? Function(DetailsActionsStateActivateFailed value)? activateFailed,
   }) {
     return deleting?.call(this);
   }
@@ -920,36 +799,34 @@ class _$DetailsActionsStateDeleting implements DetailsActionsStateDeleting {
 }
 
 abstract class DetailsActionsStateDeleting implements DetailsActionsState {
-  const factory DetailsActionsStateDeleting() = _$DetailsActionsStateDeleting;
+  const factory DetailsActionsStateDeleting() =
+      _$DetailsActionsStateDeletingImpl;
 }
 
 /// @nodoc
-abstract class $DetailsActionsStateDeleteSuccessCopyWith<$Res> {
-  factory $DetailsActionsStateDeleteSuccessCopyWith(
-          DetailsActionsStateDeleteSuccess value,
-          $Res Function(DetailsActionsStateDeleteSuccess) then) =
-      _$DetailsActionsStateDeleteSuccessCopyWithImpl<$Res>;
+abstract class _$$DetailsActionsStateDeleteSuccessImplCopyWith<$Res> {
+  factory _$$DetailsActionsStateDeleteSuccessImplCopyWith(
+          _$DetailsActionsStateDeleteSuccessImpl value,
+          $Res Function(_$DetailsActionsStateDeleteSuccessImpl) then) =
+      __$$DetailsActionsStateDeleteSuccessImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$DetailsActionsStateDeleteSuccessCopyWithImpl<$Res>
-    extends _$DetailsActionsStateCopyWithImpl<$Res>
-    implements $DetailsActionsStateDeleteSuccessCopyWith<$Res> {
-  _$DetailsActionsStateDeleteSuccessCopyWithImpl(
-      DetailsActionsStateDeleteSuccess _value,
-      $Res Function(DetailsActionsStateDeleteSuccess) _then)
-      : super(_value, (v) => _then(v as DetailsActionsStateDeleteSuccess));
-
-  @override
-  DetailsActionsStateDeleteSuccess get _value =>
-      super._value as DetailsActionsStateDeleteSuccess;
+class __$$DetailsActionsStateDeleteSuccessImplCopyWithImpl<$Res>
+    extends _$DetailsActionsStateCopyWithImpl<$Res,
+        _$DetailsActionsStateDeleteSuccessImpl>
+    implements _$$DetailsActionsStateDeleteSuccessImplCopyWith<$Res> {
+  __$$DetailsActionsStateDeleteSuccessImplCopyWithImpl(
+      _$DetailsActionsStateDeleteSuccessImpl _value,
+      $Res Function(_$DetailsActionsStateDeleteSuccessImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$DetailsActionsStateDeleteSuccess
+class _$DetailsActionsStateDeleteSuccessImpl
     implements DetailsActionsStateDeleteSuccess {
-  const _$DetailsActionsStateDeleteSuccess();
+  const _$DetailsActionsStateDeleteSuccessImpl();
 
   @override
   String toString() {
@@ -957,9 +834,10 @@ class _$DetailsActionsStateDeleteSuccess
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is DetailsActionsStateDeleteSuccess);
+        (other.runtimeType == runtimeType &&
+            other is _$DetailsActionsStateDeleteSuccessImpl);
   }
 
   @override
@@ -999,30 +877,30 @@ class _$DetailsActionsStateDeleteSuccess
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? deleting,
-    TResult Function()? deleteSuccess,
-    TResult Function(StorageError error)? deleteFailed,
-    TResult Function()? markingAsRead,
-    TResult Function()? markAsReadSuccess,
-    TResult Function(StorageError error)? markAsReadFailed,
-    TResult Function()? movingToActive,
-    TResult Function()? moveToActiveSuccess,
-    TResult Function(StorageError error)? moveToActiveFailed,
-    TResult Function()? movingToArchive,
-    TResult Function()? moveToArchiveSuccess,
-    TResult Function(StorageError error)? moveToArchiveFailed,
-    TResult Function()? refreshing,
-    TResult Function()? refreshSuccess,
-    TResult Function(StorageError error)? refreshFailed,
-    TResult Function(Duration remainingTime)? refreshFreqLimited,
-    TResult Function()? sharingString,
-    TResult Function(String text)? shareStringSuccess,
-    TResult Function()? copyingTrack,
-    TResult Function(String trackNumber)? copyTrackSuccess,
-    TResult Function()? activating,
-    TResult Function()? activateSuccess,
-    TResult Function(StorageError error)? activateFailed,
+    TResult? Function()? initial,
+    TResult? Function()? deleting,
+    TResult? Function()? deleteSuccess,
+    TResult? Function(StorageError error)? deleteFailed,
+    TResult? Function()? markingAsRead,
+    TResult? Function()? markAsReadSuccess,
+    TResult? Function(StorageError error)? markAsReadFailed,
+    TResult? Function()? movingToActive,
+    TResult? Function()? moveToActiveSuccess,
+    TResult? Function(StorageError error)? moveToActiveFailed,
+    TResult? Function()? movingToArchive,
+    TResult? Function()? moveToArchiveSuccess,
+    TResult? Function(StorageError error)? moveToArchiveFailed,
+    TResult? Function()? refreshing,
+    TResult? Function()? refreshSuccess,
+    TResult? Function(StorageError error)? refreshFailed,
+    TResult? Function(Duration remainingTime)? refreshFreqLimited,
+    TResult? Function()? sharingString,
+    TResult? Function(String text)? shareStringSuccess,
+    TResult? Function()? copyingTrack,
+    TResult? Function(String trackNumber)? copyTrackSuccess,
+    TResult? Function()? activating,
+    TResult? Function()? activateSuccess,
+    TResult? Function(StorageError error)? activateFailed,
   }) {
     return deleteSuccess?.call();
   }
@@ -1116,39 +994,41 @@ class _$DetailsActionsStateDeleteSuccess
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(DetailsActionsStateInitial value)? initial,
-    TResult Function(DetailsActionsStateDeleting value)? deleting,
-    TResult Function(DetailsActionsStateDeleteSuccess value)? deleteSuccess,
-    TResult Function(DetailsActionsStateDeleteFailed value)? deleteFailed,
-    TResult Function(DetailsActionsStateMarkingAsRead value)? markingAsRead,
-    TResult Function(DetailsActionsStateMarkAsReadSuccess value)?
+    TResult? Function(DetailsActionsStateInitial value)? initial,
+    TResult? Function(DetailsActionsStateDeleting value)? deleting,
+    TResult? Function(DetailsActionsStateDeleteSuccess value)? deleteSuccess,
+    TResult? Function(DetailsActionsStateDeleteFailed value)? deleteFailed,
+    TResult? Function(DetailsActionsStateMarkingAsRead value)? markingAsRead,
+    TResult? Function(DetailsActionsStateMarkAsReadSuccess value)?
         markAsReadSuccess,
-    TResult Function(DetailsActionsStateMarkAsReadFailed value)?
+    TResult? Function(DetailsActionsStateMarkAsReadFailed value)?
         markAsReadFailed,
-    TResult Function(DetailsActionsStateMovingToActive value)? movingToActive,
-    TResult Function(DetailsActionsStateMoveToActiveSuccess value)?
+    TResult? Function(DetailsActionsStateMovingToActive value)? movingToActive,
+    TResult? Function(DetailsActionsStateMoveToActiveSuccess value)?
         moveToActiveSuccess,
-    TResult Function(DetailsActionsStateMoveToActiveFailed value)?
+    TResult? Function(DetailsActionsStateMoveToActiveFailed value)?
         moveToActiveFailed,
-    TResult Function(DetailsActionsStateMovingToArchive value)? movingToArchive,
-    TResult Function(DetailsActionsStateMoveToArchiveSuccess value)?
+    TResult? Function(DetailsActionsStateMovingToArchive value)?
+        movingToArchive,
+    TResult? Function(DetailsActionsStateMoveToArchiveSuccess value)?
         moveToArchiveSuccess,
-    TResult Function(DetailsActionsStateMoveToArchiveFailed value)?
+    TResult? Function(DetailsActionsStateMoveToArchiveFailed value)?
         moveToArchiveFailed,
-    TResult Function(DetailsActionsStateRefreshing value)? refreshing,
-    TResult Function(DetailsActionsStateRefreshSuccess value)? refreshSuccess,
-    TResult Function(DetailsActionsStateRefreshFailed value)? refreshFailed,
-    TResult Function(DetailsActionsStateRefreshFreqLimited value)?
+    TResult? Function(DetailsActionsStateRefreshing value)? refreshing,
+    TResult? Function(DetailsActionsStateRefreshSuccess value)? refreshSuccess,
+    TResult? Function(DetailsActionsStateRefreshFailed value)? refreshFailed,
+    TResult? Function(DetailsActionsStateRefreshFreqLimited value)?
         refreshFreqLimited,
-    TResult Function(DetailsActionsStateSharingString value)? sharingString,
-    TResult Function(DetailsActionsStateShareStringSuccess value)?
+    TResult? Function(DetailsActionsStateSharingString value)? sharingString,
+    TResult? Function(DetailsActionsStateShareStringSuccess value)?
         shareStringSuccess,
-    TResult Function(DetailsActionsStateCopyingTrack value)? copyingTrack,
-    TResult Function(DetailsActionsStateCopyTrackSuccess value)?
+    TResult? Function(DetailsActionsStateCopyingTrack value)? copyingTrack,
+    TResult? Function(DetailsActionsStateCopyTrackSuccess value)?
         copyTrackSuccess,
-    TResult Function(DetailsActionsStateActivating value)? activating,
-    TResult Function(DetailsActionsStateActivateSuccess value)? activateSuccess,
-    TResult Function(DetailsActionsStateActivateFailed value)? activateFailed,
+    TResult? Function(DetailsActionsStateActivating value)? activating,
+    TResult? Function(DetailsActionsStateActivateSuccess value)?
+        activateSuccess,
+    TResult? Function(DetailsActionsStateActivateFailed value)? activateFailed,
   }) {
     return deleteSuccess?.call(this);
   }
@@ -1200,39 +1080,38 @@ class _$DetailsActionsStateDeleteSuccess
 
 abstract class DetailsActionsStateDeleteSuccess implements DetailsActionsState {
   const factory DetailsActionsStateDeleteSuccess() =
-      _$DetailsActionsStateDeleteSuccess;
+      _$DetailsActionsStateDeleteSuccessImpl;
 }
 
 /// @nodoc
-abstract class $DetailsActionsStateDeleteFailedCopyWith<$Res> {
-  factory $DetailsActionsStateDeleteFailedCopyWith(
-          DetailsActionsStateDeleteFailed value,
-          $Res Function(DetailsActionsStateDeleteFailed) then) =
-      _$DetailsActionsStateDeleteFailedCopyWithImpl<$Res>;
+abstract class _$$DetailsActionsStateDeleteFailedImplCopyWith<$Res> {
+  factory _$$DetailsActionsStateDeleteFailedImplCopyWith(
+          _$DetailsActionsStateDeleteFailedImpl value,
+          $Res Function(_$DetailsActionsStateDeleteFailedImpl) then) =
+      __$$DetailsActionsStateDeleteFailedImplCopyWithImpl<$Res>;
+  @useResult
   $Res call({StorageError error});
 
   $StorageErrorCopyWith<$Res> get error;
 }
 
 /// @nodoc
-class _$DetailsActionsStateDeleteFailedCopyWithImpl<$Res>
-    extends _$DetailsActionsStateCopyWithImpl<$Res>
-    implements $DetailsActionsStateDeleteFailedCopyWith<$Res> {
-  _$DetailsActionsStateDeleteFailedCopyWithImpl(
-      DetailsActionsStateDeleteFailed _value,
-      $Res Function(DetailsActionsStateDeleteFailed) _then)
-      : super(_value, (v) => _then(v as DetailsActionsStateDeleteFailed));
+class __$$DetailsActionsStateDeleteFailedImplCopyWithImpl<$Res>
+    extends _$DetailsActionsStateCopyWithImpl<$Res,
+        _$DetailsActionsStateDeleteFailedImpl>
+    implements _$$DetailsActionsStateDeleteFailedImplCopyWith<$Res> {
+  __$$DetailsActionsStateDeleteFailedImplCopyWithImpl(
+      _$DetailsActionsStateDeleteFailedImpl _value,
+      $Res Function(_$DetailsActionsStateDeleteFailedImpl) _then)
+      : super(_value, _then);
 
-  @override
-  DetailsActionsStateDeleteFailed get _value =>
-      super._value as DetailsActionsStateDeleteFailed;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? error = freezed,
+    Object? error = null,
   }) {
-    return _then(DetailsActionsStateDeleteFailed(
-      error: error == freezed
+    return _then(_$DetailsActionsStateDeleteFailedImpl(
+      error: null == error
           ? _value.error
           : error // ignore: cast_nullable_to_non_nullable
               as StorageError,
@@ -1240,6 +1119,7 @@ class _$DetailsActionsStateDeleteFailedCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $StorageErrorCopyWith<$Res> get error {
     return $StorageErrorCopyWith<$Res>(_value.error, (value) {
       return _then(_value.copyWith(error: value));
@@ -1249,9 +1129,9 @@ class _$DetailsActionsStateDeleteFailedCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$DetailsActionsStateDeleteFailed
+class _$DetailsActionsStateDeleteFailedImpl
     implements DetailsActionsStateDeleteFailed {
-  const _$DetailsActionsStateDeleteFailed({required this.error});
+  const _$DetailsActionsStateDeleteFailedImpl({required this.error});
 
   @override
   final StorageError error;
@@ -1262,22 +1142,23 @@ class _$DetailsActionsStateDeleteFailed
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is DetailsActionsStateDeleteFailed &&
-            (identical(other.error, error) ||
-                const DeepCollectionEquality().equals(other.error, error)));
+        (other.runtimeType == runtimeType &&
+            other is _$DetailsActionsStateDeleteFailedImpl &&
+            (identical(other.error, error) || other.error == error));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(error);
+  int get hashCode => Object.hash(runtimeType, error);
 
   @JsonKey(ignore: true)
   @override
-  $DetailsActionsStateDeleteFailedCopyWith<DetailsActionsStateDeleteFailed>
-      get copyWith => _$DetailsActionsStateDeleteFailedCopyWithImpl<
-          DetailsActionsStateDeleteFailed>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$DetailsActionsStateDeleteFailedImplCopyWith<
+          _$DetailsActionsStateDeleteFailedImpl>
+      get copyWith => __$$DetailsActionsStateDeleteFailedImplCopyWithImpl<
+          _$DetailsActionsStateDeleteFailedImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1313,30 +1194,30 @@ class _$DetailsActionsStateDeleteFailed
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? deleting,
-    TResult Function()? deleteSuccess,
-    TResult Function(StorageError error)? deleteFailed,
-    TResult Function()? markingAsRead,
-    TResult Function()? markAsReadSuccess,
-    TResult Function(StorageError error)? markAsReadFailed,
-    TResult Function()? movingToActive,
-    TResult Function()? moveToActiveSuccess,
-    TResult Function(StorageError error)? moveToActiveFailed,
-    TResult Function()? movingToArchive,
-    TResult Function()? moveToArchiveSuccess,
-    TResult Function(StorageError error)? moveToArchiveFailed,
-    TResult Function()? refreshing,
-    TResult Function()? refreshSuccess,
-    TResult Function(StorageError error)? refreshFailed,
-    TResult Function(Duration remainingTime)? refreshFreqLimited,
-    TResult Function()? sharingString,
-    TResult Function(String text)? shareStringSuccess,
-    TResult Function()? copyingTrack,
-    TResult Function(String trackNumber)? copyTrackSuccess,
-    TResult Function()? activating,
-    TResult Function()? activateSuccess,
-    TResult Function(StorageError error)? activateFailed,
+    TResult? Function()? initial,
+    TResult? Function()? deleting,
+    TResult? Function()? deleteSuccess,
+    TResult? Function(StorageError error)? deleteFailed,
+    TResult? Function()? markingAsRead,
+    TResult? Function()? markAsReadSuccess,
+    TResult? Function(StorageError error)? markAsReadFailed,
+    TResult? Function()? movingToActive,
+    TResult? Function()? moveToActiveSuccess,
+    TResult? Function(StorageError error)? moveToActiveFailed,
+    TResult? Function()? movingToArchive,
+    TResult? Function()? moveToArchiveSuccess,
+    TResult? Function(StorageError error)? moveToArchiveFailed,
+    TResult? Function()? refreshing,
+    TResult? Function()? refreshSuccess,
+    TResult? Function(StorageError error)? refreshFailed,
+    TResult? Function(Duration remainingTime)? refreshFreqLimited,
+    TResult? Function()? sharingString,
+    TResult? Function(String text)? shareStringSuccess,
+    TResult? Function()? copyingTrack,
+    TResult? Function(String trackNumber)? copyTrackSuccess,
+    TResult? Function()? activating,
+    TResult? Function()? activateSuccess,
+    TResult? Function(StorageError error)? activateFailed,
   }) {
     return deleteFailed?.call(error);
   }
@@ -1430,39 +1311,41 @@ class _$DetailsActionsStateDeleteFailed
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(DetailsActionsStateInitial value)? initial,
-    TResult Function(DetailsActionsStateDeleting value)? deleting,
-    TResult Function(DetailsActionsStateDeleteSuccess value)? deleteSuccess,
-    TResult Function(DetailsActionsStateDeleteFailed value)? deleteFailed,
-    TResult Function(DetailsActionsStateMarkingAsRead value)? markingAsRead,
-    TResult Function(DetailsActionsStateMarkAsReadSuccess value)?
+    TResult? Function(DetailsActionsStateInitial value)? initial,
+    TResult? Function(DetailsActionsStateDeleting value)? deleting,
+    TResult? Function(DetailsActionsStateDeleteSuccess value)? deleteSuccess,
+    TResult? Function(DetailsActionsStateDeleteFailed value)? deleteFailed,
+    TResult? Function(DetailsActionsStateMarkingAsRead value)? markingAsRead,
+    TResult? Function(DetailsActionsStateMarkAsReadSuccess value)?
         markAsReadSuccess,
-    TResult Function(DetailsActionsStateMarkAsReadFailed value)?
+    TResult? Function(DetailsActionsStateMarkAsReadFailed value)?
         markAsReadFailed,
-    TResult Function(DetailsActionsStateMovingToActive value)? movingToActive,
-    TResult Function(DetailsActionsStateMoveToActiveSuccess value)?
+    TResult? Function(DetailsActionsStateMovingToActive value)? movingToActive,
+    TResult? Function(DetailsActionsStateMoveToActiveSuccess value)?
         moveToActiveSuccess,
-    TResult Function(DetailsActionsStateMoveToActiveFailed value)?
+    TResult? Function(DetailsActionsStateMoveToActiveFailed value)?
         moveToActiveFailed,
-    TResult Function(DetailsActionsStateMovingToArchive value)? movingToArchive,
-    TResult Function(DetailsActionsStateMoveToArchiveSuccess value)?
+    TResult? Function(DetailsActionsStateMovingToArchive value)?
+        movingToArchive,
+    TResult? Function(DetailsActionsStateMoveToArchiveSuccess value)?
         moveToArchiveSuccess,
-    TResult Function(DetailsActionsStateMoveToArchiveFailed value)?
+    TResult? Function(DetailsActionsStateMoveToArchiveFailed value)?
         moveToArchiveFailed,
-    TResult Function(DetailsActionsStateRefreshing value)? refreshing,
-    TResult Function(DetailsActionsStateRefreshSuccess value)? refreshSuccess,
-    TResult Function(DetailsActionsStateRefreshFailed value)? refreshFailed,
-    TResult Function(DetailsActionsStateRefreshFreqLimited value)?
+    TResult? Function(DetailsActionsStateRefreshing value)? refreshing,
+    TResult? Function(DetailsActionsStateRefreshSuccess value)? refreshSuccess,
+    TResult? Function(DetailsActionsStateRefreshFailed value)? refreshFailed,
+    TResult? Function(DetailsActionsStateRefreshFreqLimited value)?
         refreshFreqLimited,
-    TResult Function(DetailsActionsStateSharingString value)? sharingString,
-    TResult Function(DetailsActionsStateShareStringSuccess value)?
+    TResult? Function(DetailsActionsStateSharingString value)? sharingString,
+    TResult? Function(DetailsActionsStateShareStringSuccess value)?
         shareStringSuccess,
-    TResult Function(DetailsActionsStateCopyingTrack value)? copyingTrack,
-    TResult Function(DetailsActionsStateCopyTrackSuccess value)?
+    TResult? Function(DetailsActionsStateCopyingTrack value)? copyingTrack,
+    TResult? Function(DetailsActionsStateCopyTrackSuccess value)?
         copyTrackSuccess,
-    TResult Function(DetailsActionsStateActivating value)? activating,
-    TResult Function(DetailsActionsStateActivateSuccess value)? activateSuccess,
-    TResult Function(DetailsActionsStateActivateFailed value)? activateFailed,
+    TResult? Function(DetailsActionsStateActivating value)? activating,
+    TResult? Function(DetailsActionsStateActivateSuccess value)?
+        activateSuccess,
+    TResult? Function(DetailsActionsStateActivateFailed value)? activateFailed,
   }) {
     return deleteFailed?.call(this);
   }
@@ -1513,42 +1396,41 @@ class _$DetailsActionsStateDeleteFailed
 }
 
 abstract class DetailsActionsStateDeleteFailed implements DetailsActionsState {
-  const factory DetailsActionsStateDeleteFailed({required StorageError error}) =
-      _$DetailsActionsStateDeleteFailed;
+  const factory DetailsActionsStateDeleteFailed(
+          {required final StorageError error}) =
+      _$DetailsActionsStateDeleteFailedImpl;
 
-  StorageError get error => throw _privateConstructorUsedError;
+  StorageError get error;
   @JsonKey(ignore: true)
-  $DetailsActionsStateDeleteFailedCopyWith<DetailsActionsStateDeleteFailed>
+  _$$DetailsActionsStateDeleteFailedImplCopyWith<
+          _$DetailsActionsStateDeleteFailedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $DetailsActionsStateMarkingAsReadCopyWith<$Res> {
-  factory $DetailsActionsStateMarkingAsReadCopyWith(
-          DetailsActionsStateMarkingAsRead value,
-          $Res Function(DetailsActionsStateMarkingAsRead) then) =
-      _$DetailsActionsStateMarkingAsReadCopyWithImpl<$Res>;
+abstract class _$$DetailsActionsStateMarkingAsReadImplCopyWith<$Res> {
+  factory _$$DetailsActionsStateMarkingAsReadImplCopyWith(
+          _$DetailsActionsStateMarkingAsReadImpl value,
+          $Res Function(_$DetailsActionsStateMarkingAsReadImpl) then) =
+      __$$DetailsActionsStateMarkingAsReadImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$DetailsActionsStateMarkingAsReadCopyWithImpl<$Res>
-    extends _$DetailsActionsStateCopyWithImpl<$Res>
-    implements $DetailsActionsStateMarkingAsReadCopyWith<$Res> {
-  _$DetailsActionsStateMarkingAsReadCopyWithImpl(
-      DetailsActionsStateMarkingAsRead _value,
-      $Res Function(DetailsActionsStateMarkingAsRead) _then)
-      : super(_value, (v) => _then(v as DetailsActionsStateMarkingAsRead));
-
-  @override
-  DetailsActionsStateMarkingAsRead get _value =>
-      super._value as DetailsActionsStateMarkingAsRead;
+class __$$DetailsActionsStateMarkingAsReadImplCopyWithImpl<$Res>
+    extends _$DetailsActionsStateCopyWithImpl<$Res,
+        _$DetailsActionsStateMarkingAsReadImpl>
+    implements _$$DetailsActionsStateMarkingAsReadImplCopyWith<$Res> {
+  __$$DetailsActionsStateMarkingAsReadImplCopyWithImpl(
+      _$DetailsActionsStateMarkingAsReadImpl _value,
+      $Res Function(_$DetailsActionsStateMarkingAsReadImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$DetailsActionsStateMarkingAsRead
+class _$DetailsActionsStateMarkingAsReadImpl
     implements DetailsActionsStateMarkingAsRead {
-  const _$DetailsActionsStateMarkingAsRead();
+  const _$DetailsActionsStateMarkingAsReadImpl();
 
   @override
   String toString() {
@@ -1556,9 +1438,10 @@ class _$DetailsActionsStateMarkingAsRead
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is DetailsActionsStateMarkingAsRead);
+        (other.runtimeType == runtimeType &&
+            other is _$DetailsActionsStateMarkingAsReadImpl);
   }
 
   @override
@@ -1598,30 +1481,30 @@ class _$DetailsActionsStateMarkingAsRead
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? deleting,
-    TResult Function()? deleteSuccess,
-    TResult Function(StorageError error)? deleteFailed,
-    TResult Function()? markingAsRead,
-    TResult Function()? markAsReadSuccess,
-    TResult Function(StorageError error)? markAsReadFailed,
-    TResult Function()? movingToActive,
-    TResult Function()? moveToActiveSuccess,
-    TResult Function(StorageError error)? moveToActiveFailed,
-    TResult Function()? movingToArchive,
-    TResult Function()? moveToArchiveSuccess,
-    TResult Function(StorageError error)? moveToArchiveFailed,
-    TResult Function()? refreshing,
-    TResult Function()? refreshSuccess,
-    TResult Function(StorageError error)? refreshFailed,
-    TResult Function(Duration remainingTime)? refreshFreqLimited,
-    TResult Function()? sharingString,
-    TResult Function(String text)? shareStringSuccess,
-    TResult Function()? copyingTrack,
-    TResult Function(String trackNumber)? copyTrackSuccess,
-    TResult Function()? activating,
-    TResult Function()? activateSuccess,
-    TResult Function(StorageError error)? activateFailed,
+    TResult? Function()? initial,
+    TResult? Function()? deleting,
+    TResult? Function()? deleteSuccess,
+    TResult? Function(StorageError error)? deleteFailed,
+    TResult? Function()? markingAsRead,
+    TResult? Function()? markAsReadSuccess,
+    TResult? Function(StorageError error)? markAsReadFailed,
+    TResult? Function()? movingToActive,
+    TResult? Function()? moveToActiveSuccess,
+    TResult? Function(StorageError error)? moveToActiveFailed,
+    TResult? Function()? movingToArchive,
+    TResult? Function()? moveToArchiveSuccess,
+    TResult? Function(StorageError error)? moveToArchiveFailed,
+    TResult? Function()? refreshing,
+    TResult? Function()? refreshSuccess,
+    TResult? Function(StorageError error)? refreshFailed,
+    TResult? Function(Duration remainingTime)? refreshFreqLimited,
+    TResult? Function()? sharingString,
+    TResult? Function(String text)? shareStringSuccess,
+    TResult? Function()? copyingTrack,
+    TResult? Function(String trackNumber)? copyTrackSuccess,
+    TResult? Function()? activating,
+    TResult? Function()? activateSuccess,
+    TResult? Function(StorageError error)? activateFailed,
   }) {
     return markingAsRead?.call();
   }
@@ -1715,39 +1598,41 @@ class _$DetailsActionsStateMarkingAsRead
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(DetailsActionsStateInitial value)? initial,
-    TResult Function(DetailsActionsStateDeleting value)? deleting,
-    TResult Function(DetailsActionsStateDeleteSuccess value)? deleteSuccess,
-    TResult Function(DetailsActionsStateDeleteFailed value)? deleteFailed,
-    TResult Function(DetailsActionsStateMarkingAsRead value)? markingAsRead,
-    TResult Function(DetailsActionsStateMarkAsReadSuccess value)?
+    TResult? Function(DetailsActionsStateInitial value)? initial,
+    TResult? Function(DetailsActionsStateDeleting value)? deleting,
+    TResult? Function(DetailsActionsStateDeleteSuccess value)? deleteSuccess,
+    TResult? Function(DetailsActionsStateDeleteFailed value)? deleteFailed,
+    TResult? Function(DetailsActionsStateMarkingAsRead value)? markingAsRead,
+    TResult? Function(DetailsActionsStateMarkAsReadSuccess value)?
         markAsReadSuccess,
-    TResult Function(DetailsActionsStateMarkAsReadFailed value)?
+    TResult? Function(DetailsActionsStateMarkAsReadFailed value)?
         markAsReadFailed,
-    TResult Function(DetailsActionsStateMovingToActive value)? movingToActive,
-    TResult Function(DetailsActionsStateMoveToActiveSuccess value)?
+    TResult? Function(DetailsActionsStateMovingToActive value)? movingToActive,
+    TResult? Function(DetailsActionsStateMoveToActiveSuccess value)?
         moveToActiveSuccess,
-    TResult Function(DetailsActionsStateMoveToActiveFailed value)?
+    TResult? Function(DetailsActionsStateMoveToActiveFailed value)?
         moveToActiveFailed,
-    TResult Function(DetailsActionsStateMovingToArchive value)? movingToArchive,
-    TResult Function(DetailsActionsStateMoveToArchiveSuccess value)?
+    TResult? Function(DetailsActionsStateMovingToArchive value)?
+        movingToArchive,
+    TResult? Function(DetailsActionsStateMoveToArchiveSuccess value)?
         moveToArchiveSuccess,
-    TResult Function(DetailsActionsStateMoveToArchiveFailed value)?
+    TResult? Function(DetailsActionsStateMoveToArchiveFailed value)?
         moveToArchiveFailed,
-    TResult Function(DetailsActionsStateRefreshing value)? refreshing,
-    TResult Function(DetailsActionsStateRefreshSuccess value)? refreshSuccess,
-    TResult Function(DetailsActionsStateRefreshFailed value)? refreshFailed,
-    TResult Function(DetailsActionsStateRefreshFreqLimited value)?
+    TResult? Function(DetailsActionsStateRefreshing value)? refreshing,
+    TResult? Function(DetailsActionsStateRefreshSuccess value)? refreshSuccess,
+    TResult? Function(DetailsActionsStateRefreshFailed value)? refreshFailed,
+    TResult? Function(DetailsActionsStateRefreshFreqLimited value)?
         refreshFreqLimited,
-    TResult Function(DetailsActionsStateSharingString value)? sharingString,
-    TResult Function(DetailsActionsStateShareStringSuccess value)?
+    TResult? Function(DetailsActionsStateSharingString value)? sharingString,
+    TResult? Function(DetailsActionsStateShareStringSuccess value)?
         shareStringSuccess,
-    TResult Function(DetailsActionsStateCopyingTrack value)? copyingTrack,
-    TResult Function(DetailsActionsStateCopyTrackSuccess value)?
+    TResult? Function(DetailsActionsStateCopyingTrack value)? copyingTrack,
+    TResult? Function(DetailsActionsStateCopyTrackSuccess value)?
         copyTrackSuccess,
-    TResult Function(DetailsActionsStateActivating value)? activating,
-    TResult Function(DetailsActionsStateActivateSuccess value)? activateSuccess,
-    TResult Function(DetailsActionsStateActivateFailed value)? activateFailed,
+    TResult? Function(DetailsActionsStateActivating value)? activating,
+    TResult? Function(DetailsActionsStateActivateSuccess value)?
+        activateSuccess,
+    TResult? Function(DetailsActionsStateActivateFailed value)? activateFailed,
   }) {
     return markingAsRead?.call(this);
   }
@@ -1799,36 +1684,33 @@ class _$DetailsActionsStateMarkingAsRead
 
 abstract class DetailsActionsStateMarkingAsRead implements DetailsActionsState {
   const factory DetailsActionsStateMarkingAsRead() =
-      _$DetailsActionsStateMarkingAsRead;
+      _$DetailsActionsStateMarkingAsReadImpl;
 }
 
 /// @nodoc
-abstract class $DetailsActionsStateMarkAsReadSuccessCopyWith<$Res> {
-  factory $DetailsActionsStateMarkAsReadSuccessCopyWith(
-          DetailsActionsStateMarkAsReadSuccess value,
-          $Res Function(DetailsActionsStateMarkAsReadSuccess) then) =
-      _$DetailsActionsStateMarkAsReadSuccessCopyWithImpl<$Res>;
+abstract class _$$DetailsActionsStateMarkAsReadSuccessImplCopyWith<$Res> {
+  factory _$$DetailsActionsStateMarkAsReadSuccessImplCopyWith(
+          _$DetailsActionsStateMarkAsReadSuccessImpl value,
+          $Res Function(_$DetailsActionsStateMarkAsReadSuccessImpl) then) =
+      __$$DetailsActionsStateMarkAsReadSuccessImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$DetailsActionsStateMarkAsReadSuccessCopyWithImpl<$Res>
-    extends _$DetailsActionsStateCopyWithImpl<$Res>
-    implements $DetailsActionsStateMarkAsReadSuccessCopyWith<$Res> {
-  _$DetailsActionsStateMarkAsReadSuccessCopyWithImpl(
-      DetailsActionsStateMarkAsReadSuccess _value,
-      $Res Function(DetailsActionsStateMarkAsReadSuccess) _then)
-      : super(_value, (v) => _then(v as DetailsActionsStateMarkAsReadSuccess));
-
-  @override
-  DetailsActionsStateMarkAsReadSuccess get _value =>
-      super._value as DetailsActionsStateMarkAsReadSuccess;
+class __$$DetailsActionsStateMarkAsReadSuccessImplCopyWithImpl<$Res>
+    extends _$DetailsActionsStateCopyWithImpl<$Res,
+        _$DetailsActionsStateMarkAsReadSuccessImpl>
+    implements _$$DetailsActionsStateMarkAsReadSuccessImplCopyWith<$Res> {
+  __$$DetailsActionsStateMarkAsReadSuccessImplCopyWithImpl(
+      _$DetailsActionsStateMarkAsReadSuccessImpl _value,
+      $Res Function(_$DetailsActionsStateMarkAsReadSuccessImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$DetailsActionsStateMarkAsReadSuccess
+class _$DetailsActionsStateMarkAsReadSuccessImpl
     implements DetailsActionsStateMarkAsReadSuccess {
-  const _$DetailsActionsStateMarkAsReadSuccess();
+  const _$DetailsActionsStateMarkAsReadSuccessImpl();
 
   @override
   String toString() {
@@ -1836,9 +1718,10 @@ class _$DetailsActionsStateMarkAsReadSuccess
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is DetailsActionsStateMarkAsReadSuccess);
+        (other.runtimeType == runtimeType &&
+            other is _$DetailsActionsStateMarkAsReadSuccessImpl);
   }
 
   @override
@@ -1878,30 +1761,30 @@ class _$DetailsActionsStateMarkAsReadSuccess
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? deleting,
-    TResult Function()? deleteSuccess,
-    TResult Function(StorageError error)? deleteFailed,
-    TResult Function()? markingAsRead,
-    TResult Function()? markAsReadSuccess,
-    TResult Function(StorageError error)? markAsReadFailed,
-    TResult Function()? movingToActive,
-    TResult Function()? moveToActiveSuccess,
-    TResult Function(StorageError error)? moveToActiveFailed,
-    TResult Function()? movingToArchive,
-    TResult Function()? moveToArchiveSuccess,
-    TResult Function(StorageError error)? moveToArchiveFailed,
-    TResult Function()? refreshing,
-    TResult Function()? refreshSuccess,
-    TResult Function(StorageError error)? refreshFailed,
-    TResult Function(Duration remainingTime)? refreshFreqLimited,
-    TResult Function()? sharingString,
-    TResult Function(String text)? shareStringSuccess,
-    TResult Function()? copyingTrack,
-    TResult Function(String trackNumber)? copyTrackSuccess,
-    TResult Function()? activating,
-    TResult Function()? activateSuccess,
-    TResult Function(StorageError error)? activateFailed,
+    TResult? Function()? initial,
+    TResult? Function()? deleting,
+    TResult? Function()? deleteSuccess,
+    TResult? Function(StorageError error)? deleteFailed,
+    TResult? Function()? markingAsRead,
+    TResult? Function()? markAsReadSuccess,
+    TResult? Function(StorageError error)? markAsReadFailed,
+    TResult? Function()? movingToActive,
+    TResult? Function()? moveToActiveSuccess,
+    TResult? Function(StorageError error)? moveToActiveFailed,
+    TResult? Function()? movingToArchive,
+    TResult? Function()? moveToArchiveSuccess,
+    TResult? Function(StorageError error)? moveToArchiveFailed,
+    TResult? Function()? refreshing,
+    TResult? Function()? refreshSuccess,
+    TResult? Function(StorageError error)? refreshFailed,
+    TResult? Function(Duration remainingTime)? refreshFreqLimited,
+    TResult? Function()? sharingString,
+    TResult? Function(String text)? shareStringSuccess,
+    TResult? Function()? copyingTrack,
+    TResult? Function(String trackNumber)? copyTrackSuccess,
+    TResult? Function()? activating,
+    TResult? Function()? activateSuccess,
+    TResult? Function(StorageError error)? activateFailed,
   }) {
     return markAsReadSuccess?.call();
   }
@@ -1995,39 +1878,41 @@ class _$DetailsActionsStateMarkAsReadSuccess
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(DetailsActionsStateInitial value)? initial,
-    TResult Function(DetailsActionsStateDeleting value)? deleting,
-    TResult Function(DetailsActionsStateDeleteSuccess value)? deleteSuccess,
-    TResult Function(DetailsActionsStateDeleteFailed value)? deleteFailed,
-    TResult Function(DetailsActionsStateMarkingAsRead value)? markingAsRead,
-    TResult Function(DetailsActionsStateMarkAsReadSuccess value)?
+    TResult? Function(DetailsActionsStateInitial value)? initial,
+    TResult? Function(DetailsActionsStateDeleting value)? deleting,
+    TResult? Function(DetailsActionsStateDeleteSuccess value)? deleteSuccess,
+    TResult? Function(DetailsActionsStateDeleteFailed value)? deleteFailed,
+    TResult? Function(DetailsActionsStateMarkingAsRead value)? markingAsRead,
+    TResult? Function(DetailsActionsStateMarkAsReadSuccess value)?
         markAsReadSuccess,
-    TResult Function(DetailsActionsStateMarkAsReadFailed value)?
+    TResult? Function(DetailsActionsStateMarkAsReadFailed value)?
         markAsReadFailed,
-    TResult Function(DetailsActionsStateMovingToActive value)? movingToActive,
-    TResult Function(DetailsActionsStateMoveToActiveSuccess value)?
+    TResult? Function(DetailsActionsStateMovingToActive value)? movingToActive,
+    TResult? Function(DetailsActionsStateMoveToActiveSuccess value)?
         moveToActiveSuccess,
-    TResult Function(DetailsActionsStateMoveToActiveFailed value)?
+    TResult? Function(DetailsActionsStateMoveToActiveFailed value)?
         moveToActiveFailed,
-    TResult Function(DetailsActionsStateMovingToArchive value)? movingToArchive,
-    TResult Function(DetailsActionsStateMoveToArchiveSuccess value)?
+    TResult? Function(DetailsActionsStateMovingToArchive value)?
+        movingToArchive,
+    TResult? Function(DetailsActionsStateMoveToArchiveSuccess value)?
         moveToArchiveSuccess,
-    TResult Function(DetailsActionsStateMoveToArchiveFailed value)?
+    TResult? Function(DetailsActionsStateMoveToArchiveFailed value)?
         moveToArchiveFailed,
-    TResult Function(DetailsActionsStateRefreshing value)? refreshing,
-    TResult Function(DetailsActionsStateRefreshSuccess value)? refreshSuccess,
-    TResult Function(DetailsActionsStateRefreshFailed value)? refreshFailed,
-    TResult Function(DetailsActionsStateRefreshFreqLimited value)?
+    TResult? Function(DetailsActionsStateRefreshing value)? refreshing,
+    TResult? Function(DetailsActionsStateRefreshSuccess value)? refreshSuccess,
+    TResult? Function(DetailsActionsStateRefreshFailed value)? refreshFailed,
+    TResult? Function(DetailsActionsStateRefreshFreqLimited value)?
         refreshFreqLimited,
-    TResult Function(DetailsActionsStateSharingString value)? sharingString,
-    TResult Function(DetailsActionsStateShareStringSuccess value)?
+    TResult? Function(DetailsActionsStateSharingString value)? sharingString,
+    TResult? Function(DetailsActionsStateShareStringSuccess value)?
         shareStringSuccess,
-    TResult Function(DetailsActionsStateCopyingTrack value)? copyingTrack,
-    TResult Function(DetailsActionsStateCopyTrackSuccess value)?
+    TResult? Function(DetailsActionsStateCopyingTrack value)? copyingTrack,
+    TResult? Function(DetailsActionsStateCopyTrackSuccess value)?
         copyTrackSuccess,
-    TResult Function(DetailsActionsStateActivating value)? activating,
-    TResult Function(DetailsActionsStateActivateSuccess value)? activateSuccess,
-    TResult Function(DetailsActionsStateActivateFailed value)? activateFailed,
+    TResult? Function(DetailsActionsStateActivating value)? activating,
+    TResult? Function(DetailsActionsStateActivateSuccess value)?
+        activateSuccess,
+    TResult? Function(DetailsActionsStateActivateFailed value)? activateFailed,
   }) {
     return markAsReadSuccess?.call(this);
   }
@@ -2080,39 +1965,38 @@ class _$DetailsActionsStateMarkAsReadSuccess
 abstract class DetailsActionsStateMarkAsReadSuccess
     implements DetailsActionsState {
   const factory DetailsActionsStateMarkAsReadSuccess() =
-      _$DetailsActionsStateMarkAsReadSuccess;
+      _$DetailsActionsStateMarkAsReadSuccessImpl;
 }
 
 /// @nodoc
-abstract class $DetailsActionsStateMarkAsReadFailedCopyWith<$Res> {
-  factory $DetailsActionsStateMarkAsReadFailedCopyWith(
-          DetailsActionsStateMarkAsReadFailed value,
-          $Res Function(DetailsActionsStateMarkAsReadFailed) then) =
-      _$DetailsActionsStateMarkAsReadFailedCopyWithImpl<$Res>;
+abstract class _$$DetailsActionsStateMarkAsReadFailedImplCopyWith<$Res> {
+  factory _$$DetailsActionsStateMarkAsReadFailedImplCopyWith(
+          _$DetailsActionsStateMarkAsReadFailedImpl value,
+          $Res Function(_$DetailsActionsStateMarkAsReadFailedImpl) then) =
+      __$$DetailsActionsStateMarkAsReadFailedImplCopyWithImpl<$Res>;
+  @useResult
   $Res call({StorageError error});
 
   $StorageErrorCopyWith<$Res> get error;
 }
 
 /// @nodoc
-class _$DetailsActionsStateMarkAsReadFailedCopyWithImpl<$Res>
-    extends _$DetailsActionsStateCopyWithImpl<$Res>
-    implements $DetailsActionsStateMarkAsReadFailedCopyWith<$Res> {
-  _$DetailsActionsStateMarkAsReadFailedCopyWithImpl(
-      DetailsActionsStateMarkAsReadFailed _value,
-      $Res Function(DetailsActionsStateMarkAsReadFailed) _then)
-      : super(_value, (v) => _then(v as DetailsActionsStateMarkAsReadFailed));
+class __$$DetailsActionsStateMarkAsReadFailedImplCopyWithImpl<$Res>
+    extends _$DetailsActionsStateCopyWithImpl<$Res,
+        _$DetailsActionsStateMarkAsReadFailedImpl>
+    implements _$$DetailsActionsStateMarkAsReadFailedImplCopyWith<$Res> {
+  __$$DetailsActionsStateMarkAsReadFailedImplCopyWithImpl(
+      _$DetailsActionsStateMarkAsReadFailedImpl _value,
+      $Res Function(_$DetailsActionsStateMarkAsReadFailedImpl) _then)
+      : super(_value, _then);
 
-  @override
-  DetailsActionsStateMarkAsReadFailed get _value =>
-      super._value as DetailsActionsStateMarkAsReadFailed;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? error = freezed,
+    Object? error = null,
   }) {
-    return _then(DetailsActionsStateMarkAsReadFailed(
-      error: error == freezed
+    return _then(_$DetailsActionsStateMarkAsReadFailedImpl(
+      error: null == error
           ? _value.error
           : error // ignore: cast_nullable_to_non_nullable
               as StorageError,
@@ -2120,6 +2004,7 @@ class _$DetailsActionsStateMarkAsReadFailedCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $StorageErrorCopyWith<$Res> get error {
     return $StorageErrorCopyWith<$Res>(_value.error, (value) {
       return _then(_value.copyWith(error: value));
@@ -2129,9 +2014,9 @@ class _$DetailsActionsStateMarkAsReadFailedCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$DetailsActionsStateMarkAsReadFailed
+class _$DetailsActionsStateMarkAsReadFailedImpl
     implements DetailsActionsStateMarkAsReadFailed {
-  const _$DetailsActionsStateMarkAsReadFailed({required this.error});
+  const _$DetailsActionsStateMarkAsReadFailedImpl({required this.error});
 
   @override
   final StorageError error;
@@ -2142,23 +2027,23 @@ class _$DetailsActionsStateMarkAsReadFailed
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is DetailsActionsStateMarkAsReadFailed &&
-            (identical(other.error, error) ||
-                const DeepCollectionEquality().equals(other.error, error)));
+        (other.runtimeType == runtimeType &&
+            other is _$DetailsActionsStateMarkAsReadFailedImpl &&
+            (identical(other.error, error) || other.error == error));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(error);
+  int get hashCode => Object.hash(runtimeType, error);
 
   @JsonKey(ignore: true)
   @override
-  $DetailsActionsStateMarkAsReadFailedCopyWith<
-          DetailsActionsStateMarkAsReadFailed>
-      get copyWith => _$DetailsActionsStateMarkAsReadFailedCopyWithImpl<
-          DetailsActionsStateMarkAsReadFailed>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$DetailsActionsStateMarkAsReadFailedImplCopyWith<
+          _$DetailsActionsStateMarkAsReadFailedImpl>
+      get copyWith => __$$DetailsActionsStateMarkAsReadFailedImplCopyWithImpl<
+          _$DetailsActionsStateMarkAsReadFailedImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -2194,30 +2079,30 @@ class _$DetailsActionsStateMarkAsReadFailed
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? deleting,
-    TResult Function()? deleteSuccess,
-    TResult Function(StorageError error)? deleteFailed,
-    TResult Function()? markingAsRead,
-    TResult Function()? markAsReadSuccess,
-    TResult Function(StorageError error)? markAsReadFailed,
-    TResult Function()? movingToActive,
-    TResult Function()? moveToActiveSuccess,
-    TResult Function(StorageError error)? moveToActiveFailed,
-    TResult Function()? movingToArchive,
-    TResult Function()? moveToArchiveSuccess,
-    TResult Function(StorageError error)? moveToArchiveFailed,
-    TResult Function()? refreshing,
-    TResult Function()? refreshSuccess,
-    TResult Function(StorageError error)? refreshFailed,
-    TResult Function(Duration remainingTime)? refreshFreqLimited,
-    TResult Function()? sharingString,
-    TResult Function(String text)? shareStringSuccess,
-    TResult Function()? copyingTrack,
-    TResult Function(String trackNumber)? copyTrackSuccess,
-    TResult Function()? activating,
-    TResult Function()? activateSuccess,
-    TResult Function(StorageError error)? activateFailed,
+    TResult? Function()? initial,
+    TResult? Function()? deleting,
+    TResult? Function()? deleteSuccess,
+    TResult? Function(StorageError error)? deleteFailed,
+    TResult? Function()? markingAsRead,
+    TResult? Function()? markAsReadSuccess,
+    TResult? Function(StorageError error)? markAsReadFailed,
+    TResult? Function()? movingToActive,
+    TResult? Function()? moveToActiveSuccess,
+    TResult? Function(StorageError error)? moveToActiveFailed,
+    TResult? Function()? movingToArchive,
+    TResult? Function()? moveToArchiveSuccess,
+    TResult? Function(StorageError error)? moveToArchiveFailed,
+    TResult? Function()? refreshing,
+    TResult? Function()? refreshSuccess,
+    TResult? Function(StorageError error)? refreshFailed,
+    TResult? Function(Duration remainingTime)? refreshFreqLimited,
+    TResult? Function()? sharingString,
+    TResult? Function(String text)? shareStringSuccess,
+    TResult? Function()? copyingTrack,
+    TResult? Function(String trackNumber)? copyTrackSuccess,
+    TResult? Function()? activating,
+    TResult? Function()? activateSuccess,
+    TResult? Function(StorageError error)? activateFailed,
   }) {
     return markAsReadFailed?.call(error);
   }
@@ -2311,39 +2196,41 @@ class _$DetailsActionsStateMarkAsReadFailed
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(DetailsActionsStateInitial value)? initial,
-    TResult Function(DetailsActionsStateDeleting value)? deleting,
-    TResult Function(DetailsActionsStateDeleteSuccess value)? deleteSuccess,
-    TResult Function(DetailsActionsStateDeleteFailed value)? deleteFailed,
-    TResult Function(DetailsActionsStateMarkingAsRead value)? markingAsRead,
-    TResult Function(DetailsActionsStateMarkAsReadSuccess value)?
+    TResult? Function(DetailsActionsStateInitial value)? initial,
+    TResult? Function(DetailsActionsStateDeleting value)? deleting,
+    TResult? Function(DetailsActionsStateDeleteSuccess value)? deleteSuccess,
+    TResult? Function(DetailsActionsStateDeleteFailed value)? deleteFailed,
+    TResult? Function(DetailsActionsStateMarkingAsRead value)? markingAsRead,
+    TResult? Function(DetailsActionsStateMarkAsReadSuccess value)?
         markAsReadSuccess,
-    TResult Function(DetailsActionsStateMarkAsReadFailed value)?
+    TResult? Function(DetailsActionsStateMarkAsReadFailed value)?
         markAsReadFailed,
-    TResult Function(DetailsActionsStateMovingToActive value)? movingToActive,
-    TResult Function(DetailsActionsStateMoveToActiveSuccess value)?
+    TResult? Function(DetailsActionsStateMovingToActive value)? movingToActive,
+    TResult? Function(DetailsActionsStateMoveToActiveSuccess value)?
         moveToActiveSuccess,
-    TResult Function(DetailsActionsStateMoveToActiveFailed value)?
+    TResult? Function(DetailsActionsStateMoveToActiveFailed value)?
         moveToActiveFailed,
-    TResult Function(DetailsActionsStateMovingToArchive value)? movingToArchive,
-    TResult Function(DetailsActionsStateMoveToArchiveSuccess value)?
+    TResult? Function(DetailsActionsStateMovingToArchive value)?
+        movingToArchive,
+    TResult? Function(DetailsActionsStateMoveToArchiveSuccess value)?
         moveToArchiveSuccess,
-    TResult Function(DetailsActionsStateMoveToArchiveFailed value)?
+    TResult? Function(DetailsActionsStateMoveToArchiveFailed value)?
         moveToArchiveFailed,
-    TResult Function(DetailsActionsStateRefreshing value)? refreshing,
-    TResult Function(DetailsActionsStateRefreshSuccess value)? refreshSuccess,
-    TResult Function(DetailsActionsStateRefreshFailed value)? refreshFailed,
-    TResult Function(DetailsActionsStateRefreshFreqLimited value)?
+    TResult? Function(DetailsActionsStateRefreshing value)? refreshing,
+    TResult? Function(DetailsActionsStateRefreshSuccess value)? refreshSuccess,
+    TResult? Function(DetailsActionsStateRefreshFailed value)? refreshFailed,
+    TResult? Function(DetailsActionsStateRefreshFreqLimited value)?
         refreshFreqLimited,
-    TResult Function(DetailsActionsStateSharingString value)? sharingString,
-    TResult Function(DetailsActionsStateShareStringSuccess value)?
+    TResult? Function(DetailsActionsStateSharingString value)? sharingString,
+    TResult? Function(DetailsActionsStateShareStringSuccess value)?
         shareStringSuccess,
-    TResult Function(DetailsActionsStateCopyingTrack value)? copyingTrack,
-    TResult Function(DetailsActionsStateCopyTrackSuccess value)?
+    TResult? Function(DetailsActionsStateCopyingTrack value)? copyingTrack,
+    TResult? Function(DetailsActionsStateCopyTrackSuccess value)?
         copyTrackSuccess,
-    TResult Function(DetailsActionsStateActivating value)? activating,
-    TResult Function(DetailsActionsStateActivateSuccess value)? activateSuccess,
-    TResult Function(DetailsActionsStateActivateFailed value)? activateFailed,
+    TResult? Function(DetailsActionsStateActivating value)? activating,
+    TResult? Function(DetailsActionsStateActivateSuccess value)?
+        activateSuccess,
+    TResult? Function(DetailsActionsStateActivateFailed value)? activateFailed,
   }) {
     return markAsReadFailed?.call(this);
   }
@@ -2396,42 +2283,40 @@ class _$DetailsActionsStateMarkAsReadFailed
 abstract class DetailsActionsStateMarkAsReadFailed
     implements DetailsActionsState {
   const factory DetailsActionsStateMarkAsReadFailed(
-      {required StorageError error}) = _$DetailsActionsStateMarkAsReadFailed;
+          {required final StorageError error}) =
+      _$DetailsActionsStateMarkAsReadFailedImpl;
 
-  StorageError get error => throw _privateConstructorUsedError;
+  StorageError get error;
   @JsonKey(ignore: true)
-  $DetailsActionsStateMarkAsReadFailedCopyWith<
-          DetailsActionsStateMarkAsReadFailed>
+  _$$DetailsActionsStateMarkAsReadFailedImplCopyWith<
+          _$DetailsActionsStateMarkAsReadFailedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $DetailsActionsStateMovingToActiveCopyWith<$Res> {
-  factory $DetailsActionsStateMovingToActiveCopyWith(
-          DetailsActionsStateMovingToActive value,
-          $Res Function(DetailsActionsStateMovingToActive) then) =
-      _$DetailsActionsStateMovingToActiveCopyWithImpl<$Res>;
+abstract class _$$DetailsActionsStateMovingToActiveImplCopyWith<$Res> {
+  factory _$$DetailsActionsStateMovingToActiveImplCopyWith(
+          _$DetailsActionsStateMovingToActiveImpl value,
+          $Res Function(_$DetailsActionsStateMovingToActiveImpl) then) =
+      __$$DetailsActionsStateMovingToActiveImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$DetailsActionsStateMovingToActiveCopyWithImpl<$Res>
-    extends _$DetailsActionsStateCopyWithImpl<$Res>
-    implements $DetailsActionsStateMovingToActiveCopyWith<$Res> {
-  _$DetailsActionsStateMovingToActiveCopyWithImpl(
-      DetailsActionsStateMovingToActive _value,
-      $Res Function(DetailsActionsStateMovingToActive) _then)
-      : super(_value, (v) => _then(v as DetailsActionsStateMovingToActive));
-
-  @override
-  DetailsActionsStateMovingToActive get _value =>
-      super._value as DetailsActionsStateMovingToActive;
+class __$$DetailsActionsStateMovingToActiveImplCopyWithImpl<$Res>
+    extends _$DetailsActionsStateCopyWithImpl<$Res,
+        _$DetailsActionsStateMovingToActiveImpl>
+    implements _$$DetailsActionsStateMovingToActiveImplCopyWith<$Res> {
+  __$$DetailsActionsStateMovingToActiveImplCopyWithImpl(
+      _$DetailsActionsStateMovingToActiveImpl _value,
+      $Res Function(_$DetailsActionsStateMovingToActiveImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$DetailsActionsStateMovingToActive
+class _$DetailsActionsStateMovingToActiveImpl
     implements DetailsActionsStateMovingToActive {
-  const _$DetailsActionsStateMovingToActive();
+  const _$DetailsActionsStateMovingToActiveImpl();
 
   @override
   String toString() {
@@ -2439,9 +2324,10 @@ class _$DetailsActionsStateMovingToActive
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is DetailsActionsStateMovingToActive);
+        (other.runtimeType == runtimeType &&
+            other is _$DetailsActionsStateMovingToActiveImpl);
   }
 
   @override
@@ -2481,30 +2367,30 @@ class _$DetailsActionsStateMovingToActive
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? deleting,
-    TResult Function()? deleteSuccess,
-    TResult Function(StorageError error)? deleteFailed,
-    TResult Function()? markingAsRead,
-    TResult Function()? markAsReadSuccess,
-    TResult Function(StorageError error)? markAsReadFailed,
-    TResult Function()? movingToActive,
-    TResult Function()? moveToActiveSuccess,
-    TResult Function(StorageError error)? moveToActiveFailed,
-    TResult Function()? movingToArchive,
-    TResult Function()? moveToArchiveSuccess,
-    TResult Function(StorageError error)? moveToArchiveFailed,
-    TResult Function()? refreshing,
-    TResult Function()? refreshSuccess,
-    TResult Function(StorageError error)? refreshFailed,
-    TResult Function(Duration remainingTime)? refreshFreqLimited,
-    TResult Function()? sharingString,
-    TResult Function(String text)? shareStringSuccess,
-    TResult Function()? copyingTrack,
-    TResult Function(String trackNumber)? copyTrackSuccess,
-    TResult Function()? activating,
-    TResult Function()? activateSuccess,
-    TResult Function(StorageError error)? activateFailed,
+    TResult? Function()? initial,
+    TResult? Function()? deleting,
+    TResult? Function()? deleteSuccess,
+    TResult? Function(StorageError error)? deleteFailed,
+    TResult? Function()? markingAsRead,
+    TResult? Function()? markAsReadSuccess,
+    TResult? Function(StorageError error)? markAsReadFailed,
+    TResult? Function()? movingToActive,
+    TResult? Function()? moveToActiveSuccess,
+    TResult? Function(StorageError error)? moveToActiveFailed,
+    TResult? Function()? movingToArchive,
+    TResult? Function()? moveToArchiveSuccess,
+    TResult? Function(StorageError error)? moveToArchiveFailed,
+    TResult? Function()? refreshing,
+    TResult? Function()? refreshSuccess,
+    TResult? Function(StorageError error)? refreshFailed,
+    TResult? Function(Duration remainingTime)? refreshFreqLimited,
+    TResult? Function()? sharingString,
+    TResult? Function(String text)? shareStringSuccess,
+    TResult? Function()? copyingTrack,
+    TResult? Function(String trackNumber)? copyTrackSuccess,
+    TResult? Function()? activating,
+    TResult? Function()? activateSuccess,
+    TResult? Function(StorageError error)? activateFailed,
   }) {
     return movingToActive?.call();
   }
@@ -2598,39 +2484,41 @@ class _$DetailsActionsStateMovingToActive
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(DetailsActionsStateInitial value)? initial,
-    TResult Function(DetailsActionsStateDeleting value)? deleting,
-    TResult Function(DetailsActionsStateDeleteSuccess value)? deleteSuccess,
-    TResult Function(DetailsActionsStateDeleteFailed value)? deleteFailed,
-    TResult Function(DetailsActionsStateMarkingAsRead value)? markingAsRead,
-    TResult Function(DetailsActionsStateMarkAsReadSuccess value)?
+    TResult? Function(DetailsActionsStateInitial value)? initial,
+    TResult? Function(DetailsActionsStateDeleting value)? deleting,
+    TResult? Function(DetailsActionsStateDeleteSuccess value)? deleteSuccess,
+    TResult? Function(DetailsActionsStateDeleteFailed value)? deleteFailed,
+    TResult? Function(DetailsActionsStateMarkingAsRead value)? markingAsRead,
+    TResult? Function(DetailsActionsStateMarkAsReadSuccess value)?
         markAsReadSuccess,
-    TResult Function(DetailsActionsStateMarkAsReadFailed value)?
+    TResult? Function(DetailsActionsStateMarkAsReadFailed value)?
         markAsReadFailed,
-    TResult Function(DetailsActionsStateMovingToActive value)? movingToActive,
-    TResult Function(DetailsActionsStateMoveToActiveSuccess value)?
+    TResult? Function(DetailsActionsStateMovingToActive value)? movingToActive,
+    TResult? Function(DetailsActionsStateMoveToActiveSuccess value)?
         moveToActiveSuccess,
-    TResult Function(DetailsActionsStateMoveToActiveFailed value)?
+    TResult? Function(DetailsActionsStateMoveToActiveFailed value)?
         moveToActiveFailed,
-    TResult Function(DetailsActionsStateMovingToArchive value)? movingToArchive,
-    TResult Function(DetailsActionsStateMoveToArchiveSuccess value)?
+    TResult? Function(DetailsActionsStateMovingToArchive value)?
+        movingToArchive,
+    TResult? Function(DetailsActionsStateMoveToArchiveSuccess value)?
         moveToArchiveSuccess,
-    TResult Function(DetailsActionsStateMoveToArchiveFailed value)?
+    TResult? Function(DetailsActionsStateMoveToArchiveFailed value)?
         moveToArchiveFailed,
-    TResult Function(DetailsActionsStateRefreshing value)? refreshing,
-    TResult Function(DetailsActionsStateRefreshSuccess value)? refreshSuccess,
-    TResult Function(DetailsActionsStateRefreshFailed value)? refreshFailed,
-    TResult Function(DetailsActionsStateRefreshFreqLimited value)?
+    TResult? Function(DetailsActionsStateRefreshing value)? refreshing,
+    TResult? Function(DetailsActionsStateRefreshSuccess value)? refreshSuccess,
+    TResult? Function(DetailsActionsStateRefreshFailed value)? refreshFailed,
+    TResult? Function(DetailsActionsStateRefreshFreqLimited value)?
         refreshFreqLimited,
-    TResult Function(DetailsActionsStateSharingString value)? sharingString,
-    TResult Function(DetailsActionsStateShareStringSuccess value)?
+    TResult? Function(DetailsActionsStateSharingString value)? sharingString,
+    TResult? Function(DetailsActionsStateShareStringSuccess value)?
         shareStringSuccess,
-    TResult Function(DetailsActionsStateCopyingTrack value)? copyingTrack,
-    TResult Function(DetailsActionsStateCopyTrackSuccess value)?
+    TResult? Function(DetailsActionsStateCopyingTrack value)? copyingTrack,
+    TResult? Function(DetailsActionsStateCopyTrackSuccess value)?
         copyTrackSuccess,
-    TResult Function(DetailsActionsStateActivating value)? activating,
-    TResult Function(DetailsActionsStateActivateSuccess value)? activateSuccess,
-    TResult Function(DetailsActionsStateActivateFailed value)? activateFailed,
+    TResult? Function(DetailsActionsStateActivating value)? activating,
+    TResult? Function(DetailsActionsStateActivateSuccess value)?
+        activateSuccess,
+    TResult? Function(DetailsActionsStateActivateFailed value)? activateFailed,
   }) {
     return movingToActive?.call(this);
   }
@@ -2683,37 +2571,33 @@ class _$DetailsActionsStateMovingToActive
 abstract class DetailsActionsStateMovingToActive
     implements DetailsActionsState {
   const factory DetailsActionsStateMovingToActive() =
-      _$DetailsActionsStateMovingToActive;
+      _$DetailsActionsStateMovingToActiveImpl;
 }
 
 /// @nodoc
-abstract class $DetailsActionsStateMoveToActiveSuccessCopyWith<$Res> {
-  factory $DetailsActionsStateMoveToActiveSuccessCopyWith(
-          DetailsActionsStateMoveToActiveSuccess value,
-          $Res Function(DetailsActionsStateMoveToActiveSuccess) then) =
-      _$DetailsActionsStateMoveToActiveSuccessCopyWithImpl<$Res>;
+abstract class _$$DetailsActionsStateMoveToActiveSuccessImplCopyWith<$Res> {
+  factory _$$DetailsActionsStateMoveToActiveSuccessImplCopyWith(
+          _$DetailsActionsStateMoveToActiveSuccessImpl value,
+          $Res Function(_$DetailsActionsStateMoveToActiveSuccessImpl) then) =
+      __$$DetailsActionsStateMoveToActiveSuccessImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$DetailsActionsStateMoveToActiveSuccessCopyWithImpl<$Res>
-    extends _$DetailsActionsStateCopyWithImpl<$Res>
-    implements $DetailsActionsStateMoveToActiveSuccessCopyWith<$Res> {
-  _$DetailsActionsStateMoveToActiveSuccessCopyWithImpl(
-      DetailsActionsStateMoveToActiveSuccess _value,
-      $Res Function(DetailsActionsStateMoveToActiveSuccess) _then)
-      : super(
-            _value, (v) => _then(v as DetailsActionsStateMoveToActiveSuccess));
-
-  @override
-  DetailsActionsStateMoveToActiveSuccess get _value =>
-      super._value as DetailsActionsStateMoveToActiveSuccess;
+class __$$DetailsActionsStateMoveToActiveSuccessImplCopyWithImpl<$Res>
+    extends _$DetailsActionsStateCopyWithImpl<$Res,
+        _$DetailsActionsStateMoveToActiveSuccessImpl>
+    implements _$$DetailsActionsStateMoveToActiveSuccessImplCopyWith<$Res> {
+  __$$DetailsActionsStateMoveToActiveSuccessImplCopyWithImpl(
+      _$DetailsActionsStateMoveToActiveSuccessImpl _value,
+      $Res Function(_$DetailsActionsStateMoveToActiveSuccessImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$DetailsActionsStateMoveToActiveSuccess
+class _$DetailsActionsStateMoveToActiveSuccessImpl
     implements DetailsActionsStateMoveToActiveSuccess {
-  const _$DetailsActionsStateMoveToActiveSuccess();
+  const _$DetailsActionsStateMoveToActiveSuccessImpl();
 
   @override
   String toString() {
@@ -2721,9 +2605,10 @@ class _$DetailsActionsStateMoveToActiveSuccess
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is DetailsActionsStateMoveToActiveSuccess);
+        (other.runtimeType == runtimeType &&
+            other is _$DetailsActionsStateMoveToActiveSuccessImpl);
   }
 
   @override
@@ -2763,30 +2648,30 @@ class _$DetailsActionsStateMoveToActiveSuccess
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? deleting,
-    TResult Function()? deleteSuccess,
-    TResult Function(StorageError error)? deleteFailed,
-    TResult Function()? markingAsRead,
-    TResult Function()? markAsReadSuccess,
-    TResult Function(StorageError error)? markAsReadFailed,
-    TResult Function()? movingToActive,
-    TResult Function()? moveToActiveSuccess,
-    TResult Function(StorageError error)? moveToActiveFailed,
-    TResult Function()? movingToArchive,
-    TResult Function()? moveToArchiveSuccess,
-    TResult Function(StorageError error)? moveToArchiveFailed,
-    TResult Function()? refreshing,
-    TResult Function()? refreshSuccess,
-    TResult Function(StorageError error)? refreshFailed,
-    TResult Function(Duration remainingTime)? refreshFreqLimited,
-    TResult Function()? sharingString,
-    TResult Function(String text)? shareStringSuccess,
-    TResult Function()? copyingTrack,
-    TResult Function(String trackNumber)? copyTrackSuccess,
-    TResult Function()? activating,
-    TResult Function()? activateSuccess,
-    TResult Function(StorageError error)? activateFailed,
+    TResult? Function()? initial,
+    TResult? Function()? deleting,
+    TResult? Function()? deleteSuccess,
+    TResult? Function(StorageError error)? deleteFailed,
+    TResult? Function()? markingAsRead,
+    TResult? Function()? markAsReadSuccess,
+    TResult? Function(StorageError error)? markAsReadFailed,
+    TResult? Function()? movingToActive,
+    TResult? Function()? moveToActiveSuccess,
+    TResult? Function(StorageError error)? moveToActiveFailed,
+    TResult? Function()? movingToArchive,
+    TResult? Function()? moveToArchiveSuccess,
+    TResult? Function(StorageError error)? moveToArchiveFailed,
+    TResult? Function()? refreshing,
+    TResult? Function()? refreshSuccess,
+    TResult? Function(StorageError error)? refreshFailed,
+    TResult? Function(Duration remainingTime)? refreshFreqLimited,
+    TResult? Function()? sharingString,
+    TResult? Function(String text)? shareStringSuccess,
+    TResult? Function()? copyingTrack,
+    TResult? Function(String trackNumber)? copyTrackSuccess,
+    TResult? Function()? activating,
+    TResult? Function()? activateSuccess,
+    TResult? Function(StorageError error)? activateFailed,
   }) {
     return moveToActiveSuccess?.call();
   }
@@ -2880,39 +2765,41 @@ class _$DetailsActionsStateMoveToActiveSuccess
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(DetailsActionsStateInitial value)? initial,
-    TResult Function(DetailsActionsStateDeleting value)? deleting,
-    TResult Function(DetailsActionsStateDeleteSuccess value)? deleteSuccess,
-    TResult Function(DetailsActionsStateDeleteFailed value)? deleteFailed,
-    TResult Function(DetailsActionsStateMarkingAsRead value)? markingAsRead,
-    TResult Function(DetailsActionsStateMarkAsReadSuccess value)?
+    TResult? Function(DetailsActionsStateInitial value)? initial,
+    TResult? Function(DetailsActionsStateDeleting value)? deleting,
+    TResult? Function(DetailsActionsStateDeleteSuccess value)? deleteSuccess,
+    TResult? Function(DetailsActionsStateDeleteFailed value)? deleteFailed,
+    TResult? Function(DetailsActionsStateMarkingAsRead value)? markingAsRead,
+    TResult? Function(DetailsActionsStateMarkAsReadSuccess value)?
         markAsReadSuccess,
-    TResult Function(DetailsActionsStateMarkAsReadFailed value)?
+    TResult? Function(DetailsActionsStateMarkAsReadFailed value)?
         markAsReadFailed,
-    TResult Function(DetailsActionsStateMovingToActive value)? movingToActive,
-    TResult Function(DetailsActionsStateMoveToActiveSuccess value)?
+    TResult? Function(DetailsActionsStateMovingToActive value)? movingToActive,
+    TResult? Function(DetailsActionsStateMoveToActiveSuccess value)?
         moveToActiveSuccess,
-    TResult Function(DetailsActionsStateMoveToActiveFailed value)?
+    TResult? Function(DetailsActionsStateMoveToActiveFailed value)?
         moveToActiveFailed,
-    TResult Function(DetailsActionsStateMovingToArchive value)? movingToArchive,
-    TResult Function(DetailsActionsStateMoveToArchiveSuccess value)?
+    TResult? Function(DetailsActionsStateMovingToArchive value)?
+        movingToArchive,
+    TResult? Function(DetailsActionsStateMoveToArchiveSuccess value)?
         moveToArchiveSuccess,
-    TResult Function(DetailsActionsStateMoveToArchiveFailed value)?
+    TResult? Function(DetailsActionsStateMoveToArchiveFailed value)?
         moveToArchiveFailed,
-    TResult Function(DetailsActionsStateRefreshing value)? refreshing,
-    TResult Function(DetailsActionsStateRefreshSuccess value)? refreshSuccess,
-    TResult Function(DetailsActionsStateRefreshFailed value)? refreshFailed,
-    TResult Function(DetailsActionsStateRefreshFreqLimited value)?
+    TResult? Function(DetailsActionsStateRefreshing value)? refreshing,
+    TResult? Function(DetailsActionsStateRefreshSuccess value)? refreshSuccess,
+    TResult? Function(DetailsActionsStateRefreshFailed value)? refreshFailed,
+    TResult? Function(DetailsActionsStateRefreshFreqLimited value)?
         refreshFreqLimited,
-    TResult Function(DetailsActionsStateSharingString value)? sharingString,
-    TResult Function(DetailsActionsStateShareStringSuccess value)?
+    TResult? Function(DetailsActionsStateSharingString value)? sharingString,
+    TResult? Function(DetailsActionsStateShareStringSuccess value)?
         shareStringSuccess,
-    TResult Function(DetailsActionsStateCopyingTrack value)? copyingTrack,
-    TResult Function(DetailsActionsStateCopyTrackSuccess value)?
+    TResult? Function(DetailsActionsStateCopyingTrack value)? copyingTrack,
+    TResult? Function(DetailsActionsStateCopyTrackSuccess value)?
         copyTrackSuccess,
-    TResult Function(DetailsActionsStateActivating value)? activating,
-    TResult Function(DetailsActionsStateActivateSuccess value)? activateSuccess,
-    TResult Function(DetailsActionsStateActivateFailed value)? activateFailed,
+    TResult? Function(DetailsActionsStateActivating value)? activating,
+    TResult? Function(DetailsActionsStateActivateSuccess value)?
+        activateSuccess,
+    TResult? Function(DetailsActionsStateActivateFailed value)? activateFailed,
   }) {
     return moveToActiveSuccess?.call(this);
   }
@@ -2965,39 +2852,38 @@ class _$DetailsActionsStateMoveToActiveSuccess
 abstract class DetailsActionsStateMoveToActiveSuccess
     implements DetailsActionsState {
   const factory DetailsActionsStateMoveToActiveSuccess() =
-      _$DetailsActionsStateMoveToActiveSuccess;
+      _$DetailsActionsStateMoveToActiveSuccessImpl;
 }
 
 /// @nodoc
-abstract class $DetailsActionsStateMoveToActiveFailedCopyWith<$Res> {
-  factory $DetailsActionsStateMoveToActiveFailedCopyWith(
-          DetailsActionsStateMoveToActiveFailed value,
-          $Res Function(DetailsActionsStateMoveToActiveFailed) then) =
-      _$DetailsActionsStateMoveToActiveFailedCopyWithImpl<$Res>;
+abstract class _$$DetailsActionsStateMoveToActiveFailedImplCopyWith<$Res> {
+  factory _$$DetailsActionsStateMoveToActiveFailedImplCopyWith(
+          _$DetailsActionsStateMoveToActiveFailedImpl value,
+          $Res Function(_$DetailsActionsStateMoveToActiveFailedImpl) then) =
+      __$$DetailsActionsStateMoveToActiveFailedImplCopyWithImpl<$Res>;
+  @useResult
   $Res call({StorageError error});
 
   $StorageErrorCopyWith<$Res> get error;
 }
 
 /// @nodoc
-class _$DetailsActionsStateMoveToActiveFailedCopyWithImpl<$Res>
-    extends _$DetailsActionsStateCopyWithImpl<$Res>
-    implements $DetailsActionsStateMoveToActiveFailedCopyWith<$Res> {
-  _$DetailsActionsStateMoveToActiveFailedCopyWithImpl(
-      DetailsActionsStateMoveToActiveFailed _value,
-      $Res Function(DetailsActionsStateMoveToActiveFailed) _then)
-      : super(_value, (v) => _then(v as DetailsActionsStateMoveToActiveFailed));
+class __$$DetailsActionsStateMoveToActiveFailedImplCopyWithImpl<$Res>
+    extends _$DetailsActionsStateCopyWithImpl<$Res,
+        _$DetailsActionsStateMoveToActiveFailedImpl>
+    implements _$$DetailsActionsStateMoveToActiveFailedImplCopyWith<$Res> {
+  __$$DetailsActionsStateMoveToActiveFailedImplCopyWithImpl(
+      _$DetailsActionsStateMoveToActiveFailedImpl _value,
+      $Res Function(_$DetailsActionsStateMoveToActiveFailedImpl) _then)
+      : super(_value, _then);
 
-  @override
-  DetailsActionsStateMoveToActiveFailed get _value =>
-      super._value as DetailsActionsStateMoveToActiveFailed;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? error = freezed,
+    Object? error = null,
   }) {
-    return _then(DetailsActionsStateMoveToActiveFailed(
-      error: error == freezed
+    return _then(_$DetailsActionsStateMoveToActiveFailedImpl(
+      error: null == error
           ? _value.error
           : error // ignore: cast_nullable_to_non_nullable
               as StorageError,
@@ -3005,6 +2891,7 @@ class _$DetailsActionsStateMoveToActiveFailedCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $StorageErrorCopyWith<$Res> get error {
     return $StorageErrorCopyWith<$Res>(_value.error, (value) {
       return _then(_value.copyWith(error: value));
@@ -3014,9 +2901,9 @@ class _$DetailsActionsStateMoveToActiveFailedCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$DetailsActionsStateMoveToActiveFailed
+class _$DetailsActionsStateMoveToActiveFailedImpl
     implements DetailsActionsStateMoveToActiveFailed {
-  const _$DetailsActionsStateMoveToActiveFailed({required this.error});
+  const _$DetailsActionsStateMoveToActiveFailedImpl({required this.error});
 
   @override
   final StorageError error;
@@ -3027,23 +2914,23 @@ class _$DetailsActionsStateMoveToActiveFailed
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is DetailsActionsStateMoveToActiveFailed &&
-            (identical(other.error, error) ||
-                const DeepCollectionEquality().equals(other.error, error)));
+        (other.runtimeType == runtimeType &&
+            other is _$DetailsActionsStateMoveToActiveFailedImpl &&
+            (identical(other.error, error) || other.error == error));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(error);
+  int get hashCode => Object.hash(runtimeType, error);
 
   @JsonKey(ignore: true)
   @override
-  $DetailsActionsStateMoveToActiveFailedCopyWith<
-          DetailsActionsStateMoveToActiveFailed>
-      get copyWith => _$DetailsActionsStateMoveToActiveFailedCopyWithImpl<
-          DetailsActionsStateMoveToActiveFailed>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$DetailsActionsStateMoveToActiveFailedImplCopyWith<
+          _$DetailsActionsStateMoveToActiveFailedImpl>
+      get copyWith => __$$DetailsActionsStateMoveToActiveFailedImplCopyWithImpl<
+          _$DetailsActionsStateMoveToActiveFailedImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -3079,30 +2966,30 @@ class _$DetailsActionsStateMoveToActiveFailed
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? deleting,
-    TResult Function()? deleteSuccess,
-    TResult Function(StorageError error)? deleteFailed,
-    TResult Function()? markingAsRead,
-    TResult Function()? markAsReadSuccess,
-    TResult Function(StorageError error)? markAsReadFailed,
-    TResult Function()? movingToActive,
-    TResult Function()? moveToActiveSuccess,
-    TResult Function(StorageError error)? moveToActiveFailed,
-    TResult Function()? movingToArchive,
-    TResult Function()? moveToArchiveSuccess,
-    TResult Function(StorageError error)? moveToArchiveFailed,
-    TResult Function()? refreshing,
-    TResult Function()? refreshSuccess,
-    TResult Function(StorageError error)? refreshFailed,
-    TResult Function(Duration remainingTime)? refreshFreqLimited,
-    TResult Function()? sharingString,
-    TResult Function(String text)? shareStringSuccess,
-    TResult Function()? copyingTrack,
-    TResult Function(String trackNumber)? copyTrackSuccess,
-    TResult Function()? activating,
-    TResult Function()? activateSuccess,
-    TResult Function(StorageError error)? activateFailed,
+    TResult? Function()? initial,
+    TResult? Function()? deleting,
+    TResult? Function()? deleteSuccess,
+    TResult? Function(StorageError error)? deleteFailed,
+    TResult? Function()? markingAsRead,
+    TResult? Function()? markAsReadSuccess,
+    TResult? Function(StorageError error)? markAsReadFailed,
+    TResult? Function()? movingToActive,
+    TResult? Function()? moveToActiveSuccess,
+    TResult? Function(StorageError error)? moveToActiveFailed,
+    TResult? Function()? movingToArchive,
+    TResult? Function()? moveToArchiveSuccess,
+    TResult? Function(StorageError error)? moveToArchiveFailed,
+    TResult? Function()? refreshing,
+    TResult? Function()? refreshSuccess,
+    TResult? Function(StorageError error)? refreshFailed,
+    TResult? Function(Duration remainingTime)? refreshFreqLimited,
+    TResult? Function()? sharingString,
+    TResult? Function(String text)? shareStringSuccess,
+    TResult? Function()? copyingTrack,
+    TResult? Function(String trackNumber)? copyTrackSuccess,
+    TResult? Function()? activating,
+    TResult? Function()? activateSuccess,
+    TResult? Function(StorageError error)? activateFailed,
   }) {
     return moveToActiveFailed?.call(error);
   }
@@ -3196,39 +3083,41 @@ class _$DetailsActionsStateMoveToActiveFailed
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(DetailsActionsStateInitial value)? initial,
-    TResult Function(DetailsActionsStateDeleting value)? deleting,
-    TResult Function(DetailsActionsStateDeleteSuccess value)? deleteSuccess,
-    TResult Function(DetailsActionsStateDeleteFailed value)? deleteFailed,
-    TResult Function(DetailsActionsStateMarkingAsRead value)? markingAsRead,
-    TResult Function(DetailsActionsStateMarkAsReadSuccess value)?
+    TResult? Function(DetailsActionsStateInitial value)? initial,
+    TResult? Function(DetailsActionsStateDeleting value)? deleting,
+    TResult? Function(DetailsActionsStateDeleteSuccess value)? deleteSuccess,
+    TResult? Function(DetailsActionsStateDeleteFailed value)? deleteFailed,
+    TResult? Function(DetailsActionsStateMarkingAsRead value)? markingAsRead,
+    TResult? Function(DetailsActionsStateMarkAsReadSuccess value)?
         markAsReadSuccess,
-    TResult Function(DetailsActionsStateMarkAsReadFailed value)?
+    TResult? Function(DetailsActionsStateMarkAsReadFailed value)?
         markAsReadFailed,
-    TResult Function(DetailsActionsStateMovingToActive value)? movingToActive,
-    TResult Function(DetailsActionsStateMoveToActiveSuccess value)?
+    TResult? Function(DetailsActionsStateMovingToActive value)? movingToActive,
+    TResult? Function(DetailsActionsStateMoveToActiveSuccess value)?
         moveToActiveSuccess,
-    TResult Function(DetailsActionsStateMoveToActiveFailed value)?
+    TResult? Function(DetailsActionsStateMoveToActiveFailed value)?
         moveToActiveFailed,
-    TResult Function(DetailsActionsStateMovingToArchive value)? movingToArchive,
-    TResult Function(DetailsActionsStateMoveToArchiveSuccess value)?
+    TResult? Function(DetailsActionsStateMovingToArchive value)?
+        movingToArchive,
+    TResult? Function(DetailsActionsStateMoveToArchiveSuccess value)?
         moveToArchiveSuccess,
-    TResult Function(DetailsActionsStateMoveToArchiveFailed value)?
+    TResult? Function(DetailsActionsStateMoveToArchiveFailed value)?
         moveToArchiveFailed,
-    TResult Function(DetailsActionsStateRefreshing value)? refreshing,
-    TResult Function(DetailsActionsStateRefreshSuccess value)? refreshSuccess,
-    TResult Function(DetailsActionsStateRefreshFailed value)? refreshFailed,
-    TResult Function(DetailsActionsStateRefreshFreqLimited value)?
+    TResult? Function(DetailsActionsStateRefreshing value)? refreshing,
+    TResult? Function(DetailsActionsStateRefreshSuccess value)? refreshSuccess,
+    TResult? Function(DetailsActionsStateRefreshFailed value)? refreshFailed,
+    TResult? Function(DetailsActionsStateRefreshFreqLimited value)?
         refreshFreqLimited,
-    TResult Function(DetailsActionsStateSharingString value)? sharingString,
-    TResult Function(DetailsActionsStateShareStringSuccess value)?
+    TResult? Function(DetailsActionsStateSharingString value)? sharingString,
+    TResult? Function(DetailsActionsStateShareStringSuccess value)?
         shareStringSuccess,
-    TResult Function(DetailsActionsStateCopyingTrack value)? copyingTrack,
-    TResult Function(DetailsActionsStateCopyTrackSuccess value)?
+    TResult? Function(DetailsActionsStateCopyingTrack value)? copyingTrack,
+    TResult? Function(DetailsActionsStateCopyTrackSuccess value)?
         copyTrackSuccess,
-    TResult Function(DetailsActionsStateActivating value)? activating,
-    TResult Function(DetailsActionsStateActivateSuccess value)? activateSuccess,
-    TResult Function(DetailsActionsStateActivateFailed value)? activateFailed,
+    TResult? Function(DetailsActionsStateActivating value)? activating,
+    TResult? Function(DetailsActionsStateActivateSuccess value)?
+        activateSuccess,
+    TResult? Function(DetailsActionsStateActivateFailed value)? activateFailed,
   }) {
     return moveToActiveFailed?.call(this);
   }
@@ -3281,42 +3170,40 @@ class _$DetailsActionsStateMoveToActiveFailed
 abstract class DetailsActionsStateMoveToActiveFailed
     implements DetailsActionsState {
   const factory DetailsActionsStateMoveToActiveFailed(
-      {required StorageError error}) = _$DetailsActionsStateMoveToActiveFailed;
+          {required final StorageError error}) =
+      _$DetailsActionsStateMoveToActiveFailedImpl;
 
-  StorageError get error => throw _privateConstructorUsedError;
+  StorageError get error;
   @JsonKey(ignore: true)
-  $DetailsActionsStateMoveToActiveFailedCopyWith<
-          DetailsActionsStateMoveToActiveFailed>
+  _$$DetailsActionsStateMoveToActiveFailedImplCopyWith<
+          _$DetailsActionsStateMoveToActiveFailedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $DetailsActionsStateMovingToArchiveCopyWith<$Res> {
-  factory $DetailsActionsStateMovingToArchiveCopyWith(
-          DetailsActionsStateMovingToArchive value,
-          $Res Function(DetailsActionsStateMovingToArchive) then) =
-      _$DetailsActionsStateMovingToArchiveCopyWithImpl<$Res>;
+abstract class _$$DetailsActionsStateMovingToArchiveImplCopyWith<$Res> {
+  factory _$$DetailsActionsStateMovingToArchiveImplCopyWith(
+          _$DetailsActionsStateMovingToArchiveImpl value,
+          $Res Function(_$DetailsActionsStateMovingToArchiveImpl) then) =
+      __$$DetailsActionsStateMovingToArchiveImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$DetailsActionsStateMovingToArchiveCopyWithImpl<$Res>
-    extends _$DetailsActionsStateCopyWithImpl<$Res>
-    implements $DetailsActionsStateMovingToArchiveCopyWith<$Res> {
-  _$DetailsActionsStateMovingToArchiveCopyWithImpl(
-      DetailsActionsStateMovingToArchive _value,
-      $Res Function(DetailsActionsStateMovingToArchive) _then)
-      : super(_value, (v) => _then(v as DetailsActionsStateMovingToArchive));
-
-  @override
-  DetailsActionsStateMovingToArchive get _value =>
-      super._value as DetailsActionsStateMovingToArchive;
+class __$$DetailsActionsStateMovingToArchiveImplCopyWithImpl<$Res>
+    extends _$DetailsActionsStateCopyWithImpl<$Res,
+        _$DetailsActionsStateMovingToArchiveImpl>
+    implements _$$DetailsActionsStateMovingToArchiveImplCopyWith<$Res> {
+  __$$DetailsActionsStateMovingToArchiveImplCopyWithImpl(
+      _$DetailsActionsStateMovingToArchiveImpl _value,
+      $Res Function(_$DetailsActionsStateMovingToArchiveImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$DetailsActionsStateMovingToArchive
+class _$DetailsActionsStateMovingToArchiveImpl
     implements DetailsActionsStateMovingToArchive {
-  const _$DetailsActionsStateMovingToArchive();
+  const _$DetailsActionsStateMovingToArchiveImpl();
 
   @override
   String toString() {
@@ -3324,9 +3211,10 @@ class _$DetailsActionsStateMovingToArchive
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is DetailsActionsStateMovingToArchive);
+        (other.runtimeType == runtimeType &&
+            other is _$DetailsActionsStateMovingToArchiveImpl);
   }
 
   @override
@@ -3366,30 +3254,30 @@ class _$DetailsActionsStateMovingToArchive
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? deleting,
-    TResult Function()? deleteSuccess,
-    TResult Function(StorageError error)? deleteFailed,
-    TResult Function()? markingAsRead,
-    TResult Function()? markAsReadSuccess,
-    TResult Function(StorageError error)? markAsReadFailed,
-    TResult Function()? movingToActive,
-    TResult Function()? moveToActiveSuccess,
-    TResult Function(StorageError error)? moveToActiveFailed,
-    TResult Function()? movingToArchive,
-    TResult Function()? moveToArchiveSuccess,
-    TResult Function(StorageError error)? moveToArchiveFailed,
-    TResult Function()? refreshing,
-    TResult Function()? refreshSuccess,
-    TResult Function(StorageError error)? refreshFailed,
-    TResult Function(Duration remainingTime)? refreshFreqLimited,
-    TResult Function()? sharingString,
-    TResult Function(String text)? shareStringSuccess,
-    TResult Function()? copyingTrack,
-    TResult Function(String trackNumber)? copyTrackSuccess,
-    TResult Function()? activating,
-    TResult Function()? activateSuccess,
-    TResult Function(StorageError error)? activateFailed,
+    TResult? Function()? initial,
+    TResult? Function()? deleting,
+    TResult? Function()? deleteSuccess,
+    TResult? Function(StorageError error)? deleteFailed,
+    TResult? Function()? markingAsRead,
+    TResult? Function()? markAsReadSuccess,
+    TResult? Function(StorageError error)? markAsReadFailed,
+    TResult? Function()? movingToActive,
+    TResult? Function()? moveToActiveSuccess,
+    TResult? Function(StorageError error)? moveToActiveFailed,
+    TResult? Function()? movingToArchive,
+    TResult? Function()? moveToArchiveSuccess,
+    TResult? Function(StorageError error)? moveToArchiveFailed,
+    TResult? Function()? refreshing,
+    TResult? Function()? refreshSuccess,
+    TResult? Function(StorageError error)? refreshFailed,
+    TResult? Function(Duration remainingTime)? refreshFreqLimited,
+    TResult? Function()? sharingString,
+    TResult? Function(String text)? shareStringSuccess,
+    TResult? Function()? copyingTrack,
+    TResult? Function(String trackNumber)? copyTrackSuccess,
+    TResult? Function()? activating,
+    TResult? Function()? activateSuccess,
+    TResult? Function(StorageError error)? activateFailed,
   }) {
     return movingToArchive?.call();
   }
@@ -3483,39 +3371,41 @@ class _$DetailsActionsStateMovingToArchive
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(DetailsActionsStateInitial value)? initial,
-    TResult Function(DetailsActionsStateDeleting value)? deleting,
-    TResult Function(DetailsActionsStateDeleteSuccess value)? deleteSuccess,
-    TResult Function(DetailsActionsStateDeleteFailed value)? deleteFailed,
-    TResult Function(DetailsActionsStateMarkingAsRead value)? markingAsRead,
-    TResult Function(DetailsActionsStateMarkAsReadSuccess value)?
+    TResult? Function(DetailsActionsStateInitial value)? initial,
+    TResult? Function(DetailsActionsStateDeleting value)? deleting,
+    TResult? Function(DetailsActionsStateDeleteSuccess value)? deleteSuccess,
+    TResult? Function(DetailsActionsStateDeleteFailed value)? deleteFailed,
+    TResult? Function(DetailsActionsStateMarkingAsRead value)? markingAsRead,
+    TResult? Function(DetailsActionsStateMarkAsReadSuccess value)?
         markAsReadSuccess,
-    TResult Function(DetailsActionsStateMarkAsReadFailed value)?
+    TResult? Function(DetailsActionsStateMarkAsReadFailed value)?
         markAsReadFailed,
-    TResult Function(DetailsActionsStateMovingToActive value)? movingToActive,
-    TResult Function(DetailsActionsStateMoveToActiveSuccess value)?
+    TResult? Function(DetailsActionsStateMovingToActive value)? movingToActive,
+    TResult? Function(DetailsActionsStateMoveToActiveSuccess value)?
         moveToActiveSuccess,
-    TResult Function(DetailsActionsStateMoveToActiveFailed value)?
+    TResult? Function(DetailsActionsStateMoveToActiveFailed value)?
         moveToActiveFailed,
-    TResult Function(DetailsActionsStateMovingToArchive value)? movingToArchive,
-    TResult Function(DetailsActionsStateMoveToArchiveSuccess value)?
+    TResult? Function(DetailsActionsStateMovingToArchive value)?
+        movingToArchive,
+    TResult? Function(DetailsActionsStateMoveToArchiveSuccess value)?
         moveToArchiveSuccess,
-    TResult Function(DetailsActionsStateMoveToArchiveFailed value)?
+    TResult? Function(DetailsActionsStateMoveToArchiveFailed value)?
         moveToArchiveFailed,
-    TResult Function(DetailsActionsStateRefreshing value)? refreshing,
-    TResult Function(DetailsActionsStateRefreshSuccess value)? refreshSuccess,
-    TResult Function(DetailsActionsStateRefreshFailed value)? refreshFailed,
-    TResult Function(DetailsActionsStateRefreshFreqLimited value)?
+    TResult? Function(DetailsActionsStateRefreshing value)? refreshing,
+    TResult? Function(DetailsActionsStateRefreshSuccess value)? refreshSuccess,
+    TResult? Function(DetailsActionsStateRefreshFailed value)? refreshFailed,
+    TResult? Function(DetailsActionsStateRefreshFreqLimited value)?
         refreshFreqLimited,
-    TResult Function(DetailsActionsStateSharingString value)? sharingString,
-    TResult Function(DetailsActionsStateShareStringSuccess value)?
+    TResult? Function(DetailsActionsStateSharingString value)? sharingString,
+    TResult? Function(DetailsActionsStateShareStringSuccess value)?
         shareStringSuccess,
-    TResult Function(DetailsActionsStateCopyingTrack value)? copyingTrack,
-    TResult Function(DetailsActionsStateCopyTrackSuccess value)?
+    TResult? Function(DetailsActionsStateCopyingTrack value)? copyingTrack,
+    TResult? Function(DetailsActionsStateCopyTrackSuccess value)?
         copyTrackSuccess,
-    TResult Function(DetailsActionsStateActivating value)? activating,
-    TResult Function(DetailsActionsStateActivateSuccess value)? activateSuccess,
-    TResult Function(DetailsActionsStateActivateFailed value)? activateFailed,
+    TResult? Function(DetailsActionsStateActivating value)? activating,
+    TResult? Function(DetailsActionsStateActivateSuccess value)?
+        activateSuccess,
+    TResult? Function(DetailsActionsStateActivateFailed value)? activateFailed,
   }) {
     return movingToArchive?.call(this);
   }
@@ -3568,37 +3458,33 @@ class _$DetailsActionsStateMovingToArchive
 abstract class DetailsActionsStateMovingToArchive
     implements DetailsActionsState {
   const factory DetailsActionsStateMovingToArchive() =
-      _$DetailsActionsStateMovingToArchive;
+      _$DetailsActionsStateMovingToArchiveImpl;
 }
 
 /// @nodoc
-abstract class $DetailsActionsStateMoveToArchiveSuccessCopyWith<$Res> {
-  factory $DetailsActionsStateMoveToArchiveSuccessCopyWith(
-          DetailsActionsStateMoveToArchiveSuccess value,
-          $Res Function(DetailsActionsStateMoveToArchiveSuccess) then) =
-      _$DetailsActionsStateMoveToArchiveSuccessCopyWithImpl<$Res>;
+abstract class _$$DetailsActionsStateMoveToArchiveSuccessImplCopyWith<$Res> {
+  factory _$$DetailsActionsStateMoveToArchiveSuccessImplCopyWith(
+          _$DetailsActionsStateMoveToArchiveSuccessImpl value,
+          $Res Function(_$DetailsActionsStateMoveToArchiveSuccessImpl) then) =
+      __$$DetailsActionsStateMoveToArchiveSuccessImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$DetailsActionsStateMoveToArchiveSuccessCopyWithImpl<$Res>
-    extends _$DetailsActionsStateCopyWithImpl<$Res>
-    implements $DetailsActionsStateMoveToArchiveSuccessCopyWith<$Res> {
-  _$DetailsActionsStateMoveToArchiveSuccessCopyWithImpl(
-      DetailsActionsStateMoveToArchiveSuccess _value,
-      $Res Function(DetailsActionsStateMoveToArchiveSuccess) _then)
-      : super(
-            _value, (v) => _then(v as DetailsActionsStateMoveToArchiveSuccess));
-
-  @override
-  DetailsActionsStateMoveToArchiveSuccess get _value =>
-      super._value as DetailsActionsStateMoveToArchiveSuccess;
+class __$$DetailsActionsStateMoveToArchiveSuccessImplCopyWithImpl<$Res>
+    extends _$DetailsActionsStateCopyWithImpl<$Res,
+        _$DetailsActionsStateMoveToArchiveSuccessImpl>
+    implements _$$DetailsActionsStateMoveToArchiveSuccessImplCopyWith<$Res> {
+  __$$DetailsActionsStateMoveToArchiveSuccessImplCopyWithImpl(
+      _$DetailsActionsStateMoveToArchiveSuccessImpl _value,
+      $Res Function(_$DetailsActionsStateMoveToArchiveSuccessImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$DetailsActionsStateMoveToArchiveSuccess
+class _$DetailsActionsStateMoveToArchiveSuccessImpl
     implements DetailsActionsStateMoveToArchiveSuccess {
-  const _$DetailsActionsStateMoveToArchiveSuccess();
+  const _$DetailsActionsStateMoveToArchiveSuccessImpl();
 
   @override
   String toString() {
@@ -3606,9 +3492,10 @@ class _$DetailsActionsStateMoveToArchiveSuccess
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is DetailsActionsStateMoveToArchiveSuccess);
+        (other.runtimeType == runtimeType &&
+            other is _$DetailsActionsStateMoveToArchiveSuccessImpl);
   }
 
   @override
@@ -3648,30 +3535,30 @@ class _$DetailsActionsStateMoveToArchiveSuccess
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? deleting,
-    TResult Function()? deleteSuccess,
-    TResult Function(StorageError error)? deleteFailed,
-    TResult Function()? markingAsRead,
-    TResult Function()? markAsReadSuccess,
-    TResult Function(StorageError error)? markAsReadFailed,
-    TResult Function()? movingToActive,
-    TResult Function()? moveToActiveSuccess,
-    TResult Function(StorageError error)? moveToActiveFailed,
-    TResult Function()? movingToArchive,
-    TResult Function()? moveToArchiveSuccess,
-    TResult Function(StorageError error)? moveToArchiveFailed,
-    TResult Function()? refreshing,
-    TResult Function()? refreshSuccess,
-    TResult Function(StorageError error)? refreshFailed,
-    TResult Function(Duration remainingTime)? refreshFreqLimited,
-    TResult Function()? sharingString,
-    TResult Function(String text)? shareStringSuccess,
-    TResult Function()? copyingTrack,
-    TResult Function(String trackNumber)? copyTrackSuccess,
-    TResult Function()? activating,
-    TResult Function()? activateSuccess,
-    TResult Function(StorageError error)? activateFailed,
+    TResult? Function()? initial,
+    TResult? Function()? deleting,
+    TResult? Function()? deleteSuccess,
+    TResult? Function(StorageError error)? deleteFailed,
+    TResult? Function()? markingAsRead,
+    TResult? Function()? markAsReadSuccess,
+    TResult? Function(StorageError error)? markAsReadFailed,
+    TResult? Function()? movingToActive,
+    TResult? Function()? moveToActiveSuccess,
+    TResult? Function(StorageError error)? moveToActiveFailed,
+    TResult? Function()? movingToArchive,
+    TResult? Function()? moveToArchiveSuccess,
+    TResult? Function(StorageError error)? moveToArchiveFailed,
+    TResult? Function()? refreshing,
+    TResult? Function()? refreshSuccess,
+    TResult? Function(StorageError error)? refreshFailed,
+    TResult? Function(Duration remainingTime)? refreshFreqLimited,
+    TResult? Function()? sharingString,
+    TResult? Function(String text)? shareStringSuccess,
+    TResult? Function()? copyingTrack,
+    TResult? Function(String trackNumber)? copyTrackSuccess,
+    TResult? Function()? activating,
+    TResult? Function()? activateSuccess,
+    TResult? Function(StorageError error)? activateFailed,
   }) {
     return moveToArchiveSuccess?.call();
   }
@@ -3765,39 +3652,41 @@ class _$DetailsActionsStateMoveToArchiveSuccess
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(DetailsActionsStateInitial value)? initial,
-    TResult Function(DetailsActionsStateDeleting value)? deleting,
-    TResult Function(DetailsActionsStateDeleteSuccess value)? deleteSuccess,
-    TResult Function(DetailsActionsStateDeleteFailed value)? deleteFailed,
-    TResult Function(DetailsActionsStateMarkingAsRead value)? markingAsRead,
-    TResult Function(DetailsActionsStateMarkAsReadSuccess value)?
+    TResult? Function(DetailsActionsStateInitial value)? initial,
+    TResult? Function(DetailsActionsStateDeleting value)? deleting,
+    TResult? Function(DetailsActionsStateDeleteSuccess value)? deleteSuccess,
+    TResult? Function(DetailsActionsStateDeleteFailed value)? deleteFailed,
+    TResult? Function(DetailsActionsStateMarkingAsRead value)? markingAsRead,
+    TResult? Function(DetailsActionsStateMarkAsReadSuccess value)?
         markAsReadSuccess,
-    TResult Function(DetailsActionsStateMarkAsReadFailed value)?
+    TResult? Function(DetailsActionsStateMarkAsReadFailed value)?
         markAsReadFailed,
-    TResult Function(DetailsActionsStateMovingToActive value)? movingToActive,
-    TResult Function(DetailsActionsStateMoveToActiveSuccess value)?
+    TResult? Function(DetailsActionsStateMovingToActive value)? movingToActive,
+    TResult? Function(DetailsActionsStateMoveToActiveSuccess value)?
         moveToActiveSuccess,
-    TResult Function(DetailsActionsStateMoveToActiveFailed value)?
+    TResult? Function(DetailsActionsStateMoveToActiveFailed value)?
         moveToActiveFailed,
-    TResult Function(DetailsActionsStateMovingToArchive value)? movingToArchive,
-    TResult Function(DetailsActionsStateMoveToArchiveSuccess value)?
+    TResult? Function(DetailsActionsStateMovingToArchive value)?
+        movingToArchive,
+    TResult? Function(DetailsActionsStateMoveToArchiveSuccess value)?
         moveToArchiveSuccess,
-    TResult Function(DetailsActionsStateMoveToArchiveFailed value)?
+    TResult? Function(DetailsActionsStateMoveToArchiveFailed value)?
         moveToArchiveFailed,
-    TResult Function(DetailsActionsStateRefreshing value)? refreshing,
-    TResult Function(DetailsActionsStateRefreshSuccess value)? refreshSuccess,
-    TResult Function(DetailsActionsStateRefreshFailed value)? refreshFailed,
-    TResult Function(DetailsActionsStateRefreshFreqLimited value)?
+    TResult? Function(DetailsActionsStateRefreshing value)? refreshing,
+    TResult? Function(DetailsActionsStateRefreshSuccess value)? refreshSuccess,
+    TResult? Function(DetailsActionsStateRefreshFailed value)? refreshFailed,
+    TResult? Function(DetailsActionsStateRefreshFreqLimited value)?
         refreshFreqLimited,
-    TResult Function(DetailsActionsStateSharingString value)? sharingString,
-    TResult Function(DetailsActionsStateShareStringSuccess value)?
+    TResult? Function(DetailsActionsStateSharingString value)? sharingString,
+    TResult? Function(DetailsActionsStateShareStringSuccess value)?
         shareStringSuccess,
-    TResult Function(DetailsActionsStateCopyingTrack value)? copyingTrack,
-    TResult Function(DetailsActionsStateCopyTrackSuccess value)?
+    TResult? Function(DetailsActionsStateCopyingTrack value)? copyingTrack,
+    TResult? Function(DetailsActionsStateCopyTrackSuccess value)?
         copyTrackSuccess,
-    TResult Function(DetailsActionsStateActivating value)? activating,
-    TResult Function(DetailsActionsStateActivateSuccess value)? activateSuccess,
-    TResult Function(DetailsActionsStateActivateFailed value)? activateFailed,
+    TResult? Function(DetailsActionsStateActivating value)? activating,
+    TResult? Function(DetailsActionsStateActivateSuccess value)?
+        activateSuccess,
+    TResult? Function(DetailsActionsStateActivateFailed value)? activateFailed,
   }) {
     return moveToArchiveSuccess?.call(this);
   }
@@ -3850,40 +3739,38 @@ class _$DetailsActionsStateMoveToArchiveSuccess
 abstract class DetailsActionsStateMoveToArchiveSuccess
     implements DetailsActionsState {
   const factory DetailsActionsStateMoveToArchiveSuccess() =
-      _$DetailsActionsStateMoveToArchiveSuccess;
+      _$DetailsActionsStateMoveToArchiveSuccessImpl;
 }
 
 /// @nodoc
-abstract class $DetailsActionsStateMoveToArchiveFailedCopyWith<$Res> {
-  factory $DetailsActionsStateMoveToArchiveFailedCopyWith(
-          DetailsActionsStateMoveToArchiveFailed value,
-          $Res Function(DetailsActionsStateMoveToArchiveFailed) then) =
-      _$DetailsActionsStateMoveToArchiveFailedCopyWithImpl<$Res>;
+abstract class _$$DetailsActionsStateMoveToArchiveFailedImplCopyWith<$Res> {
+  factory _$$DetailsActionsStateMoveToArchiveFailedImplCopyWith(
+          _$DetailsActionsStateMoveToArchiveFailedImpl value,
+          $Res Function(_$DetailsActionsStateMoveToArchiveFailedImpl) then) =
+      __$$DetailsActionsStateMoveToArchiveFailedImplCopyWithImpl<$Res>;
+  @useResult
   $Res call({StorageError error});
 
   $StorageErrorCopyWith<$Res> get error;
 }
 
 /// @nodoc
-class _$DetailsActionsStateMoveToArchiveFailedCopyWithImpl<$Res>
-    extends _$DetailsActionsStateCopyWithImpl<$Res>
-    implements $DetailsActionsStateMoveToArchiveFailedCopyWith<$Res> {
-  _$DetailsActionsStateMoveToArchiveFailedCopyWithImpl(
-      DetailsActionsStateMoveToArchiveFailed _value,
-      $Res Function(DetailsActionsStateMoveToArchiveFailed) _then)
-      : super(
-            _value, (v) => _then(v as DetailsActionsStateMoveToArchiveFailed));
+class __$$DetailsActionsStateMoveToArchiveFailedImplCopyWithImpl<$Res>
+    extends _$DetailsActionsStateCopyWithImpl<$Res,
+        _$DetailsActionsStateMoveToArchiveFailedImpl>
+    implements _$$DetailsActionsStateMoveToArchiveFailedImplCopyWith<$Res> {
+  __$$DetailsActionsStateMoveToArchiveFailedImplCopyWithImpl(
+      _$DetailsActionsStateMoveToArchiveFailedImpl _value,
+      $Res Function(_$DetailsActionsStateMoveToArchiveFailedImpl) _then)
+      : super(_value, _then);
 
-  @override
-  DetailsActionsStateMoveToArchiveFailed get _value =>
-      super._value as DetailsActionsStateMoveToArchiveFailed;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? error = freezed,
+    Object? error = null,
   }) {
-    return _then(DetailsActionsStateMoveToArchiveFailed(
-      error: error == freezed
+    return _then(_$DetailsActionsStateMoveToArchiveFailedImpl(
+      error: null == error
           ? _value.error
           : error // ignore: cast_nullable_to_non_nullable
               as StorageError,
@@ -3891,6 +3778,7 @@ class _$DetailsActionsStateMoveToArchiveFailedCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $StorageErrorCopyWith<$Res> get error {
     return $StorageErrorCopyWith<$Res>(_value.error, (value) {
       return _then(_value.copyWith(error: value));
@@ -3900,9 +3788,9 @@ class _$DetailsActionsStateMoveToArchiveFailedCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$DetailsActionsStateMoveToArchiveFailed
+class _$DetailsActionsStateMoveToArchiveFailedImpl
     implements DetailsActionsStateMoveToArchiveFailed {
-  const _$DetailsActionsStateMoveToArchiveFailed({required this.error});
+  const _$DetailsActionsStateMoveToArchiveFailedImpl({required this.error});
 
   @override
   final StorageError error;
@@ -3913,23 +3801,24 @@ class _$DetailsActionsStateMoveToArchiveFailed
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is DetailsActionsStateMoveToArchiveFailed &&
-            (identical(other.error, error) ||
-                const DeepCollectionEquality().equals(other.error, error)));
+        (other.runtimeType == runtimeType &&
+            other is _$DetailsActionsStateMoveToArchiveFailedImpl &&
+            (identical(other.error, error) || other.error == error));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(error);
+  int get hashCode => Object.hash(runtimeType, error);
 
   @JsonKey(ignore: true)
   @override
-  $DetailsActionsStateMoveToArchiveFailedCopyWith<
-          DetailsActionsStateMoveToArchiveFailed>
-      get copyWith => _$DetailsActionsStateMoveToArchiveFailedCopyWithImpl<
-          DetailsActionsStateMoveToArchiveFailed>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$DetailsActionsStateMoveToArchiveFailedImplCopyWith<
+          _$DetailsActionsStateMoveToArchiveFailedImpl>
+      get copyWith =>
+          __$$DetailsActionsStateMoveToArchiveFailedImplCopyWithImpl<
+              _$DetailsActionsStateMoveToArchiveFailedImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -3965,30 +3854,30 @@ class _$DetailsActionsStateMoveToArchiveFailed
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? deleting,
-    TResult Function()? deleteSuccess,
-    TResult Function(StorageError error)? deleteFailed,
-    TResult Function()? markingAsRead,
-    TResult Function()? markAsReadSuccess,
-    TResult Function(StorageError error)? markAsReadFailed,
-    TResult Function()? movingToActive,
-    TResult Function()? moveToActiveSuccess,
-    TResult Function(StorageError error)? moveToActiveFailed,
-    TResult Function()? movingToArchive,
-    TResult Function()? moveToArchiveSuccess,
-    TResult Function(StorageError error)? moveToArchiveFailed,
-    TResult Function()? refreshing,
-    TResult Function()? refreshSuccess,
-    TResult Function(StorageError error)? refreshFailed,
-    TResult Function(Duration remainingTime)? refreshFreqLimited,
-    TResult Function()? sharingString,
-    TResult Function(String text)? shareStringSuccess,
-    TResult Function()? copyingTrack,
-    TResult Function(String trackNumber)? copyTrackSuccess,
-    TResult Function()? activating,
-    TResult Function()? activateSuccess,
-    TResult Function(StorageError error)? activateFailed,
+    TResult? Function()? initial,
+    TResult? Function()? deleting,
+    TResult? Function()? deleteSuccess,
+    TResult? Function(StorageError error)? deleteFailed,
+    TResult? Function()? markingAsRead,
+    TResult? Function()? markAsReadSuccess,
+    TResult? Function(StorageError error)? markAsReadFailed,
+    TResult? Function()? movingToActive,
+    TResult? Function()? moveToActiveSuccess,
+    TResult? Function(StorageError error)? moveToActiveFailed,
+    TResult? Function()? movingToArchive,
+    TResult? Function()? moveToArchiveSuccess,
+    TResult? Function(StorageError error)? moveToArchiveFailed,
+    TResult? Function()? refreshing,
+    TResult? Function()? refreshSuccess,
+    TResult? Function(StorageError error)? refreshFailed,
+    TResult? Function(Duration remainingTime)? refreshFreqLimited,
+    TResult? Function()? sharingString,
+    TResult? Function(String text)? shareStringSuccess,
+    TResult? Function()? copyingTrack,
+    TResult? Function(String trackNumber)? copyTrackSuccess,
+    TResult? Function()? activating,
+    TResult? Function()? activateSuccess,
+    TResult? Function(StorageError error)? activateFailed,
   }) {
     return moveToArchiveFailed?.call(error);
   }
@@ -4082,39 +3971,41 @@ class _$DetailsActionsStateMoveToArchiveFailed
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(DetailsActionsStateInitial value)? initial,
-    TResult Function(DetailsActionsStateDeleting value)? deleting,
-    TResult Function(DetailsActionsStateDeleteSuccess value)? deleteSuccess,
-    TResult Function(DetailsActionsStateDeleteFailed value)? deleteFailed,
-    TResult Function(DetailsActionsStateMarkingAsRead value)? markingAsRead,
-    TResult Function(DetailsActionsStateMarkAsReadSuccess value)?
+    TResult? Function(DetailsActionsStateInitial value)? initial,
+    TResult? Function(DetailsActionsStateDeleting value)? deleting,
+    TResult? Function(DetailsActionsStateDeleteSuccess value)? deleteSuccess,
+    TResult? Function(DetailsActionsStateDeleteFailed value)? deleteFailed,
+    TResult? Function(DetailsActionsStateMarkingAsRead value)? markingAsRead,
+    TResult? Function(DetailsActionsStateMarkAsReadSuccess value)?
         markAsReadSuccess,
-    TResult Function(DetailsActionsStateMarkAsReadFailed value)?
+    TResult? Function(DetailsActionsStateMarkAsReadFailed value)?
         markAsReadFailed,
-    TResult Function(DetailsActionsStateMovingToActive value)? movingToActive,
-    TResult Function(DetailsActionsStateMoveToActiveSuccess value)?
+    TResult? Function(DetailsActionsStateMovingToActive value)? movingToActive,
+    TResult? Function(DetailsActionsStateMoveToActiveSuccess value)?
         moveToActiveSuccess,
-    TResult Function(DetailsActionsStateMoveToActiveFailed value)?
+    TResult? Function(DetailsActionsStateMoveToActiveFailed value)?
         moveToActiveFailed,
-    TResult Function(DetailsActionsStateMovingToArchive value)? movingToArchive,
-    TResult Function(DetailsActionsStateMoveToArchiveSuccess value)?
+    TResult? Function(DetailsActionsStateMovingToArchive value)?
+        movingToArchive,
+    TResult? Function(DetailsActionsStateMoveToArchiveSuccess value)?
         moveToArchiveSuccess,
-    TResult Function(DetailsActionsStateMoveToArchiveFailed value)?
+    TResult? Function(DetailsActionsStateMoveToArchiveFailed value)?
         moveToArchiveFailed,
-    TResult Function(DetailsActionsStateRefreshing value)? refreshing,
-    TResult Function(DetailsActionsStateRefreshSuccess value)? refreshSuccess,
-    TResult Function(DetailsActionsStateRefreshFailed value)? refreshFailed,
-    TResult Function(DetailsActionsStateRefreshFreqLimited value)?
+    TResult? Function(DetailsActionsStateRefreshing value)? refreshing,
+    TResult? Function(DetailsActionsStateRefreshSuccess value)? refreshSuccess,
+    TResult? Function(DetailsActionsStateRefreshFailed value)? refreshFailed,
+    TResult? Function(DetailsActionsStateRefreshFreqLimited value)?
         refreshFreqLimited,
-    TResult Function(DetailsActionsStateSharingString value)? sharingString,
-    TResult Function(DetailsActionsStateShareStringSuccess value)?
+    TResult? Function(DetailsActionsStateSharingString value)? sharingString,
+    TResult? Function(DetailsActionsStateShareStringSuccess value)?
         shareStringSuccess,
-    TResult Function(DetailsActionsStateCopyingTrack value)? copyingTrack,
-    TResult Function(DetailsActionsStateCopyTrackSuccess value)?
+    TResult? Function(DetailsActionsStateCopyingTrack value)? copyingTrack,
+    TResult? Function(DetailsActionsStateCopyTrackSuccess value)?
         copyTrackSuccess,
-    TResult Function(DetailsActionsStateActivating value)? activating,
-    TResult Function(DetailsActionsStateActivateSuccess value)? activateSuccess,
-    TResult Function(DetailsActionsStateActivateFailed value)? activateFailed,
+    TResult? Function(DetailsActionsStateActivating value)? activating,
+    TResult? Function(DetailsActionsStateActivateSuccess value)?
+        activateSuccess,
+    TResult? Function(DetailsActionsStateActivateFailed value)? activateFailed,
   }) {
     return moveToArchiveFailed?.call(this);
   }
@@ -4167,41 +4058,40 @@ class _$DetailsActionsStateMoveToArchiveFailed
 abstract class DetailsActionsStateMoveToArchiveFailed
     implements DetailsActionsState {
   const factory DetailsActionsStateMoveToArchiveFailed(
-      {required StorageError error}) = _$DetailsActionsStateMoveToArchiveFailed;
+          {required final StorageError error}) =
+      _$DetailsActionsStateMoveToArchiveFailedImpl;
 
-  StorageError get error => throw _privateConstructorUsedError;
+  StorageError get error;
   @JsonKey(ignore: true)
-  $DetailsActionsStateMoveToArchiveFailedCopyWith<
-          DetailsActionsStateMoveToArchiveFailed>
+  _$$DetailsActionsStateMoveToArchiveFailedImplCopyWith<
+          _$DetailsActionsStateMoveToArchiveFailedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $DetailsActionsStateRefreshingCopyWith<$Res> {
-  factory $DetailsActionsStateRefreshingCopyWith(
-          DetailsActionsStateRefreshing value,
-          $Res Function(DetailsActionsStateRefreshing) then) =
-      _$DetailsActionsStateRefreshingCopyWithImpl<$Res>;
+abstract class _$$DetailsActionsStateRefreshingImplCopyWith<$Res> {
+  factory _$$DetailsActionsStateRefreshingImplCopyWith(
+          _$DetailsActionsStateRefreshingImpl value,
+          $Res Function(_$DetailsActionsStateRefreshingImpl) then) =
+      __$$DetailsActionsStateRefreshingImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$DetailsActionsStateRefreshingCopyWithImpl<$Res>
-    extends _$DetailsActionsStateCopyWithImpl<$Res>
-    implements $DetailsActionsStateRefreshingCopyWith<$Res> {
-  _$DetailsActionsStateRefreshingCopyWithImpl(
-      DetailsActionsStateRefreshing _value,
-      $Res Function(DetailsActionsStateRefreshing) _then)
-      : super(_value, (v) => _then(v as DetailsActionsStateRefreshing));
-
-  @override
-  DetailsActionsStateRefreshing get _value =>
-      super._value as DetailsActionsStateRefreshing;
+class __$$DetailsActionsStateRefreshingImplCopyWithImpl<$Res>
+    extends _$DetailsActionsStateCopyWithImpl<$Res,
+        _$DetailsActionsStateRefreshingImpl>
+    implements _$$DetailsActionsStateRefreshingImplCopyWith<$Res> {
+  __$$DetailsActionsStateRefreshingImplCopyWithImpl(
+      _$DetailsActionsStateRefreshingImpl _value,
+      $Res Function(_$DetailsActionsStateRefreshingImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$DetailsActionsStateRefreshing implements DetailsActionsStateRefreshing {
-  const _$DetailsActionsStateRefreshing();
+class _$DetailsActionsStateRefreshingImpl
+    implements DetailsActionsStateRefreshing {
+  const _$DetailsActionsStateRefreshingImpl();
 
   @override
   String toString() {
@@ -4209,8 +4099,10 @@ class _$DetailsActionsStateRefreshing implements DetailsActionsStateRefreshing {
   }
 
   @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) || (other is DetailsActionsStateRefreshing);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$DetailsActionsStateRefreshingImpl);
   }
 
   @override
@@ -4250,30 +4142,30 @@ class _$DetailsActionsStateRefreshing implements DetailsActionsStateRefreshing {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? deleting,
-    TResult Function()? deleteSuccess,
-    TResult Function(StorageError error)? deleteFailed,
-    TResult Function()? markingAsRead,
-    TResult Function()? markAsReadSuccess,
-    TResult Function(StorageError error)? markAsReadFailed,
-    TResult Function()? movingToActive,
-    TResult Function()? moveToActiveSuccess,
-    TResult Function(StorageError error)? moveToActiveFailed,
-    TResult Function()? movingToArchive,
-    TResult Function()? moveToArchiveSuccess,
-    TResult Function(StorageError error)? moveToArchiveFailed,
-    TResult Function()? refreshing,
-    TResult Function()? refreshSuccess,
-    TResult Function(StorageError error)? refreshFailed,
-    TResult Function(Duration remainingTime)? refreshFreqLimited,
-    TResult Function()? sharingString,
-    TResult Function(String text)? shareStringSuccess,
-    TResult Function()? copyingTrack,
-    TResult Function(String trackNumber)? copyTrackSuccess,
-    TResult Function()? activating,
-    TResult Function()? activateSuccess,
-    TResult Function(StorageError error)? activateFailed,
+    TResult? Function()? initial,
+    TResult? Function()? deleting,
+    TResult? Function()? deleteSuccess,
+    TResult? Function(StorageError error)? deleteFailed,
+    TResult? Function()? markingAsRead,
+    TResult? Function()? markAsReadSuccess,
+    TResult? Function(StorageError error)? markAsReadFailed,
+    TResult? Function()? movingToActive,
+    TResult? Function()? moveToActiveSuccess,
+    TResult? Function(StorageError error)? moveToActiveFailed,
+    TResult? Function()? movingToArchive,
+    TResult? Function()? moveToArchiveSuccess,
+    TResult? Function(StorageError error)? moveToArchiveFailed,
+    TResult? Function()? refreshing,
+    TResult? Function()? refreshSuccess,
+    TResult? Function(StorageError error)? refreshFailed,
+    TResult? Function(Duration remainingTime)? refreshFreqLimited,
+    TResult? Function()? sharingString,
+    TResult? Function(String text)? shareStringSuccess,
+    TResult? Function()? copyingTrack,
+    TResult? Function(String trackNumber)? copyTrackSuccess,
+    TResult? Function()? activating,
+    TResult? Function()? activateSuccess,
+    TResult? Function(StorageError error)? activateFailed,
   }) {
     return refreshing?.call();
   }
@@ -4367,39 +4259,41 @@ class _$DetailsActionsStateRefreshing implements DetailsActionsStateRefreshing {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(DetailsActionsStateInitial value)? initial,
-    TResult Function(DetailsActionsStateDeleting value)? deleting,
-    TResult Function(DetailsActionsStateDeleteSuccess value)? deleteSuccess,
-    TResult Function(DetailsActionsStateDeleteFailed value)? deleteFailed,
-    TResult Function(DetailsActionsStateMarkingAsRead value)? markingAsRead,
-    TResult Function(DetailsActionsStateMarkAsReadSuccess value)?
+    TResult? Function(DetailsActionsStateInitial value)? initial,
+    TResult? Function(DetailsActionsStateDeleting value)? deleting,
+    TResult? Function(DetailsActionsStateDeleteSuccess value)? deleteSuccess,
+    TResult? Function(DetailsActionsStateDeleteFailed value)? deleteFailed,
+    TResult? Function(DetailsActionsStateMarkingAsRead value)? markingAsRead,
+    TResult? Function(DetailsActionsStateMarkAsReadSuccess value)?
         markAsReadSuccess,
-    TResult Function(DetailsActionsStateMarkAsReadFailed value)?
+    TResult? Function(DetailsActionsStateMarkAsReadFailed value)?
         markAsReadFailed,
-    TResult Function(DetailsActionsStateMovingToActive value)? movingToActive,
-    TResult Function(DetailsActionsStateMoveToActiveSuccess value)?
+    TResult? Function(DetailsActionsStateMovingToActive value)? movingToActive,
+    TResult? Function(DetailsActionsStateMoveToActiveSuccess value)?
         moveToActiveSuccess,
-    TResult Function(DetailsActionsStateMoveToActiveFailed value)?
+    TResult? Function(DetailsActionsStateMoveToActiveFailed value)?
         moveToActiveFailed,
-    TResult Function(DetailsActionsStateMovingToArchive value)? movingToArchive,
-    TResult Function(DetailsActionsStateMoveToArchiveSuccess value)?
+    TResult? Function(DetailsActionsStateMovingToArchive value)?
+        movingToArchive,
+    TResult? Function(DetailsActionsStateMoveToArchiveSuccess value)?
         moveToArchiveSuccess,
-    TResult Function(DetailsActionsStateMoveToArchiveFailed value)?
+    TResult? Function(DetailsActionsStateMoveToArchiveFailed value)?
         moveToArchiveFailed,
-    TResult Function(DetailsActionsStateRefreshing value)? refreshing,
-    TResult Function(DetailsActionsStateRefreshSuccess value)? refreshSuccess,
-    TResult Function(DetailsActionsStateRefreshFailed value)? refreshFailed,
-    TResult Function(DetailsActionsStateRefreshFreqLimited value)?
+    TResult? Function(DetailsActionsStateRefreshing value)? refreshing,
+    TResult? Function(DetailsActionsStateRefreshSuccess value)? refreshSuccess,
+    TResult? Function(DetailsActionsStateRefreshFailed value)? refreshFailed,
+    TResult? Function(DetailsActionsStateRefreshFreqLimited value)?
         refreshFreqLimited,
-    TResult Function(DetailsActionsStateSharingString value)? sharingString,
-    TResult Function(DetailsActionsStateShareStringSuccess value)?
+    TResult? Function(DetailsActionsStateSharingString value)? sharingString,
+    TResult? Function(DetailsActionsStateShareStringSuccess value)?
         shareStringSuccess,
-    TResult Function(DetailsActionsStateCopyingTrack value)? copyingTrack,
-    TResult Function(DetailsActionsStateCopyTrackSuccess value)?
+    TResult? Function(DetailsActionsStateCopyingTrack value)? copyingTrack,
+    TResult? Function(DetailsActionsStateCopyTrackSuccess value)?
         copyTrackSuccess,
-    TResult Function(DetailsActionsStateActivating value)? activating,
-    TResult Function(DetailsActionsStateActivateSuccess value)? activateSuccess,
-    TResult Function(DetailsActionsStateActivateFailed value)? activateFailed,
+    TResult? Function(DetailsActionsStateActivating value)? activating,
+    TResult? Function(DetailsActionsStateActivateSuccess value)?
+        activateSuccess,
+    TResult? Function(DetailsActionsStateActivateFailed value)? activateFailed,
   }) {
     return refreshing?.call(this);
   }
@@ -4451,36 +4345,33 @@ class _$DetailsActionsStateRefreshing implements DetailsActionsStateRefreshing {
 
 abstract class DetailsActionsStateRefreshing implements DetailsActionsState {
   const factory DetailsActionsStateRefreshing() =
-      _$DetailsActionsStateRefreshing;
+      _$DetailsActionsStateRefreshingImpl;
 }
 
 /// @nodoc
-abstract class $DetailsActionsStateRefreshSuccessCopyWith<$Res> {
-  factory $DetailsActionsStateRefreshSuccessCopyWith(
-          DetailsActionsStateRefreshSuccess value,
-          $Res Function(DetailsActionsStateRefreshSuccess) then) =
-      _$DetailsActionsStateRefreshSuccessCopyWithImpl<$Res>;
+abstract class _$$DetailsActionsStateRefreshSuccessImplCopyWith<$Res> {
+  factory _$$DetailsActionsStateRefreshSuccessImplCopyWith(
+          _$DetailsActionsStateRefreshSuccessImpl value,
+          $Res Function(_$DetailsActionsStateRefreshSuccessImpl) then) =
+      __$$DetailsActionsStateRefreshSuccessImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$DetailsActionsStateRefreshSuccessCopyWithImpl<$Res>
-    extends _$DetailsActionsStateCopyWithImpl<$Res>
-    implements $DetailsActionsStateRefreshSuccessCopyWith<$Res> {
-  _$DetailsActionsStateRefreshSuccessCopyWithImpl(
-      DetailsActionsStateRefreshSuccess _value,
-      $Res Function(DetailsActionsStateRefreshSuccess) _then)
-      : super(_value, (v) => _then(v as DetailsActionsStateRefreshSuccess));
-
-  @override
-  DetailsActionsStateRefreshSuccess get _value =>
-      super._value as DetailsActionsStateRefreshSuccess;
+class __$$DetailsActionsStateRefreshSuccessImplCopyWithImpl<$Res>
+    extends _$DetailsActionsStateCopyWithImpl<$Res,
+        _$DetailsActionsStateRefreshSuccessImpl>
+    implements _$$DetailsActionsStateRefreshSuccessImplCopyWith<$Res> {
+  __$$DetailsActionsStateRefreshSuccessImplCopyWithImpl(
+      _$DetailsActionsStateRefreshSuccessImpl _value,
+      $Res Function(_$DetailsActionsStateRefreshSuccessImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$DetailsActionsStateRefreshSuccess
+class _$DetailsActionsStateRefreshSuccessImpl
     implements DetailsActionsStateRefreshSuccess {
-  const _$DetailsActionsStateRefreshSuccess();
+  const _$DetailsActionsStateRefreshSuccessImpl();
 
   @override
   String toString() {
@@ -4488,9 +4379,10 @@ class _$DetailsActionsStateRefreshSuccess
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is DetailsActionsStateRefreshSuccess);
+        (other.runtimeType == runtimeType &&
+            other is _$DetailsActionsStateRefreshSuccessImpl);
   }
 
   @override
@@ -4530,30 +4422,30 @@ class _$DetailsActionsStateRefreshSuccess
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? deleting,
-    TResult Function()? deleteSuccess,
-    TResult Function(StorageError error)? deleteFailed,
-    TResult Function()? markingAsRead,
-    TResult Function()? markAsReadSuccess,
-    TResult Function(StorageError error)? markAsReadFailed,
-    TResult Function()? movingToActive,
-    TResult Function()? moveToActiveSuccess,
-    TResult Function(StorageError error)? moveToActiveFailed,
-    TResult Function()? movingToArchive,
-    TResult Function()? moveToArchiveSuccess,
-    TResult Function(StorageError error)? moveToArchiveFailed,
-    TResult Function()? refreshing,
-    TResult Function()? refreshSuccess,
-    TResult Function(StorageError error)? refreshFailed,
-    TResult Function(Duration remainingTime)? refreshFreqLimited,
-    TResult Function()? sharingString,
-    TResult Function(String text)? shareStringSuccess,
-    TResult Function()? copyingTrack,
-    TResult Function(String trackNumber)? copyTrackSuccess,
-    TResult Function()? activating,
-    TResult Function()? activateSuccess,
-    TResult Function(StorageError error)? activateFailed,
+    TResult? Function()? initial,
+    TResult? Function()? deleting,
+    TResult? Function()? deleteSuccess,
+    TResult? Function(StorageError error)? deleteFailed,
+    TResult? Function()? markingAsRead,
+    TResult? Function()? markAsReadSuccess,
+    TResult? Function(StorageError error)? markAsReadFailed,
+    TResult? Function()? movingToActive,
+    TResult? Function()? moveToActiveSuccess,
+    TResult? Function(StorageError error)? moveToActiveFailed,
+    TResult? Function()? movingToArchive,
+    TResult? Function()? moveToArchiveSuccess,
+    TResult? Function(StorageError error)? moveToArchiveFailed,
+    TResult? Function()? refreshing,
+    TResult? Function()? refreshSuccess,
+    TResult? Function(StorageError error)? refreshFailed,
+    TResult? Function(Duration remainingTime)? refreshFreqLimited,
+    TResult? Function()? sharingString,
+    TResult? Function(String text)? shareStringSuccess,
+    TResult? Function()? copyingTrack,
+    TResult? Function(String trackNumber)? copyTrackSuccess,
+    TResult? Function()? activating,
+    TResult? Function()? activateSuccess,
+    TResult? Function(StorageError error)? activateFailed,
   }) {
     return refreshSuccess?.call();
   }
@@ -4647,39 +4539,41 @@ class _$DetailsActionsStateRefreshSuccess
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(DetailsActionsStateInitial value)? initial,
-    TResult Function(DetailsActionsStateDeleting value)? deleting,
-    TResult Function(DetailsActionsStateDeleteSuccess value)? deleteSuccess,
-    TResult Function(DetailsActionsStateDeleteFailed value)? deleteFailed,
-    TResult Function(DetailsActionsStateMarkingAsRead value)? markingAsRead,
-    TResult Function(DetailsActionsStateMarkAsReadSuccess value)?
+    TResult? Function(DetailsActionsStateInitial value)? initial,
+    TResult? Function(DetailsActionsStateDeleting value)? deleting,
+    TResult? Function(DetailsActionsStateDeleteSuccess value)? deleteSuccess,
+    TResult? Function(DetailsActionsStateDeleteFailed value)? deleteFailed,
+    TResult? Function(DetailsActionsStateMarkingAsRead value)? markingAsRead,
+    TResult? Function(DetailsActionsStateMarkAsReadSuccess value)?
         markAsReadSuccess,
-    TResult Function(DetailsActionsStateMarkAsReadFailed value)?
+    TResult? Function(DetailsActionsStateMarkAsReadFailed value)?
         markAsReadFailed,
-    TResult Function(DetailsActionsStateMovingToActive value)? movingToActive,
-    TResult Function(DetailsActionsStateMoveToActiveSuccess value)?
+    TResult? Function(DetailsActionsStateMovingToActive value)? movingToActive,
+    TResult? Function(DetailsActionsStateMoveToActiveSuccess value)?
         moveToActiveSuccess,
-    TResult Function(DetailsActionsStateMoveToActiveFailed value)?
+    TResult? Function(DetailsActionsStateMoveToActiveFailed value)?
         moveToActiveFailed,
-    TResult Function(DetailsActionsStateMovingToArchive value)? movingToArchive,
-    TResult Function(DetailsActionsStateMoveToArchiveSuccess value)?
+    TResult? Function(DetailsActionsStateMovingToArchive value)?
+        movingToArchive,
+    TResult? Function(DetailsActionsStateMoveToArchiveSuccess value)?
         moveToArchiveSuccess,
-    TResult Function(DetailsActionsStateMoveToArchiveFailed value)?
+    TResult? Function(DetailsActionsStateMoveToArchiveFailed value)?
         moveToArchiveFailed,
-    TResult Function(DetailsActionsStateRefreshing value)? refreshing,
-    TResult Function(DetailsActionsStateRefreshSuccess value)? refreshSuccess,
-    TResult Function(DetailsActionsStateRefreshFailed value)? refreshFailed,
-    TResult Function(DetailsActionsStateRefreshFreqLimited value)?
+    TResult? Function(DetailsActionsStateRefreshing value)? refreshing,
+    TResult? Function(DetailsActionsStateRefreshSuccess value)? refreshSuccess,
+    TResult? Function(DetailsActionsStateRefreshFailed value)? refreshFailed,
+    TResult? Function(DetailsActionsStateRefreshFreqLimited value)?
         refreshFreqLimited,
-    TResult Function(DetailsActionsStateSharingString value)? sharingString,
-    TResult Function(DetailsActionsStateShareStringSuccess value)?
+    TResult? Function(DetailsActionsStateSharingString value)? sharingString,
+    TResult? Function(DetailsActionsStateShareStringSuccess value)?
         shareStringSuccess,
-    TResult Function(DetailsActionsStateCopyingTrack value)? copyingTrack,
-    TResult Function(DetailsActionsStateCopyTrackSuccess value)?
+    TResult? Function(DetailsActionsStateCopyingTrack value)? copyingTrack,
+    TResult? Function(DetailsActionsStateCopyTrackSuccess value)?
         copyTrackSuccess,
-    TResult Function(DetailsActionsStateActivating value)? activating,
-    TResult Function(DetailsActionsStateActivateSuccess value)? activateSuccess,
-    TResult Function(DetailsActionsStateActivateFailed value)? activateFailed,
+    TResult? Function(DetailsActionsStateActivating value)? activating,
+    TResult? Function(DetailsActionsStateActivateSuccess value)?
+        activateSuccess,
+    TResult? Function(DetailsActionsStateActivateFailed value)? activateFailed,
   }) {
     return refreshSuccess?.call(this);
   }
@@ -4732,39 +4626,38 @@ class _$DetailsActionsStateRefreshSuccess
 abstract class DetailsActionsStateRefreshSuccess
     implements DetailsActionsState {
   const factory DetailsActionsStateRefreshSuccess() =
-      _$DetailsActionsStateRefreshSuccess;
+      _$DetailsActionsStateRefreshSuccessImpl;
 }
 
 /// @nodoc
-abstract class $DetailsActionsStateRefreshFailedCopyWith<$Res> {
-  factory $DetailsActionsStateRefreshFailedCopyWith(
-          DetailsActionsStateRefreshFailed value,
-          $Res Function(DetailsActionsStateRefreshFailed) then) =
-      _$DetailsActionsStateRefreshFailedCopyWithImpl<$Res>;
+abstract class _$$DetailsActionsStateRefreshFailedImplCopyWith<$Res> {
+  factory _$$DetailsActionsStateRefreshFailedImplCopyWith(
+          _$DetailsActionsStateRefreshFailedImpl value,
+          $Res Function(_$DetailsActionsStateRefreshFailedImpl) then) =
+      __$$DetailsActionsStateRefreshFailedImplCopyWithImpl<$Res>;
+  @useResult
   $Res call({StorageError error});
 
   $StorageErrorCopyWith<$Res> get error;
 }
 
 /// @nodoc
-class _$DetailsActionsStateRefreshFailedCopyWithImpl<$Res>
-    extends _$DetailsActionsStateCopyWithImpl<$Res>
-    implements $DetailsActionsStateRefreshFailedCopyWith<$Res> {
-  _$DetailsActionsStateRefreshFailedCopyWithImpl(
-      DetailsActionsStateRefreshFailed _value,
-      $Res Function(DetailsActionsStateRefreshFailed) _then)
-      : super(_value, (v) => _then(v as DetailsActionsStateRefreshFailed));
+class __$$DetailsActionsStateRefreshFailedImplCopyWithImpl<$Res>
+    extends _$DetailsActionsStateCopyWithImpl<$Res,
+        _$DetailsActionsStateRefreshFailedImpl>
+    implements _$$DetailsActionsStateRefreshFailedImplCopyWith<$Res> {
+  __$$DetailsActionsStateRefreshFailedImplCopyWithImpl(
+      _$DetailsActionsStateRefreshFailedImpl _value,
+      $Res Function(_$DetailsActionsStateRefreshFailedImpl) _then)
+      : super(_value, _then);
 
-  @override
-  DetailsActionsStateRefreshFailed get _value =>
-      super._value as DetailsActionsStateRefreshFailed;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? error = freezed,
+    Object? error = null,
   }) {
-    return _then(DetailsActionsStateRefreshFailed(
-      error: error == freezed
+    return _then(_$DetailsActionsStateRefreshFailedImpl(
+      error: null == error
           ? _value.error
           : error // ignore: cast_nullable_to_non_nullable
               as StorageError,
@@ -4772,6 +4665,7 @@ class _$DetailsActionsStateRefreshFailedCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $StorageErrorCopyWith<$Res> get error {
     return $StorageErrorCopyWith<$Res>(_value.error, (value) {
       return _then(_value.copyWith(error: value));
@@ -4781,9 +4675,9 @@ class _$DetailsActionsStateRefreshFailedCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$DetailsActionsStateRefreshFailed
+class _$DetailsActionsStateRefreshFailedImpl
     implements DetailsActionsStateRefreshFailed {
-  const _$DetailsActionsStateRefreshFailed({required this.error});
+  const _$DetailsActionsStateRefreshFailedImpl({required this.error});
 
   @override
   final StorageError error;
@@ -4794,22 +4688,23 @@ class _$DetailsActionsStateRefreshFailed
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is DetailsActionsStateRefreshFailed &&
-            (identical(other.error, error) ||
-                const DeepCollectionEquality().equals(other.error, error)));
+        (other.runtimeType == runtimeType &&
+            other is _$DetailsActionsStateRefreshFailedImpl &&
+            (identical(other.error, error) || other.error == error));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(error);
+  int get hashCode => Object.hash(runtimeType, error);
 
   @JsonKey(ignore: true)
   @override
-  $DetailsActionsStateRefreshFailedCopyWith<DetailsActionsStateRefreshFailed>
-      get copyWith => _$DetailsActionsStateRefreshFailedCopyWithImpl<
-          DetailsActionsStateRefreshFailed>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$DetailsActionsStateRefreshFailedImplCopyWith<
+          _$DetailsActionsStateRefreshFailedImpl>
+      get copyWith => __$$DetailsActionsStateRefreshFailedImplCopyWithImpl<
+          _$DetailsActionsStateRefreshFailedImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -4845,30 +4740,30 @@ class _$DetailsActionsStateRefreshFailed
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? deleting,
-    TResult Function()? deleteSuccess,
-    TResult Function(StorageError error)? deleteFailed,
-    TResult Function()? markingAsRead,
-    TResult Function()? markAsReadSuccess,
-    TResult Function(StorageError error)? markAsReadFailed,
-    TResult Function()? movingToActive,
-    TResult Function()? moveToActiveSuccess,
-    TResult Function(StorageError error)? moveToActiveFailed,
-    TResult Function()? movingToArchive,
-    TResult Function()? moveToArchiveSuccess,
-    TResult Function(StorageError error)? moveToArchiveFailed,
-    TResult Function()? refreshing,
-    TResult Function()? refreshSuccess,
-    TResult Function(StorageError error)? refreshFailed,
-    TResult Function(Duration remainingTime)? refreshFreqLimited,
-    TResult Function()? sharingString,
-    TResult Function(String text)? shareStringSuccess,
-    TResult Function()? copyingTrack,
-    TResult Function(String trackNumber)? copyTrackSuccess,
-    TResult Function()? activating,
-    TResult Function()? activateSuccess,
-    TResult Function(StorageError error)? activateFailed,
+    TResult? Function()? initial,
+    TResult? Function()? deleting,
+    TResult? Function()? deleteSuccess,
+    TResult? Function(StorageError error)? deleteFailed,
+    TResult? Function()? markingAsRead,
+    TResult? Function()? markAsReadSuccess,
+    TResult? Function(StorageError error)? markAsReadFailed,
+    TResult? Function()? movingToActive,
+    TResult? Function()? moveToActiveSuccess,
+    TResult? Function(StorageError error)? moveToActiveFailed,
+    TResult? Function()? movingToArchive,
+    TResult? Function()? moveToArchiveSuccess,
+    TResult? Function(StorageError error)? moveToArchiveFailed,
+    TResult? Function()? refreshing,
+    TResult? Function()? refreshSuccess,
+    TResult? Function(StorageError error)? refreshFailed,
+    TResult? Function(Duration remainingTime)? refreshFreqLimited,
+    TResult? Function()? sharingString,
+    TResult? Function(String text)? shareStringSuccess,
+    TResult? Function()? copyingTrack,
+    TResult? Function(String trackNumber)? copyTrackSuccess,
+    TResult? Function()? activating,
+    TResult? Function()? activateSuccess,
+    TResult? Function(StorageError error)? activateFailed,
   }) {
     return refreshFailed?.call(error);
   }
@@ -4962,39 +4857,41 @@ class _$DetailsActionsStateRefreshFailed
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(DetailsActionsStateInitial value)? initial,
-    TResult Function(DetailsActionsStateDeleting value)? deleting,
-    TResult Function(DetailsActionsStateDeleteSuccess value)? deleteSuccess,
-    TResult Function(DetailsActionsStateDeleteFailed value)? deleteFailed,
-    TResult Function(DetailsActionsStateMarkingAsRead value)? markingAsRead,
-    TResult Function(DetailsActionsStateMarkAsReadSuccess value)?
+    TResult? Function(DetailsActionsStateInitial value)? initial,
+    TResult? Function(DetailsActionsStateDeleting value)? deleting,
+    TResult? Function(DetailsActionsStateDeleteSuccess value)? deleteSuccess,
+    TResult? Function(DetailsActionsStateDeleteFailed value)? deleteFailed,
+    TResult? Function(DetailsActionsStateMarkingAsRead value)? markingAsRead,
+    TResult? Function(DetailsActionsStateMarkAsReadSuccess value)?
         markAsReadSuccess,
-    TResult Function(DetailsActionsStateMarkAsReadFailed value)?
+    TResult? Function(DetailsActionsStateMarkAsReadFailed value)?
         markAsReadFailed,
-    TResult Function(DetailsActionsStateMovingToActive value)? movingToActive,
-    TResult Function(DetailsActionsStateMoveToActiveSuccess value)?
+    TResult? Function(DetailsActionsStateMovingToActive value)? movingToActive,
+    TResult? Function(DetailsActionsStateMoveToActiveSuccess value)?
         moveToActiveSuccess,
-    TResult Function(DetailsActionsStateMoveToActiveFailed value)?
+    TResult? Function(DetailsActionsStateMoveToActiveFailed value)?
         moveToActiveFailed,
-    TResult Function(DetailsActionsStateMovingToArchive value)? movingToArchive,
-    TResult Function(DetailsActionsStateMoveToArchiveSuccess value)?
+    TResult? Function(DetailsActionsStateMovingToArchive value)?
+        movingToArchive,
+    TResult? Function(DetailsActionsStateMoveToArchiveSuccess value)?
         moveToArchiveSuccess,
-    TResult Function(DetailsActionsStateMoveToArchiveFailed value)?
+    TResult? Function(DetailsActionsStateMoveToArchiveFailed value)?
         moveToArchiveFailed,
-    TResult Function(DetailsActionsStateRefreshing value)? refreshing,
-    TResult Function(DetailsActionsStateRefreshSuccess value)? refreshSuccess,
-    TResult Function(DetailsActionsStateRefreshFailed value)? refreshFailed,
-    TResult Function(DetailsActionsStateRefreshFreqLimited value)?
+    TResult? Function(DetailsActionsStateRefreshing value)? refreshing,
+    TResult? Function(DetailsActionsStateRefreshSuccess value)? refreshSuccess,
+    TResult? Function(DetailsActionsStateRefreshFailed value)? refreshFailed,
+    TResult? Function(DetailsActionsStateRefreshFreqLimited value)?
         refreshFreqLimited,
-    TResult Function(DetailsActionsStateSharingString value)? sharingString,
-    TResult Function(DetailsActionsStateShareStringSuccess value)?
+    TResult? Function(DetailsActionsStateSharingString value)? sharingString,
+    TResult? Function(DetailsActionsStateShareStringSuccess value)?
         shareStringSuccess,
-    TResult Function(DetailsActionsStateCopyingTrack value)? copyingTrack,
-    TResult Function(DetailsActionsStateCopyTrackSuccess value)?
+    TResult? Function(DetailsActionsStateCopyingTrack value)? copyingTrack,
+    TResult? Function(DetailsActionsStateCopyTrackSuccess value)?
         copyTrackSuccess,
-    TResult Function(DetailsActionsStateActivating value)? activating,
-    TResult Function(DetailsActionsStateActivateSuccess value)? activateSuccess,
-    TResult Function(DetailsActionsStateActivateFailed value)? activateFailed,
+    TResult? Function(DetailsActionsStateActivating value)? activating,
+    TResult? Function(DetailsActionsStateActivateSuccess value)?
+        activateSuccess,
+    TResult? Function(DetailsActionsStateActivateFailed value)? activateFailed,
   }) {
     return refreshFailed?.call(this);
   }
@@ -5046,42 +4943,43 @@ class _$DetailsActionsStateRefreshFailed
 
 abstract class DetailsActionsStateRefreshFailed implements DetailsActionsState {
   const factory DetailsActionsStateRefreshFailed(
-      {required StorageError error}) = _$DetailsActionsStateRefreshFailed;
+          {required final StorageError error}) =
+      _$DetailsActionsStateRefreshFailedImpl;
 
-  StorageError get error => throw _privateConstructorUsedError;
+  StorageError get error;
   @JsonKey(ignore: true)
-  $DetailsActionsStateRefreshFailedCopyWith<DetailsActionsStateRefreshFailed>
+  _$$DetailsActionsStateRefreshFailedImplCopyWith<
+          _$DetailsActionsStateRefreshFailedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $DetailsActionsStateRefreshFreqLimitedCopyWith<$Res> {
-  factory $DetailsActionsStateRefreshFreqLimitedCopyWith(
-          DetailsActionsStateRefreshFreqLimited value,
-          $Res Function(DetailsActionsStateRefreshFreqLimited) then) =
-      _$DetailsActionsStateRefreshFreqLimitedCopyWithImpl<$Res>;
+abstract class _$$DetailsActionsStateRefreshFreqLimitedImplCopyWith<$Res> {
+  factory _$$DetailsActionsStateRefreshFreqLimitedImplCopyWith(
+          _$DetailsActionsStateRefreshFreqLimitedImpl value,
+          $Res Function(_$DetailsActionsStateRefreshFreqLimitedImpl) then) =
+      __$$DetailsActionsStateRefreshFreqLimitedImplCopyWithImpl<$Res>;
+  @useResult
   $Res call({Duration remainingTime});
 }
 
 /// @nodoc
-class _$DetailsActionsStateRefreshFreqLimitedCopyWithImpl<$Res>
-    extends _$DetailsActionsStateCopyWithImpl<$Res>
-    implements $DetailsActionsStateRefreshFreqLimitedCopyWith<$Res> {
-  _$DetailsActionsStateRefreshFreqLimitedCopyWithImpl(
-      DetailsActionsStateRefreshFreqLimited _value,
-      $Res Function(DetailsActionsStateRefreshFreqLimited) _then)
-      : super(_value, (v) => _then(v as DetailsActionsStateRefreshFreqLimited));
+class __$$DetailsActionsStateRefreshFreqLimitedImplCopyWithImpl<$Res>
+    extends _$DetailsActionsStateCopyWithImpl<$Res,
+        _$DetailsActionsStateRefreshFreqLimitedImpl>
+    implements _$$DetailsActionsStateRefreshFreqLimitedImplCopyWith<$Res> {
+  __$$DetailsActionsStateRefreshFreqLimitedImplCopyWithImpl(
+      _$DetailsActionsStateRefreshFreqLimitedImpl _value,
+      $Res Function(_$DetailsActionsStateRefreshFreqLimitedImpl) _then)
+      : super(_value, _then);
 
-  @override
-  DetailsActionsStateRefreshFreqLimited get _value =>
-      super._value as DetailsActionsStateRefreshFreqLimited;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? remainingTime = freezed,
+    Object? remainingTime = null,
   }) {
-    return _then(DetailsActionsStateRefreshFreqLimited(
-      remainingTime: remainingTime == freezed
+    return _then(_$DetailsActionsStateRefreshFreqLimitedImpl(
+      remainingTime: null == remainingTime
           ? _value.remainingTime
           : remainingTime // ignore: cast_nullable_to_non_nullable
               as Duration,
@@ -5091,9 +4989,10 @@ class _$DetailsActionsStateRefreshFreqLimitedCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$DetailsActionsStateRefreshFreqLimited
+class _$DetailsActionsStateRefreshFreqLimitedImpl
     implements DetailsActionsStateRefreshFreqLimited {
-  const _$DetailsActionsStateRefreshFreqLimited({required this.remainingTime});
+  const _$DetailsActionsStateRefreshFreqLimitedImpl(
+      {required this.remainingTime});
 
   @override
   final Duration remainingTime;
@@ -5104,24 +5003,24 @@ class _$DetailsActionsStateRefreshFreqLimited
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is DetailsActionsStateRefreshFreqLimited &&
+        (other.runtimeType == runtimeType &&
+            other is _$DetailsActionsStateRefreshFreqLimitedImpl &&
             (identical(other.remainingTime, remainingTime) ||
-                const DeepCollectionEquality()
-                    .equals(other.remainingTime, remainingTime)));
+                other.remainingTime == remainingTime));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(remainingTime);
+  int get hashCode => Object.hash(runtimeType, remainingTime);
 
   @JsonKey(ignore: true)
   @override
-  $DetailsActionsStateRefreshFreqLimitedCopyWith<
-          DetailsActionsStateRefreshFreqLimited>
-      get copyWith => _$DetailsActionsStateRefreshFreqLimitedCopyWithImpl<
-          DetailsActionsStateRefreshFreqLimited>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$DetailsActionsStateRefreshFreqLimitedImplCopyWith<
+          _$DetailsActionsStateRefreshFreqLimitedImpl>
+      get copyWith => __$$DetailsActionsStateRefreshFreqLimitedImplCopyWithImpl<
+          _$DetailsActionsStateRefreshFreqLimitedImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -5157,30 +5056,30 @@ class _$DetailsActionsStateRefreshFreqLimited
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? deleting,
-    TResult Function()? deleteSuccess,
-    TResult Function(StorageError error)? deleteFailed,
-    TResult Function()? markingAsRead,
-    TResult Function()? markAsReadSuccess,
-    TResult Function(StorageError error)? markAsReadFailed,
-    TResult Function()? movingToActive,
-    TResult Function()? moveToActiveSuccess,
-    TResult Function(StorageError error)? moveToActiveFailed,
-    TResult Function()? movingToArchive,
-    TResult Function()? moveToArchiveSuccess,
-    TResult Function(StorageError error)? moveToArchiveFailed,
-    TResult Function()? refreshing,
-    TResult Function()? refreshSuccess,
-    TResult Function(StorageError error)? refreshFailed,
-    TResult Function(Duration remainingTime)? refreshFreqLimited,
-    TResult Function()? sharingString,
-    TResult Function(String text)? shareStringSuccess,
-    TResult Function()? copyingTrack,
-    TResult Function(String trackNumber)? copyTrackSuccess,
-    TResult Function()? activating,
-    TResult Function()? activateSuccess,
-    TResult Function(StorageError error)? activateFailed,
+    TResult? Function()? initial,
+    TResult? Function()? deleting,
+    TResult? Function()? deleteSuccess,
+    TResult? Function(StorageError error)? deleteFailed,
+    TResult? Function()? markingAsRead,
+    TResult? Function()? markAsReadSuccess,
+    TResult? Function(StorageError error)? markAsReadFailed,
+    TResult? Function()? movingToActive,
+    TResult? Function()? moveToActiveSuccess,
+    TResult? Function(StorageError error)? moveToActiveFailed,
+    TResult? Function()? movingToArchive,
+    TResult? Function()? moveToArchiveSuccess,
+    TResult? Function(StorageError error)? moveToArchiveFailed,
+    TResult? Function()? refreshing,
+    TResult? Function()? refreshSuccess,
+    TResult? Function(StorageError error)? refreshFailed,
+    TResult? Function(Duration remainingTime)? refreshFreqLimited,
+    TResult? Function()? sharingString,
+    TResult? Function(String text)? shareStringSuccess,
+    TResult? Function()? copyingTrack,
+    TResult? Function(String trackNumber)? copyTrackSuccess,
+    TResult? Function()? activating,
+    TResult? Function()? activateSuccess,
+    TResult? Function(StorageError error)? activateFailed,
   }) {
     return refreshFreqLimited?.call(remainingTime);
   }
@@ -5274,39 +5173,41 @@ class _$DetailsActionsStateRefreshFreqLimited
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(DetailsActionsStateInitial value)? initial,
-    TResult Function(DetailsActionsStateDeleting value)? deleting,
-    TResult Function(DetailsActionsStateDeleteSuccess value)? deleteSuccess,
-    TResult Function(DetailsActionsStateDeleteFailed value)? deleteFailed,
-    TResult Function(DetailsActionsStateMarkingAsRead value)? markingAsRead,
-    TResult Function(DetailsActionsStateMarkAsReadSuccess value)?
+    TResult? Function(DetailsActionsStateInitial value)? initial,
+    TResult? Function(DetailsActionsStateDeleting value)? deleting,
+    TResult? Function(DetailsActionsStateDeleteSuccess value)? deleteSuccess,
+    TResult? Function(DetailsActionsStateDeleteFailed value)? deleteFailed,
+    TResult? Function(DetailsActionsStateMarkingAsRead value)? markingAsRead,
+    TResult? Function(DetailsActionsStateMarkAsReadSuccess value)?
         markAsReadSuccess,
-    TResult Function(DetailsActionsStateMarkAsReadFailed value)?
+    TResult? Function(DetailsActionsStateMarkAsReadFailed value)?
         markAsReadFailed,
-    TResult Function(DetailsActionsStateMovingToActive value)? movingToActive,
-    TResult Function(DetailsActionsStateMoveToActiveSuccess value)?
+    TResult? Function(DetailsActionsStateMovingToActive value)? movingToActive,
+    TResult? Function(DetailsActionsStateMoveToActiveSuccess value)?
         moveToActiveSuccess,
-    TResult Function(DetailsActionsStateMoveToActiveFailed value)?
+    TResult? Function(DetailsActionsStateMoveToActiveFailed value)?
         moveToActiveFailed,
-    TResult Function(DetailsActionsStateMovingToArchive value)? movingToArchive,
-    TResult Function(DetailsActionsStateMoveToArchiveSuccess value)?
+    TResult? Function(DetailsActionsStateMovingToArchive value)?
+        movingToArchive,
+    TResult? Function(DetailsActionsStateMoveToArchiveSuccess value)?
         moveToArchiveSuccess,
-    TResult Function(DetailsActionsStateMoveToArchiveFailed value)?
+    TResult? Function(DetailsActionsStateMoveToArchiveFailed value)?
         moveToArchiveFailed,
-    TResult Function(DetailsActionsStateRefreshing value)? refreshing,
-    TResult Function(DetailsActionsStateRefreshSuccess value)? refreshSuccess,
-    TResult Function(DetailsActionsStateRefreshFailed value)? refreshFailed,
-    TResult Function(DetailsActionsStateRefreshFreqLimited value)?
+    TResult? Function(DetailsActionsStateRefreshing value)? refreshing,
+    TResult? Function(DetailsActionsStateRefreshSuccess value)? refreshSuccess,
+    TResult? Function(DetailsActionsStateRefreshFailed value)? refreshFailed,
+    TResult? Function(DetailsActionsStateRefreshFreqLimited value)?
         refreshFreqLimited,
-    TResult Function(DetailsActionsStateSharingString value)? sharingString,
-    TResult Function(DetailsActionsStateShareStringSuccess value)?
+    TResult? Function(DetailsActionsStateSharingString value)? sharingString,
+    TResult? Function(DetailsActionsStateShareStringSuccess value)?
         shareStringSuccess,
-    TResult Function(DetailsActionsStateCopyingTrack value)? copyingTrack,
-    TResult Function(DetailsActionsStateCopyTrackSuccess value)?
+    TResult? Function(DetailsActionsStateCopyingTrack value)? copyingTrack,
+    TResult? Function(DetailsActionsStateCopyTrackSuccess value)?
         copyTrackSuccess,
-    TResult Function(DetailsActionsStateActivating value)? activating,
-    TResult Function(DetailsActionsStateActivateSuccess value)? activateSuccess,
-    TResult Function(DetailsActionsStateActivateFailed value)? activateFailed,
+    TResult? Function(DetailsActionsStateActivating value)? activating,
+    TResult? Function(DetailsActionsStateActivateSuccess value)?
+        activateSuccess,
+    TResult? Function(DetailsActionsStateActivateFailed value)? activateFailed,
   }) {
     return refreshFreqLimited?.call(this);
   }
@@ -5359,43 +5260,40 @@ class _$DetailsActionsStateRefreshFreqLimited
 abstract class DetailsActionsStateRefreshFreqLimited
     implements DetailsActionsState {
   const factory DetailsActionsStateRefreshFreqLimited(
-          {required Duration remainingTime}) =
-      _$DetailsActionsStateRefreshFreqLimited;
+          {required final Duration remainingTime}) =
+      _$DetailsActionsStateRefreshFreqLimitedImpl;
 
-  Duration get remainingTime => throw _privateConstructorUsedError;
+  Duration get remainingTime;
   @JsonKey(ignore: true)
-  $DetailsActionsStateRefreshFreqLimitedCopyWith<
-          DetailsActionsStateRefreshFreqLimited>
+  _$$DetailsActionsStateRefreshFreqLimitedImplCopyWith<
+          _$DetailsActionsStateRefreshFreqLimitedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $DetailsActionsStateSharingStringCopyWith<$Res> {
-  factory $DetailsActionsStateSharingStringCopyWith(
-          DetailsActionsStateSharingString value,
-          $Res Function(DetailsActionsStateSharingString) then) =
-      _$DetailsActionsStateSharingStringCopyWithImpl<$Res>;
+abstract class _$$DetailsActionsStateSharingStringImplCopyWith<$Res> {
+  factory _$$DetailsActionsStateSharingStringImplCopyWith(
+          _$DetailsActionsStateSharingStringImpl value,
+          $Res Function(_$DetailsActionsStateSharingStringImpl) then) =
+      __$$DetailsActionsStateSharingStringImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$DetailsActionsStateSharingStringCopyWithImpl<$Res>
-    extends _$DetailsActionsStateCopyWithImpl<$Res>
-    implements $DetailsActionsStateSharingStringCopyWith<$Res> {
-  _$DetailsActionsStateSharingStringCopyWithImpl(
-      DetailsActionsStateSharingString _value,
-      $Res Function(DetailsActionsStateSharingString) _then)
-      : super(_value, (v) => _then(v as DetailsActionsStateSharingString));
-
-  @override
-  DetailsActionsStateSharingString get _value =>
-      super._value as DetailsActionsStateSharingString;
+class __$$DetailsActionsStateSharingStringImplCopyWithImpl<$Res>
+    extends _$DetailsActionsStateCopyWithImpl<$Res,
+        _$DetailsActionsStateSharingStringImpl>
+    implements _$$DetailsActionsStateSharingStringImplCopyWith<$Res> {
+  __$$DetailsActionsStateSharingStringImplCopyWithImpl(
+      _$DetailsActionsStateSharingStringImpl _value,
+      $Res Function(_$DetailsActionsStateSharingStringImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$DetailsActionsStateSharingString
+class _$DetailsActionsStateSharingStringImpl
     implements DetailsActionsStateSharingString {
-  const _$DetailsActionsStateSharingString();
+  const _$DetailsActionsStateSharingStringImpl();
 
   @override
   String toString() {
@@ -5403,9 +5301,10 @@ class _$DetailsActionsStateSharingString
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is DetailsActionsStateSharingString);
+        (other.runtimeType == runtimeType &&
+            other is _$DetailsActionsStateSharingStringImpl);
   }
 
   @override
@@ -5445,30 +5344,30 @@ class _$DetailsActionsStateSharingString
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? deleting,
-    TResult Function()? deleteSuccess,
-    TResult Function(StorageError error)? deleteFailed,
-    TResult Function()? markingAsRead,
-    TResult Function()? markAsReadSuccess,
-    TResult Function(StorageError error)? markAsReadFailed,
-    TResult Function()? movingToActive,
-    TResult Function()? moveToActiveSuccess,
-    TResult Function(StorageError error)? moveToActiveFailed,
-    TResult Function()? movingToArchive,
-    TResult Function()? moveToArchiveSuccess,
-    TResult Function(StorageError error)? moveToArchiveFailed,
-    TResult Function()? refreshing,
-    TResult Function()? refreshSuccess,
-    TResult Function(StorageError error)? refreshFailed,
-    TResult Function(Duration remainingTime)? refreshFreqLimited,
-    TResult Function()? sharingString,
-    TResult Function(String text)? shareStringSuccess,
-    TResult Function()? copyingTrack,
-    TResult Function(String trackNumber)? copyTrackSuccess,
-    TResult Function()? activating,
-    TResult Function()? activateSuccess,
-    TResult Function(StorageError error)? activateFailed,
+    TResult? Function()? initial,
+    TResult? Function()? deleting,
+    TResult? Function()? deleteSuccess,
+    TResult? Function(StorageError error)? deleteFailed,
+    TResult? Function()? markingAsRead,
+    TResult? Function()? markAsReadSuccess,
+    TResult? Function(StorageError error)? markAsReadFailed,
+    TResult? Function()? movingToActive,
+    TResult? Function()? moveToActiveSuccess,
+    TResult? Function(StorageError error)? moveToActiveFailed,
+    TResult? Function()? movingToArchive,
+    TResult? Function()? moveToArchiveSuccess,
+    TResult? Function(StorageError error)? moveToArchiveFailed,
+    TResult? Function()? refreshing,
+    TResult? Function()? refreshSuccess,
+    TResult? Function(StorageError error)? refreshFailed,
+    TResult? Function(Duration remainingTime)? refreshFreqLimited,
+    TResult? Function()? sharingString,
+    TResult? Function(String text)? shareStringSuccess,
+    TResult? Function()? copyingTrack,
+    TResult? Function(String trackNumber)? copyTrackSuccess,
+    TResult? Function()? activating,
+    TResult? Function()? activateSuccess,
+    TResult? Function(StorageError error)? activateFailed,
   }) {
     return sharingString?.call();
   }
@@ -5562,39 +5461,41 @@ class _$DetailsActionsStateSharingString
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(DetailsActionsStateInitial value)? initial,
-    TResult Function(DetailsActionsStateDeleting value)? deleting,
-    TResult Function(DetailsActionsStateDeleteSuccess value)? deleteSuccess,
-    TResult Function(DetailsActionsStateDeleteFailed value)? deleteFailed,
-    TResult Function(DetailsActionsStateMarkingAsRead value)? markingAsRead,
-    TResult Function(DetailsActionsStateMarkAsReadSuccess value)?
+    TResult? Function(DetailsActionsStateInitial value)? initial,
+    TResult? Function(DetailsActionsStateDeleting value)? deleting,
+    TResult? Function(DetailsActionsStateDeleteSuccess value)? deleteSuccess,
+    TResult? Function(DetailsActionsStateDeleteFailed value)? deleteFailed,
+    TResult? Function(DetailsActionsStateMarkingAsRead value)? markingAsRead,
+    TResult? Function(DetailsActionsStateMarkAsReadSuccess value)?
         markAsReadSuccess,
-    TResult Function(DetailsActionsStateMarkAsReadFailed value)?
+    TResult? Function(DetailsActionsStateMarkAsReadFailed value)?
         markAsReadFailed,
-    TResult Function(DetailsActionsStateMovingToActive value)? movingToActive,
-    TResult Function(DetailsActionsStateMoveToActiveSuccess value)?
+    TResult? Function(DetailsActionsStateMovingToActive value)? movingToActive,
+    TResult? Function(DetailsActionsStateMoveToActiveSuccess value)?
         moveToActiveSuccess,
-    TResult Function(DetailsActionsStateMoveToActiveFailed value)?
+    TResult? Function(DetailsActionsStateMoveToActiveFailed value)?
         moveToActiveFailed,
-    TResult Function(DetailsActionsStateMovingToArchive value)? movingToArchive,
-    TResult Function(DetailsActionsStateMoveToArchiveSuccess value)?
+    TResult? Function(DetailsActionsStateMovingToArchive value)?
+        movingToArchive,
+    TResult? Function(DetailsActionsStateMoveToArchiveSuccess value)?
         moveToArchiveSuccess,
-    TResult Function(DetailsActionsStateMoveToArchiveFailed value)?
+    TResult? Function(DetailsActionsStateMoveToArchiveFailed value)?
         moveToArchiveFailed,
-    TResult Function(DetailsActionsStateRefreshing value)? refreshing,
-    TResult Function(DetailsActionsStateRefreshSuccess value)? refreshSuccess,
-    TResult Function(DetailsActionsStateRefreshFailed value)? refreshFailed,
-    TResult Function(DetailsActionsStateRefreshFreqLimited value)?
+    TResult? Function(DetailsActionsStateRefreshing value)? refreshing,
+    TResult? Function(DetailsActionsStateRefreshSuccess value)? refreshSuccess,
+    TResult? Function(DetailsActionsStateRefreshFailed value)? refreshFailed,
+    TResult? Function(DetailsActionsStateRefreshFreqLimited value)?
         refreshFreqLimited,
-    TResult Function(DetailsActionsStateSharingString value)? sharingString,
-    TResult Function(DetailsActionsStateShareStringSuccess value)?
+    TResult? Function(DetailsActionsStateSharingString value)? sharingString,
+    TResult? Function(DetailsActionsStateShareStringSuccess value)?
         shareStringSuccess,
-    TResult Function(DetailsActionsStateCopyingTrack value)? copyingTrack,
-    TResult Function(DetailsActionsStateCopyTrackSuccess value)?
+    TResult? Function(DetailsActionsStateCopyingTrack value)? copyingTrack,
+    TResult? Function(DetailsActionsStateCopyTrackSuccess value)?
         copyTrackSuccess,
-    TResult Function(DetailsActionsStateActivating value)? activating,
-    TResult Function(DetailsActionsStateActivateSuccess value)? activateSuccess,
-    TResult Function(DetailsActionsStateActivateFailed value)? activateFailed,
+    TResult? Function(DetailsActionsStateActivating value)? activating,
+    TResult? Function(DetailsActionsStateActivateSuccess value)?
+        activateSuccess,
+    TResult? Function(DetailsActionsStateActivateFailed value)? activateFailed,
   }) {
     return sharingString?.call(this);
   }
@@ -5646,37 +5547,36 @@ class _$DetailsActionsStateSharingString
 
 abstract class DetailsActionsStateSharingString implements DetailsActionsState {
   const factory DetailsActionsStateSharingString() =
-      _$DetailsActionsStateSharingString;
+      _$DetailsActionsStateSharingStringImpl;
 }
 
 /// @nodoc
-abstract class $DetailsActionsStateShareStringSuccessCopyWith<$Res> {
-  factory $DetailsActionsStateShareStringSuccessCopyWith(
-          DetailsActionsStateShareStringSuccess value,
-          $Res Function(DetailsActionsStateShareStringSuccess) then) =
-      _$DetailsActionsStateShareStringSuccessCopyWithImpl<$Res>;
+abstract class _$$DetailsActionsStateShareStringSuccessImplCopyWith<$Res> {
+  factory _$$DetailsActionsStateShareStringSuccessImplCopyWith(
+          _$DetailsActionsStateShareStringSuccessImpl value,
+          $Res Function(_$DetailsActionsStateShareStringSuccessImpl) then) =
+      __$$DetailsActionsStateShareStringSuccessImplCopyWithImpl<$Res>;
+  @useResult
   $Res call({String text});
 }
 
 /// @nodoc
-class _$DetailsActionsStateShareStringSuccessCopyWithImpl<$Res>
-    extends _$DetailsActionsStateCopyWithImpl<$Res>
-    implements $DetailsActionsStateShareStringSuccessCopyWith<$Res> {
-  _$DetailsActionsStateShareStringSuccessCopyWithImpl(
-      DetailsActionsStateShareStringSuccess _value,
-      $Res Function(DetailsActionsStateShareStringSuccess) _then)
-      : super(_value, (v) => _then(v as DetailsActionsStateShareStringSuccess));
+class __$$DetailsActionsStateShareStringSuccessImplCopyWithImpl<$Res>
+    extends _$DetailsActionsStateCopyWithImpl<$Res,
+        _$DetailsActionsStateShareStringSuccessImpl>
+    implements _$$DetailsActionsStateShareStringSuccessImplCopyWith<$Res> {
+  __$$DetailsActionsStateShareStringSuccessImplCopyWithImpl(
+      _$DetailsActionsStateShareStringSuccessImpl _value,
+      $Res Function(_$DetailsActionsStateShareStringSuccessImpl) _then)
+      : super(_value, _then);
 
-  @override
-  DetailsActionsStateShareStringSuccess get _value =>
-      super._value as DetailsActionsStateShareStringSuccess;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? text = freezed,
+    Object? text = null,
   }) {
-    return _then(DetailsActionsStateShareStringSuccess(
-      text: text == freezed
+    return _then(_$DetailsActionsStateShareStringSuccessImpl(
+      text: null == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
               as String,
@@ -5686,9 +5586,9 @@ class _$DetailsActionsStateShareStringSuccessCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$DetailsActionsStateShareStringSuccess
+class _$DetailsActionsStateShareStringSuccessImpl
     implements DetailsActionsStateShareStringSuccess {
-  const _$DetailsActionsStateShareStringSuccess({required this.text});
+  const _$DetailsActionsStateShareStringSuccessImpl({required this.text});
 
   @override
   final String text;
@@ -5699,23 +5599,23 @@ class _$DetailsActionsStateShareStringSuccess
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is DetailsActionsStateShareStringSuccess &&
-            (identical(other.text, text) ||
-                const DeepCollectionEquality().equals(other.text, text)));
+        (other.runtimeType == runtimeType &&
+            other is _$DetailsActionsStateShareStringSuccessImpl &&
+            (identical(other.text, text) || other.text == text));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(text);
+  int get hashCode => Object.hash(runtimeType, text);
 
   @JsonKey(ignore: true)
   @override
-  $DetailsActionsStateShareStringSuccessCopyWith<
-          DetailsActionsStateShareStringSuccess>
-      get copyWith => _$DetailsActionsStateShareStringSuccessCopyWithImpl<
-          DetailsActionsStateShareStringSuccess>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$DetailsActionsStateShareStringSuccessImplCopyWith<
+          _$DetailsActionsStateShareStringSuccessImpl>
+      get copyWith => __$$DetailsActionsStateShareStringSuccessImplCopyWithImpl<
+          _$DetailsActionsStateShareStringSuccessImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -5751,30 +5651,30 @@ class _$DetailsActionsStateShareStringSuccess
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? deleting,
-    TResult Function()? deleteSuccess,
-    TResult Function(StorageError error)? deleteFailed,
-    TResult Function()? markingAsRead,
-    TResult Function()? markAsReadSuccess,
-    TResult Function(StorageError error)? markAsReadFailed,
-    TResult Function()? movingToActive,
-    TResult Function()? moveToActiveSuccess,
-    TResult Function(StorageError error)? moveToActiveFailed,
-    TResult Function()? movingToArchive,
-    TResult Function()? moveToArchiveSuccess,
-    TResult Function(StorageError error)? moveToArchiveFailed,
-    TResult Function()? refreshing,
-    TResult Function()? refreshSuccess,
-    TResult Function(StorageError error)? refreshFailed,
-    TResult Function(Duration remainingTime)? refreshFreqLimited,
-    TResult Function()? sharingString,
-    TResult Function(String text)? shareStringSuccess,
-    TResult Function()? copyingTrack,
-    TResult Function(String trackNumber)? copyTrackSuccess,
-    TResult Function()? activating,
-    TResult Function()? activateSuccess,
-    TResult Function(StorageError error)? activateFailed,
+    TResult? Function()? initial,
+    TResult? Function()? deleting,
+    TResult? Function()? deleteSuccess,
+    TResult? Function(StorageError error)? deleteFailed,
+    TResult? Function()? markingAsRead,
+    TResult? Function()? markAsReadSuccess,
+    TResult? Function(StorageError error)? markAsReadFailed,
+    TResult? Function()? movingToActive,
+    TResult? Function()? moveToActiveSuccess,
+    TResult? Function(StorageError error)? moveToActiveFailed,
+    TResult? Function()? movingToArchive,
+    TResult? Function()? moveToArchiveSuccess,
+    TResult? Function(StorageError error)? moveToArchiveFailed,
+    TResult? Function()? refreshing,
+    TResult? Function()? refreshSuccess,
+    TResult? Function(StorageError error)? refreshFailed,
+    TResult? Function(Duration remainingTime)? refreshFreqLimited,
+    TResult? Function()? sharingString,
+    TResult? Function(String text)? shareStringSuccess,
+    TResult? Function()? copyingTrack,
+    TResult? Function(String trackNumber)? copyTrackSuccess,
+    TResult? Function()? activating,
+    TResult? Function()? activateSuccess,
+    TResult? Function(StorageError error)? activateFailed,
   }) {
     return shareStringSuccess?.call(text);
   }
@@ -5868,39 +5768,41 @@ class _$DetailsActionsStateShareStringSuccess
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(DetailsActionsStateInitial value)? initial,
-    TResult Function(DetailsActionsStateDeleting value)? deleting,
-    TResult Function(DetailsActionsStateDeleteSuccess value)? deleteSuccess,
-    TResult Function(DetailsActionsStateDeleteFailed value)? deleteFailed,
-    TResult Function(DetailsActionsStateMarkingAsRead value)? markingAsRead,
-    TResult Function(DetailsActionsStateMarkAsReadSuccess value)?
+    TResult? Function(DetailsActionsStateInitial value)? initial,
+    TResult? Function(DetailsActionsStateDeleting value)? deleting,
+    TResult? Function(DetailsActionsStateDeleteSuccess value)? deleteSuccess,
+    TResult? Function(DetailsActionsStateDeleteFailed value)? deleteFailed,
+    TResult? Function(DetailsActionsStateMarkingAsRead value)? markingAsRead,
+    TResult? Function(DetailsActionsStateMarkAsReadSuccess value)?
         markAsReadSuccess,
-    TResult Function(DetailsActionsStateMarkAsReadFailed value)?
+    TResult? Function(DetailsActionsStateMarkAsReadFailed value)?
         markAsReadFailed,
-    TResult Function(DetailsActionsStateMovingToActive value)? movingToActive,
-    TResult Function(DetailsActionsStateMoveToActiveSuccess value)?
+    TResult? Function(DetailsActionsStateMovingToActive value)? movingToActive,
+    TResult? Function(DetailsActionsStateMoveToActiveSuccess value)?
         moveToActiveSuccess,
-    TResult Function(DetailsActionsStateMoveToActiveFailed value)?
+    TResult? Function(DetailsActionsStateMoveToActiveFailed value)?
         moveToActiveFailed,
-    TResult Function(DetailsActionsStateMovingToArchive value)? movingToArchive,
-    TResult Function(DetailsActionsStateMoveToArchiveSuccess value)?
+    TResult? Function(DetailsActionsStateMovingToArchive value)?
+        movingToArchive,
+    TResult? Function(DetailsActionsStateMoveToArchiveSuccess value)?
         moveToArchiveSuccess,
-    TResult Function(DetailsActionsStateMoveToArchiveFailed value)?
+    TResult? Function(DetailsActionsStateMoveToArchiveFailed value)?
         moveToArchiveFailed,
-    TResult Function(DetailsActionsStateRefreshing value)? refreshing,
-    TResult Function(DetailsActionsStateRefreshSuccess value)? refreshSuccess,
-    TResult Function(DetailsActionsStateRefreshFailed value)? refreshFailed,
-    TResult Function(DetailsActionsStateRefreshFreqLimited value)?
+    TResult? Function(DetailsActionsStateRefreshing value)? refreshing,
+    TResult? Function(DetailsActionsStateRefreshSuccess value)? refreshSuccess,
+    TResult? Function(DetailsActionsStateRefreshFailed value)? refreshFailed,
+    TResult? Function(DetailsActionsStateRefreshFreqLimited value)?
         refreshFreqLimited,
-    TResult Function(DetailsActionsStateSharingString value)? sharingString,
-    TResult Function(DetailsActionsStateShareStringSuccess value)?
+    TResult? Function(DetailsActionsStateSharingString value)? sharingString,
+    TResult? Function(DetailsActionsStateShareStringSuccess value)?
         shareStringSuccess,
-    TResult Function(DetailsActionsStateCopyingTrack value)? copyingTrack,
-    TResult Function(DetailsActionsStateCopyTrackSuccess value)?
+    TResult? Function(DetailsActionsStateCopyingTrack value)? copyingTrack,
+    TResult? Function(DetailsActionsStateCopyTrackSuccess value)?
         copyTrackSuccess,
-    TResult Function(DetailsActionsStateActivating value)? activating,
-    TResult Function(DetailsActionsStateActivateSuccess value)? activateSuccess,
-    TResult Function(DetailsActionsStateActivateFailed value)? activateFailed,
+    TResult? Function(DetailsActionsStateActivating value)? activating,
+    TResult? Function(DetailsActionsStateActivateSuccess value)?
+        activateSuccess,
+    TResult? Function(DetailsActionsStateActivateFailed value)? activateFailed,
   }) {
     return shareStringSuccess?.call(this);
   }
@@ -5952,43 +5854,41 @@ class _$DetailsActionsStateShareStringSuccess
 
 abstract class DetailsActionsStateShareStringSuccess
     implements DetailsActionsState {
-  const factory DetailsActionsStateShareStringSuccess({required String text}) =
-      _$DetailsActionsStateShareStringSuccess;
+  const factory DetailsActionsStateShareStringSuccess(
+          {required final String text}) =
+      _$DetailsActionsStateShareStringSuccessImpl;
 
-  String get text => throw _privateConstructorUsedError;
+  String get text;
   @JsonKey(ignore: true)
-  $DetailsActionsStateShareStringSuccessCopyWith<
-          DetailsActionsStateShareStringSuccess>
+  _$$DetailsActionsStateShareStringSuccessImplCopyWith<
+          _$DetailsActionsStateShareStringSuccessImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $DetailsActionsStateCopyingTrackCopyWith<$Res> {
-  factory $DetailsActionsStateCopyingTrackCopyWith(
-          DetailsActionsStateCopyingTrack value,
-          $Res Function(DetailsActionsStateCopyingTrack) then) =
-      _$DetailsActionsStateCopyingTrackCopyWithImpl<$Res>;
+abstract class _$$DetailsActionsStateCopyingTrackImplCopyWith<$Res> {
+  factory _$$DetailsActionsStateCopyingTrackImplCopyWith(
+          _$DetailsActionsStateCopyingTrackImpl value,
+          $Res Function(_$DetailsActionsStateCopyingTrackImpl) then) =
+      __$$DetailsActionsStateCopyingTrackImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$DetailsActionsStateCopyingTrackCopyWithImpl<$Res>
-    extends _$DetailsActionsStateCopyWithImpl<$Res>
-    implements $DetailsActionsStateCopyingTrackCopyWith<$Res> {
-  _$DetailsActionsStateCopyingTrackCopyWithImpl(
-      DetailsActionsStateCopyingTrack _value,
-      $Res Function(DetailsActionsStateCopyingTrack) _then)
-      : super(_value, (v) => _then(v as DetailsActionsStateCopyingTrack));
-
-  @override
-  DetailsActionsStateCopyingTrack get _value =>
-      super._value as DetailsActionsStateCopyingTrack;
+class __$$DetailsActionsStateCopyingTrackImplCopyWithImpl<$Res>
+    extends _$DetailsActionsStateCopyWithImpl<$Res,
+        _$DetailsActionsStateCopyingTrackImpl>
+    implements _$$DetailsActionsStateCopyingTrackImplCopyWith<$Res> {
+  __$$DetailsActionsStateCopyingTrackImplCopyWithImpl(
+      _$DetailsActionsStateCopyingTrackImpl _value,
+      $Res Function(_$DetailsActionsStateCopyingTrackImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$DetailsActionsStateCopyingTrack
+class _$DetailsActionsStateCopyingTrackImpl
     implements DetailsActionsStateCopyingTrack {
-  const _$DetailsActionsStateCopyingTrack();
+  const _$DetailsActionsStateCopyingTrackImpl();
 
   @override
   String toString() {
@@ -5996,8 +5896,10 @@ class _$DetailsActionsStateCopyingTrack
   }
 
   @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) || (other is DetailsActionsStateCopyingTrack);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$DetailsActionsStateCopyingTrackImpl);
   }
 
   @override
@@ -6037,30 +5939,30 @@ class _$DetailsActionsStateCopyingTrack
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? deleting,
-    TResult Function()? deleteSuccess,
-    TResult Function(StorageError error)? deleteFailed,
-    TResult Function()? markingAsRead,
-    TResult Function()? markAsReadSuccess,
-    TResult Function(StorageError error)? markAsReadFailed,
-    TResult Function()? movingToActive,
-    TResult Function()? moveToActiveSuccess,
-    TResult Function(StorageError error)? moveToActiveFailed,
-    TResult Function()? movingToArchive,
-    TResult Function()? moveToArchiveSuccess,
-    TResult Function(StorageError error)? moveToArchiveFailed,
-    TResult Function()? refreshing,
-    TResult Function()? refreshSuccess,
-    TResult Function(StorageError error)? refreshFailed,
-    TResult Function(Duration remainingTime)? refreshFreqLimited,
-    TResult Function()? sharingString,
-    TResult Function(String text)? shareStringSuccess,
-    TResult Function()? copyingTrack,
-    TResult Function(String trackNumber)? copyTrackSuccess,
-    TResult Function()? activating,
-    TResult Function()? activateSuccess,
-    TResult Function(StorageError error)? activateFailed,
+    TResult? Function()? initial,
+    TResult? Function()? deleting,
+    TResult? Function()? deleteSuccess,
+    TResult? Function(StorageError error)? deleteFailed,
+    TResult? Function()? markingAsRead,
+    TResult? Function()? markAsReadSuccess,
+    TResult? Function(StorageError error)? markAsReadFailed,
+    TResult? Function()? movingToActive,
+    TResult? Function()? moveToActiveSuccess,
+    TResult? Function(StorageError error)? moveToActiveFailed,
+    TResult? Function()? movingToArchive,
+    TResult? Function()? moveToArchiveSuccess,
+    TResult? Function(StorageError error)? moveToArchiveFailed,
+    TResult? Function()? refreshing,
+    TResult? Function()? refreshSuccess,
+    TResult? Function(StorageError error)? refreshFailed,
+    TResult? Function(Duration remainingTime)? refreshFreqLimited,
+    TResult? Function()? sharingString,
+    TResult? Function(String text)? shareStringSuccess,
+    TResult? Function()? copyingTrack,
+    TResult? Function(String trackNumber)? copyTrackSuccess,
+    TResult? Function()? activating,
+    TResult? Function()? activateSuccess,
+    TResult? Function(StorageError error)? activateFailed,
   }) {
     return copyingTrack?.call();
   }
@@ -6154,39 +6056,41 @@ class _$DetailsActionsStateCopyingTrack
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(DetailsActionsStateInitial value)? initial,
-    TResult Function(DetailsActionsStateDeleting value)? deleting,
-    TResult Function(DetailsActionsStateDeleteSuccess value)? deleteSuccess,
-    TResult Function(DetailsActionsStateDeleteFailed value)? deleteFailed,
-    TResult Function(DetailsActionsStateMarkingAsRead value)? markingAsRead,
-    TResult Function(DetailsActionsStateMarkAsReadSuccess value)?
+    TResult? Function(DetailsActionsStateInitial value)? initial,
+    TResult? Function(DetailsActionsStateDeleting value)? deleting,
+    TResult? Function(DetailsActionsStateDeleteSuccess value)? deleteSuccess,
+    TResult? Function(DetailsActionsStateDeleteFailed value)? deleteFailed,
+    TResult? Function(DetailsActionsStateMarkingAsRead value)? markingAsRead,
+    TResult? Function(DetailsActionsStateMarkAsReadSuccess value)?
         markAsReadSuccess,
-    TResult Function(DetailsActionsStateMarkAsReadFailed value)?
+    TResult? Function(DetailsActionsStateMarkAsReadFailed value)?
         markAsReadFailed,
-    TResult Function(DetailsActionsStateMovingToActive value)? movingToActive,
-    TResult Function(DetailsActionsStateMoveToActiveSuccess value)?
+    TResult? Function(DetailsActionsStateMovingToActive value)? movingToActive,
+    TResult? Function(DetailsActionsStateMoveToActiveSuccess value)?
         moveToActiveSuccess,
-    TResult Function(DetailsActionsStateMoveToActiveFailed value)?
+    TResult? Function(DetailsActionsStateMoveToActiveFailed value)?
         moveToActiveFailed,
-    TResult Function(DetailsActionsStateMovingToArchive value)? movingToArchive,
-    TResult Function(DetailsActionsStateMoveToArchiveSuccess value)?
+    TResult? Function(DetailsActionsStateMovingToArchive value)?
+        movingToArchive,
+    TResult? Function(DetailsActionsStateMoveToArchiveSuccess value)?
         moveToArchiveSuccess,
-    TResult Function(DetailsActionsStateMoveToArchiveFailed value)?
+    TResult? Function(DetailsActionsStateMoveToArchiveFailed value)?
         moveToArchiveFailed,
-    TResult Function(DetailsActionsStateRefreshing value)? refreshing,
-    TResult Function(DetailsActionsStateRefreshSuccess value)? refreshSuccess,
-    TResult Function(DetailsActionsStateRefreshFailed value)? refreshFailed,
-    TResult Function(DetailsActionsStateRefreshFreqLimited value)?
+    TResult? Function(DetailsActionsStateRefreshing value)? refreshing,
+    TResult? Function(DetailsActionsStateRefreshSuccess value)? refreshSuccess,
+    TResult? Function(DetailsActionsStateRefreshFailed value)? refreshFailed,
+    TResult? Function(DetailsActionsStateRefreshFreqLimited value)?
         refreshFreqLimited,
-    TResult Function(DetailsActionsStateSharingString value)? sharingString,
-    TResult Function(DetailsActionsStateShareStringSuccess value)?
+    TResult? Function(DetailsActionsStateSharingString value)? sharingString,
+    TResult? Function(DetailsActionsStateShareStringSuccess value)?
         shareStringSuccess,
-    TResult Function(DetailsActionsStateCopyingTrack value)? copyingTrack,
-    TResult Function(DetailsActionsStateCopyTrackSuccess value)?
+    TResult? Function(DetailsActionsStateCopyingTrack value)? copyingTrack,
+    TResult? Function(DetailsActionsStateCopyTrackSuccess value)?
         copyTrackSuccess,
-    TResult Function(DetailsActionsStateActivating value)? activating,
-    TResult Function(DetailsActionsStateActivateSuccess value)? activateSuccess,
-    TResult Function(DetailsActionsStateActivateFailed value)? activateFailed,
+    TResult? Function(DetailsActionsStateActivating value)? activating,
+    TResult? Function(DetailsActionsStateActivateSuccess value)?
+        activateSuccess,
+    TResult? Function(DetailsActionsStateActivateFailed value)? activateFailed,
   }) {
     return copyingTrack?.call(this);
   }
@@ -6238,37 +6142,36 @@ class _$DetailsActionsStateCopyingTrack
 
 abstract class DetailsActionsStateCopyingTrack implements DetailsActionsState {
   const factory DetailsActionsStateCopyingTrack() =
-      _$DetailsActionsStateCopyingTrack;
+      _$DetailsActionsStateCopyingTrackImpl;
 }
 
 /// @nodoc
-abstract class $DetailsActionsStateCopyTrackSuccessCopyWith<$Res> {
-  factory $DetailsActionsStateCopyTrackSuccessCopyWith(
-          DetailsActionsStateCopyTrackSuccess value,
-          $Res Function(DetailsActionsStateCopyTrackSuccess) then) =
-      _$DetailsActionsStateCopyTrackSuccessCopyWithImpl<$Res>;
+abstract class _$$DetailsActionsStateCopyTrackSuccessImplCopyWith<$Res> {
+  factory _$$DetailsActionsStateCopyTrackSuccessImplCopyWith(
+          _$DetailsActionsStateCopyTrackSuccessImpl value,
+          $Res Function(_$DetailsActionsStateCopyTrackSuccessImpl) then) =
+      __$$DetailsActionsStateCopyTrackSuccessImplCopyWithImpl<$Res>;
+  @useResult
   $Res call({String trackNumber});
 }
 
 /// @nodoc
-class _$DetailsActionsStateCopyTrackSuccessCopyWithImpl<$Res>
-    extends _$DetailsActionsStateCopyWithImpl<$Res>
-    implements $DetailsActionsStateCopyTrackSuccessCopyWith<$Res> {
-  _$DetailsActionsStateCopyTrackSuccessCopyWithImpl(
-      DetailsActionsStateCopyTrackSuccess _value,
-      $Res Function(DetailsActionsStateCopyTrackSuccess) _then)
-      : super(_value, (v) => _then(v as DetailsActionsStateCopyTrackSuccess));
+class __$$DetailsActionsStateCopyTrackSuccessImplCopyWithImpl<$Res>
+    extends _$DetailsActionsStateCopyWithImpl<$Res,
+        _$DetailsActionsStateCopyTrackSuccessImpl>
+    implements _$$DetailsActionsStateCopyTrackSuccessImplCopyWith<$Res> {
+  __$$DetailsActionsStateCopyTrackSuccessImplCopyWithImpl(
+      _$DetailsActionsStateCopyTrackSuccessImpl _value,
+      $Res Function(_$DetailsActionsStateCopyTrackSuccessImpl) _then)
+      : super(_value, _then);
 
-  @override
-  DetailsActionsStateCopyTrackSuccess get _value =>
-      super._value as DetailsActionsStateCopyTrackSuccess;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? trackNumber = freezed,
+    Object? trackNumber = null,
   }) {
-    return _then(DetailsActionsStateCopyTrackSuccess(
-      trackNumber: trackNumber == freezed
+    return _then(_$DetailsActionsStateCopyTrackSuccessImpl(
+      trackNumber: null == trackNumber
           ? _value.trackNumber
           : trackNumber // ignore: cast_nullable_to_non_nullable
               as String,
@@ -6278,9 +6181,9 @@ class _$DetailsActionsStateCopyTrackSuccessCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$DetailsActionsStateCopyTrackSuccess
+class _$DetailsActionsStateCopyTrackSuccessImpl
     implements DetailsActionsStateCopyTrackSuccess {
-  const _$DetailsActionsStateCopyTrackSuccess({required this.trackNumber});
+  const _$DetailsActionsStateCopyTrackSuccessImpl({required this.trackNumber});
 
   @override
   final String trackNumber;
@@ -6291,24 +6194,24 @@ class _$DetailsActionsStateCopyTrackSuccess
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is DetailsActionsStateCopyTrackSuccess &&
+        (other.runtimeType == runtimeType &&
+            other is _$DetailsActionsStateCopyTrackSuccessImpl &&
             (identical(other.trackNumber, trackNumber) ||
-                const DeepCollectionEquality()
-                    .equals(other.trackNumber, trackNumber)));
+                other.trackNumber == trackNumber));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(trackNumber);
+  int get hashCode => Object.hash(runtimeType, trackNumber);
 
   @JsonKey(ignore: true)
   @override
-  $DetailsActionsStateCopyTrackSuccessCopyWith<
-          DetailsActionsStateCopyTrackSuccess>
-      get copyWith => _$DetailsActionsStateCopyTrackSuccessCopyWithImpl<
-          DetailsActionsStateCopyTrackSuccess>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$DetailsActionsStateCopyTrackSuccessImplCopyWith<
+          _$DetailsActionsStateCopyTrackSuccessImpl>
+      get copyWith => __$$DetailsActionsStateCopyTrackSuccessImplCopyWithImpl<
+          _$DetailsActionsStateCopyTrackSuccessImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -6344,30 +6247,30 @@ class _$DetailsActionsStateCopyTrackSuccess
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? deleting,
-    TResult Function()? deleteSuccess,
-    TResult Function(StorageError error)? deleteFailed,
-    TResult Function()? markingAsRead,
-    TResult Function()? markAsReadSuccess,
-    TResult Function(StorageError error)? markAsReadFailed,
-    TResult Function()? movingToActive,
-    TResult Function()? moveToActiveSuccess,
-    TResult Function(StorageError error)? moveToActiveFailed,
-    TResult Function()? movingToArchive,
-    TResult Function()? moveToArchiveSuccess,
-    TResult Function(StorageError error)? moveToArchiveFailed,
-    TResult Function()? refreshing,
-    TResult Function()? refreshSuccess,
-    TResult Function(StorageError error)? refreshFailed,
-    TResult Function(Duration remainingTime)? refreshFreqLimited,
-    TResult Function()? sharingString,
-    TResult Function(String text)? shareStringSuccess,
-    TResult Function()? copyingTrack,
-    TResult Function(String trackNumber)? copyTrackSuccess,
-    TResult Function()? activating,
-    TResult Function()? activateSuccess,
-    TResult Function(StorageError error)? activateFailed,
+    TResult? Function()? initial,
+    TResult? Function()? deleting,
+    TResult? Function()? deleteSuccess,
+    TResult? Function(StorageError error)? deleteFailed,
+    TResult? Function()? markingAsRead,
+    TResult? Function()? markAsReadSuccess,
+    TResult? Function(StorageError error)? markAsReadFailed,
+    TResult? Function()? movingToActive,
+    TResult? Function()? moveToActiveSuccess,
+    TResult? Function(StorageError error)? moveToActiveFailed,
+    TResult? Function()? movingToArchive,
+    TResult? Function()? moveToArchiveSuccess,
+    TResult? Function(StorageError error)? moveToArchiveFailed,
+    TResult? Function()? refreshing,
+    TResult? Function()? refreshSuccess,
+    TResult? Function(StorageError error)? refreshFailed,
+    TResult? Function(Duration remainingTime)? refreshFreqLimited,
+    TResult? Function()? sharingString,
+    TResult? Function(String text)? shareStringSuccess,
+    TResult? Function()? copyingTrack,
+    TResult? Function(String trackNumber)? copyTrackSuccess,
+    TResult? Function()? activating,
+    TResult? Function()? activateSuccess,
+    TResult? Function(StorageError error)? activateFailed,
   }) {
     return copyTrackSuccess?.call(trackNumber);
   }
@@ -6461,39 +6364,41 @@ class _$DetailsActionsStateCopyTrackSuccess
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(DetailsActionsStateInitial value)? initial,
-    TResult Function(DetailsActionsStateDeleting value)? deleting,
-    TResult Function(DetailsActionsStateDeleteSuccess value)? deleteSuccess,
-    TResult Function(DetailsActionsStateDeleteFailed value)? deleteFailed,
-    TResult Function(DetailsActionsStateMarkingAsRead value)? markingAsRead,
-    TResult Function(DetailsActionsStateMarkAsReadSuccess value)?
+    TResult? Function(DetailsActionsStateInitial value)? initial,
+    TResult? Function(DetailsActionsStateDeleting value)? deleting,
+    TResult? Function(DetailsActionsStateDeleteSuccess value)? deleteSuccess,
+    TResult? Function(DetailsActionsStateDeleteFailed value)? deleteFailed,
+    TResult? Function(DetailsActionsStateMarkingAsRead value)? markingAsRead,
+    TResult? Function(DetailsActionsStateMarkAsReadSuccess value)?
         markAsReadSuccess,
-    TResult Function(DetailsActionsStateMarkAsReadFailed value)?
+    TResult? Function(DetailsActionsStateMarkAsReadFailed value)?
         markAsReadFailed,
-    TResult Function(DetailsActionsStateMovingToActive value)? movingToActive,
-    TResult Function(DetailsActionsStateMoveToActiveSuccess value)?
+    TResult? Function(DetailsActionsStateMovingToActive value)? movingToActive,
+    TResult? Function(DetailsActionsStateMoveToActiveSuccess value)?
         moveToActiveSuccess,
-    TResult Function(DetailsActionsStateMoveToActiveFailed value)?
+    TResult? Function(DetailsActionsStateMoveToActiveFailed value)?
         moveToActiveFailed,
-    TResult Function(DetailsActionsStateMovingToArchive value)? movingToArchive,
-    TResult Function(DetailsActionsStateMoveToArchiveSuccess value)?
+    TResult? Function(DetailsActionsStateMovingToArchive value)?
+        movingToArchive,
+    TResult? Function(DetailsActionsStateMoveToArchiveSuccess value)?
         moveToArchiveSuccess,
-    TResult Function(DetailsActionsStateMoveToArchiveFailed value)?
+    TResult? Function(DetailsActionsStateMoveToArchiveFailed value)?
         moveToArchiveFailed,
-    TResult Function(DetailsActionsStateRefreshing value)? refreshing,
-    TResult Function(DetailsActionsStateRefreshSuccess value)? refreshSuccess,
-    TResult Function(DetailsActionsStateRefreshFailed value)? refreshFailed,
-    TResult Function(DetailsActionsStateRefreshFreqLimited value)?
+    TResult? Function(DetailsActionsStateRefreshing value)? refreshing,
+    TResult? Function(DetailsActionsStateRefreshSuccess value)? refreshSuccess,
+    TResult? Function(DetailsActionsStateRefreshFailed value)? refreshFailed,
+    TResult? Function(DetailsActionsStateRefreshFreqLimited value)?
         refreshFreqLimited,
-    TResult Function(DetailsActionsStateSharingString value)? sharingString,
-    TResult Function(DetailsActionsStateShareStringSuccess value)?
+    TResult? Function(DetailsActionsStateSharingString value)? sharingString,
+    TResult? Function(DetailsActionsStateShareStringSuccess value)?
         shareStringSuccess,
-    TResult Function(DetailsActionsStateCopyingTrack value)? copyingTrack,
-    TResult Function(DetailsActionsStateCopyTrackSuccess value)?
+    TResult? Function(DetailsActionsStateCopyingTrack value)? copyingTrack,
+    TResult? Function(DetailsActionsStateCopyTrackSuccess value)?
         copyTrackSuccess,
-    TResult Function(DetailsActionsStateActivating value)? activating,
-    TResult Function(DetailsActionsStateActivateSuccess value)? activateSuccess,
-    TResult Function(DetailsActionsStateActivateFailed value)? activateFailed,
+    TResult? Function(DetailsActionsStateActivating value)? activating,
+    TResult? Function(DetailsActionsStateActivateSuccess value)?
+        activateSuccess,
+    TResult? Function(DetailsActionsStateActivateFailed value)? activateFailed,
   }) {
     return copyTrackSuccess?.call(this);
   }
@@ -6546,41 +6451,40 @@ class _$DetailsActionsStateCopyTrackSuccess
 abstract class DetailsActionsStateCopyTrackSuccess
     implements DetailsActionsState {
   const factory DetailsActionsStateCopyTrackSuccess(
-      {required String trackNumber}) = _$DetailsActionsStateCopyTrackSuccess;
+          {required final String trackNumber}) =
+      _$DetailsActionsStateCopyTrackSuccessImpl;
 
-  String get trackNumber => throw _privateConstructorUsedError;
+  String get trackNumber;
   @JsonKey(ignore: true)
-  $DetailsActionsStateCopyTrackSuccessCopyWith<
-          DetailsActionsStateCopyTrackSuccess>
+  _$$DetailsActionsStateCopyTrackSuccessImplCopyWith<
+          _$DetailsActionsStateCopyTrackSuccessImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $DetailsActionsStateActivatingCopyWith<$Res> {
-  factory $DetailsActionsStateActivatingCopyWith(
-          DetailsActionsStateActivating value,
-          $Res Function(DetailsActionsStateActivating) then) =
-      _$DetailsActionsStateActivatingCopyWithImpl<$Res>;
+abstract class _$$DetailsActionsStateActivatingImplCopyWith<$Res> {
+  factory _$$DetailsActionsStateActivatingImplCopyWith(
+          _$DetailsActionsStateActivatingImpl value,
+          $Res Function(_$DetailsActionsStateActivatingImpl) then) =
+      __$$DetailsActionsStateActivatingImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$DetailsActionsStateActivatingCopyWithImpl<$Res>
-    extends _$DetailsActionsStateCopyWithImpl<$Res>
-    implements $DetailsActionsStateActivatingCopyWith<$Res> {
-  _$DetailsActionsStateActivatingCopyWithImpl(
-      DetailsActionsStateActivating _value,
-      $Res Function(DetailsActionsStateActivating) _then)
-      : super(_value, (v) => _then(v as DetailsActionsStateActivating));
-
-  @override
-  DetailsActionsStateActivating get _value =>
-      super._value as DetailsActionsStateActivating;
+class __$$DetailsActionsStateActivatingImplCopyWithImpl<$Res>
+    extends _$DetailsActionsStateCopyWithImpl<$Res,
+        _$DetailsActionsStateActivatingImpl>
+    implements _$$DetailsActionsStateActivatingImplCopyWith<$Res> {
+  __$$DetailsActionsStateActivatingImplCopyWithImpl(
+      _$DetailsActionsStateActivatingImpl _value,
+      $Res Function(_$DetailsActionsStateActivatingImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$DetailsActionsStateActivating implements DetailsActionsStateActivating {
-  const _$DetailsActionsStateActivating();
+class _$DetailsActionsStateActivatingImpl
+    implements DetailsActionsStateActivating {
+  const _$DetailsActionsStateActivatingImpl();
 
   @override
   String toString() {
@@ -6588,8 +6492,10 @@ class _$DetailsActionsStateActivating implements DetailsActionsStateActivating {
   }
 
   @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) || (other is DetailsActionsStateActivating);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$DetailsActionsStateActivatingImpl);
   }
 
   @override
@@ -6629,30 +6535,30 @@ class _$DetailsActionsStateActivating implements DetailsActionsStateActivating {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? deleting,
-    TResult Function()? deleteSuccess,
-    TResult Function(StorageError error)? deleteFailed,
-    TResult Function()? markingAsRead,
-    TResult Function()? markAsReadSuccess,
-    TResult Function(StorageError error)? markAsReadFailed,
-    TResult Function()? movingToActive,
-    TResult Function()? moveToActiveSuccess,
-    TResult Function(StorageError error)? moveToActiveFailed,
-    TResult Function()? movingToArchive,
-    TResult Function()? moveToArchiveSuccess,
-    TResult Function(StorageError error)? moveToArchiveFailed,
-    TResult Function()? refreshing,
-    TResult Function()? refreshSuccess,
-    TResult Function(StorageError error)? refreshFailed,
-    TResult Function(Duration remainingTime)? refreshFreqLimited,
-    TResult Function()? sharingString,
-    TResult Function(String text)? shareStringSuccess,
-    TResult Function()? copyingTrack,
-    TResult Function(String trackNumber)? copyTrackSuccess,
-    TResult Function()? activating,
-    TResult Function()? activateSuccess,
-    TResult Function(StorageError error)? activateFailed,
+    TResult? Function()? initial,
+    TResult? Function()? deleting,
+    TResult? Function()? deleteSuccess,
+    TResult? Function(StorageError error)? deleteFailed,
+    TResult? Function()? markingAsRead,
+    TResult? Function()? markAsReadSuccess,
+    TResult? Function(StorageError error)? markAsReadFailed,
+    TResult? Function()? movingToActive,
+    TResult? Function()? moveToActiveSuccess,
+    TResult? Function(StorageError error)? moveToActiveFailed,
+    TResult? Function()? movingToArchive,
+    TResult? Function()? moveToArchiveSuccess,
+    TResult? Function(StorageError error)? moveToArchiveFailed,
+    TResult? Function()? refreshing,
+    TResult? Function()? refreshSuccess,
+    TResult? Function(StorageError error)? refreshFailed,
+    TResult? Function(Duration remainingTime)? refreshFreqLimited,
+    TResult? Function()? sharingString,
+    TResult? Function(String text)? shareStringSuccess,
+    TResult? Function()? copyingTrack,
+    TResult? Function(String trackNumber)? copyTrackSuccess,
+    TResult? Function()? activating,
+    TResult? Function()? activateSuccess,
+    TResult? Function(StorageError error)? activateFailed,
   }) {
     return activating?.call();
   }
@@ -6746,39 +6652,41 @@ class _$DetailsActionsStateActivating implements DetailsActionsStateActivating {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(DetailsActionsStateInitial value)? initial,
-    TResult Function(DetailsActionsStateDeleting value)? deleting,
-    TResult Function(DetailsActionsStateDeleteSuccess value)? deleteSuccess,
-    TResult Function(DetailsActionsStateDeleteFailed value)? deleteFailed,
-    TResult Function(DetailsActionsStateMarkingAsRead value)? markingAsRead,
-    TResult Function(DetailsActionsStateMarkAsReadSuccess value)?
+    TResult? Function(DetailsActionsStateInitial value)? initial,
+    TResult? Function(DetailsActionsStateDeleting value)? deleting,
+    TResult? Function(DetailsActionsStateDeleteSuccess value)? deleteSuccess,
+    TResult? Function(DetailsActionsStateDeleteFailed value)? deleteFailed,
+    TResult? Function(DetailsActionsStateMarkingAsRead value)? markingAsRead,
+    TResult? Function(DetailsActionsStateMarkAsReadSuccess value)?
         markAsReadSuccess,
-    TResult Function(DetailsActionsStateMarkAsReadFailed value)?
+    TResult? Function(DetailsActionsStateMarkAsReadFailed value)?
         markAsReadFailed,
-    TResult Function(DetailsActionsStateMovingToActive value)? movingToActive,
-    TResult Function(DetailsActionsStateMoveToActiveSuccess value)?
+    TResult? Function(DetailsActionsStateMovingToActive value)? movingToActive,
+    TResult? Function(DetailsActionsStateMoveToActiveSuccess value)?
         moveToActiveSuccess,
-    TResult Function(DetailsActionsStateMoveToActiveFailed value)?
+    TResult? Function(DetailsActionsStateMoveToActiveFailed value)?
         moveToActiveFailed,
-    TResult Function(DetailsActionsStateMovingToArchive value)? movingToArchive,
-    TResult Function(DetailsActionsStateMoveToArchiveSuccess value)?
+    TResult? Function(DetailsActionsStateMovingToArchive value)?
+        movingToArchive,
+    TResult? Function(DetailsActionsStateMoveToArchiveSuccess value)?
         moveToArchiveSuccess,
-    TResult Function(DetailsActionsStateMoveToArchiveFailed value)?
+    TResult? Function(DetailsActionsStateMoveToArchiveFailed value)?
         moveToArchiveFailed,
-    TResult Function(DetailsActionsStateRefreshing value)? refreshing,
-    TResult Function(DetailsActionsStateRefreshSuccess value)? refreshSuccess,
-    TResult Function(DetailsActionsStateRefreshFailed value)? refreshFailed,
-    TResult Function(DetailsActionsStateRefreshFreqLimited value)?
+    TResult? Function(DetailsActionsStateRefreshing value)? refreshing,
+    TResult? Function(DetailsActionsStateRefreshSuccess value)? refreshSuccess,
+    TResult? Function(DetailsActionsStateRefreshFailed value)? refreshFailed,
+    TResult? Function(DetailsActionsStateRefreshFreqLimited value)?
         refreshFreqLimited,
-    TResult Function(DetailsActionsStateSharingString value)? sharingString,
-    TResult Function(DetailsActionsStateShareStringSuccess value)?
+    TResult? Function(DetailsActionsStateSharingString value)? sharingString,
+    TResult? Function(DetailsActionsStateShareStringSuccess value)?
         shareStringSuccess,
-    TResult Function(DetailsActionsStateCopyingTrack value)? copyingTrack,
-    TResult Function(DetailsActionsStateCopyTrackSuccess value)?
+    TResult? Function(DetailsActionsStateCopyingTrack value)? copyingTrack,
+    TResult? Function(DetailsActionsStateCopyTrackSuccess value)?
         copyTrackSuccess,
-    TResult Function(DetailsActionsStateActivating value)? activating,
-    TResult Function(DetailsActionsStateActivateSuccess value)? activateSuccess,
-    TResult Function(DetailsActionsStateActivateFailed value)? activateFailed,
+    TResult? Function(DetailsActionsStateActivating value)? activating,
+    TResult? Function(DetailsActionsStateActivateSuccess value)?
+        activateSuccess,
+    TResult? Function(DetailsActionsStateActivateFailed value)? activateFailed,
   }) {
     return activating?.call(this);
   }
@@ -6830,36 +6738,33 @@ class _$DetailsActionsStateActivating implements DetailsActionsStateActivating {
 
 abstract class DetailsActionsStateActivating implements DetailsActionsState {
   const factory DetailsActionsStateActivating() =
-      _$DetailsActionsStateActivating;
+      _$DetailsActionsStateActivatingImpl;
 }
 
 /// @nodoc
-abstract class $DetailsActionsStateActivateSuccessCopyWith<$Res> {
-  factory $DetailsActionsStateActivateSuccessCopyWith(
-          DetailsActionsStateActivateSuccess value,
-          $Res Function(DetailsActionsStateActivateSuccess) then) =
-      _$DetailsActionsStateActivateSuccessCopyWithImpl<$Res>;
+abstract class _$$DetailsActionsStateActivateSuccessImplCopyWith<$Res> {
+  factory _$$DetailsActionsStateActivateSuccessImplCopyWith(
+          _$DetailsActionsStateActivateSuccessImpl value,
+          $Res Function(_$DetailsActionsStateActivateSuccessImpl) then) =
+      __$$DetailsActionsStateActivateSuccessImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$DetailsActionsStateActivateSuccessCopyWithImpl<$Res>
-    extends _$DetailsActionsStateCopyWithImpl<$Res>
-    implements $DetailsActionsStateActivateSuccessCopyWith<$Res> {
-  _$DetailsActionsStateActivateSuccessCopyWithImpl(
-      DetailsActionsStateActivateSuccess _value,
-      $Res Function(DetailsActionsStateActivateSuccess) _then)
-      : super(_value, (v) => _then(v as DetailsActionsStateActivateSuccess));
-
-  @override
-  DetailsActionsStateActivateSuccess get _value =>
-      super._value as DetailsActionsStateActivateSuccess;
+class __$$DetailsActionsStateActivateSuccessImplCopyWithImpl<$Res>
+    extends _$DetailsActionsStateCopyWithImpl<$Res,
+        _$DetailsActionsStateActivateSuccessImpl>
+    implements _$$DetailsActionsStateActivateSuccessImplCopyWith<$Res> {
+  __$$DetailsActionsStateActivateSuccessImplCopyWithImpl(
+      _$DetailsActionsStateActivateSuccessImpl _value,
+      $Res Function(_$DetailsActionsStateActivateSuccessImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$DetailsActionsStateActivateSuccess
+class _$DetailsActionsStateActivateSuccessImpl
     implements DetailsActionsStateActivateSuccess {
-  const _$DetailsActionsStateActivateSuccess();
+  const _$DetailsActionsStateActivateSuccessImpl();
 
   @override
   String toString() {
@@ -6867,9 +6772,10 @@ class _$DetailsActionsStateActivateSuccess
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is DetailsActionsStateActivateSuccess);
+        (other.runtimeType == runtimeType &&
+            other is _$DetailsActionsStateActivateSuccessImpl);
   }
 
   @override
@@ -6909,30 +6815,30 @@ class _$DetailsActionsStateActivateSuccess
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? deleting,
-    TResult Function()? deleteSuccess,
-    TResult Function(StorageError error)? deleteFailed,
-    TResult Function()? markingAsRead,
-    TResult Function()? markAsReadSuccess,
-    TResult Function(StorageError error)? markAsReadFailed,
-    TResult Function()? movingToActive,
-    TResult Function()? moveToActiveSuccess,
-    TResult Function(StorageError error)? moveToActiveFailed,
-    TResult Function()? movingToArchive,
-    TResult Function()? moveToArchiveSuccess,
-    TResult Function(StorageError error)? moveToArchiveFailed,
-    TResult Function()? refreshing,
-    TResult Function()? refreshSuccess,
-    TResult Function(StorageError error)? refreshFailed,
-    TResult Function(Duration remainingTime)? refreshFreqLimited,
-    TResult Function()? sharingString,
-    TResult Function(String text)? shareStringSuccess,
-    TResult Function()? copyingTrack,
-    TResult Function(String trackNumber)? copyTrackSuccess,
-    TResult Function()? activating,
-    TResult Function()? activateSuccess,
-    TResult Function(StorageError error)? activateFailed,
+    TResult? Function()? initial,
+    TResult? Function()? deleting,
+    TResult? Function()? deleteSuccess,
+    TResult? Function(StorageError error)? deleteFailed,
+    TResult? Function()? markingAsRead,
+    TResult? Function()? markAsReadSuccess,
+    TResult? Function(StorageError error)? markAsReadFailed,
+    TResult? Function()? movingToActive,
+    TResult? Function()? moveToActiveSuccess,
+    TResult? Function(StorageError error)? moveToActiveFailed,
+    TResult? Function()? movingToArchive,
+    TResult? Function()? moveToArchiveSuccess,
+    TResult? Function(StorageError error)? moveToArchiveFailed,
+    TResult? Function()? refreshing,
+    TResult? Function()? refreshSuccess,
+    TResult? Function(StorageError error)? refreshFailed,
+    TResult? Function(Duration remainingTime)? refreshFreqLimited,
+    TResult? Function()? sharingString,
+    TResult? Function(String text)? shareStringSuccess,
+    TResult? Function()? copyingTrack,
+    TResult? Function(String trackNumber)? copyTrackSuccess,
+    TResult? Function()? activating,
+    TResult? Function()? activateSuccess,
+    TResult? Function(StorageError error)? activateFailed,
   }) {
     return activateSuccess?.call();
   }
@@ -7026,39 +6932,41 @@ class _$DetailsActionsStateActivateSuccess
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(DetailsActionsStateInitial value)? initial,
-    TResult Function(DetailsActionsStateDeleting value)? deleting,
-    TResult Function(DetailsActionsStateDeleteSuccess value)? deleteSuccess,
-    TResult Function(DetailsActionsStateDeleteFailed value)? deleteFailed,
-    TResult Function(DetailsActionsStateMarkingAsRead value)? markingAsRead,
-    TResult Function(DetailsActionsStateMarkAsReadSuccess value)?
+    TResult? Function(DetailsActionsStateInitial value)? initial,
+    TResult? Function(DetailsActionsStateDeleting value)? deleting,
+    TResult? Function(DetailsActionsStateDeleteSuccess value)? deleteSuccess,
+    TResult? Function(DetailsActionsStateDeleteFailed value)? deleteFailed,
+    TResult? Function(DetailsActionsStateMarkingAsRead value)? markingAsRead,
+    TResult? Function(DetailsActionsStateMarkAsReadSuccess value)?
         markAsReadSuccess,
-    TResult Function(DetailsActionsStateMarkAsReadFailed value)?
+    TResult? Function(DetailsActionsStateMarkAsReadFailed value)?
         markAsReadFailed,
-    TResult Function(DetailsActionsStateMovingToActive value)? movingToActive,
-    TResult Function(DetailsActionsStateMoveToActiveSuccess value)?
+    TResult? Function(DetailsActionsStateMovingToActive value)? movingToActive,
+    TResult? Function(DetailsActionsStateMoveToActiveSuccess value)?
         moveToActiveSuccess,
-    TResult Function(DetailsActionsStateMoveToActiveFailed value)?
+    TResult? Function(DetailsActionsStateMoveToActiveFailed value)?
         moveToActiveFailed,
-    TResult Function(DetailsActionsStateMovingToArchive value)? movingToArchive,
-    TResult Function(DetailsActionsStateMoveToArchiveSuccess value)?
+    TResult? Function(DetailsActionsStateMovingToArchive value)?
+        movingToArchive,
+    TResult? Function(DetailsActionsStateMoveToArchiveSuccess value)?
         moveToArchiveSuccess,
-    TResult Function(DetailsActionsStateMoveToArchiveFailed value)?
+    TResult? Function(DetailsActionsStateMoveToArchiveFailed value)?
         moveToArchiveFailed,
-    TResult Function(DetailsActionsStateRefreshing value)? refreshing,
-    TResult Function(DetailsActionsStateRefreshSuccess value)? refreshSuccess,
-    TResult Function(DetailsActionsStateRefreshFailed value)? refreshFailed,
-    TResult Function(DetailsActionsStateRefreshFreqLimited value)?
+    TResult? Function(DetailsActionsStateRefreshing value)? refreshing,
+    TResult? Function(DetailsActionsStateRefreshSuccess value)? refreshSuccess,
+    TResult? Function(DetailsActionsStateRefreshFailed value)? refreshFailed,
+    TResult? Function(DetailsActionsStateRefreshFreqLimited value)?
         refreshFreqLimited,
-    TResult Function(DetailsActionsStateSharingString value)? sharingString,
-    TResult Function(DetailsActionsStateShareStringSuccess value)?
+    TResult? Function(DetailsActionsStateSharingString value)? sharingString,
+    TResult? Function(DetailsActionsStateShareStringSuccess value)?
         shareStringSuccess,
-    TResult Function(DetailsActionsStateCopyingTrack value)? copyingTrack,
-    TResult Function(DetailsActionsStateCopyTrackSuccess value)?
+    TResult? Function(DetailsActionsStateCopyingTrack value)? copyingTrack,
+    TResult? Function(DetailsActionsStateCopyTrackSuccess value)?
         copyTrackSuccess,
-    TResult Function(DetailsActionsStateActivating value)? activating,
-    TResult Function(DetailsActionsStateActivateSuccess value)? activateSuccess,
-    TResult Function(DetailsActionsStateActivateFailed value)? activateFailed,
+    TResult? Function(DetailsActionsStateActivating value)? activating,
+    TResult? Function(DetailsActionsStateActivateSuccess value)?
+        activateSuccess,
+    TResult? Function(DetailsActionsStateActivateFailed value)? activateFailed,
   }) {
     return activateSuccess?.call(this);
   }
@@ -7111,39 +7019,38 @@ class _$DetailsActionsStateActivateSuccess
 abstract class DetailsActionsStateActivateSuccess
     implements DetailsActionsState {
   const factory DetailsActionsStateActivateSuccess() =
-      _$DetailsActionsStateActivateSuccess;
+      _$DetailsActionsStateActivateSuccessImpl;
 }
 
 /// @nodoc
-abstract class $DetailsActionsStateActivateFailedCopyWith<$Res> {
-  factory $DetailsActionsStateActivateFailedCopyWith(
-          DetailsActionsStateActivateFailed value,
-          $Res Function(DetailsActionsStateActivateFailed) then) =
-      _$DetailsActionsStateActivateFailedCopyWithImpl<$Res>;
+abstract class _$$DetailsActionsStateActivateFailedImplCopyWith<$Res> {
+  factory _$$DetailsActionsStateActivateFailedImplCopyWith(
+          _$DetailsActionsStateActivateFailedImpl value,
+          $Res Function(_$DetailsActionsStateActivateFailedImpl) then) =
+      __$$DetailsActionsStateActivateFailedImplCopyWithImpl<$Res>;
+  @useResult
   $Res call({StorageError error});
 
   $StorageErrorCopyWith<$Res> get error;
 }
 
 /// @nodoc
-class _$DetailsActionsStateActivateFailedCopyWithImpl<$Res>
-    extends _$DetailsActionsStateCopyWithImpl<$Res>
-    implements $DetailsActionsStateActivateFailedCopyWith<$Res> {
-  _$DetailsActionsStateActivateFailedCopyWithImpl(
-      DetailsActionsStateActivateFailed _value,
-      $Res Function(DetailsActionsStateActivateFailed) _then)
-      : super(_value, (v) => _then(v as DetailsActionsStateActivateFailed));
+class __$$DetailsActionsStateActivateFailedImplCopyWithImpl<$Res>
+    extends _$DetailsActionsStateCopyWithImpl<$Res,
+        _$DetailsActionsStateActivateFailedImpl>
+    implements _$$DetailsActionsStateActivateFailedImplCopyWith<$Res> {
+  __$$DetailsActionsStateActivateFailedImplCopyWithImpl(
+      _$DetailsActionsStateActivateFailedImpl _value,
+      $Res Function(_$DetailsActionsStateActivateFailedImpl) _then)
+      : super(_value, _then);
 
-  @override
-  DetailsActionsStateActivateFailed get _value =>
-      super._value as DetailsActionsStateActivateFailed;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? error = freezed,
+    Object? error = null,
   }) {
-    return _then(DetailsActionsStateActivateFailed(
-      error: error == freezed
+    return _then(_$DetailsActionsStateActivateFailedImpl(
+      error: null == error
           ? _value.error
           : error // ignore: cast_nullable_to_non_nullable
               as StorageError,
@@ -7151,6 +7058,7 @@ class _$DetailsActionsStateActivateFailedCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $StorageErrorCopyWith<$Res> get error {
     return $StorageErrorCopyWith<$Res>(_value.error, (value) {
       return _then(_value.copyWith(error: value));
@@ -7160,9 +7068,9 @@ class _$DetailsActionsStateActivateFailedCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$DetailsActionsStateActivateFailed
+class _$DetailsActionsStateActivateFailedImpl
     implements DetailsActionsStateActivateFailed {
-  const _$DetailsActionsStateActivateFailed({required this.error});
+  const _$DetailsActionsStateActivateFailedImpl({required this.error});
 
   @override
   final StorageError error;
@@ -7173,22 +7081,23 @@ class _$DetailsActionsStateActivateFailed
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is DetailsActionsStateActivateFailed &&
-            (identical(other.error, error) ||
-                const DeepCollectionEquality().equals(other.error, error)));
+        (other.runtimeType == runtimeType &&
+            other is _$DetailsActionsStateActivateFailedImpl &&
+            (identical(other.error, error) || other.error == error));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(error);
+  int get hashCode => Object.hash(runtimeType, error);
 
   @JsonKey(ignore: true)
   @override
-  $DetailsActionsStateActivateFailedCopyWith<DetailsActionsStateActivateFailed>
-      get copyWith => _$DetailsActionsStateActivateFailedCopyWithImpl<
-          DetailsActionsStateActivateFailed>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$DetailsActionsStateActivateFailedImplCopyWith<
+          _$DetailsActionsStateActivateFailedImpl>
+      get copyWith => __$$DetailsActionsStateActivateFailedImplCopyWithImpl<
+          _$DetailsActionsStateActivateFailedImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -7224,30 +7133,30 @@ class _$DetailsActionsStateActivateFailed
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? deleting,
-    TResult Function()? deleteSuccess,
-    TResult Function(StorageError error)? deleteFailed,
-    TResult Function()? markingAsRead,
-    TResult Function()? markAsReadSuccess,
-    TResult Function(StorageError error)? markAsReadFailed,
-    TResult Function()? movingToActive,
-    TResult Function()? moveToActiveSuccess,
-    TResult Function(StorageError error)? moveToActiveFailed,
-    TResult Function()? movingToArchive,
-    TResult Function()? moveToArchiveSuccess,
-    TResult Function(StorageError error)? moveToArchiveFailed,
-    TResult Function()? refreshing,
-    TResult Function()? refreshSuccess,
-    TResult Function(StorageError error)? refreshFailed,
-    TResult Function(Duration remainingTime)? refreshFreqLimited,
-    TResult Function()? sharingString,
-    TResult Function(String text)? shareStringSuccess,
-    TResult Function()? copyingTrack,
-    TResult Function(String trackNumber)? copyTrackSuccess,
-    TResult Function()? activating,
-    TResult Function()? activateSuccess,
-    TResult Function(StorageError error)? activateFailed,
+    TResult? Function()? initial,
+    TResult? Function()? deleting,
+    TResult? Function()? deleteSuccess,
+    TResult? Function(StorageError error)? deleteFailed,
+    TResult? Function()? markingAsRead,
+    TResult? Function()? markAsReadSuccess,
+    TResult? Function(StorageError error)? markAsReadFailed,
+    TResult? Function()? movingToActive,
+    TResult? Function()? moveToActiveSuccess,
+    TResult? Function(StorageError error)? moveToActiveFailed,
+    TResult? Function()? movingToArchive,
+    TResult? Function()? moveToArchiveSuccess,
+    TResult? Function(StorageError error)? moveToArchiveFailed,
+    TResult? Function()? refreshing,
+    TResult? Function()? refreshSuccess,
+    TResult? Function(StorageError error)? refreshFailed,
+    TResult? Function(Duration remainingTime)? refreshFreqLimited,
+    TResult? Function()? sharingString,
+    TResult? Function(String text)? shareStringSuccess,
+    TResult? Function()? copyingTrack,
+    TResult? Function(String trackNumber)? copyTrackSuccess,
+    TResult? Function()? activating,
+    TResult? Function()? activateSuccess,
+    TResult? Function(StorageError error)? activateFailed,
   }) {
     return activateFailed?.call(error);
   }
@@ -7341,39 +7250,41 @@ class _$DetailsActionsStateActivateFailed
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(DetailsActionsStateInitial value)? initial,
-    TResult Function(DetailsActionsStateDeleting value)? deleting,
-    TResult Function(DetailsActionsStateDeleteSuccess value)? deleteSuccess,
-    TResult Function(DetailsActionsStateDeleteFailed value)? deleteFailed,
-    TResult Function(DetailsActionsStateMarkingAsRead value)? markingAsRead,
-    TResult Function(DetailsActionsStateMarkAsReadSuccess value)?
+    TResult? Function(DetailsActionsStateInitial value)? initial,
+    TResult? Function(DetailsActionsStateDeleting value)? deleting,
+    TResult? Function(DetailsActionsStateDeleteSuccess value)? deleteSuccess,
+    TResult? Function(DetailsActionsStateDeleteFailed value)? deleteFailed,
+    TResult? Function(DetailsActionsStateMarkingAsRead value)? markingAsRead,
+    TResult? Function(DetailsActionsStateMarkAsReadSuccess value)?
         markAsReadSuccess,
-    TResult Function(DetailsActionsStateMarkAsReadFailed value)?
+    TResult? Function(DetailsActionsStateMarkAsReadFailed value)?
         markAsReadFailed,
-    TResult Function(DetailsActionsStateMovingToActive value)? movingToActive,
-    TResult Function(DetailsActionsStateMoveToActiveSuccess value)?
+    TResult? Function(DetailsActionsStateMovingToActive value)? movingToActive,
+    TResult? Function(DetailsActionsStateMoveToActiveSuccess value)?
         moveToActiveSuccess,
-    TResult Function(DetailsActionsStateMoveToActiveFailed value)?
+    TResult? Function(DetailsActionsStateMoveToActiveFailed value)?
         moveToActiveFailed,
-    TResult Function(DetailsActionsStateMovingToArchive value)? movingToArchive,
-    TResult Function(DetailsActionsStateMoveToArchiveSuccess value)?
+    TResult? Function(DetailsActionsStateMovingToArchive value)?
+        movingToArchive,
+    TResult? Function(DetailsActionsStateMoveToArchiveSuccess value)?
         moveToArchiveSuccess,
-    TResult Function(DetailsActionsStateMoveToArchiveFailed value)?
+    TResult? Function(DetailsActionsStateMoveToArchiveFailed value)?
         moveToArchiveFailed,
-    TResult Function(DetailsActionsStateRefreshing value)? refreshing,
-    TResult Function(DetailsActionsStateRefreshSuccess value)? refreshSuccess,
-    TResult Function(DetailsActionsStateRefreshFailed value)? refreshFailed,
-    TResult Function(DetailsActionsStateRefreshFreqLimited value)?
+    TResult? Function(DetailsActionsStateRefreshing value)? refreshing,
+    TResult? Function(DetailsActionsStateRefreshSuccess value)? refreshSuccess,
+    TResult? Function(DetailsActionsStateRefreshFailed value)? refreshFailed,
+    TResult? Function(DetailsActionsStateRefreshFreqLimited value)?
         refreshFreqLimited,
-    TResult Function(DetailsActionsStateSharingString value)? sharingString,
-    TResult Function(DetailsActionsStateShareStringSuccess value)?
+    TResult? Function(DetailsActionsStateSharingString value)? sharingString,
+    TResult? Function(DetailsActionsStateShareStringSuccess value)?
         shareStringSuccess,
-    TResult Function(DetailsActionsStateCopyingTrack value)? copyingTrack,
-    TResult Function(DetailsActionsStateCopyTrackSuccess value)?
+    TResult? Function(DetailsActionsStateCopyingTrack value)? copyingTrack,
+    TResult? Function(DetailsActionsStateCopyTrackSuccess value)?
         copyTrackSuccess,
-    TResult Function(DetailsActionsStateActivating value)? activating,
-    TResult Function(DetailsActionsStateActivateSuccess value)? activateSuccess,
-    TResult Function(DetailsActionsStateActivateFailed value)? activateFailed,
+    TResult? Function(DetailsActionsStateActivating value)? activating,
+    TResult? Function(DetailsActionsStateActivateSuccess value)?
+        activateSuccess,
+    TResult? Function(DetailsActionsStateActivateFailed value)? activateFailed,
   }) {
     return activateFailed?.call(this);
   }
@@ -7426,10 +7337,12 @@ class _$DetailsActionsStateActivateFailed
 abstract class DetailsActionsStateActivateFailed
     implements DetailsActionsState {
   const factory DetailsActionsStateActivateFailed(
-      {required StorageError error}) = _$DetailsActionsStateActivateFailed;
+          {required final StorageError error}) =
+      _$DetailsActionsStateActivateFailedImpl;
 
-  StorageError get error => throw _privateConstructorUsedError;
+  StorageError get error;
   @JsonKey(ignore: true)
-  $DetailsActionsStateActivateFailedCopyWith<DetailsActionsStateActivateFailed>
+  _$$DetailsActionsStateActivateFailedImplCopyWith<
+          _$DetailsActionsStateActivateFailedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

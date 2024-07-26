@@ -30,7 +30,7 @@ import 'package:libretrack/ui/widget/widget.dart';
 import '../utils/service_metadata.dart';
 
 class AddAccountPage extends StatefulWidget {
-  const AddAccountPage({Key? key}) : super(key: key);
+  const AddAccountPage({super.key});
 
   @override
   _AddAccountPageState createState() => _AddAccountPageState();
@@ -53,7 +53,8 @@ class _AddAccountPageState extends State<AddAccountPage> {
           state.maybeWhen(
             loadingFailed: (error) {
               error?.when(database: (e, stackTrace) {
-                log().e('Unable to load service list', e, stackTrace);
+                log().e('Unable to load service list',
+                    error: e, stackTrace: stackTrace);
               });
             },
             orElse: () {},
@@ -83,7 +84,7 @@ class _AddAccountPageState extends State<AddAccountPage> {
         icon: Icons.supervisor_account,
         text: Text(
           S.of(context).allAccountsAlreadyAdded,
-          style: Theme.of(context).textTheme.headline6,
+          style: Theme.of(context).textTheme.titleLarge,
         ),
       );
     } else {
@@ -110,7 +111,7 @@ void _addAccountFailedMsg(
   StackTrace? stackTrace,
 ) {
   const msg = 'Failed to add account';
-  log().e(msg, e, stackTrace);
+  log().e(msg, error: e, stackTrace: stackTrace);
 
   final action = SnackBarAction(
     label: S.of(context).crashDialogReport,
@@ -142,10 +143,9 @@ class _Stepper extends StatefulWidget {
   final bool isAuthStorageSecured;
 
   const _Stepper({
-    Key? key,
     required this.services,
     required this.isAuthStorageSecured,
-  }) : super(key: key);
+  });
 
   @override
   _StepperState createState() => _StepperState();
@@ -233,7 +233,7 @@ class _StepperState extends State<_Stepper> {
           ),
         )
       ],
-      controlsBuilder: (context, {onStepContinue, onStepCancel}) {
+      controlsBuilder: (context, details) {
         return const SizedBox.shrink();
       },
       onStepTapped: (position) {
@@ -296,10 +296,9 @@ class _ServicesList extends StatelessWidget {
   final ValueChanged<TrackingServiceType>? onTap;
 
   const _ServicesList({
-    Key? key,
     required this.nonExistenServices,
     this.onTap,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -345,11 +344,10 @@ class _ServicesListItem extends StatelessWidget {
   final VoidCallback? onTap;
 
   const _ServicesListItem({
-    Key? key,
     required this.iconData,
     required this.name,
     this.onTap,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -369,9 +367,8 @@ class _AddAccountButton extends StatelessWidget {
   final VoidCallback? onPressed;
 
   const _AddAccountButton({
-    Key? key,
     this.onPressed,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

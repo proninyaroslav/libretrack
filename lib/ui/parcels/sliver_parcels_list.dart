@@ -41,12 +41,12 @@ class SliverParcelList extends StatelessWidget {
   final OnParcelDetailsCallback? onParcelDetails;
 
   const SliverParcelList({
-    Key? key,
+    super.key,
     required this.parcels,
     required this.pageType,
     this.onSelectionChanged,
     this.onParcelDetails,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -151,14 +151,13 @@ class _ParcelListItem extends StatelessWidget {
   final VoidCallback? onLongPress;
 
   const _ParcelListItem({
-    Key? key,
     required this.parcelInfo,
     required this.pageType,
     this.isSelected = false,
     this.selectableMode = false,
     this.onTap,
     this.onLongPress,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -313,7 +312,7 @@ class _ParcelListItem extends StatelessWidget {
               : trackInfo.description!,
           style: Theme.of(context)
               .textTheme
-              .subtitle1!
+              .titleMedium!
               .copyWith(fontWeight: FontWeight.w500),
         ),
         if (trackInfo.description?.isNotEmpty ?? false) ...[
@@ -321,7 +320,7 @@ class _ParcelListItem extends StatelessWidget {
           Text(
             trackInfo.trackNumber,
             overflow: TextOverflow.ellipsis,
-            style: Theme.of(context).textTheme.bodyText2,
+            style: Theme.of(context).textTheme.bodyMedium,
           ),
         ],
         ..._buildAuthErrorStatus(context, lastTrackingResponse),
@@ -350,7 +349,7 @@ class _ParcelListItem extends StatelessWidget {
         lastTrackingInfo != null && lastTrackingInfo.invalidTrackNumber
             ? S.of(context).trackingErrorInvalidTrackNumber
             : S.of(context).statusNotAvailable,
-        style: Theme.of(context).textTheme.bodyText2,
+        style: Theme.of(context).textTheme.bodyMedium,
       );
       return [
         if (isHorizontal)
@@ -379,8 +378,8 @@ class _ParcelListItem extends StatelessWidget {
       );
       final dateTime = Text(
         _formatDateTime(lastActivity.dateTime),
-        style: textTheme.bodyText2!.copyWith(
-          color: textTheme.caption!.color,
+        style: textTheme.bodyMedium!.copyWith(
+          color: textTheme.bodySmall!.color,
         ),
         overflow: TextOverflow.ellipsis,
       );
@@ -411,7 +410,7 @@ class _ParcelListItem extends StatelessWidget {
   }
 
   String _formatDateTime(DateTime dateTime) {
-    final jiffy = Jiffy(dateTime);
+    final jiffy = Jiffy.parseFromDateTime(dateTime);
     final now = DateTime.now();
     if (dateTime.year != now.year) {
       return jiffy.yMMMM;
@@ -485,10 +484,9 @@ class _ContentSeparator extends StatelessWidget {
   final bool isHorizontal;
 
   const _ContentSeparator({
-    Key? key,
     required this.thickness,
     required this.isHorizontal,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -505,10 +503,9 @@ class _ServiceStatus extends StatelessWidget {
   final String text;
 
   const _ServiceStatus({
-    Key? key,
     required this.serviceType,
     required this.text,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -529,7 +526,7 @@ class _ServiceStatus extends StatelessWidget {
             text,
             maxLines: 3,
             overflow: TextOverflow.ellipsis,
-            style: Theme.of(context).textTheme.bodyText2,
+            style: Theme.of(context).textTheme.bodyMedium,
           ),
         ),
       ],
@@ -540,7 +537,7 @@ class _ServiceStatus extends StatelessWidget {
     PostalServiceMetadata? metadata,
   ) {
     if (metadata == null) {
-      return const RRectIconData(
+      return RRectIconData(
         iconData: MdiIcons.packageVariantClosed,
         iconColor: Colors.white,
         backgroundColor: Colors.blueGrey,
@@ -555,9 +552,8 @@ class _ErrorStatus extends StatelessWidget {
   final String message;
 
   const _ErrorStatus({
-    Key? key,
     required this.message,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -566,7 +562,7 @@ class _ErrorStatus extends StatelessWidget {
       children: [
         Icon(
           Icons.error_outline,
-          color: Theme.of(context).errorColor,
+          color: Theme.of(context).colorScheme.error,
         ),
         Flexible(
           child: Padding(
@@ -575,8 +571,8 @@ class _ErrorStatus extends StatelessWidget {
               message,
               style: Theme.of(context)
                   .textTheme
-                  .bodyText2!
-                  .copyWith(color: Theme.of(context).errorColor),
+                  .bodyMedium!
+                  .copyWith(color: Theme.of(context).colorScheme.error),
             ),
           ),
         ),
@@ -591,11 +587,10 @@ class _ParcelItemSelectionControl extends StatefulWidget {
   final VoidCallback? onSelected;
 
   const _ParcelItemSelectionControl({
-    Key? key,
     this.show = false,
     this.isSelected = false,
     this.onSelected,
-  }) : super(key: key);
+  });
 
   @override
   _ParcelItemSelectionControlState createState() =>
@@ -615,7 +610,7 @@ class _ParcelItemSelectionControlState
             scale: 1.3,
             child: Checkbox(
               value: widget.isSelected,
-              fillColor: MaterialStateProperty.all(
+              fillColor: WidgetStateProperty.all(
                 Theme.of(context).colorScheme.secondary,
               ),
               checkColor: Theme.of(context).cardColor,
@@ -631,7 +626,7 @@ class _ParcelItemSelectionControlState
 }
 
 class _UnreadIndicator extends StatelessWidget {
-  const _UnreadIndicator({Key? key}) : super(key: key);
+  const _UnreadIndicator();
 
   @override
   Widget build(BuildContext context) {
@@ -656,9 +651,8 @@ class _AnimatedStatus extends StatelessWidget {
   final Widget child;
 
   const _AnimatedStatus({
-    Key? key,
     required this.child,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

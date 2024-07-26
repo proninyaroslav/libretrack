@@ -16,11 +16,9 @@
 // You should have received a copy of the GNU General Public License
 // along with LibreTrack.  If not, see <http://www.gnu.org/licenses/>.
 
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:libretrack/core/entity/entity.dart';
 import 'package:libretrack/ui/parcel_details/utils.dart';
-import 'package:libretrack/ui/utils/shipment_metadata.dart';
 import 'package:libretrack/ui/utils/utils.dart';
 import 'package:libretrack/ui/widget/widget.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
@@ -32,9 +30,9 @@ class ActivityList extends StatefulWidget {
   final List<ShipmentActivityInfo> activities;
 
   const ActivityList({
-    Key? key,
+    super.key,
     required this.activities,
-  }) : super(key: key);
+  });
 
   @override
   _ActivityListState createState() => _ActivityListState();
@@ -91,10 +89,9 @@ class _ActivityListItem extends StatelessWidget {
   final ShipmentActivityInfo? prevActivity;
 
   const _ActivityListItem({
-    Key? key,
     required this.activity,
     this.prevActivity,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -158,14 +155,14 @@ class _ActivityListItem extends StatelessWidget {
         children: [
           Text(
             statusMetadata.localizedName ?? activity.statusDescription ?? '',
-            style: theme.textTheme.subtitle1,
+            style: theme.textTheme.titleMedium,
           ),
           if (activity.statusDescription != null &&
               statusMetadata.localizedName != null) ...[
             const SizedBox(height: 8.0),
             Text(
               activity.statusDescription!,
-              style: theme.textTheme.bodyText2!
+              style: theme.textTheme.bodyMedium!
                   .copyWith(fontStyle: FontStyle.italic),
             ),
           ],
@@ -190,20 +187,17 @@ class _ActivityListItem extends StatelessWidget {
 class _TextWithIcon extends StatelessWidget {
   final IconData icon;
   final String text;
-  final Color? tintColor;
-  final TextStyle? textStyle;
+  final Color? tintColor = null;
+  final TextStyle? textStyle = null;
 
   const _TextWithIcon({
-    Key? key,
     required this.icon,
     required this.text,
-    this.tintColor,
-    this.textStyle,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
-    final defaultColor = Theme.of(context).textTheme.caption!.color;
+    final defaultColor = Theme.of(context).textTheme.bodySmall!.color;
     return Text.rich(
       TextSpan(
         children: [
@@ -223,7 +217,7 @@ class _TextWithIcon extends StatelessWidget {
             style: textStyle ??
                 Theme.of(context)
                     .textTheme
-                    .bodyText2!
+                    .bodyMedium!
                     .copyWith(color: defaultColor),
           ),
         ],
@@ -238,11 +232,10 @@ class _StatusIcon extends StatelessWidget {
   final ShipmentStatusMetadata? prevMetadata;
 
   const _StatusIcon({
-    Key? key,
     required this.size,
     required this.metadata,
     this.prevMetadata,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

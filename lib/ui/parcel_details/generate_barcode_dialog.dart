@@ -30,9 +30,9 @@ class GenerateBarcodeDialog extends StatelessWidget {
   final String trackNumber;
 
   const GenerateBarcodeDialog({
-    Key? key,
+    super.key,
     required this.trackNumber,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -53,7 +53,7 @@ class GenerateBarcodeDialog extends StatelessWidget {
           errorBuilder: (context, error) {
             log().e(
               'Unable to generate barcode for tracking number $trackNumber',
-              error,
+              error: error,
             );
             return _GenerateBarcodeError(
               error: error,
@@ -80,9 +80,8 @@ class _GenerateBarcodeError extends StatelessWidget {
   final String error;
 
   const _GenerateBarcodeError({
-    Key? key,
     required this.error,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -100,7 +99,7 @@ class _GenerateBarcodeError extends StatelessWidget {
             S.of(context).generateBarcodFailed(error),
             style: Theme.of(context)
                 .textTheme
-                .subtitle1!
+                .titleMedium!
                 .copyWith(color: Colors.blueGrey),
           ),
         ),

@@ -1,6 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'app_cubit.dart';
 
@@ -11,37 +12,12 @@ part of 'app_cubit.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$AppStateTearOff {
-  const _$AppStateTearOff();
-
-  AppStateInitial initial(
-      {required AppThemeType theme, required AppLocaleType locale}) {
-    return AppStateInitial(
-      theme: theme,
-      locale: locale,
-    );
-  }
-
-  AppStateChanged changed(
-      {required AppThemeType theme, required AppLocaleType locale}) {
-    return AppStateChanged(
-      theme: theme,
-      locale: locale,
-    );
-  }
-}
-
-/// @nodoc
-const $AppState = _$AppStateTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$AppState {
   AppThemeType get theme => throw _privateConstructorUsedError;
   AppLocaleType get locale => throw _privateConstructorUsedError;
-
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(AppThemeType theme, AppLocaleType locale) initial,
@@ -50,8 +26,8 @@ mixin _$AppState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(AppThemeType theme, AppLocaleType locale)? initial,
-    TResult Function(AppThemeType theme, AppLocaleType locale)? changed,
+    TResult? Function(AppThemeType theme, AppLocaleType locale)? initial,
+    TResult? Function(AppThemeType theme, AppLocaleType locale)? changed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -69,8 +45,8 @@ mixin _$AppState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(AppStateInitial value)? initial,
-    TResult Function(AppStateChanged value)? changed,
+    TResult? Function(AppStateInitial value)? initial,
+    TResult? Function(AppStateChanged value)? changed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -89,7 +65,8 @@ mixin _$AppState {
 /// @nodoc
 abstract class $AppStateCopyWith<$Res> {
   factory $AppStateCopyWith(AppState value, $Res Function(AppState) then) =
-      _$AppStateCopyWithImpl<$Res>;
+      _$AppStateCopyWithImpl<$Res, AppState>;
+  @useResult
   $Res call({AppThemeType theme, AppLocaleType locale});
 
   $AppThemeTypeCopyWith<$Res> get theme;
@@ -97,52 +74,58 @@ abstract class $AppStateCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$AppStateCopyWithImpl<$Res> implements $AppStateCopyWith<$Res> {
+class _$AppStateCopyWithImpl<$Res, $Val extends AppState>
+    implements $AppStateCopyWith<$Res> {
   _$AppStateCopyWithImpl(this._value, this._then);
 
-  final AppState _value;
   // ignore: unused_field
-  final $Res Function(AppState) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? theme = freezed,
-    Object? locale = freezed,
+    Object? theme = null,
+    Object? locale = null,
   }) {
     return _then(_value.copyWith(
-      theme: theme == freezed
+      theme: null == theme
           ? _value.theme
           : theme // ignore: cast_nullable_to_non_nullable
               as AppThemeType,
-      locale: locale == freezed
+      locale: null == locale
           ? _value.locale
           : locale // ignore: cast_nullable_to_non_nullable
               as AppLocaleType,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $AppThemeTypeCopyWith<$Res> get theme {
     return $AppThemeTypeCopyWith<$Res>(_value.theme, (value) {
-      return _then(_value.copyWith(theme: value));
+      return _then(_value.copyWith(theme: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $AppLocaleTypeCopyWith<$Res> get locale {
     return $AppLocaleTypeCopyWith<$Res>(_value.locale, (value) {
-      return _then(_value.copyWith(locale: value));
+      return _then(_value.copyWith(locale: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class $AppStateInitialCopyWith<$Res>
+abstract class _$$AppStateInitialImplCopyWith<$Res>
     implements $AppStateCopyWith<$Res> {
-  factory $AppStateInitialCopyWith(
-          AppStateInitial value, $Res Function(AppStateInitial) then) =
-      _$AppStateInitialCopyWithImpl<$Res>;
+  factory _$$AppStateInitialImplCopyWith(_$AppStateInitialImpl value,
+          $Res Function(_$AppStateInitialImpl) then) =
+      __$$AppStateInitialImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({AppThemeType theme, AppLocaleType locale});
 
   @override
@@ -152,26 +135,25 @@ abstract class $AppStateInitialCopyWith<$Res>
 }
 
 /// @nodoc
-class _$AppStateInitialCopyWithImpl<$Res> extends _$AppStateCopyWithImpl<$Res>
-    implements $AppStateInitialCopyWith<$Res> {
-  _$AppStateInitialCopyWithImpl(
-      AppStateInitial _value, $Res Function(AppStateInitial) _then)
-      : super(_value, (v) => _then(v as AppStateInitial));
+class __$$AppStateInitialImplCopyWithImpl<$Res>
+    extends _$AppStateCopyWithImpl<$Res, _$AppStateInitialImpl>
+    implements _$$AppStateInitialImplCopyWith<$Res> {
+  __$$AppStateInitialImplCopyWithImpl(
+      _$AppStateInitialImpl _value, $Res Function(_$AppStateInitialImpl) _then)
+      : super(_value, _then);
 
-  @override
-  AppStateInitial get _value => super._value as AppStateInitial;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? theme = freezed,
-    Object? locale = freezed,
+    Object? theme = null,
+    Object? locale = null,
   }) {
-    return _then(AppStateInitial(
-      theme: theme == freezed
+    return _then(_$AppStateInitialImpl(
+      theme: null == theme
           ? _value.theme
           : theme // ignore: cast_nullable_to_non_nullable
               as AppThemeType,
-      locale: locale == freezed
+      locale: null == locale
           ? _value.locale
           : locale // ignore: cast_nullable_to_non_nullable
               as AppLocaleType,
@@ -181,8 +163,8 @@ class _$AppStateInitialCopyWithImpl<$Res> extends _$AppStateCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$AppStateInitial implements AppStateInitial {
-  const _$AppStateInitial({required this.theme, required this.locale});
+class _$AppStateInitialImpl implements AppStateInitial {
+  const _$AppStateInitialImpl({required this.theme, required this.locale});
 
   @override
   final AppThemeType theme;
@@ -195,25 +177,23 @@ class _$AppStateInitial implements AppStateInitial {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is AppStateInitial &&
-            (identical(other.theme, theme) ||
-                const DeepCollectionEquality().equals(other.theme, theme)) &&
-            (identical(other.locale, locale) ||
-                const DeepCollectionEquality().equals(other.locale, locale)));
+        (other.runtimeType == runtimeType &&
+            other is _$AppStateInitialImpl &&
+            (identical(other.theme, theme) || other.theme == theme) &&
+            (identical(other.locale, locale) || other.locale == locale));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(theme) ^
-      const DeepCollectionEquality().hash(locale);
+  int get hashCode => Object.hash(runtimeType, theme, locale);
 
   @JsonKey(ignore: true)
   @override
-  $AppStateInitialCopyWith<AppStateInitial> get copyWith =>
-      _$AppStateInitialCopyWithImpl<AppStateInitial>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$AppStateInitialImplCopyWith<_$AppStateInitialImpl> get copyWith =>
+      __$$AppStateInitialImplCopyWithImpl<_$AppStateInitialImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -227,8 +207,8 @@ class _$AppStateInitial implements AppStateInitial {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(AppThemeType theme, AppLocaleType locale)? initial,
-    TResult Function(AppThemeType theme, AppLocaleType locale)? changed,
+    TResult? Function(AppThemeType theme, AppLocaleType locale)? initial,
+    TResult? Function(AppThemeType theme, AppLocaleType locale)? changed,
   }) {
     return initial?.call(theme, locale);
   }
@@ -258,8 +238,8 @@ class _$AppStateInitial implements AppStateInitial {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(AppStateInitial value)? initial,
-    TResult Function(AppStateChanged value)? changed,
+    TResult? Function(AppStateInitial value)? initial,
+    TResult? Function(AppStateChanged value)? changed,
   }) {
     return initial?.call(this);
   }
@@ -280,26 +260,27 @@ class _$AppStateInitial implements AppStateInitial {
 
 abstract class AppStateInitial implements AppState {
   const factory AppStateInitial(
-      {required AppThemeType theme,
-      required AppLocaleType locale}) = _$AppStateInitial;
+      {required final AppThemeType theme,
+      required final AppLocaleType locale}) = _$AppStateInitialImpl;
 
   @override
-  AppThemeType get theme => throw _privateConstructorUsedError;
+  AppThemeType get theme;
   @override
-  AppLocaleType get locale => throw _privateConstructorUsedError;
+  AppLocaleType get locale;
   @override
   @JsonKey(ignore: true)
-  $AppStateInitialCopyWith<AppStateInitial> get copyWith =>
+  _$$AppStateInitialImplCopyWith<_$AppStateInitialImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $AppStateChangedCopyWith<$Res>
+abstract class _$$AppStateChangedImplCopyWith<$Res>
     implements $AppStateCopyWith<$Res> {
-  factory $AppStateChangedCopyWith(
-          AppStateChanged value, $Res Function(AppStateChanged) then) =
-      _$AppStateChangedCopyWithImpl<$Res>;
+  factory _$$AppStateChangedImplCopyWith(_$AppStateChangedImpl value,
+          $Res Function(_$AppStateChangedImpl) then) =
+      __$$AppStateChangedImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({AppThemeType theme, AppLocaleType locale});
 
   @override
@@ -309,26 +290,25 @@ abstract class $AppStateChangedCopyWith<$Res>
 }
 
 /// @nodoc
-class _$AppStateChangedCopyWithImpl<$Res> extends _$AppStateCopyWithImpl<$Res>
-    implements $AppStateChangedCopyWith<$Res> {
-  _$AppStateChangedCopyWithImpl(
-      AppStateChanged _value, $Res Function(AppStateChanged) _then)
-      : super(_value, (v) => _then(v as AppStateChanged));
+class __$$AppStateChangedImplCopyWithImpl<$Res>
+    extends _$AppStateCopyWithImpl<$Res, _$AppStateChangedImpl>
+    implements _$$AppStateChangedImplCopyWith<$Res> {
+  __$$AppStateChangedImplCopyWithImpl(
+      _$AppStateChangedImpl _value, $Res Function(_$AppStateChangedImpl) _then)
+      : super(_value, _then);
 
-  @override
-  AppStateChanged get _value => super._value as AppStateChanged;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? theme = freezed,
-    Object? locale = freezed,
+    Object? theme = null,
+    Object? locale = null,
   }) {
-    return _then(AppStateChanged(
-      theme: theme == freezed
+    return _then(_$AppStateChangedImpl(
+      theme: null == theme
           ? _value.theme
           : theme // ignore: cast_nullable_to_non_nullable
               as AppThemeType,
-      locale: locale == freezed
+      locale: null == locale
           ? _value.locale
           : locale // ignore: cast_nullable_to_non_nullable
               as AppLocaleType,
@@ -338,8 +318,8 @@ class _$AppStateChangedCopyWithImpl<$Res> extends _$AppStateCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$AppStateChanged implements AppStateChanged {
-  const _$AppStateChanged({required this.theme, required this.locale});
+class _$AppStateChangedImpl implements AppStateChanged {
+  const _$AppStateChangedImpl({required this.theme, required this.locale});
 
   @override
   final AppThemeType theme;
@@ -352,25 +332,23 @@ class _$AppStateChanged implements AppStateChanged {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is AppStateChanged &&
-            (identical(other.theme, theme) ||
-                const DeepCollectionEquality().equals(other.theme, theme)) &&
-            (identical(other.locale, locale) ||
-                const DeepCollectionEquality().equals(other.locale, locale)));
+        (other.runtimeType == runtimeType &&
+            other is _$AppStateChangedImpl &&
+            (identical(other.theme, theme) || other.theme == theme) &&
+            (identical(other.locale, locale) || other.locale == locale));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(theme) ^
-      const DeepCollectionEquality().hash(locale);
+  int get hashCode => Object.hash(runtimeType, theme, locale);
 
   @JsonKey(ignore: true)
   @override
-  $AppStateChangedCopyWith<AppStateChanged> get copyWith =>
-      _$AppStateChangedCopyWithImpl<AppStateChanged>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$AppStateChangedImplCopyWith<_$AppStateChangedImpl> get copyWith =>
+      __$$AppStateChangedImplCopyWithImpl<_$AppStateChangedImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -384,8 +362,8 @@ class _$AppStateChanged implements AppStateChanged {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(AppThemeType theme, AppLocaleType locale)? initial,
-    TResult Function(AppThemeType theme, AppLocaleType locale)? changed,
+    TResult? Function(AppThemeType theme, AppLocaleType locale)? initial,
+    TResult? Function(AppThemeType theme, AppLocaleType locale)? changed,
   }) {
     return changed?.call(theme, locale);
   }
@@ -415,8 +393,8 @@ class _$AppStateChanged implements AppStateChanged {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(AppStateInitial value)? initial,
-    TResult Function(AppStateChanged value)? changed,
+    TResult? Function(AppStateInitial value)? initial,
+    TResult? Function(AppStateChanged value)? changed,
   }) {
     return changed?.call(this);
   }
@@ -437,15 +415,15 @@ class _$AppStateChanged implements AppStateChanged {
 
 abstract class AppStateChanged implements AppState {
   const factory AppStateChanged(
-      {required AppThemeType theme,
-      required AppLocaleType locale}) = _$AppStateChanged;
+      {required final AppThemeType theme,
+      required final AppLocaleType locale}) = _$AppStateChangedImpl;
 
   @override
-  AppThemeType get theme => throw _privateConstructorUsedError;
+  AppThemeType get theme;
   @override
-  AppLocaleType get locale => throw _privateConstructorUsedError;
+  AppLocaleType get locale;
   @override
   @JsonKey(ignore: true)
-  $AppStateChangedCopyWith<AppStateChanged> get copyWith =>
+  _$$AppStateChangedImplCopyWith<_$AppStateChangedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

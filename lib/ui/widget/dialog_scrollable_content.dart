@@ -23,10 +23,10 @@ class DialogScrollableContent extends StatelessWidget {
   final double? borderPadding;
 
   const DialogScrollableContent({
-    Key? key,
+    super.key,
     required this.child,
     this.borderPadding,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

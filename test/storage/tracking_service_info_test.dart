@@ -62,7 +62,7 @@ void main() {
         'username': 'username',
         'password': 'password',
       });
-       const expectedAuthData2 = AuthData({
+      const expectedAuthData2 = AuthData({
         'username': 'username',
         'password': 'password',
       });

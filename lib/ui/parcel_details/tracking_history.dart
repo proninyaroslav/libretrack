@@ -37,9 +37,9 @@ class TrackingHistory extends StatelessWidget {
   final List<TrackingHistoryEntry> trackingHistory;
 
   const TrackingHistory({
-    Key? key,
+    super.key,
     required this.trackingHistory,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -48,7 +48,7 @@ class TrackingHistory extends StatelessWidget {
         icon: Icons.history,
         text: Text(
           S.of(context).noTrackingHistory,
-          style: Theme.of(context).textTheme.headline6,
+          style: Theme.of(context).textTheme.titleLarge,
         ),
       );
     } else {
@@ -61,9 +61,8 @@ class _Body extends StatelessWidget {
   final List<TrackingHistoryEntry> trackingHistory;
 
   const _Body({
-    Key? key,
     required this.trackingHistory,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -123,9 +122,8 @@ class _TrackingHistoryItem extends StatelessWidget {
   final TrackingHistoryEntry historyEntry;
 
   const _TrackingHistoryItem({
-    Key? key,
     required this.historyEntry,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -139,7 +137,7 @@ class _TrackingHistoryItem extends StatelessWidget {
           'tracking_history_item_${historyEntry.trackingInfo.id}',
         ),
         title: Text(
-          Jiffy(trackingInfo.dateTime).yMMMdjm,
+          Jiffy.parseFromDateTime(trackingInfo.dateTime).yMMMdjm,
         ),
         expandedCrossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -163,9 +161,8 @@ class _TrackingHistoryItemContent extends StatelessWidget {
   final List<TrackingResponseInfo> responseList;
 
   const _TrackingHistoryItemContent({
-    Key? key,
     required this.responseList,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -187,9 +184,8 @@ class _TrackingHistoryResponseItem extends StatelessWidget {
   final TrackingResponseInfo response;
 
   const _TrackingHistoryResponseItem({
-    Key? key,
     required this.response,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -256,7 +252,7 @@ class _TrackingHistoryResponseItem extends StatelessWidget {
         break;
       case TrackingResponseStatus.fail:
         icon = Icons.close;
-        color = Theme.of(context).errorColor;
+        color = Theme.of(context).colorScheme.error;
         iconColor = Theme.of(context).colorScheme.onError;
         break;
       case TrackingResponseStatus.noInfo:
@@ -285,9 +281,8 @@ class _ShowResponseErrorButton extends StatelessWidget {
   final TrackingError error;
 
   const _ShowResponseErrorButton({
-    Key? key,
     required this.error,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -305,7 +300,7 @@ class _ShowResponseErrorButton extends StatelessWidget {
       },
       style: ButtonStyle(
         tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-        shape: MaterialStateProperty.all(
+        shape: WidgetStateProperty.all(
           RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(50.0),
           ),

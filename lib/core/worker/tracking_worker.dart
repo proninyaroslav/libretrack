@@ -122,7 +122,8 @@ class TrackingWorker implements Worker {
           error.when(
             storage: (error) => error.when(
               database: (e, stackTrace) {
-                log().e('Unable to check tracking', e, stackTrace);
+                log().e('Unable to check tracking',
+                    error: e, stackTrace: stackTrace);
               },
             ),
           );
@@ -138,7 +139,8 @@ class TrackingWorker implements Worker {
     if (err != null) {
       err.when(
         database: (e, stackTrace) {
-          log().e('Unable to save tracking info list', e, stackTrace);
+          log().e('Unable to save tracking info list',
+              error: e, stackTrace: stackTrace);
         },
       );
       _trackingFailedNotify(state.trackingInfoList);
@@ -153,7 +155,8 @@ class TrackingWorker implements Worker {
       final err = await _deleteUnsupportedServices(state.unsupportedServices!);
       err?.when(
         database: (e, stackTrace) {
-          log().e('Unable to delete unsupported services', e, stackTrace);
+          log().e('Unable to delete unsupported services',
+              error: e, stackTrace: stackTrace);
         },
       );
     }
@@ -162,7 +165,8 @@ class TrackingWorker implements Worker {
       final err = await _saveDisableServices(state.disabledServices!);
       err?.when(
         database: (e, stackTrace) {
-          log().e('Unable to save disabled services', e, stackTrace);
+          log().e('Unable to save disabled services',
+              error: e, stackTrace: stackTrace);
         },
       );
     }
@@ -172,13 +176,15 @@ class TrackingWorker implements Worker {
       err = await _saveResponseInfo(state.responseInfoList);
       err?.when(
         database: (e, stackTrace) {
-          log().e('Unable to save response info list', e, stackTrace);
+          log().e('Unable to save response info list',
+              error: e, stackTrace: stackTrace);
         },
       );
     } else {
       err.when(
         database: (e, stackTrace) {
-          log().e('Unable to save tracking info list', e, stackTrace);
+          log().e('Unable to save tracking info list',
+              error: e, stackTrace: stackTrace);
         },
       );
       _trackingFailedNotify(state.trackingInfoList);
@@ -188,7 +194,8 @@ class TrackingWorker implements Worker {
     err = await _deleteOldTrackingInfo(state.trackingInfoList);
     err?.when(
       database: (e, stackTrace) {
-        log().e('Unable to remove old tracking info', e, stackTrace);
+        log().e('Unable to remove old tracking info',
+            error: e, stackTrace: stackTrace);
       },
     );
 
@@ -197,7 +204,8 @@ class TrackingWorker implements Worker {
       if (err != null) {
         err.when(
           database: (e, stackTrace) {
-            log().e('Unable to save shipment info', e, stackTrace);
+            log().e('Unable to save shipment info',
+                error: e, stackTrace: stackTrace);
           },
         );
         continue;
@@ -206,7 +214,8 @@ class TrackingWorker implements Worker {
       err = await _saveActivities(result);
       err?.when(
         database: (e, stackTrace) {
-          log().e('Unable to save activity list', e, stackTrace);
+          log().e('Unable to save activity list',
+              error: e, stackTrace: stackTrace);
         },
       );
     }
@@ -308,7 +317,8 @@ class TrackingWorker implements Worker {
                 jsonDecode(json) as Map<String, dynamic>,
               );
             } catch (e, stackTrace) {
-              log().e('Cannot decode input data: $json', e, stackTrace);
+              log().e('Cannot decode input data: $json',
+                  error: e, stackTrace: stackTrace);
             }
           },
         ).where((trackService) => trackService != null),

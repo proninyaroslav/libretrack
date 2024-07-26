@@ -1,6 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'model.dart';
 
@@ -11,22 +12,7 @@ part of 'model.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$TrackingNumbersTearOff {
-  const _$TrackingNumbersTearOff();
-
-  _TrackingNumbers call({String value = '', TrackingNumbersError? error}) {
-    return _TrackingNumbers(
-      value: value,
-      error: error,
-    );
-  }
-}
-
-/// @nodoc
-const $TrackingNumbers = _$TrackingNumbersTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$TrackingNumbers {
@@ -42,57 +28,62 @@ mixin _$TrackingNumbers {
 abstract class $TrackingNumbersCopyWith<$Res> {
   factory $TrackingNumbersCopyWith(
           TrackingNumbers value, $Res Function(TrackingNumbers) then) =
-      _$TrackingNumbersCopyWithImpl<$Res>;
+      _$TrackingNumbersCopyWithImpl<$Res, TrackingNumbers>;
+  @useResult
   $Res call({String value, TrackingNumbersError? error});
 
   $TrackingNumbersErrorCopyWith<$Res>? get error;
 }
 
 /// @nodoc
-class _$TrackingNumbersCopyWithImpl<$Res>
+class _$TrackingNumbersCopyWithImpl<$Res, $Val extends TrackingNumbers>
     implements $TrackingNumbersCopyWith<$Res> {
   _$TrackingNumbersCopyWithImpl(this._value, this._then);
 
-  final TrackingNumbers _value;
   // ignore: unused_field
-  final $Res Function(TrackingNumbers) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? value = freezed,
+    Object? value = null,
     Object? error = freezed,
   }) {
     return _then(_value.copyWith(
-      value: value == freezed
+      value: null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
               as String,
-      error: error == freezed
+      error: freezed == error
           ? _value.error
           : error // ignore: cast_nullable_to_non_nullable
               as TrackingNumbersError?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $TrackingNumbersErrorCopyWith<$Res>? get error {
     if (_value.error == null) {
       return null;
     }
 
     return $TrackingNumbersErrorCopyWith<$Res>(_value.error!, (value) {
-      return _then(_value.copyWith(error: value));
+      return _then(_value.copyWith(error: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$TrackingNumbersCopyWith<$Res>
+abstract class _$$TrackingNumbersImplCopyWith<$Res>
     implements $TrackingNumbersCopyWith<$Res> {
-  factory _$TrackingNumbersCopyWith(
-          _TrackingNumbers value, $Res Function(_TrackingNumbers) then) =
-      __$TrackingNumbersCopyWithImpl<$Res>;
+  factory _$$TrackingNumbersImplCopyWith(_$TrackingNumbersImpl value,
+          $Res Function(_$TrackingNumbersImpl) then) =
+      __$$TrackingNumbersImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({String value, TrackingNumbersError? error});
 
   @override
@@ -100,27 +91,25 @@ abstract class _$TrackingNumbersCopyWith<$Res>
 }
 
 /// @nodoc
-class __$TrackingNumbersCopyWithImpl<$Res>
-    extends _$TrackingNumbersCopyWithImpl<$Res>
-    implements _$TrackingNumbersCopyWith<$Res> {
-  __$TrackingNumbersCopyWithImpl(
-      _TrackingNumbers _value, $Res Function(_TrackingNumbers) _then)
-      : super(_value, (v) => _then(v as _TrackingNumbers));
+class __$$TrackingNumbersImplCopyWithImpl<$Res>
+    extends _$TrackingNumbersCopyWithImpl<$Res, _$TrackingNumbersImpl>
+    implements _$$TrackingNumbersImplCopyWith<$Res> {
+  __$$TrackingNumbersImplCopyWithImpl(
+      _$TrackingNumbersImpl _value, $Res Function(_$TrackingNumbersImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _TrackingNumbers get _value => super._value as _TrackingNumbers;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? value = freezed,
+    Object? value = null,
     Object? error = freezed,
   }) {
-    return _then(_TrackingNumbers(
-      value: value == freezed
+    return _then(_$TrackingNumbersImpl(
+      value: null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
               as String,
-      error: error == freezed
+      error: freezed == error
           ? _value.error
           : error // ignore: cast_nullable_to_non_nullable
               as TrackingNumbersError?,
@@ -130,13 +119,13 @@ class __$TrackingNumbersCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_TrackingNumbers
+class _$TrackingNumbersImpl
     with DiagnosticableTreeMixin
     implements _TrackingNumbers {
-  const _$_TrackingNumbers({this.value = '', this.error});
+  const _$TrackingNumbersImpl({this.value = '', this.error});
 
-  @JsonKey(defaultValue: '')
   @override
+  @JsonKey()
   final String value;
   @override
   final TrackingNumbersError? error;
@@ -156,52 +145,39 @@ class _$_TrackingNumbers
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is _TrackingNumbers &&
-            (identical(other.value, value) ||
-                const DeepCollectionEquality().equals(other.value, value)) &&
-            (identical(other.error, error) ||
-                const DeepCollectionEquality().equals(other.error, error)));
+        (other.runtimeType == runtimeType &&
+            other is _$TrackingNumbersImpl &&
+            (identical(other.value, value) || other.value == value) &&
+            (identical(other.error, error) || other.error == error));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(value) ^
-      const DeepCollectionEquality().hash(error);
+  int get hashCode => Object.hash(runtimeType, value, error);
 
   @JsonKey(ignore: true)
   @override
-  _$TrackingNumbersCopyWith<_TrackingNumbers> get copyWith =>
-      __$TrackingNumbersCopyWithImpl<_TrackingNumbers>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$TrackingNumbersImplCopyWith<_$TrackingNumbersImpl> get copyWith =>
+      __$$TrackingNumbersImplCopyWithImpl<_$TrackingNumbersImpl>(
+          this, _$identity);
 }
 
 abstract class _TrackingNumbers implements TrackingNumbers {
-  const factory _TrackingNumbers({String value, TrackingNumbersError? error}) =
-      _$_TrackingNumbers;
+  const factory _TrackingNumbers(
+      {final String value,
+      final TrackingNumbersError? error}) = _$TrackingNumbersImpl;
 
   @override
-  String get value => throw _privateConstructorUsedError;
+  String get value;
   @override
-  TrackingNumbersError? get error => throw _privateConstructorUsedError;
+  TrackingNumbersError? get error;
   @override
   @JsonKey(ignore: true)
-  _$TrackingNumbersCopyWith<_TrackingNumbers> get copyWith =>
+  _$$TrackingNumbersImplCopyWith<_$TrackingNumbersImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
-
-/// @nodoc
-class _$TrackingNumbersErrorTearOff {
-  const _$TrackingNumbersErrorTearOff();
-
-  TrackingNumbersErrorEmpty empty() {
-    return const TrackingNumbersErrorEmpty();
-  }
-}
-
-/// @nodoc
-const $TrackingNumbersError = _$TrackingNumbersErrorTearOff();
 
 /// @nodoc
 mixin _$TrackingNumbersError {
@@ -212,7 +188,7 @@ mixin _$TrackingNumbersError {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? empty,
+    TResult? Function()? empty,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -228,7 +204,7 @@ mixin _$TrackingNumbersError {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(TrackingNumbersErrorEmpty value)? empty,
+    TResult? Function(TrackingNumbersErrorEmpty value)? empty,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -243,45 +219,46 @@ mixin _$TrackingNumbersError {
 abstract class $TrackingNumbersErrorCopyWith<$Res> {
   factory $TrackingNumbersErrorCopyWith(TrackingNumbersError value,
           $Res Function(TrackingNumbersError) then) =
-      _$TrackingNumbersErrorCopyWithImpl<$Res>;
+      _$TrackingNumbersErrorCopyWithImpl<$Res, TrackingNumbersError>;
 }
 
 /// @nodoc
-class _$TrackingNumbersErrorCopyWithImpl<$Res>
+class _$TrackingNumbersErrorCopyWithImpl<$Res,
+        $Val extends TrackingNumbersError>
     implements $TrackingNumbersErrorCopyWith<$Res> {
   _$TrackingNumbersErrorCopyWithImpl(this._value, this._then);
 
-  final TrackingNumbersError _value;
   // ignore: unused_field
-  final $Res Function(TrackingNumbersError) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 }
 
 /// @nodoc
-abstract class $TrackingNumbersErrorEmptyCopyWith<$Res> {
-  factory $TrackingNumbersErrorEmptyCopyWith(TrackingNumbersErrorEmpty value,
-          $Res Function(TrackingNumbersErrorEmpty) then) =
-      _$TrackingNumbersErrorEmptyCopyWithImpl<$Res>;
+abstract class _$$TrackingNumbersErrorEmptyImplCopyWith<$Res> {
+  factory _$$TrackingNumbersErrorEmptyImplCopyWith(
+          _$TrackingNumbersErrorEmptyImpl value,
+          $Res Function(_$TrackingNumbersErrorEmptyImpl) then) =
+      __$$TrackingNumbersErrorEmptyImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$TrackingNumbersErrorEmptyCopyWithImpl<$Res>
-    extends _$TrackingNumbersErrorCopyWithImpl<$Res>
-    implements $TrackingNumbersErrorEmptyCopyWith<$Res> {
-  _$TrackingNumbersErrorEmptyCopyWithImpl(TrackingNumbersErrorEmpty _value,
-      $Res Function(TrackingNumbersErrorEmpty) _then)
-      : super(_value, (v) => _then(v as TrackingNumbersErrorEmpty));
-
-  @override
-  TrackingNumbersErrorEmpty get _value =>
-      super._value as TrackingNumbersErrorEmpty;
+class __$$TrackingNumbersErrorEmptyImplCopyWithImpl<$Res>
+    extends _$TrackingNumbersErrorCopyWithImpl<$Res,
+        _$TrackingNumbersErrorEmptyImpl>
+    implements _$$TrackingNumbersErrorEmptyImplCopyWith<$Res> {
+  __$$TrackingNumbersErrorEmptyImplCopyWithImpl(
+      _$TrackingNumbersErrorEmptyImpl _value,
+      $Res Function(_$TrackingNumbersErrorEmptyImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$TrackingNumbersErrorEmpty
+class _$TrackingNumbersErrorEmptyImpl
     with DiagnosticableTreeMixin
     implements TrackingNumbersErrorEmpty {
-  const _$TrackingNumbersErrorEmpty();
+  const _$TrackingNumbersErrorEmptyImpl();
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
@@ -291,12 +268,14 @@ class _$TrackingNumbersErrorEmpty
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
-    properties..add(DiagnosticsProperty('type', 'TrackingNumbersError.empty'));
+    properties.add(DiagnosticsProperty('type', 'TrackingNumbersError.empty'));
   }
 
   @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) || (other is TrackingNumbersErrorEmpty);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$TrackingNumbersErrorEmptyImpl);
   }
 
   @override
@@ -313,7 +292,7 @@ class _$TrackingNumbersErrorEmpty
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? empty,
+    TResult? Function()? empty,
   }) {
     return empty?.call();
   }
@@ -341,7 +320,7 @@ class _$TrackingNumbersErrorEmpty
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(TrackingNumbersErrorEmpty value)? empty,
+    TResult? Function(TrackingNumbersErrorEmpty value)? empty,
   }) {
     return empty?.call(this);
   }
@@ -360,23 +339,8 @@ class _$TrackingNumbersErrorEmpty
 }
 
 abstract class TrackingNumbersErrorEmpty implements TrackingNumbersError {
-  const factory TrackingNumbersErrorEmpty() = _$TrackingNumbersErrorEmpty;
+  const factory TrackingNumbersErrorEmpty() = _$TrackingNumbersErrorEmptyImpl;
 }
-
-/// @nodoc
-class _$ParcelNamesTearOff {
-  const _$ParcelNamesTearOff();
-
-  _ParcelNames call({String value = '', ParcelNamesError? error}) {
-    return _ParcelNames(
-      value: value,
-      error: error,
-    );
-  }
-}
-
-/// @nodoc
-const $ParcelNames = _$ParcelNamesTearOff();
 
 /// @nodoc
 mixin _$ParcelNames {
@@ -392,67 +356,71 @@ mixin _$ParcelNames {
 abstract class $ParcelNamesCopyWith<$Res> {
   factory $ParcelNamesCopyWith(
           ParcelNames value, $Res Function(ParcelNames) then) =
-      _$ParcelNamesCopyWithImpl<$Res>;
+      _$ParcelNamesCopyWithImpl<$Res, ParcelNames>;
+  @useResult
   $Res call({String value, ParcelNamesError? error});
 }
 
 /// @nodoc
-class _$ParcelNamesCopyWithImpl<$Res> implements $ParcelNamesCopyWith<$Res> {
+class _$ParcelNamesCopyWithImpl<$Res, $Val extends ParcelNames>
+    implements $ParcelNamesCopyWith<$Res> {
   _$ParcelNamesCopyWithImpl(this._value, this._then);
 
-  final ParcelNames _value;
   // ignore: unused_field
-  final $Res Function(ParcelNames) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? value = freezed,
+    Object? value = null,
     Object? error = freezed,
   }) {
     return _then(_value.copyWith(
-      value: value == freezed
+      value: null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
               as String,
-      error: error == freezed
+      error: freezed == error
           ? _value.error
           : error // ignore: cast_nullable_to_non_nullable
               as ParcelNamesError?,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$ParcelNamesCopyWith<$Res>
+abstract class _$$ParcelNamesImplCopyWith<$Res>
     implements $ParcelNamesCopyWith<$Res> {
-  factory _$ParcelNamesCopyWith(
-          _ParcelNames value, $Res Function(_ParcelNames) then) =
-      __$ParcelNamesCopyWithImpl<$Res>;
+  factory _$$ParcelNamesImplCopyWith(
+          _$ParcelNamesImpl value, $Res Function(_$ParcelNamesImpl) then) =
+      __$$ParcelNamesImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({String value, ParcelNamesError? error});
 }
 
 /// @nodoc
-class __$ParcelNamesCopyWithImpl<$Res> extends _$ParcelNamesCopyWithImpl<$Res>
-    implements _$ParcelNamesCopyWith<$Res> {
-  __$ParcelNamesCopyWithImpl(
-      _ParcelNames _value, $Res Function(_ParcelNames) _then)
-      : super(_value, (v) => _then(v as _ParcelNames));
+class __$$ParcelNamesImplCopyWithImpl<$Res>
+    extends _$ParcelNamesCopyWithImpl<$Res, _$ParcelNamesImpl>
+    implements _$$ParcelNamesImplCopyWith<$Res> {
+  __$$ParcelNamesImplCopyWithImpl(
+      _$ParcelNamesImpl _value, $Res Function(_$ParcelNamesImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _ParcelNames get _value => super._value as _ParcelNames;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? value = freezed,
+    Object? value = null,
     Object? error = freezed,
   }) {
-    return _then(_ParcelNames(
-      value: value == freezed
+    return _then(_$ParcelNamesImpl(
+      value: null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
               as String,
-      error: error == freezed
+      error: freezed == error
           ? _value.error
           : error // ignore: cast_nullable_to_non_nullable
               as ParcelNamesError?,
@@ -462,11 +430,11 @@ class __$ParcelNamesCopyWithImpl<$Res> extends _$ParcelNamesCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_ParcelNames with DiagnosticableTreeMixin implements _ParcelNames {
-  const _$_ParcelNames({this.value = '', this.error});
+class _$ParcelNamesImpl with DiagnosticableTreeMixin implements _ParcelNames {
+  const _$ParcelNamesImpl({this.value = '', this.error});
 
-  @JsonKey(defaultValue: '')
   @override
+  @JsonKey()
   final String value;
   @override
   final ParcelNamesError? error;
@@ -486,61 +454,37 @@ class _$_ParcelNames with DiagnosticableTreeMixin implements _ParcelNames {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is _ParcelNames &&
-            (identical(other.value, value) ||
-                const DeepCollectionEquality().equals(other.value, value)) &&
-            (identical(other.error, error) ||
-                const DeepCollectionEquality().equals(other.error, error)));
+        (other.runtimeType == runtimeType &&
+            other is _$ParcelNamesImpl &&
+            (identical(other.value, value) || other.value == value) &&
+            (identical(other.error, error) || other.error == error));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(value) ^
-      const DeepCollectionEquality().hash(error);
+  int get hashCode => Object.hash(runtimeType, value, error);
 
   @JsonKey(ignore: true)
   @override
-  _$ParcelNamesCopyWith<_ParcelNames> get copyWith =>
-      __$ParcelNamesCopyWithImpl<_ParcelNames>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$ParcelNamesImplCopyWith<_$ParcelNamesImpl> get copyWith =>
+      __$$ParcelNamesImplCopyWithImpl<_$ParcelNamesImpl>(this, _$identity);
 }
 
 abstract class _ParcelNames implements ParcelNames {
-  const factory _ParcelNames({String value, ParcelNamesError? error}) =
-      _$_ParcelNames;
+  const factory _ParcelNames(
+      {final String value, final ParcelNamesError? error}) = _$ParcelNamesImpl;
 
   @override
-  String get value => throw _privateConstructorUsedError;
+  String get value;
   @override
-  ParcelNamesError? get error => throw _privateConstructorUsedError;
+  ParcelNamesError? get error;
   @override
   @JsonKey(ignore: true)
-  _$ParcelNamesCopyWith<_ParcelNames> get copyWith =>
+  _$$ParcelNamesImplCopyWith<_$ParcelNamesImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
-
-/// @nodoc
-class _$TrackingNumbersParseResultTearOff {
-  const _$TrackingNumbersParseResultTearOff();
-
-  TrackingNumbersParseResultSuccess success({required List<String> trackList}) {
-    return TrackingNumbersParseResultSuccess(
-      trackList: trackList,
-    );
-  }
-
-  TrackingNumbersParseResultError error(
-      {required TrackingNumbersError reason}) {
-    return TrackingNumbersParseResultError(
-      reason: reason,
-    );
-  }
-}
-
-/// @nodoc
-const $TrackingNumbersParseResult = _$TrackingNumbersParseResultTearOff();
 
 /// @nodoc
 mixin _$TrackingNumbersParseResult {
@@ -552,8 +496,8 @@ mixin _$TrackingNumbersParseResult {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(List<String> trackList)? success,
-    TResult Function(TrackingNumbersError reason)? error,
+    TResult? Function(List<String> trackList)? success,
+    TResult? Function(TrackingNumbersError reason)? error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -571,8 +515,8 @@ mixin _$TrackingNumbersParseResult {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(TrackingNumbersParseResultSuccess value)? success,
-    TResult Function(TrackingNumbersParseResultError value)? error,
+    TResult? Function(TrackingNumbersParseResultSuccess value)? success,
+    TResult? Function(TrackingNumbersParseResultError value)? error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -588,48 +532,50 @@ mixin _$TrackingNumbersParseResult {
 abstract class $TrackingNumbersParseResultCopyWith<$Res> {
   factory $TrackingNumbersParseResultCopyWith(TrackingNumbersParseResult value,
           $Res Function(TrackingNumbersParseResult) then) =
-      _$TrackingNumbersParseResultCopyWithImpl<$Res>;
+      _$TrackingNumbersParseResultCopyWithImpl<$Res,
+          TrackingNumbersParseResult>;
 }
 
 /// @nodoc
-class _$TrackingNumbersParseResultCopyWithImpl<$Res>
+class _$TrackingNumbersParseResultCopyWithImpl<$Res,
+        $Val extends TrackingNumbersParseResult>
     implements $TrackingNumbersParseResultCopyWith<$Res> {
   _$TrackingNumbersParseResultCopyWithImpl(this._value, this._then);
 
-  final TrackingNumbersParseResult _value;
   // ignore: unused_field
-  final $Res Function(TrackingNumbersParseResult) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 }
 
 /// @nodoc
-abstract class $TrackingNumbersParseResultSuccessCopyWith<$Res> {
-  factory $TrackingNumbersParseResultSuccessCopyWith(
-          TrackingNumbersParseResultSuccess value,
-          $Res Function(TrackingNumbersParseResultSuccess) then) =
-      _$TrackingNumbersParseResultSuccessCopyWithImpl<$Res>;
+abstract class _$$TrackingNumbersParseResultSuccessImplCopyWith<$Res> {
+  factory _$$TrackingNumbersParseResultSuccessImplCopyWith(
+          _$TrackingNumbersParseResultSuccessImpl value,
+          $Res Function(_$TrackingNumbersParseResultSuccessImpl) then) =
+      __$$TrackingNumbersParseResultSuccessImplCopyWithImpl<$Res>;
+  @useResult
   $Res call({List<String> trackList});
 }
 
 /// @nodoc
-class _$TrackingNumbersParseResultSuccessCopyWithImpl<$Res>
-    extends _$TrackingNumbersParseResultCopyWithImpl<$Res>
-    implements $TrackingNumbersParseResultSuccessCopyWith<$Res> {
-  _$TrackingNumbersParseResultSuccessCopyWithImpl(
-      TrackingNumbersParseResultSuccess _value,
-      $Res Function(TrackingNumbersParseResultSuccess) _then)
-      : super(_value, (v) => _then(v as TrackingNumbersParseResultSuccess));
+class __$$TrackingNumbersParseResultSuccessImplCopyWithImpl<$Res>
+    extends _$TrackingNumbersParseResultCopyWithImpl<$Res,
+        _$TrackingNumbersParseResultSuccessImpl>
+    implements _$$TrackingNumbersParseResultSuccessImplCopyWith<$Res> {
+  __$$TrackingNumbersParseResultSuccessImplCopyWithImpl(
+      _$TrackingNumbersParseResultSuccessImpl _value,
+      $Res Function(_$TrackingNumbersParseResultSuccessImpl) _then)
+      : super(_value, _then);
 
-  @override
-  TrackingNumbersParseResultSuccess get _value =>
-      super._value as TrackingNumbersParseResultSuccess;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? trackList = freezed,
+    Object? trackList = null,
   }) {
-    return _then(TrackingNumbersParseResultSuccess(
-      trackList: trackList == freezed
-          ? _value.trackList
+    return _then(_$TrackingNumbersParseResultSuccessImpl(
+      trackList: null == trackList
+          ? _value._trackList
           : trackList // ignore: cast_nullable_to_non_nullable
               as List<String>,
     ));
@@ -638,13 +584,20 @@ class _$TrackingNumbersParseResultSuccessCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$TrackingNumbersParseResultSuccess
+class _$TrackingNumbersParseResultSuccessImpl
     with DiagnosticableTreeMixin
     implements TrackingNumbersParseResultSuccess {
-  const _$TrackingNumbersParseResultSuccess({required this.trackList});
+  const _$TrackingNumbersParseResultSuccessImpl(
+      {required final List<String> trackList})
+      : _trackList = trackList;
 
+  final List<String> _trackList;
   @override
-  final List<String> trackList;
+  List<String> get trackList {
+    if (_trackList is EqualUnmodifiableListView) return _trackList;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_trackList);
+  }
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
@@ -660,23 +613,25 @@ class _$TrackingNumbersParseResultSuccess
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is TrackingNumbersParseResultSuccess &&
-            (identical(other.trackList, trackList) ||
-                const DeepCollectionEquality()
-                    .equals(other.trackList, trackList)));
+        (other.runtimeType == runtimeType &&
+            other is _$TrackingNumbersParseResultSuccessImpl &&
+            const DeepCollectionEquality()
+                .equals(other._trackList, _trackList));
   }
 
   @override
   int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(trackList);
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_trackList));
 
   @JsonKey(ignore: true)
   @override
-  $TrackingNumbersParseResultSuccessCopyWith<TrackingNumbersParseResultSuccess>
-      get copyWith => _$TrackingNumbersParseResultSuccessCopyWithImpl<
-          TrackingNumbersParseResultSuccess>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$TrackingNumbersParseResultSuccessImplCopyWith<
+          _$TrackingNumbersParseResultSuccessImpl>
+      get copyWith => __$$TrackingNumbersParseResultSuccessImplCopyWithImpl<
+          _$TrackingNumbersParseResultSuccessImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -690,8 +645,8 @@ class _$TrackingNumbersParseResultSuccess
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(List<String> trackList)? success,
-    TResult Function(TrackingNumbersError reason)? error,
+    TResult? Function(List<String> trackList)? success,
+    TResult? Function(TrackingNumbersError reason)? error,
   }) {
     return success?.call(trackList);
   }
@@ -721,8 +676,8 @@ class _$TrackingNumbersParseResultSuccess
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(TrackingNumbersParseResultSuccess value)? success,
-    TResult Function(TrackingNumbersParseResultError value)? error,
+    TResult? Function(TrackingNumbersParseResultSuccess value)? success,
+    TResult? Function(TrackingNumbersParseResultError value)? error,
   }) {
     return success?.call(this);
   }
@@ -744,44 +699,45 @@ class _$TrackingNumbersParseResultSuccess
 abstract class TrackingNumbersParseResultSuccess
     implements TrackingNumbersParseResult {
   const factory TrackingNumbersParseResultSuccess(
-      {required List<String> trackList}) = _$TrackingNumbersParseResultSuccess;
+          {required final List<String> trackList}) =
+      _$TrackingNumbersParseResultSuccessImpl;
 
-  List<String> get trackList => throw _privateConstructorUsedError;
+  List<String> get trackList;
   @JsonKey(ignore: true)
-  $TrackingNumbersParseResultSuccessCopyWith<TrackingNumbersParseResultSuccess>
+  _$$TrackingNumbersParseResultSuccessImplCopyWith<
+          _$TrackingNumbersParseResultSuccessImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $TrackingNumbersParseResultErrorCopyWith<$Res> {
-  factory $TrackingNumbersParseResultErrorCopyWith(
-          TrackingNumbersParseResultError value,
-          $Res Function(TrackingNumbersParseResultError) then) =
-      _$TrackingNumbersParseResultErrorCopyWithImpl<$Res>;
+abstract class _$$TrackingNumbersParseResultErrorImplCopyWith<$Res> {
+  factory _$$TrackingNumbersParseResultErrorImplCopyWith(
+          _$TrackingNumbersParseResultErrorImpl value,
+          $Res Function(_$TrackingNumbersParseResultErrorImpl) then) =
+      __$$TrackingNumbersParseResultErrorImplCopyWithImpl<$Res>;
+  @useResult
   $Res call({TrackingNumbersError reason});
 
   $TrackingNumbersErrorCopyWith<$Res> get reason;
 }
 
 /// @nodoc
-class _$TrackingNumbersParseResultErrorCopyWithImpl<$Res>
-    extends _$TrackingNumbersParseResultCopyWithImpl<$Res>
-    implements $TrackingNumbersParseResultErrorCopyWith<$Res> {
-  _$TrackingNumbersParseResultErrorCopyWithImpl(
-      TrackingNumbersParseResultError _value,
-      $Res Function(TrackingNumbersParseResultError) _then)
-      : super(_value, (v) => _then(v as TrackingNumbersParseResultError));
+class __$$TrackingNumbersParseResultErrorImplCopyWithImpl<$Res>
+    extends _$TrackingNumbersParseResultCopyWithImpl<$Res,
+        _$TrackingNumbersParseResultErrorImpl>
+    implements _$$TrackingNumbersParseResultErrorImplCopyWith<$Res> {
+  __$$TrackingNumbersParseResultErrorImplCopyWithImpl(
+      _$TrackingNumbersParseResultErrorImpl _value,
+      $Res Function(_$TrackingNumbersParseResultErrorImpl) _then)
+      : super(_value, _then);
 
-  @override
-  TrackingNumbersParseResultError get _value =>
-      super._value as TrackingNumbersParseResultError;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? reason = freezed,
+    Object? reason = null,
   }) {
-    return _then(TrackingNumbersParseResultError(
-      reason: reason == freezed
+    return _then(_$TrackingNumbersParseResultErrorImpl(
+      reason: null == reason
           ? _value.reason
           : reason // ignore: cast_nullable_to_non_nullable
               as TrackingNumbersError,
@@ -789,6 +745,7 @@ class _$TrackingNumbersParseResultErrorCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $TrackingNumbersErrorCopyWith<$Res> get reason {
     return $TrackingNumbersErrorCopyWith<$Res>(_value.reason, (value) {
       return _then(_value.copyWith(reason: value));
@@ -798,10 +755,10 @@ class _$TrackingNumbersParseResultErrorCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$TrackingNumbersParseResultError
+class _$TrackingNumbersParseResultErrorImpl
     with DiagnosticableTreeMixin
     implements TrackingNumbersParseResultError {
-  const _$TrackingNumbersParseResultError({required this.reason});
+  const _$TrackingNumbersParseResultErrorImpl({required this.reason});
 
   @override
   final TrackingNumbersError reason;
@@ -820,22 +777,23 @@ class _$TrackingNumbersParseResultError
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is TrackingNumbersParseResultError &&
-            (identical(other.reason, reason) ||
-                const DeepCollectionEquality().equals(other.reason, reason)));
+        (other.runtimeType == runtimeType &&
+            other is _$TrackingNumbersParseResultErrorImpl &&
+            (identical(other.reason, reason) || other.reason == reason));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(reason);
+  int get hashCode => Object.hash(runtimeType, reason);
 
   @JsonKey(ignore: true)
   @override
-  $TrackingNumbersParseResultErrorCopyWith<TrackingNumbersParseResultError>
-      get copyWith => _$TrackingNumbersParseResultErrorCopyWithImpl<
-          TrackingNumbersParseResultError>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$TrackingNumbersParseResultErrorImplCopyWith<
+          _$TrackingNumbersParseResultErrorImpl>
+      get copyWith => __$$TrackingNumbersParseResultErrorImplCopyWithImpl<
+          _$TrackingNumbersParseResultErrorImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -849,8 +807,8 @@ class _$TrackingNumbersParseResultError
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(List<String> trackList)? success,
-    TResult Function(TrackingNumbersError reason)? error,
+    TResult? Function(List<String> trackList)? success,
+    TResult? Function(TrackingNumbersError reason)? error,
   }) {
     return error?.call(reason);
   }
@@ -880,8 +838,8 @@ class _$TrackingNumbersParseResultError
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(TrackingNumbersParseResultSuccess value)? success,
-    TResult Function(TrackingNumbersParseResultError value)? error,
+    TResult? Function(TrackingNumbersParseResultSuccess value)? success,
+    TResult? Function(TrackingNumbersParseResultError value)? error,
   }) {
     return error?.call(this);
   }
@@ -903,34 +861,15 @@ class _$TrackingNumbersParseResultError
 abstract class TrackingNumbersParseResultError
     implements TrackingNumbersParseResult {
   const factory TrackingNumbersParseResultError(
-          {required TrackingNumbersError reason}) =
-      _$TrackingNumbersParseResultError;
+          {required final TrackingNumbersError reason}) =
+      _$TrackingNumbersParseResultErrorImpl;
 
-  TrackingNumbersError get reason => throw _privateConstructorUsedError;
+  TrackingNumbersError get reason;
   @JsonKey(ignore: true)
-  $TrackingNumbersParseResultErrorCopyWith<TrackingNumbersParseResultError>
+  _$$TrackingNumbersParseResultErrorImplCopyWith<
+          _$TrackingNumbersParseResultErrorImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
-
-/// @nodoc
-class _$ParcelNamesParseResultTearOff {
-  const _$ParcelNamesParseResultTearOff();
-
-  ParcelNamesParseResultSuccess success({required List<String> namesList}) {
-    return ParcelNamesParseResultSuccess(
-      namesList: namesList,
-    );
-  }
-
-  ParcelNamesParseResultError error({required ParcelNamesError reason}) {
-    return ParcelNamesParseResultError(
-      reason: reason,
-    );
-  }
-}
-
-/// @nodoc
-const $ParcelNamesParseResult = _$ParcelNamesParseResultTearOff();
 
 /// @nodoc
 mixin _$ParcelNamesParseResult {
@@ -942,8 +881,8 @@ mixin _$ParcelNamesParseResult {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(List<String> namesList)? success,
-    TResult Function(ParcelNamesError reason)? error,
+    TResult? Function(List<String> namesList)? success,
+    TResult? Function(ParcelNamesError reason)? error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -961,8 +900,8 @@ mixin _$ParcelNamesParseResult {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(ParcelNamesParseResultSuccess value)? success,
-    TResult Function(ParcelNamesParseResultError value)? error,
+    TResult? Function(ParcelNamesParseResultSuccess value)? success,
+    TResult? Function(ParcelNamesParseResultError value)? error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -978,48 +917,49 @@ mixin _$ParcelNamesParseResult {
 abstract class $ParcelNamesParseResultCopyWith<$Res> {
   factory $ParcelNamesParseResultCopyWith(ParcelNamesParseResult value,
           $Res Function(ParcelNamesParseResult) then) =
-      _$ParcelNamesParseResultCopyWithImpl<$Res>;
+      _$ParcelNamesParseResultCopyWithImpl<$Res, ParcelNamesParseResult>;
 }
 
 /// @nodoc
-class _$ParcelNamesParseResultCopyWithImpl<$Res>
+class _$ParcelNamesParseResultCopyWithImpl<$Res,
+        $Val extends ParcelNamesParseResult>
     implements $ParcelNamesParseResultCopyWith<$Res> {
   _$ParcelNamesParseResultCopyWithImpl(this._value, this._then);
 
-  final ParcelNamesParseResult _value;
   // ignore: unused_field
-  final $Res Function(ParcelNamesParseResult) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 }
 
 /// @nodoc
-abstract class $ParcelNamesParseResultSuccessCopyWith<$Res> {
-  factory $ParcelNamesParseResultSuccessCopyWith(
-          ParcelNamesParseResultSuccess value,
-          $Res Function(ParcelNamesParseResultSuccess) then) =
-      _$ParcelNamesParseResultSuccessCopyWithImpl<$Res>;
+abstract class _$$ParcelNamesParseResultSuccessImplCopyWith<$Res> {
+  factory _$$ParcelNamesParseResultSuccessImplCopyWith(
+          _$ParcelNamesParseResultSuccessImpl value,
+          $Res Function(_$ParcelNamesParseResultSuccessImpl) then) =
+      __$$ParcelNamesParseResultSuccessImplCopyWithImpl<$Res>;
+  @useResult
   $Res call({List<String> namesList});
 }
 
 /// @nodoc
-class _$ParcelNamesParseResultSuccessCopyWithImpl<$Res>
-    extends _$ParcelNamesParseResultCopyWithImpl<$Res>
-    implements $ParcelNamesParseResultSuccessCopyWith<$Res> {
-  _$ParcelNamesParseResultSuccessCopyWithImpl(
-      ParcelNamesParseResultSuccess _value,
-      $Res Function(ParcelNamesParseResultSuccess) _then)
-      : super(_value, (v) => _then(v as ParcelNamesParseResultSuccess));
+class __$$ParcelNamesParseResultSuccessImplCopyWithImpl<$Res>
+    extends _$ParcelNamesParseResultCopyWithImpl<$Res,
+        _$ParcelNamesParseResultSuccessImpl>
+    implements _$$ParcelNamesParseResultSuccessImplCopyWith<$Res> {
+  __$$ParcelNamesParseResultSuccessImplCopyWithImpl(
+      _$ParcelNamesParseResultSuccessImpl _value,
+      $Res Function(_$ParcelNamesParseResultSuccessImpl) _then)
+      : super(_value, _then);
 
-  @override
-  ParcelNamesParseResultSuccess get _value =>
-      super._value as ParcelNamesParseResultSuccess;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? namesList = freezed,
+    Object? namesList = null,
   }) {
-    return _then(ParcelNamesParseResultSuccess(
-      namesList: namesList == freezed
-          ? _value.namesList
+    return _then(_$ParcelNamesParseResultSuccessImpl(
+      namesList: null == namesList
+          ? _value._namesList
           : namesList // ignore: cast_nullable_to_non_nullable
               as List<String>,
     ));
@@ -1028,13 +968,20 @@ class _$ParcelNamesParseResultSuccessCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$ParcelNamesParseResultSuccess
+class _$ParcelNamesParseResultSuccessImpl
     with DiagnosticableTreeMixin
     implements ParcelNamesParseResultSuccess {
-  const _$ParcelNamesParseResultSuccess({required this.namesList});
+  const _$ParcelNamesParseResultSuccessImpl(
+      {required final List<String> namesList})
+      : _namesList = namesList;
 
+  final List<String> _namesList;
   @override
-  final List<String> namesList;
+  List<String> get namesList {
+    if (_namesList is EqualUnmodifiableListView) return _namesList;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_namesList);
+  }
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
@@ -1050,23 +997,25 @@ class _$ParcelNamesParseResultSuccess
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is ParcelNamesParseResultSuccess &&
-            (identical(other.namesList, namesList) ||
-                const DeepCollectionEquality()
-                    .equals(other.namesList, namesList)));
+        (other.runtimeType == runtimeType &&
+            other is _$ParcelNamesParseResultSuccessImpl &&
+            const DeepCollectionEquality()
+                .equals(other._namesList, _namesList));
   }
 
   @override
   int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(namesList);
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_namesList));
 
   @JsonKey(ignore: true)
   @override
-  $ParcelNamesParseResultSuccessCopyWith<ParcelNamesParseResultSuccess>
-      get copyWith => _$ParcelNamesParseResultSuccessCopyWithImpl<
-          ParcelNamesParseResultSuccess>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$ParcelNamesParseResultSuccessImplCopyWith<
+          _$ParcelNamesParseResultSuccessImpl>
+      get copyWith => __$$ParcelNamesParseResultSuccessImplCopyWithImpl<
+          _$ParcelNamesParseResultSuccessImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1080,8 +1029,8 @@ class _$ParcelNamesParseResultSuccess
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(List<String> namesList)? success,
-    TResult Function(ParcelNamesError reason)? error,
+    TResult? Function(List<String> namesList)? success,
+    TResult? Function(ParcelNamesError reason)? error,
   }) {
     return success?.call(namesList);
   }
@@ -1111,8 +1060,8 @@ class _$ParcelNamesParseResultSuccess
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(ParcelNamesParseResultSuccess value)? success,
-    TResult Function(ParcelNamesParseResultError value)? error,
+    TResult? Function(ParcelNamesParseResultSuccess value)? success,
+    TResult? Function(ParcelNamesParseResultError value)? error,
   }) {
     return success?.call(this);
   }
@@ -1133,41 +1082,43 @@ class _$ParcelNamesParseResultSuccess
 
 abstract class ParcelNamesParseResultSuccess implements ParcelNamesParseResult {
   const factory ParcelNamesParseResultSuccess(
-      {required List<String> namesList}) = _$ParcelNamesParseResultSuccess;
+          {required final List<String> namesList}) =
+      _$ParcelNamesParseResultSuccessImpl;
 
-  List<String> get namesList => throw _privateConstructorUsedError;
+  List<String> get namesList;
   @JsonKey(ignore: true)
-  $ParcelNamesParseResultSuccessCopyWith<ParcelNamesParseResultSuccess>
+  _$$ParcelNamesParseResultSuccessImplCopyWith<
+          _$ParcelNamesParseResultSuccessImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $ParcelNamesParseResultErrorCopyWith<$Res> {
-  factory $ParcelNamesParseResultErrorCopyWith(
-          ParcelNamesParseResultError value,
-          $Res Function(ParcelNamesParseResultError) then) =
-      _$ParcelNamesParseResultErrorCopyWithImpl<$Res>;
+abstract class _$$ParcelNamesParseResultErrorImplCopyWith<$Res> {
+  factory _$$ParcelNamesParseResultErrorImplCopyWith(
+          _$ParcelNamesParseResultErrorImpl value,
+          $Res Function(_$ParcelNamesParseResultErrorImpl) then) =
+      __$$ParcelNamesParseResultErrorImplCopyWithImpl<$Res>;
+  @useResult
   $Res call({ParcelNamesError reason});
 }
 
 /// @nodoc
-class _$ParcelNamesParseResultErrorCopyWithImpl<$Res>
-    extends _$ParcelNamesParseResultCopyWithImpl<$Res>
-    implements $ParcelNamesParseResultErrorCopyWith<$Res> {
-  _$ParcelNamesParseResultErrorCopyWithImpl(ParcelNamesParseResultError _value,
-      $Res Function(ParcelNamesParseResultError) _then)
-      : super(_value, (v) => _then(v as ParcelNamesParseResultError));
+class __$$ParcelNamesParseResultErrorImplCopyWithImpl<$Res>
+    extends _$ParcelNamesParseResultCopyWithImpl<$Res,
+        _$ParcelNamesParseResultErrorImpl>
+    implements _$$ParcelNamesParseResultErrorImplCopyWith<$Res> {
+  __$$ParcelNamesParseResultErrorImplCopyWithImpl(
+      _$ParcelNamesParseResultErrorImpl _value,
+      $Res Function(_$ParcelNamesParseResultErrorImpl) _then)
+      : super(_value, _then);
 
-  @override
-  ParcelNamesParseResultError get _value =>
-      super._value as ParcelNamesParseResultError;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? reason = freezed,
+    Object? reason = null,
   }) {
-    return _then(ParcelNamesParseResultError(
-      reason: reason == freezed
+    return _then(_$ParcelNamesParseResultErrorImpl(
+      reason: null == reason
           ? _value.reason
           : reason // ignore: cast_nullable_to_non_nullable
               as ParcelNamesError,
@@ -1177,10 +1128,10 @@ class _$ParcelNamesParseResultErrorCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$ParcelNamesParseResultError
+class _$ParcelNamesParseResultErrorImpl
     with DiagnosticableTreeMixin
     implements ParcelNamesParseResultError {
-  const _$ParcelNamesParseResultError({required this.reason});
+  const _$ParcelNamesParseResultErrorImpl({required this.reason});
 
   @override
   final ParcelNamesError reason;
@@ -1199,22 +1150,22 @@ class _$ParcelNamesParseResultError
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is ParcelNamesParseResultError &&
-            (identical(other.reason, reason) ||
-                const DeepCollectionEquality().equals(other.reason, reason)));
+        (other.runtimeType == runtimeType &&
+            other is _$ParcelNamesParseResultErrorImpl &&
+            (identical(other.reason, reason) || other.reason == reason));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(reason);
+  int get hashCode => Object.hash(runtimeType, reason);
 
   @JsonKey(ignore: true)
   @override
-  $ParcelNamesParseResultErrorCopyWith<ParcelNamesParseResultError>
-      get copyWith => _$ParcelNamesParseResultErrorCopyWithImpl<
-          ParcelNamesParseResultError>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$ParcelNamesParseResultErrorImplCopyWith<_$ParcelNamesParseResultErrorImpl>
+      get copyWith => __$$ParcelNamesParseResultErrorImplCopyWithImpl<
+          _$ParcelNamesParseResultErrorImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1228,8 +1179,8 @@ class _$ParcelNamesParseResultError
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(List<String> namesList)? success,
-    TResult Function(ParcelNamesError reason)? error,
+    TResult? Function(List<String> namesList)? success,
+    TResult? Function(ParcelNamesError reason)? error,
   }) {
     return error?.call(reason);
   }
@@ -1259,8 +1210,8 @@ class _$ParcelNamesParseResultError
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(ParcelNamesParseResultSuccess value)? success,
-    TResult Function(ParcelNamesParseResultError value)? error,
+    TResult? Function(ParcelNamesParseResultSuccess value)? success,
+    TResult? Function(ParcelNamesParseResultError value)? error,
   }) {
     return error?.call(this);
   }
@@ -1281,10 +1232,11 @@ class _$ParcelNamesParseResultError
 
 abstract class ParcelNamesParseResultError implements ParcelNamesParseResult {
   const factory ParcelNamesParseResultError(
-      {required ParcelNamesError reason}) = _$ParcelNamesParseResultError;
+          {required final ParcelNamesError reason}) =
+      _$ParcelNamesParseResultErrorImpl;
 
-  ParcelNamesError get reason => throw _privateConstructorUsedError;
+  ParcelNamesError get reason;
   @JsonKey(ignore: true)
-  $ParcelNamesParseResultErrorCopyWith<ParcelNamesParseResultError>
+  _$$ParcelNamesParseResultErrorImplCopyWith<_$ParcelNamesParseResultErrorImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

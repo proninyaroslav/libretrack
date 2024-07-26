@@ -51,7 +51,7 @@ void main() {
       fetcher = getIt<Fetcher>();
     });
 
-    void _initClient(
+    void initClient(
       HttpClient mockClient,
       Map<FetchResult, ServiceRequest> resultToRequest,
     ) {
@@ -113,7 +113,7 @@ void main() {
           ),
         ),
       );
-      _initClient(mockClient, resultToRequest);
+      initClient(mockClient, resultToRequest);
 
       await for (final result in fetcher.fetch(requestList)) {
         final request = resultToRequest[result];
@@ -152,7 +152,7 @@ void main() {
           ),
         ),
       );
-      _initClient(mockClient, resultToRequest);
+      initClient(mockClient, resultToRequest);
 
       await for (final result in fetcher.fetch(requestList)) {
         final request = resultToRequest[result];
@@ -207,7 +207,7 @@ void main() {
           },
         ),
       );
-      _initClient(mockClient, resultToRequest);
+      initClient(mockClient, resultToRequest);
 
       await for (final result in fetcher.fetch(requestList)) {
         final request = resultToRequest[result];

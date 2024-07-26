@@ -1,6 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'service_list_cubit.dart';
 
@@ -11,34 +12,7 @@ part of 'service_list_cubit.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$ServiceListStateTearOff {
-  const _$ServiceListStateTearOff();
-
-  ServiceListStateInitial initial() {
-    return const ServiceListStateInitial();
-  }
-
-  ServiceListStateLoaded loaded(
-      {required List<TrackingServiceType> nonExistenServices,
-      required bool isAuthStorageSecured}) {
-    return ServiceListStateLoaded(
-      nonExistenServices: nonExistenServices,
-      isAuthStorageSecured: isAuthStorageSecured,
-    );
-  }
-
-  ServiceListStateLoadingFailed loadingFailed({StorageError? error}) {
-    return ServiceListStateLoadingFailed(
-      error: error,
-    );
-  }
-}
-
-/// @nodoc
-const $ServiceListState = _$ServiceListStateTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$ServiceListState {
@@ -53,11 +27,11 @@ mixin _$ServiceListState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function(List<TrackingServiceType> nonExistenServices,
+    TResult? Function()? initial,
+    TResult? Function(List<TrackingServiceType> nonExistenServices,
             bool isAuthStorageSecured)?
         loaded,
-    TResult Function(StorageError? error)? loadingFailed,
+    TResult? Function(StorageError? error)? loadingFailed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -80,9 +54,9 @@ mixin _$ServiceListState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(ServiceListStateInitial value)? initial,
-    TResult Function(ServiceListStateLoaded value)? loaded,
-    TResult Function(ServiceListStateLoadingFailed value)? loadingFailed,
+    TResult? Function(ServiceListStateInitial value)? initial,
+    TResult? Function(ServiceListStateLoaded value)? loaded,
+    TResult? Function(ServiceListStateLoadingFailed value)? loadingFailed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -99,44 +73,44 @@ mixin _$ServiceListState {
 abstract class $ServiceListStateCopyWith<$Res> {
   factory $ServiceListStateCopyWith(
           ServiceListState value, $Res Function(ServiceListState) then) =
-      _$ServiceListStateCopyWithImpl<$Res>;
+      _$ServiceListStateCopyWithImpl<$Res, ServiceListState>;
 }
 
 /// @nodoc
-class _$ServiceListStateCopyWithImpl<$Res>
+class _$ServiceListStateCopyWithImpl<$Res, $Val extends ServiceListState>
     implements $ServiceListStateCopyWith<$Res> {
   _$ServiceListStateCopyWithImpl(this._value, this._then);
 
-  final ServiceListState _value;
   // ignore: unused_field
-  final $Res Function(ServiceListState) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 }
 
 /// @nodoc
-abstract class $ServiceListStateInitialCopyWith<$Res> {
-  factory $ServiceListStateInitialCopyWith(ServiceListStateInitial value,
-          $Res Function(ServiceListStateInitial) then) =
-      _$ServiceListStateInitialCopyWithImpl<$Res>;
+abstract class _$$ServiceListStateInitialImplCopyWith<$Res> {
+  factory _$$ServiceListStateInitialImplCopyWith(
+          _$ServiceListStateInitialImpl value,
+          $Res Function(_$ServiceListStateInitialImpl) then) =
+      __$$ServiceListStateInitialImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$ServiceListStateInitialCopyWithImpl<$Res>
-    extends _$ServiceListStateCopyWithImpl<$Res>
-    implements $ServiceListStateInitialCopyWith<$Res> {
-  _$ServiceListStateInitialCopyWithImpl(ServiceListStateInitial _value,
-      $Res Function(ServiceListStateInitial) _then)
-      : super(_value, (v) => _then(v as ServiceListStateInitial));
-
-  @override
-  ServiceListStateInitial get _value => super._value as ServiceListStateInitial;
+class __$$ServiceListStateInitialImplCopyWithImpl<$Res>
+    extends _$ServiceListStateCopyWithImpl<$Res, _$ServiceListStateInitialImpl>
+    implements _$$ServiceListStateInitialImplCopyWith<$Res> {
+  __$$ServiceListStateInitialImplCopyWithImpl(
+      _$ServiceListStateInitialImpl _value,
+      $Res Function(_$ServiceListStateInitialImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$ServiceListStateInitial
+class _$ServiceListStateInitialImpl
     with DiagnosticableTreeMixin
     implements ServiceListStateInitial {
-  const _$ServiceListStateInitial();
+  const _$ServiceListStateInitialImpl();
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
@@ -146,12 +120,14 @@ class _$ServiceListStateInitial
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
-    properties..add(DiagnosticsProperty('type', 'ServiceListState.initial'));
+    properties.add(DiagnosticsProperty('type', 'ServiceListState.initial'));
   }
 
   @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) || (other is ServiceListStateInitial);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ServiceListStateInitialImpl);
   }
 
   @override
@@ -172,11 +148,11 @@ class _$ServiceListStateInitial
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function(List<TrackingServiceType> nonExistenServices,
+    TResult? Function()? initial,
+    TResult? Function(List<TrackingServiceType> nonExistenServices,
             bool isAuthStorageSecured)?
         loaded,
-    TResult Function(StorageError? error)? loadingFailed,
+    TResult? Function(StorageError? error)? loadingFailed,
   }) {
     return initial?.call();
   }
@@ -211,9 +187,9 @@ class _$ServiceListStateInitial
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(ServiceListStateInitial value)? initial,
-    TResult Function(ServiceListStateLoaded value)? loaded,
-    TResult Function(ServiceListStateLoadingFailed value)? loadingFailed,
+    TResult? Function(ServiceListStateInitial value)? initial,
+    TResult? Function(ServiceListStateLoaded value)? loaded,
+    TResult? Function(ServiceListStateLoadingFailed value)? loadingFailed,
   }) {
     return initial?.call(this);
   }
@@ -234,41 +210,42 @@ class _$ServiceListStateInitial
 }
 
 abstract class ServiceListStateInitial implements ServiceListState {
-  const factory ServiceListStateInitial() = _$ServiceListStateInitial;
+  const factory ServiceListStateInitial() = _$ServiceListStateInitialImpl;
 }
 
 /// @nodoc
-abstract class $ServiceListStateLoadedCopyWith<$Res> {
-  factory $ServiceListStateLoadedCopyWith(ServiceListStateLoaded value,
-          $Res Function(ServiceListStateLoaded) then) =
-      _$ServiceListStateLoadedCopyWithImpl<$Res>;
+abstract class _$$ServiceListStateLoadedImplCopyWith<$Res> {
+  factory _$$ServiceListStateLoadedImplCopyWith(
+          _$ServiceListStateLoadedImpl value,
+          $Res Function(_$ServiceListStateLoadedImpl) then) =
+      __$$ServiceListStateLoadedImplCopyWithImpl<$Res>;
+  @useResult
   $Res call(
       {List<TrackingServiceType> nonExistenServices,
       bool isAuthStorageSecured});
 }
 
 /// @nodoc
-class _$ServiceListStateLoadedCopyWithImpl<$Res>
-    extends _$ServiceListStateCopyWithImpl<$Res>
-    implements $ServiceListStateLoadedCopyWith<$Res> {
-  _$ServiceListStateLoadedCopyWithImpl(ServiceListStateLoaded _value,
-      $Res Function(ServiceListStateLoaded) _then)
-      : super(_value, (v) => _then(v as ServiceListStateLoaded));
+class __$$ServiceListStateLoadedImplCopyWithImpl<$Res>
+    extends _$ServiceListStateCopyWithImpl<$Res, _$ServiceListStateLoadedImpl>
+    implements _$$ServiceListStateLoadedImplCopyWith<$Res> {
+  __$$ServiceListStateLoadedImplCopyWithImpl(
+      _$ServiceListStateLoadedImpl _value,
+      $Res Function(_$ServiceListStateLoadedImpl) _then)
+      : super(_value, _then);
 
-  @override
-  ServiceListStateLoaded get _value => super._value as ServiceListStateLoaded;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? nonExistenServices = freezed,
-    Object? isAuthStorageSecured = freezed,
+    Object? nonExistenServices = null,
+    Object? isAuthStorageSecured = null,
   }) {
-    return _then(ServiceListStateLoaded(
-      nonExistenServices: nonExistenServices == freezed
-          ? _value.nonExistenServices
+    return _then(_$ServiceListStateLoadedImpl(
+      nonExistenServices: null == nonExistenServices
+          ? _value._nonExistenServices
           : nonExistenServices // ignore: cast_nullable_to_non_nullable
               as List<TrackingServiceType>,
-      isAuthStorageSecured: isAuthStorageSecured == freezed
+      isAuthStorageSecured: null == isAuthStorageSecured
           ? _value.isAuthStorageSecured
           : isAuthStorageSecured // ignore: cast_nullable_to_non_nullable
               as bool,
@@ -278,14 +255,23 @@ class _$ServiceListStateLoadedCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$ServiceListStateLoaded
+class _$ServiceListStateLoadedImpl
     with DiagnosticableTreeMixin
     implements ServiceListStateLoaded {
-  const _$ServiceListStateLoaded(
-      {required this.nonExistenServices, required this.isAuthStorageSecured});
+  const _$ServiceListStateLoadedImpl(
+      {required final List<TrackingServiceType> nonExistenServices,
+      required this.isAuthStorageSecured})
+      : _nonExistenServices = nonExistenServices;
 
+  final List<TrackingServiceType> _nonExistenServices;
   @override
-  final List<TrackingServiceType> nonExistenServices;
+  List<TrackingServiceType> get nonExistenServices {
+    if (_nonExistenServices is EqualUnmodifiableListView)
+      return _nonExistenServices;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_nonExistenServices);
+  }
+
   @override
   final bool isAuthStorageSecured;
 
@@ -304,28 +290,28 @@ class _$ServiceListStateLoaded
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is ServiceListStateLoaded &&
-            (identical(other.nonExistenServices, nonExistenServices) ||
-                const DeepCollectionEquality()
-                    .equals(other.nonExistenServices, nonExistenServices)) &&
+        (other.runtimeType == runtimeType &&
+            other is _$ServiceListStateLoadedImpl &&
+            const DeepCollectionEquality()
+                .equals(other._nonExistenServices, _nonExistenServices) &&
             (identical(other.isAuthStorageSecured, isAuthStorageSecured) ||
-                const DeepCollectionEquality()
-                    .equals(other.isAuthStorageSecured, isAuthStorageSecured)));
+                other.isAuthStorageSecured == isAuthStorageSecured));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(nonExistenServices) ^
-      const DeepCollectionEquality().hash(isAuthStorageSecured);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(_nonExistenServices),
+      isAuthStorageSecured);
 
   @JsonKey(ignore: true)
   @override
-  $ServiceListStateLoadedCopyWith<ServiceListStateLoaded> get copyWith =>
-      _$ServiceListStateLoadedCopyWithImpl<ServiceListStateLoaded>(
-          this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$ServiceListStateLoadedImplCopyWith<_$ServiceListStateLoadedImpl>
+      get copyWith => __$$ServiceListStateLoadedImplCopyWithImpl<
+          _$ServiceListStateLoadedImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -342,11 +328,11 @@ class _$ServiceListStateLoaded
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function(List<TrackingServiceType> nonExistenServices,
+    TResult? Function()? initial,
+    TResult? Function(List<TrackingServiceType> nonExistenServices,
             bool isAuthStorageSecured)?
         loaded,
-    TResult Function(StorageError? error)? loadingFailed,
+    TResult? Function(StorageError? error)? loadingFailed,
   }) {
     return loaded?.call(nonExistenServices, isAuthStorageSecured);
   }
@@ -381,9 +367,9 @@ class _$ServiceListStateLoaded
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(ServiceListStateInitial value)? initial,
-    TResult Function(ServiceListStateLoaded value)? loaded,
-    TResult Function(ServiceListStateLoadingFailed value)? loadingFailed,
+    TResult? Function(ServiceListStateInitial value)? initial,
+    TResult? Function(ServiceListStateLoaded value)? loaded,
+    TResult? Function(ServiceListStateLoadingFailed value)? loadingFailed,
   }) {
     return loaded?.call(this);
   }
@@ -405,47 +391,45 @@ class _$ServiceListStateLoaded
 
 abstract class ServiceListStateLoaded implements ServiceListState {
   const factory ServiceListStateLoaded(
-      {required List<TrackingServiceType> nonExistenServices,
-      required bool isAuthStorageSecured}) = _$ServiceListStateLoaded;
+      {required final List<TrackingServiceType> nonExistenServices,
+      required final bool isAuthStorageSecured}) = _$ServiceListStateLoadedImpl;
 
-  List<TrackingServiceType> get nonExistenServices =>
-      throw _privateConstructorUsedError;
-  bool get isAuthStorageSecured => throw _privateConstructorUsedError;
+  List<TrackingServiceType> get nonExistenServices;
+  bool get isAuthStorageSecured;
   @JsonKey(ignore: true)
-  $ServiceListStateLoadedCopyWith<ServiceListStateLoaded> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$ServiceListStateLoadedImplCopyWith<_$ServiceListStateLoadedImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $ServiceListStateLoadingFailedCopyWith<$Res> {
-  factory $ServiceListStateLoadingFailedCopyWith(
-          ServiceListStateLoadingFailed value,
-          $Res Function(ServiceListStateLoadingFailed) then) =
-      _$ServiceListStateLoadingFailedCopyWithImpl<$Res>;
+abstract class _$$ServiceListStateLoadingFailedImplCopyWith<$Res> {
+  factory _$$ServiceListStateLoadingFailedImplCopyWith(
+          _$ServiceListStateLoadingFailedImpl value,
+          $Res Function(_$ServiceListStateLoadingFailedImpl) then) =
+      __$$ServiceListStateLoadingFailedImplCopyWithImpl<$Res>;
+  @useResult
   $Res call({StorageError? error});
 
   $StorageErrorCopyWith<$Res>? get error;
 }
 
 /// @nodoc
-class _$ServiceListStateLoadingFailedCopyWithImpl<$Res>
-    extends _$ServiceListStateCopyWithImpl<$Res>
-    implements $ServiceListStateLoadingFailedCopyWith<$Res> {
-  _$ServiceListStateLoadingFailedCopyWithImpl(
-      ServiceListStateLoadingFailed _value,
-      $Res Function(ServiceListStateLoadingFailed) _then)
-      : super(_value, (v) => _then(v as ServiceListStateLoadingFailed));
+class __$$ServiceListStateLoadingFailedImplCopyWithImpl<$Res>
+    extends _$ServiceListStateCopyWithImpl<$Res,
+        _$ServiceListStateLoadingFailedImpl>
+    implements _$$ServiceListStateLoadingFailedImplCopyWith<$Res> {
+  __$$ServiceListStateLoadingFailedImplCopyWithImpl(
+      _$ServiceListStateLoadingFailedImpl _value,
+      $Res Function(_$ServiceListStateLoadingFailedImpl) _then)
+      : super(_value, _then);
 
-  @override
-  ServiceListStateLoadingFailed get _value =>
-      super._value as ServiceListStateLoadingFailed;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? error = freezed,
   }) {
-    return _then(ServiceListStateLoadingFailed(
-      error: error == freezed
+    return _then(_$ServiceListStateLoadingFailedImpl(
+      error: freezed == error
           ? _value.error
           : error // ignore: cast_nullable_to_non_nullable
               as StorageError?,
@@ -453,6 +437,7 @@ class _$ServiceListStateLoadingFailedCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $StorageErrorCopyWith<$Res>? get error {
     if (_value.error == null) {
       return null;
@@ -466,10 +451,10 @@ class _$ServiceListStateLoadingFailedCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$ServiceListStateLoadingFailed
+class _$ServiceListStateLoadingFailedImpl
     with DiagnosticableTreeMixin
     implements ServiceListStateLoadingFailed {
-  const _$ServiceListStateLoadingFailed({this.error});
+  const _$ServiceListStateLoadingFailedImpl({this.error});
 
   @override
   final StorageError? error;
@@ -488,22 +473,23 @@ class _$ServiceListStateLoadingFailed
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is ServiceListStateLoadingFailed &&
-            (identical(other.error, error) ||
-                const DeepCollectionEquality().equals(other.error, error)));
+        (other.runtimeType == runtimeType &&
+            other is _$ServiceListStateLoadingFailedImpl &&
+            (identical(other.error, error) || other.error == error));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(error);
+  int get hashCode => Object.hash(runtimeType, error);
 
   @JsonKey(ignore: true)
   @override
-  $ServiceListStateLoadingFailedCopyWith<ServiceListStateLoadingFailed>
-      get copyWith => _$ServiceListStateLoadingFailedCopyWithImpl<
-          ServiceListStateLoadingFailed>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$ServiceListStateLoadingFailedImplCopyWith<
+          _$ServiceListStateLoadingFailedImpl>
+      get copyWith => __$$ServiceListStateLoadingFailedImplCopyWithImpl<
+          _$ServiceListStateLoadingFailedImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -520,11 +506,11 @@ class _$ServiceListStateLoadingFailed
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function(List<TrackingServiceType> nonExistenServices,
+    TResult? Function()? initial,
+    TResult? Function(List<TrackingServiceType> nonExistenServices,
             bool isAuthStorageSecured)?
         loaded,
-    TResult Function(StorageError? error)? loadingFailed,
+    TResult? Function(StorageError? error)? loadingFailed,
   }) {
     return loadingFailed?.call(error);
   }
@@ -559,9 +545,9 @@ class _$ServiceListStateLoadingFailed
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(ServiceListStateInitial value)? initial,
-    TResult Function(ServiceListStateLoaded value)? loaded,
-    TResult Function(ServiceListStateLoadingFailed value)? loadingFailed,
+    TResult? Function(ServiceListStateInitial value)? initial,
+    TResult? Function(ServiceListStateLoaded value)? loaded,
+    TResult? Function(ServiceListStateLoadingFailed value)? loadingFailed,
   }) {
     return loadingFailed?.call(this);
   }
@@ -582,11 +568,12 @@ class _$ServiceListStateLoadingFailed
 }
 
 abstract class ServiceListStateLoadingFailed implements ServiceListState {
-  const factory ServiceListStateLoadingFailed({StorageError? error}) =
-      _$ServiceListStateLoadingFailed;
+  const factory ServiceListStateLoadingFailed({final StorageError? error}) =
+      _$ServiceListStateLoadingFailedImpl;
 
-  StorageError? get error => throw _privateConstructorUsedError;
+  StorageError? get error;
   @JsonKey(ignore: true)
-  $ServiceListStateLoadingFailedCopyWith<ServiceListStateLoadingFailed>
+  _$$ServiceListStateLoadingFailedImplCopyWith<
+          _$ServiceListStateLoadingFailedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

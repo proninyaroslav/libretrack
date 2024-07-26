@@ -26,16 +26,14 @@ import 'package:libretrack/ui/widget/widget.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 import '../../locale.dart';
-import 'generate_barcode_dialog.dart';
-import 'parcel_info.dart';
 
 class BaseParcelInfo extends StatelessWidget {
   final ParcelInfo info;
 
   const BaseParcelInfo({
-    Key? key,
+    super.key,
     required this.info,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -76,9 +74,8 @@ class _ClickableTrackNumber extends StatelessWidget {
   final ParcelInfo info;
 
   const _ClickableTrackNumber({
-    Key? key,
     required this.info,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -99,7 +96,7 @@ class _ClickableTrackNumber extends StatelessWidget {
                   info.trackInfo.trackNumber,
                   style: Theme.of(context)
                       .textTheme
-                      .subtitle1!
+                      .titleMedium!
                       .copyWith(fontWeight: FontWeight.w600),
                 ),
               ),
@@ -128,14 +125,13 @@ class _BarcodeGenButton extends StatelessWidget {
   final String trackNumber;
 
   const _BarcodeGenButton({
-    Key? key,
     required this.trackNumber,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
     return IconButton(
-      icon: const Icon(MdiIcons.barcode),
+      icon: Icon(MdiIcons.barcode),
       tooltip: S.of(context).generateBarcode,
       onPressed: () {
         showDialog(
@@ -155,9 +151,8 @@ class _ParcelDateAdded extends StatelessWidget {
   final DateTime dateAdded;
 
   const _ParcelDateAdded({
-    Key? key,
     required this.dateAdded,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -166,16 +161,16 @@ class _ParcelDateAdded extends StatelessWidget {
       child: Text.rich(
         TextSpan(
           children: [
-            const WidgetSpan(
+            WidgetSpan(
               alignment: PlaceholderAlignment.middle,
               child: Padding(
-                padding: EdgeInsetsDirectional.only(end: 8.0),
+                padding: const EdgeInsetsDirectional.only(end: 8.0),
                 child: Icon(MdiIcons.calendar, size: 18.0),
               ),
             ),
             TextSpan(
               text: S.of(context).trackingStartedDate(
-                    Jiffy(dateAdded).yMMMdjm,
+                    Jiffy.parseFromDateTime(dateAdded).yMMMdjm,
                   ),
             ),
           ],
@@ -189,9 +184,8 @@ class _ParcelTrackingDate extends StatelessWidget {
   final DateTime trackingDate;
 
   const _ParcelTrackingDate({
-    Key? key,
     required this.trackingDate,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -209,7 +203,7 @@ class _ParcelTrackingDate extends StatelessWidget {
             ),
             TextSpan(
               text: S.of(context).lastTrackingDate(
-                    Jiffy(trackingDate).yMMMdjm,
+                    Jiffy.parseFromDateTime(trackingDate).yMMMdjm,
                   ),
             ),
           ],
@@ -223,9 +217,8 @@ class _Status extends StatelessWidget {
   final ParcelInfo info;
 
   const _Status({
-    Key? key,
     required this.info,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -255,7 +248,7 @@ class _Status extends StatelessWidget {
     } else if (deliveryDate != null) {
       statusIcon = StatusIconsData.delivered;
       statusText = S.of(context).parcelDeliveredStatus(
-            Jiffy(deliveryDate).yMMMMd,
+            Jiffy.parseFromDateTime(deliveryDate).yMMMMd,
           );
     } else if (lastTrackingInfo != null &&
         lastTrackingInfo.invalidTrackNumber) {
@@ -271,7 +264,7 @@ class _Status extends StatelessWidget {
     } else if (lastActivity.statusType == ShipmentStatusType.delivered) {
       statusIcon = StatusIconsData.delivered;
       statusText = S.of(context).parcelDeliveredStatus(
-            Jiffy(lastActivity.dateTime).yMMMMd,
+            Jiffy.parseFromDateTime(lastActivity.dateTime).yMMMMd,
           );
     } else {
       statusIcon = StatusIconsData.inTransit;
@@ -296,7 +289,7 @@ class _Status extends StatelessWidget {
                       : statusText,
                   style: Theme.of(context)
                       .textTheme
-                      .bodyText2!
+                      .bodyMedium!
                       .copyWith(fontSize: 15.0),
                 ),
               ),
@@ -325,9 +318,8 @@ class _ActivateAndRefreshButton extends StatelessWidget {
   final ParcelInfo info;
 
   const _ActivateAndRefreshButton({
-    Key? key,
     required this.info,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

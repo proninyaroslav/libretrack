@@ -1,6 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'service_metadata.dart';
 
@@ -11,28 +12,7 @@ part of 'service_metadata.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$TrackingServiceMetadataTearOff {
-  const _$TrackingServiceMetadataTearOff();
-
-  _TrackingServiceMetadata call(
-      {required TrackingServiceType type,
-      required String localizedName,
-      required RRectIconData iconData,
-      required Set<PostalServiceMetadata> postalServices}) {
-    return _TrackingServiceMetadata(
-      type: type,
-      localizedName: localizedName,
-      iconData: iconData,
-      postalServices: postalServices,
-    );
-  }
-}
-
-/// @nodoc
-const $TrackingServiceMetadata = _$TrackingServiceMetadataTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$TrackingServiceMetadata {
@@ -51,7 +31,8 @@ mixin _$TrackingServiceMetadata {
 abstract class $TrackingServiceMetadataCopyWith<$Res> {
   factory $TrackingServiceMetadataCopyWith(TrackingServiceMetadata value,
           $Res Function(TrackingServiceMetadata) then) =
-      _$TrackingServiceMetadataCopyWithImpl<$Res>;
+      _$TrackingServiceMetadataCopyWithImpl<$Res, TrackingServiceMetadata>;
+  @useResult
   $Res call(
       {TrackingServiceType type,
       String localizedName,
@@ -62,56 +43,62 @@ abstract class $TrackingServiceMetadataCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$TrackingServiceMetadataCopyWithImpl<$Res>
+class _$TrackingServiceMetadataCopyWithImpl<$Res,
+        $Val extends TrackingServiceMetadata>
     implements $TrackingServiceMetadataCopyWith<$Res> {
   _$TrackingServiceMetadataCopyWithImpl(this._value, this._then);
 
-  final TrackingServiceMetadata _value;
   // ignore: unused_field
-  final $Res Function(TrackingServiceMetadata) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? type = freezed,
-    Object? localizedName = freezed,
-    Object? iconData = freezed,
-    Object? postalServices = freezed,
+    Object? type = null,
+    Object? localizedName = null,
+    Object? iconData = null,
+    Object? postalServices = null,
   }) {
     return _then(_value.copyWith(
-      type: type == freezed
+      type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as TrackingServiceType,
-      localizedName: localizedName == freezed
+      localizedName: null == localizedName
           ? _value.localizedName
           : localizedName // ignore: cast_nullable_to_non_nullable
               as String,
-      iconData: iconData == freezed
+      iconData: null == iconData
           ? _value.iconData
           : iconData // ignore: cast_nullable_to_non_nullable
               as RRectIconData,
-      postalServices: postalServices == freezed
+      postalServices: null == postalServices
           ? _value.postalServices
           : postalServices // ignore: cast_nullable_to_non_nullable
               as Set<PostalServiceMetadata>,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $RRectIconDataCopyWith<$Res> get iconData {
     return $RRectIconDataCopyWith<$Res>(_value.iconData, (value) {
-      return _then(_value.copyWith(iconData: value));
+      return _then(_value.copyWith(iconData: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$TrackingServiceMetadataCopyWith<$Res>
+abstract class _$$TrackingServiceMetadataImplCopyWith<$Res>
     implements $TrackingServiceMetadataCopyWith<$Res> {
-  factory _$TrackingServiceMetadataCopyWith(_TrackingServiceMetadata value,
-          $Res Function(_TrackingServiceMetadata) then) =
-      __$TrackingServiceMetadataCopyWithImpl<$Res>;
+  factory _$$TrackingServiceMetadataImplCopyWith(
+          _$TrackingServiceMetadataImpl value,
+          $Res Function(_$TrackingServiceMetadataImpl) then) =
+      __$$TrackingServiceMetadataImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {TrackingServiceType type,
       String localizedName,
@@ -123,39 +110,38 @@ abstract class _$TrackingServiceMetadataCopyWith<$Res>
 }
 
 /// @nodoc
-class __$TrackingServiceMetadataCopyWithImpl<$Res>
-    extends _$TrackingServiceMetadataCopyWithImpl<$Res>
-    implements _$TrackingServiceMetadataCopyWith<$Res> {
-  __$TrackingServiceMetadataCopyWithImpl(_TrackingServiceMetadata _value,
-      $Res Function(_TrackingServiceMetadata) _then)
-      : super(_value, (v) => _then(v as _TrackingServiceMetadata));
+class __$$TrackingServiceMetadataImplCopyWithImpl<$Res>
+    extends _$TrackingServiceMetadataCopyWithImpl<$Res,
+        _$TrackingServiceMetadataImpl>
+    implements _$$TrackingServiceMetadataImplCopyWith<$Res> {
+  __$$TrackingServiceMetadataImplCopyWithImpl(
+      _$TrackingServiceMetadataImpl _value,
+      $Res Function(_$TrackingServiceMetadataImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _TrackingServiceMetadata get _value =>
-      super._value as _TrackingServiceMetadata;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? type = freezed,
-    Object? localizedName = freezed,
-    Object? iconData = freezed,
-    Object? postalServices = freezed,
+    Object? type = null,
+    Object? localizedName = null,
+    Object? iconData = null,
+    Object? postalServices = null,
   }) {
-    return _then(_TrackingServiceMetadata(
-      type: type == freezed
+    return _then(_$TrackingServiceMetadataImpl(
+      type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as TrackingServiceType,
-      localizedName: localizedName == freezed
+      localizedName: null == localizedName
           ? _value.localizedName
           : localizedName // ignore: cast_nullable_to_non_nullable
               as String,
-      iconData: iconData == freezed
+      iconData: null == iconData
           ? _value.iconData
           : iconData // ignore: cast_nullable_to_non_nullable
               as RRectIconData,
-      postalServices: postalServices == freezed
-          ? _value.postalServices
+      postalServices: null == postalServices
+          ? _value._postalServices
           : postalServices // ignore: cast_nullable_to_non_nullable
               as Set<PostalServiceMetadata>,
     ));
@@ -164,12 +150,13 @@ class __$TrackingServiceMetadataCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_TrackingServiceMetadata implements _TrackingServiceMetadata {
-  const _$_TrackingServiceMetadata(
+class _$TrackingServiceMetadataImpl implements _TrackingServiceMetadata {
+  const _$TrackingServiceMetadataImpl(
       {required this.type,
       required this.localizedName,
       required this.iconData,
-      required this.postalServices});
+      required final Set<PostalServiceMetadata> postalServices})
+      : _postalServices = postalServices;
 
   @override
   final TrackingServiceType type;
@@ -177,8 +164,13 @@ class _$_TrackingServiceMetadata implements _TrackingServiceMetadata {
   final String localizedName;
   @override
   final RRectIconData iconData;
+  final Set<PostalServiceMetadata> _postalServices;
   @override
-  final Set<PostalServiceMetadata> postalServices;
+  Set<PostalServiceMetadata> get postalServices {
+    if (_postalServices is EqualUnmodifiableSetView) return _postalServices;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableSetView(_postalServices);
+  }
 
   @override
   String toString() {
@@ -186,78 +178,52 @@ class _$_TrackingServiceMetadata implements _TrackingServiceMetadata {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is _TrackingServiceMetadata &&
-            (identical(other.type, type) ||
-                const DeepCollectionEquality().equals(other.type, type)) &&
+        (other.runtimeType == runtimeType &&
+            other is _$TrackingServiceMetadataImpl &&
+            (identical(other.type, type) || other.type == type) &&
             (identical(other.localizedName, localizedName) ||
-                const DeepCollectionEquality()
-                    .equals(other.localizedName, localizedName)) &&
+                other.localizedName == localizedName) &&
             (identical(other.iconData, iconData) ||
-                const DeepCollectionEquality()
-                    .equals(other.iconData, iconData)) &&
-            (identical(other.postalServices, postalServices) ||
-                const DeepCollectionEquality()
-                    .equals(other.postalServices, postalServices)));
+                other.iconData == iconData) &&
+            const DeepCollectionEquality()
+                .equals(other._postalServices, _postalServices));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(type) ^
-      const DeepCollectionEquality().hash(localizedName) ^
-      const DeepCollectionEquality().hash(iconData) ^
-      const DeepCollectionEquality().hash(postalServices);
+  int get hashCode => Object.hash(runtimeType, type, localizedName, iconData,
+      const DeepCollectionEquality().hash(_postalServices));
 
   @JsonKey(ignore: true)
   @override
-  _$TrackingServiceMetadataCopyWith<_TrackingServiceMetadata> get copyWith =>
-      __$TrackingServiceMetadataCopyWithImpl<_TrackingServiceMetadata>(
-          this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$TrackingServiceMetadataImplCopyWith<_$TrackingServiceMetadataImpl>
+      get copyWith => __$$TrackingServiceMetadataImplCopyWithImpl<
+          _$TrackingServiceMetadataImpl>(this, _$identity);
 }
 
 abstract class _TrackingServiceMetadata implements TrackingServiceMetadata {
   const factory _TrackingServiceMetadata(
-          {required TrackingServiceType type,
-          required String localizedName,
-          required RRectIconData iconData,
-          required Set<PostalServiceMetadata> postalServices}) =
-      _$_TrackingServiceMetadata;
+          {required final TrackingServiceType type,
+          required final String localizedName,
+          required final RRectIconData iconData,
+          required final Set<PostalServiceMetadata> postalServices}) =
+      _$TrackingServiceMetadataImpl;
 
   @override
-  TrackingServiceType get type => throw _privateConstructorUsedError;
+  TrackingServiceType get type;
   @override
-  String get localizedName => throw _privateConstructorUsedError;
+  String get localizedName;
   @override
-  RRectIconData get iconData => throw _privateConstructorUsedError;
+  RRectIconData get iconData;
   @override
-  Set<PostalServiceMetadata> get postalServices =>
-      throw _privateConstructorUsedError;
+  Set<PostalServiceMetadata> get postalServices;
   @override
   @JsonKey(ignore: true)
-  _$TrackingServiceMetadataCopyWith<_TrackingServiceMetadata> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$TrackingServiceMetadataImplCopyWith<_$TrackingServiceMetadataImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
-
-/// @nodoc
-class _$PostalServiceMetadataTearOff {
-  const _$PostalServiceMetadataTearOff();
-
-  _PostalServiceMetadata call(
-      {required PostalServiceType type,
-      required String localizedName,
-      required RRectIconData iconData}) {
-    return _PostalServiceMetadata(
-      type: type,
-      localizedName: localizedName,
-      iconData: iconData,
-    );
-  }
-}
-
-/// @nodoc
-const $PostalServiceMetadata = _$PostalServiceMetadataTearOff();
 
 /// @nodoc
 mixin _$PostalServiceMetadata {
@@ -274,7 +240,8 @@ mixin _$PostalServiceMetadata {
 abstract class $PostalServiceMetadataCopyWith<$Res> {
   factory $PostalServiceMetadataCopyWith(PostalServiceMetadata value,
           $Res Function(PostalServiceMetadata) then) =
-      _$PostalServiceMetadataCopyWithImpl<$Res>;
+      _$PostalServiceMetadataCopyWithImpl<$Res, PostalServiceMetadata>;
+  @useResult
   $Res call(
       {PostalServiceType type, String localizedName, RRectIconData iconData});
 
@@ -282,51 +249,57 @@ abstract class $PostalServiceMetadataCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$PostalServiceMetadataCopyWithImpl<$Res>
+class _$PostalServiceMetadataCopyWithImpl<$Res,
+        $Val extends PostalServiceMetadata>
     implements $PostalServiceMetadataCopyWith<$Res> {
   _$PostalServiceMetadataCopyWithImpl(this._value, this._then);
 
-  final PostalServiceMetadata _value;
   // ignore: unused_field
-  final $Res Function(PostalServiceMetadata) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? type = freezed,
-    Object? localizedName = freezed,
-    Object? iconData = freezed,
+    Object? type = null,
+    Object? localizedName = null,
+    Object? iconData = null,
   }) {
     return _then(_value.copyWith(
-      type: type == freezed
+      type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as PostalServiceType,
-      localizedName: localizedName == freezed
+      localizedName: null == localizedName
           ? _value.localizedName
           : localizedName // ignore: cast_nullable_to_non_nullable
               as String,
-      iconData: iconData == freezed
+      iconData: null == iconData
           ? _value.iconData
           : iconData // ignore: cast_nullable_to_non_nullable
               as RRectIconData,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $RRectIconDataCopyWith<$Res> get iconData {
     return $RRectIconDataCopyWith<$Res>(_value.iconData, (value) {
-      return _then(_value.copyWith(iconData: value));
+      return _then(_value.copyWith(iconData: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$PostalServiceMetadataCopyWith<$Res>
+abstract class _$$PostalServiceMetadataImplCopyWith<$Res>
     implements $PostalServiceMetadataCopyWith<$Res> {
-  factory _$PostalServiceMetadataCopyWith(_PostalServiceMetadata value,
-          $Res Function(_PostalServiceMetadata) then) =
-      __$PostalServiceMetadataCopyWithImpl<$Res>;
+  factory _$$PostalServiceMetadataImplCopyWith(
+          _$PostalServiceMetadataImpl value,
+          $Res Function(_$PostalServiceMetadataImpl) then) =
+      __$$PostalServiceMetadataImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {PostalServiceType type, String localizedName, RRectIconData iconData});
 
@@ -335,32 +308,31 @@ abstract class _$PostalServiceMetadataCopyWith<$Res>
 }
 
 /// @nodoc
-class __$PostalServiceMetadataCopyWithImpl<$Res>
-    extends _$PostalServiceMetadataCopyWithImpl<$Res>
-    implements _$PostalServiceMetadataCopyWith<$Res> {
-  __$PostalServiceMetadataCopyWithImpl(_PostalServiceMetadata _value,
-      $Res Function(_PostalServiceMetadata) _then)
-      : super(_value, (v) => _then(v as _PostalServiceMetadata));
+class __$$PostalServiceMetadataImplCopyWithImpl<$Res>
+    extends _$PostalServiceMetadataCopyWithImpl<$Res,
+        _$PostalServiceMetadataImpl>
+    implements _$$PostalServiceMetadataImplCopyWith<$Res> {
+  __$$PostalServiceMetadataImplCopyWithImpl(_$PostalServiceMetadataImpl _value,
+      $Res Function(_$PostalServiceMetadataImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _PostalServiceMetadata get _value => super._value as _PostalServiceMetadata;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? type = freezed,
-    Object? localizedName = freezed,
-    Object? iconData = freezed,
+    Object? type = null,
+    Object? localizedName = null,
+    Object? iconData = null,
   }) {
-    return _then(_PostalServiceMetadata(
-      type: type == freezed
+    return _then(_$PostalServiceMetadataImpl(
+      type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as PostalServiceType,
-      localizedName: localizedName == freezed
+      localizedName: null == localizedName
           ? _value.localizedName
           : localizedName // ignore: cast_nullable_to_non_nullable
               as String,
-      iconData: iconData == freezed
+      iconData: null == iconData
           ? _value.iconData
           : iconData // ignore: cast_nullable_to_non_nullable
               as RRectIconData,
@@ -370,8 +342,8 @@ class __$PostalServiceMetadataCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_PostalServiceMetadata implements _PostalServiceMetadata {
-  const _$_PostalServiceMetadata(
+class _$PostalServiceMetadataImpl implements _PostalServiceMetadata {
+  const _$PostalServiceMetadataImpl(
       {required this.type,
       required this.localizedName,
       required this.iconData});
@@ -389,47 +361,42 @@ class _$_PostalServiceMetadata implements _PostalServiceMetadata {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is _PostalServiceMetadata &&
-            (identical(other.type, type) ||
-                const DeepCollectionEquality().equals(other.type, type)) &&
+        (other.runtimeType == runtimeType &&
+            other is _$PostalServiceMetadataImpl &&
+            (identical(other.type, type) || other.type == type) &&
             (identical(other.localizedName, localizedName) ||
-                const DeepCollectionEquality()
-                    .equals(other.localizedName, localizedName)) &&
+                other.localizedName == localizedName) &&
             (identical(other.iconData, iconData) ||
-                const DeepCollectionEquality()
-                    .equals(other.iconData, iconData)));
+                other.iconData == iconData));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(type) ^
-      const DeepCollectionEquality().hash(localizedName) ^
-      const DeepCollectionEquality().hash(iconData);
+  int get hashCode => Object.hash(runtimeType, type, localizedName, iconData);
 
   @JsonKey(ignore: true)
   @override
-  _$PostalServiceMetadataCopyWith<_PostalServiceMetadata> get copyWith =>
-      __$PostalServiceMetadataCopyWithImpl<_PostalServiceMetadata>(
-          this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$PostalServiceMetadataImplCopyWith<_$PostalServiceMetadataImpl>
+      get copyWith => __$$PostalServiceMetadataImplCopyWithImpl<
+          _$PostalServiceMetadataImpl>(this, _$identity);
 }
 
 abstract class _PostalServiceMetadata implements PostalServiceMetadata {
   const factory _PostalServiceMetadata(
-      {required PostalServiceType type,
-      required String localizedName,
-      required RRectIconData iconData}) = _$_PostalServiceMetadata;
+      {required final PostalServiceType type,
+      required final String localizedName,
+      required final RRectIconData iconData}) = _$PostalServiceMetadataImpl;
 
   @override
-  PostalServiceType get type => throw _privateConstructorUsedError;
+  PostalServiceType get type;
   @override
-  String get localizedName => throw _privateConstructorUsedError;
+  String get localizedName;
   @override
-  RRectIconData get iconData => throw _privateConstructorUsedError;
+  RRectIconData get iconData;
   @override
   @JsonKey(ignore: true)
-  _$PostalServiceMetadataCopyWith<_PostalServiceMetadata> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$PostalServiceMetadataImplCopyWith<_$PostalServiceMetadataImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

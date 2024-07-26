@@ -29,37 +29,37 @@ class StatusIconsData {
     backgroundColor: Colors.red.shade400,
   );
 
-  static RRectIconData notAvailable = const RRectIconData(
+  static RRectIconData notAvailable = RRectIconData(
     iconData: MdiIcons.help,
     iconColor: Colors.white,
     backgroundColor: Colors.blueGrey,
   );
 
-  static RRectIconData infoReceived = const RRectIconData(
+  static RRectIconData infoReceived = RRectIconData(
     iconData: MdiIcons.informationVariant,
     iconColor: Colors.white,
     backgroundColor: Colors.blueGrey,
   );
 
-  static RRectIconData pickup = const RRectIconData(
+  static RRectIconData pickup = RRectIconData(
     iconData: MdiIcons.packageUp,
     iconColor: Colors.white,
     backgroundColor: Colors.blue,
   );
 
-  static RRectIconData inTransit = const RRectIconData(
+  static RRectIconData inTransit = RRectIconData(
     iconData: MdiIcons.airplane,
     iconColor: Colors.white,
     backgroundColor: Colors.blue,
   );
 
-  static RRectIconData outForDelivery = const RRectIconData(
+  static RRectIconData outForDelivery = RRectIconData(
     iconData: MdiIcons.package,
     iconColor: Colors.white,
     backgroundColor: Colors.orange,
   );
 
-  static RRectIconData delivered = const RRectIconData(
+  static RRectIconData delivered = RRectIconData(
     iconData: MdiIcons.packageVariant,
     iconColor: Colors.white,
     backgroundColor: Colors.green,

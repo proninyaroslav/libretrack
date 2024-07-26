@@ -22,7 +22,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:libretrack/core/entity/entity.dart';
-import 'package:libretrack/logger.dart';
 import 'package:libretrack/ui/add_parcels/add_parcels.dart';
 import 'package:libretrack/ui/parcels/parcels.dart';
 import 'package:libretrack/ui/settings/settings.dart';
@@ -476,11 +475,7 @@ class AppRouteInfoParser extends RouteInformationParser<AppRoutePath> {
   Future<AppRoutePath> parseRouteInformation(
     RouteInformation routeInformation,
   ) async {
-    if (routeInformation.location == null) {
-      log().e('Undefined location error');
-      return const AppRoutePath.unknown();
-    }
-    final uri = Uri.parse(routeInformation.location!);
+    final uri = Uri.parse(routeInformation.location);
     final pathSegments = uri.pathSegments;
     final first = pathSegments.getOrNull(0);
 

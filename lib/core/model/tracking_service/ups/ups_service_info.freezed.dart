@@ -1,6 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'ups_service_info.dart';
 
@@ -11,26 +12,7 @@ part of 'ups_service_info.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$UPSAuthDataTearOff {
-  const _$UPSAuthDataTearOff();
-
-  _UPSAuthData call(
-      {required String username,
-      required String password,
-      required String accessLicenseNumber}) {
-    return _UPSAuthData(
-      username: username,
-      password: password,
-      accessLicenseNumber: accessLicenseNumber,
-    );
-  }
-}
-
-/// @nodoc
-const $UPSAuthData = _$UPSAuthDataTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$UPSAuthData {
@@ -47,77 +29,81 @@ mixin _$UPSAuthData {
 abstract class $UPSAuthDataCopyWith<$Res> {
   factory $UPSAuthDataCopyWith(
           UPSAuthData value, $Res Function(UPSAuthData) then) =
-      _$UPSAuthDataCopyWithImpl<$Res>;
+      _$UPSAuthDataCopyWithImpl<$Res, UPSAuthData>;
+  @useResult
   $Res call({String username, String password, String accessLicenseNumber});
 }
 
 /// @nodoc
-class _$UPSAuthDataCopyWithImpl<$Res> implements $UPSAuthDataCopyWith<$Res> {
+class _$UPSAuthDataCopyWithImpl<$Res, $Val extends UPSAuthData>
+    implements $UPSAuthDataCopyWith<$Res> {
   _$UPSAuthDataCopyWithImpl(this._value, this._then);
 
-  final UPSAuthData _value;
   // ignore: unused_field
-  final $Res Function(UPSAuthData) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? username = freezed,
-    Object? password = freezed,
-    Object? accessLicenseNumber = freezed,
+    Object? username = null,
+    Object? password = null,
+    Object? accessLicenseNumber = null,
   }) {
     return _then(_value.copyWith(
-      username: username == freezed
+      username: null == username
           ? _value.username
           : username // ignore: cast_nullable_to_non_nullable
               as String,
-      password: password == freezed
+      password: null == password
           ? _value.password
           : password // ignore: cast_nullable_to_non_nullable
               as String,
-      accessLicenseNumber: accessLicenseNumber == freezed
+      accessLicenseNumber: null == accessLicenseNumber
           ? _value.accessLicenseNumber
           : accessLicenseNumber // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$UPSAuthDataCopyWith<$Res>
+abstract class _$$UPSAuthDataImplCopyWith<$Res>
     implements $UPSAuthDataCopyWith<$Res> {
-  factory _$UPSAuthDataCopyWith(
-          _UPSAuthData value, $Res Function(_UPSAuthData) then) =
-      __$UPSAuthDataCopyWithImpl<$Res>;
+  factory _$$UPSAuthDataImplCopyWith(
+          _$UPSAuthDataImpl value, $Res Function(_$UPSAuthDataImpl) then) =
+      __$$UPSAuthDataImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({String username, String password, String accessLicenseNumber});
 }
 
 /// @nodoc
-class __$UPSAuthDataCopyWithImpl<$Res> extends _$UPSAuthDataCopyWithImpl<$Res>
-    implements _$UPSAuthDataCopyWith<$Res> {
-  __$UPSAuthDataCopyWithImpl(
-      _UPSAuthData _value, $Res Function(_UPSAuthData) _then)
-      : super(_value, (v) => _then(v as _UPSAuthData));
+class __$$UPSAuthDataImplCopyWithImpl<$Res>
+    extends _$UPSAuthDataCopyWithImpl<$Res, _$UPSAuthDataImpl>
+    implements _$$UPSAuthDataImplCopyWith<$Res> {
+  __$$UPSAuthDataImplCopyWithImpl(
+      _$UPSAuthDataImpl _value, $Res Function(_$UPSAuthDataImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _UPSAuthData get _value => super._value as _UPSAuthData;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? username = freezed,
-    Object? password = freezed,
-    Object? accessLicenseNumber = freezed,
+    Object? username = null,
+    Object? password = null,
+    Object? accessLicenseNumber = null,
   }) {
-    return _then(_UPSAuthData(
-      username: username == freezed
+    return _then(_$UPSAuthDataImpl(
+      username: null == username
           ? _value.username
           : username // ignore: cast_nullable_to_non_nullable
               as String,
-      password: password == freezed
+      password: null == password
           ? _value.password
           : password // ignore: cast_nullable_to_non_nullable
               as String,
-      accessLicenseNumber: accessLicenseNumber == freezed
+      accessLicenseNumber: null == accessLicenseNumber
           ? _value.accessLicenseNumber
           : accessLicenseNumber // ignore: cast_nullable_to_non_nullable
               as String,
@@ -127,8 +113,8 @@ class __$UPSAuthDataCopyWithImpl<$Res> extends _$UPSAuthDataCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_UPSAuthData extends _UPSAuthData with DiagnosticableTreeMixin {
-  const _$_UPSAuthData(
+class _$UPSAuthDataImpl extends _UPSAuthData with DiagnosticableTreeMixin {
+  const _$UPSAuthDataImpl(
       {required this.username,
       required this.password,
       required this.accessLicenseNumber})
@@ -157,48 +143,44 @@ class _$_UPSAuthData extends _UPSAuthData with DiagnosticableTreeMixin {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is _UPSAuthData &&
+        (other.runtimeType == runtimeType &&
+            other is _$UPSAuthDataImpl &&
             (identical(other.username, username) ||
-                const DeepCollectionEquality()
-                    .equals(other.username, username)) &&
+                other.username == username) &&
             (identical(other.password, password) ||
-                const DeepCollectionEquality()
-                    .equals(other.password, password)) &&
+                other.password == password) &&
             (identical(other.accessLicenseNumber, accessLicenseNumber) ||
-                const DeepCollectionEquality()
-                    .equals(other.accessLicenseNumber, accessLicenseNumber)));
+                other.accessLicenseNumber == accessLicenseNumber));
   }
 
   @override
   int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(username) ^
-      const DeepCollectionEquality().hash(password) ^
-      const DeepCollectionEquality().hash(accessLicenseNumber);
+      Object.hash(runtimeType, username, password, accessLicenseNumber);
 
   @JsonKey(ignore: true)
   @override
-  _$UPSAuthDataCopyWith<_UPSAuthData> get copyWith =>
-      __$UPSAuthDataCopyWithImpl<_UPSAuthData>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$UPSAuthDataImplCopyWith<_$UPSAuthDataImpl> get copyWith =>
+      __$$UPSAuthDataImplCopyWithImpl<_$UPSAuthDataImpl>(this, _$identity);
 }
 
 abstract class _UPSAuthData extends UPSAuthData {
   const factory _UPSAuthData(
-      {required String username,
-      required String password,
-      required String accessLicenseNumber}) = _$_UPSAuthData;
+      {required final String username,
+      required final String password,
+      required final String accessLicenseNumber}) = _$UPSAuthDataImpl;
   const _UPSAuthData._() : super._();
 
   @override
-  String get username => throw _privateConstructorUsedError;
+  String get username;
   @override
-  String get password => throw _privateConstructorUsedError;
+  String get password;
   @override
-  String get accessLicenseNumber => throw _privateConstructorUsedError;
+  String get accessLicenseNumber;
   @override
   @JsonKey(ignore: true)
-  _$UPSAuthDataCopyWith<_UPSAuthData> get copyWith =>
+  _$$UPSAuthDataImplCopyWith<_$UPSAuthDataImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

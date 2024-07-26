@@ -1,6 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'model.dart';
 
@@ -11,10 +12,10 @@ part of 'model.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 ParcelsSort _$ParcelsSortFromJson(Map<String, dynamic> json) {
-  switch (json['runtimeType'] as String?) {
+  switch (json['runtimeType']) {
     case 'alphabetically':
       return ParcelsSortAlphabetically.fromJson(json);
     case 'activityDate':
@@ -29,36 +30,6 @@ ParcelsSort _$ParcelsSortFromJson(Map<String, dynamic> json) {
 }
 
 /// @nodoc
-class _$ParcelsSortTearOff {
-  const _$ParcelsSortTearOff();
-
-  ParcelsSortAlphabetically alphabetically({bool isDesc = false}) {
-    return ParcelsSortAlphabetically(
-      isDesc: isDesc,
-    );
-  }
-
-  ParcelsSortActivityDate activityDate({bool oldestFirst = false}) {
-    return ParcelsSortActivityDate(
-      oldestFirst: oldestFirst,
-    );
-  }
-
-  ParcelsSortDateAdded dateAdded({bool oldestFirst = false}) {
-    return ParcelsSortDateAdded(
-      oldestFirst: oldestFirst,
-    );
-  }
-
-  ParcelsSort fromJson(Map<String, Object> json) {
-    return ParcelsSort.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ParcelsSort = _$ParcelsSortTearOff();
-
-/// @nodoc
 mixin _$ParcelsSort {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
@@ -69,9 +40,9 @@ mixin _$ParcelsSort {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(bool isDesc)? alphabetically,
-    TResult Function(bool oldestFirst)? activityDate,
-    TResult Function(bool oldestFirst)? dateAdded,
+    TResult? Function(bool isDesc)? alphabetically,
+    TResult? Function(bool oldestFirst)? activityDate,
+    TResult? Function(bool oldestFirst)? dateAdded,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -91,9 +62,9 @@ mixin _$ParcelsSort {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(ParcelsSortAlphabetically value)? alphabetically,
-    TResult Function(ParcelsSortActivityDate value)? activityDate,
-    TResult Function(ParcelsSortDateAdded value)? dateAdded,
+    TResult? Function(ParcelsSortAlphabetically value)? alphabetically,
+    TResult? Function(ParcelsSortActivityDate value)? activityDate,
+    TResult? Function(ParcelsSortDateAdded value)? dateAdded,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -111,44 +82,46 @@ mixin _$ParcelsSort {
 abstract class $ParcelsSortCopyWith<$Res> {
   factory $ParcelsSortCopyWith(
           ParcelsSort value, $Res Function(ParcelsSort) then) =
-      _$ParcelsSortCopyWithImpl<$Res>;
+      _$ParcelsSortCopyWithImpl<$Res, ParcelsSort>;
 }
 
 /// @nodoc
-class _$ParcelsSortCopyWithImpl<$Res> implements $ParcelsSortCopyWith<$Res> {
+class _$ParcelsSortCopyWithImpl<$Res, $Val extends ParcelsSort>
+    implements $ParcelsSortCopyWith<$Res> {
   _$ParcelsSortCopyWithImpl(this._value, this._then);
 
-  final ParcelsSort _value;
   // ignore: unused_field
-  final $Res Function(ParcelsSort) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 }
 
 /// @nodoc
-abstract class $ParcelsSortAlphabeticallyCopyWith<$Res> {
-  factory $ParcelsSortAlphabeticallyCopyWith(ParcelsSortAlphabetically value,
-          $Res Function(ParcelsSortAlphabetically) then) =
-      _$ParcelsSortAlphabeticallyCopyWithImpl<$Res>;
+abstract class _$$ParcelsSortAlphabeticallyImplCopyWith<$Res> {
+  factory _$$ParcelsSortAlphabeticallyImplCopyWith(
+          _$ParcelsSortAlphabeticallyImpl value,
+          $Res Function(_$ParcelsSortAlphabeticallyImpl) then) =
+      __$$ParcelsSortAlphabeticallyImplCopyWithImpl<$Res>;
+  @useResult
   $Res call({bool isDesc});
 }
 
 /// @nodoc
-class _$ParcelsSortAlphabeticallyCopyWithImpl<$Res>
-    extends _$ParcelsSortCopyWithImpl<$Res>
-    implements $ParcelsSortAlphabeticallyCopyWith<$Res> {
-  _$ParcelsSortAlphabeticallyCopyWithImpl(ParcelsSortAlphabetically _value,
-      $Res Function(ParcelsSortAlphabetically) _then)
-      : super(_value, (v) => _then(v as ParcelsSortAlphabetically));
+class __$$ParcelsSortAlphabeticallyImplCopyWithImpl<$Res>
+    extends _$ParcelsSortCopyWithImpl<$Res, _$ParcelsSortAlphabeticallyImpl>
+    implements _$$ParcelsSortAlphabeticallyImplCopyWith<$Res> {
+  __$$ParcelsSortAlphabeticallyImplCopyWithImpl(
+      _$ParcelsSortAlphabeticallyImpl _value,
+      $Res Function(_$ParcelsSortAlphabeticallyImpl) _then)
+      : super(_value, _then);
 
-  @override
-  ParcelsSortAlphabetically get _value =>
-      super._value as ParcelsSortAlphabetically;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? isDesc = freezed,
+    Object? isDesc = null,
   }) {
-    return _then(ParcelsSortAlphabetically(
-      isDesc: isDesc == freezed
+    return _then(_$ParcelsSortAlphabeticallyImpl(
+      isDesc: null == isDesc
           ? _value.isDesc
           : isDesc // ignore: cast_nullable_to_non_nullable
               as bool,
@@ -158,15 +131,20 @@ class _$ParcelsSortAlphabeticallyCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$ParcelsSortAlphabetically implements ParcelsSortAlphabetically {
-  const _$ParcelsSortAlphabetically({this.isDesc = false});
+class _$ParcelsSortAlphabeticallyImpl implements ParcelsSortAlphabetically {
+  const _$ParcelsSortAlphabeticallyImpl(
+      {this.isDesc = false, final String? $type})
+      : $type = $type ?? 'alphabetically';
 
-  factory _$ParcelsSortAlphabetically.fromJson(Map<String, dynamic> json) =>
-      _$$ParcelsSortAlphabeticallyFromJson(json);
+  factory _$ParcelsSortAlphabeticallyImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ParcelsSortAlphabeticallyImplFromJson(json);
 
-  @JsonKey(defaultValue: false)
   @override
+  @JsonKey()
   final bool isDesc;
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
 
   @override
   String toString() {
@@ -174,22 +152,23 @@ class _$ParcelsSortAlphabetically implements ParcelsSortAlphabetically {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is ParcelsSortAlphabetically &&
-            (identical(other.isDesc, isDesc) ||
-                const DeepCollectionEquality().equals(other.isDesc, isDesc)));
+        (other.runtimeType == runtimeType &&
+            other is _$ParcelsSortAlphabeticallyImpl &&
+            (identical(other.isDesc, isDesc) || other.isDesc == isDesc));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(isDesc);
 
   @JsonKey(ignore: true)
   @override
-  $ParcelsSortAlphabeticallyCopyWith<ParcelsSortAlphabetically> get copyWith =>
-      _$ParcelsSortAlphabeticallyCopyWithImpl<ParcelsSortAlphabetically>(
-          this, _$identity);
+  int get hashCode => Object.hash(runtimeType, isDesc);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ParcelsSortAlphabeticallyImplCopyWith<_$ParcelsSortAlphabeticallyImpl>
+      get copyWith => __$$ParcelsSortAlphabeticallyImplCopyWithImpl<
+          _$ParcelsSortAlphabeticallyImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -204,9 +183,9 @@ class _$ParcelsSortAlphabetically implements ParcelsSortAlphabetically {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(bool isDesc)? alphabetically,
-    TResult Function(bool oldestFirst)? activityDate,
-    TResult Function(bool oldestFirst)? dateAdded,
+    TResult? Function(bool isDesc)? alphabetically,
+    TResult? Function(bool oldestFirst)? activityDate,
+    TResult? Function(bool oldestFirst)? dateAdded,
   }) {
     return alphabetically?.call(isDesc);
   }
@@ -238,9 +217,9 @@ class _$ParcelsSortAlphabetically implements ParcelsSortAlphabetically {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(ParcelsSortAlphabetically value)? alphabetically,
-    TResult Function(ParcelsSortActivityDate value)? activityDate,
-    TResult Function(ParcelsSortDateAdded value)? dateAdded,
+    TResult? Function(ParcelsSortAlphabetically value)? alphabetically,
+    TResult? Function(ParcelsSortActivityDate value)? activityDate,
+    TResult? Function(ParcelsSortDateAdded value)? dateAdded,
   }) {
     return alphabetically?.call(this);
   }
@@ -261,49 +240,51 @@ class _$ParcelsSortAlphabetically implements ParcelsSortAlphabetically {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ParcelsSortAlphabeticallyToJson(this)
-      ..['runtimeType'] = 'alphabetically';
+    return _$$ParcelsSortAlphabeticallyImplToJson(
+      this,
+    );
   }
 }
 
 abstract class ParcelsSortAlphabetically implements ParcelsSort {
-  const factory ParcelsSortAlphabetically({bool isDesc}) =
-      _$ParcelsSortAlphabetically;
+  const factory ParcelsSortAlphabetically({final bool isDesc}) =
+      _$ParcelsSortAlphabeticallyImpl;
 
   factory ParcelsSortAlphabetically.fromJson(Map<String, dynamic> json) =
-      _$ParcelsSortAlphabetically.fromJson;
+      _$ParcelsSortAlphabeticallyImpl.fromJson;
 
-  bool get isDesc => throw _privateConstructorUsedError;
+  bool get isDesc;
   @JsonKey(ignore: true)
-  $ParcelsSortAlphabeticallyCopyWith<ParcelsSortAlphabetically> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$ParcelsSortAlphabeticallyImplCopyWith<_$ParcelsSortAlphabeticallyImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $ParcelsSortActivityDateCopyWith<$Res> {
-  factory $ParcelsSortActivityDateCopyWith(ParcelsSortActivityDate value,
-          $Res Function(ParcelsSortActivityDate) then) =
-      _$ParcelsSortActivityDateCopyWithImpl<$Res>;
+abstract class _$$ParcelsSortActivityDateImplCopyWith<$Res> {
+  factory _$$ParcelsSortActivityDateImplCopyWith(
+          _$ParcelsSortActivityDateImpl value,
+          $Res Function(_$ParcelsSortActivityDateImpl) then) =
+      __$$ParcelsSortActivityDateImplCopyWithImpl<$Res>;
+  @useResult
   $Res call({bool oldestFirst});
 }
 
 /// @nodoc
-class _$ParcelsSortActivityDateCopyWithImpl<$Res>
-    extends _$ParcelsSortCopyWithImpl<$Res>
-    implements $ParcelsSortActivityDateCopyWith<$Res> {
-  _$ParcelsSortActivityDateCopyWithImpl(ParcelsSortActivityDate _value,
-      $Res Function(ParcelsSortActivityDate) _then)
-      : super(_value, (v) => _then(v as ParcelsSortActivityDate));
+class __$$ParcelsSortActivityDateImplCopyWithImpl<$Res>
+    extends _$ParcelsSortCopyWithImpl<$Res, _$ParcelsSortActivityDateImpl>
+    implements _$$ParcelsSortActivityDateImplCopyWith<$Res> {
+  __$$ParcelsSortActivityDateImplCopyWithImpl(
+      _$ParcelsSortActivityDateImpl _value,
+      $Res Function(_$ParcelsSortActivityDateImpl) _then)
+      : super(_value, _then);
 
-  @override
-  ParcelsSortActivityDate get _value => super._value as ParcelsSortActivityDate;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? oldestFirst = freezed,
+    Object? oldestFirst = null,
   }) {
-    return _then(ParcelsSortActivityDate(
-      oldestFirst: oldestFirst == freezed
+    return _then(_$ParcelsSortActivityDateImpl(
+      oldestFirst: null == oldestFirst
           ? _value.oldestFirst
           : oldestFirst // ignore: cast_nullable_to_non_nullable
               as bool,
@@ -313,15 +294,20 @@ class _$ParcelsSortActivityDateCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$ParcelsSortActivityDate implements ParcelsSortActivityDate {
-  const _$ParcelsSortActivityDate({this.oldestFirst = false});
+class _$ParcelsSortActivityDateImpl implements ParcelsSortActivityDate {
+  const _$ParcelsSortActivityDateImpl(
+      {this.oldestFirst = false, final String? $type})
+      : $type = $type ?? 'activityDate';
 
-  factory _$ParcelsSortActivityDate.fromJson(Map<String, dynamic> json) =>
-      _$$ParcelsSortActivityDateFromJson(json);
+  factory _$ParcelsSortActivityDateImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ParcelsSortActivityDateImplFromJson(json);
 
-  @JsonKey(defaultValue: false)
   @override
+  @JsonKey()
   final bool oldestFirst;
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
 
   @override
   String toString() {
@@ -329,23 +315,24 @@ class _$ParcelsSortActivityDate implements ParcelsSortActivityDate {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is ParcelsSortActivityDate &&
+        (other.runtimeType == runtimeType &&
+            other is _$ParcelsSortActivityDateImpl &&
             (identical(other.oldestFirst, oldestFirst) ||
-                const DeepCollectionEquality()
-                    .equals(other.oldestFirst, oldestFirst)));
+                other.oldestFirst == oldestFirst));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(oldestFirst);
 
   @JsonKey(ignore: true)
   @override
-  $ParcelsSortActivityDateCopyWith<ParcelsSortActivityDate> get copyWith =>
-      _$ParcelsSortActivityDateCopyWithImpl<ParcelsSortActivityDate>(
-          this, _$identity);
+  int get hashCode => Object.hash(runtimeType, oldestFirst);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ParcelsSortActivityDateImplCopyWith<_$ParcelsSortActivityDateImpl>
+      get copyWith => __$$ParcelsSortActivityDateImplCopyWithImpl<
+          _$ParcelsSortActivityDateImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -360,9 +347,9 @@ class _$ParcelsSortActivityDate implements ParcelsSortActivityDate {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(bool isDesc)? alphabetically,
-    TResult Function(bool oldestFirst)? activityDate,
-    TResult Function(bool oldestFirst)? dateAdded,
+    TResult? Function(bool isDesc)? alphabetically,
+    TResult? Function(bool oldestFirst)? activityDate,
+    TResult? Function(bool oldestFirst)? dateAdded,
   }) {
     return activityDate?.call(oldestFirst);
   }
@@ -394,9 +381,9 @@ class _$ParcelsSortActivityDate implements ParcelsSortActivityDate {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(ParcelsSortAlphabetically value)? alphabetically,
-    TResult Function(ParcelsSortActivityDate value)? activityDate,
-    TResult Function(ParcelsSortDateAdded value)? dateAdded,
+    TResult? Function(ParcelsSortAlphabetically value)? alphabetically,
+    TResult? Function(ParcelsSortActivityDate value)? activityDate,
+    TResult? Function(ParcelsSortDateAdded value)? dateAdded,
   }) {
     return activityDate?.call(this);
   }
@@ -417,49 +404,49 @@ class _$ParcelsSortActivityDate implements ParcelsSortActivityDate {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ParcelsSortActivityDateToJson(this)
-      ..['runtimeType'] = 'activityDate';
+    return _$$ParcelsSortActivityDateImplToJson(
+      this,
+    );
   }
 }
 
 abstract class ParcelsSortActivityDate implements ParcelsSort {
-  const factory ParcelsSortActivityDate({bool oldestFirst}) =
-      _$ParcelsSortActivityDate;
+  const factory ParcelsSortActivityDate({final bool oldestFirst}) =
+      _$ParcelsSortActivityDateImpl;
 
   factory ParcelsSortActivityDate.fromJson(Map<String, dynamic> json) =
-      _$ParcelsSortActivityDate.fromJson;
+      _$ParcelsSortActivityDateImpl.fromJson;
 
-  bool get oldestFirst => throw _privateConstructorUsedError;
+  bool get oldestFirst;
   @JsonKey(ignore: true)
-  $ParcelsSortActivityDateCopyWith<ParcelsSortActivityDate> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$ParcelsSortActivityDateImplCopyWith<_$ParcelsSortActivityDateImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $ParcelsSortDateAddedCopyWith<$Res> {
-  factory $ParcelsSortDateAddedCopyWith(ParcelsSortDateAdded value,
-          $Res Function(ParcelsSortDateAdded) then) =
-      _$ParcelsSortDateAddedCopyWithImpl<$Res>;
+abstract class _$$ParcelsSortDateAddedImplCopyWith<$Res> {
+  factory _$$ParcelsSortDateAddedImplCopyWith(_$ParcelsSortDateAddedImpl value,
+          $Res Function(_$ParcelsSortDateAddedImpl) then) =
+      __$$ParcelsSortDateAddedImplCopyWithImpl<$Res>;
+  @useResult
   $Res call({bool oldestFirst});
 }
 
 /// @nodoc
-class _$ParcelsSortDateAddedCopyWithImpl<$Res>
-    extends _$ParcelsSortCopyWithImpl<$Res>
-    implements $ParcelsSortDateAddedCopyWith<$Res> {
-  _$ParcelsSortDateAddedCopyWithImpl(
-      ParcelsSortDateAdded _value, $Res Function(ParcelsSortDateAdded) _then)
-      : super(_value, (v) => _then(v as ParcelsSortDateAdded));
+class __$$ParcelsSortDateAddedImplCopyWithImpl<$Res>
+    extends _$ParcelsSortCopyWithImpl<$Res, _$ParcelsSortDateAddedImpl>
+    implements _$$ParcelsSortDateAddedImplCopyWith<$Res> {
+  __$$ParcelsSortDateAddedImplCopyWithImpl(_$ParcelsSortDateAddedImpl _value,
+      $Res Function(_$ParcelsSortDateAddedImpl) _then)
+      : super(_value, _then);
 
-  @override
-  ParcelsSortDateAdded get _value => super._value as ParcelsSortDateAdded;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? oldestFirst = freezed,
+    Object? oldestFirst = null,
   }) {
-    return _then(ParcelsSortDateAdded(
-      oldestFirst: oldestFirst == freezed
+    return _then(_$ParcelsSortDateAddedImpl(
+      oldestFirst: null == oldestFirst
           ? _value.oldestFirst
           : oldestFirst // ignore: cast_nullable_to_non_nullable
               as bool,
@@ -469,15 +456,20 @@ class _$ParcelsSortDateAddedCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$ParcelsSortDateAdded implements ParcelsSortDateAdded {
-  const _$ParcelsSortDateAdded({this.oldestFirst = false});
+class _$ParcelsSortDateAddedImpl implements ParcelsSortDateAdded {
+  const _$ParcelsSortDateAddedImpl(
+      {this.oldestFirst = false, final String? $type})
+      : $type = $type ?? 'dateAdded';
 
-  factory _$ParcelsSortDateAdded.fromJson(Map<String, dynamic> json) =>
-      _$$ParcelsSortDateAddedFromJson(json);
+  factory _$ParcelsSortDateAddedImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ParcelsSortDateAddedImplFromJson(json);
 
-  @JsonKey(defaultValue: false)
   @override
+  @JsonKey()
   final bool oldestFirst;
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
 
   @override
   String toString() {
@@ -485,23 +477,25 @@ class _$ParcelsSortDateAdded implements ParcelsSortDateAdded {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is ParcelsSortDateAdded &&
+        (other.runtimeType == runtimeType &&
+            other is _$ParcelsSortDateAddedImpl &&
             (identical(other.oldestFirst, oldestFirst) ||
-                const DeepCollectionEquality()
-                    .equals(other.oldestFirst, oldestFirst)));
+                other.oldestFirst == oldestFirst));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(oldestFirst);
 
   @JsonKey(ignore: true)
   @override
-  $ParcelsSortDateAddedCopyWith<ParcelsSortDateAdded> get copyWith =>
-      _$ParcelsSortDateAddedCopyWithImpl<ParcelsSortDateAdded>(
-          this, _$identity);
+  int get hashCode => Object.hash(runtimeType, oldestFirst);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ParcelsSortDateAddedImplCopyWith<_$ParcelsSortDateAddedImpl>
+      get copyWith =>
+          __$$ParcelsSortDateAddedImplCopyWithImpl<_$ParcelsSortDateAddedImpl>(
+              this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -516,9 +510,9 @@ class _$ParcelsSortDateAdded implements ParcelsSortDateAdded {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(bool isDesc)? alphabetically,
-    TResult Function(bool oldestFirst)? activityDate,
-    TResult Function(bool oldestFirst)? dateAdded,
+    TResult? Function(bool isDesc)? alphabetically,
+    TResult? Function(bool oldestFirst)? activityDate,
+    TResult? Function(bool oldestFirst)? dateAdded,
   }) {
     return dateAdded?.call(oldestFirst);
   }
@@ -550,9 +544,9 @@ class _$ParcelsSortDateAdded implements ParcelsSortDateAdded {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(ParcelsSortAlphabetically value)? alphabetically,
-    TResult Function(ParcelsSortActivityDate value)? activityDate,
-    TResult Function(ParcelsSortDateAdded value)? dateAdded,
+    TResult? Function(ParcelsSortAlphabetically value)? alphabetically,
+    TResult? Function(ParcelsSortActivityDate value)? activityDate,
+    TResult? Function(ParcelsSortDateAdded value)? dateAdded,
   }) {
     return dateAdded?.call(this);
   }
@@ -573,25 +567,27 @@ class _$ParcelsSortDateAdded implements ParcelsSortDateAdded {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ParcelsSortDateAddedToJson(this)..['runtimeType'] = 'dateAdded';
+    return _$$ParcelsSortDateAddedImplToJson(
+      this,
+    );
   }
 }
 
 abstract class ParcelsSortDateAdded implements ParcelsSort {
-  const factory ParcelsSortDateAdded({bool oldestFirst}) =
-      _$ParcelsSortDateAdded;
+  const factory ParcelsSortDateAdded({final bool oldestFirst}) =
+      _$ParcelsSortDateAddedImpl;
 
   factory ParcelsSortDateAdded.fromJson(Map<String, dynamic> json) =
-      _$ParcelsSortDateAdded.fromJson;
+      _$ParcelsSortDateAddedImpl.fromJson;
 
-  bool get oldestFirst => throw _privateConstructorUsedError;
+  bool get oldestFirst;
   @JsonKey(ignore: true)
-  $ParcelsSortDateAddedCopyWith<ParcelsSortDateAdded> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$ParcelsSortDateAddedImplCopyWith<_$ParcelsSortDateAddedImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 ParcelsFilter _$ParcelsFilterFromJson(Map<String, dynamic> json) {
-  switch (json['runtimeType'] as String?) {
+  switch (json['runtimeType']) {
     case 'search':
       return ParcelsFilterSearch.fromJson(json);
     case 'active':
@@ -614,52 +610,6 @@ ParcelsFilter _$ParcelsFilterFromJson(Map<String, dynamic> json) {
 }
 
 /// @nodoc
-class _$ParcelsFilterTearOff {
-  const _$ParcelsFilterTearOff();
-
-  ParcelsFilterSearch search({String? query}) {
-    return ParcelsFilterSearch(
-      query: query,
-    );
-  }
-
-  ParcelsFilterActive active() {
-    return const ParcelsFilterActive();
-  }
-
-  ParcelsFilterArchive archive() {
-    return const ParcelsFilterArchive();
-  }
-
-  ParcelsFilterStatus status({ShipmentStatusType? statusType}) {
-    return ParcelsFilterStatus(
-      statusType: statusType,
-    );
-  }
-
-  ParcelsFilterNewInfo newInfo() {
-    return const ParcelsFilterNewInfo();
-  }
-
-  ParcelsFilterError error() {
-    return const ParcelsFilterError();
-  }
-
-  ParcelsFilterPostalService postalService({PostalServiceType? serviceType}) {
-    return ParcelsFilterPostalService(
-      serviceType: serviceType,
-    );
-  }
-
-  ParcelsFilter fromJson(Map<String, Object> json) {
-    return ParcelsFilter.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ParcelsFilter = _$ParcelsFilterTearOff();
-
-/// @nodoc
 mixin _$ParcelsFilter {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
@@ -674,13 +624,13 @@ mixin _$ParcelsFilter {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(String? query)? search,
-    TResult Function()? active,
-    TResult Function()? archive,
-    TResult Function(ShipmentStatusType? statusType)? status,
-    TResult Function()? newInfo,
-    TResult Function()? error,
-    TResult Function(PostalServiceType? serviceType)? postalService,
+    TResult? Function(String? query)? search,
+    TResult? Function()? active,
+    TResult? Function()? archive,
+    TResult? Function(ShipmentStatusType? statusType)? status,
+    TResult? Function()? newInfo,
+    TResult? Function()? error,
+    TResult? Function(PostalServiceType? serviceType)? postalService,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -708,13 +658,13 @@ mixin _$ParcelsFilter {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(ParcelsFilterSearch value)? search,
-    TResult Function(ParcelsFilterActive value)? active,
-    TResult Function(ParcelsFilterArchive value)? archive,
-    TResult Function(ParcelsFilterStatus value)? status,
-    TResult Function(ParcelsFilterNewInfo value)? newInfo,
-    TResult Function(ParcelsFilterError value)? error,
-    TResult Function(ParcelsFilterPostalService value)? postalService,
+    TResult? Function(ParcelsFilterSearch value)? search,
+    TResult? Function(ParcelsFilterActive value)? active,
+    TResult? Function(ParcelsFilterArchive value)? archive,
+    TResult? Function(ParcelsFilterStatus value)? status,
+    TResult? Function(ParcelsFilterNewInfo value)? newInfo,
+    TResult? Function(ParcelsFilterError value)? error,
+    TResult? Function(ParcelsFilterPostalService value)? postalService,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -736,44 +686,44 @@ mixin _$ParcelsFilter {
 abstract class $ParcelsFilterCopyWith<$Res> {
   factory $ParcelsFilterCopyWith(
           ParcelsFilter value, $Res Function(ParcelsFilter) then) =
-      _$ParcelsFilterCopyWithImpl<$Res>;
+      _$ParcelsFilterCopyWithImpl<$Res, ParcelsFilter>;
 }
 
 /// @nodoc
-class _$ParcelsFilterCopyWithImpl<$Res>
+class _$ParcelsFilterCopyWithImpl<$Res, $Val extends ParcelsFilter>
     implements $ParcelsFilterCopyWith<$Res> {
   _$ParcelsFilterCopyWithImpl(this._value, this._then);
 
-  final ParcelsFilter _value;
   // ignore: unused_field
-  final $Res Function(ParcelsFilter) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 }
 
 /// @nodoc
-abstract class $ParcelsFilterSearchCopyWith<$Res> {
-  factory $ParcelsFilterSearchCopyWith(
-          ParcelsFilterSearch value, $Res Function(ParcelsFilterSearch) then) =
-      _$ParcelsFilterSearchCopyWithImpl<$Res>;
+abstract class _$$ParcelsFilterSearchImplCopyWith<$Res> {
+  factory _$$ParcelsFilterSearchImplCopyWith(_$ParcelsFilterSearchImpl value,
+          $Res Function(_$ParcelsFilterSearchImpl) then) =
+      __$$ParcelsFilterSearchImplCopyWithImpl<$Res>;
+  @useResult
   $Res call({String? query});
 }
 
 /// @nodoc
-class _$ParcelsFilterSearchCopyWithImpl<$Res>
-    extends _$ParcelsFilterCopyWithImpl<$Res>
-    implements $ParcelsFilterSearchCopyWith<$Res> {
-  _$ParcelsFilterSearchCopyWithImpl(
-      ParcelsFilterSearch _value, $Res Function(ParcelsFilterSearch) _then)
-      : super(_value, (v) => _then(v as ParcelsFilterSearch));
+class __$$ParcelsFilterSearchImplCopyWithImpl<$Res>
+    extends _$ParcelsFilterCopyWithImpl<$Res, _$ParcelsFilterSearchImpl>
+    implements _$$ParcelsFilterSearchImplCopyWith<$Res> {
+  __$$ParcelsFilterSearchImplCopyWithImpl(_$ParcelsFilterSearchImpl _value,
+      $Res Function(_$ParcelsFilterSearchImpl) _then)
+      : super(_value, _then);
 
-  @override
-  ParcelsFilterSearch get _value => super._value as ParcelsFilterSearch;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? query = freezed,
   }) {
-    return _then(ParcelsFilterSearch(
-      query: query == freezed
+    return _then(_$ParcelsFilterSearchImpl(
+      query: freezed == query
           ? _value.query
           : query // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -783,14 +733,18 @@ class _$ParcelsFilterSearchCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$ParcelsFilterSearch implements ParcelsFilterSearch {
-  const _$ParcelsFilterSearch({this.query});
+class _$ParcelsFilterSearchImpl implements ParcelsFilterSearch {
+  const _$ParcelsFilterSearchImpl({this.query, final String? $type})
+      : $type = $type ?? 'search';
 
-  factory _$ParcelsFilterSearch.fromJson(Map<String, dynamic> json) =>
-      _$$ParcelsFilterSearchFromJson(json);
+  factory _$ParcelsFilterSearchImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ParcelsFilterSearchImplFromJson(json);
 
   @override
   final String? query;
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
 
   @override
   String toString() {
@@ -798,21 +752,23 @@ class _$ParcelsFilterSearch implements ParcelsFilterSearch {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is ParcelsFilterSearch &&
-            (identical(other.query, query) ||
-                const DeepCollectionEquality().equals(other.query, query)));
+        (other.runtimeType == runtimeType &&
+            other is _$ParcelsFilterSearchImpl &&
+            (identical(other.query, query) || other.query == query));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(query);
 
   @JsonKey(ignore: true)
   @override
-  $ParcelsFilterSearchCopyWith<ParcelsFilterSearch> get copyWith =>
-      _$ParcelsFilterSearchCopyWithImpl<ParcelsFilterSearch>(this, _$identity);
+  int get hashCode => Object.hash(runtimeType, query);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ParcelsFilterSearchImplCopyWith<_$ParcelsFilterSearchImpl> get copyWith =>
+      __$$ParcelsFilterSearchImplCopyWithImpl<_$ParcelsFilterSearchImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -831,13 +787,13 @@ class _$ParcelsFilterSearch implements ParcelsFilterSearch {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(String? query)? search,
-    TResult Function()? active,
-    TResult Function()? archive,
-    TResult Function(ShipmentStatusType? statusType)? status,
-    TResult Function()? newInfo,
-    TResult Function()? error,
-    TResult Function(PostalServiceType? serviceType)? postalService,
+    TResult? Function(String? query)? search,
+    TResult? Function()? active,
+    TResult? Function()? archive,
+    TResult? Function(ShipmentStatusType? statusType)? status,
+    TResult? Function()? newInfo,
+    TResult? Function()? error,
+    TResult? Function(PostalServiceType? serviceType)? postalService,
   }) {
     return search?.call(query);
   }
@@ -877,13 +833,13 @@ class _$ParcelsFilterSearch implements ParcelsFilterSearch {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(ParcelsFilterSearch value)? search,
-    TResult Function(ParcelsFilterActive value)? active,
-    TResult Function(ParcelsFilterArchive value)? archive,
-    TResult Function(ParcelsFilterStatus value)? status,
-    TResult Function(ParcelsFilterNewInfo value)? newInfo,
-    TResult Function(ParcelsFilterError value)? error,
-    TResult Function(ParcelsFilterPostalService value)? postalService,
+    TResult? Function(ParcelsFilterSearch value)? search,
+    TResult? Function(ParcelsFilterActive value)? active,
+    TResult? Function(ParcelsFilterArchive value)? archive,
+    TResult? Function(ParcelsFilterStatus value)? status,
+    TResult? Function(ParcelsFilterNewInfo value)? newInfo,
+    TResult? Function(ParcelsFilterError value)? error,
+    TResult? Function(ParcelsFilterPostalService value)? postalService,
   }) {
     return search?.call(this);
   }
@@ -908,48 +864,52 @@ class _$ParcelsFilterSearch implements ParcelsFilterSearch {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ParcelsFilterSearchToJson(this)..['runtimeType'] = 'search';
+    return _$$ParcelsFilterSearchImplToJson(
+      this,
+    );
   }
 }
 
 abstract class ParcelsFilterSearch implements ParcelsFilter {
-  const factory ParcelsFilterSearch({String? query}) = _$ParcelsFilterSearch;
+  const factory ParcelsFilterSearch({final String? query}) =
+      _$ParcelsFilterSearchImpl;
 
   factory ParcelsFilterSearch.fromJson(Map<String, dynamic> json) =
-      _$ParcelsFilterSearch.fromJson;
+      _$ParcelsFilterSearchImpl.fromJson;
 
-  String? get query => throw _privateConstructorUsedError;
+  String? get query;
   @JsonKey(ignore: true)
-  $ParcelsFilterSearchCopyWith<ParcelsFilterSearch> get copyWith =>
+  _$$ParcelsFilterSearchImplCopyWith<_$ParcelsFilterSearchImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $ParcelsFilterActiveCopyWith<$Res> {
-  factory $ParcelsFilterActiveCopyWith(
-          ParcelsFilterActive value, $Res Function(ParcelsFilterActive) then) =
-      _$ParcelsFilterActiveCopyWithImpl<$Res>;
+abstract class _$$ParcelsFilterActiveImplCopyWith<$Res> {
+  factory _$$ParcelsFilterActiveImplCopyWith(_$ParcelsFilterActiveImpl value,
+          $Res Function(_$ParcelsFilterActiveImpl) then) =
+      __$$ParcelsFilterActiveImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$ParcelsFilterActiveCopyWithImpl<$Res>
-    extends _$ParcelsFilterCopyWithImpl<$Res>
-    implements $ParcelsFilterActiveCopyWith<$Res> {
-  _$ParcelsFilterActiveCopyWithImpl(
-      ParcelsFilterActive _value, $Res Function(ParcelsFilterActive) _then)
-      : super(_value, (v) => _then(v as ParcelsFilterActive));
-
-  @override
-  ParcelsFilterActive get _value => super._value as ParcelsFilterActive;
+class __$$ParcelsFilterActiveImplCopyWithImpl<$Res>
+    extends _$ParcelsFilterCopyWithImpl<$Res, _$ParcelsFilterActiveImpl>
+    implements _$$ParcelsFilterActiveImplCopyWith<$Res> {
+  __$$ParcelsFilterActiveImplCopyWithImpl(_$ParcelsFilterActiveImpl _value,
+      $Res Function(_$ParcelsFilterActiveImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$ParcelsFilterActive implements ParcelsFilterActive {
-  const _$ParcelsFilterActive();
+class _$ParcelsFilterActiveImpl implements ParcelsFilterActive {
+  const _$ParcelsFilterActiveImpl({final String? $type})
+      : $type = $type ?? 'active';
 
-  factory _$ParcelsFilterActive.fromJson(Map<String, dynamic> json) =>
-      _$$ParcelsFilterActiveFromJson(json);
+  factory _$ParcelsFilterActiveImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ParcelsFilterActiveImplFromJson(json);
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
 
   @override
   String toString() {
@@ -957,10 +917,13 @@ class _$ParcelsFilterActive implements ParcelsFilterActive {
   }
 
   @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) || (other is ParcelsFilterActive);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ParcelsFilterActiveImpl);
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -981,13 +944,13 @@ class _$ParcelsFilterActive implements ParcelsFilterActive {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(String? query)? search,
-    TResult Function()? active,
-    TResult Function()? archive,
-    TResult Function(ShipmentStatusType? statusType)? status,
-    TResult Function()? newInfo,
-    TResult Function()? error,
-    TResult Function(PostalServiceType? serviceType)? postalService,
+    TResult? Function(String? query)? search,
+    TResult? Function()? active,
+    TResult? Function()? archive,
+    TResult? Function(ShipmentStatusType? statusType)? status,
+    TResult? Function()? newInfo,
+    TResult? Function()? error,
+    TResult? Function(PostalServiceType? serviceType)? postalService,
   }) {
     return active?.call();
   }
@@ -1027,13 +990,13 @@ class _$ParcelsFilterActive implements ParcelsFilterActive {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(ParcelsFilterSearch value)? search,
-    TResult Function(ParcelsFilterActive value)? active,
-    TResult Function(ParcelsFilterArchive value)? archive,
-    TResult Function(ParcelsFilterStatus value)? status,
-    TResult Function(ParcelsFilterNewInfo value)? newInfo,
-    TResult Function(ParcelsFilterError value)? error,
-    TResult Function(ParcelsFilterPostalService value)? postalService,
+    TResult? Function(ParcelsFilterSearch value)? search,
+    TResult? Function(ParcelsFilterActive value)? active,
+    TResult? Function(ParcelsFilterArchive value)? archive,
+    TResult? Function(ParcelsFilterStatus value)? status,
+    TResult? Function(ParcelsFilterNewInfo value)? newInfo,
+    TResult? Function(ParcelsFilterError value)? error,
+    TResult? Function(ParcelsFilterPostalService value)? postalService,
   }) {
     return active?.call(this);
   }
@@ -1058,43 +1021,46 @@ class _$ParcelsFilterActive implements ParcelsFilterActive {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ParcelsFilterActiveToJson(this)..['runtimeType'] = 'active';
+    return _$$ParcelsFilterActiveImplToJson(
+      this,
+    );
   }
 }
 
 abstract class ParcelsFilterActive implements ParcelsFilter {
-  const factory ParcelsFilterActive() = _$ParcelsFilterActive;
+  const factory ParcelsFilterActive() = _$ParcelsFilterActiveImpl;
 
   factory ParcelsFilterActive.fromJson(Map<String, dynamic> json) =
-      _$ParcelsFilterActive.fromJson;
+      _$ParcelsFilterActiveImpl.fromJson;
 }
 
 /// @nodoc
-abstract class $ParcelsFilterArchiveCopyWith<$Res> {
-  factory $ParcelsFilterArchiveCopyWith(ParcelsFilterArchive value,
-          $Res Function(ParcelsFilterArchive) then) =
-      _$ParcelsFilterArchiveCopyWithImpl<$Res>;
+abstract class _$$ParcelsFilterArchiveImplCopyWith<$Res> {
+  factory _$$ParcelsFilterArchiveImplCopyWith(_$ParcelsFilterArchiveImpl value,
+          $Res Function(_$ParcelsFilterArchiveImpl) then) =
+      __$$ParcelsFilterArchiveImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$ParcelsFilterArchiveCopyWithImpl<$Res>
-    extends _$ParcelsFilterCopyWithImpl<$Res>
-    implements $ParcelsFilterArchiveCopyWith<$Res> {
-  _$ParcelsFilterArchiveCopyWithImpl(
-      ParcelsFilterArchive _value, $Res Function(ParcelsFilterArchive) _then)
-      : super(_value, (v) => _then(v as ParcelsFilterArchive));
-
-  @override
-  ParcelsFilterArchive get _value => super._value as ParcelsFilterArchive;
+class __$$ParcelsFilterArchiveImplCopyWithImpl<$Res>
+    extends _$ParcelsFilterCopyWithImpl<$Res, _$ParcelsFilterArchiveImpl>
+    implements _$$ParcelsFilterArchiveImplCopyWith<$Res> {
+  __$$ParcelsFilterArchiveImplCopyWithImpl(_$ParcelsFilterArchiveImpl _value,
+      $Res Function(_$ParcelsFilterArchiveImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$ParcelsFilterArchive implements ParcelsFilterArchive {
-  const _$ParcelsFilterArchive();
+class _$ParcelsFilterArchiveImpl implements ParcelsFilterArchive {
+  const _$ParcelsFilterArchiveImpl({final String? $type})
+      : $type = $type ?? 'archive';
 
-  factory _$ParcelsFilterArchive.fromJson(Map<String, dynamic> json) =>
-      _$$ParcelsFilterArchiveFromJson(json);
+  factory _$ParcelsFilterArchiveImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ParcelsFilterArchiveImplFromJson(json);
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
 
   @override
   String toString() {
@@ -1102,10 +1068,13 @@ class _$ParcelsFilterArchive implements ParcelsFilterArchive {
   }
 
   @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) || (other is ParcelsFilterArchive);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ParcelsFilterArchiveImpl);
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -1126,13 +1095,13 @@ class _$ParcelsFilterArchive implements ParcelsFilterArchive {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(String? query)? search,
-    TResult Function()? active,
-    TResult Function()? archive,
-    TResult Function(ShipmentStatusType? statusType)? status,
-    TResult Function()? newInfo,
-    TResult Function()? error,
-    TResult Function(PostalServiceType? serviceType)? postalService,
+    TResult? Function(String? query)? search,
+    TResult? Function()? active,
+    TResult? Function()? archive,
+    TResult? Function(ShipmentStatusType? statusType)? status,
+    TResult? Function()? newInfo,
+    TResult? Function()? error,
+    TResult? Function(PostalServiceType? serviceType)? postalService,
   }) {
     return archive?.call();
   }
@@ -1172,13 +1141,13 @@ class _$ParcelsFilterArchive implements ParcelsFilterArchive {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(ParcelsFilterSearch value)? search,
-    TResult Function(ParcelsFilterActive value)? active,
-    TResult Function(ParcelsFilterArchive value)? archive,
-    TResult Function(ParcelsFilterStatus value)? status,
-    TResult Function(ParcelsFilterNewInfo value)? newInfo,
-    TResult Function(ParcelsFilterError value)? error,
-    TResult Function(ParcelsFilterPostalService value)? postalService,
+    TResult? Function(ParcelsFilterSearch value)? search,
+    TResult? Function(ParcelsFilterActive value)? active,
+    TResult? Function(ParcelsFilterArchive value)? archive,
+    TResult? Function(ParcelsFilterStatus value)? status,
+    TResult? Function(ParcelsFilterNewInfo value)? newInfo,
+    TResult? Function(ParcelsFilterError value)? error,
+    TResult? Function(ParcelsFilterPostalService value)? postalService,
   }) {
     return archive?.call(this);
   }
@@ -1203,42 +1172,43 @@ class _$ParcelsFilterArchive implements ParcelsFilterArchive {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ParcelsFilterArchiveToJson(this)..['runtimeType'] = 'archive';
+    return _$$ParcelsFilterArchiveImplToJson(
+      this,
+    );
   }
 }
 
 abstract class ParcelsFilterArchive implements ParcelsFilter {
-  const factory ParcelsFilterArchive() = _$ParcelsFilterArchive;
+  const factory ParcelsFilterArchive() = _$ParcelsFilterArchiveImpl;
 
   factory ParcelsFilterArchive.fromJson(Map<String, dynamic> json) =
-      _$ParcelsFilterArchive.fromJson;
+      _$ParcelsFilterArchiveImpl.fromJson;
 }
 
 /// @nodoc
-abstract class $ParcelsFilterStatusCopyWith<$Res> {
-  factory $ParcelsFilterStatusCopyWith(
-          ParcelsFilterStatus value, $Res Function(ParcelsFilterStatus) then) =
-      _$ParcelsFilterStatusCopyWithImpl<$Res>;
+abstract class _$$ParcelsFilterStatusImplCopyWith<$Res> {
+  factory _$$ParcelsFilterStatusImplCopyWith(_$ParcelsFilterStatusImpl value,
+          $Res Function(_$ParcelsFilterStatusImpl) then) =
+      __$$ParcelsFilterStatusImplCopyWithImpl<$Res>;
+  @useResult
   $Res call({ShipmentStatusType? statusType});
 }
 
 /// @nodoc
-class _$ParcelsFilterStatusCopyWithImpl<$Res>
-    extends _$ParcelsFilterCopyWithImpl<$Res>
-    implements $ParcelsFilterStatusCopyWith<$Res> {
-  _$ParcelsFilterStatusCopyWithImpl(
-      ParcelsFilterStatus _value, $Res Function(ParcelsFilterStatus) _then)
-      : super(_value, (v) => _then(v as ParcelsFilterStatus));
+class __$$ParcelsFilterStatusImplCopyWithImpl<$Res>
+    extends _$ParcelsFilterCopyWithImpl<$Res, _$ParcelsFilterStatusImpl>
+    implements _$$ParcelsFilterStatusImplCopyWith<$Res> {
+  __$$ParcelsFilterStatusImplCopyWithImpl(_$ParcelsFilterStatusImpl _value,
+      $Res Function(_$ParcelsFilterStatusImpl) _then)
+      : super(_value, _then);
 
-  @override
-  ParcelsFilterStatus get _value => super._value as ParcelsFilterStatus;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? statusType = freezed,
   }) {
-    return _then(ParcelsFilterStatus(
-      statusType: statusType == freezed
+    return _then(_$ParcelsFilterStatusImpl(
+      statusType: freezed == statusType
           ? _value.statusType
           : statusType // ignore: cast_nullable_to_non_nullable
               as ShipmentStatusType?,
@@ -1248,14 +1218,18 @@ class _$ParcelsFilterStatusCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$ParcelsFilterStatus implements ParcelsFilterStatus {
-  const _$ParcelsFilterStatus({this.statusType});
+class _$ParcelsFilterStatusImpl implements ParcelsFilterStatus {
+  const _$ParcelsFilterStatusImpl({this.statusType, final String? $type})
+      : $type = $type ?? 'status';
 
-  factory _$ParcelsFilterStatus.fromJson(Map<String, dynamic> json) =>
-      _$$ParcelsFilterStatusFromJson(json);
+  factory _$ParcelsFilterStatusImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ParcelsFilterStatusImplFromJson(json);
 
   @override
   final ShipmentStatusType? statusType;
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
 
   @override
   String toString() {
@@ -1263,22 +1237,24 @@ class _$ParcelsFilterStatus implements ParcelsFilterStatus {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is ParcelsFilterStatus &&
+        (other.runtimeType == runtimeType &&
+            other is _$ParcelsFilterStatusImpl &&
             (identical(other.statusType, statusType) ||
-                const DeepCollectionEquality()
-                    .equals(other.statusType, statusType)));
+                other.statusType == statusType));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(statusType);
 
   @JsonKey(ignore: true)
   @override
-  $ParcelsFilterStatusCopyWith<ParcelsFilterStatus> get copyWith =>
-      _$ParcelsFilterStatusCopyWithImpl<ParcelsFilterStatus>(this, _$identity);
+  int get hashCode => Object.hash(runtimeType, statusType);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ParcelsFilterStatusImplCopyWith<_$ParcelsFilterStatusImpl> get copyWith =>
+      __$$ParcelsFilterStatusImplCopyWithImpl<_$ParcelsFilterStatusImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1297,13 +1273,13 @@ class _$ParcelsFilterStatus implements ParcelsFilterStatus {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(String? query)? search,
-    TResult Function()? active,
-    TResult Function()? archive,
-    TResult Function(ShipmentStatusType? statusType)? status,
-    TResult Function()? newInfo,
-    TResult Function()? error,
-    TResult Function(PostalServiceType? serviceType)? postalService,
+    TResult? Function(String? query)? search,
+    TResult? Function()? active,
+    TResult? Function()? archive,
+    TResult? Function(ShipmentStatusType? statusType)? status,
+    TResult? Function()? newInfo,
+    TResult? Function()? error,
+    TResult? Function(PostalServiceType? serviceType)? postalService,
   }) {
     return status?.call(statusType);
   }
@@ -1343,13 +1319,13 @@ class _$ParcelsFilterStatus implements ParcelsFilterStatus {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(ParcelsFilterSearch value)? search,
-    TResult Function(ParcelsFilterActive value)? active,
-    TResult Function(ParcelsFilterArchive value)? archive,
-    TResult Function(ParcelsFilterStatus value)? status,
-    TResult Function(ParcelsFilterNewInfo value)? newInfo,
-    TResult Function(ParcelsFilterError value)? error,
-    TResult Function(ParcelsFilterPostalService value)? postalService,
+    TResult? Function(ParcelsFilterSearch value)? search,
+    TResult? Function(ParcelsFilterActive value)? active,
+    TResult? Function(ParcelsFilterArchive value)? archive,
+    TResult? Function(ParcelsFilterStatus value)? status,
+    TResult? Function(ParcelsFilterNewInfo value)? newInfo,
+    TResult? Function(ParcelsFilterError value)? error,
+    TResult? Function(ParcelsFilterPostalService value)? postalService,
   }) {
     return status?.call(this);
   }
@@ -1374,49 +1350,52 @@ class _$ParcelsFilterStatus implements ParcelsFilterStatus {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ParcelsFilterStatusToJson(this)..['runtimeType'] = 'status';
+    return _$$ParcelsFilterStatusImplToJson(
+      this,
+    );
   }
 }
 
 abstract class ParcelsFilterStatus implements ParcelsFilter {
-  const factory ParcelsFilterStatus({ShipmentStatusType? statusType}) =
-      _$ParcelsFilterStatus;
+  const factory ParcelsFilterStatus({final ShipmentStatusType? statusType}) =
+      _$ParcelsFilterStatusImpl;
 
   factory ParcelsFilterStatus.fromJson(Map<String, dynamic> json) =
-      _$ParcelsFilterStatus.fromJson;
+      _$ParcelsFilterStatusImpl.fromJson;
 
-  ShipmentStatusType? get statusType => throw _privateConstructorUsedError;
+  ShipmentStatusType? get statusType;
   @JsonKey(ignore: true)
-  $ParcelsFilterStatusCopyWith<ParcelsFilterStatus> get copyWith =>
+  _$$ParcelsFilterStatusImplCopyWith<_$ParcelsFilterStatusImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $ParcelsFilterNewInfoCopyWith<$Res> {
-  factory $ParcelsFilterNewInfoCopyWith(ParcelsFilterNewInfo value,
-          $Res Function(ParcelsFilterNewInfo) then) =
-      _$ParcelsFilterNewInfoCopyWithImpl<$Res>;
+abstract class _$$ParcelsFilterNewInfoImplCopyWith<$Res> {
+  factory _$$ParcelsFilterNewInfoImplCopyWith(_$ParcelsFilterNewInfoImpl value,
+          $Res Function(_$ParcelsFilterNewInfoImpl) then) =
+      __$$ParcelsFilterNewInfoImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$ParcelsFilterNewInfoCopyWithImpl<$Res>
-    extends _$ParcelsFilterCopyWithImpl<$Res>
-    implements $ParcelsFilterNewInfoCopyWith<$Res> {
-  _$ParcelsFilterNewInfoCopyWithImpl(
-      ParcelsFilterNewInfo _value, $Res Function(ParcelsFilterNewInfo) _then)
-      : super(_value, (v) => _then(v as ParcelsFilterNewInfo));
-
-  @override
-  ParcelsFilterNewInfo get _value => super._value as ParcelsFilterNewInfo;
+class __$$ParcelsFilterNewInfoImplCopyWithImpl<$Res>
+    extends _$ParcelsFilterCopyWithImpl<$Res, _$ParcelsFilterNewInfoImpl>
+    implements _$$ParcelsFilterNewInfoImplCopyWith<$Res> {
+  __$$ParcelsFilterNewInfoImplCopyWithImpl(_$ParcelsFilterNewInfoImpl _value,
+      $Res Function(_$ParcelsFilterNewInfoImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$ParcelsFilterNewInfo implements ParcelsFilterNewInfo {
-  const _$ParcelsFilterNewInfo();
+class _$ParcelsFilterNewInfoImpl implements ParcelsFilterNewInfo {
+  const _$ParcelsFilterNewInfoImpl({final String? $type})
+      : $type = $type ?? 'newInfo';
 
-  factory _$ParcelsFilterNewInfo.fromJson(Map<String, dynamic> json) =>
-      _$$ParcelsFilterNewInfoFromJson(json);
+  factory _$ParcelsFilterNewInfoImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ParcelsFilterNewInfoImplFromJson(json);
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
 
   @override
   String toString() {
@@ -1424,10 +1403,13 @@ class _$ParcelsFilterNewInfo implements ParcelsFilterNewInfo {
   }
 
   @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) || (other is ParcelsFilterNewInfo);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ParcelsFilterNewInfoImpl);
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -1448,13 +1430,13 @@ class _$ParcelsFilterNewInfo implements ParcelsFilterNewInfo {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(String? query)? search,
-    TResult Function()? active,
-    TResult Function()? archive,
-    TResult Function(ShipmentStatusType? statusType)? status,
-    TResult Function()? newInfo,
-    TResult Function()? error,
-    TResult Function(PostalServiceType? serviceType)? postalService,
+    TResult? Function(String? query)? search,
+    TResult? Function()? active,
+    TResult? Function()? archive,
+    TResult? Function(ShipmentStatusType? statusType)? status,
+    TResult? Function()? newInfo,
+    TResult? Function()? error,
+    TResult? Function(PostalServiceType? serviceType)? postalService,
   }) {
     return newInfo?.call();
   }
@@ -1494,13 +1476,13 @@ class _$ParcelsFilterNewInfo implements ParcelsFilterNewInfo {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(ParcelsFilterSearch value)? search,
-    TResult Function(ParcelsFilterActive value)? active,
-    TResult Function(ParcelsFilterArchive value)? archive,
-    TResult Function(ParcelsFilterStatus value)? status,
-    TResult Function(ParcelsFilterNewInfo value)? newInfo,
-    TResult Function(ParcelsFilterError value)? error,
-    TResult Function(ParcelsFilterPostalService value)? postalService,
+    TResult? Function(ParcelsFilterSearch value)? search,
+    TResult? Function(ParcelsFilterActive value)? active,
+    TResult? Function(ParcelsFilterArchive value)? archive,
+    TResult? Function(ParcelsFilterStatus value)? status,
+    TResult? Function(ParcelsFilterNewInfo value)? newInfo,
+    TResult? Function(ParcelsFilterError value)? error,
+    TResult? Function(ParcelsFilterPostalService value)? postalService,
   }) {
     return newInfo?.call(this);
   }
@@ -1525,43 +1507,46 @@ class _$ParcelsFilterNewInfo implements ParcelsFilterNewInfo {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ParcelsFilterNewInfoToJson(this)..['runtimeType'] = 'newInfo';
+    return _$$ParcelsFilterNewInfoImplToJson(
+      this,
+    );
   }
 }
 
 abstract class ParcelsFilterNewInfo implements ParcelsFilter {
-  const factory ParcelsFilterNewInfo() = _$ParcelsFilterNewInfo;
+  const factory ParcelsFilterNewInfo() = _$ParcelsFilterNewInfoImpl;
 
   factory ParcelsFilterNewInfo.fromJson(Map<String, dynamic> json) =
-      _$ParcelsFilterNewInfo.fromJson;
+      _$ParcelsFilterNewInfoImpl.fromJson;
 }
 
 /// @nodoc
-abstract class $ParcelsFilterErrorCopyWith<$Res> {
-  factory $ParcelsFilterErrorCopyWith(
-          ParcelsFilterError value, $Res Function(ParcelsFilterError) then) =
-      _$ParcelsFilterErrorCopyWithImpl<$Res>;
+abstract class _$$ParcelsFilterErrorImplCopyWith<$Res> {
+  factory _$$ParcelsFilterErrorImplCopyWith(_$ParcelsFilterErrorImpl value,
+          $Res Function(_$ParcelsFilterErrorImpl) then) =
+      __$$ParcelsFilterErrorImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$ParcelsFilterErrorCopyWithImpl<$Res>
-    extends _$ParcelsFilterCopyWithImpl<$Res>
-    implements $ParcelsFilterErrorCopyWith<$Res> {
-  _$ParcelsFilterErrorCopyWithImpl(
-      ParcelsFilterError _value, $Res Function(ParcelsFilterError) _then)
-      : super(_value, (v) => _then(v as ParcelsFilterError));
-
-  @override
-  ParcelsFilterError get _value => super._value as ParcelsFilterError;
+class __$$ParcelsFilterErrorImplCopyWithImpl<$Res>
+    extends _$ParcelsFilterCopyWithImpl<$Res, _$ParcelsFilterErrorImpl>
+    implements _$$ParcelsFilterErrorImplCopyWith<$Res> {
+  __$$ParcelsFilterErrorImplCopyWithImpl(_$ParcelsFilterErrorImpl _value,
+      $Res Function(_$ParcelsFilterErrorImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$ParcelsFilterError implements ParcelsFilterError {
-  const _$ParcelsFilterError();
+class _$ParcelsFilterErrorImpl implements ParcelsFilterError {
+  const _$ParcelsFilterErrorImpl({final String? $type})
+      : $type = $type ?? 'error';
 
-  factory _$ParcelsFilterError.fromJson(Map<String, dynamic> json) =>
-      _$$ParcelsFilterErrorFromJson(json);
+  factory _$ParcelsFilterErrorImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ParcelsFilterErrorImplFromJson(json);
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
 
   @override
   String toString() {
@@ -1569,10 +1554,12 @@ class _$ParcelsFilterError implements ParcelsFilterError {
   }
 
   @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) || (other is ParcelsFilterError);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$ParcelsFilterErrorImpl);
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -1593,13 +1580,13 @@ class _$ParcelsFilterError implements ParcelsFilterError {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(String? query)? search,
-    TResult Function()? active,
-    TResult Function()? archive,
-    TResult Function(ShipmentStatusType? statusType)? status,
-    TResult Function()? newInfo,
-    TResult Function()? error,
-    TResult Function(PostalServiceType? serviceType)? postalService,
+    TResult? Function(String? query)? search,
+    TResult? Function()? active,
+    TResult? Function()? archive,
+    TResult? Function(ShipmentStatusType? statusType)? status,
+    TResult? Function()? newInfo,
+    TResult? Function()? error,
+    TResult? Function(PostalServiceType? serviceType)? postalService,
   }) {
     return error?.call();
   }
@@ -1639,13 +1626,13 @@ class _$ParcelsFilterError implements ParcelsFilterError {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(ParcelsFilterSearch value)? search,
-    TResult Function(ParcelsFilterActive value)? active,
-    TResult Function(ParcelsFilterArchive value)? archive,
-    TResult Function(ParcelsFilterStatus value)? status,
-    TResult Function(ParcelsFilterNewInfo value)? newInfo,
-    TResult Function(ParcelsFilterError value)? error,
-    TResult Function(ParcelsFilterPostalService value)? postalService,
+    TResult? Function(ParcelsFilterSearch value)? search,
+    TResult? Function(ParcelsFilterActive value)? active,
+    TResult? Function(ParcelsFilterArchive value)? archive,
+    TResult? Function(ParcelsFilterStatus value)? status,
+    TResult? Function(ParcelsFilterNewInfo value)? newInfo,
+    TResult? Function(ParcelsFilterError value)? error,
+    TResult? Function(ParcelsFilterPostalService value)? postalService,
   }) {
     return error?.call(this);
   }
@@ -1670,43 +1657,45 @@ class _$ParcelsFilterError implements ParcelsFilterError {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ParcelsFilterErrorToJson(this)..['runtimeType'] = 'error';
+    return _$$ParcelsFilterErrorImplToJson(
+      this,
+    );
   }
 }
 
 abstract class ParcelsFilterError implements ParcelsFilter {
-  const factory ParcelsFilterError() = _$ParcelsFilterError;
+  const factory ParcelsFilterError() = _$ParcelsFilterErrorImpl;
 
   factory ParcelsFilterError.fromJson(Map<String, dynamic> json) =
-      _$ParcelsFilterError.fromJson;
+      _$ParcelsFilterErrorImpl.fromJson;
 }
 
 /// @nodoc
-abstract class $ParcelsFilterPostalServiceCopyWith<$Res> {
-  factory $ParcelsFilterPostalServiceCopyWith(ParcelsFilterPostalService value,
-          $Res Function(ParcelsFilterPostalService) then) =
-      _$ParcelsFilterPostalServiceCopyWithImpl<$Res>;
+abstract class _$$ParcelsFilterPostalServiceImplCopyWith<$Res> {
+  factory _$$ParcelsFilterPostalServiceImplCopyWith(
+          _$ParcelsFilterPostalServiceImpl value,
+          $Res Function(_$ParcelsFilterPostalServiceImpl) then) =
+      __$$ParcelsFilterPostalServiceImplCopyWithImpl<$Res>;
+  @useResult
   $Res call({PostalServiceType? serviceType});
 }
 
 /// @nodoc
-class _$ParcelsFilterPostalServiceCopyWithImpl<$Res>
-    extends _$ParcelsFilterCopyWithImpl<$Res>
-    implements $ParcelsFilterPostalServiceCopyWith<$Res> {
-  _$ParcelsFilterPostalServiceCopyWithImpl(ParcelsFilterPostalService _value,
-      $Res Function(ParcelsFilterPostalService) _then)
-      : super(_value, (v) => _then(v as ParcelsFilterPostalService));
+class __$$ParcelsFilterPostalServiceImplCopyWithImpl<$Res>
+    extends _$ParcelsFilterCopyWithImpl<$Res, _$ParcelsFilterPostalServiceImpl>
+    implements _$$ParcelsFilterPostalServiceImplCopyWith<$Res> {
+  __$$ParcelsFilterPostalServiceImplCopyWithImpl(
+      _$ParcelsFilterPostalServiceImpl _value,
+      $Res Function(_$ParcelsFilterPostalServiceImpl) _then)
+      : super(_value, _then);
 
-  @override
-  ParcelsFilterPostalService get _value =>
-      super._value as ParcelsFilterPostalService;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? serviceType = freezed,
   }) {
-    return _then(ParcelsFilterPostalService(
-      serviceType: serviceType == freezed
+    return _then(_$ParcelsFilterPostalServiceImpl(
+      serviceType: freezed == serviceType
           ? _value.serviceType
           : serviceType // ignore: cast_nullable_to_non_nullable
               as PostalServiceType?,
@@ -1716,14 +1705,20 @@ class _$ParcelsFilterPostalServiceCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$ParcelsFilterPostalService implements ParcelsFilterPostalService {
-  const _$ParcelsFilterPostalService({this.serviceType});
+class _$ParcelsFilterPostalServiceImpl implements ParcelsFilterPostalService {
+  const _$ParcelsFilterPostalServiceImpl(
+      {this.serviceType, final String? $type})
+      : $type = $type ?? 'postalService';
 
-  factory _$ParcelsFilterPostalService.fromJson(Map<String, dynamic> json) =>
-      _$$ParcelsFilterPostalServiceFromJson(json);
+  factory _$ParcelsFilterPostalServiceImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$ParcelsFilterPostalServiceImplFromJson(json);
 
   @override
   final PostalServiceType? serviceType;
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
 
   @override
   String toString() {
@@ -1731,24 +1726,24 @@ class _$ParcelsFilterPostalService implements ParcelsFilterPostalService {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is ParcelsFilterPostalService &&
+        (other.runtimeType == runtimeType &&
+            other is _$ParcelsFilterPostalServiceImpl &&
             (identical(other.serviceType, serviceType) ||
-                const DeepCollectionEquality()
-                    .equals(other.serviceType, serviceType)));
+                other.serviceType == serviceType));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(serviceType);
 
   @JsonKey(ignore: true)
   @override
-  $ParcelsFilterPostalServiceCopyWith<ParcelsFilterPostalService>
-      get copyWith =>
-          _$ParcelsFilterPostalServiceCopyWithImpl<ParcelsFilterPostalService>(
-              this, _$identity);
+  int get hashCode => Object.hash(runtimeType, serviceType);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ParcelsFilterPostalServiceImplCopyWith<_$ParcelsFilterPostalServiceImpl>
+      get copyWith => __$$ParcelsFilterPostalServiceImplCopyWithImpl<
+          _$ParcelsFilterPostalServiceImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1767,13 +1762,13 @@ class _$ParcelsFilterPostalService implements ParcelsFilterPostalService {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(String? query)? search,
-    TResult Function()? active,
-    TResult Function()? archive,
-    TResult Function(ShipmentStatusType? statusType)? status,
-    TResult Function()? newInfo,
-    TResult Function()? error,
-    TResult Function(PostalServiceType? serviceType)? postalService,
+    TResult? Function(String? query)? search,
+    TResult? Function()? active,
+    TResult? Function()? archive,
+    TResult? Function(ShipmentStatusType? statusType)? status,
+    TResult? Function()? newInfo,
+    TResult? Function()? error,
+    TResult? Function(PostalServiceType? serviceType)? postalService,
   }) {
     return postalService?.call(serviceType);
   }
@@ -1813,13 +1808,13 @@ class _$ParcelsFilterPostalService implements ParcelsFilterPostalService {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(ParcelsFilterSearch value)? search,
-    TResult Function(ParcelsFilterActive value)? active,
-    TResult Function(ParcelsFilterArchive value)? archive,
-    TResult Function(ParcelsFilterStatus value)? status,
-    TResult Function(ParcelsFilterNewInfo value)? newInfo,
-    TResult Function(ParcelsFilterError value)? error,
-    TResult Function(ParcelsFilterPostalService value)? postalService,
+    TResult? Function(ParcelsFilterSearch value)? search,
+    TResult? Function(ParcelsFilterActive value)? active,
+    TResult? Function(ParcelsFilterArchive value)? archive,
+    TResult? Function(ParcelsFilterStatus value)? status,
+    TResult? Function(ParcelsFilterNewInfo value)? newInfo,
+    TResult? Function(ParcelsFilterError value)? error,
+    TResult? Function(ParcelsFilterPostalService value)? postalService,
   }) {
     return postalService?.call(this);
   }
@@ -1844,26 +1839,28 @@ class _$ParcelsFilterPostalService implements ParcelsFilterPostalService {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ParcelsFilterPostalServiceToJson(this)
-      ..['runtimeType'] = 'postalService';
+    return _$$ParcelsFilterPostalServiceImplToJson(
+      this,
+    );
   }
 }
 
 abstract class ParcelsFilterPostalService implements ParcelsFilter {
-  const factory ParcelsFilterPostalService({PostalServiceType? serviceType}) =
-      _$ParcelsFilterPostalService;
+  const factory ParcelsFilterPostalService(
+          {final PostalServiceType? serviceType}) =
+      _$ParcelsFilterPostalServiceImpl;
 
   factory ParcelsFilterPostalService.fromJson(Map<String, dynamic> json) =
-      _$ParcelsFilterPostalService.fromJson;
+      _$ParcelsFilterPostalServiceImpl.fromJson;
 
-  PostalServiceType? get serviceType => throw _privateConstructorUsedError;
+  PostalServiceType? get serviceType;
   @JsonKey(ignore: true)
-  $ParcelsFilterPostalServiceCopyWith<ParcelsFilterPostalService>
+  _$$ParcelsFilterPostalServiceImplCopyWith<_$ParcelsFilterPostalServiceImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 AppThemeType _$AppThemeTypeFromJson(Map<String, dynamic> json) {
-  switch (json['runtimeType'] as String?) {
+  switch (json['runtimeType']) {
     case 'light':
       return AppThemeTypeLight.fromJson(json);
     case 'dark':
@@ -1878,30 +1875,6 @@ AppThemeType _$AppThemeTypeFromJson(Map<String, dynamic> json) {
 }
 
 /// @nodoc
-class _$AppThemeTypeTearOff {
-  const _$AppThemeTypeTearOff();
-
-  AppThemeTypeLight light() {
-    return const AppThemeTypeLight();
-  }
-
-  AppThemeTypeDark dark() {
-    return const AppThemeTypeDark();
-  }
-
-  AppThemeTypeSystem system() {
-    return const AppThemeTypeSystem();
-  }
-
-  AppThemeType fromJson(Map<String, Object> json) {
-    return AppThemeType.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $AppThemeType = _$AppThemeTypeTearOff();
-
-/// @nodoc
 mixin _$AppThemeType {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
@@ -1912,9 +1885,9 @@ mixin _$AppThemeType {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? light,
-    TResult Function()? dark,
-    TResult Function()? system,
+    TResult? Function()? light,
+    TResult? Function()? dark,
+    TResult? Function()? system,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -1934,9 +1907,9 @@ mixin _$AppThemeType {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(AppThemeTypeLight value)? light,
-    TResult Function(AppThemeTypeDark value)? dark,
-    TResult Function(AppThemeTypeSystem value)? system,
+    TResult? Function(AppThemeTypeLight value)? light,
+    TResult? Function(AppThemeTypeDark value)? dark,
+    TResult? Function(AppThemeTypeSystem value)? system,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -1954,44 +1927,47 @@ mixin _$AppThemeType {
 abstract class $AppThemeTypeCopyWith<$Res> {
   factory $AppThemeTypeCopyWith(
           AppThemeType value, $Res Function(AppThemeType) then) =
-      _$AppThemeTypeCopyWithImpl<$Res>;
+      _$AppThemeTypeCopyWithImpl<$Res, AppThemeType>;
 }
 
 /// @nodoc
-class _$AppThemeTypeCopyWithImpl<$Res> implements $AppThemeTypeCopyWith<$Res> {
+class _$AppThemeTypeCopyWithImpl<$Res, $Val extends AppThemeType>
+    implements $AppThemeTypeCopyWith<$Res> {
   _$AppThemeTypeCopyWithImpl(this._value, this._then);
 
-  final AppThemeType _value;
   // ignore: unused_field
-  final $Res Function(AppThemeType) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 }
 
 /// @nodoc
-abstract class $AppThemeTypeLightCopyWith<$Res> {
-  factory $AppThemeTypeLightCopyWith(
-          AppThemeTypeLight value, $Res Function(AppThemeTypeLight) then) =
-      _$AppThemeTypeLightCopyWithImpl<$Res>;
+abstract class _$$AppThemeTypeLightImplCopyWith<$Res> {
+  factory _$$AppThemeTypeLightImplCopyWith(_$AppThemeTypeLightImpl value,
+          $Res Function(_$AppThemeTypeLightImpl) then) =
+      __$$AppThemeTypeLightImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$AppThemeTypeLightCopyWithImpl<$Res>
-    extends _$AppThemeTypeCopyWithImpl<$Res>
-    implements $AppThemeTypeLightCopyWith<$Res> {
-  _$AppThemeTypeLightCopyWithImpl(
-      AppThemeTypeLight _value, $Res Function(AppThemeTypeLight) _then)
-      : super(_value, (v) => _then(v as AppThemeTypeLight));
-
-  @override
-  AppThemeTypeLight get _value => super._value as AppThemeTypeLight;
+class __$$AppThemeTypeLightImplCopyWithImpl<$Res>
+    extends _$AppThemeTypeCopyWithImpl<$Res, _$AppThemeTypeLightImpl>
+    implements _$$AppThemeTypeLightImplCopyWith<$Res> {
+  __$$AppThemeTypeLightImplCopyWithImpl(_$AppThemeTypeLightImpl _value,
+      $Res Function(_$AppThemeTypeLightImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$AppThemeTypeLight implements AppThemeTypeLight {
-  const _$AppThemeTypeLight();
+class _$AppThemeTypeLightImpl implements AppThemeTypeLight {
+  const _$AppThemeTypeLightImpl({final String? $type})
+      : $type = $type ?? 'light';
 
-  factory _$AppThemeTypeLight.fromJson(Map<String, dynamic> json) =>
-      _$$AppThemeTypeLightFromJson(json);
+  factory _$AppThemeTypeLightImpl.fromJson(Map<String, dynamic> json) =>
+      _$$AppThemeTypeLightImplFromJson(json);
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
 
   @override
   String toString() {
@@ -1999,10 +1975,12 @@ class _$AppThemeTypeLight implements AppThemeTypeLight {
   }
 
   @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) || (other is AppThemeTypeLight);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$AppThemeTypeLightImpl);
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -2019,9 +1997,9 @@ class _$AppThemeTypeLight implements AppThemeTypeLight {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? light,
-    TResult Function()? dark,
-    TResult Function()? system,
+    TResult? Function()? light,
+    TResult? Function()? dark,
+    TResult? Function()? system,
   }) {
     return light?.call();
   }
@@ -2053,9 +2031,9 @@ class _$AppThemeTypeLight implements AppThemeTypeLight {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(AppThemeTypeLight value)? light,
-    TResult Function(AppThemeTypeDark value)? dark,
-    TResult Function(AppThemeTypeSystem value)? system,
+    TResult? Function(AppThemeTypeLight value)? light,
+    TResult? Function(AppThemeTypeDark value)? dark,
+    TResult? Function(AppThemeTypeSystem value)? system,
   }) {
     return light?.call(this);
   }
@@ -2076,43 +2054,45 @@ class _$AppThemeTypeLight implements AppThemeTypeLight {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$AppThemeTypeLightToJson(this)..['runtimeType'] = 'light';
+    return _$$AppThemeTypeLightImplToJson(
+      this,
+    );
   }
 }
 
 abstract class AppThemeTypeLight implements AppThemeType {
-  const factory AppThemeTypeLight() = _$AppThemeTypeLight;
+  const factory AppThemeTypeLight() = _$AppThemeTypeLightImpl;
 
   factory AppThemeTypeLight.fromJson(Map<String, dynamic> json) =
-      _$AppThemeTypeLight.fromJson;
+      _$AppThemeTypeLightImpl.fromJson;
 }
 
 /// @nodoc
-abstract class $AppThemeTypeDarkCopyWith<$Res> {
-  factory $AppThemeTypeDarkCopyWith(
-          AppThemeTypeDark value, $Res Function(AppThemeTypeDark) then) =
-      _$AppThemeTypeDarkCopyWithImpl<$Res>;
+abstract class _$$AppThemeTypeDarkImplCopyWith<$Res> {
+  factory _$$AppThemeTypeDarkImplCopyWith(_$AppThemeTypeDarkImpl value,
+          $Res Function(_$AppThemeTypeDarkImpl) then) =
+      __$$AppThemeTypeDarkImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$AppThemeTypeDarkCopyWithImpl<$Res>
-    extends _$AppThemeTypeCopyWithImpl<$Res>
-    implements $AppThemeTypeDarkCopyWith<$Res> {
-  _$AppThemeTypeDarkCopyWithImpl(
-      AppThemeTypeDark _value, $Res Function(AppThemeTypeDark) _then)
-      : super(_value, (v) => _then(v as AppThemeTypeDark));
-
-  @override
-  AppThemeTypeDark get _value => super._value as AppThemeTypeDark;
+class __$$AppThemeTypeDarkImplCopyWithImpl<$Res>
+    extends _$AppThemeTypeCopyWithImpl<$Res, _$AppThemeTypeDarkImpl>
+    implements _$$AppThemeTypeDarkImplCopyWith<$Res> {
+  __$$AppThemeTypeDarkImplCopyWithImpl(_$AppThemeTypeDarkImpl _value,
+      $Res Function(_$AppThemeTypeDarkImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$AppThemeTypeDark implements AppThemeTypeDark {
-  const _$AppThemeTypeDark();
+class _$AppThemeTypeDarkImpl implements AppThemeTypeDark {
+  const _$AppThemeTypeDarkImpl({final String? $type}) : $type = $type ?? 'dark';
 
-  factory _$AppThemeTypeDark.fromJson(Map<String, dynamic> json) =>
-      _$$AppThemeTypeDarkFromJson(json);
+  factory _$AppThemeTypeDarkImpl.fromJson(Map<String, dynamic> json) =>
+      _$$AppThemeTypeDarkImplFromJson(json);
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
 
   @override
   String toString() {
@@ -2120,10 +2100,12 @@ class _$AppThemeTypeDark implements AppThemeTypeDark {
   }
 
   @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) || (other is AppThemeTypeDark);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$AppThemeTypeDarkImpl);
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -2140,9 +2122,9 @@ class _$AppThemeTypeDark implements AppThemeTypeDark {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? light,
-    TResult Function()? dark,
-    TResult Function()? system,
+    TResult? Function()? light,
+    TResult? Function()? dark,
+    TResult? Function()? system,
   }) {
     return dark?.call();
   }
@@ -2174,9 +2156,9 @@ class _$AppThemeTypeDark implements AppThemeTypeDark {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(AppThemeTypeLight value)? light,
-    TResult Function(AppThemeTypeDark value)? dark,
-    TResult Function(AppThemeTypeSystem value)? system,
+    TResult? Function(AppThemeTypeLight value)? light,
+    TResult? Function(AppThemeTypeDark value)? dark,
+    TResult? Function(AppThemeTypeSystem value)? system,
   }) {
     return dark?.call(this);
   }
@@ -2197,43 +2179,46 @@ class _$AppThemeTypeDark implements AppThemeTypeDark {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$AppThemeTypeDarkToJson(this)..['runtimeType'] = 'dark';
+    return _$$AppThemeTypeDarkImplToJson(
+      this,
+    );
   }
 }
 
 abstract class AppThemeTypeDark implements AppThemeType {
-  const factory AppThemeTypeDark() = _$AppThemeTypeDark;
+  const factory AppThemeTypeDark() = _$AppThemeTypeDarkImpl;
 
   factory AppThemeTypeDark.fromJson(Map<String, dynamic> json) =
-      _$AppThemeTypeDark.fromJson;
+      _$AppThemeTypeDarkImpl.fromJson;
 }
 
 /// @nodoc
-abstract class $AppThemeTypeSystemCopyWith<$Res> {
-  factory $AppThemeTypeSystemCopyWith(
-          AppThemeTypeSystem value, $Res Function(AppThemeTypeSystem) then) =
-      _$AppThemeTypeSystemCopyWithImpl<$Res>;
+abstract class _$$AppThemeTypeSystemImplCopyWith<$Res> {
+  factory _$$AppThemeTypeSystemImplCopyWith(_$AppThemeTypeSystemImpl value,
+          $Res Function(_$AppThemeTypeSystemImpl) then) =
+      __$$AppThemeTypeSystemImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$AppThemeTypeSystemCopyWithImpl<$Res>
-    extends _$AppThemeTypeCopyWithImpl<$Res>
-    implements $AppThemeTypeSystemCopyWith<$Res> {
-  _$AppThemeTypeSystemCopyWithImpl(
-      AppThemeTypeSystem _value, $Res Function(AppThemeTypeSystem) _then)
-      : super(_value, (v) => _then(v as AppThemeTypeSystem));
-
-  @override
-  AppThemeTypeSystem get _value => super._value as AppThemeTypeSystem;
+class __$$AppThemeTypeSystemImplCopyWithImpl<$Res>
+    extends _$AppThemeTypeCopyWithImpl<$Res, _$AppThemeTypeSystemImpl>
+    implements _$$AppThemeTypeSystemImplCopyWith<$Res> {
+  __$$AppThemeTypeSystemImplCopyWithImpl(_$AppThemeTypeSystemImpl _value,
+      $Res Function(_$AppThemeTypeSystemImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$AppThemeTypeSystem implements AppThemeTypeSystem {
-  const _$AppThemeTypeSystem();
+class _$AppThemeTypeSystemImpl implements AppThemeTypeSystem {
+  const _$AppThemeTypeSystemImpl({final String? $type})
+      : $type = $type ?? 'system';
 
-  factory _$AppThemeTypeSystem.fromJson(Map<String, dynamic> json) =>
-      _$$AppThemeTypeSystemFromJson(json);
+  factory _$AppThemeTypeSystemImpl.fromJson(Map<String, dynamic> json) =>
+      _$$AppThemeTypeSystemImplFromJson(json);
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
 
   @override
   String toString() {
@@ -2241,10 +2226,12 @@ class _$AppThemeTypeSystem implements AppThemeTypeSystem {
   }
 
   @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) || (other is AppThemeTypeSystem);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$AppThemeTypeSystemImpl);
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -2261,9 +2248,9 @@ class _$AppThemeTypeSystem implements AppThemeTypeSystem {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? light,
-    TResult Function()? dark,
-    TResult Function()? system,
+    TResult? Function()? light,
+    TResult? Function()? dark,
+    TResult? Function()? system,
   }) {
     return system?.call();
   }
@@ -2295,9 +2282,9 @@ class _$AppThemeTypeSystem implements AppThemeTypeSystem {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(AppThemeTypeLight value)? light,
-    TResult Function(AppThemeTypeDark value)? dark,
-    TResult Function(AppThemeTypeSystem value)? system,
+    TResult? Function(AppThemeTypeLight value)? light,
+    TResult? Function(AppThemeTypeDark value)? dark,
+    TResult? Function(AppThemeTypeSystem value)? system,
   }) {
     return system?.call(this);
   }
@@ -2318,19 +2305,21 @@ class _$AppThemeTypeSystem implements AppThemeTypeSystem {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$AppThemeTypeSystemToJson(this)..['runtimeType'] = 'system';
+    return _$$AppThemeTypeSystemImplToJson(
+      this,
+    );
   }
 }
 
 abstract class AppThemeTypeSystem implements AppThemeType {
-  const factory AppThemeTypeSystem() = _$AppThemeTypeSystem;
+  const factory AppThemeTypeSystem() = _$AppThemeTypeSystemImpl;
 
   factory AppThemeTypeSystem.fromJson(Map<String, dynamic> json) =
-      _$AppThemeTypeSystem.fromJson;
+      _$AppThemeTypeSystemImpl.fromJson;
 }
 
 AppLocaleType _$AppLocaleTypeFromJson(Map<String, dynamic> json) {
-  switch (json['runtimeType'] as String?) {
+  switch (json['runtimeType']) {
     case 'system':
       return AppLocaleTypeSystem.fromJson(json);
     case 'inner':
@@ -2343,28 +2332,6 @@ AppLocaleType _$AppLocaleTypeFromJson(Map<String, dynamic> json) {
 }
 
 /// @nodoc
-class _$AppLocaleTypeTearOff {
-  const _$AppLocaleTypeTearOff();
-
-  AppLocaleTypeSystem system() {
-    return const AppLocaleTypeSystem();
-  }
-
-  AppLocaleTypeInner inner({required Locale locale}) {
-    return AppLocaleTypeInner(
-      locale: locale,
-    );
-  }
-
-  AppLocaleType fromJson(Map<String, Object> json) {
-    return AppLocaleType.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $AppLocaleType = _$AppLocaleTypeTearOff();
-
-/// @nodoc
 mixin _$AppLocaleType {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
@@ -2374,8 +2341,8 @@ mixin _$AppLocaleType {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? system,
-    TResult Function(Locale locale)? inner,
+    TResult? Function()? system,
+    TResult? Function(Locale locale)? inner,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -2393,8 +2360,8 @@ mixin _$AppLocaleType {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(AppLocaleTypeSystem value)? system,
-    TResult Function(AppLocaleTypeInner value)? inner,
+    TResult? Function(AppLocaleTypeSystem value)? system,
+    TResult? Function(AppLocaleTypeInner value)? inner,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -2411,45 +2378,47 @@ mixin _$AppLocaleType {
 abstract class $AppLocaleTypeCopyWith<$Res> {
   factory $AppLocaleTypeCopyWith(
           AppLocaleType value, $Res Function(AppLocaleType) then) =
-      _$AppLocaleTypeCopyWithImpl<$Res>;
+      _$AppLocaleTypeCopyWithImpl<$Res, AppLocaleType>;
 }
 
 /// @nodoc
-class _$AppLocaleTypeCopyWithImpl<$Res>
+class _$AppLocaleTypeCopyWithImpl<$Res, $Val extends AppLocaleType>
     implements $AppLocaleTypeCopyWith<$Res> {
   _$AppLocaleTypeCopyWithImpl(this._value, this._then);
 
-  final AppLocaleType _value;
   // ignore: unused_field
-  final $Res Function(AppLocaleType) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 }
 
 /// @nodoc
-abstract class $AppLocaleTypeSystemCopyWith<$Res> {
-  factory $AppLocaleTypeSystemCopyWith(
-          AppLocaleTypeSystem value, $Res Function(AppLocaleTypeSystem) then) =
-      _$AppLocaleTypeSystemCopyWithImpl<$Res>;
+abstract class _$$AppLocaleTypeSystemImplCopyWith<$Res> {
+  factory _$$AppLocaleTypeSystemImplCopyWith(_$AppLocaleTypeSystemImpl value,
+          $Res Function(_$AppLocaleTypeSystemImpl) then) =
+      __$$AppLocaleTypeSystemImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$AppLocaleTypeSystemCopyWithImpl<$Res>
-    extends _$AppLocaleTypeCopyWithImpl<$Res>
-    implements $AppLocaleTypeSystemCopyWith<$Res> {
-  _$AppLocaleTypeSystemCopyWithImpl(
-      AppLocaleTypeSystem _value, $Res Function(AppLocaleTypeSystem) _then)
-      : super(_value, (v) => _then(v as AppLocaleTypeSystem));
-
-  @override
-  AppLocaleTypeSystem get _value => super._value as AppLocaleTypeSystem;
+class __$$AppLocaleTypeSystemImplCopyWithImpl<$Res>
+    extends _$AppLocaleTypeCopyWithImpl<$Res, _$AppLocaleTypeSystemImpl>
+    implements _$$AppLocaleTypeSystemImplCopyWith<$Res> {
+  __$$AppLocaleTypeSystemImplCopyWithImpl(_$AppLocaleTypeSystemImpl _value,
+      $Res Function(_$AppLocaleTypeSystemImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$AppLocaleTypeSystem implements AppLocaleTypeSystem {
-  const _$AppLocaleTypeSystem();
+class _$AppLocaleTypeSystemImpl implements AppLocaleTypeSystem {
+  const _$AppLocaleTypeSystemImpl({final String? $type})
+      : $type = $type ?? 'system';
 
-  factory _$AppLocaleTypeSystem.fromJson(Map<String, dynamic> json) =>
-      _$$AppLocaleTypeSystemFromJson(json);
+  factory _$AppLocaleTypeSystemImpl.fromJson(Map<String, dynamic> json) =>
+      _$$AppLocaleTypeSystemImplFromJson(json);
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
 
   @override
   String toString() {
@@ -2457,10 +2426,13 @@ class _$AppLocaleTypeSystem implements AppLocaleTypeSystem {
   }
 
   @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) || (other is AppLocaleTypeSystem);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AppLocaleTypeSystemImpl);
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -2476,8 +2448,8 @@ class _$AppLocaleTypeSystem implements AppLocaleTypeSystem {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? system,
-    TResult Function(Locale locale)? inner,
+    TResult? Function()? system,
+    TResult? Function(Locale locale)? inner,
   }) {
     return system?.call();
   }
@@ -2507,8 +2479,8 @@ class _$AppLocaleTypeSystem implements AppLocaleTypeSystem {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(AppLocaleTypeSystem value)? system,
-    TResult Function(AppLocaleTypeInner value)? inner,
+    TResult? Function(AppLocaleTypeSystem value)? system,
+    TResult? Function(AppLocaleTypeInner value)? inner,
   }) {
     return system?.call(this);
   }
@@ -2528,44 +2500,45 @@ class _$AppLocaleTypeSystem implements AppLocaleTypeSystem {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$AppLocaleTypeSystemToJson(this)..['runtimeType'] = 'system';
+    return _$$AppLocaleTypeSystemImplToJson(
+      this,
+    );
   }
 }
 
 abstract class AppLocaleTypeSystem implements AppLocaleType {
-  const factory AppLocaleTypeSystem() = _$AppLocaleTypeSystem;
+  const factory AppLocaleTypeSystem() = _$AppLocaleTypeSystemImpl;
 
   factory AppLocaleTypeSystem.fromJson(Map<String, dynamic> json) =
-      _$AppLocaleTypeSystem.fromJson;
+      _$AppLocaleTypeSystemImpl.fromJson;
 }
 
 /// @nodoc
-abstract class $AppLocaleTypeInnerCopyWith<$Res> {
-  factory $AppLocaleTypeInnerCopyWith(
-          AppLocaleTypeInner value, $Res Function(AppLocaleTypeInner) then) =
-      _$AppLocaleTypeInnerCopyWithImpl<$Res>;
+abstract class _$$AppLocaleTypeInnerImplCopyWith<$Res> {
+  factory _$$AppLocaleTypeInnerImplCopyWith(_$AppLocaleTypeInnerImpl value,
+          $Res Function(_$AppLocaleTypeInnerImpl) then) =
+      __$$AppLocaleTypeInnerImplCopyWithImpl<$Res>;
+  @useResult
   $Res call({Locale locale});
 
   $LocaleCopyWith<$Res> get locale;
 }
 
 /// @nodoc
-class _$AppLocaleTypeInnerCopyWithImpl<$Res>
-    extends _$AppLocaleTypeCopyWithImpl<$Res>
-    implements $AppLocaleTypeInnerCopyWith<$Res> {
-  _$AppLocaleTypeInnerCopyWithImpl(
-      AppLocaleTypeInner _value, $Res Function(AppLocaleTypeInner) _then)
-      : super(_value, (v) => _then(v as AppLocaleTypeInner));
+class __$$AppLocaleTypeInnerImplCopyWithImpl<$Res>
+    extends _$AppLocaleTypeCopyWithImpl<$Res, _$AppLocaleTypeInnerImpl>
+    implements _$$AppLocaleTypeInnerImplCopyWith<$Res> {
+  __$$AppLocaleTypeInnerImplCopyWithImpl(_$AppLocaleTypeInnerImpl _value,
+      $Res Function(_$AppLocaleTypeInnerImpl) _then)
+      : super(_value, _then);
 
-  @override
-  AppLocaleTypeInner get _value => super._value as AppLocaleTypeInner;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? locale = freezed,
+    Object? locale = null,
   }) {
-    return _then(AppLocaleTypeInner(
-      locale: locale == freezed
+    return _then(_$AppLocaleTypeInnerImpl(
+      locale: null == locale
           ? _value.locale
           : locale // ignore: cast_nullable_to_non_nullable
               as Locale,
@@ -2573,6 +2546,7 @@ class _$AppLocaleTypeInnerCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $LocaleCopyWith<$Res> get locale {
     return $LocaleCopyWith<$Res>(_value.locale, (value) {
       return _then(_value.copyWith(locale: value));
@@ -2582,14 +2556,18 @@ class _$AppLocaleTypeInnerCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$AppLocaleTypeInner implements AppLocaleTypeInner {
-  const _$AppLocaleTypeInner({required this.locale});
+class _$AppLocaleTypeInnerImpl implements AppLocaleTypeInner {
+  const _$AppLocaleTypeInnerImpl({required this.locale, final String? $type})
+      : $type = $type ?? 'inner';
 
-  factory _$AppLocaleTypeInner.fromJson(Map<String, dynamic> json) =>
-      _$$AppLocaleTypeInnerFromJson(json);
+  factory _$AppLocaleTypeInnerImpl.fromJson(Map<String, dynamic> json) =>
+      _$$AppLocaleTypeInnerImplFromJson(json);
 
   @override
   final Locale locale;
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
 
   @override
   String toString() {
@@ -2597,21 +2575,23 @@ class _$AppLocaleTypeInner implements AppLocaleTypeInner {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is AppLocaleTypeInner &&
-            (identical(other.locale, locale) ||
-                const DeepCollectionEquality().equals(other.locale, locale)));
+        (other.runtimeType == runtimeType &&
+            other is _$AppLocaleTypeInnerImpl &&
+            (identical(other.locale, locale) || other.locale == locale));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(locale);
 
   @JsonKey(ignore: true)
   @override
-  $AppLocaleTypeInnerCopyWith<AppLocaleTypeInner> get copyWith =>
-      _$AppLocaleTypeInnerCopyWithImpl<AppLocaleTypeInner>(this, _$identity);
+  int get hashCode => Object.hash(runtimeType, locale);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$AppLocaleTypeInnerImplCopyWith<_$AppLocaleTypeInnerImpl> get copyWith =>
+      __$$AppLocaleTypeInnerImplCopyWithImpl<_$AppLocaleTypeInnerImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -2625,8 +2605,8 @@ class _$AppLocaleTypeInner implements AppLocaleTypeInner {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? system,
-    TResult Function(Locale locale)? inner,
+    TResult? Function()? system,
+    TResult? Function(Locale locale)? inner,
   }) {
     return inner?.call(locale);
   }
@@ -2656,8 +2636,8 @@ class _$AppLocaleTypeInner implements AppLocaleTypeInner {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(AppLocaleTypeSystem value)? system,
-    TResult Function(AppLocaleTypeInner value)? inner,
+    TResult? Function(AppLocaleTypeSystem value)? system,
+    TResult? Function(AppLocaleTypeInner value)? inner,
   }) {
     return inner?.call(this);
   }
@@ -2677,25 +2657,27 @@ class _$AppLocaleTypeInner implements AppLocaleTypeInner {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$AppLocaleTypeInnerToJson(this)..['runtimeType'] = 'inner';
+    return _$$AppLocaleTypeInnerImplToJson(
+      this,
+    );
   }
 }
 
 abstract class AppLocaleTypeInner implements AppLocaleType {
-  const factory AppLocaleTypeInner({required Locale locale}) =
-      _$AppLocaleTypeInner;
+  const factory AppLocaleTypeInner({required final Locale locale}) =
+      _$AppLocaleTypeInnerImpl;
 
   factory AppLocaleTypeInner.fromJson(Map<String, dynamic> json) =
-      _$AppLocaleTypeInner.fromJson;
+      _$AppLocaleTypeInnerImpl.fromJson;
 
-  Locale get locale => throw _privateConstructorUsedError;
+  Locale get locale;
   @JsonKey(ignore: true)
-  $AppLocaleTypeInnerCopyWith<AppLocaleTypeInner> get copyWith =>
+  _$$AppLocaleTypeInnerImplCopyWith<_$AppLocaleTypeInnerImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 TrackingFreqLimit _$TrackingFreqLimitFromJson(Map<String, dynamic> json) {
-  switch (json['runtimeType'] as String?) {
+  switch (json['runtimeType']) {
     case 'fifteenMin':
       return TrackingFreqLimitFifteenMin.fromJson(json);
     case 'thirtyMin':
@@ -2712,34 +2694,6 @@ TrackingFreqLimit _$TrackingFreqLimitFromJson(Map<String, dynamic> json) {
 }
 
 /// @nodoc
-class _$TrackingFreqLimitTearOff {
-  const _$TrackingFreqLimitTearOff();
-
-  TrackingFreqLimitFifteenMin fifteenMin() {
-    return const TrackingFreqLimitFifteenMin();
-  }
-
-  TrackingFreqLimitThirtyMin thirtyMin() {
-    return const TrackingFreqLimitThirtyMin();
-  }
-
-  TrackingFreqLimitFortyFiveMin fortyFiveMin() {
-    return const TrackingFreqLimitFortyFiveMin();
-  }
-
-  TrackingFreqLimitOneHour oneHour() {
-    return const TrackingFreqLimitOneHour();
-  }
-
-  TrackingFreqLimit fromJson(Map<String, Object> json) {
-    return TrackingFreqLimit.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $TrackingFreqLimit = _$TrackingFreqLimitTearOff();
-
-/// @nodoc
 mixin _$TrackingFreqLimit {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
@@ -2751,10 +2705,10 @@ mixin _$TrackingFreqLimit {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? fifteenMin,
-    TResult Function()? thirtyMin,
-    TResult Function()? fortyFiveMin,
-    TResult Function()? oneHour,
+    TResult? Function()? fifteenMin,
+    TResult? Function()? thirtyMin,
+    TResult? Function()? fortyFiveMin,
+    TResult? Function()? oneHour,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -2776,10 +2730,10 @@ mixin _$TrackingFreqLimit {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(TrackingFreqLimitFifteenMin value)? fifteenMin,
-    TResult Function(TrackingFreqLimitThirtyMin value)? thirtyMin,
-    TResult Function(TrackingFreqLimitFortyFiveMin value)? fortyFiveMin,
-    TResult Function(TrackingFreqLimitOneHour value)? oneHour,
+    TResult? Function(TrackingFreqLimitFifteenMin value)? fifteenMin,
+    TResult? Function(TrackingFreqLimitThirtyMin value)? thirtyMin,
+    TResult? Function(TrackingFreqLimitFortyFiveMin value)? fortyFiveMin,
+    TResult? Function(TrackingFreqLimitOneHour value)? oneHour,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -2798,47 +2752,51 @@ mixin _$TrackingFreqLimit {
 abstract class $TrackingFreqLimitCopyWith<$Res> {
   factory $TrackingFreqLimitCopyWith(
           TrackingFreqLimit value, $Res Function(TrackingFreqLimit) then) =
-      _$TrackingFreqLimitCopyWithImpl<$Res>;
+      _$TrackingFreqLimitCopyWithImpl<$Res, TrackingFreqLimit>;
 }
 
 /// @nodoc
-class _$TrackingFreqLimitCopyWithImpl<$Res>
+class _$TrackingFreqLimitCopyWithImpl<$Res, $Val extends TrackingFreqLimit>
     implements $TrackingFreqLimitCopyWith<$Res> {
   _$TrackingFreqLimitCopyWithImpl(this._value, this._then);
 
-  final TrackingFreqLimit _value;
   // ignore: unused_field
-  final $Res Function(TrackingFreqLimit) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 }
 
 /// @nodoc
-abstract class $TrackingFreqLimitFifteenMinCopyWith<$Res> {
-  factory $TrackingFreqLimitFifteenMinCopyWith(
-          TrackingFreqLimitFifteenMin value,
-          $Res Function(TrackingFreqLimitFifteenMin) then) =
-      _$TrackingFreqLimitFifteenMinCopyWithImpl<$Res>;
+abstract class _$$TrackingFreqLimitFifteenMinImplCopyWith<$Res> {
+  factory _$$TrackingFreqLimitFifteenMinImplCopyWith(
+          _$TrackingFreqLimitFifteenMinImpl value,
+          $Res Function(_$TrackingFreqLimitFifteenMinImpl) then) =
+      __$$TrackingFreqLimitFifteenMinImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$TrackingFreqLimitFifteenMinCopyWithImpl<$Res>
-    extends _$TrackingFreqLimitCopyWithImpl<$Res>
-    implements $TrackingFreqLimitFifteenMinCopyWith<$Res> {
-  _$TrackingFreqLimitFifteenMinCopyWithImpl(TrackingFreqLimitFifteenMin _value,
-      $Res Function(TrackingFreqLimitFifteenMin) _then)
-      : super(_value, (v) => _then(v as TrackingFreqLimitFifteenMin));
-
-  @override
-  TrackingFreqLimitFifteenMin get _value =>
-      super._value as TrackingFreqLimitFifteenMin;
+class __$$TrackingFreqLimitFifteenMinImplCopyWithImpl<$Res>
+    extends _$TrackingFreqLimitCopyWithImpl<$Res,
+        _$TrackingFreqLimitFifteenMinImpl>
+    implements _$$TrackingFreqLimitFifteenMinImplCopyWith<$Res> {
+  __$$TrackingFreqLimitFifteenMinImplCopyWithImpl(
+      _$TrackingFreqLimitFifteenMinImpl _value,
+      $Res Function(_$TrackingFreqLimitFifteenMinImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$TrackingFreqLimitFifteenMin implements TrackingFreqLimitFifteenMin {
-  const _$TrackingFreqLimitFifteenMin();
+class _$TrackingFreqLimitFifteenMinImpl implements TrackingFreqLimitFifteenMin {
+  const _$TrackingFreqLimitFifteenMinImpl({final String? $type})
+      : $type = $type ?? 'fifteenMin';
 
-  factory _$TrackingFreqLimitFifteenMin.fromJson(Map<String, dynamic> json) =>
-      _$$TrackingFreqLimitFifteenMinFromJson(json);
+  factory _$TrackingFreqLimitFifteenMinImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$TrackingFreqLimitFifteenMinImplFromJson(json);
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
 
   @override
   String toString() {
@@ -2846,10 +2804,13 @@ class _$TrackingFreqLimitFifteenMin implements TrackingFreqLimitFifteenMin {
   }
 
   @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) || (other is TrackingFreqLimitFifteenMin);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$TrackingFreqLimitFifteenMinImpl);
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -2867,10 +2828,10 @@ class _$TrackingFreqLimitFifteenMin implements TrackingFreqLimitFifteenMin {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? fifteenMin,
-    TResult Function()? thirtyMin,
-    TResult Function()? fortyFiveMin,
-    TResult Function()? oneHour,
+    TResult? Function()? fifteenMin,
+    TResult? Function()? thirtyMin,
+    TResult? Function()? fortyFiveMin,
+    TResult? Function()? oneHour,
   }) {
     return fifteenMin?.call();
   }
@@ -2904,10 +2865,10 @@ class _$TrackingFreqLimitFifteenMin implements TrackingFreqLimitFifteenMin {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(TrackingFreqLimitFifteenMin value)? fifteenMin,
-    TResult Function(TrackingFreqLimitThirtyMin value)? thirtyMin,
-    TResult Function(TrackingFreqLimitFortyFiveMin value)? fortyFiveMin,
-    TResult Function(TrackingFreqLimitOneHour value)? oneHour,
+    TResult? Function(TrackingFreqLimitFifteenMin value)? fifteenMin,
+    TResult? Function(TrackingFreqLimitThirtyMin value)? thirtyMin,
+    TResult? Function(TrackingFreqLimitFortyFiveMin value)? fortyFiveMin,
+    TResult? Function(TrackingFreqLimitOneHour value)? oneHour,
   }) {
     return fifteenMin?.call(this);
   }
@@ -2929,45 +2890,51 @@ class _$TrackingFreqLimitFifteenMin implements TrackingFreqLimitFifteenMin {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$TrackingFreqLimitFifteenMinToJson(this)
-      ..['runtimeType'] = 'fifteenMin';
+    return _$$TrackingFreqLimitFifteenMinImplToJson(
+      this,
+    );
   }
 }
 
 abstract class TrackingFreqLimitFifteenMin implements TrackingFreqLimit {
-  const factory TrackingFreqLimitFifteenMin() = _$TrackingFreqLimitFifteenMin;
+  const factory TrackingFreqLimitFifteenMin() =
+      _$TrackingFreqLimitFifteenMinImpl;
 
   factory TrackingFreqLimitFifteenMin.fromJson(Map<String, dynamic> json) =
-      _$TrackingFreqLimitFifteenMin.fromJson;
+      _$TrackingFreqLimitFifteenMinImpl.fromJson;
 }
 
 /// @nodoc
-abstract class $TrackingFreqLimitThirtyMinCopyWith<$Res> {
-  factory $TrackingFreqLimitThirtyMinCopyWith(TrackingFreqLimitThirtyMin value,
-          $Res Function(TrackingFreqLimitThirtyMin) then) =
-      _$TrackingFreqLimitThirtyMinCopyWithImpl<$Res>;
+abstract class _$$TrackingFreqLimitThirtyMinImplCopyWith<$Res> {
+  factory _$$TrackingFreqLimitThirtyMinImplCopyWith(
+          _$TrackingFreqLimitThirtyMinImpl value,
+          $Res Function(_$TrackingFreqLimitThirtyMinImpl) then) =
+      __$$TrackingFreqLimitThirtyMinImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$TrackingFreqLimitThirtyMinCopyWithImpl<$Res>
-    extends _$TrackingFreqLimitCopyWithImpl<$Res>
-    implements $TrackingFreqLimitThirtyMinCopyWith<$Res> {
-  _$TrackingFreqLimitThirtyMinCopyWithImpl(TrackingFreqLimitThirtyMin _value,
-      $Res Function(TrackingFreqLimitThirtyMin) _then)
-      : super(_value, (v) => _then(v as TrackingFreqLimitThirtyMin));
-
-  @override
-  TrackingFreqLimitThirtyMin get _value =>
-      super._value as TrackingFreqLimitThirtyMin;
+class __$$TrackingFreqLimitThirtyMinImplCopyWithImpl<$Res>
+    extends _$TrackingFreqLimitCopyWithImpl<$Res,
+        _$TrackingFreqLimitThirtyMinImpl>
+    implements _$$TrackingFreqLimitThirtyMinImplCopyWith<$Res> {
+  __$$TrackingFreqLimitThirtyMinImplCopyWithImpl(
+      _$TrackingFreqLimitThirtyMinImpl _value,
+      $Res Function(_$TrackingFreqLimitThirtyMinImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$TrackingFreqLimitThirtyMin implements TrackingFreqLimitThirtyMin {
-  const _$TrackingFreqLimitThirtyMin();
+class _$TrackingFreqLimitThirtyMinImpl implements TrackingFreqLimitThirtyMin {
+  const _$TrackingFreqLimitThirtyMinImpl({final String? $type})
+      : $type = $type ?? 'thirtyMin';
 
-  factory _$TrackingFreqLimitThirtyMin.fromJson(Map<String, dynamic> json) =>
-      _$$TrackingFreqLimitThirtyMinFromJson(json);
+  factory _$TrackingFreqLimitThirtyMinImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$TrackingFreqLimitThirtyMinImplFromJson(json);
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
 
   @override
   String toString() {
@@ -2975,10 +2942,13 @@ class _$TrackingFreqLimitThirtyMin implements TrackingFreqLimitThirtyMin {
   }
 
   @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) || (other is TrackingFreqLimitThirtyMin);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$TrackingFreqLimitThirtyMinImpl);
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -2996,10 +2966,10 @@ class _$TrackingFreqLimitThirtyMin implements TrackingFreqLimitThirtyMin {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? fifteenMin,
-    TResult Function()? thirtyMin,
-    TResult Function()? fortyFiveMin,
-    TResult Function()? oneHour,
+    TResult? Function()? fifteenMin,
+    TResult? Function()? thirtyMin,
+    TResult? Function()? fortyFiveMin,
+    TResult? Function()? oneHour,
   }) {
     return thirtyMin?.call();
   }
@@ -3033,10 +3003,10 @@ class _$TrackingFreqLimitThirtyMin implements TrackingFreqLimitThirtyMin {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(TrackingFreqLimitFifteenMin value)? fifteenMin,
-    TResult Function(TrackingFreqLimitThirtyMin value)? thirtyMin,
-    TResult Function(TrackingFreqLimitFortyFiveMin value)? fortyFiveMin,
-    TResult Function(TrackingFreqLimitOneHour value)? oneHour,
+    TResult? Function(TrackingFreqLimitFifteenMin value)? fifteenMin,
+    TResult? Function(TrackingFreqLimitThirtyMin value)? thirtyMin,
+    TResult? Function(TrackingFreqLimitFortyFiveMin value)? fortyFiveMin,
+    TResult? Function(TrackingFreqLimitOneHour value)? oneHour,
   }) {
     return thirtyMin?.call(this);
   }
@@ -3058,47 +3028,51 @@ class _$TrackingFreqLimitThirtyMin implements TrackingFreqLimitThirtyMin {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$TrackingFreqLimitThirtyMinToJson(this)
-      ..['runtimeType'] = 'thirtyMin';
+    return _$$TrackingFreqLimitThirtyMinImplToJson(
+      this,
+    );
   }
 }
 
 abstract class TrackingFreqLimitThirtyMin implements TrackingFreqLimit {
-  const factory TrackingFreqLimitThirtyMin() = _$TrackingFreqLimitThirtyMin;
+  const factory TrackingFreqLimitThirtyMin() = _$TrackingFreqLimitThirtyMinImpl;
 
   factory TrackingFreqLimitThirtyMin.fromJson(Map<String, dynamic> json) =
-      _$TrackingFreqLimitThirtyMin.fromJson;
+      _$TrackingFreqLimitThirtyMinImpl.fromJson;
 }
 
 /// @nodoc
-abstract class $TrackingFreqLimitFortyFiveMinCopyWith<$Res> {
-  factory $TrackingFreqLimitFortyFiveMinCopyWith(
-          TrackingFreqLimitFortyFiveMin value,
-          $Res Function(TrackingFreqLimitFortyFiveMin) then) =
-      _$TrackingFreqLimitFortyFiveMinCopyWithImpl<$Res>;
+abstract class _$$TrackingFreqLimitFortyFiveMinImplCopyWith<$Res> {
+  factory _$$TrackingFreqLimitFortyFiveMinImplCopyWith(
+          _$TrackingFreqLimitFortyFiveMinImpl value,
+          $Res Function(_$TrackingFreqLimitFortyFiveMinImpl) then) =
+      __$$TrackingFreqLimitFortyFiveMinImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$TrackingFreqLimitFortyFiveMinCopyWithImpl<$Res>
-    extends _$TrackingFreqLimitCopyWithImpl<$Res>
-    implements $TrackingFreqLimitFortyFiveMinCopyWith<$Res> {
-  _$TrackingFreqLimitFortyFiveMinCopyWithImpl(
-      TrackingFreqLimitFortyFiveMin _value,
-      $Res Function(TrackingFreqLimitFortyFiveMin) _then)
-      : super(_value, (v) => _then(v as TrackingFreqLimitFortyFiveMin));
-
-  @override
-  TrackingFreqLimitFortyFiveMin get _value =>
-      super._value as TrackingFreqLimitFortyFiveMin;
+class __$$TrackingFreqLimitFortyFiveMinImplCopyWithImpl<$Res>
+    extends _$TrackingFreqLimitCopyWithImpl<$Res,
+        _$TrackingFreqLimitFortyFiveMinImpl>
+    implements _$$TrackingFreqLimitFortyFiveMinImplCopyWith<$Res> {
+  __$$TrackingFreqLimitFortyFiveMinImplCopyWithImpl(
+      _$TrackingFreqLimitFortyFiveMinImpl _value,
+      $Res Function(_$TrackingFreqLimitFortyFiveMinImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$TrackingFreqLimitFortyFiveMin implements TrackingFreqLimitFortyFiveMin {
-  const _$TrackingFreqLimitFortyFiveMin();
+class _$TrackingFreqLimitFortyFiveMinImpl
+    implements TrackingFreqLimitFortyFiveMin {
+  const _$TrackingFreqLimitFortyFiveMinImpl({final String? $type})
+      : $type = $type ?? 'fortyFiveMin';
 
-  factory _$TrackingFreqLimitFortyFiveMin.fromJson(Map<String, dynamic> json) =>
-      _$$TrackingFreqLimitFortyFiveMinFromJson(json);
+  factory _$TrackingFreqLimitFortyFiveMinImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$TrackingFreqLimitFortyFiveMinImplFromJson(json);
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
 
   @override
   String toString() {
@@ -3106,10 +3080,13 @@ class _$TrackingFreqLimitFortyFiveMin implements TrackingFreqLimitFortyFiveMin {
   }
 
   @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) || (other is TrackingFreqLimitFortyFiveMin);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$TrackingFreqLimitFortyFiveMinImpl);
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -3127,10 +3104,10 @@ class _$TrackingFreqLimitFortyFiveMin implements TrackingFreqLimitFortyFiveMin {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? fifteenMin,
-    TResult Function()? thirtyMin,
-    TResult Function()? fortyFiveMin,
-    TResult Function()? oneHour,
+    TResult? Function()? fifteenMin,
+    TResult? Function()? thirtyMin,
+    TResult? Function()? fortyFiveMin,
+    TResult? Function()? oneHour,
   }) {
     return fortyFiveMin?.call();
   }
@@ -3164,10 +3141,10 @@ class _$TrackingFreqLimitFortyFiveMin implements TrackingFreqLimitFortyFiveMin {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(TrackingFreqLimitFifteenMin value)? fifteenMin,
-    TResult Function(TrackingFreqLimitThirtyMin value)? thirtyMin,
-    TResult Function(TrackingFreqLimitFortyFiveMin value)? fortyFiveMin,
-    TResult Function(TrackingFreqLimitOneHour value)? oneHour,
+    TResult? Function(TrackingFreqLimitFifteenMin value)? fifteenMin,
+    TResult? Function(TrackingFreqLimitThirtyMin value)? thirtyMin,
+    TResult? Function(TrackingFreqLimitFortyFiveMin value)? fortyFiveMin,
+    TResult? Function(TrackingFreqLimitOneHour value)? oneHour,
   }) {
     return fortyFiveMin?.call(this);
   }
@@ -3189,46 +3166,50 @@ class _$TrackingFreqLimitFortyFiveMin implements TrackingFreqLimitFortyFiveMin {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$TrackingFreqLimitFortyFiveMinToJson(this)
-      ..['runtimeType'] = 'fortyFiveMin';
+    return _$$TrackingFreqLimitFortyFiveMinImplToJson(
+      this,
+    );
   }
 }
 
 abstract class TrackingFreqLimitFortyFiveMin implements TrackingFreqLimit {
   const factory TrackingFreqLimitFortyFiveMin() =
-      _$TrackingFreqLimitFortyFiveMin;
+      _$TrackingFreqLimitFortyFiveMinImpl;
 
   factory TrackingFreqLimitFortyFiveMin.fromJson(Map<String, dynamic> json) =
-      _$TrackingFreqLimitFortyFiveMin.fromJson;
+      _$TrackingFreqLimitFortyFiveMinImpl.fromJson;
 }
 
 /// @nodoc
-abstract class $TrackingFreqLimitOneHourCopyWith<$Res> {
-  factory $TrackingFreqLimitOneHourCopyWith(TrackingFreqLimitOneHour value,
-          $Res Function(TrackingFreqLimitOneHour) then) =
-      _$TrackingFreqLimitOneHourCopyWithImpl<$Res>;
+abstract class _$$TrackingFreqLimitOneHourImplCopyWith<$Res> {
+  factory _$$TrackingFreqLimitOneHourImplCopyWith(
+          _$TrackingFreqLimitOneHourImpl value,
+          $Res Function(_$TrackingFreqLimitOneHourImpl) then) =
+      __$$TrackingFreqLimitOneHourImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$TrackingFreqLimitOneHourCopyWithImpl<$Res>
-    extends _$TrackingFreqLimitCopyWithImpl<$Res>
-    implements $TrackingFreqLimitOneHourCopyWith<$Res> {
-  _$TrackingFreqLimitOneHourCopyWithImpl(TrackingFreqLimitOneHour _value,
-      $Res Function(TrackingFreqLimitOneHour) _then)
-      : super(_value, (v) => _then(v as TrackingFreqLimitOneHour));
-
-  @override
-  TrackingFreqLimitOneHour get _value =>
-      super._value as TrackingFreqLimitOneHour;
+class __$$TrackingFreqLimitOneHourImplCopyWithImpl<$Res>
+    extends _$TrackingFreqLimitCopyWithImpl<$Res,
+        _$TrackingFreqLimitOneHourImpl>
+    implements _$$TrackingFreqLimitOneHourImplCopyWith<$Res> {
+  __$$TrackingFreqLimitOneHourImplCopyWithImpl(
+      _$TrackingFreqLimitOneHourImpl _value,
+      $Res Function(_$TrackingFreqLimitOneHourImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$TrackingFreqLimitOneHour implements TrackingFreqLimitOneHour {
-  const _$TrackingFreqLimitOneHour();
+class _$TrackingFreqLimitOneHourImpl implements TrackingFreqLimitOneHour {
+  const _$TrackingFreqLimitOneHourImpl({final String? $type})
+      : $type = $type ?? 'oneHour';
 
-  factory _$TrackingFreqLimitOneHour.fromJson(Map<String, dynamic> json) =>
-      _$$TrackingFreqLimitOneHourFromJson(json);
+  factory _$TrackingFreqLimitOneHourImpl.fromJson(Map<String, dynamic> json) =>
+      _$$TrackingFreqLimitOneHourImplFromJson(json);
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
 
   @override
   String toString() {
@@ -3236,10 +3217,13 @@ class _$TrackingFreqLimitOneHour implements TrackingFreqLimitOneHour {
   }
 
   @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) || (other is TrackingFreqLimitOneHour);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$TrackingFreqLimitOneHourImpl);
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -3257,10 +3241,10 @@ class _$TrackingFreqLimitOneHour implements TrackingFreqLimitOneHour {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? fifteenMin,
-    TResult Function()? thirtyMin,
-    TResult Function()? fortyFiveMin,
-    TResult Function()? oneHour,
+    TResult? Function()? fifteenMin,
+    TResult? Function()? thirtyMin,
+    TResult? Function()? fortyFiveMin,
+    TResult? Function()? oneHour,
   }) {
     return oneHour?.call();
   }
@@ -3294,10 +3278,10 @@ class _$TrackingFreqLimitOneHour implements TrackingFreqLimitOneHour {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(TrackingFreqLimitFifteenMin value)? fifteenMin,
-    TResult Function(TrackingFreqLimitThirtyMin value)? thirtyMin,
-    TResult Function(TrackingFreqLimitFortyFiveMin value)? fortyFiveMin,
-    TResult Function(TrackingFreqLimitOneHour value)? oneHour,
+    TResult? Function(TrackingFreqLimitFifteenMin value)? fifteenMin,
+    TResult? Function(TrackingFreqLimitThirtyMin value)? thirtyMin,
+    TResult? Function(TrackingFreqLimitFortyFiveMin value)? fortyFiveMin,
+    TResult? Function(TrackingFreqLimitOneHour value)? oneHour,
   }) {
     return oneHour?.call(this);
   }
@@ -3319,19 +3303,21 @@ class _$TrackingFreqLimitOneHour implements TrackingFreqLimitOneHour {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$TrackingFreqLimitOneHourToJson(this)..['runtimeType'] = 'oneHour';
+    return _$$TrackingFreqLimitOneHourImplToJson(
+      this,
+    );
   }
 }
 
 abstract class TrackingFreqLimitOneHour implements TrackingFreqLimit {
-  const factory TrackingFreqLimitOneHour() = _$TrackingFreqLimitOneHour;
+  const factory TrackingFreqLimitOneHour() = _$TrackingFreqLimitOneHourImpl;
 
   factory TrackingFreqLimitOneHour.fromJson(Map<String, dynamic> json) =
-      _$TrackingFreqLimitOneHour.fromJson;
+      _$TrackingFreqLimitOneHourImpl.fromJson;
 }
 
 AutoTrackingFreq _$AutoTrackingFreqFromJson(Map<String, dynamic> json) {
-  switch (json['runtimeType'] as String?) {
+  switch (json['runtimeType']) {
     case 'sixHours':
       return AutoTrackingFreqSixHours.fromJson(json);
     case 'twelveHours':
@@ -3350,38 +3336,6 @@ AutoTrackingFreq _$AutoTrackingFreqFromJson(Map<String, dynamic> json) {
 }
 
 /// @nodoc
-class _$AutoTrackingFreqTearOff {
-  const _$AutoTrackingFreqTearOff();
-
-  AutoTrackingFreqSixHours sixHours() {
-    return const AutoTrackingFreqSixHours();
-  }
-
-  AutoTrackingFreqTwelveHours twelveHours() {
-    return const AutoTrackingFreqTwelveHours();
-  }
-
-  AutoTrackingFreqOneDay oneDay() {
-    return const AutoTrackingFreqOneDay();
-  }
-
-  AutoTrackingFreqThreeDays threeDays() {
-    return const AutoTrackingFreqThreeDays();
-  }
-
-  AutoTrackingFreqOneWeek oneWeek() {
-    return const AutoTrackingFreqOneWeek();
-  }
-
-  AutoTrackingFreq fromJson(Map<String, Object> json) {
-    return AutoTrackingFreq.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $AutoTrackingFreq = _$AutoTrackingFreqTearOff();
-
-/// @nodoc
 mixin _$AutoTrackingFreq {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
@@ -3394,11 +3348,11 @@ mixin _$AutoTrackingFreq {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? sixHours,
-    TResult Function()? twelveHours,
-    TResult Function()? oneDay,
-    TResult Function()? threeDays,
-    TResult Function()? oneWeek,
+    TResult? Function()? sixHours,
+    TResult? Function()? twelveHours,
+    TResult? Function()? oneDay,
+    TResult? Function()? threeDays,
+    TResult? Function()? oneWeek,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -3422,11 +3376,11 @@ mixin _$AutoTrackingFreq {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(AutoTrackingFreqSixHours value)? sixHours,
-    TResult Function(AutoTrackingFreqTwelveHours value)? twelveHours,
-    TResult Function(AutoTrackingFreqOneDay value)? oneDay,
-    TResult Function(AutoTrackingFreqThreeDays value)? threeDays,
-    TResult Function(AutoTrackingFreqOneWeek value)? oneWeek,
+    TResult? Function(AutoTrackingFreqSixHours value)? sixHours,
+    TResult? Function(AutoTrackingFreqTwelveHours value)? twelveHours,
+    TResult? Function(AutoTrackingFreqOneDay value)? oneDay,
+    TResult? Function(AutoTrackingFreqThreeDays value)? threeDays,
+    TResult? Function(AutoTrackingFreqOneWeek value)? oneWeek,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -3446,46 +3400,49 @@ mixin _$AutoTrackingFreq {
 abstract class $AutoTrackingFreqCopyWith<$Res> {
   factory $AutoTrackingFreqCopyWith(
           AutoTrackingFreq value, $Res Function(AutoTrackingFreq) then) =
-      _$AutoTrackingFreqCopyWithImpl<$Res>;
+      _$AutoTrackingFreqCopyWithImpl<$Res, AutoTrackingFreq>;
 }
 
 /// @nodoc
-class _$AutoTrackingFreqCopyWithImpl<$Res>
+class _$AutoTrackingFreqCopyWithImpl<$Res, $Val extends AutoTrackingFreq>
     implements $AutoTrackingFreqCopyWith<$Res> {
   _$AutoTrackingFreqCopyWithImpl(this._value, this._then);
 
-  final AutoTrackingFreq _value;
   // ignore: unused_field
-  final $Res Function(AutoTrackingFreq) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 }
 
 /// @nodoc
-abstract class $AutoTrackingFreqSixHoursCopyWith<$Res> {
-  factory $AutoTrackingFreqSixHoursCopyWith(AutoTrackingFreqSixHours value,
-          $Res Function(AutoTrackingFreqSixHours) then) =
-      _$AutoTrackingFreqSixHoursCopyWithImpl<$Res>;
+abstract class _$$AutoTrackingFreqSixHoursImplCopyWith<$Res> {
+  factory _$$AutoTrackingFreqSixHoursImplCopyWith(
+          _$AutoTrackingFreqSixHoursImpl value,
+          $Res Function(_$AutoTrackingFreqSixHoursImpl) then) =
+      __$$AutoTrackingFreqSixHoursImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$AutoTrackingFreqSixHoursCopyWithImpl<$Res>
-    extends _$AutoTrackingFreqCopyWithImpl<$Res>
-    implements $AutoTrackingFreqSixHoursCopyWith<$Res> {
-  _$AutoTrackingFreqSixHoursCopyWithImpl(AutoTrackingFreqSixHours _value,
-      $Res Function(AutoTrackingFreqSixHours) _then)
-      : super(_value, (v) => _then(v as AutoTrackingFreqSixHours));
-
-  @override
-  AutoTrackingFreqSixHours get _value =>
-      super._value as AutoTrackingFreqSixHours;
+class __$$AutoTrackingFreqSixHoursImplCopyWithImpl<$Res>
+    extends _$AutoTrackingFreqCopyWithImpl<$Res, _$AutoTrackingFreqSixHoursImpl>
+    implements _$$AutoTrackingFreqSixHoursImplCopyWith<$Res> {
+  __$$AutoTrackingFreqSixHoursImplCopyWithImpl(
+      _$AutoTrackingFreqSixHoursImpl _value,
+      $Res Function(_$AutoTrackingFreqSixHoursImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$AutoTrackingFreqSixHours implements AutoTrackingFreqSixHours {
-  const _$AutoTrackingFreqSixHours();
+class _$AutoTrackingFreqSixHoursImpl implements AutoTrackingFreqSixHours {
+  const _$AutoTrackingFreqSixHoursImpl({final String? $type})
+      : $type = $type ?? 'sixHours';
 
-  factory _$AutoTrackingFreqSixHours.fromJson(Map<String, dynamic> json) =>
-      _$$AutoTrackingFreqSixHoursFromJson(json);
+  factory _$AutoTrackingFreqSixHoursImpl.fromJson(Map<String, dynamic> json) =>
+      _$$AutoTrackingFreqSixHoursImplFromJson(json);
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
 
   @override
   String toString() {
@@ -3493,10 +3450,13 @@ class _$AutoTrackingFreqSixHours implements AutoTrackingFreqSixHours {
   }
 
   @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) || (other is AutoTrackingFreqSixHours);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AutoTrackingFreqSixHoursImpl);
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -3515,11 +3475,11 @@ class _$AutoTrackingFreqSixHours implements AutoTrackingFreqSixHours {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? sixHours,
-    TResult Function()? twelveHours,
-    TResult Function()? oneDay,
-    TResult Function()? threeDays,
-    TResult Function()? oneWeek,
+    TResult? Function()? sixHours,
+    TResult? Function()? twelveHours,
+    TResult? Function()? oneDay,
+    TResult? Function()? threeDays,
+    TResult? Function()? oneWeek,
   }) {
     return sixHours?.call();
   }
@@ -3555,11 +3515,11 @@ class _$AutoTrackingFreqSixHours implements AutoTrackingFreqSixHours {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(AutoTrackingFreqSixHours value)? sixHours,
-    TResult Function(AutoTrackingFreqTwelveHours value)? twelveHours,
-    TResult Function(AutoTrackingFreqOneDay value)? oneDay,
-    TResult Function(AutoTrackingFreqThreeDays value)? threeDays,
-    TResult Function(AutoTrackingFreqOneWeek value)? oneWeek,
+    TResult? Function(AutoTrackingFreqSixHours value)? sixHours,
+    TResult? Function(AutoTrackingFreqTwelveHours value)? twelveHours,
+    TResult? Function(AutoTrackingFreqOneDay value)? oneDay,
+    TResult? Function(AutoTrackingFreqThreeDays value)? threeDays,
+    TResult? Function(AutoTrackingFreqOneWeek value)? oneWeek,
   }) {
     return sixHours?.call(this);
   }
@@ -3582,46 +3542,50 @@ class _$AutoTrackingFreqSixHours implements AutoTrackingFreqSixHours {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$AutoTrackingFreqSixHoursToJson(this)
-      ..['runtimeType'] = 'sixHours';
+    return _$$AutoTrackingFreqSixHoursImplToJson(
+      this,
+    );
   }
 }
 
 abstract class AutoTrackingFreqSixHours implements AutoTrackingFreq {
-  const factory AutoTrackingFreqSixHours() = _$AutoTrackingFreqSixHours;
+  const factory AutoTrackingFreqSixHours() = _$AutoTrackingFreqSixHoursImpl;
 
   factory AutoTrackingFreqSixHours.fromJson(Map<String, dynamic> json) =
-      _$AutoTrackingFreqSixHours.fromJson;
+      _$AutoTrackingFreqSixHoursImpl.fromJson;
 }
 
 /// @nodoc
-abstract class $AutoTrackingFreqTwelveHoursCopyWith<$Res> {
-  factory $AutoTrackingFreqTwelveHoursCopyWith(
-          AutoTrackingFreqTwelveHours value,
-          $Res Function(AutoTrackingFreqTwelveHours) then) =
-      _$AutoTrackingFreqTwelveHoursCopyWithImpl<$Res>;
+abstract class _$$AutoTrackingFreqTwelveHoursImplCopyWith<$Res> {
+  factory _$$AutoTrackingFreqTwelveHoursImplCopyWith(
+          _$AutoTrackingFreqTwelveHoursImpl value,
+          $Res Function(_$AutoTrackingFreqTwelveHoursImpl) then) =
+      __$$AutoTrackingFreqTwelveHoursImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$AutoTrackingFreqTwelveHoursCopyWithImpl<$Res>
-    extends _$AutoTrackingFreqCopyWithImpl<$Res>
-    implements $AutoTrackingFreqTwelveHoursCopyWith<$Res> {
-  _$AutoTrackingFreqTwelveHoursCopyWithImpl(AutoTrackingFreqTwelveHours _value,
-      $Res Function(AutoTrackingFreqTwelveHours) _then)
-      : super(_value, (v) => _then(v as AutoTrackingFreqTwelveHours));
-
-  @override
-  AutoTrackingFreqTwelveHours get _value =>
-      super._value as AutoTrackingFreqTwelveHours;
+class __$$AutoTrackingFreqTwelveHoursImplCopyWithImpl<$Res>
+    extends _$AutoTrackingFreqCopyWithImpl<$Res,
+        _$AutoTrackingFreqTwelveHoursImpl>
+    implements _$$AutoTrackingFreqTwelveHoursImplCopyWith<$Res> {
+  __$$AutoTrackingFreqTwelveHoursImplCopyWithImpl(
+      _$AutoTrackingFreqTwelveHoursImpl _value,
+      $Res Function(_$AutoTrackingFreqTwelveHoursImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$AutoTrackingFreqTwelveHours implements AutoTrackingFreqTwelveHours {
-  const _$AutoTrackingFreqTwelveHours();
+class _$AutoTrackingFreqTwelveHoursImpl implements AutoTrackingFreqTwelveHours {
+  const _$AutoTrackingFreqTwelveHoursImpl({final String? $type})
+      : $type = $type ?? 'twelveHours';
 
-  factory _$AutoTrackingFreqTwelveHours.fromJson(Map<String, dynamic> json) =>
-      _$$AutoTrackingFreqTwelveHoursFromJson(json);
+  factory _$AutoTrackingFreqTwelveHoursImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$AutoTrackingFreqTwelveHoursImplFromJson(json);
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
 
   @override
   String toString() {
@@ -3629,10 +3593,13 @@ class _$AutoTrackingFreqTwelveHours implements AutoTrackingFreqTwelveHours {
   }
 
   @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) || (other is AutoTrackingFreqTwelveHours);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AutoTrackingFreqTwelveHoursImpl);
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -3651,11 +3618,11 @@ class _$AutoTrackingFreqTwelveHours implements AutoTrackingFreqTwelveHours {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? sixHours,
-    TResult Function()? twelveHours,
-    TResult Function()? oneDay,
-    TResult Function()? threeDays,
-    TResult Function()? oneWeek,
+    TResult? Function()? sixHours,
+    TResult? Function()? twelveHours,
+    TResult? Function()? oneDay,
+    TResult? Function()? threeDays,
+    TResult? Function()? oneWeek,
   }) {
     return twelveHours?.call();
   }
@@ -3691,11 +3658,11 @@ class _$AutoTrackingFreqTwelveHours implements AutoTrackingFreqTwelveHours {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(AutoTrackingFreqSixHours value)? sixHours,
-    TResult Function(AutoTrackingFreqTwelveHours value)? twelveHours,
-    TResult Function(AutoTrackingFreqOneDay value)? oneDay,
-    TResult Function(AutoTrackingFreqThreeDays value)? threeDays,
-    TResult Function(AutoTrackingFreqOneWeek value)? oneWeek,
+    TResult? Function(AutoTrackingFreqSixHours value)? sixHours,
+    TResult? Function(AutoTrackingFreqTwelveHours value)? twelveHours,
+    TResult? Function(AutoTrackingFreqOneDay value)? oneDay,
+    TResult? Function(AutoTrackingFreqThreeDays value)? threeDays,
+    TResult? Function(AutoTrackingFreqOneWeek value)? oneWeek,
   }) {
     return twelveHours?.call(this);
   }
@@ -3718,44 +3685,49 @@ class _$AutoTrackingFreqTwelveHours implements AutoTrackingFreqTwelveHours {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$AutoTrackingFreqTwelveHoursToJson(this)
-      ..['runtimeType'] = 'twelveHours';
+    return _$$AutoTrackingFreqTwelveHoursImplToJson(
+      this,
+    );
   }
 }
 
 abstract class AutoTrackingFreqTwelveHours implements AutoTrackingFreq {
-  const factory AutoTrackingFreqTwelveHours() = _$AutoTrackingFreqTwelveHours;
+  const factory AutoTrackingFreqTwelveHours() =
+      _$AutoTrackingFreqTwelveHoursImpl;
 
   factory AutoTrackingFreqTwelveHours.fromJson(Map<String, dynamic> json) =
-      _$AutoTrackingFreqTwelveHours.fromJson;
+      _$AutoTrackingFreqTwelveHoursImpl.fromJson;
 }
 
 /// @nodoc
-abstract class $AutoTrackingFreqOneDayCopyWith<$Res> {
-  factory $AutoTrackingFreqOneDayCopyWith(AutoTrackingFreqOneDay value,
-          $Res Function(AutoTrackingFreqOneDay) then) =
-      _$AutoTrackingFreqOneDayCopyWithImpl<$Res>;
+abstract class _$$AutoTrackingFreqOneDayImplCopyWith<$Res> {
+  factory _$$AutoTrackingFreqOneDayImplCopyWith(
+          _$AutoTrackingFreqOneDayImpl value,
+          $Res Function(_$AutoTrackingFreqOneDayImpl) then) =
+      __$$AutoTrackingFreqOneDayImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$AutoTrackingFreqOneDayCopyWithImpl<$Res>
-    extends _$AutoTrackingFreqCopyWithImpl<$Res>
-    implements $AutoTrackingFreqOneDayCopyWith<$Res> {
-  _$AutoTrackingFreqOneDayCopyWithImpl(AutoTrackingFreqOneDay _value,
-      $Res Function(AutoTrackingFreqOneDay) _then)
-      : super(_value, (v) => _then(v as AutoTrackingFreqOneDay));
-
-  @override
-  AutoTrackingFreqOneDay get _value => super._value as AutoTrackingFreqOneDay;
+class __$$AutoTrackingFreqOneDayImplCopyWithImpl<$Res>
+    extends _$AutoTrackingFreqCopyWithImpl<$Res, _$AutoTrackingFreqOneDayImpl>
+    implements _$$AutoTrackingFreqOneDayImplCopyWith<$Res> {
+  __$$AutoTrackingFreqOneDayImplCopyWithImpl(
+      _$AutoTrackingFreqOneDayImpl _value,
+      $Res Function(_$AutoTrackingFreqOneDayImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$AutoTrackingFreqOneDay implements AutoTrackingFreqOneDay {
-  const _$AutoTrackingFreqOneDay();
+class _$AutoTrackingFreqOneDayImpl implements AutoTrackingFreqOneDay {
+  const _$AutoTrackingFreqOneDayImpl({final String? $type})
+      : $type = $type ?? 'oneDay';
 
-  factory _$AutoTrackingFreqOneDay.fromJson(Map<String, dynamic> json) =>
-      _$$AutoTrackingFreqOneDayFromJson(json);
+  factory _$AutoTrackingFreqOneDayImpl.fromJson(Map<String, dynamic> json) =>
+      _$$AutoTrackingFreqOneDayImplFromJson(json);
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
 
   @override
   String toString() {
@@ -3763,10 +3735,13 @@ class _$AutoTrackingFreqOneDay implements AutoTrackingFreqOneDay {
   }
 
   @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) || (other is AutoTrackingFreqOneDay);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AutoTrackingFreqOneDayImpl);
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -3785,11 +3760,11 @@ class _$AutoTrackingFreqOneDay implements AutoTrackingFreqOneDay {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? sixHours,
-    TResult Function()? twelveHours,
-    TResult Function()? oneDay,
-    TResult Function()? threeDays,
-    TResult Function()? oneWeek,
+    TResult? Function()? sixHours,
+    TResult? Function()? twelveHours,
+    TResult? Function()? oneDay,
+    TResult? Function()? threeDays,
+    TResult? Function()? oneWeek,
   }) {
     return oneDay?.call();
   }
@@ -3825,11 +3800,11 @@ class _$AutoTrackingFreqOneDay implements AutoTrackingFreqOneDay {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(AutoTrackingFreqSixHours value)? sixHours,
-    TResult Function(AutoTrackingFreqTwelveHours value)? twelveHours,
-    TResult Function(AutoTrackingFreqOneDay value)? oneDay,
-    TResult Function(AutoTrackingFreqThreeDays value)? threeDays,
-    TResult Function(AutoTrackingFreqOneWeek value)? oneWeek,
+    TResult? Function(AutoTrackingFreqSixHours value)? sixHours,
+    TResult? Function(AutoTrackingFreqTwelveHours value)? twelveHours,
+    TResult? Function(AutoTrackingFreqOneDay value)? oneDay,
+    TResult? Function(AutoTrackingFreqThreeDays value)? threeDays,
+    TResult? Function(AutoTrackingFreqOneWeek value)? oneWeek,
   }) {
     return oneDay?.call(this);
   }
@@ -3852,44 +3827,49 @@ class _$AutoTrackingFreqOneDay implements AutoTrackingFreqOneDay {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$AutoTrackingFreqOneDayToJson(this)..['runtimeType'] = 'oneDay';
+    return _$$AutoTrackingFreqOneDayImplToJson(
+      this,
+    );
   }
 }
 
 abstract class AutoTrackingFreqOneDay implements AutoTrackingFreq {
-  const factory AutoTrackingFreqOneDay() = _$AutoTrackingFreqOneDay;
+  const factory AutoTrackingFreqOneDay() = _$AutoTrackingFreqOneDayImpl;
 
   factory AutoTrackingFreqOneDay.fromJson(Map<String, dynamic> json) =
-      _$AutoTrackingFreqOneDay.fromJson;
+      _$AutoTrackingFreqOneDayImpl.fromJson;
 }
 
 /// @nodoc
-abstract class $AutoTrackingFreqThreeDaysCopyWith<$Res> {
-  factory $AutoTrackingFreqThreeDaysCopyWith(AutoTrackingFreqThreeDays value,
-          $Res Function(AutoTrackingFreqThreeDays) then) =
-      _$AutoTrackingFreqThreeDaysCopyWithImpl<$Res>;
+abstract class _$$AutoTrackingFreqThreeDaysImplCopyWith<$Res> {
+  factory _$$AutoTrackingFreqThreeDaysImplCopyWith(
+          _$AutoTrackingFreqThreeDaysImpl value,
+          $Res Function(_$AutoTrackingFreqThreeDaysImpl) then) =
+      __$$AutoTrackingFreqThreeDaysImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$AutoTrackingFreqThreeDaysCopyWithImpl<$Res>
-    extends _$AutoTrackingFreqCopyWithImpl<$Res>
-    implements $AutoTrackingFreqThreeDaysCopyWith<$Res> {
-  _$AutoTrackingFreqThreeDaysCopyWithImpl(AutoTrackingFreqThreeDays _value,
-      $Res Function(AutoTrackingFreqThreeDays) _then)
-      : super(_value, (v) => _then(v as AutoTrackingFreqThreeDays));
-
-  @override
-  AutoTrackingFreqThreeDays get _value =>
-      super._value as AutoTrackingFreqThreeDays;
+class __$$AutoTrackingFreqThreeDaysImplCopyWithImpl<$Res>
+    extends _$AutoTrackingFreqCopyWithImpl<$Res,
+        _$AutoTrackingFreqThreeDaysImpl>
+    implements _$$AutoTrackingFreqThreeDaysImplCopyWith<$Res> {
+  __$$AutoTrackingFreqThreeDaysImplCopyWithImpl(
+      _$AutoTrackingFreqThreeDaysImpl _value,
+      $Res Function(_$AutoTrackingFreqThreeDaysImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$AutoTrackingFreqThreeDays implements AutoTrackingFreqThreeDays {
-  const _$AutoTrackingFreqThreeDays();
+class _$AutoTrackingFreqThreeDaysImpl implements AutoTrackingFreqThreeDays {
+  const _$AutoTrackingFreqThreeDaysImpl({final String? $type})
+      : $type = $type ?? 'threeDays';
 
-  factory _$AutoTrackingFreqThreeDays.fromJson(Map<String, dynamic> json) =>
-      _$$AutoTrackingFreqThreeDaysFromJson(json);
+  factory _$AutoTrackingFreqThreeDaysImpl.fromJson(Map<String, dynamic> json) =>
+      _$$AutoTrackingFreqThreeDaysImplFromJson(json);
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
 
   @override
   String toString() {
@@ -3897,10 +3877,13 @@ class _$AutoTrackingFreqThreeDays implements AutoTrackingFreqThreeDays {
   }
 
   @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) || (other is AutoTrackingFreqThreeDays);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AutoTrackingFreqThreeDaysImpl);
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -3919,11 +3902,11 @@ class _$AutoTrackingFreqThreeDays implements AutoTrackingFreqThreeDays {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? sixHours,
-    TResult Function()? twelveHours,
-    TResult Function()? oneDay,
-    TResult Function()? threeDays,
-    TResult Function()? oneWeek,
+    TResult? Function()? sixHours,
+    TResult? Function()? twelveHours,
+    TResult? Function()? oneDay,
+    TResult? Function()? threeDays,
+    TResult? Function()? oneWeek,
   }) {
     return threeDays?.call();
   }
@@ -3959,11 +3942,11 @@ class _$AutoTrackingFreqThreeDays implements AutoTrackingFreqThreeDays {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(AutoTrackingFreqSixHours value)? sixHours,
-    TResult Function(AutoTrackingFreqTwelveHours value)? twelveHours,
-    TResult Function(AutoTrackingFreqOneDay value)? oneDay,
-    TResult Function(AutoTrackingFreqThreeDays value)? threeDays,
-    TResult Function(AutoTrackingFreqOneWeek value)? oneWeek,
+    TResult? Function(AutoTrackingFreqSixHours value)? sixHours,
+    TResult? Function(AutoTrackingFreqTwelveHours value)? twelveHours,
+    TResult? Function(AutoTrackingFreqOneDay value)? oneDay,
+    TResult? Function(AutoTrackingFreqThreeDays value)? threeDays,
+    TResult? Function(AutoTrackingFreqOneWeek value)? oneWeek,
   }) {
     return threeDays?.call(this);
   }
@@ -3986,44 +3969,48 @@ class _$AutoTrackingFreqThreeDays implements AutoTrackingFreqThreeDays {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$AutoTrackingFreqThreeDaysToJson(this)
-      ..['runtimeType'] = 'threeDays';
+    return _$$AutoTrackingFreqThreeDaysImplToJson(
+      this,
+    );
   }
 }
 
 abstract class AutoTrackingFreqThreeDays implements AutoTrackingFreq {
-  const factory AutoTrackingFreqThreeDays() = _$AutoTrackingFreqThreeDays;
+  const factory AutoTrackingFreqThreeDays() = _$AutoTrackingFreqThreeDaysImpl;
 
   factory AutoTrackingFreqThreeDays.fromJson(Map<String, dynamic> json) =
-      _$AutoTrackingFreqThreeDays.fromJson;
+      _$AutoTrackingFreqThreeDaysImpl.fromJson;
 }
 
 /// @nodoc
-abstract class $AutoTrackingFreqOneWeekCopyWith<$Res> {
-  factory $AutoTrackingFreqOneWeekCopyWith(AutoTrackingFreqOneWeek value,
-          $Res Function(AutoTrackingFreqOneWeek) then) =
-      _$AutoTrackingFreqOneWeekCopyWithImpl<$Res>;
+abstract class _$$AutoTrackingFreqOneWeekImplCopyWith<$Res> {
+  factory _$$AutoTrackingFreqOneWeekImplCopyWith(
+          _$AutoTrackingFreqOneWeekImpl value,
+          $Res Function(_$AutoTrackingFreqOneWeekImpl) then) =
+      __$$AutoTrackingFreqOneWeekImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$AutoTrackingFreqOneWeekCopyWithImpl<$Res>
-    extends _$AutoTrackingFreqCopyWithImpl<$Res>
-    implements $AutoTrackingFreqOneWeekCopyWith<$Res> {
-  _$AutoTrackingFreqOneWeekCopyWithImpl(AutoTrackingFreqOneWeek _value,
-      $Res Function(AutoTrackingFreqOneWeek) _then)
-      : super(_value, (v) => _then(v as AutoTrackingFreqOneWeek));
-
-  @override
-  AutoTrackingFreqOneWeek get _value => super._value as AutoTrackingFreqOneWeek;
+class __$$AutoTrackingFreqOneWeekImplCopyWithImpl<$Res>
+    extends _$AutoTrackingFreqCopyWithImpl<$Res, _$AutoTrackingFreqOneWeekImpl>
+    implements _$$AutoTrackingFreqOneWeekImplCopyWith<$Res> {
+  __$$AutoTrackingFreqOneWeekImplCopyWithImpl(
+      _$AutoTrackingFreqOneWeekImpl _value,
+      $Res Function(_$AutoTrackingFreqOneWeekImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$AutoTrackingFreqOneWeek implements AutoTrackingFreqOneWeek {
-  const _$AutoTrackingFreqOneWeek();
+class _$AutoTrackingFreqOneWeekImpl implements AutoTrackingFreqOneWeek {
+  const _$AutoTrackingFreqOneWeekImpl({final String? $type})
+      : $type = $type ?? 'oneWeek';
 
-  factory _$AutoTrackingFreqOneWeek.fromJson(Map<String, dynamic> json) =>
-      _$$AutoTrackingFreqOneWeekFromJson(json);
+  factory _$AutoTrackingFreqOneWeekImpl.fromJson(Map<String, dynamic> json) =>
+      _$$AutoTrackingFreqOneWeekImplFromJson(json);
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
 
   @override
   String toString() {
@@ -4031,10 +4018,13 @@ class _$AutoTrackingFreqOneWeek implements AutoTrackingFreqOneWeek {
   }
 
   @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) || (other is AutoTrackingFreqOneWeek);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AutoTrackingFreqOneWeekImpl);
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -4053,11 +4043,11 @@ class _$AutoTrackingFreqOneWeek implements AutoTrackingFreqOneWeek {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? sixHours,
-    TResult Function()? twelveHours,
-    TResult Function()? oneDay,
-    TResult Function()? threeDays,
-    TResult Function()? oneWeek,
+    TResult? Function()? sixHours,
+    TResult? Function()? twelveHours,
+    TResult? Function()? oneDay,
+    TResult? Function()? threeDays,
+    TResult? Function()? oneWeek,
   }) {
     return oneWeek?.call();
   }
@@ -4093,11 +4083,11 @@ class _$AutoTrackingFreqOneWeek implements AutoTrackingFreqOneWeek {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(AutoTrackingFreqSixHours value)? sixHours,
-    TResult Function(AutoTrackingFreqTwelveHours value)? twelveHours,
-    TResult Function(AutoTrackingFreqOneDay value)? oneDay,
-    TResult Function(AutoTrackingFreqThreeDays value)? threeDays,
-    TResult Function(AutoTrackingFreqOneWeek value)? oneWeek,
+    TResult? Function(AutoTrackingFreqSixHours value)? sixHours,
+    TResult? Function(AutoTrackingFreqTwelveHours value)? twelveHours,
+    TResult? Function(AutoTrackingFreqOneDay value)? oneDay,
+    TResult? Function(AutoTrackingFreqThreeDays value)? threeDays,
+    TResult? Function(AutoTrackingFreqOneWeek value)? oneWeek,
   }) {
     return oneWeek?.call(this);
   }
@@ -4120,13 +4110,15 @@ class _$AutoTrackingFreqOneWeek implements AutoTrackingFreqOneWeek {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$AutoTrackingFreqOneWeekToJson(this)..['runtimeType'] = 'oneWeek';
+    return _$$AutoTrackingFreqOneWeekImplToJson(
+      this,
+    );
   }
 }
 
 abstract class AutoTrackingFreqOneWeek implements AutoTrackingFreq {
-  const factory AutoTrackingFreqOneWeek() = _$AutoTrackingFreqOneWeek;
+  const factory AutoTrackingFreqOneWeek() = _$AutoTrackingFreqOneWeekImpl;
 
   factory AutoTrackingFreqOneWeek.fromJson(Map<String, dynamic> json) =
-      _$AutoTrackingFreqOneWeek.fromJson;
+      _$AutoTrackingFreqOneWeekImpl.fromJson;
 }

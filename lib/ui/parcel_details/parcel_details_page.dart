@@ -22,16 +22,12 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:libretrack/core/storage/storage_result.dart';
 import 'package:libretrack/logger.dart';
 import 'package:libretrack/ui/parcel_details/parcel_details.dart';
-import 'package:libretrack/ui/parcel_details/parcel_menu.dart';
 import 'package:libretrack/ui/utils/utils.dart';
 import 'package:libretrack/ui/widget/widget.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:share_plus/share_plus.dart';
 
 import '../../locale.dart';
-import 'base_parcel_info.dart';
-import 'postal_service_list.dart';
-import 'tracking_history.dart';
 
 class ParcelDetailsPage extends StatefulWidget {
   final String trackNumber;
@@ -39,11 +35,11 @@ class ParcelDetailsPage extends StatefulWidget {
   final OnAddParcelCallback? onAddParcel;
 
   const ParcelDetailsPage({
-    Key? key,
+    super.key,
     required this.trackNumber,
     this.onAddMissingParcel,
     this.onAddParcel,
-  }) : super(key: key);
+  });
 
   @override
   _ParcelDetailsPageState createState() => _ParcelDetailsPageState();
@@ -85,7 +81,7 @@ class _ParcelDetailsPageState extends State<ParcelDetailsPage> {
         currentIndex: _currentPage.index,
         items: [
           BottomNavigationBarItem(
-            icon: const Icon(MdiIcons.packageVariantClosed),
+            icon: Icon(MdiIcons.packageVariantClosed),
             label: S.of(context).details,
           ),
           BottomNavigationBarItem(
@@ -110,12 +106,11 @@ class _Body extends StatefulWidget {
   final VoidCallback? onShowErrors;
 
   const _Body({
-    Key? key,
     required this.currentPage,
     this.onAddMissingParcel,
     this.onAddParcel,
     this.onShowErrors,
-  }) : super(key: key);
+  });
 
   @override
   State<_Body> createState() => _BodyState();
@@ -154,7 +149,8 @@ class _BodyState extends State<_Body> {
             loadingFailed: (trackNumber, error) {
               error?.when(
                 database: (e, stackTrace) {
-                  log().e('Unable to load parcel details', e, stackTrace);
+                  log().e('Unable to load parcel details',
+                      error: e, stackTrace: stackTrace);
                 },
               );
             },
@@ -203,10 +199,10 @@ class _BodyState extends State<_Body> {
   }
 
   void _stateListener(BuildContext context, DetailsActionsState state) {
-    void _moveParcelFailed(StorageError error) {
+    void moveParcelFailed(StorageError error) {
       error.when(
         database: (e, stackTrace) {
-          log().e("Unable to move parcel", e, stackTrace);
+          log().e("Unable to move parcel", error: e, stackTrace: stackTrace);
           AdaptiveScaffold.of(context).showAdaptiveToast(
             text: S.of(context).moveParcelFailed(1),
           );
@@ -218,7 +214,8 @@ class _BodyState extends State<_Body> {
       deleteFailed: (error) {
         error.when(
           database: (e, stackTrace) {
-            log().e("Unable to delete parcel", e, stackTrace);
+            log()
+                .e("Unable to delete parcel", error: e, stackTrace: stackTrace);
             AdaptiveScaffold.of(context).showAdaptiveToast(
               text: S.of(context).deleteParcelsFailed(1),
             );
@@ -228,7 +225,8 @@ class _BodyState extends State<_Body> {
       markAsReadFailed: (error) {
         error.when(
           database: (e, stackTrace) {
-            log().e("Unable to mark parcel as read", e, stackTrace);
+            log().e("Unable to mark parcel as read",
+                error: e, stackTrace: stackTrace);
             AdaptiveScaffold.of(context).showAdaptiveToast(
               text: S.of(context).markAsReadParcelFailed(1),
             );
@@ -240,17 +238,18 @@ class _BodyState extends State<_Body> {
           text: S.of(context).parcelMovedToActiveSuccess,
         );
       },
-      moveToActiveFailed: _moveParcelFailed,
+      moveToActiveFailed: moveParcelFailed,
       moveToArchiveSuccess: () {
         AdaptiveScaffold.of(context).showAdaptiveToast(
           text: S.of(context).parcelMovedToArchiveSuccess,
         );
       },
-      moveToArchiveFailed: _moveParcelFailed,
+      moveToArchiveFailed: moveParcelFailed,
       refreshFailed: (error) {
         error.when(
           database: (e, stackTrace) {
-            log().e("Unable to refresh parcel", e, stackTrace);
+            log().e("Unable to refresh parcel",
+                error: e, stackTrace: stackTrace);
             AdaptiveScaffold.of(context).showAdaptiveToast(
               text: S.of(context).refreshParcelsFailed(1),
             );
@@ -261,7 +260,7 @@ class _BodyState extends State<_Body> {
         try {
           await Share.share(text);
         } on Exception catch (e, stackTrace) {
-          log().e("Unable to share", e, stackTrace);
+          log().e("Unable to share", error: e, stackTrace: stackTrace);
           AdaptiveScaffold.of(context).showAdaptiveToast(
             text: S.of(context).shareFailed,
           );
@@ -280,7 +279,8 @@ class _BodyState extends State<_Body> {
       activateFailed: (error) {
         error.when(
           database: (e, stackTrace) {
-            log().e("Unable to activate tracking", e, stackTrace);
+            log().e("Unable to activate tracking",
+                error: e, stackTrace: stackTrace);
             AdaptiveScaffold.of(context).showAdaptiveToast(
               text: S.of(context).activateTrackingFailed,
             );
@@ -306,11 +306,10 @@ class _Details extends StatelessWidget {
   final OnAddParcelCallback? onAddParcel;
 
   const _Details({
-    Key? key,
     required this.info,
     this.onShowErrors,
     this.onAddParcel,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -415,9 +414,8 @@ class _ParcelNotFound extends StatelessWidget {
   final VoidCallback? onAddPressed;
 
   const _ParcelNotFound({
-    Key? key,
     this.onAddPressed,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -428,7 +426,7 @@ class _ParcelNotFound extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           mainAxisSize: MainAxisSize.min,
           children: [
-            const Icon(
+            Icon(
               MdiIcons.textBoxSearchOutline,
               size: 100,
               color: Colors.blueGrey,
@@ -438,7 +436,7 @@ class _ParcelNotFound extends StatelessWidget {
               S.of(context).parcelNotFound,
               style: Theme.of(context)
                   .textTheme
-                  .headline5!
+                  .headlineSmall!
                   .copyWith(color: Colors.blueGrey),
             ),
             const SizedBox(height: 24.0),

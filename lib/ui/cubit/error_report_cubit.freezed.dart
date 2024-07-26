@@ -1,6 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'error_report_cubit.dart';
 
@@ -11,31 +12,7 @@ part of 'error_report_cubit.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$ErrorReportStateTearOff {
-  const _$ErrorReportStateTearOff();
-
-  ErrorReportStateInitial initial() {
-    return const ErrorReportStateInitial();
-  }
-
-  ErrorReportStateInProgress inProgress() {
-    return const ErrorReportStateInProgress();
-  }
-
-  ErrorReportStateSuccess success() {
-    return const ErrorReportStateSuccess();
-  }
-
-  ErrorReportStateEmailUnsupported emailUnsupported() {
-    return const ErrorReportStateEmailUnsupported();
-  }
-}
-
-/// @nodoc
-const $ErrorReportState = _$ErrorReportStateTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$ErrorReportState {
@@ -49,10 +26,10 @@ mixin _$ErrorReportState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? inProgress,
-    TResult Function()? success,
-    TResult Function()? emailUnsupported,
+    TResult? Function()? initial,
+    TResult? Function()? inProgress,
+    TResult? Function()? success,
+    TResult? Function()? emailUnsupported,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -75,10 +52,10 @@ mixin _$ErrorReportState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(ErrorReportStateInitial value)? initial,
-    TResult Function(ErrorReportStateInProgress value)? inProgress,
-    TResult Function(ErrorReportStateSuccess value)? success,
-    TResult Function(ErrorReportStateEmailUnsupported value)? emailUnsupported,
+    TResult? Function(ErrorReportStateInitial value)? initial,
+    TResult? Function(ErrorReportStateInProgress value)? inProgress,
+    TResult? Function(ErrorReportStateSuccess value)? success,
+    TResult? Function(ErrorReportStateEmailUnsupported value)? emailUnsupported,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -96,42 +73,42 @@ mixin _$ErrorReportState {
 abstract class $ErrorReportStateCopyWith<$Res> {
   factory $ErrorReportStateCopyWith(
           ErrorReportState value, $Res Function(ErrorReportState) then) =
-      _$ErrorReportStateCopyWithImpl<$Res>;
+      _$ErrorReportStateCopyWithImpl<$Res, ErrorReportState>;
 }
 
 /// @nodoc
-class _$ErrorReportStateCopyWithImpl<$Res>
+class _$ErrorReportStateCopyWithImpl<$Res, $Val extends ErrorReportState>
     implements $ErrorReportStateCopyWith<$Res> {
   _$ErrorReportStateCopyWithImpl(this._value, this._then);
 
-  final ErrorReportState _value;
   // ignore: unused_field
-  final $Res Function(ErrorReportState) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 }
 
 /// @nodoc
-abstract class $ErrorReportStateInitialCopyWith<$Res> {
-  factory $ErrorReportStateInitialCopyWith(ErrorReportStateInitial value,
-          $Res Function(ErrorReportStateInitial) then) =
-      _$ErrorReportStateInitialCopyWithImpl<$Res>;
+abstract class _$$ErrorReportStateInitialImplCopyWith<$Res> {
+  factory _$$ErrorReportStateInitialImplCopyWith(
+          _$ErrorReportStateInitialImpl value,
+          $Res Function(_$ErrorReportStateInitialImpl) then) =
+      __$$ErrorReportStateInitialImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$ErrorReportStateInitialCopyWithImpl<$Res>
-    extends _$ErrorReportStateCopyWithImpl<$Res>
-    implements $ErrorReportStateInitialCopyWith<$Res> {
-  _$ErrorReportStateInitialCopyWithImpl(ErrorReportStateInitial _value,
-      $Res Function(ErrorReportStateInitial) _then)
-      : super(_value, (v) => _then(v as ErrorReportStateInitial));
-
-  @override
-  ErrorReportStateInitial get _value => super._value as ErrorReportStateInitial;
+class __$$ErrorReportStateInitialImplCopyWithImpl<$Res>
+    extends _$ErrorReportStateCopyWithImpl<$Res, _$ErrorReportStateInitialImpl>
+    implements _$$ErrorReportStateInitialImplCopyWith<$Res> {
+  __$$ErrorReportStateInitialImplCopyWithImpl(
+      _$ErrorReportStateInitialImpl _value,
+      $Res Function(_$ErrorReportStateInitialImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$ErrorReportStateInitial implements ErrorReportStateInitial {
-  const _$ErrorReportStateInitial();
+class _$ErrorReportStateInitialImpl implements ErrorReportStateInitial {
+  const _$ErrorReportStateInitialImpl();
 
   @override
   String toString() {
@@ -139,8 +116,10 @@ class _$ErrorReportStateInitial implements ErrorReportStateInitial {
   }
 
   @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) || (other is ErrorReportStateInitial);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ErrorReportStateInitialImpl);
   }
 
   @override
@@ -160,10 +139,10 @@ class _$ErrorReportStateInitial implements ErrorReportStateInitial {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? inProgress,
-    TResult Function()? success,
-    TResult Function()? emailUnsupported,
+    TResult? Function()? initial,
+    TResult? Function()? inProgress,
+    TResult? Function()? success,
+    TResult? Function()? emailUnsupported,
   }) {
     return initial?.call();
   }
@@ -198,10 +177,10 @@ class _$ErrorReportStateInitial implements ErrorReportStateInitial {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(ErrorReportStateInitial value)? initial,
-    TResult Function(ErrorReportStateInProgress value)? inProgress,
-    TResult Function(ErrorReportStateSuccess value)? success,
-    TResult Function(ErrorReportStateEmailUnsupported value)? emailUnsupported,
+    TResult? Function(ErrorReportStateInitial value)? initial,
+    TResult? Function(ErrorReportStateInProgress value)? inProgress,
+    TResult? Function(ErrorReportStateSuccess value)? success,
+    TResult? Function(ErrorReportStateEmailUnsupported value)? emailUnsupported,
   }) {
     return initial?.call(this);
   }
@@ -223,33 +202,32 @@ class _$ErrorReportStateInitial implements ErrorReportStateInitial {
 }
 
 abstract class ErrorReportStateInitial implements ErrorReportState {
-  const factory ErrorReportStateInitial() = _$ErrorReportStateInitial;
+  const factory ErrorReportStateInitial() = _$ErrorReportStateInitialImpl;
 }
 
 /// @nodoc
-abstract class $ErrorReportStateInProgressCopyWith<$Res> {
-  factory $ErrorReportStateInProgressCopyWith(ErrorReportStateInProgress value,
-          $Res Function(ErrorReportStateInProgress) then) =
-      _$ErrorReportStateInProgressCopyWithImpl<$Res>;
+abstract class _$$ErrorReportStateInProgressImplCopyWith<$Res> {
+  factory _$$ErrorReportStateInProgressImplCopyWith(
+          _$ErrorReportStateInProgressImpl value,
+          $Res Function(_$ErrorReportStateInProgressImpl) then) =
+      __$$ErrorReportStateInProgressImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$ErrorReportStateInProgressCopyWithImpl<$Res>
-    extends _$ErrorReportStateCopyWithImpl<$Res>
-    implements $ErrorReportStateInProgressCopyWith<$Res> {
-  _$ErrorReportStateInProgressCopyWithImpl(ErrorReportStateInProgress _value,
-      $Res Function(ErrorReportStateInProgress) _then)
-      : super(_value, (v) => _then(v as ErrorReportStateInProgress));
-
-  @override
-  ErrorReportStateInProgress get _value =>
-      super._value as ErrorReportStateInProgress;
+class __$$ErrorReportStateInProgressImplCopyWithImpl<$Res>
+    extends _$ErrorReportStateCopyWithImpl<$Res,
+        _$ErrorReportStateInProgressImpl>
+    implements _$$ErrorReportStateInProgressImplCopyWith<$Res> {
+  __$$ErrorReportStateInProgressImplCopyWithImpl(
+      _$ErrorReportStateInProgressImpl _value,
+      $Res Function(_$ErrorReportStateInProgressImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$ErrorReportStateInProgress implements ErrorReportStateInProgress {
-  const _$ErrorReportStateInProgress();
+class _$ErrorReportStateInProgressImpl implements ErrorReportStateInProgress {
+  const _$ErrorReportStateInProgressImpl();
 
   @override
   String toString() {
@@ -257,8 +235,10 @@ class _$ErrorReportStateInProgress implements ErrorReportStateInProgress {
   }
 
   @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) || (other is ErrorReportStateInProgress);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ErrorReportStateInProgressImpl);
   }
 
   @override
@@ -278,10 +258,10 @@ class _$ErrorReportStateInProgress implements ErrorReportStateInProgress {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? inProgress,
-    TResult Function()? success,
-    TResult Function()? emailUnsupported,
+    TResult? Function()? initial,
+    TResult? Function()? inProgress,
+    TResult? Function()? success,
+    TResult? Function()? emailUnsupported,
   }) {
     return inProgress?.call();
   }
@@ -316,10 +296,10 @@ class _$ErrorReportStateInProgress implements ErrorReportStateInProgress {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(ErrorReportStateInitial value)? initial,
-    TResult Function(ErrorReportStateInProgress value)? inProgress,
-    TResult Function(ErrorReportStateSuccess value)? success,
-    TResult Function(ErrorReportStateEmailUnsupported value)? emailUnsupported,
+    TResult? Function(ErrorReportStateInitial value)? initial,
+    TResult? Function(ErrorReportStateInProgress value)? inProgress,
+    TResult? Function(ErrorReportStateSuccess value)? success,
+    TResult? Function(ErrorReportStateEmailUnsupported value)? emailUnsupported,
   }) {
     return inProgress?.call(this);
   }
@@ -341,32 +321,31 @@ class _$ErrorReportStateInProgress implements ErrorReportStateInProgress {
 }
 
 abstract class ErrorReportStateInProgress implements ErrorReportState {
-  const factory ErrorReportStateInProgress() = _$ErrorReportStateInProgress;
+  const factory ErrorReportStateInProgress() = _$ErrorReportStateInProgressImpl;
 }
 
 /// @nodoc
-abstract class $ErrorReportStateSuccessCopyWith<$Res> {
-  factory $ErrorReportStateSuccessCopyWith(ErrorReportStateSuccess value,
-          $Res Function(ErrorReportStateSuccess) then) =
-      _$ErrorReportStateSuccessCopyWithImpl<$Res>;
+abstract class _$$ErrorReportStateSuccessImplCopyWith<$Res> {
+  factory _$$ErrorReportStateSuccessImplCopyWith(
+          _$ErrorReportStateSuccessImpl value,
+          $Res Function(_$ErrorReportStateSuccessImpl) then) =
+      __$$ErrorReportStateSuccessImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$ErrorReportStateSuccessCopyWithImpl<$Res>
-    extends _$ErrorReportStateCopyWithImpl<$Res>
-    implements $ErrorReportStateSuccessCopyWith<$Res> {
-  _$ErrorReportStateSuccessCopyWithImpl(ErrorReportStateSuccess _value,
-      $Res Function(ErrorReportStateSuccess) _then)
-      : super(_value, (v) => _then(v as ErrorReportStateSuccess));
-
-  @override
-  ErrorReportStateSuccess get _value => super._value as ErrorReportStateSuccess;
+class __$$ErrorReportStateSuccessImplCopyWithImpl<$Res>
+    extends _$ErrorReportStateCopyWithImpl<$Res, _$ErrorReportStateSuccessImpl>
+    implements _$$ErrorReportStateSuccessImplCopyWith<$Res> {
+  __$$ErrorReportStateSuccessImplCopyWithImpl(
+      _$ErrorReportStateSuccessImpl _value,
+      $Res Function(_$ErrorReportStateSuccessImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$ErrorReportStateSuccess implements ErrorReportStateSuccess {
-  const _$ErrorReportStateSuccess();
+class _$ErrorReportStateSuccessImpl implements ErrorReportStateSuccess {
+  const _$ErrorReportStateSuccessImpl();
 
   @override
   String toString() {
@@ -374,8 +353,10 @@ class _$ErrorReportStateSuccess implements ErrorReportStateSuccess {
   }
 
   @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) || (other is ErrorReportStateSuccess);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ErrorReportStateSuccessImpl);
   }
 
   @override
@@ -395,10 +376,10 @@ class _$ErrorReportStateSuccess implements ErrorReportStateSuccess {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? inProgress,
-    TResult Function()? success,
-    TResult Function()? emailUnsupported,
+    TResult? Function()? initial,
+    TResult? Function()? inProgress,
+    TResult? Function()? success,
+    TResult? Function()? emailUnsupported,
   }) {
     return success?.call();
   }
@@ -433,10 +414,10 @@ class _$ErrorReportStateSuccess implements ErrorReportStateSuccess {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(ErrorReportStateInitial value)? initial,
-    TResult Function(ErrorReportStateInProgress value)? inProgress,
-    TResult Function(ErrorReportStateSuccess value)? success,
-    TResult Function(ErrorReportStateEmailUnsupported value)? emailUnsupported,
+    TResult? Function(ErrorReportStateInitial value)? initial,
+    TResult? Function(ErrorReportStateInProgress value)? inProgress,
+    TResult? Function(ErrorReportStateSuccess value)? success,
+    TResult? Function(ErrorReportStateEmailUnsupported value)? emailUnsupported,
   }) {
     return success?.call(this);
   }
@@ -458,36 +439,33 @@ class _$ErrorReportStateSuccess implements ErrorReportStateSuccess {
 }
 
 abstract class ErrorReportStateSuccess implements ErrorReportState {
-  const factory ErrorReportStateSuccess() = _$ErrorReportStateSuccess;
+  const factory ErrorReportStateSuccess() = _$ErrorReportStateSuccessImpl;
 }
 
 /// @nodoc
-abstract class $ErrorReportStateEmailUnsupportedCopyWith<$Res> {
-  factory $ErrorReportStateEmailUnsupportedCopyWith(
-          ErrorReportStateEmailUnsupported value,
-          $Res Function(ErrorReportStateEmailUnsupported) then) =
-      _$ErrorReportStateEmailUnsupportedCopyWithImpl<$Res>;
+abstract class _$$ErrorReportStateEmailUnsupportedImplCopyWith<$Res> {
+  factory _$$ErrorReportStateEmailUnsupportedImplCopyWith(
+          _$ErrorReportStateEmailUnsupportedImpl value,
+          $Res Function(_$ErrorReportStateEmailUnsupportedImpl) then) =
+      __$$ErrorReportStateEmailUnsupportedImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$ErrorReportStateEmailUnsupportedCopyWithImpl<$Res>
-    extends _$ErrorReportStateCopyWithImpl<$Res>
-    implements $ErrorReportStateEmailUnsupportedCopyWith<$Res> {
-  _$ErrorReportStateEmailUnsupportedCopyWithImpl(
-      ErrorReportStateEmailUnsupported _value,
-      $Res Function(ErrorReportStateEmailUnsupported) _then)
-      : super(_value, (v) => _then(v as ErrorReportStateEmailUnsupported));
-
-  @override
-  ErrorReportStateEmailUnsupported get _value =>
-      super._value as ErrorReportStateEmailUnsupported;
+class __$$ErrorReportStateEmailUnsupportedImplCopyWithImpl<$Res>
+    extends _$ErrorReportStateCopyWithImpl<$Res,
+        _$ErrorReportStateEmailUnsupportedImpl>
+    implements _$$ErrorReportStateEmailUnsupportedImplCopyWith<$Res> {
+  __$$ErrorReportStateEmailUnsupportedImplCopyWithImpl(
+      _$ErrorReportStateEmailUnsupportedImpl _value,
+      $Res Function(_$ErrorReportStateEmailUnsupportedImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$ErrorReportStateEmailUnsupported
+class _$ErrorReportStateEmailUnsupportedImpl
     implements ErrorReportStateEmailUnsupported {
-  const _$ErrorReportStateEmailUnsupported();
+  const _$ErrorReportStateEmailUnsupportedImpl();
 
   @override
   String toString() {
@@ -495,9 +473,10 @@ class _$ErrorReportStateEmailUnsupported
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is ErrorReportStateEmailUnsupported);
+        (other.runtimeType == runtimeType &&
+            other is _$ErrorReportStateEmailUnsupportedImpl);
   }
 
   @override
@@ -517,10 +496,10 @@ class _$ErrorReportStateEmailUnsupported
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? inProgress,
-    TResult Function()? success,
-    TResult Function()? emailUnsupported,
+    TResult? Function()? initial,
+    TResult? Function()? inProgress,
+    TResult? Function()? success,
+    TResult? Function()? emailUnsupported,
   }) {
     return emailUnsupported?.call();
   }
@@ -555,10 +534,10 @@ class _$ErrorReportStateEmailUnsupported
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(ErrorReportStateInitial value)? initial,
-    TResult Function(ErrorReportStateInProgress value)? inProgress,
-    TResult Function(ErrorReportStateSuccess value)? success,
-    TResult Function(ErrorReportStateEmailUnsupported value)? emailUnsupported,
+    TResult? Function(ErrorReportStateInitial value)? initial,
+    TResult? Function(ErrorReportStateInProgress value)? inProgress,
+    TResult? Function(ErrorReportStateSuccess value)? success,
+    TResult? Function(ErrorReportStateEmailUnsupported value)? emailUnsupported,
   }) {
     return emailUnsupported?.call(this);
   }
@@ -581,5 +560,5 @@ class _$ErrorReportStateEmailUnsupported
 
 abstract class ErrorReportStateEmailUnsupported implements ErrorReportState {
   const factory ErrorReportStateEmailUnsupported() =
-      _$ErrorReportStateEmailUnsupported;
+      _$ErrorReportStateEmailUnsupportedImpl;
 }

@@ -23,10 +23,10 @@ class EmptyListStub extends StatelessWidget {
   final Text text;
 
   const EmptyListStub({
-    Key? key,
+    super.key,
     required this.icon,
     required this.text,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

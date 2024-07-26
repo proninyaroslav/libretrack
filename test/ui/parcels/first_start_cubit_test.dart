@@ -74,7 +74,7 @@ void main() {
       'Hide add account tip (not the first start)',
       build: () => cubit,
       act: (FirstStartCubit cubit) async {
-         when(
+        when(
           () => mockServiceRepo.getAllServices(),
         ).thenAnswer(
           (_) async => const StorageResult([

@@ -4,272 +4,366 @@
 // InjectableConfigGenerator
 // **************************************************************************
 
-import 'package:flutter_secure_storage/flutter_secure_storage.dart' as _i8;
-import 'package:get_it/get_it.dart' as _i1;
-import 'package:http/http.dart' as _i5;
-import 'package:injectable/injectable.dart' as _i2;
-import 'package:shared_preferences/shared_preferences.dart' as _i18;
+// ignore_for_file: type=lint
+// coverage:ignore-file
 
-import 'core/app_database_isolate_binder.dart' as _i4;
-import 'core/crash_report/crash_report_builder.dart' as _i31;
-import 'core/crash_report/crash_report_id_generator.dart' as _i6;
-import 'core/crash_report/crash_report_manager.dart' as _i52;
-import 'core/crash_report/crash_report_sender.dart' as _i32;
-import 'core/date_time_provider.dart' as _i7;
-import 'core/model/fetcher.dart' as _i35;
-import 'core/model/http/http_client.dart' as _i9;
-import 'core/model/http/http_client_factory.dart' as _i10;
-import 'core/model/parser_factory.dart' as _i12;
-import 'core/model/request_factory.dart' as _i14;
-import 'core/model/tracking_service.dart' as _i45;
-import 'core/notification_manager.dart' as _i37;
-import 'core/platform_info.dart' as _i13;
-import 'core/settings/settings.dart' as _i30;
-import 'core/storage/database.dart' as _i3;
-import 'core/storage/service_auth_storage.dart' as _i16;
-import 'core/storage/service_repository.dart' as _i17;
-import 'core/storage/shipment_repository.dart' as _i19;
-import 'core/storage/track_number_repository.dart' as _i20;
-import 'core/storage/tracking_repository.dart' as _i22;
-import 'core/storage/work_manager_repository.dart' as _i24;
-import 'core/tracking_id_generator.dart' as _i21;
-import 'core/tracking_limiter.dart' as _i43;
-import 'core/tracking_scheduler.dart' as _i56;
-import 'core/transaction_id_generator.dart' as _i23;
-import 'core/work_manager/registered_workers.dart' as _i25;
-import 'core/work_manager/work_manager.dart' as _i48;
-import 'core/worker/tracking_all_worker.dart' as _i54;
-import 'core/worker/tracking_notify_task.dart' as _i44;
-import 'core/worker/tracking_periodic_worker.dart' as _i55;
-import 'core/worker/tracking_task.dart' as _i46;
-import 'core/worker/tracking_worker.dart' as _i47;
-import 'core/worker/worker_manager.dart' as _i49;
-import 'platform/system_tray.dart' as _i42;
-import 'ui/about/about_cubit.dart' as _i26;
-import 'ui/accounts/accounts_actions_cubit.dart' as _i27;
-import 'ui/accounts/accounts_cubit.dart' as _i28;
-import 'ui/add_account/add_account_cubit.dart' as _i29;
-import 'ui/add_account/service_list_cubit.dart' as _i41;
-import 'ui/add_parcels/add_parcels_cubit.dart' as _i57;
-import 'ui/app_cubit.dart' as _i50;
-import 'ui/cubit/error_report_cubit.dart' as _i53;
-import 'ui/edit_account/edit_account_cubit.dart' as _i33;
-import 'ui/edit_account/service_info_cubit.dart' as _i40;
-import 'ui/parcel_details/details_actions_cubit.dart' as _i59;
-import 'ui/parcel_details/edit_parcel_cubit.dart' as _i34;
-import 'ui/parcel_details/parcel_details_cubit.dart' as _i38;
-import 'ui/parcel_details/parcel_error_banner_cubit.dart' as _i11;
-import 'ui/parcels/first_start_cubit.dart' as _i36;
-import 'ui/parcels/parcels_actions_cubit.dart' as _i60;
-import 'ui/parcels/parcels_cubit.dart' as _i39;
-import 'ui/parcels/selectable_parcels_cubit.dart' as _i15;
-import 'ui/settings/page/appearance_cubit.dart' as _i51;
-import 'ui/settings/page/behavior_cubit.dart' as _i58;
+// ignore_for_file: no_leading_underscores_for_library_prefixes
+import 'package:flutter_secure_storage/flutter_secure_storage.dart' as _i558;
+import 'package:get_it/get_it.dart' as _i174;
+import 'package:http/http.dart' as _i519;
+import 'package:injectable/injectable.dart' as _i526;
+import 'package:libretrack/core/app_database_isolate_binder.dart' as _i398;
+import 'package:libretrack/core/crash_report/crash_report_builder.dart' as _i97;
+import 'package:libretrack/core/crash_report/crash_report_id_generator.dart'
+    as _i1024;
+import 'package:libretrack/core/crash_report/crash_report_manager.dart'
+    as _i554;
+import 'package:libretrack/core/crash_report/crash_report_sender.dart' as _i796;
+import 'package:libretrack/core/date_time_provider.dart' as _i541;
+import 'package:libretrack/core/model/fetcher.dart' as _i580;
+import 'package:libretrack/core/model/http/http_client.dart' as _i581;
+import 'package:libretrack/core/model/http/http_client_factory.dart' as _i131;
+import 'package:libretrack/core/model/parser_factory.dart' as _i761;
+import 'package:libretrack/core/model/request_factory.dart' as _i324;
+import 'package:libretrack/core/model/tracking_service.dart' as _i910;
+import 'package:libretrack/core/notification_manager.dart' as _i710;
+import 'package:libretrack/core/platform_info.dart' as _i253;
+import 'package:libretrack/core/settings/settings.dart' as _i23;
+import 'package:libretrack/core/storage/database.dart' as _i93;
+import 'package:libretrack/core/storage/service_auth_storage.dart' as _i776;
+import 'package:libretrack/core/storage/service_repository.dart' as _i35;
+import 'package:libretrack/core/storage/shipment_repository.dart' as _i144;
+import 'package:libretrack/core/storage/track_number_repository.dart' as _i819;
+import 'package:libretrack/core/storage/tracking_repository.dart' as _i1023;
+import 'package:libretrack/core/storage/work_manager_repository.dart' as _i36;
+import 'package:libretrack/core/tracking_id_generator.dart' as _i132;
+import 'package:libretrack/core/tracking_limiter.dart' as _i521;
+import 'package:libretrack/core/tracking_scheduler.dart' as _i268;
+import 'package:libretrack/core/transaction_id_generator.dart' as _i403;
+import 'package:libretrack/core/work_manager/registered_workers.dart' as _i1014;
+import 'package:libretrack/core/work_manager/work_manager.dart' as _i94;
+import 'package:libretrack/core/worker/tracking_all_worker.dart' as _i506;
+import 'package:libretrack/core/worker/tracking_notify_task.dart' as _i514;
+import 'package:libretrack/core/worker/tracking_periodic_worker.dart' as _i660;
+import 'package:libretrack/core/worker/tracking_task.dart' as _i257;
+import 'package:libretrack/core/worker/tracking_worker.dart' as _i901;
+import 'package:libretrack/core/worker/worker_manager.dart' as _i577;
+import 'package:libretrack/platform/system_tray.dart' as _i728;
+import 'package:libretrack/ui/about/about_cubit.dart' as _i510;
+import 'package:libretrack/ui/accounts/accounts_actions_cubit.dart' as _i832;
+import 'package:libretrack/ui/accounts/accounts_cubit.dart' as _i854;
+import 'package:libretrack/ui/add_account/add_account_cubit.dart' as _i198;
+import 'package:libretrack/ui/add_account/service_list_cubit.dart' as _i65;
+import 'package:libretrack/ui/add_parcels/add_parcels_cubit.dart' as _i279;
+import 'package:libretrack/ui/app_cubit.dart' as _i179;
+import 'package:libretrack/ui/cubit/error_report_cubit.dart' as _i424;
+import 'package:libretrack/ui/edit_account/edit_account_cubit.dart' as _i868;
+import 'package:libretrack/ui/edit_account/service_info_cubit.dart' as _i808;
+import 'package:libretrack/ui/parcel_details/details_actions_cubit.dart'
+    as _i543;
+import 'package:libretrack/ui/parcel_details/edit_parcel_cubit.dart' as _i1022;
+import 'package:libretrack/ui/parcel_details/parcel_details_cubit.dart'
+    as _i1025;
+import 'package:libretrack/ui/parcel_details/parcel_error_banner_cubit.dart'
+    as _i947;
+import 'package:libretrack/ui/parcels/first_start_cubit.dart' as _i521;
+import 'package:libretrack/ui/parcels/parcels_actions_cubit.dart' as _i833;
+import 'package:libretrack/ui/parcels/parcels_cubit.dart' as _i664;
+import 'package:libretrack/ui/parcels/selectable_parcels_cubit.dart' as _i980;
+import 'package:libretrack/ui/settings/page/appearance_cubit.dart' as _i83;
+import 'package:libretrack/ui/settings/page/behavior_cubit.dart' as _i819;
+import 'package:shared_preferences/shared_preferences.dart' as _i460;
 
+const String _dev = 'dev';
 const String _test = 'test';
 const String _prod = 'prod';
-const String _dev = 'dev';
-// ignore_for_file: unnecessary_lambdas
-// ignore_for_file: lines_longer_than_80_chars
-/// initializes the registration of provided dependencies inside of [GetIt]
-Future<_i1.GetIt> $initGetIt(_i1.GetIt get,
-    {String? environment, _i2.EnvironmentFilter? environmentFilter}) async {
-  final gh = _i2.GetItHelper(get, environment, environmentFilter);
-  final appDatabaseModule = _$AppDatabaseModule();
-  final clientModule = _$ClientModule();
-  final flutterSecureStorageModule = _$FlutterSecureStorageModule();
-  final sharedPreferencesModule = _$SharedPreferencesModule();
-  await gh.singletonAsync<_i3.AppDatabase>(() => appDatabaseModule.inMemoryDb,
-      registerFor: {_test}, preResolve: true);
-  await gh.singletonAsync<_i3.AppDatabase>(() => appDatabaseModule.db,
-      registerFor: {_prod, _dev}, preResolve: true);
-  gh.singleton<_i4.AppDatabaseIsolateBinder>(
-      _i4.AppDatabaseIsolateBinder(get<_i3.AppDatabase>()));
-  gh.factory<_i5.Client>(() => clientModule.client);
-  gh.factory<_i6.CrashReportIdGenerator>(
-      () => _i6.CrashReportIdGeneratorImpl());
-  gh.factory<_i7.DateTimeProvider>(() => _i7.DateTimeProviderImpl());
-  gh.factory<_i8.FlutterSecureStorage>(
-      () => flutterSecureStorageModule.testStorage,
-      registerFor: {_test});
-  gh.factory<_i8.FlutterSecureStorage>(() => flutterSecureStorageModule.storage,
-      registerFor: {_prod, _dev});
-  gh.factory<_i9.HttpClient>(() => _i9.HttpClientImpl(get<_i5.Client>()));
-  gh.factory<_i10.HttpClientFactory>(
-      () => _i10.HttpClientFactoryImpl(get<_i5.Client>()));
-  gh.factory<_i11.ParcelErrorBannerCubit>(() => _i11.ParcelErrorBannerCubit());
-  gh.factory<_i12.ParserFactory>(
-      () => _i12.ParserFactoryImpl(get<_i7.DateTimeProvider>()));
-  gh.factory<_i13.PlatformInfo>(() => _i13.PlatformInfoImpl());
-  gh.factory<_i14.RequestFactory>(() => _i14.RequestFactoryImpl(),
-      registerFor: {_prod});
-  gh.factory<_i14.RequestFactory>(() => _i14.DevRequestFactoryImpl(),
-      registerFor: {_dev, _test});
-  gh.factory<_i15.SelectableParcelsCubit>(() => _i15.SelectableParcelsCubit());
-  gh.factory<_i16.ServiceAuthStorage>(() => _i16.ServiceAuthStorageImpl(
-      get<_i3.AppDatabase>(),
-      get<_i8.FlutterSecureStorage>(),
-      get<_i13.PlatformInfo>()));
-  gh.singleton<_i17.ServiceRepository>(_i17.ServiceRepositoryImpl(
-      get<_i3.AppDatabase>(), get<_i16.ServiceAuthStorage>()));
-  await gh.singletonAsync<_i18.SharedPreferences>(
+
+extension GetItInjectableX on _i174.GetIt {
+// initializes the registration of main-scope dependencies inside of GetIt
+  Future<_i174.GetIt> init({
+    String? environment,
+    _i526.EnvironmentFilter? environmentFilter,
+  }) async {
+    final gh = _i526.GetItHelper(
+      this,
+      environment,
+      environmentFilter,
+    );
+    final clientModule = _$ClientModule();
+    final flutterSecureStorageModule = _$FlutterSecureStorageModule();
+    final sharedPreferencesModule = _$SharedPreferencesModule();
+    final appDatabaseModule = _$AppDatabaseModule();
+    gh.factory<_i947.ParcelErrorBannerCubit>(
+        () => _i947.ParcelErrorBannerCubit());
+    gh.factory<_i980.SelectableParcelsCubit>(
+        () => _i980.SelectableParcelsCubit());
+    gh.factory<_i519.Client>(() => clientModule.client);
+    gh.factory<_i131.HttpClientFactory>(
+        () => _i131.HttpClientFactoryImpl(gh<_i519.Client>()));
+    gh.factory<_i1024.CrashReportIdGenerator>(
+        () => _i1024.CrashReportIdGeneratorImpl());
+    gh.factory<_i324.RequestFactory>(
+      () => _i324.DevRequestFactoryImpl(),
+      registerFor: {
+        _dev,
+        _test,
+      },
+    );
+    gh.factory<_i132.TrackingIdGenerator>(
+        () => _i132.TrackingIdGeneratorImpl());
+    gh.factory<_i581.HttpClient>(
+        () => _i581.HttpClientImpl(gh<_i519.Client>()));
+    gh.factory<_i253.PlatformInfo>(() => _i253.PlatformInfoImpl());
+    gh.factory<_i1014.WorkersProvider>(() => _i1014.WorkersProviderImpl());
+    gh.factory<_i97.CrashReportBuilder>(
+      () => _i97.TestCrashReportBuilder(
+        gh<_i253.PlatformInfo>(),
+        gh<_i1024.CrashReportIdGenerator>(),
+      ),
+      registerFor: {_test},
+    );
+    gh.factory<_i558.FlutterSecureStorage>(
+      () => flutterSecureStorageModule.storage,
+      registerFor: {
+        _prod,
+        _dev,
+      },
+    );
+    await gh.singletonAsync<_i460.SharedPreferences>(
       () => sharedPreferencesModule.pref,
-      registerFor: {_prod, _dev},
-      preResolve: true);
-  await gh.singletonAsync<_i18.SharedPreferences>(
+      registerFor: {
+        _prod,
+        _dev,
+      },
+      preResolve: true,
+    );
+    await gh.singletonAsync<_i93.AppDatabase>(
+      () => appDatabaseModule.db,
+      registerFor: {
+        _prod,
+        _dev,
+      },
+      preResolve: true,
+    );
+    gh.factory<_i558.FlutterSecureStorage>(
+      () => flutterSecureStorageModule.testStorage,
+      registerFor: {_test},
+    );
+    await gh.singletonAsync<_i460.SharedPreferences>(
       () => sharedPreferencesModule.testPref,
       registerFor: {_test},
-      preResolve: true);
-  gh.singleton<_i19.ShipmentRepository>(
-      _i19.ShipmentRepositoryImpl(get<_i3.AppDatabase>()));
-  gh.singleton<_i20.TrackNumberRepository>(
-      _i20.TrackNumberRepositoryImpl(get<_i3.AppDatabase>()));
-  gh.factory<_i21.TrackingIdGenerator>(() => _i21.TrackingIdGeneratorImpl());
-  gh.singleton<_i22.TrackingRepository>(
-      _i22.TrackingRepositoryImpl(get<_i3.AppDatabase>()));
-  gh.factory<_i23.TransactionIdGenerator>(
-      () => _i23.TransactionIdGeneratorImpl());
-  gh.singleton<_i24.WorkManagerRepository>(
-      _i24.WorkManagerRepositoryImpl(get<_i3.AppDatabase>()));
-  gh.factory<_i25.WorkersProvider>(() => _i25.WorkersProviderImpl());
-  gh.factory<_i26.AboutCubit>(() => _i26.AboutCubit(get<_i13.PlatformInfo>()));
-  gh.factory<_i27.AccountsActionsCubit>(
-      () => _i27.AccountsActionsCubit(get<_i17.ServiceRepository>()));
-  gh.factory<_i28.AccountsCubit>(
-      () => _i28.AccountsCubit(get<_i17.ServiceRepository>()));
-  gh.factory<_i29.AddAccountCubit>(
-      () => _i29.AddAccountCubit(get<_i17.ServiceRepository>()));
-  gh.singleton<_i30.AppSettings>(
-      _i30.AppSettingsImpl(get<_i18.SharedPreferences>()));
-  gh.factory<_i31.CrashReportBuilder>(
-      () => _i31.ProdCrashReportBuilder(
-          get<_i13.PlatformInfo>(), get<_i6.CrashReportIdGenerator>()),
-      registerFor: {_prod});
-  gh.factory<_i31.CrashReportBuilder>(
-      () => _i31.DevCrashReportBuilder(
-          get<_i13.PlatformInfo>(), get<_i6.CrashReportIdGenerator>()),
-      registerFor: {_dev});
-  gh.factory<_i31.CrashReportBuilder>(
-      () => _i31.TestCrashReportBuilder(
-          get<_i13.PlatformInfo>(), get<_i6.CrashReportIdGenerator>()),
-      registerFor: {_test});
-  gh.factory<_i32.CrashReportSender>(
-      () => _i32.CrashReportSenderImpl(get<_i13.PlatformInfo>()));
-  gh.factory<_i33.EditAccountCubit>(
-      () => _i33.EditAccountCubit(get<_i17.ServiceRepository>()));
-  gh.factory<_i34.EditParcelCubit>(
-      () => _i34.EditParcelCubit(get<_i20.TrackNumberRepository>()));
-  gh.factory<_i35.Fetcher>(() => _i35.FetcherImpl(
-      get<_i10.HttpClientFactory>(), get<_i7.DateTimeProvider>()));
-  gh.factory<_i36.FirstStartCubit>(() => _i36.FirstStartCubit(
-      get<_i17.ServiceRepository>(), get<_i30.AppSettings>()));
-  gh.singleton<_i37.NotificationManager>(_i37.NotificationManagerImpl(
-      get<_i13.PlatformInfo>(), get<_i30.AppSettings>()));
-  gh.factory<_i38.ParcelDetailsCubit>(() => _i38.ParcelDetailsCubit(
-      get<_i20.TrackNumberRepository>(),
-      get<_i19.ShipmentRepository>(),
-      get<_i22.TrackingRepository>()));
-  gh.factory<_i39.ParcelsCubit>(() => _i39.ParcelsCubit(
-      get<_i20.TrackNumberRepository>(),
-      get<_i22.TrackingRepository>(),
-      get<_i19.ShipmentRepository>(),
-      get<_i30.AppSettings>()));
-  gh.factory<_i40.ServiceInfoCubit>(
-      () => _i40.ServiceInfoCubit(get<_i17.ServiceRepository>()));
-  gh.factory<_i41.ServiceListCubit>(
-      () => _i41.ServiceListCubit(get<_i17.ServiceRepository>()));
-  gh.factory<_i42.SystemTray>(
-      () => _i42.SystemTray(get<_i13.PlatformInfo>(), get<_i30.AppSettings>()));
-  gh.factory<_i43.TrackingLimiter>(() => _i43.TrackingLimiterImpl(
-      get<_i30.AppSettings>(),
-      get<_i22.TrackingRepository>(),
-      get<_i7.DateTimeProvider>()));
-  gh.factory<_i44.TrackingNotifyTask>(() => _i44.TrackingNotifyTask(
-      get<_i37.NotificationManager>(),
-      get<_i20.TrackNumberRepository>(),
-      get<_i30.AppSettings>()));
-  gh.factory<_i45.TrackingService>(() => _i45.TrackingServiceImpl(
-      get<_i14.RequestFactory>(),
-      get<_i35.Fetcher>(),
-      get<_i12.ParserFactory>()));
-  gh.factory<_i46.TrackingTask>(() => _i46.TrackingTask(
-      trackingService: get<_i45.TrackingService>(),
-      serviceRepo: get<_i17.ServiceRepository>(),
-      shipmentRepo: get<_i19.ShipmentRepository>(),
-      transactionIdGenerator: get<_i23.TransactionIdGenerator>(),
-      trackingIdGenerator: get<_i21.TrackingIdGenerator>(),
-      dateTimeProvider: get<_i7.DateTimeProvider>()));
-  gh.factory<_i47.TrackingWorker>(() => _i47.TrackingWorker(
-      trackingTask: get<_i46.TrackingTask>(),
-      trackNumberRepo: get<_i20.TrackNumberRepository>(),
-      shipmentRepo: get<_i19.ShipmentRepository>(),
-      trackingRepo: get<_i22.TrackingRepository>(),
-      notifyTask: get<_i44.TrackingNotifyTask>(),
-      platformInfo: get<_i13.PlatformInfo>(),
-      pref: get<_i30.AppSettings>(),
-      trackingLimiter: get<_i43.TrackingLimiter>()));
-  gh.singleton<_i48.WorkManager>(
-      _i48.DebugWorkManagerImpl(
-          get<_i24.WorkManagerRepository>(),
-          get<_i13.PlatformInfo>(),
-          get<_i7.DateTimeProvider>(),
-          get<_i25.WorkersProvider>()),
-      registerFor: {_dev, _test});
-  gh.singleton<_i48.WorkManager>(
-      _i48.WorkManagerImpl(
-          get<_i24.WorkManagerRepository>(),
-          get<_i13.PlatformInfo>(),
-          get<_i25.WorkersProvider>(),
-          get<_i7.DateTimeProvider>()),
-      registerFor: {_prod});
-  gh.singleton<_i49.WorkerManager>(
-      _i49.WorkerManagerImpl(get<_i48.WorkManager>()));
-  gh.singleton<_i50.AppCubit>(_i50.AppCubit(get<_i30.AppSettings>()));
-  gh.factory<_i51.AppearanceSettingsCubit>(() => _i51.AppearanceSettingsCubit(
-      get<_i30.AppSettings>(), get<_i50.AppCubit>(), get<_i42.SystemTray>()));
-  gh.factory<_i52.CrashReportManager>(() => _i52.CrashReportManagerImpl(
-      get<_i31.CrashReportBuilder>(), get<_i32.CrashReportSender>()));
-  gh.factory<_i53.ErrorReportCubit>(
-      () => _i53.ErrorReportCubit(get<_i52.CrashReportManager>()));
-  gh.factory<_i54.TrackingAllWorker>(() => _i54.TrackingAllWorker(
-      get<_i47.TrackingWorker>(),
-      get<_i20.TrackNumberRepository>(),
-      get<_i13.PlatformInfo>(),
-      get<_i30.AppSettings>()));
-  gh.factory<_i55.TrackingPeriodicWorker>(() => _i55.TrackingPeriodicWorker(
-      get<_i47.TrackingWorker>(),
-      get<_i49.WorkerManager>(),
-      get<_i22.TrackingRepository>(),
-      get<_i20.TrackNumberRepository>(),
-      get<_i30.AppSettings>(),
-      get<_i13.PlatformInfo>(),
-      get<_i7.DateTimeProvider>()));
-  gh.singleton<_i56.TrackingScheduler>(_i56.TrackingSchedulerImpl(
-      get<_i49.WorkerManager>(),
-      get<_i20.TrackNumberRepository>(),
-      get<_i43.TrackingLimiter>(),
-      get<_i30.AppSettings>()));
-  gh.factory<_i57.AddParcelsCubit>(() => _i57.AddParcelsCubit(
-      get<_i20.TrackNumberRepository>(),
-      get<_i56.TrackingScheduler>(),
-      get<_i7.DateTimeProvider>()));
-  gh.factory<_i58.BehaviorSettingsCubit>(() => _i58.BehaviorSettingsCubit(
-      get<_i30.AppSettings>(), get<_i56.TrackingScheduler>()));
-  gh.factory<_i59.DetailsActionsCubit>(() => _i59.DetailsActionsCubit(
-      get<_i20.TrackNumberRepository>(),
-      get<_i22.TrackingRepository>(),
-      get<_i56.TrackingScheduler>()));
-  gh.factory<_i60.ParcelsActionsCubit>(() => _i60.ParcelsActionsCubit(
-      get<_i20.TrackNumberRepository>(),
-      get<_i22.TrackingRepository>(),
-      get<_i56.TrackingScheduler>()));
-  return get;
+      preResolve: true,
+    );
+    await gh.singletonAsync<_i93.AppDatabase>(
+      () => appDatabaseModule.inMemoryDb,
+      registerFor: {_test},
+      preResolve: true,
+    );
+    gh.factory<_i403.TransactionIdGenerator>(
+        () => _i403.TransactionIdGeneratorImpl());
+    gh.factory<_i541.DateTimeProvider>(() => _i541.DateTimeProviderImpl());
+    gh.factory<_i97.CrashReportBuilder>(
+      () => _i97.ProdCrashReportBuilder(
+        gh<_i253.PlatformInfo>(),
+        gh<_i1024.CrashReportIdGenerator>(),
+      ),
+      registerFor: {_prod},
+    );
+    gh.factory<_i510.AboutCubit>(
+        () => _i510.AboutCubit(gh<_i253.PlatformInfo>()));
+    gh.factory<_i796.CrashReportSender>(
+        () => _i796.CrashReportSenderImpl(gh<_i253.PlatformInfo>()));
+    gh.factory<_i776.ServiceAuthStorage>(() => _i776.ServiceAuthStorageImpl(
+          gh<_i93.AppDatabase>(),
+          gh<_i558.FlutterSecureStorage>(),
+          gh<_i253.PlatformInfo>(),
+        ));
+    gh.singleton<_i23.AppSettings>(
+        () => _i23.AppSettingsImpl(gh<_i460.SharedPreferences>()));
+    gh.factory<_i324.RequestFactory>(
+      () => _i324.RequestFactoryImpl(),
+      registerFor: {_prod},
+    );
+    gh.factory<_i580.Fetcher>(() => _i580.FetcherImpl(
+          gh<_i131.HttpClientFactory>(),
+          gh<_i541.DateTimeProvider>(),
+        ));
+    gh.singleton<_i398.AppDatabaseIsolateBinder>(
+        () => _i398.AppDatabaseIsolateBinder(gh<_i93.AppDatabase>()));
+    gh.factory<_i97.CrashReportBuilder>(
+      () => _i97.DevCrashReportBuilder(
+        gh<_i253.PlatformInfo>(),
+        gh<_i1024.CrashReportIdGenerator>(),
+      ),
+      registerFor: {_dev},
+    );
+    gh.singleton<_i144.ShipmentRepository>(
+        () => _i144.ShipmentRepositoryImpl(gh<_i93.AppDatabase>()));
+    gh.singleton<_i710.NotificationManager>(() => _i710.NotificationManagerImpl(
+          gh<_i253.PlatformInfo>(),
+          gh<_i23.AppSettings>(),
+        ));
+    gh.singleton<_i819.TrackNumberRepository>(
+        () => _i819.TrackNumberRepositoryImpl(gh<_i93.AppDatabase>()));
+    gh.singleton<_i36.WorkManagerRepository>(
+        () => _i36.WorkManagerRepositoryImpl(gh<_i93.AppDatabase>()));
+    gh.factory<_i728.SystemTray>(() => _i728.SystemTray(
+          gh<_i253.PlatformInfo>(),
+          gh<_i23.AppSettings>(),
+        ));
+    gh.singleton<_i35.ServiceRepository>(() => _i35.ServiceRepositoryImpl(
+          gh<_i93.AppDatabase>(),
+          gh<_i776.ServiceAuthStorage>(),
+        ));
+    gh.singleton<_i1023.TrackingRepository>(
+        () => _i1023.TrackingRepositoryImpl(gh<_i93.AppDatabase>()));
+    gh.factory<_i521.TrackingLimiter>(() => _i521.TrackingLimiterImpl(
+          gh<_i23.AppSettings>(),
+          gh<_i1023.TrackingRepository>(),
+          gh<_i541.DateTimeProvider>(),
+        ));
+    gh.factory<_i761.ParserFactory>(
+        () => _i761.ParserFactoryImpl(gh<_i541.DateTimeProvider>()));
+    gh.factory<_i65.ServiceListCubit>(
+        () => _i65.ServiceListCubit(gh<_i35.ServiceRepository>()));
+    gh.factory<_i198.AddAccountCubit>(
+        () => _i198.AddAccountCubit(gh<_i35.ServiceRepository>()));
+    gh.factory<_i854.AccountsCubit>(
+        () => _i854.AccountsCubit(gh<_i35.ServiceRepository>()));
+    gh.factory<_i832.AccountsActionsCubit>(
+        () => _i832.AccountsActionsCubit(gh<_i35.ServiceRepository>()));
+    gh.factory<_i868.EditAccountCubit>(
+        () => _i868.EditAccountCubit(gh<_i35.ServiceRepository>()));
+    gh.factory<_i808.ServiceInfoCubit>(
+        () => _i808.ServiceInfoCubit(gh<_i35.ServiceRepository>()));
+    gh.singleton<_i94.WorkManager>(
+      () => _i94.WorkManagerImpl(
+        gh<_i36.WorkManagerRepository>(),
+        gh<_i253.PlatformInfo>(),
+        gh<_i1014.WorkersProvider>(),
+        gh<_i541.DateTimeProvider>(),
+      ),
+      registerFor: {_prod},
+    );
+    gh.factory<_i1022.EditParcelCubit>(
+        () => _i1022.EditParcelCubit(gh<_i819.TrackNumberRepository>()));
+    gh.factory<_i514.TrackingNotifyTask>(() => _i514.TrackingNotifyTask(
+          gh<_i710.NotificationManager>(),
+          gh<_i819.TrackNumberRepository>(),
+          gh<_i23.AppSettings>(),
+        ));
+    gh.singleton<_i179.AppCubit>(() => _i179.AppCubit(gh<_i23.AppSettings>()));
+    gh.factory<_i554.CrashReportManager>(() => _i554.CrashReportManagerImpl(
+          gh<_i97.CrashReportBuilder>(),
+          gh<_i796.CrashReportSender>(),
+        ));
+    gh.factory<_i910.TrackingService>(() => _i910.TrackingServiceImpl(
+          gh<_i324.RequestFactory>(),
+          gh<_i580.Fetcher>(),
+          gh<_i761.ParserFactory>(),
+        ));
+    gh.factory<_i1025.ParcelDetailsCubit>(() => _i1025.ParcelDetailsCubit(
+          gh<_i819.TrackNumberRepository>(),
+          gh<_i144.ShipmentRepository>(),
+          gh<_i1023.TrackingRepository>(),
+        ));
+    gh.factory<_i83.AppearanceSettingsCubit>(() => _i83.AppearanceSettingsCubit(
+          gh<_i23.AppSettings>(),
+          gh<_i179.AppCubit>(),
+          gh<_i728.SystemTray>(),
+        ));
+    gh.singleton<_i94.WorkManager>(
+      () => _i94.DebugWorkManagerImpl(
+        gh<_i36.WorkManagerRepository>(),
+        gh<_i253.PlatformInfo>(),
+        gh<_i541.DateTimeProvider>(),
+        gh<_i1014.WorkersProvider>(),
+      ),
+      registerFor: {
+        _dev,
+        _test,
+      },
+    );
+    gh.factory<_i257.TrackingTask>(() => _i257.TrackingTask(
+          trackingService: gh<_i910.TrackingService>(),
+          serviceRepo: gh<_i35.ServiceRepository>(),
+          shipmentRepo: gh<_i144.ShipmentRepository>(),
+          transactionIdGenerator: gh<_i403.TransactionIdGenerator>(),
+          trackingIdGenerator: gh<_i132.TrackingIdGenerator>(),
+          dateTimeProvider: gh<_i541.DateTimeProvider>(),
+        ));
+    gh.singleton<_i577.WorkerManager>(
+        () => _i577.WorkerManagerImpl(gh<_i94.WorkManager>()));
+    gh.factory<_i521.FirstStartCubit>(() => _i521.FirstStartCubit(
+          gh<_i35.ServiceRepository>(),
+          gh<_i23.AppSettings>(),
+        ));
+    gh.factory<_i664.ParcelsCubit>(() => _i664.ParcelsCubit(
+          gh<_i819.TrackNumberRepository>(),
+          gh<_i1023.TrackingRepository>(),
+          gh<_i144.ShipmentRepository>(),
+          gh<_i23.AppSettings>(),
+        ));
+    gh.factory<_i424.ErrorReportCubit>(
+        () => _i424.ErrorReportCubit(gh<_i554.CrashReportManager>()));
+    gh.singleton<_i268.TrackingScheduler>(() => _i268.TrackingSchedulerImpl(
+          gh<_i577.WorkerManager>(),
+          gh<_i819.TrackNumberRepository>(),
+          gh<_i521.TrackingLimiter>(),
+          gh<_i23.AppSettings>(),
+        ));
+    gh.factory<_i543.DetailsActionsCubit>(() => _i543.DetailsActionsCubit(
+          gh<_i819.TrackNumberRepository>(),
+          gh<_i1023.TrackingRepository>(),
+          gh<_i268.TrackingScheduler>(),
+        ));
+    gh.factory<_i833.ParcelsActionsCubit>(() => _i833.ParcelsActionsCubit(
+          gh<_i819.TrackNumberRepository>(),
+          gh<_i1023.TrackingRepository>(),
+          gh<_i268.TrackingScheduler>(),
+        ));
+    gh.factory<_i901.TrackingWorker>(() => _i901.TrackingWorker(
+          trackingTask: gh<_i257.TrackingTask>(),
+          trackNumberRepo: gh<_i819.TrackNumberRepository>(),
+          shipmentRepo: gh<_i144.ShipmentRepository>(),
+          trackingRepo: gh<_i1023.TrackingRepository>(),
+          notifyTask: gh<_i514.TrackingNotifyTask>(),
+          platformInfo: gh<_i253.PlatformInfo>(),
+          pref: gh<_i23.AppSettings>(),
+          trackingLimiter: gh<_i521.TrackingLimiter>(),
+        ));
+    gh.factory<_i279.AddParcelsCubit>(() => _i279.AddParcelsCubit(
+          gh<_i819.TrackNumberRepository>(),
+          gh<_i268.TrackingScheduler>(),
+          gh<_i541.DateTimeProvider>(),
+        ));
+    gh.factory<_i819.BehaviorSettingsCubit>(() => _i819.BehaviorSettingsCubit(
+          gh<_i23.AppSettings>(),
+          gh<_i268.TrackingScheduler>(),
+        ));
+    gh.factory<_i506.TrackingAllWorker>(() => _i506.TrackingAllWorker(
+          gh<_i901.TrackingWorker>(),
+          gh<_i819.TrackNumberRepository>(),
+          gh<_i253.PlatformInfo>(),
+          gh<_i23.AppSettings>(),
+        ));
+    gh.factory<_i660.TrackingPeriodicWorker>(() => _i660.TrackingPeriodicWorker(
+          gh<_i901.TrackingWorker>(),
+          gh<_i577.WorkerManager>(),
+          gh<_i1023.TrackingRepository>(),
+          gh<_i819.TrackNumberRepository>(),
+          gh<_i23.AppSettings>(),
+          gh<_i253.PlatformInfo>(),
+          gh<_i541.DateTimeProvider>(),
+        ));
+    return this;
+  }
 }
 
-class _$AppDatabaseModule extends _i3.AppDatabaseModule {}
+class _$ClientModule extends _i581.ClientModule {}
 
-class _$ClientModule extends _i9.ClientModule {}
+class _$FlutterSecureStorageModule extends _i776.FlutterSecureStorageModule {}
 
-class _$FlutterSecureStorageModule extends _i16.FlutterSecureStorageModule {}
+class _$SharedPreferencesModule extends _i23.SharedPreferencesModule {}
 
-class _$SharedPreferencesModule extends _i30.SharedPreferencesModule {}
+class _$AppDatabaseModule extends _i93.AppDatabaseModule {}

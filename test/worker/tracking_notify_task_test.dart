@@ -36,7 +36,7 @@ void main() {
     late AppSettings mockPref;
 
     setUpAll(() {
-      registerFallbackValue<Map<TrackNumberInfo, ShipmentActivityInfo>>({});
+      registerFallbackValue({});
       mockNotifyManager = MockNotificationManager();
       mockTrackNumberRepo = MockTrackNumberRepository();
       mockPref = MockAppSettings();

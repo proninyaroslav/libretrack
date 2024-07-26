@@ -30,7 +30,7 @@ class NumberedTextField extends StatefulWidget {
   final bool autocorrect;
 
   const NumberedTextField({
-    Key? key,
+    super.key,
     this.initLineCount = 3,
     this.controller,
     this.decoration = const InputDecoration(),
@@ -39,7 +39,7 @@ class NumberedTextField extends StatefulWidget {
     this.textCapitalization = TextCapitalization.none,
     this.enableSuggestions = true,
     this.autocorrect = true,
-  }) : super(key: key);
+  });
 
   @override
   _NumberedTextFieldState createState() => _NumberedTextFieldState();
@@ -85,7 +85,7 @@ class _NumberedTextFieldState extends State<NumberedTextField> {
 
   @override
   Widget build(BuildContext context) {
-    final style = widget.style ?? Theme.of(context).textTheme.subtitle1!;
+    final style = widget.style ?? Theme.of(context).textTheme.titleMedium!;
 
     return TextField(
       controller: widget.controller,
@@ -118,7 +118,7 @@ class _NumberedTextFieldState extends State<NumberedTextField> {
         count: _lineCount,
         initPlaceholdersCount: widget.initLineCount,
         style: style.copyWith(
-          color: Theme.of(context).textTheme.caption!.color,
+          color: Theme.of(context).textTheme.bodySmall!.color,
         ),
       );
     }
@@ -131,11 +131,10 @@ class _LineNumbersBar extends StatelessWidget {
   final TextStyle? style;
 
   const _LineNumbersBar({
-    Key? key,
     this.count = 0,
     this.initPlaceholdersCount = 0,
     this.style,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

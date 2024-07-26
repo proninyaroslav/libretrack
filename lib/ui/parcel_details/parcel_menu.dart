@@ -19,7 +19,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:libretrack/injector.dart';
-import 'package:libretrack/ui/parcel_details/edit_parcel_page.dart';
 import 'package:libretrack/ui/parcel_details/parcel_details.dart';
 import 'package:libretrack/ui/widget/custom_actions_row.dart';
 import 'package:libretrack/ui/widget/widget.dart';
@@ -39,7 +38,7 @@ enum ParcelMenuType {
 }
 
 class ParcelActions extends StatelessWidget {
-  const ParcelActions({Key? key}) : super(key: key);
+  const ParcelActions({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -100,7 +99,7 @@ class ParcelActions extends StatelessWidget {
       if (isArchive)
         CustomAction(
           visibleWidget: IconButton(
-            icon: const Icon(MdiIcons.packageVariantClosed),
+            icon: Icon(MdiIcons.packageVariantClosed),
             tooltip: S.of(context).moveToActive,
             onPressed: () => onMenuSelected?.call(ParcelMenuType.moveToActive),
           ),

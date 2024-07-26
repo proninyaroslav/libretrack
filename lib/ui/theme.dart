@@ -22,17 +22,16 @@ import 'package:flutter/services.dart';
 // ignore: avoid_classes_with_only_static_members
 class AppTheme {
   static final _lightThemeData = ThemeData(
+    useMaterial3: false,
     visualDensity: VisualDensity.adaptivePlatformDensity,
     brightness: Brightness.light,
     primarySwatch: paletteLight.primarySwatch,
     primaryColor: paletteLight.primary,
     primaryColorDark: paletteLight.primaryDark,
     primaryColorLight: paletteLight.primaryLight,
-    errorColor: paletteLight.error,
     inputDecorationTheme: inputTheme,
     cardTheme: cardTheme,
     snackBarTheme: snackBarTheme,
-    toggleableActiveColor: paletteLight.secondary,
     outlinedButtonTheme: OutlinedButtonThemeData(
       style: OutlinedButton.styleFrom(
         shape: outlinedButtonShape,
@@ -43,6 +42,7 @@ class AppTheme {
   );
 
   static final _darkThemeData = ThemeData(
+    useMaterial3: false,
     visualDensity: VisualDensity.adaptivePlatformDensity,
     brightness: Brightness.dark,
     applyElevationOverlayColor: true,
@@ -50,11 +50,9 @@ class AppTheme {
     primaryColor: paletteDark.primary,
     primaryColorDark: paletteDark.primaryDark,
     primaryColorLight: paletteDark.primaryLight,
-    errorColor: paletteDark.error,
     inputDecorationTheme: inputTheme,
     cardTheme: cardTheme,
     snackBarTheme: snackBarTheme,
-    toggleableActiveColor: paletteDark.secondary,
     outlinedButtonTheme: OutlinedButtonThemeData(
       style: OutlinedButton.styleFrom(
         shape: outlinedButtonShape,
@@ -97,7 +95,7 @@ class AppTheme {
       return _darkThemeData.copyWith(
         colorScheme: _darkThemeData.colorScheme.copyWith(
           secondary: paletteDark.secondary,
-          secondaryVariant: paletteDark.secondaryDark,
+          secondaryContainer: paletteDark.secondaryDark,
           onSecondary: _onSecondaryDark,
         ),
       );
@@ -105,7 +103,7 @@ class AppTheme {
       return _lightThemeData.copyWith(
         colorScheme: _lightThemeData.colorScheme.copyWith(
           secondary: paletteLight.secondary,
-          secondaryVariant: paletteLight.secondaryDark,
+          secondaryContainer: paletteLight.secondaryDark,
           onSecondary: _onSecondaryLight,
         ),
       );
@@ -118,7 +116,7 @@ class AppTheme {
 
   static final elevatedButtonThemeData = ElevatedButtonThemeData(
     style: ButtonStyle(
-      shape: MaterialStateProperty.all(
+      shape: WidgetStateProperty.all(
         RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(8.0),
         ),

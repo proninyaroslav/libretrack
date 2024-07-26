@@ -1,6 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'fetcher.dart';
 
@@ -11,29 +12,7 @@ part of 'fetcher.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$FetchResultTearOff {
-  const _$FetchResultTearOff();
-
-  FetchResultResponse call(ServiceResponse response) {
-    return FetchResultResponse(
-      response,
-    );
-  }
-
-  FetchResultError error(
-      {required ServiceRequest request, required FetchError error}) {
-    return FetchResultError(
-      request: request,
-      error: error,
-    );
-  }
-}
-
-/// @nodoc
-const $FetchResult = _$FetchResultTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$FetchResult {
@@ -45,8 +24,8 @@ mixin _$FetchResult {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>(
-    TResult Function(ServiceResponse response)? $default, {
-    TResult Function(ServiceRequest request, FetchError error)? error,
+    TResult? Function(ServiceResponse response)? $default, {
+    TResult? Function(ServiceRequest request, FetchError error)? error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -64,8 +43,8 @@ mixin _$FetchResult {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>(
-    TResult Function(FetchResultResponse value)? $default, {
-    TResult Function(FetchResultError value)? error,
+    TResult? Function(FetchResultResponse value)? $default, {
+    TResult? Function(FetchResultError value)? error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -81,45 +60,46 @@ mixin _$FetchResult {
 abstract class $FetchResultCopyWith<$Res> {
   factory $FetchResultCopyWith(
           FetchResult value, $Res Function(FetchResult) then) =
-      _$FetchResultCopyWithImpl<$Res>;
+      _$FetchResultCopyWithImpl<$Res, FetchResult>;
 }
 
 /// @nodoc
-class _$FetchResultCopyWithImpl<$Res> implements $FetchResultCopyWith<$Res> {
+class _$FetchResultCopyWithImpl<$Res, $Val extends FetchResult>
+    implements $FetchResultCopyWith<$Res> {
   _$FetchResultCopyWithImpl(this._value, this._then);
 
-  final FetchResult _value;
   // ignore: unused_field
-  final $Res Function(FetchResult) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 }
 
 /// @nodoc
-abstract class $FetchResultResponseCopyWith<$Res> {
-  factory $FetchResultResponseCopyWith(
-          FetchResultResponse value, $Res Function(FetchResultResponse) then) =
-      _$FetchResultResponseCopyWithImpl<$Res>;
+abstract class _$$FetchResultResponseImplCopyWith<$Res> {
+  factory _$$FetchResultResponseImplCopyWith(_$FetchResultResponseImpl value,
+          $Res Function(_$FetchResultResponseImpl) then) =
+      __$$FetchResultResponseImplCopyWithImpl<$Res>;
+  @useResult
   $Res call({ServiceResponse response});
 
   $ServiceResponseCopyWith<$Res> get response;
 }
 
 /// @nodoc
-class _$FetchResultResponseCopyWithImpl<$Res>
-    extends _$FetchResultCopyWithImpl<$Res>
-    implements $FetchResultResponseCopyWith<$Res> {
-  _$FetchResultResponseCopyWithImpl(
-      FetchResultResponse _value, $Res Function(FetchResultResponse) _then)
-      : super(_value, (v) => _then(v as FetchResultResponse));
+class __$$FetchResultResponseImplCopyWithImpl<$Res>
+    extends _$FetchResultCopyWithImpl<$Res, _$FetchResultResponseImpl>
+    implements _$$FetchResultResponseImplCopyWith<$Res> {
+  __$$FetchResultResponseImplCopyWithImpl(_$FetchResultResponseImpl _value,
+      $Res Function(_$FetchResultResponseImpl) _then)
+      : super(_value, _then);
 
-  @override
-  FetchResultResponse get _value => super._value as FetchResultResponse;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? response = freezed,
+    Object? response = null,
   }) {
-    return _then(FetchResultResponse(
-      response == freezed
+    return _then(_$FetchResultResponseImpl(
+      null == response
           ? _value.response
           : response // ignore: cast_nullable_to_non_nullable
               as ServiceResponse,
@@ -127,6 +107,7 @@ class _$FetchResultResponseCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ServiceResponseCopyWith<$Res> get response {
     return $ServiceResponseCopyWith<$Res>(_value.response, (value) {
       return _then(_value.copyWith(response: value));
@@ -136,10 +117,10 @@ class _$FetchResultResponseCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$FetchResultResponse
+class _$FetchResultResponseImpl
     with DiagnosticableTreeMixin
     implements FetchResultResponse {
-  const _$FetchResultResponse(this.response);
+  const _$FetchResultResponseImpl(this.response);
 
   @override
   final ServiceResponse response;
@@ -158,22 +139,23 @@ class _$FetchResultResponse
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is FetchResultResponse &&
+        (other.runtimeType == runtimeType &&
+            other is _$FetchResultResponseImpl &&
             (identical(other.response, response) ||
-                const DeepCollectionEquality()
-                    .equals(other.response, response)));
+                other.response == response));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(response);
+  int get hashCode => Object.hash(runtimeType, response);
 
   @JsonKey(ignore: true)
   @override
-  $FetchResultResponseCopyWith<FetchResultResponse> get copyWith =>
-      _$FetchResultResponseCopyWithImpl<FetchResultResponse>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$FetchResultResponseImplCopyWith<_$FetchResultResponseImpl> get copyWith =>
+      __$$FetchResultResponseImplCopyWithImpl<_$FetchResultResponseImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -187,8 +169,8 @@ class _$FetchResultResponse
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>(
-    TResult Function(ServiceResponse response)? $default, {
-    TResult Function(ServiceRequest request, FetchError error)? error,
+    TResult? Function(ServiceResponse response)? $default, {
+    TResult? Function(ServiceRequest request, FetchError error)? error,
   }) {
     return $default?.call(response);
   }
@@ -218,8 +200,8 @@ class _$FetchResultResponse
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>(
-    TResult Function(FetchResultResponse value)? $default, {
-    TResult Function(FetchResultError value)? error,
+    TResult? Function(FetchResultResponse value)? $default, {
+    TResult? Function(FetchResultError value)? error,
   }) {
     return $default?.call(this);
   }
@@ -239,20 +221,21 @@ class _$FetchResultResponse
 }
 
 abstract class FetchResultResponse implements FetchResult {
-  const factory FetchResultResponse(ServiceResponse response) =
-      _$FetchResultResponse;
+  const factory FetchResultResponse(final ServiceResponse response) =
+      _$FetchResultResponseImpl;
 
-  ServiceResponse get response => throw _privateConstructorUsedError;
+  ServiceResponse get response;
   @JsonKey(ignore: true)
-  $FetchResultResponseCopyWith<FetchResultResponse> get copyWith =>
+  _$$FetchResultResponseImplCopyWith<_$FetchResultResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $FetchResultErrorCopyWith<$Res> {
-  factory $FetchResultErrorCopyWith(
-          FetchResultError value, $Res Function(FetchResultError) then) =
-      _$FetchResultErrorCopyWithImpl<$Res>;
+abstract class _$$FetchResultErrorImplCopyWith<$Res> {
+  factory _$$FetchResultErrorImplCopyWith(_$FetchResultErrorImpl value,
+          $Res Function(_$FetchResultErrorImpl) then) =
+      __$$FetchResultErrorImplCopyWithImpl<$Res>;
+  @useResult
   $Res call({ServiceRequest request, FetchError error});
 
   $ServiceRequestCopyWith<$Res> get request;
@@ -260,27 +243,25 @@ abstract class $FetchResultErrorCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$FetchResultErrorCopyWithImpl<$Res>
-    extends _$FetchResultCopyWithImpl<$Res>
-    implements $FetchResultErrorCopyWith<$Res> {
-  _$FetchResultErrorCopyWithImpl(
-      FetchResultError _value, $Res Function(FetchResultError) _then)
-      : super(_value, (v) => _then(v as FetchResultError));
+class __$$FetchResultErrorImplCopyWithImpl<$Res>
+    extends _$FetchResultCopyWithImpl<$Res, _$FetchResultErrorImpl>
+    implements _$$FetchResultErrorImplCopyWith<$Res> {
+  __$$FetchResultErrorImplCopyWithImpl(_$FetchResultErrorImpl _value,
+      $Res Function(_$FetchResultErrorImpl) _then)
+      : super(_value, _then);
 
-  @override
-  FetchResultError get _value => super._value as FetchResultError;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? request = freezed,
-    Object? error = freezed,
+    Object? request = null,
+    Object? error = null,
   }) {
-    return _then(FetchResultError(
-      request: request == freezed
+    return _then(_$FetchResultErrorImpl(
+      request: null == request
           ? _value.request
           : request // ignore: cast_nullable_to_non_nullable
               as ServiceRequest,
-      error: error == freezed
+      error: null == error
           ? _value.error
           : error // ignore: cast_nullable_to_non_nullable
               as FetchError,
@@ -288,6 +269,7 @@ class _$FetchResultErrorCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ServiceRequestCopyWith<$Res> get request {
     return $ServiceRequestCopyWith<$Res>(_value.request, (value) {
       return _then(_value.copyWith(request: value));
@@ -295,6 +277,7 @@ class _$FetchResultErrorCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $FetchErrorCopyWith<$Res> get error {
     return $FetchErrorCopyWith<$Res>(_value.error, (value) {
       return _then(_value.copyWith(error: value));
@@ -304,10 +287,10 @@ class _$FetchResultErrorCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$FetchResultError
+class _$FetchResultErrorImpl
     with DiagnosticableTreeMixin
     implements FetchResultError {
-  const _$FetchResultError({required this.request, required this.error});
+  const _$FetchResultErrorImpl({required this.request, required this.error});
 
   @override
   final ServiceRequest request;
@@ -329,26 +312,23 @@ class _$FetchResultError
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is FetchResultError &&
-            (identical(other.request, request) ||
-                const DeepCollectionEquality()
-                    .equals(other.request, request)) &&
-            (identical(other.error, error) ||
-                const DeepCollectionEquality().equals(other.error, error)));
+        (other.runtimeType == runtimeType &&
+            other is _$FetchResultErrorImpl &&
+            (identical(other.request, request) || other.request == request) &&
+            (identical(other.error, error) || other.error == error));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(request) ^
-      const DeepCollectionEquality().hash(error);
+  int get hashCode => Object.hash(runtimeType, request, error);
 
   @JsonKey(ignore: true)
   @override
-  $FetchResultErrorCopyWith<FetchResultError> get copyWith =>
-      _$FetchResultErrorCopyWithImpl<FetchResultError>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$FetchResultErrorImplCopyWith<_$FetchResultErrorImpl> get copyWith =>
+      __$$FetchResultErrorImplCopyWithImpl<_$FetchResultErrorImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -362,8 +342,8 @@ class _$FetchResultError
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>(
-    TResult Function(ServiceResponse response)? $default, {
-    TResult Function(ServiceRequest request, FetchError error)? error,
+    TResult? Function(ServiceResponse response)? $default, {
+    TResult? Function(ServiceRequest request, FetchError error)? error,
   }) {
     return error?.call(request, this.error);
   }
@@ -393,8 +373,8 @@ class _$FetchResultError
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>(
-    TResult Function(FetchResultResponse value)? $default, {
-    TResult Function(FetchResultError value)? error,
+    TResult? Function(FetchResultResponse value)? $default, {
+    TResult? Function(FetchResultError value)? error,
   }) {
     return error?.call(this);
   }
@@ -415,36 +395,15 @@ class _$FetchResultError
 
 abstract class FetchResultError implements FetchResult {
   const factory FetchResultError(
-      {required ServiceRequest request,
-      required FetchError error}) = _$FetchResultError;
+      {required final ServiceRequest request,
+      required final FetchError error}) = _$FetchResultErrorImpl;
 
-  ServiceRequest get request => throw _privateConstructorUsedError;
-  FetchError get error => throw _privateConstructorUsedError;
+  ServiceRequest get request;
+  FetchError get error;
   @JsonKey(ignore: true)
-  $FetchResultErrorCopyWith<FetchResultError> get copyWith =>
+  _$$FetchResultErrorImplCopyWith<_$FetchResultErrorImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
-
-/// @nodoc
-class _$FetchErrorTearOff {
-  const _$FetchErrorTearOff();
-
-  FetchErrorBase call(String message) {
-    return FetchErrorBase(
-      message,
-    );
-  }
-
-  FetchErrorException exception(Exception e, {StackTrace? stackTrace}) {
-    return FetchErrorException(
-      e,
-      stackTrace: stackTrace,
-    );
-  }
-}
-
-/// @nodoc
-const $FetchError = _$FetchErrorTearOff();
 
 /// @nodoc
 mixin _$FetchError {
@@ -456,8 +415,8 @@ mixin _$FetchError {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>(
-    TResult Function(String message)? $default, {
-    TResult Function(Exception e, StackTrace? stackTrace)? exception,
+    TResult? Function(String message)? $default, {
+    TResult? Function(Exception e, StackTrace? stackTrace)? exception,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -475,8 +434,8 @@ mixin _$FetchError {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>(
-    TResult Function(FetchErrorBase value)? $default, {
-    TResult Function(FetchErrorException value)? exception,
+    TResult? Function(FetchErrorBase value)? $default, {
+    TResult? Function(FetchErrorException value)? exception,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -492,42 +451,44 @@ mixin _$FetchError {
 abstract class $FetchErrorCopyWith<$Res> {
   factory $FetchErrorCopyWith(
           FetchError value, $Res Function(FetchError) then) =
-      _$FetchErrorCopyWithImpl<$Res>;
+      _$FetchErrorCopyWithImpl<$Res, FetchError>;
 }
 
 /// @nodoc
-class _$FetchErrorCopyWithImpl<$Res> implements $FetchErrorCopyWith<$Res> {
+class _$FetchErrorCopyWithImpl<$Res, $Val extends FetchError>
+    implements $FetchErrorCopyWith<$Res> {
   _$FetchErrorCopyWithImpl(this._value, this._then);
 
-  final FetchError _value;
   // ignore: unused_field
-  final $Res Function(FetchError) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 }
 
 /// @nodoc
-abstract class $FetchErrorBaseCopyWith<$Res> {
-  factory $FetchErrorBaseCopyWith(
-          FetchErrorBase value, $Res Function(FetchErrorBase) then) =
-      _$FetchErrorBaseCopyWithImpl<$Res>;
+abstract class _$$FetchErrorBaseImplCopyWith<$Res> {
+  factory _$$FetchErrorBaseImplCopyWith(_$FetchErrorBaseImpl value,
+          $Res Function(_$FetchErrorBaseImpl) then) =
+      __$$FetchErrorBaseImplCopyWithImpl<$Res>;
+  @useResult
   $Res call({String message});
 }
 
 /// @nodoc
-class _$FetchErrorBaseCopyWithImpl<$Res> extends _$FetchErrorCopyWithImpl<$Res>
-    implements $FetchErrorBaseCopyWith<$Res> {
-  _$FetchErrorBaseCopyWithImpl(
-      FetchErrorBase _value, $Res Function(FetchErrorBase) _then)
-      : super(_value, (v) => _then(v as FetchErrorBase));
+class __$$FetchErrorBaseImplCopyWithImpl<$Res>
+    extends _$FetchErrorCopyWithImpl<$Res, _$FetchErrorBaseImpl>
+    implements _$$FetchErrorBaseImplCopyWith<$Res> {
+  __$$FetchErrorBaseImplCopyWithImpl(
+      _$FetchErrorBaseImpl _value, $Res Function(_$FetchErrorBaseImpl) _then)
+      : super(_value, _then);
 
-  @override
-  FetchErrorBase get _value => super._value as FetchErrorBase;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? message = freezed,
+    Object? message = null,
   }) {
-    return _then(FetchErrorBase(
-      message == freezed
+    return _then(_$FetchErrorBaseImpl(
+      null == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
               as String,
@@ -537,8 +498,10 @@ class _$FetchErrorBaseCopyWithImpl<$Res> extends _$FetchErrorCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$FetchErrorBase with DiagnosticableTreeMixin implements FetchErrorBase {
-  const _$FetchErrorBase(this.message);
+class _$FetchErrorBaseImpl
+    with DiagnosticableTreeMixin
+    implements FetchErrorBase {
+  const _$FetchErrorBaseImpl(this.message);
 
   @override
   final String message;
@@ -557,21 +520,22 @@ class _$FetchErrorBase with DiagnosticableTreeMixin implements FetchErrorBase {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is FetchErrorBase &&
-            (identical(other.message, message) ||
-                const DeepCollectionEquality().equals(other.message, message)));
+        (other.runtimeType == runtimeType &&
+            other is _$FetchErrorBaseImpl &&
+            (identical(other.message, message) || other.message == message));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(message);
+  int get hashCode => Object.hash(runtimeType, message);
 
   @JsonKey(ignore: true)
   @override
-  $FetchErrorBaseCopyWith<FetchErrorBase> get copyWith =>
-      _$FetchErrorBaseCopyWithImpl<FetchErrorBase>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$FetchErrorBaseImplCopyWith<_$FetchErrorBaseImpl> get copyWith =>
+      __$$FetchErrorBaseImplCopyWithImpl<_$FetchErrorBaseImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -585,8 +549,8 @@ class _$FetchErrorBase with DiagnosticableTreeMixin implements FetchErrorBase {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>(
-    TResult Function(String message)? $default, {
-    TResult Function(Exception e, StackTrace? stackTrace)? exception,
+    TResult? Function(String message)? $default, {
+    TResult? Function(Exception e, StackTrace? stackTrace)? exception,
   }) {
     return $default?.call(message);
   }
@@ -616,8 +580,8 @@ class _$FetchErrorBase with DiagnosticableTreeMixin implements FetchErrorBase {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>(
-    TResult Function(FetchErrorBase value)? $default, {
-    TResult Function(FetchErrorException value)? exception,
+    TResult? Function(FetchErrorBase value)? $default, {
+    TResult? Function(FetchErrorException value)? exception,
   }) {
     return $default?.call(this);
   }
@@ -637,44 +601,43 @@ class _$FetchErrorBase with DiagnosticableTreeMixin implements FetchErrorBase {
 }
 
 abstract class FetchErrorBase implements FetchError {
-  const factory FetchErrorBase(String message) = _$FetchErrorBase;
+  const factory FetchErrorBase(final String message) = _$FetchErrorBaseImpl;
 
-  String get message => throw _privateConstructorUsedError;
+  String get message;
   @JsonKey(ignore: true)
-  $FetchErrorBaseCopyWith<FetchErrorBase> get copyWith =>
+  _$$FetchErrorBaseImplCopyWith<_$FetchErrorBaseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $FetchErrorExceptionCopyWith<$Res> {
-  factory $FetchErrorExceptionCopyWith(
-          FetchErrorException value, $Res Function(FetchErrorException) then) =
-      _$FetchErrorExceptionCopyWithImpl<$Res>;
+abstract class _$$FetchErrorExceptionImplCopyWith<$Res> {
+  factory _$$FetchErrorExceptionImplCopyWith(_$FetchErrorExceptionImpl value,
+          $Res Function(_$FetchErrorExceptionImpl) then) =
+      __$$FetchErrorExceptionImplCopyWithImpl<$Res>;
+  @useResult
   $Res call({Exception e, StackTrace? stackTrace});
 }
 
 /// @nodoc
-class _$FetchErrorExceptionCopyWithImpl<$Res>
-    extends _$FetchErrorCopyWithImpl<$Res>
-    implements $FetchErrorExceptionCopyWith<$Res> {
-  _$FetchErrorExceptionCopyWithImpl(
-      FetchErrorException _value, $Res Function(FetchErrorException) _then)
-      : super(_value, (v) => _then(v as FetchErrorException));
+class __$$FetchErrorExceptionImplCopyWithImpl<$Res>
+    extends _$FetchErrorCopyWithImpl<$Res, _$FetchErrorExceptionImpl>
+    implements _$$FetchErrorExceptionImplCopyWith<$Res> {
+  __$$FetchErrorExceptionImplCopyWithImpl(_$FetchErrorExceptionImpl _value,
+      $Res Function(_$FetchErrorExceptionImpl) _then)
+      : super(_value, _then);
 
-  @override
-  FetchErrorException get _value => super._value as FetchErrorException;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? e = freezed,
+    Object? e = null,
     Object? stackTrace = freezed,
   }) {
-    return _then(FetchErrorException(
-      e == freezed
+    return _then(_$FetchErrorExceptionImpl(
+      null == e
           ? _value.e
           : e // ignore: cast_nullable_to_non_nullable
               as Exception,
-      stackTrace: stackTrace == freezed
+      stackTrace: freezed == stackTrace
           ? _value.stackTrace
           : stackTrace // ignore: cast_nullable_to_non_nullable
               as StackTrace?,
@@ -684,10 +647,10 @@ class _$FetchErrorExceptionCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$FetchErrorException
+class _$FetchErrorExceptionImpl
     with DiagnosticableTreeMixin
     implements FetchErrorException {
-  const _$FetchErrorException(this.e, {this.stackTrace});
+  const _$FetchErrorExceptionImpl(this.e, {this.stackTrace});
 
   @override
   final Exception e;
@@ -709,26 +672,24 @@ class _$FetchErrorException
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is FetchErrorException &&
-            (identical(other.e, e) ||
-                const DeepCollectionEquality().equals(other.e, e)) &&
+        (other.runtimeType == runtimeType &&
+            other is _$FetchErrorExceptionImpl &&
+            (identical(other.e, e) || other.e == e) &&
             (identical(other.stackTrace, stackTrace) ||
-                const DeepCollectionEquality()
-                    .equals(other.stackTrace, stackTrace)));
+                other.stackTrace == stackTrace));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(e) ^
-      const DeepCollectionEquality().hash(stackTrace);
+  int get hashCode => Object.hash(runtimeType, e, stackTrace);
 
   @JsonKey(ignore: true)
   @override
-  $FetchErrorExceptionCopyWith<FetchErrorException> get copyWith =>
-      _$FetchErrorExceptionCopyWithImpl<FetchErrorException>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$FetchErrorExceptionImplCopyWith<_$FetchErrorExceptionImpl> get copyWith =>
+      __$$FetchErrorExceptionImplCopyWithImpl<_$FetchErrorExceptionImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -742,8 +703,8 @@ class _$FetchErrorException
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>(
-    TResult Function(String message)? $default, {
-    TResult Function(Exception e, StackTrace? stackTrace)? exception,
+    TResult? Function(String message)? $default, {
+    TResult? Function(Exception e, StackTrace? stackTrace)? exception,
   }) {
     return exception?.call(e, stackTrace);
   }
@@ -773,8 +734,8 @@ class _$FetchErrorException
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>(
-    TResult Function(FetchErrorBase value)? $default, {
-    TResult Function(FetchErrorException value)? exception,
+    TResult? Function(FetchErrorBase value)? $default, {
+    TResult? Function(FetchErrorException value)? exception,
   }) {
     return exception?.call(this);
   }
@@ -794,12 +755,12 @@ class _$FetchErrorException
 }
 
 abstract class FetchErrorException implements FetchError {
-  const factory FetchErrorException(Exception e, {StackTrace? stackTrace}) =
-      _$FetchErrorException;
+  const factory FetchErrorException(final Exception e,
+      {final StackTrace? stackTrace}) = _$FetchErrorExceptionImpl;
 
-  Exception get e => throw _privateConstructorUsedError;
-  StackTrace? get stackTrace => throw _privateConstructorUsedError;
+  Exception get e;
+  StackTrace? get stackTrace;
   @JsonKey(ignore: true)
-  $FetchErrorExceptionCopyWith<FetchErrorException> get copyWith =>
+  _$$FetchErrorExceptionImplCopyWith<_$FetchErrorExceptionImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

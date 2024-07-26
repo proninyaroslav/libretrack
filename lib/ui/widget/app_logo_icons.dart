@@ -13,6 +13,8 @@
 ///
 ///
 ///
+library;
+
 import 'package:flutter/widgets.dart';
 
 class AppLogoInfo {

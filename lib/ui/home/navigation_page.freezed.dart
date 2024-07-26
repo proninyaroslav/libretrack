@@ -1,6 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'navigation_page.dart';
 
@@ -11,21 +12,7 @@ part of 'navigation_page.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$PageIdTearOff {
-  const _$PageIdTearOff();
-
-  _PageId call(String id) {
-    return _PageId(
-      id,
-    );
-  }
-}
-
-/// @nodoc
-const $PageId = _$PageIdTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$PageId {
@@ -38,54 +25,60 @@ mixin _$PageId {
 /// @nodoc
 abstract class $PageIdCopyWith<$Res> {
   factory $PageIdCopyWith(PageId value, $Res Function(PageId) then) =
-      _$PageIdCopyWithImpl<$Res>;
+      _$PageIdCopyWithImpl<$Res, PageId>;
+  @useResult
   $Res call({String id});
 }
 
 /// @nodoc
-class _$PageIdCopyWithImpl<$Res> implements $PageIdCopyWith<$Res> {
+class _$PageIdCopyWithImpl<$Res, $Val extends PageId>
+    implements $PageIdCopyWith<$Res> {
   _$PageIdCopyWithImpl(this._value, this._then);
 
-  final PageId _value;
   // ignore: unused_field
-  final $Res Function(PageId) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
+    Object? id = null,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$PageIdCopyWith<$Res> implements $PageIdCopyWith<$Res> {
-  factory _$PageIdCopyWith(_PageId value, $Res Function(_PageId) then) =
-      __$PageIdCopyWithImpl<$Res>;
+abstract class _$$PageIdImplCopyWith<$Res> implements $PageIdCopyWith<$Res> {
+  factory _$$PageIdImplCopyWith(
+          _$PageIdImpl value, $Res Function(_$PageIdImpl) then) =
+      __$$PageIdImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({String id});
 }
 
 /// @nodoc
-class __$PageIdCopyWithImpl<$Res> extends _$PageIdCopyWithImpl<$Res>
-    implements _$PageIdCopyWith<$Res> {
-  __$PageIdCopyWithImpl(_PageId _value, $Res Function(_PageId) _then)
-      : super(_value, (v) => _then(v as _PageId));
+class __$$PageIdImplCopyWithImpl<$Res>
+    extends _$PageIdCopyWithImpl<$Res, _$PageIdImpl>
+    implements _$$PageIdImplCopyWith<$Res> {
+  __$$PageIdImplCopyWithImpl(
+      _$PageIdImpl _value, $Res Function(_$PageIdImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _PageId get _value => super._value as _PageId;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
+    Object? id = null,
   }) {
-    return _then(_PageId(
-      id == freezed
+    return _then(_$PageIdImpl(
+      null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
@@ -95,8 +88,8 @@ class __$PageIdCopyWithImpl<$Res> extends _$PageIdCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_PageId implements _PageId {
-  const _$_PageId(this.id);
+class _$PageIdImpl implements _PageId {
+  const _$PageIdImpl(this.id);
 
   @override
   final String id;
@@ -107,61 +100,33 @@ class _$_PageId implements _PageId {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is _PageId &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)));
+        (other.runtimeType == runtimeType &&
+            other is _$PageIdImpl &&
+            (identical(other.id, id) || other.id == id));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(id);
+  int get hashCode => Object.hash(runtimeType, id);
 
   @JsonKey(ignore: true)
   @override
-  _$PageIdCopyWith<_PageId> get copyWith =>
-      __$PageIdCopyWithImpl<_PageId>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$PageIdImplCopyWith<_$PageIdImpl> get copyWith =>
+      __$$PageIdImplCopyWithImpl<_$PageIdImpl>(this, _$identity);
 }
 
 abstract class _PageId implements PageId {
-  const factory _PageId(String id) = _$_PageId;
+  const factory _PageId(final String id) = _$PageIdImpl;
 
   @override
-  String get id => throw _privateConstructorUsedError;
+  String get id;
   @override
   @JsonKey(ignore: true)
-  _$PageIdCopyWith<_PageId> get copyWith => throw _privateConstructorUsedError;
+  _$$PageIdImplCopyWith<_$PageIdImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
-
-/// @nodoc
-class _$PageInfoTearOff {
-  const _$PageInfoTearOff();
-
-  _PageInfo call(
-      {required PageId id,
-      required Widget page,
-      SheetInfo? sheetInfo,
-      Widget? appBarTitle,
-      double? appBarTitleSpacing,
-      void Function()? onContextualAppBarClosed,
-      List<Widget>? contextualActions,
-      List<Widget>? actions}) {
-    return _PageInfo(
-      id: id,
-      page: page,
-      sheetInfo: sheetInfo,
-      appBarTitle: appBarTitle,
-      appBarTitleSpacing: appBarTitleSpacing,
-      onContextualAppBarClosed: onContextualAppBarClosed,
-      contextualActions: contextualActions,
-      actions: actions,
-    );
-  }
-}
-
-/// @nodoc
-const $PageInfo = _$PageInfoTearOff();
 
 /// @nodoc
 mixin _$PageInfo {
@@ -170,7 +135,7 @@ mixin _$PageInfo {
   SheetInfo? get sheetInfo => throw _privateConstructorUsedError;
   Widget? get appBarTitle => throw _privateConstructorUsedError;
   double? get appBarTitleSpacing => throw _privateConstructorUsedError;
-  void Function()? get onContextualAppBarClosed =>
+  VoidCallback? get onContextualAppBarClosed =>
       throw _privateConstructorUsedError;
   List<Widget>? get contextualActions => throw _privateConstructorUsedError;
   List<Widget>? get actions => throw _privateConstructorUsedError;
@@ -183,14 +148,15 @@ mixin _$PageInfo {
 /// @nodoc
 abstract class $PageInfoCopyWith<$Res> {
   factory $PageInfoCopyWith(PageInfo value, $Res Function(PageInfo) then) =
-      _$PageInfoCopyWithImpl<$Res>;
+      _$PageInfoCopyWithImpl<$Res, PageInfo>;
+  @useResult
   $Res call(
       {PageId id,
       Widget page,
       SheetInfo? sheetInfo,
       Widget? appBarTitle,
       double? appBarTitleSpacing,
-      void Function()? onContextualAppBarClosed,
+      VoidCallback? onContextualAppBarClosed,
       List<Widget>? contextualActions,
       List<Widget>? actions});
 
@@ -199,17 +165,20 @@ abstract class $PageInfoCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$PageInfoCopyWithImpl<$Res> implements $PageInfoCopyWith<$Res> {
+class _$PageInfoCopyWithImpl<$Res, $Val extends PageInfo>
+    implements $PageInfoCopyWith<$Res> {
   _$PageInfoCopyWithImpl(this._value, this._then);
 
-  final PageInfo _value;
   // ignore: unused_field
-  final $Res Function(PageInfo) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? page = freezed,
+    Object? id = null,
+    Object? page = null,
     Object? sheetInfo = freezed,
     Object? appBarTitle = freezed,
     Object? appBarTitleSpacing = freezed,
@@ -218,72 +187,77 @@ class _$PageInfoCopyWithImpl<$Res> implements $PageInfoCopyWith<$Res> {
     Object? actions = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as PageId,
-      page: page == freezed
+      page: null == page
           ? _value.page
           : page // ignore: cast_nullable_to_non_nullable
               as Widget,
-      sheetInfo: sheetInfo == freezed
+      sheetInfo: freezed == sheetInfo
           ? _value.sheetInfo
           : sheetInfo // ignore: cast_nullable_to_non_nullable
               as SheetInfo?,
-      appBarTitle: appBarTitle == freezed
+      appBarTitle: freezed == appBarTitle
           ? _value.appBarTitle
           : appBarTitle // ignore: cast_nullable_to_non_nullable
               as Widget?,
-      appBarTitleSpacing: appBarTitleSpacing == freezed
+      appBarTitleSpacing: freezed == appBarTitleSpacing
           ? _value.appBarTitleSpacing
           : appBarTitleSpacing // ignore: cast_nullable_to_non_nullable
               as double?,
-      onContextualAppBarClosed: onContextualAppBarClosed == freezed
+      onContextualAppBarClosed: freezed == onContextualAppBarClosed
           ? _value.onContextualAppBarClosed
           : onContextualAppBarClosed // ignore: cast_nullable_to_non_nullable
-              as void Function()?,
-      contextualActions: contextualActions == freezed
+              as VoidCallback?,
+      contextualActions: freezed == contextualActions
           ? _value.contextualActions
           : contextualActions // ignore: cast_nullable_to_non_nullable
               as List<Widget>?,
-      actions: actions == freezed
+      actions: freezed == actions
           ? _value.actions
           : actions // ignore: cast_nullable_to_non_nullable
               as List<Widget>?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $PageIdCopyWith<$Res> get id {
     return $PageIdCopyWith<$Res>(_value.id, (value) {
-      return _then(_value.copyWith(id: value));
+      return _then(_value.copyWith(id: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $SheetInfoCopyWith<$Res>? get sheetInfo {
     if (_value.sheetInfo == null) {
       return null;
     }
 
     return $SheetInfoCopyWith<$Res>(_value.sheetInfo!, (value) {
-      return _then(_value.copyWith(sheetInfo: value));
+      return _then(_value.copyWith(sheetInfo: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$PageInfoCopyWith<$Res> implements $PageInfoCopyWith<$Res> {
-  factory _$PageInfoCopyWith(_PageInfo value, $Res Function(_PageInfo) then) =
-      __$PageInfoCopyWithImpl<$Res>;
+abstract class _$$PageInfoImplCopyWith<$Res>
+    implements $PageInfoCopyWith<$Res> {
+  factory _$$PageInfoImplCopyWith(
+          _$PageInfoImpl value, $Res Function(_$PageInfoImpl) then) =
+      __$$PageInfoImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {PageId id,
       Widget page,
       SheetInfo? sheetInfo,
       Widget? appBarTitle,
       double? appBarTitleSpacing,
-      void Function()? onContextualAppBarClosed,
+      VoidCallback? onContextualAppBarClosed,
       List<Widget>? contextualActions,
       List<Widget>? actions});
 
@@ -294,18 +268,18 @@ abstract class _$PageInfoCopyWith<$Res> implements $PageInfoCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$PageInfoCopyWithImpl<$Res> extends _$PageInfoCopyWithImpl<$Res>
-    implements _$PageInfoCopyWith<$Res> {
-  __$PageInfoCopyWithImpl(_PageInfo _value, $Res Function(_PageInfo) _then)
-      : super(_value, (v) => _then(v as _PageInfo));
+class __$$PageInfoImplCopyWithImpl<$Res>
+    extends _$PageInfoCopyWithImpl<$Res, _$PageInfoImpl>
+    implements _$$PageInfoImplCopyWith<$Res> {
+  __$$PageInfoImplCopyWithImpl(
+      _$PageInfoImpl _value, $Res Function(_$PageInfoImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _PageInfo get _value => super._value as _PageInfo;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? page = freezed,
+    Object? id = null,
+    Object? page = null,
     Object? sheetInfo = freezed,
     Object? appBarTitle = freezed,
     Object? appBarTitleSpacing = freezed,
@@ -313,37 +287,37 @@ class __$PageInfoCopyWithImpl<$Res> extends _$PageInfoCopyWithImpl<$Res>
     Object? contextualActions = freezed,
     Object? actions = freezed,
   }) {
-    return _then(_PageInfo(
-      id: id == freezed
+    return _then(_$PageInfoImpl(
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as PageId,
-      page: page == freezed
+      page: null == page
           ? _value.page
           : page // ignore: cast_nullable_to_non_nullable
               as Widget,
-      sheetInfo: sheetInfo == freezed
+      sheetInfo: freezed == sheetInfo
           ? _value.sheetInfo
           : sheetInfo // ignore: cast_nullable_to_non_nullable
               as SheetInfo?,
-      appBarTitle: appBarTitle == freezed
+      appBarTitle: freezed == appBarTitle
           ? _value.appBarTitle
           : appBarTitle // ignore: cast_nullable_to_non_nullable
               as Widget?,
-      appBarTitleSpacing: appBarTitleSpacing == freezed
+      appBarTitleSpacing: freezed == appBarTitleSpacing
           ? _value.appBarTitleSpacing
           : appBarTitleSpacing // ignore: cast_nullable_to_non_nullable
               as double?,
-      onContextualAppBarClosed: onContextualAppBarClosed == freezed
+      onContextualAppBarClosed: freezed == onContextualAppBarClosed
           ? _value.onContextualAppBarClosed
           : onContextualAppBarClosed // ignore: cast_nullable_to_non_nullable
-              as void Function()?,
-      contextualActions: contextualActions == freezed
-          ? _value.contextualActions
+              as VoidCallback?,
+      contextualActions: freezed == contextualActions
+          ? _value._contextualActions
           : contextualActions // ignore: cast_nullable_to_non_nullable
               as List<Widget>?,
-      actions: actions == freezed
-          ? _value.actions
+      actions: freezed == actions
+          ? _value._actions
           : actions // ignore: cast_nullable_to_non_nullable
               as List<Widget>?,
     ));
@@ -352,16 +326,18 @@ class __$PageInfoCopyWithImpl<$Res> extends _$PageInfoCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_PageInfo implements _PageInfo {
-  const _$_PageInfo(
+class _$PageInfoImpl implements _PageInfo {
+  const _$PageInfoImpl(
       {required this.id,
       required this.page,
       this.sheetInfo,
       this.appBarTitle,
       this.appBarTitleSpacing,
       this.onContextualAppBarClosed,
-      this.contextualActions,
-      this.actions});
+      final List<Widget>? contextualActions,
+      final List<Widget>? actions})
+      : _contextualActions = contextualActions,
+        _actions = actions;
 
   @override
   final PageId id;
@@ -374,11 +350,27 @@ class _$_PageInfo implements _PageInfo {
   @override
   final double? appBarTitleSpacing;
   @override
-  final void Function()? onContextualAppBarClosed;
+  final VoidCallback? onContextualAppBarClosed;
+  final List<Widget>? _contextualActions;
   @override
-  final List<Widget>? contextualActions;
+  List<Widget>? get contextualActions {
+    final value = _contextualActions;
+    if (value == null) return null;
+    if (_contextualActions is EqualUnmodifiableListView)
+      return _contextualActions;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Widget>? _actions;
   @override
-  final List<Widget>? actions;
+  List<Widget>? get actions {
+    final value = _actions;
+    if (value == null) return null;
+    if (_actions is EqualUnmodifiableListView) return _actions;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -386,106 +378,77 @@ class _$_PageInfo implements _PageInfo {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is _PageInfo &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.page, page) ||
-                const DeepCollectionEquality().equals(other.page, page)) &&
+        (other.runtimeType == runtimeType &&
+            other is _$PageInfoImpl &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.page, page) || other.page == page) &&
             (identical(other.sheetInfo, sheetInfo) ||
-                const DeepCollectionEquality()
-                    .equals(other.sheetInfo, sheetInfo)) &&
+                other.sheetInfo == sheetInfo) &&
             (identical(other.appBarTitle, appBarTitle) ||
-                const DeepCollectionEquality()
-                    .equals(other.appBarTitle, appBarTitle)) &&
+                other.appBarTitle == appBarTitle) &&
             (identical(other.appBarTitleSpacing, appBarTitleSpacing) ||
-                const DeepCollectionEquality()
-                    .equals(other.appBarTitleSpacing, appBarTitleSpacing)) &&
+                other.appBarTitleSpacing == appBarTitleSpacing) &&
             (identical(
                     other.onContextualAppBarClosed, onContextualAppBarClosed) ||
-                const DeepCollectionEquality().equals(
-                    other.onContextualAppBarClosed,
-                    onContextualAppBarClosed)) &&
-            (identical(other.contextualActions, contextualActions) ||
-                const DeepCollectionEquality()
-                    .equals(other.contextualActions, contextualActions)) &&
-            (identical(other.actions, actions) ||
-                const DeepCollectionEquality().equals(other.actions, actions)));
+                other.onContextualAppBarClosed == onContextualAppBarClosed) &&
+            const DeepCollectionEquality()
+                .equals(other._contextualActions, _contextualActions) &&
+            const DeepCollectionEquality().equals(other._actions, _actions));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(page) ^
-      const DeepCollectionEquality().hash(sheetInfo) ^
-      const DeepCollectionEquality().hash(appBarTitle) ^
-      const DeepCollectionEquality().hash(appBarTitleSpacing) ^
-      const DeepCollectionEquality().hash(onContextualAppBarClosed) ^
-      const DeepCollectionEquality().hash(contextualActions) ^
-      const DeepCollectionEquality().hash(actions);
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      page,
+      sheetInfo,
+      appBarTitle,
+      appBarTitleSpacing,
+      onContextualAppBarClosed,
+      const DeepCollectionEquality().hash(_contextualActions),
+      const DeepCollectionEquality().hash(_actions));
 
   @JsonKey(ignore: true)
   @override
-  _$PageInfoCopyWith<_PageInfo> get copyWith =>
-      __$PageInfoCopyWithImpl<_PageInfo>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$PageInfoImplCopyWith<_$PageInfoImpl> get copyWith =>
+      __$$PageInfoImplCopyWithImpl<_$PageInfoImpl>(this, _$identity);
 }
 
 abstract class _PageInfo implements PageInfo {
   const factory _PageInfo(
-      {required PageId id,
-      required Widget page,
-      SheetInfo? sheetInfo,
-      Widget? appBarTitle,
-      double? appBarTitleSpacing,
-      void Function()? onContextualAppBarClosed,
-      List<Widget>? contextualActions,
-      List<Widget>? actions}) = _$_PageInfo;
+      {required final PageId id,
+      required final Widget page,
+      final SheetInfo? sheetInfo,
+      final Widget? appBarTitle,
+      final double? appBarTitleSpacing,
+      final VoidCallback? onContextualAppBarClosed,
+      final List<Widget>? contextualActions,
+      final List<Widget>? actions}) = _$PageInfoImpl;
 
   @override
-  PageId get id => throw _privateConstructorUsedError;
+  PageId get id;
   @override
-  Widget get page => throw _privateConstructorUsedError;
+  Widget get page;
   @override
-  SheetInfo? get sheetInfo => throw _privateConstructorUsedError;
+  SheetInfo? get sheetInfo;
   @override
-  Widget? get appBarTitle => throw _privateConstructorUsedError;
+  Widget? get appBarTitle;
   @override
-  double? get appBarTitleSpacing => throw _privateConstructorUsedError;
+  double? get appBarTitleSpacing;
   @override
-  void Function()? get onContextualAppBarClosed =>
-      throw _privateConstructorUsedError;
+  VoidCallback? get onContextualAppBarClosed;
   @override
-  List<Widget>? get contextualActions => throw _privateConstructorUsedError;
+  List<Widget>? get contextualActions;
   @override
-  List<Widget>? get actions => throw _privateConstructorUsedError;
+  List<Widget>? get actions;
   @override
   @JsonKey(ignore: true)
-  _$PageInfoCopyWith<_PageInfo> get copyWith =>
+  _$$PageInfoImplCopyWith<_$PageInfoImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
-
-/// @nodoc
-class _$SheetInfoTearOff {
-  const _$SheetInfoTearOff();
-
-  _SheetInfo call(
-      {required String name,
-      required Widget sheet,
-      required IconData toggleIcon,
-      Widget? appBarTitle}) {
-    return _SheetInfo(
-      name: name,
-      sheet: sheet,
-      toggleIcon: toggleIcon,
-      appBarTitle: appBarTitle,
-    );
-  }
-}
-
-/// @nodoc
-const $SheetInfo = _$SheetInfoTearOff();
 
 /// @nodoc
 mixin _$SheetInfo {
@@ -502,87 +465,93 @@ mixin _$SheetInfo {
 /// @nodoc
 abstract class $SheetInfoCopyWith<$Res> {
   factory $SheetInfoCopyWith(SheetInfo value, $Res Function(SheetInfo) then) =
-      _$SheetInfoCopyWithImpl<$Res>;
+      _$SheetInfoCopyWithImpl<$Res, SheetInfo>;
+  @useResult
   $Res call(
       {String name, Widget sheet, IconData toggleIcon, Widget? appBarTitle});
 }
 
 /// @nodoc
-class _$SheetInfoCopyWithImpl<$Res> implements $SheetInfoCopyWith<$Res> {
+class _$SheetInfoCopyWithImpl<$Res, $Val extends SheetInfo>
+    implements $SheetInfoCopyWith<$Res> {
   _$SheetInfoCopyWithImpl(this._value, this._then);
 
-  final SheetInfo _value;
   // ignore: unused_field
-  final $Res Function(SheetInfo) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? name = freezed,
-    Object? sheet = freezed,
-    Object? toggleIcon = freezed,
+    Object? name = null,
+    Object? sheet = null,
+    Object? toggleIcon = null,
     Object? appBarTitle = freezed,
   }) {
     return _then(_value.copyWith(
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      sheet: sheet == freezed
+      sheet: null == sheet
           ? _value.sheet
           : sheet // ignore: cast_nullable_to_non_nullable
               as Widget,
-      toggleIcon: toggleIcon == freezed
+      toggleIcon: null == toggleIcon
           ? _value.toggleIcon
           : toggleIcon // ignore: cast_nullable_to_non_nullable
               as IconData,
-      appBarTitle: appBarTitle == freezed
+      appBarTitle: freezed == appBarTitle
           ? _value.appBarTitle
           : appBarTitle // ignore: cast_nullable_to_non_nullable
               as Widget?,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$SheetInfoCopyWith<$Res> implements $SheetInfoCopyWith<$Res> {
-  factory _$SheetInfoCopyWith(
-          _SheetInfo value, $Res Function(_SheetInfo) then) =
-      __$SheetInfoCopyWithImpl<$Res>;
+abstract class _$$SheetInfoImplCopyWith<$Res>
+    implements $SheetInfoCopyWith<$Res> {
+  factory _$$SheetInfoImplCopyWith(
+          _$SheetInfoImpl value, $Res Function(_$SheetInfoImpl) then) =
+      __$$SheetInfoImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String name, Widget sheet, IconData toggleIcon, Widget? appBarTitle});
 }
 
 /// @nodoc
-class __$SheetInfoCopyWithImpl<$Res> extends _$SheetInfoCopyWithImpl<$Res>
-    implements _$SheetInfoCopyWith<$Res> {
-  __$SheetInfoCopyWithImpl(_SheetInfo _value, $Res Function(_SheetInfo) _then)
-      : super(_value, (v) => _then(v as _SheetInfo));
+class __$$SheetInfoImplCopyWithImpl<$Res>
+    extends _$SheetInfoCopyWithImpl<$Res, _$SheetInfoImpl>
+    implements _$$SheetInfoImplCopyWith<$Res> {
+  __$$SheetInfoImplCopyWithImpl(
+      _$SheetInfoImpl _value, $Res Function(_$SheetInfoImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _SheetInfo get _value => super._value as _SheetInfo;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? name = freezed,
-    Object? sheet = freezed,
-    Object? toggleIcon = freezed,
+    Object? name = null,
+    Object? sheet = null,
+    Object? toggleIcon = null,
     Object? appBarTitle = freezed,
   }) {
-    return _then(_SheetInfo(
-      name: name == freezed
+    return _then(_$SheetInfoImpl(
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      sheet: sheet == freezed
+      sheet: null == sheet
           ? _value.sheet
           : sheet // ignore: cast_nullable_to_non_nullable
               as Widget,
-      toggleIcon: toggleIcon == freezed
+      toggleIcon: null == toggleIcon
           ? _value.toggleIcon
           : toggleIcon // ignore: cast_nullable_to_non_nullable
               as IconData,
-      appBarTitle: appBarTitle == freezed
+      appBarTitle: freezed == appBarTitle
           ? _value.appBarTitle
           : appBarTitle // ignore: cast_nullable_to_non_nullable
               as Widget?,
@@ -592,8 +561,8 @@ class __$SheetInfoCopyWithImpl<$Res> extends _$SheetInfoCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_SheetInfo implements _SheetInfo {
-  const _$_SheetInfo(
+class _$SheetInfoImpl implements _SheetInfo {
+  const _$SheetInfoImpl(
       {required this.name,
       required this.sheet,
       required this.toggleIcon,
@@ -614,111 +583,71 @@ class _$_SheetInfo implements _SheetInfo {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is _SheetInfo &&
-            (identical(other.name, name) ||
-                const DeepCollectionEquality().equals(other.name, name)) &&
-            (identical(other.sheet, sheet) ||
-                const DeepCollectionEquality().equals(other.sheet, sheet)) &&
+        (other.runtimeType == runtimeType &&
+            other is _$SheetInfoImpl &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.sheet, sheet) || other.sheet == sheet) &&
             (identical(other.toggleIcon, toggleIcon) ||
-                const DeepCollectionEquality()
-                    .equals(other.toggleIcon, toggleIcon)) &&
+                other.toggleIcon == toggleIcon) &&
             (identical(other.appBarTitle, appBarTitle) ||
-                const DeepCollectionEquality()
-                    .equals(other.appBarTitle, appBarTitle)));
+                other.appBarTitle == appBarTitle));
   }
 
   @override
   int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(name) ^
-      const DeepCollectionEquality().hash(sheet) ^
-      const DeepCollectionEquality().hash(toggleIcon) ^
-      const DeepCollectionEquality().hash(appBarTitle);
+      Object.hash(runtimeType, name, sheet, toggleIcon, appBarTitle);
 
   @JsonKey(ignore: true)
   @override
-  _$SheetInfoCopyWith<_SheetInfo> get copyWith =>
-      __$SheetInfoCopyWithImpl<_SheetInfo>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$SheetInfoImplCopyWith<_$SheetInfoImpl> get copyWith =>
+      __$$SheetInfoImplCopyWithImpl<_$SheetInfoImpl>(this, _$identity);
 }
 
 abstract class _SheetInfo implements SheetInfo {
   const factory _SheetInfo(
-      {required String name,
-      required Widget sheet,
-      required IconData toggleIcon,
-      Widget? appBarTitle}) = _$_SheetInfo;
+      {required final String name,
+      required final Widget sheet,
+      required final IconData toggleIcon,
+      final Widget? appBarTitle}) = _$SheetInfoImpl;
 
   @override
-  String get name => throw _privateConstructorUsedError;
+  String get name;
   @override
-  Widget get sheet => throw _privateConstructorUsedError;
+  Widget get sheet;
   @override
-  IconData get toggleIcon => throw _privateConstructorUsedError;
+  IconData get toggleIcon;
   @override
-  Widget? get appBarTitle => throw _privateConstructorUsedError;
+  Widget? get appBarTitle;
   @override
   @JsonKey(ignore: true)
-  _$SheetInfoCopyWith<_SheetInfo> get copyWith =>
+  _$$SheetInfoImplCopyWith<_$SheetInfoImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
-
-/// @nodoc
-class _$NavItemTearOff {
-  const _$NavItemTearOff();
-
-  _NavItem page(
-      {required String name,
-      required Widget icon,
-      required PageInfo pageInfo}) {
-    return _NavItem(
-      name: name,
-      icon: icon,
-      pageInfo: pageInfo,
-    );
-  }
-
-  _NavItemAction action(
-      {required String name,
-      required Widget icon,
-      required void Function() onPressed}) {
-    return _NavItemAction(
-      name: name,
-      icon: icon,
-      onPressed: onPressed,
-    );
-  }
-}
-
-/// @nodoc
-const $NavItem = _$NavItemTearOff();
 
 /// @nodoc
 mixin _$NavItem {
   String get name => throw _privateConstructorUsedError;
   Widget get icon => throw _privateConstructorUsedError;
-
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(String name, Widget icon, PageInfo pageInfo) page,
-    required TResult Function(
-            String name, Widget icon, void Function() onPressed)
+    required TResult Function(String name, Widget icon, VoidCallback onPressed)
         action,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(String name, Widget icon, PageInfo pageInfo)? page,
-    TResult Function(String name, Widget icon, void Function() onPressed)?
-        action,
+    TResult? Function(String name, Widget icon, PageInfo pageInfo)? page,
+    TResult? Function(String name, Widget icon, VoidCallback onPressed)? action,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String name, Widget icon, PageInfo pageInfo)? page,
-    TResult Function(String name, Widget icon, void Function() onPressed)?
-        action,
+    TResult Function(String name, Widget icon, VoidCallback onPressed)? action,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -730,8 +659,8 @@ mixin _$NavItem {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_NavItem value)? page,
-    TResult Function(_NavItemAction value)? action,
+    TResult? Function(_NavItem value)? page,
+    TResult? Function(_NavItemAction value)? action,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -749,71 +678,77 @@ mixin _$NavItem {
 /// @nodoc
 abstract class $NavItemCopyWith<$Res> {
   factory $NavItemCopyWith(NavItem value, $Res Function(NavItem) then) =
-      _$NavItemCopyWithImpl<$Res>;
+      _$NavItemCopyWithImpl<$Res, NavItem>;
+  @useResult
   $Res call({String name, Widget icon});
 }
 
 /// @nodoc
-class _$NavItemCopyWithImpl<$Res> implements $NavItemCopyWith<$Res> {
+class _$NavItemCopyWithImpl<$Res, $Val extends NavItem>
+    implements $NavItemCopyWith<$Res> {
   _$NavItemCopyWithImpl(this._value, this._then);
 
-  final NavItem _value;
   // ignore: unused_field
-  final $Res Function(NavItem) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? name = freezed,
-    Object? icon = freezed,
+    Object? name = null,
+    Object? icon = null,
   }) {
     return _then(_value.copyWith(
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      icon: icon == freezed
+      icon: null == icon
           ? _value.icon
           : icon // ignore: cast_nullable_to_non_nullable
               as Widget,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$NavItemCopyWith<$Res> implements $NavItemCopyWith<$Res> {
-  factory _$NavItemCopyWith(_NavItem value, $Res Function(_NavItem) then) =
-      __$NavItemCopyWithImpl<$Res>;
+abstract class _$$NavItemImplCopyWith<$Res> implements $NavItemCopyWith<$Res> {
+  factory _$$NavItemImplCopyWith(
+          _$NavItemImpl value, $Res Function(_$NavItemImpl) then) =
+      __$$NavItemImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({String name, Widget icon, PageInfo pageInfo});
 
   $PageInfoCopyWith<$Res> get pageInfo;
 }
 
 /// @nodoc
-class __$NavItemCopyWithImpl<$Res> extends _$NavItemCopyWithImpl<$Res>
-    implements _$NavItemCopyWith<$Res> {
-  __$NavItemCopyWithImpl(_NavItem _value, $Res Function(_NavItem) _then)
-      : super(_value, (v) => _then(v as _NavItem));
+class __$$NavItemImplCopyWithImpl<$Res>
+    extends _$NavItemCopyWithImpl<$Res, _$NavItemImpl>
+    implements _$$NavItemImplCopyWith<$Res> {
+  __$$NavItemImplCopyWithImpl(
+      _$NavItemImpl _value, $Res Function(_$NavItemImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _NavItem get _value => super._value as _NavItem;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? name = freezed,
-    Object? icon = freezed,
-    Object? pageInfo = freezed,
+    Object? name = null,
+    Object? icon = null,
+    Object? pageInfo = null,
   }) {
-    return _then(_NavItem(
-      name: name == freezed
+    return _then(_$NavItemImpl(
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      icon: icon == freezed
+      icon: null == icon
           ? _value.icon
           : icon // ignore: cast_nullable_to_non_nullable
               as Widget,
-      pageInfo: pageInfo == freezed
+      pageInfo: null == pageInfo
           ? _value.pageInfo
           : pageInfo // ignore: cast_nullable_to_non_nullable
               as PageInfo,
@@ -821,6 +756,7 @@ class __$NavItemCopyWithImpl<$Res> extends _$NavItemCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $PageInfoCopyWith<$Res> get pageInfo {
     return $PageInfoCopyWith<$Res>(_value.pageInfo, (value) {
       return _then(_value.copyWith(pageInfo: value));
@@ -830,8 +766,8 @@ class __$NavItemCopyWithImpl<$Res> extends _$NavItemCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_NavItem implements _NavItem {
-  const _$_NavItem(
+class _$NavItemImpl implements _NavItem {
+  const _$NavItemImpl(
       {required this.name, required this.icon, required this.pageInfo});
 
   @override
@@ -847,36 +783,30 @@ class _$_NavItem implements _NavItem {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is _NavItem &&
-            (identical(other.name, name) ||
-                const DeepCollectionEquality().equals(other.name, name)) &&
-            (identical(other.icon, icon) ||
-                const DeepCollectionEquality().equals(other.icon, icon)) &&
+        (other.runtimeType == runtimeType &&
+            other is _$NavItemImpl &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.icon, icon) || other.icon == icon) &&
             (identical(other.pageInfo, pageInfo) ||
-                const DeepCollectionEquality()
-                    .equals(other.pageInfo, pageInfo)));
+                other.pageInfo == pageInfo));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(name) ^
-      const DeepCollectionEquality().hash(icon) ^
-      const DeepCollectionEquality().hash(pageInfo);
+  int get hashCode => Object.hash(runtimeType, name, icon, pageInfo);
 
   @JsonKey(ignore: true)
   @override
-  _$NavItemCopyWith<_NavItem> get copyWith =>
-      __$NavItemCopyWithImpl<_NavItem>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$NavItemImplCopyWith<_$NavItemImpl> get copyWith =>
+      __$$NavItemImplCopyWithImpl<_$NavItemImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(String name, Widget icon, PageInfo pageInfo) page,
-    required TResult Function(
-            String name, Widget icon, void Function() onPressed)
+    required TResult Function(String name, Widget icon, VoidCallback onPressed)
         action,
   }) {
     return page(name, icon, pageInfo);
@@ -885,9 +815,8 @@ class _$_NavItem implements _NavItem {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(String name, Widget icon, PageInfo pageInfo)? page,
-    TResult Function(String name, Widget icon, void Function() onPressed)?
-        action,
+    TResult? Function(String name, Widget icon, PageInfo pageInfo)? page,
+    TResult? Function(String name, Widget icon, VoidCallback onPressed)? action,
   }) {
     return page?.call(name, icon, pageInfo);
   }
@@ -896,8 +825,7 @@ class _$_NavItem implements _NavItem {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String name, Widget icon, PageInfo pageInfo)? page,
-    TResult Function(String name, Widget icon, void Function() onPressed)?
-        action,
+    TResult Function(String name, Widget icon, VoidCallback onPressed)? action,
     required TResult orElse(),
   }) {
     if (page != null) {
@@ -918,8 +846,8 @@ class _$_NavItem implements _NavItem {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_NavItem value)? page,
-    TResult Function(_NavItemAction value)? action,
+    TResult? Function(_NavItem value)? page,
+    TResult? Function(_NavItemAction value)? action,
   }) {
     return page?.call(this);
   }
@@ -940,67 +868,68 @@ class _$_NavItem implements _NavItem {
 
 abstract class _NavItem implements NavItem {
   const factory _NavItem(
-      {required String name,
-      required Widget icon,
-      required PageInfo pageInfo}) = _$_NavItem;
+      {required final String name,
+      required final Widget icon,
+      required final PageInfo pageInfo}) = _$NavItemImpl;
 
   @override
-  String get name => throw _privateConstructorUsedError;
+  String get name;
   @override
-  Widget get icon => throw _privateConstructorUsedError;
-  PageInfo get pageInfo => throw _privateConstructorUsedError;
+  Widget get icon;
+  PageInfo get pageInfo;
   @override
   @JsonKey(ignore: true)
-  _$NavItemCopyWith<_NavItem> get copyWith =>
+  _$$NavItemImplCopyWith<_$NavItemImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$NavItemActionCopyWith<$Res> implements $NavItemCopyWith<$Res> {
-  factory _$NavItemActionCopyWith(
-          _NavItemAction value, $Res Function(_NavItemAction) then) =
-      __$NavItemActionCopyWithImpl<$Res>;
+abstract class _$$NavItemActionImplCopyWith<$Res>
+    implements $NavItemCopyWith<$Res> {
+  factory _$$NavItemActionImplCopyWith(
+          _$NavItemActionImpl value, $Res Function(_$NavItemActionImpl) then) =
+      __$$NavItemActionImplCopyWithImpl<$Res>;
   @override
-  $Res call({String name, Widget icon, void Function() onPressed});
+  @useResult
+  $Res call({String name, Widget icon, VoidCallback onPressed});
 }
 
 /// @nodoc
-class __$NavItemActionCopyWithImpl<$Res> extends _$NavItemCopyWithImpl<$Res>
-    implements _$NavItemActionCopyWith<$Res> {
-  __$NavItemActionCopyWithImpl(
-      _NavItemAction _value, $Res Function(_NavItemAction) _then)
-      : super(_value, (v) => _then(v as _NavItemAction));
+class __$$NavItemActionImplCopyWithImpl<$Res>
+    extends _$NavItemCopyWithImpl<$Res, _$NavItemActionImpl>
+    implements _$$NavItemActionImplCopyWith<$Res> {
+  __$$NavItemActionImplCopyWithImpl(
+      _$NavItemActionImpl _value, $Res Function(_$NavItemActionImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _NavItemAction get _value => super._value as _NavItemAction;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? name = freezed,
-    Object? icon = freezed,
-    Object? onPressed = freezed,
+    Object? name = null,
+    Object? icon = null,
+    Object? onPressed = null,
   }) {
-    return _then(_NavItemAction(
-      name: name == freezed
+    return _then(_$NavItemActionImpl(
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      icon: icon == freezed
+      icon: null == icon
           ? _value.icon
           : icon // ignore: cast_nullable_to_non_nullable
               as Widget,
-      onPressed: onPressed == freezed
+      onPressed: null == onPressed
           ? _value.onPressed
           : onPressed // ignore: cast_nullable_to_non_nullable
-              as void Function(),
+              as VoidCallback,
     ));
   }
 }
 
 /// @nodoc
 
-class _$_NavItemAction implements _NavItemAction {
-  const _$_NavItemAction(
+class _$NavItemActionImpl implements _NavItemAction {
+  const _$NavItemActionImpl(
       {required this.name, required this.icon, required this.onPressed});
 
   @override
@@ -1008,7 +937,7 @@ class _$_NavItemAction implements _NavItemAction {
   @override
   final Widget icon;
   @override
-  final void Function() onPressed;
+  final VoidCallback onPressed;
 
   @override
   String toString() {
@@ -1016,36 +945,30 @@ class _$_NavItemAction implements _NavItemAction {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is _NavItemAction &&
-            (identical(other.name, name) ||
-                const DeepCollectionEquality().equals(other.name, name)) &&
-            (identical(other.icon, icon) ||
-                const DeepCollectionEquality().equals(other.icon, icon)) &&
+        (other.runtimeType == runtimeType &&
+            other is _$NavItemActionImpl &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.icon, icon) || other.icon == icon) &&
             (identical(other.onPressed, onPressed) ||
-                const DeepCollectionEquality()
-                    .equals(other.onPressed, onPressed)));
+                other.onPressed == onPressed));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(name) ^
-      const DeepCollectionEquality().hash(icon) ^
-      const DeepCollectionEquality().hash(onPressed);
+  int get hashCode => Object.hash(runtimeType, name, icon, onPressed);
 
   @JsonKey(ignore: true)
   @override
-  _$NavItemActionCopyWith<_NavItemAction> get copyWith =>
-      __$NavItemActionCopyWithImpl<_NavItemAction>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$NavItemActionImplCopyWith<_$NavItemActionImpl> get copyWith =>
+      __$$NavItemActionImplCopyWithImpl<_$NavItemActionImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(String name, Widget icon, PageInfo pageInfo) page,
-    required TResult Function(
-            String name, Widget icon, void Function() onPressed)
+    required TResult Function(String name, Widget icon, VoidCallback onPressed)
         action,
   }) {
     return action(name, icon, onPressed);
@@ -1054,9 +977,8 @@ class _$_NavItemAction implements _NavItemAction {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(String name, Widget icon, PageInfo pageInfo)? page,
-    TResult Function(String name, Widget icon, void Function() onPressed)?
-        action,
+    TResult? Function(String name, Widget icon, PageInfo pageInfo)? page,
+    TResult? Function(String name, Widget icon, VoidCallback onPressed)? action,
   }) {
     return action?.call(name, icon, onPressed);
   }
@@ -1065,8 +987,7 @@ class _$_NavItemAction implements _NavItemAction {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String name, Widget icon, PageInfo pageInfo)? page,
-    TResult Function(String name, Widget icon, void Function() onPressed)?
-        action,
+    TResult Function(String name, Widget icon, VoidCallback onPressed)? action,
     required TResult orElse(),
   }) {
     if (action != null) {
@@ -1087,8 +1008,8 @@ class _$_NavItemAction implements _NavItemAction {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_NavItem value)? page,
-    TResult Function(_NavItemAction value)? action,
+    TResult? Function(_NavItem value)? page,
+    TResult? Function(_NavItemAction value)? action,
   }) {
     return action?.call(this);
   }
@@ -1109,43 +1030,23 @@ class _$_NavItemAction implements _NavItemAction {
 
 abstract class _NavItemAction implements NavItem {
   const factory _NavItemAction(
-      {required String name,
-      required Widget icon,
-      required void Function() onPressed}) = _$_NavItemAction;
+      {required final String name,
+      required final Widget icon,
+      required final VoidCallback onPressed}) = _$NavItemActionImpl;
 
   @override
-  String get name => throw _privateConstructorUsedError;
+  String get name;
   @override
-  Widget get icon => throw _privateConstructorUsedError;
-  void Function() get onPressed => throw _privateConstructorUsedError;
+  Widget get icon;
+  VoidCallback get onPressed;
   @override
   @JsonKey(ignore: true)
-  _$NavItemActionCopyWith<_NavItemAction> get copyWith =>
+  _$$NavItemActionImplCopyWith<_$NavItemActionImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-class _$_BackdropContentTypeTearOff {
-  const _$_BackdropContentTypeTearOff();
-
-  _BackdropContentTypeDrawer drawer() {
-    return const _BackdropContentTypeDrawer();
-  }
-
-  _BackdropContentTypeSheet sheet() {
-    return const _BackdropContentTypeSheet();
-  }
-
-  _BackdropContentTypeNone none() {
-    return const _BackdropContentTypeNone();
-  }
-}
-
-/// @nodoc
-const _$BackdropContentType = _$_BackdropContentTypeTearOff();
-
-/// @nodoc
-mixin _$_BackdropContentType {
+mixin _$BackdropContentType {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() drawer,
@@ -1155,9 +1056,9 @@ mixin _$_BackdropContentType {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? drawer,
-    TResult Function()? sheet,
-    TResult Function()? none,
+    TResult? Function()? drawer,
+    TResult? Function()? sheet,
+    TResult? Function()? none,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -1177,9 +1078,9 @@ mixin _$_BackdropContentType {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_BackdropContentTypeDrawer value)? drawer,
-    TResult Function(_BackdropContentTypeSheet value)? sheet,
-    TResult Function(_BackdropContentTypeNone value)? none,
+    TResult? Function(_BackdropContentTypeDrawer value)? drawer,
+    TResult? Function(_BackdropContentTypeSheet value)? sheet,
+    TResult? Function(_BackdropContentTypeNone value)? none,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -1196,43 +1097,44 @@ mixin _$_BackdropContentType {
 abstract class _$BackdropContentTypeCopyWith<$Res> {
   factory _$BackdropContentTypeCopyWith(_BackdropContentType value,
           $Res Function(_BackdropContentType) then) =
-      __$BackdropContentTypeCopyWithImpl<$Res>;
+      __$BackdropContentTypeCopyWithImpl<$Res, _BackdropContentType>;
 }
 
 /// @nodoc
-class __$BackdropContentTypeCopyWithImpl<$Res>
+class __$BackdropContentTypeCopyWithImpl<$Res,
+        $Val extends _BackdropContentType>
     implements _$BackdropContentTypeCopyWith<$Res> {
   __$BackdropContentTypeCopyWithImpl(this._value, this._then);
 
-  final _BackdropContentType _value;
   // ignore: unused_field
-  final $Res Function(_BackdropContentType) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 }
 
 /// @nodoc
-abstract class _$BackdropContentTypeDrawerCopyWith<$Res> {
-  factory _$BackdropContentTypeDrawerCopyWith(_BackdropContentTypeDrawer value,
-          $Res Function(_BackdropContentTypeDrawer) then) =
-      __$BackdropContentTypeDrawerCopyWithImpl<$Res>;
+abstract class _$$BackdropContentTypeDrawerImplCopyWith<$Res> {
+  factory _$$BackdropContentTypeDrawerImplCopyWith(
+          _$BackdropContentTypeDrawerImpl value,
+          $Res Function(_$BackdropContentTypeDrawerImpl) then) =
+      __$$BackdropContentTypeDrawerImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$BackdropContentTypeDrawerCopyWithImpl<$Res>
-    extends __$BackdropContentTypeCopyWithImpl<$Res>
-    implements _$BackdropContentTypeDrawerCopyWith<$Res> {
-  __$BackdropContentTypeDrawerCopyWithImpl(_BackdropContentTypeDrawer _value,
-      $Res Function(_BackdropContentTypeDrawer) _then)
-      : super(_value, (v) => _then(v as _BackdropContentTypeDrawer));
-
-  @override
-  _BackdropContentTypeDrawer get _value =>
-      super._value as _BackdropContentTypeDrawer;
+class __$$BackdropContentTypeDrawerImplCopyWithImpl<$Res>
+    extends __$BackdropContentTypeCopyWithImpl<$Res,
+        _$BackdropContentTypeDrawerImpl>
+    implements _$$BackdropContentTypeDrawerImplCopyWith<$Res> {
+  __$$BackdropContentTypeDrawerImplCopyWithImpl(
+      _$BackdropContentTypeDrawerImpl _value,
+      $Res Function(_$BackdropContentTypeDrawerImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_BackdropContentTypeDrawer implements _BackdropContentTypeDrawer {
-  const _$_BackdropContentTypeDrawer();
+class _$BackdropContentTypeDrawerImpl implements _BackdropContentTypeDrawer {
+  const _$BackdropContentTypeDrawerImpl();
 
   @override
   String toString() {
@@ -1240,8 +1142,10 @@ class _$_BackdropContentTypeDrawer implements _BackdropContentTypeDrawer {
   }
 
   @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) || (other is _BackdropContentTypeDrawer);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$BackdropContentTypeDrawerImpl);
   }
 
   @override
@@ -1260,9 +1164,9 @@ class _$_BackdropContentTypeDrawer implements _BackdropContentTypeDrawer {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? drawer,
-    TResult Function()? sheet,
-    TResult Function()? none,
+    TResult? Function()? drawer,
+    TResult? Function()? sheet,
+    TResult? Function()? none,
   }) {
     return drawer?.call();
   }
@@ -1294,9 +1198,9 @@ class _$_BackdropContentTypeDrawer implements _BackdropContentTypeDrawer {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_BackdropContentTypeDrawer value)? drawer,
-    TResult Function(_BackdropContentTypeSheet value)? sheet,
-    TResult Function(_BackdropContentTypeNone value)? none,
+    TResult? Function(_BackdropContentTypeDrawer value)? drawer,
+    TResult? Function(_BackdropContentTypeSheet value)? sheet,
+    TResult? Function(_BackdropContentTypeNone value)? none,
   }) {
     return drawer?.call(this);
   }
@@ -1317,33 +1221,32 @@ class _$_BackdropContentTypeDrawer implements _BackdropContentTypeDrawer {
 }
 
 abstract class _BackdropContentTypeDrawer implements _BackdropContentType {
-  const factory _BackdropContentTypeDrawer() = _$_BackdropContentTypeDrawer;
+  const factory _BackdropContentTypeDrawer() = _$BackdropContentTypeDrawerImpl;
 }
 
 /// @nodoc
-abstract class _$BackdropContentTypeSheetCopyWith<$Res> {
-  factory _$BackdropContentTypeSheetCopyWith(_BackdropContentTypeSheet value,
-          $Res Function(_BackdropContentTypeSheet) then) =
-      __$BackdropContentTypeSheetCopyWithImpl<$Res>;
+abstract class _$$BackdropContentTypeSheetImplCopyWith<$Res> {
+  factory _$$BackdropContentTypeSheetImplCopyWith(
+          _$BackdropContentTypeSheetImpl value,
+          $Res Function(_$BackdropContentTypeSheetImpl) then) =
+      __$$BackdropContentTypeSheetImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$BackdropContentTypeSheetCopyWithImpl<$Res>
-    extends __$BackdropContentTypeCopyWithImpl<$Res>
-    implements _$BackdropContentTypeSheetCopyWith<$Res> {
-  __$BackdropContentTypeSheetCopyWithImpl(_BackdropContentTypeSheet _value,
-      $Res Function(_BackdropContentTypeSheet) _then)
-      : super(_value, (v) => _then(v as _BackdropContentTypeSheet));
-
-  @override
-  _BackdropContentTypeSheet get _value =>
-      super._value as _BackdropContentTypeSheet;
+class __$$BackdropContentTypeSheetImplCopyWithImpl<$Res>
+    extends __$BackdropContentTypeCopyWithImpl<$Res,
+        _$BackdropContentTypeSheetImpl>
+    implements _$$BackdropContentTypeSheetImplCopyWith<$Res> {
+  __$$BackdropContentTypeSheetImplCopyWithImpl(
+      _$BackdropContentTypeSheetImpl _value,
+      $Res Function(_$BackdropContentTypeSheetImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_BackdropContentTypeSheet implements _BackdropContentTypeSheet {
-  const _$_BackdropContentTypeSheet();
+class _$BackdropContentTypeSheetImpl implements _BackdropContentTypeSheet {
+  const _$BackdropContentTypeSheetImpl();
 
   @override
   String toString() {
@@ -1351,8 +1254,10 @@ class _$_BackdropContentTypeSheet implements _BackdropContentTypeSheet {
   }
 
   @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) || (other is _BackdropContentTypeSheet);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$BackdropContentTypeSheetImpl);
   }
 
   @override
@@ -1371,9 +1276,9 @@ class _$_BackdropContentTypeSheet implements _BackdropContentTypeSheet {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? drawer,
-    TResult Function()? sheet,
-    TResult Function()? none,
+    TResult? Function()? drawer,
+    TResult? Function()? sheet,
+    TResult? Function()? none,
   }) {
     return sheet?.call();
   }
@@ -1405,9 +1310,9 @@ class _$_BackdropContentTypeSheet implements _BackdropContentTypeSheet {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_BackdropContentTypeDrawer value)? drawer,
-    TResult Function(_BackdropContentTypeSheet value)? sheet,
-    TResult Function(_BackdropContentTypeNone value)? none,
+    TResult? Function(_BackdropContentTypeDrawer value)? drawer,
+    TResult? Function(_BackdropContentTypeSheet value)? sheet,
+    TResult? Function(_BackdropContentTypeNone value)? none,
   }) {
     return sheet?.call(this);
   }
@@ -1428,33 +1333,32 @@ class _$_BackdropContentTypeSheet implements _BackdropContentTypeSheet {
 }
 
 abstract class _BackdropContentTypeSheet implements _BackdropContentType {
-  const factory _BackdropContentTypeSheet() = _$_BackdropContentTypeSheet;
+  const factory _BackdropContentTypeSheet() = _$BackdropContentTypeSheetImpl;
 }
 
 /// @nodoc
-abstract class _$BackdropContentTypeNoneCopyWith<$Res> {
-  factory _$BackdropContentTypeNoneCopyWith(_BackdropContentTypeNone value,
-          $Res Function(_BackdropContentTypeNone) then) =
-      __$BackdropContentTypeNoneCopyWithImpl<$Res>;
+abstract class _$$BackdropContentTypeNoneImplCopyWith<$Res> {
+  factory _$$BackdropContentTypeNoneImplCopyWith(
+          _$BackdropContentTypeNoneImpl value,
+          $Res Function(_$BackdropContentTypeNoneImpl) then) =
+      __$$BackdropContentTypeNoneImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$BackdropContentTypeNoneCopyWithImpl<$Res>
-    extends __$BackdropContentTypeCopyWithImpl<$Res>
-    implements _$BackdropContentTypeNoneCopyWith<$Res> {
-  __$BackdropContentTypeNoneCopyWithImpl(_BackdropContentTypeNone _value,
-      $Res Function(_BackdropContentTypeNone) _then)
-      : super(_value, (v) => _then(v as _BackdropContentTypeNone));
-
-  @override
-  _BackdropContentTypeNone get _value =>
-      super._value as _BackdropContentTypeNone;
+class __$$BackdropContentTypeNoneImplCopyWithImpl<$Res>
+    extends __$BackdropContentTypeCopyWithImpl<$Res,
+        _$BackdropContentTypeNoneImpl>
+    implements _$$BackdropContentTypeNoneImplCopyWith<$Res> {
+  __$$BackdropContentTypeNoneImplCopyWithImpl(
+      _$BackdropContentTypeNoneImpl _value,
+      $Res Function(_$BackdropContentTypeNoneImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_BackdropContentTypeNone implements _BackdropContentTypeNone {
-  const _$_BackdropContentTypeNone();
+class _$BackdropContentTypeNoneImpl implements _BackdropContentTypeNone {
+  const _$BackdropContentTypeNoneImpl();
 
   @override
   String toString() {
@@ -1462,8 +1366,10 @@ class _$_BackdropContentTypeNone implements _BackdropContentTypeNone {
   }
 
   @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) || (other is _BackdropContentTypeNone);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$BackdropContentTypeNoneImpl);
   }
 
   @override
@@ -1482,9 +1388,9 @@ class _$_BackdropContentTypeNone implements _BackdropContentTypeNone {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? drawer,
-    TResult Function()? sheet,
-    TResult Function()? none,
+    TResult? Function()? drawer,
+    TResult? Function()? sheet,
+    TResult? Function()? none,
   }) {
     return none?.call();
   }
@@ -1516,9 +1422,9 @@ class _$_BackdropContentTypeNone implements _BackdropContentTypeNone {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_BackdropContentTypeDrawer value)? drawer,
-    TResult Function(_BackdropContentTypeSheet value)? sheet,
-    TResult Function(_BackdropContentTypeNone value)? none,
+    TResult? Function(_BackdropContentTypeDrawer value)? drawer,
+    TResult? Function(_BackdropContentTypeSheet value)? sheet,
+    TResult? Function(_BackdropContentTypeNone value)? none,
   }) {
     return none?.call(this);
   }
@@ -1539,35 +1445,11 @@ class _$_BackdropContentTypeNone implements _BackdropContentTypeNone {
 }
 
 abstract class _BackdropContentTypeNone implements _BackdropContentType {
-  const factory _BackdropContentTypeNone() = _$_BackdropContentTypeNone;
+  const factory _BackdropContentTypeNone() = _$BackdropContentTypeNoneImpl;
 }
 
 /// @nodoc
-class _$_BackLayerTypeTearOff {
-  const _$_BackLayerTypeTearOff();
-
-  _BackLayerTypeTop top() {
-    return const _BackLayerTypeTop();
-  }
-
-  _BackLayerTypeStart start() {
-    return const _BackLayerTypeStart();
-  }
-
-  _BackLayerTypeEnd end() {
-    return const _BackLayerTypeEnd();
-  }
-
-  _BackLayerTypeNone none() {
-    return const _BackLayerTypeNone();
-  }
-}
-
-/// @nodoc
-const _$BackLayerType = _$_BackLayerTypeTearOff();
-
-/// @nodoc
-mixin _$_BackLayerType {
+mixin _$BackLayerType {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() top,
@@ -1578,10 +1460,10 @@ mixin _$_BackLayerType {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? top,
-    TResult Function()? start,
-    TResult Function()? end,
-    TResult Function()? none,
+    TResult? Function()? top,
+    TResult? Function()? start,
+    TResult? Function()? end,
+    TResult? Function()? none,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -1603,10 +1485,10 @@ mixin _$_BackLayerType {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_BackLayerTypeTop value)? top,
-    TResult Function(_BackLayerTypeStart value)? start,
-    TResult Function(_BackLayerTypeEnd value)? end,
-    TResult Function(_BackLayerTypeNone value)? none,
+    TResult? Function(_BackLayerTypeTop value)? top,
+    TResult? Function(_BackLayerTypeStart value)? start,
+    TResult? Function(_BackLayerTypeEnd value)? end,
+    TResult? Function(_BackLayerTypeNone value)? none,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -1624,42 +1506,40 @@ mixin _$_BackLayerType {
 abstract class _$BackLayerTypeCopyWith<$Res> {
   factory _$BackLayerTypeCopyWith(
           _BackLayerType value, $Res Function(_BackLayerType) then) =
-      __$BackLayerTypeCopyWithImpl<$Res>;
+      __$BackLayerTypeCopyWithImpl<$Res, _BackLayerType>;
 }
 
 /// @nodoc
-class __$BackLayerTypeCopyWithImpl<$Res>
+class __$BackLayerTypeCopyWithImpl<$Res, $Val extends _BackLayerType>
     implements _$BackLayerTypeCopyWith<$Res> {
   __$BackLayerTypeCopyWithImpl(this._value, this._then);
 
-  final _BackLayerType _value;
   // ignore: unused_field
-  final $Res Function(_BackLayerType) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 }
 
 /// @nodoc
-abstract class _$BackLayerTypeTopCopyWith<$Res> {
-  factory _$BackLayerTypeTopCopyWith(
-          _BackLayerTypeTop value, $Res Function(_BackLayerTypeTop) then) =
-      __$BackLayerTypeTopCopyWithImpl<$Res>;
+abstract class _$$BackLayerTypeTopImplCopyWith<$Res> {
+  factory _$$BackLayerTypeTopImplCopyWith(_$BackLayerTypeTopImpl value,
+          $Res Function(_$BackLayerTypeTopImpl) then) =
+      __$$BackLayerTypeTopImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$BackLayerTypeTopCopyWithImpl<$Res>
-    extends __$BackLayerTypeCopyWithImpl<$Res>
-    implements _$BackLayerTypeTopCopyWith<$Res> {
-  __$BackLayerTypeTopCopyWithImpl(
-      _BackLayerTypeTop _value, $Res Function(_BackLayerTypeTop) _then)
-      : super(_value, (v) => _then(v as _BackLayerTypeTop));
-
-  @override
-  _BackLayerTypeTop get _value => super._value as _BackLayerTypeTop;
+class __$$BackLayerTypeTopImplCopyWithImpl<$Res>
+    extends __$BackLayerTypeCopyWithImpl<$Res, _$BackLayerTypeTopImpl>
+    implements _$$BackLayerTypeTopImplCopyWith<$Res> {
+  __$$BackLayerTypeTopImplCopyWithImpl(_$BackLayerTypeTopImpl _value,
+      $Res Function(_$BackLayerTypeTopImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_BackLayerTypeTop implements _BackLayerTypeTop {
-  const _$_BackLayerTypeTop();
+class _$BackLayerTypeTopImpl implements _BackLayerTypeTop {
+  const _$BackLayerTypeTopImpl();
 
   @override
   String toString() {
@@ -1667,8 +1547,9 @@ class _$_BackLayerTypeTop implements _BackLayerTypeTop {
   }
 
   @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) || (other is _BackLayerTypeTop);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$BackLayerTypeTopImpl);
   }
 
   @override
@@ -1688,10 +1569,10 @@ class _$_BackLayerTypeTop implements _BackLayerTypeTop {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? top,
-    TResult Function()? start,
-    TResult Function()? end,
-    TResult Function()? none,
+    TResult? Function()? top,
+    TResult? Function()? start,
+    TResult? Function()? end,
+    TResult? Function()? none,
   }) {
     return top?.call();
   }
@@ -1725,10 +1606,10 @@ class _$_BackLayerTypeTop implements _BackLayerTypeTop {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_BackLayerTypeTop value)? top,
-    TResult Function(_BackLayerTypeStart value)? start,
-    TResult Function(_BackLayerTypeEnd value)? end,
-    TResult Function(_BackLayerTypeNone value)? none,
+    TResult? Function(_BackLayerTypeTop value)? top,
+    TResult? Function(_BackLayerTypeStart value)? start,
+    TResult? Function(_BackLayerTypeEnd value)? end,
+    TResult? Function(_BackLayerTypeNone value)? none,
   }) {
     return top?.call(this);
   }
@@ -1750,32 +1631,29 @@ class _$_BackLayerTypeTop implements _BackLayerTypeTop {
 }
 
 abstract class _BackLayerTypeTop implements _BackLayerType {
-  const factory _BackLayerTypeTop() = _$_BackLayerTypeTop;
+  const factory _BackLayerTypeTop() = _$BackLayerTypeTopImpl;
 }
 
 /// @nodoc
-abstract class _$BackLayerTypeStartCopyWith<$Res> {
-  factory _$BackLayerTypeStartCopyWith(
-          _BackLayerTypeStart value, $Res Function(_BackLayerTypeStart) then) =
-      __$BackLayerTypeStartCopyWithImpl<$Res>;
+abstract class _$$BackLayerTypeStartImplCopyWith<$Res> {
+  factory _$$BackLayerTypeStartImplCopyWith(_$BackLayerTypeStartImpl value,
+          $Res Function(_$BackLayerTypeStartImpl) then) =
+      __$$BackLayerTypeStartImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$BackLayerTypeStartCopyWithImpl<$Res>
-    extends __$BackLayerTypeCopyWithImpl<$Res>
-    implements _$BackLayerTypeStartCopyWith<$Res> {
-  __$BackLayerTypeStartCopyWithImpl(
-      _BackLayerTypeStart _value, $Res Function(_BackLayerTypeStart) _then)
-      : super(_value, (v) => _then(v as _BackLayerTypeStart));
-
-  @override
-  _BackLayerTypeStart get _value => super._value as _BackLayerTypeStart;
+class __$$BackLayerTypeStartImplCopyWithImpl<$Res>
+    extends __$BackLayerTypeCopyWithImpl<$Res, _$BackLayerTypeStartImpl>
+    implements _$$BackLayerTypeStartImplCopyWith<$Res> {
+  __$$BackLayerTypeStartImplCopyWithImpl(_$BackLayerTypeStartImpl _value,
+      $Res Function(_$BackLayerTypeStartImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_BackLayerTypeStart implements _BackLayerTypeStart {
-  const _$_BackLayerTypeStart();
+class _$BackLayerTypeStartImpl implements _BackLayerTypeStart {
+  const _$BackLayerTypeStartImpl();
 
   @override
   String toString() {
@@ -1783,8 +1661,9 @@ class _$_BackLayerTypeStart implements _BackLayerTypeStart {
   }
 
   @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) || (other is _BackLayerTypeStart);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$BackLayerTypeStartImpl);
   }
 
   @override
@@ -1804,10 +1683,10 @@ class _$_BackLayerTypeStart implements _BackLayerTypeStart {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? top,
-    TResult Function()? start,
-    TResult Function()? end,
-    TResult Function()? none,
+    TResult? Function()? top,
+    TResult? Function()? start,
+    TResult? Function()? end,
+    TResult? Function()? none,
   }) {
     return start?.call();
   }
@@ -1841,10 +1720,10 @@ class _$_BackLayerTypeStart implements _BackLayerTypeStart {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_BackLayerTypeTop value)? top,
-    TResult Function(_BackLayerTypeStart value)? start,
-    TResult Function(_BackLayerTypeEnd value)? end,
-    TResult Function(_BackLayerTypeNone value)? none,
+    TResult? Function(_BackLayerTypeTop value)? top,
+    TResult? Function(_BackLayerTypeStart value)? start,
+    TResult? Function(_BackLayerTypeEnd value)? end,
+    TResult? Function(_BackLayerTypeNone value)? none,
   }) {
     return start?.call(this);
   }
@@ -1866,32 +1745,29 @@ class _$_BackLayerTypeStart implements _BackLayerTypeStart {
 }
 
 abstract class _BackLayerTypeStart implements _BackLayerType {
-  const factory _BackLayerTypeStart() = _$_BackLayerTypeStart;
+  const factory _BackLayerTypeStart() = _$BackLayerTypeStartImpl;
 }
 
 /// @nodoc
-abstract class _$BackLayerTypeEndCopyWith<$Res> {
-  factory _$BackLayerTypeEndCopyWith(
-          _BackLayerTypeEnd value, $Res Function(_BackLayerTypeEnd) then) =
-      __$BackLayerTypeEndCopyWithImpl<$Res>;
+abstract class _$$BackLayerTypeEndImplCopyWith<$Res> {
+  factory _$$BackLayerTypeEndImplCopyWith(_$BackLayerTypeEndImpl value,
+          $Res Function(_$BackLayerTypeEndImpl) then) =
+      __$$BackLayerTypeEndImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$BackLayerTypeEndCopyWithImpl<$Res>
-    extends __$BackLayerTypeCopyWithImpl<$Res>
-    implements _$BackLayerTypeEndCopyWith<$Res> {
-  __$BackLayerTypeEndCopyWithImpl(
-      _BackLayerTypeEnd _value, $Res Function(_BackLayerTypeEnd) _then)
-      : super(_value, (v) => _then(v as _BackLayerTypeEnd));
-
-  @override
-  _BackLayerTypeEnd get _value => super._value as _BackLayerTypeEnd;
+class __$$BackLayerTypeEndImplCopyWithImpl<$Res>
+    extends __$BackLayerTypeCopyWithImpl<$Res, _$BackLayerTypeEndImpl>
+    implements _$$BackLayerTypeEndImplCopyWith<$Res> {
+  __$$BackLayerTypeEndImplCopyWithImpl(_$BackLayerTypeEndImpl _value,
+      $Res Function(_$BackLayerTypeEndImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_BackLayerTypeEnd implements _BackLayerTypeEnd {
-  const _$_BackLayerTypeEnd();
+class _$BackLayerTypeEndImpl implements _BackLayerTypeEnd {
+  const _$BackLayerTypeEndImpl();
 
   @override
   String toString() {
@@ -1899,8 +1775,9 @@ class _$_BackLayerTypeEnd implements _BackLayerTypeEnd {
   }
 
   @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) || (other is _BackLayerTypeEnd);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$BackLayerTypeEndImpl);
   }
 
   @override
@@ -1920,10 +1797,10 @@ class _$_BackLayerTypeEnd implements _BackLayerTypeEnd {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? top,
-    TResult Function()? start,
-    TResult Function()? end,
-    TResult Function()? none,
+    TResult? Function()? top,
+    TResult? Function()? start,
+    TResult? Function()? end,
+    TResult? Function()? none,
   }) {
     return end?.call();
   }
@@ -1957,10 +1834,10 @@ class _$_BackLayerTypeEnd implements _BackLayerTypeEnd {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_BackLayerTypeTop value)? top,
-    TResult Function(_BackLayerTypeStart value)? start,
-    TResult Function(_BackLayerTypeEnd value)? end,
-    TResult Function(_BackLayerTypeNone value)? none,
+    TResult? Function(_BackLayerTypeTop value)? top,
+    TResult? Function(_BackLayerTypeStart value)? start,
+    TResult? Function(_BackLayerTypeEnd value)? end,
+    TResult? Function(_BackLayerTypeNone value)? none,
   }) {
     return end?.call(this);
   }
@@ -1982,32 +1859,29 @@ class _$_BackLayerTypeEnd implements _BackLayerTypeEnd {
 }
 
 abstract class _BackLayerTypeEnd implements _BackLayerType {
-  const factory _BackLayerTypeEnd() = _$_BackLayerTypeEnd;
+  const factory _BackLayerTypeEnd() = _$BackLayerTypeEndImpl;
 }
 
 /// @nodoc
-abstract class _$BackLayerTypeNoneCopyWith<$Res> {
-  factory _$BackLayerTypeNoneCopyWith(
-          _BackLayerTypeNone value, $Res Function(_BackLayerTypeNone) then) =
-      __$BackLayerTypeNoneCopyWithImpl<$Res>;
+abstract class _$$BackLayerTypeNoneImplCopyWith<$Res> {
+  factory _$$BackLayerTypeNoneImplCopyWith(_$BackLayerTypeNoneImpl value,
+          $Res Function(_$BackLayerTypeNoneImpl) then) =
+      __$$BackLayerTypeNoneImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$BackLayerTypeNoneCopyWithImpl<$Res>
-    extends __$BackLayerTypeCopyWithImpl<$Res>
-    implements _$BackLayerTypeNoneCopyWith<$Res> {
-  __$BackLayerTypeNoneCopyWithImpl(
-      _BackLayerTypeNone _value, $Res Function(_BackLayerTypeNone) _then)
-      : super(_value, (v) => _then(v as _BackLayerTypeNone));
-
-  @override
-  _BackLayerTypeNone get _value => super._value as _BackLayerTypeNone;
+class __$$BackLayerTypeNoneImplCopyWithImpl<$Res>
+    extends __$BackLayerTypeCopyWithImpl<$Res, _$BackLayerTypeNoneImpl>
+    implements _$$BackLayerTypeNoneImplCopyWith<$Res> {
+  __$$BackLayerTypeNoneImplCopyWithImpl(_$BackLayerTypeNoneImpl _value,
+      $Res Function(_$BackLayerTypeNoneImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_BackLayerTypeNone implements _BackLayerTypeNone {
-  const _$_BackLayerTypeNone();
+class _$BackLayerTypeNoneImpl implements _BackLayerTypeNone {
+  const _$BackLayerTypeNoneImpl();
 
   @override
   String toString() {
@@ -2015,8 +1889,9 @@ class _$_BackLayerTypeNone implements _BackLayerTypeNone {
   }
 
   @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) || (other is _BackLayerTypeNone);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$BackLayerTypeNoneImpl);
   }
 
   @override
@@ -2036,10 +1911,10 @@ class _$_BackLayerTypeNone implements _BackLayerTypeNone {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? top,
-    TResult Function()? start,
-    TResult Function()? end,
-    TResult Function()? none,
+    TResult? Function()? top,
+    TResult? Function()? start,
+    TResult? Function()? end,
+    TResult? Function()? none,
   }) {
     return none?.call();
   }
@@ -2073,10 +1948,10 @@ class _$_BackLayerTypeNone implements _BackLayerTypeNone {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_BackLayerTypeTop value)? top,
-    TResult Function(_BackLayerTypeStart value)? start,
-    TResult Function(_BackLayerTypeEnd value)? end,
-    TResult Function(_BackLayerTypeNone value)? none,
+    TResult? Function(_BackLayerTypeTop value)? top,
+    TResult? Function(_BackLayerTypeStart value)? start,
+    TResult? Function(_BackLayerTypeEnd value)? end,
+    TResult? Function(_BackLayerTypeNone value)? none,
   }) {
     return none?.call(this);
   }
@@ -2098,29 +1973,11 @@ class _$_BackLayerTypeNone implements _BackLayerTypeNone {
 }
 
 abstract class _BackLayerTypeNone implements _BackLayerType {
-  const factory _BackLayerTypeNone() = _$_BackLayerTypeNone;
+  const factory _BackLayerTypeNone() = _$BackLayerTypeNoneImpl;
 }
 
 /// @nodoc
-class _$_AppBarStateTearOff {
-  const _$_AppBarStateTearOff();
-
-  _AppBarStateNormal normal() {
-    return const _AppBarStateNormal();
-  }
-
-  _AppBarStateContextual contextual(int itemsCount) {
-    return _AppBarStateContextual(
-      itemsCount,
-    );
-  }
-}
-
-/// @nodoc
-const _$AppBarState = _$_AppBarStateTearOff();
-
-/// @nodoc
-mixin _$_AppBarState {
+mixin _$AppBarState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() normal,
@@ -2129,8 +1986,8 @@ mixin _$_AppBarState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? normal,
-    TResult Function(int itemsCount)? contextual,
+    TResult? Function()? normal,
+    TResult? Function(int itemsCount)? contextual,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -2148,8 +2005,8 @@ mixin _$_AppBarState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_AppBarStateNormal value)? normal,
-    TResult Function(_AppBarStateContextual value)? contextual,
+    TResult? Function(_AppBarStateNormal value)? normal,
+    TResult? Function(_AppBarStateContextual value)? contextual,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -2165,41 +2022,40 @@ mixin _$_AppBarState {
 abstract class _$AppBarStateCopyWith<$Res> {
   factory _$AppBarStateCopyWith(
           _AppBarState value, $Res Function(_AppBarState) then) =
-      __$AppBarStateCopyWithImpl<$Res>;
+      __$AppBarStateCopyWithImpl<$Res, _AppBarState>;
 }
 
 /// @nodoc
-class __$AppBarStateCopyWithImpl<$Res> implements _$AppBarStateCopyWith<$Res> {
+class __$AppBarStateCopyWithImpl<$Res, $Val extends _AppBarState>
+    implements _$AppBarStateCopyWith<$Res> {
   __$AppBarStateCopyWithImpl(this._value, this._then);
 
-  final _AppBarState _value;
   // ignore: unused_field
-  final $Res Function(_AppBarState) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 }
 
 /// @nodoc
-abstract class _$AppBarStateNormalCopyWith<$Res> {
-  factory _$AppBarStateNormalCopyWith(
-          _AppBarStateNormal value, $Res Function(_AppBarStateNormal) then) =
-      __$AppBarStateNormalCopyWithImpl<$Res>;
+abstract class _$$AppBarStateNormalImplCopyWith<$Res> {
+  factory _$$AppBarStateNormalImplCopyWith(_$AppBarStateNormalImpl value,
+          $Res Function(_$AppBarStateNormalImpl) then) =
+      __$$AppBarStateNormalImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$AppBarStateNormalCopyWithImpl<$Res>
-    extends __$AppBarStateCopyWithImpl<$Res>
-    implements _$AppBarStateNormalCopyWith<$Res> {
-  __$AppBarStateNormalCopyWithImpl(
-      _AppBarStateNormal _value, $Res Function(_AppBarStateNormal) _then)
-      : super(_value, (v) => _then(v as _AppBarStateNormal));
-
-  @override
-  _AppBarStateNormal get _value => super._value as _AppBarStateNormal;
+class __$$AppBarStateNormalImplCopyWithImpl<$Res>
+    extends __$AppBarStateCopyWithImpl<$Res, _$AppBarStateNormalImpl>
+    implements _$$AppBarStateNormalImplCopyWith<$Res> {
+  __$$AppBarStateNormalImplCopyWithImpl(_$AppBarStateNormalImpl _value,
+      $Res Function(_$AppBarStateNormalImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_AppBarStateNormal implements _AppBarStateNormal {
-  const _$_AppBarStateNormal();
+class _$AppBarStateNormalImpl implements _AppBarStateNormal {
+  const _$AppBarStateNormalImpl();
 
   @override
   String toString() {
@@ -2207,8 +2063,9 @@ class _$_AppBarStateNormal implements _AppBarStateNormal {
   }
 
   @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) || (other is _AppBarStateNormal);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$AppBarStateNormalImpl);
   }
 
   @override
@@ -2226,8 +2083,8 @@ class _$_AppBarStateNormal implements _AppBarStateNormal {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? normal,
-    TResult Function(int itemsCount)? contextual,
+    TResult? Function()? normal,
+    TResult? Function(int itemsCount)? contextual,
   }) {
     return normal?.call();
   }
@@ -2257,8 +2114,8 @@ class _$_AppBarStateNormal implements _AppBarStateNormal {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_AppBarStateNormal value)? normal,
-    TResult Function(_AppBarStateContextual value)? contextual,
+    TResult? Function(_AppBarStateNormal value)? normal,
+    TResult? Function(_AppBarStateContextual value)? contextual,
   }) {
     return normal?.call(this);
   }
@@ -2278,34 +2135,34 @@ class _$_AppBarStateNormal implements _AppBarStateNormal {
 }
 
 abstract class _AppBarStateNormal implements _AppBarState {
-  const factory _AppBarStateNormal() = _$_AppBarStateNormal;
+  const factory _AppBarStateNormal() = _$AppBarStateNormalImpl;
 }
 
 /// @nodoc
-abstract class _$AppBarStateContextualCopyWith<$Res> {
-  factory _$AppBarStateContextualCopyWith(_AppBarStateContextual value,
-          $Res Function(_AppBarStateContextual) then) =
-      __$AppBarStateContextualCopyWithImpl<$Res>;
+abstract class _$$AppBarStateContextualImplCopyWith<$Res> {
+  factory _$$AppBarStateContextualImplCopyWith(
+          _$AppBarStateContextualImpl value,
+          $Res Function(_$AppBarStateContextualImpl) then) =
+      __$$AppBarStateContextualImplCopyWithImpl<$Res>;
+  @useResult
   $Res call({int itemsCount});
 }
 
 /// @nodoc
-class __$AppBarStateContextualCopyWithImpl<$Res>
-    extends __$AppBarStateCopyWithImpl<$Res>
-    implements _$AppBarStateContextualCopyWith<$Res> {
-  __$AppBarStateContextualCopyWithImpl(_AppBarStateContextual _value,
-      $Res Function(_AppBarStateContextual) _then)
-      : super(_value, (v) => _then(v as _AppBarStateContextual));
+class __$$AppBarStateContextualImplCopyWithImpl<$Res>
+    extends __$AppBarStateCopyWithImpl<$Res, _$AppBarStateContextualImpl>
+    implements _$$AppBarStateContextualImplCopyWith<$Res> {
+  __$$AppBarStateContextualImplCopyWithImpl(_$AppBarStateContextualImpl _value,
+      $Res Function(_$AppBarStateContextualImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _AppBarStateContextual get _value => super._value as _AppBarStateContextual;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? itemsCount = freezed,
+    Object? itemsCount = null,
   }) {
-    return _then(_AppBarStateContextual(
-      itemsCount == freezed
+    return _then(_$AppBarStateContextualImpl(
+      null == itemsCount
           ? _value.itemsCount
           : itemsCount // ignore: cast_nullable_to_non_nullable
               as int,
@@ -2315,8 +2172,8 @@ class __$AppBarStateContextualCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_AppBarStateContextual implements _AppBarStateContextual {
-  const _$_AppBarStateContextual(this.itemsCount);
+class _$AppBarStateContextualImpl implements _AppBarStateContextual {
+  const _$AppBarStateContextualImpl(this.itemsCount);
 
   @override
   final int itemsCount;
@@ -2327,23 +2184,23 @@ class _$_AppBarStateContextual implements _AppBarStateContextual {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is _AppBarStateContextual &&
+        (other.runtimeType == runtimeType &&
+            other is _$AppBarStateContextualImpl &&
             (identical(other.itemsCount, itemsCount) ||
-                const DeepCollectionEquality()
-                    .equals(other.itemsCount, itemsCount)));
+                other.itemsCount == itemsCount));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(itemsCount);
+  int get hashCode => Object.hash(runtimeType, itemsCount);
 
   @JsonKey(ignore: true)
   @override
-  _$AppBarStateContextualCopyWith<_AppBarStateContextual> get copyWith =>
-      __$AppBarStateContextualCopyWithImpl<_AppBarStateContextual>(
-          this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$AppBarStateContextualImplCopyWith<_$AppBarStateContextualImpl>
+      get copyWith => __$$AppBarStateContextualImplCopyWithImpl<
+          _$AppBarStateContextualImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -2357,8 +2214,8 @@ class _$_AppBarStateContextual implements _AppBarStateContextual {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? normal,
-    TResult Function(int itemsCount)? contextual,
+    TResult? Function()? normal,
+    TResult? Function(int itemsCount)? contextual,
   }) {
     return contextual?.call(itemsCount);
   }
@@ -2388,8 +2245,8 @@ class _$_AppBarStateContextual implements _AppBarStateContextual {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_AppBarStateNormal value)? normal,
-    TResult Function(_AppBarStateContextual value)? contextual,
+    TResult? Function(_AppBarStateNormal value)? normal,
+    TResult? Function(_AppBarStateContextual value)? contextual,
   }) {
     return contextual?.call(this);
   }
@@ -2409,11 +2266,11 @@ class _$_AppBarStateContextual implements _AppBarStateContextual {
 }
 
 abstract class _AppBarStateContextual implements _AppBarState {
-  const factory _AppBarStateContextual(int itemsCount) =
-      _$_AppBarStateContextual;
+  const factory _AppBarStateContextual(final int itemsCount) =
+      _$AppBarStateContextualImpl;
 
-  int get itemsCount => throw _privateConstructorUsedError;
+  int get itemsCount;
   @JsonKey(ignore: true)
-  _$AppBarStateContextualCopyWith<_AppBarStateContextual> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$AppBarStateContextualImplCopyWith<_$AppBarStateContextualImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

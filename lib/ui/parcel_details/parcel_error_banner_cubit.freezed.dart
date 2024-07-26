@@ -1,6 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'parcel_error_banner_cubit.dart';
 
@@ -11,26 +12,11 @@ part of 'parcel_error_banner_cubit.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$ParcelErrorBannerStateTearOff {
-  const _$ParcelErrorBannerStateTearOff();
-
-  ParcelErrorBannerStateShow show({required Set<ParcelErrorBanner> banners}) {
-    return ParcelErrorBannerStateShow(
-      banners: banners,
-    );
-  }
-}
-
-/// @nodoc
-const $ParcelErrorBannerState = _$ParcelErrorBannerStateTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$ParcelErrorBannerState {
   Set<ParcelErrorBanner> get banners => throw _privateConstructorUsedError;
-
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(Set<ParcelErrorBanner> banners) show,
@@ -38,7 +24,7 @@ mixin _$ParcelErrorBannerState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(Set<ParcelErrorBanner> banners)? show,
+    TResult? Function(Set<ParcelErrorBanner> banners)? show,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -54,7 +40,7 @@ mixin _$ParcelErrorBannerState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(ParcelErrorBannerStateShow value)? show,
+    TResult? Function(ParcelErrorBannerStateShow value)? show,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -73,61 +59,66 @@ mixin _$ParcelErrorBannerState {
 abstract class $ParcelErrorBannerStateCopyWith<$Res> {
   factory $ParcelErrorBannerStateCopyWith(ParcelErrorBannerState value,
           $Res Function(ParcelErrorBannerState) then) =
-      _$ParcelErrorBannerStateCopyWithImpl<$Res>;
+      _$ParcelErrorBannerStateCopyWithImpl<$Res, ParcelErrorBannerState>;
+  @useResult
   $Res call({Set<ParcelErrorBanner> banners});
 }
 
 /// @nodoc
-class _$ParcelErrorBannerStateCopyWithImpl<$Res>
+class _$ParcelErrorBannerStateCopyWithImpl<$Res,
+        $Val extends ParcelErrorBannerState>
     implements $ParcelErrorBannerStateCopyWith<$Res> {
   _$ParcelErrorBannerStateCopyWithImpl(this._value, this._then);
 
-  final ParcelErrorBannerState _value;
   // ignore: unused_field
-  final $Res Function(ParcelErrorBannerState) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? banners = freezed,
+    Object? banners = null,
   }) {
     return _then(_value.copyWith(
-      banners: banners == freezed
+      banners: null == banners
           ? _value.banners
           : banners // ignore: cast_nullable_to_non_nullable
               as Set<ParcelErrorBanner>,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class $ParcelErrorBannerStateShowCopyWith<$Res>
+abstract class _$$ParcelErrorBannerStateShowImplCopyWith<$Res>
     implements $ParcelErrorBannerStateCopyWith<$Res> {
-  factory $ParcelErrorBannerStateShowCopyWith(ParcelErrorBannerStateShow value,
-          $Res Function(ParcelErrorBannerStateShow) then) =
-      _$ParcelErrorBannerStateShowCopyWithImpl<$Res>;
+  factory _$$ParcelErrorBannerStateShowImplCopyWith(
+          _$ParcelErrorBannerStateShowImpl value,
+          $Res Function(_$ParcelErrorBannerStateShowImpl) then) =
+      __$$ParcelErrorBannerStateShowImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({Set<ParcelErrorBanner> banners});
 }
 
 /// @nodoc
-class _$ParcelErrorBannerStateShowCopyWithImpl<$Res>
-    extends _$ParcelErrorBannerStateCopyWithImpl<$Res>
-    implements $ParcelErrorBannerStateShowCopyWith<$Res> {
-  _$ParcelErrorBannerStateShowCopyWithImpl(ParcelErrorBannerStateShow _value,
-      $Res Function(ParcelErrorBannerStateShow) _then)
-      : super(_value, (v) => _then(v as ParcelErrorBannerStateShow));
+class __$$ParcelErrorBannerStateShowImplCopyWithImpl<$Res>
+    extends _$ParcelErrorBannerStateCopyWithImpl<$Res,
+        _$ParcelErrorBannerStateShowImpl>
+    implements _$$ParcelErrorBannerStateShowImplCopyWith<$Res> {
+  __$$ParcelErrorBannerStateShowImplCopyWithImpl(
+      _$ParcelErrorBannerStateShowImpl _value,
+      $Res Function(_$ParcelErrorBannerStateShowImpl) _then)
+      : super(_value, _then);
 
-  @override
-  ParcelErrorBannerStateShow get _value =>
-      super._value as ParcelErrorBannerStateShow;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? banners = freezed,
+    Object? banners = null,
   }) {
-    return _then(ParcelErrorBannerStateShow(
-      banners: banners == freezed
-          ? _value.banners
+    return _then(_$ParcelErrorBannerStateShowImpl(
+      banners: null == banners
+          ? _value._banners
           : banners // ignore: cast_nullable_to_non_nullable
               as Set<ParcelErrorBanner>,
     ));
@@ -136,11 +127,18 @@ class _$ParcelErrorBannerStateShowCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$ParcelErrorBannerStateShow implements ParcelErrorBannerStateShow {
-  const _$ParcelErrorBannerStateShow({required this.banners});
+class _$ParcelErrorBannerStateShowImpl implements ParcelErrorBannerStateShow {
+  const _$ParcelErrorBannerStateShowImpl(
+      {required final Set<ParcelErrorBanner> banners})
+      : _banners = banners;
 
+  final Set<ParcelErrorBanner> _banners;
   @override
-  final Set<ParcelErrorBanner> banners;
+  Set<ParcelErrorBanner> get banners {
+    if (_banners is EqualUnmodifiableSetView) return _banners;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableSetView(_banners);
+  }
 
   @override
   String toString() {
@@ -148,23 +146,23 @@ class _$ParcelErrorBannerStateShow implements ParcelErrorBannerStateShow {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is ParcelErrorBannerStateShow &&
-            (identical(other.banners, banners) ||
-                const DeepCollectionEquality().equals(other.banners, banners)));
+        (other.runtimeType == runtimeType &&
+            other is _$ParcelErrorBannerStateShowImpl &&
+            const DeepCollectionEquality().equals(other._banners, _banners));
   }
 
   @override
   int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(banners);
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_banners));
 
   @JsonKey(ignore: true)
   @override
-  $ParcelErrorBannerStateShowCopyWith<ParcelErrorBannerStateShow>
-      get copyWith =>
-          _$ParcelErrorBannerStateShowCopyWithImpl<ParcelErrorBannerStateShow>(
-              this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$ParcelErrorBannerStateShowImplCopyWith<_$ParcelErrorBannerStateShowImpl>
+      get copyWith => __$$ParcelErrorBannerStateShowImplCopyWithImpl<
+          _$ParcelErrorBannerStateShowImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -177,7 +175,7 @@ class _$ParcelErrorBannerStateShow implements ParcelErrorBannerStateShow {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(Set<ParcelErrorBanner> banners)? show,
+    TResult? Function(Set<ParcelErrorBanner> banners)? show,
   }) {
     return show?.call(banners);
   }
@@ -205,7 +203,7 @@ class _$ParcelErrorBannerStateShow implements ParcelErrorBannerStateShow {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(ParcelErrorBannerStateShow value)? show,
+    TResult? Function(ParcelErrorBannerStateShow value)? show,
   }) {
     return show?.call(this);
   }
@@ -225,39 +223,16 @@ class _$ParcelErrorBannerStateShow implements ParcelErrorBannerStateShow {
 
 abstract class ParcelErrorBannerStateShow implements ParcelErrorBannerState {
   const factory ParcelErrorBannerStateShow(
-      {required Set<ParcelErrorBanner> banners}) = _$ParcelErrorBannerStateShow;
+          {required final Set<ParcelErrorBanner> banners}) =
+      _$ParcelErrorBannerStateShowImpl;
 
   @override
-  Set<ParcelErrorBanner> get banners => throw _privateConstructorUsedError;
+  Set<ParcelErrorBanner> get banners;
   @override
   @JsonKey(ignore: true)
-  $ParcelErrorBannerStateShowCopyWith<ParcelErrorBannerStateShow>
+  _$$ParcelErrorBannerStateShowImplCopyWith<_$ParcelErrorBannerStateShowImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
-
-/// @nodoc
-class _$ParcelErrorBannerTearOff {
-  const _$ParcelErrorBannerTearOff();
-
-  ParcelErrorBannerHardError hardError() {
-    return const ParcelErrorBannerHardError();
-  }
-
-  ParcelErrorBannerMissingAuthData missingAuthData() {
-    return const ParcelErrorBannerMissingAuthData();
-  }
-
-  ParcelErrorBannerMissingAccount missingAccount() {
-    return const ParcelErrorBannerMissingAccount();
-  }
-
-  ParcelErrorBannerAuth authError() {
-    return const ParcelErrorBannerAuth();
-  }
-}
-
-/// @nodoc
-const $ParcelErrorBanner = _$ParcelErrorBannerTearOff();
 
 /// @nodoc
 mixin _$ParcelErrorBanner {
@@ -271,10 +246,10 @@ mixin _$ParcelErrorBanner {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? hardError,
-    TResult Function()? missingAuthData,
-    TResult Function()? missingAccount,
-    TResult Function()? authError,
+    TResult? Function()? hardError,
+    TResult? Function()? missingAuthData,
+    TResult? Function()? missingAccount,
+    TResult? Function()? authError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -298,10 +273,10 @@ mixin _$ParcelErrorBanner {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(ParcelErrorBannerHardError value)? hardError,
-    TResult Function(ParcelErrorBannerMissingAuthData value)? missingAuthData,
-    TResult Function(ParcelErrorBannerMissingAccount value)? missingAccount,
-    TResult Function(ParcelErrorBannerAuth value)? authError,
+    TResult? Function(ParcelErrorBannerHardError value)? hardError,
+    TResult? Function(ParcelErrorBannerMissingAuthData value)? missingAuthData,
+    TResult? Function(ParcelErrorBannerMissingAccount value)? missingAccount,
+    TResult? Function(ParcelErrorBannerAuth value)? authError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -319,43 +294,43 @@ mixin _$ParcelErrorBanner {
 abstract class $ParcelErrorBannerCopyWith<$Res> {
   factory $ParcelErrorBannerCopyWith(
           ParcelErrorBanner value, $Res Function(ParcelErrorBanner) then) =
-      _$ParcelErrorBannerCopyWithImpl<$Res>;
+      _$ParcelErrorBannerCopyWithImpl<$Res, ParcelErrorBanner>;
 }
 
 /// @nodoc
-class _$ParcelErrorBannerCopyWithImpl<$Res>
+class _$ParcelErrorBannerCopyWithImpl<$Res, $Val extends ParcelErrorBanner>
     implements $ParcelErrorBannerCopyWith<$Res> {
   _$ParcelErrorBannerCopyWithImpl(this._value, this._then);
 
-  final ParcelErrorBanner _value;
   // ignore: unused_field
-  final $Res Function(ParcelErrorBanner) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 }
 
 /// @nodoc
-abstract class $ParcelErrorBannerHardErrorCopyWith<$Res> {
-  factory $ParcelErrorBannerHardErrorCopyWith(ParcelErrorBannerHardError value,
-          $Res Function(ParcelErrorBannerHardError) then) =
-      _$ParcelErrorBannerHardErrorCopyWithImpl<$Res>;
+abstract class _$$ParcelErrorBannerHardErrorImplCopyWith<$Res> {
+  factory _$$ParcelErrorBannerHardErrorImplCopyWith(
+          _$ParcelErrorBannerHardErrorImpl value,
+          $Res Function(_$ParcelErrorBannerHardErrorImpl) then) =
+      __$$ParcelErrorBannerHardErrorImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$ParcelErrorBannerHardErrorCopyWithImpl<$Res>
-    extends _$ParcelErrorBannerCopyWithImpl<$Res>
-    implements $ParcelErrorBannerHardErrorCopyWith<$Res> {
-  _$ParcelErrorBannerHardErrorCopyWithImpl(ParcelErrorBannerHardError _value,
-      $Res Function(ParcelErrorBannerHardError) _then)
-      : super(_value, (v) => _then(v as ParcelErrorBannerHardError));
-
-  @override
-  ParcelErrorBannerHardError get _value =>
-      super._value as ParcelErrorBannerHardError;
+class __$$ParcelErrorBannerHardErrorImplCopyWithImpl<$Res>
+    extends _$ParcelErrorBannerCopyWithImpl<$Res,
+        _$ParcelErrorBannerHardErrorImpl>
+    implements _$$ParcelErrorBannerHardErrorImplCopyWith<$Res> {
+  __$$ParcelErrorBannerHardErrorImplCopyWithImpl(
+      _$ParcelErrorBannerHardErrorImpl _value,
+      $Res Function(_$ParcelErrorBannerHardErrorImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$ParcelErrorBannerHardError implements ParcelErrorBannerHardError {
-  const _$ParcelErrorBannerHardError();
+class _$ParcelErrorBannerHardErrorImpl implements ParcelErrorBannerHardError {
+  const _$ParcelErrorBannerHardErrorImpl();
 
   @override
   String toString() {
@@ -363,8 +338,10 @@ class _$ParcelErrorBannerHardError implements ParcelErrorBannerHardError {
   }
 
   @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) || (other is ParcelErrorBannerHardError);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ParcelErrorBannerHardErrorImpl);
   }
 
   @override
@@ -384,10 +361,10 @@ class _$ParcelErrorBannerHardError implements ParcelErrorBannerHardError {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? hardError,
-    TResult Function()? missingAuthData,
-    TResult Function()? missingAccount,
-    TResult Function()? authError,
+    TResult? Function()? hardError,
+    TResult? Function()? missingAuthData,
+    TResult? Function()? missingAccount,
+    TResult? Function()? authError,
   }) {
     return hardError?.call();
   }
@@ -423,10 +400,10 @@ class _$ParcelErrorBannerHardError implements ParcelErrorBannerHardError {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(ParcelErrorBannerHardError value)? hardError,
-    TResult Function(ParcelErrorBannerMissingAuthData value)? missingAuthData,
-    TResult Function(ParcelErrorBannerMissingAccount value)? missingAccount,
-    TResult Function(ParcelErrorBannerAuth value)? authError,
+    TResult? Function(ParcelErrorBannerHardError value)? hardError,
+    TResult? Function(ParcelErrorBannerMissingAuthData value)? missingAuthData,
+    TResult? Function(ParcelErrorBannerMissingAccount value)? missingAccount,
+    TResult? Function(ParcelErrorBannerAuth value)? authError,
   }) {
     return hardError?.call(this);
   }
@@ -448,36 +425,33 @@ class _$ParcelErrorBannerHardError implements ParcelErrorBannerHardError {
 }
 
 abstract class ParcelErrorBannerHardError implements ParcelErrorBanner {
-  const factory ParcelErrorBannerHardError() = _$ParcelErrorBannerHardError;
+  const factory ParcelErrorBannerHardError() = _$ParcelErrorBannerHardErrorImpl;
 }
 
 /// @nodoc
-abstract class $ParcelErrorBannerMissingAuthDataCopyWith<$Res> {
-  factory $ParcelErrorBannerMissingAuthDataCopyWith(
-          ParcelErrorBannerMissingAuthData value,
-          $Res Function(ParcelErrorBannerMissingAuthData) then) =
-      _$ParcelErrorBannerMissingAuthDataCopyWithImpl<$Res>;
+abstract class _$$ParcelErrorBannerMissingAuthDataImplCopyWith<$Res> {
+  factory _$$ParcelErrorBannerMissingAuthDataImplCopyWith(
+          _$ParcelErrorBannerMissingAuthDataImpl value,
+          $Res Function(_$ParcelErrorBannerMissingAuthDataImpl) then) =
+      __$$ParcelErrorBannerMissingAuthDataImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$ParcelErrorBannerMissingAuthDataCopyWithImpl<$Res>
-    extends _$ParcelErrorBannerCopyWithImpl<$Res>
-    implements $ParcelErrorBannerMissingAuthDataCopyWith<$Res> {
-  _$ParcelErrorBannerMissingAuthDataCopyWithImpl(
-      ParcelErrorBannerMissingAuthData _value,
-      $Res Function(ParcelErrorBannerMissingAuthData) _then)
-      : super(_value, (v) => _then(v as ParcelErrorBannerMissingAuthData));
-
-  @override
-  ParcelErrorBannerMissingAuthData get _value =>
-      super._value as ParcelErrorBannerMissingAuthData;
+class __$$ParcelErrorBannerMissingAuthDataImplCopyWithImpl<$Res>
+    extends _$ParcelErrorBannerCopyWithImpl<$Res,
+        _$ParcelErrorBannerMissingAuthDataImpl>
+    implements _$$ParcelErrorBannerMissingAuthDataImplCopyWith<$Res> {
+  __$$ParcelErrorBannerMissingAuthDataImplCopyWithImpl(
+      _$ParcelErrorBannerMissingAuthDataImpl _value,
+      $Res Function(_$ParcelErrorBannerMissingAuthDataImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$ParcelErrorBannerMissingAuthData
+class _$ParcelErrorBannerMissingAuthDataImpl
     implements ParcelErrorBannerMissingAuthData {
-  const _$ParcelErrorBannerMissingAuthData();
+  const _$ParcelErrorBannerMissingAuthDataImpl();
 
   @override
   String toString() {
@@ -485,9 +459,10 @@ class _$ParcelErrorBannerMissingAuthData
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is ParcelErrorBannerMissingAuthData);
+        (other.runtimeType == runtimeType &&
+            other is _$ParcelErrorBannerMissingAuthDataImpl);
   }
 
   @override
@@ -507,10 +482,10 @@ class _$ParcelErrorBannerMissingAuthData
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? hardError,
-    TResult Function()? missingAuthData,
-    TResult Function()? missingAccount,
-    TResult Function()? authError,
+    TResult? Function()? hardError,
+    TResult? Function()? missingAuthData,
+    TResult? Function()? missingAccount,
+    TResult? Function()? authError,
   }) {
     return missingAuthData?.call();
   }
@@ -546,10 +521,10 @@ class _$ParcelErrorBannerMissingAuthData
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(ParcelErrorBannerHardError value)? hardError,
-    TResult Function(ParcelErrorBannerMissingAuthData value)? missingAuthData,
-    TResult Function(ParcelErrorBannerMissingAccount value)? missingAccount,
-    TResult Function(ParcelErrorBannerAuth value)? authError,
+    TResult? Function(ParcelErrorBannerHardError value)? hardError,
+    TResult? Function(ParcelErrorBannerMissingAuthData value)? missingAuthData,
+    TResult? Function(ParcelErrorBannerMissingAccount value)? missingAccount,
+    TResult? Function(ParcelErrorBannerAuth value)? authError,
   }) {
     return missingAuthData?.call(this);
   }
@@ -572,36 +547,33 @@ class _$ParcelErrorBannerMissingAuthData
 
 abstract class ParcelErrorBannerMissingAuthData implements ParcelErrorBanner {
   const factory ParcelErrorBannerMissingAuthData() =
-      _$ParcelErrorBannerMissingAuthData;
+      _$ParcelErrorBannerMissingAuthDataImpl;
 }
 
 /// @nodoc
-abstract class $ParcelErrorBannerMissingAccountCopyWith<$Res> {
-  factory $ParcelErrorBannerMissingAccountCopyWith(
-          ParcelErrorBannerMissingAccount value,
-          $Res Function(ParcelErrorBannerMissingAccount) then) =
-      _$ParcelErrorBannerMissingAccountCopyWithImpl<$Res>;
+abstract class _$$ParcelErrorBannerMissingAccountImplCopyWith<$Res> {
+  factory _$$ParcelErrorBannerMissingAccountImplCopyWith(
+          _$ParcelErrorBannerMissingAccountImpl value,
+          $Res Function(_$ParcelErrorBannerMissingAccountImpl) then) =
+      __$$ParcelErrorBannerMissingAccountImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$ParcelErrorBannerMissingAccountCopyWithImpl<$Res>
-    extends _$ParcelErrorBannerCopyWithImpl<$Res>
-    implements $ParcelErrorBannerMissingAccountCopyWith<$Res> {
-  _$ParcelErrorBannerMissingAccountCopyWithImpl(
-      ParcelErrorBannerMissingAccount _value,
-      $Res Function(ParcelErrorBannerMissingAccount) _then)
-      : super(_value, (v) => _then(v as ParcelErrorBannerMissingAccount));
-
-  @override
-  ParcelErrorBannerMissingAccount get _value =>
-      super._value as ParcelErrorBannerMissingAccount;
+class __$$ParcelErrorBannerMissingAccountImplCopyWithImpl<$Res>
+    extends _$ParcelErrorBannerCopyWithImpl<$Res,
+        _$ParcelErrorBannerMissingAccountImpl>
+    implements _$$ParcelErrorBannerMissingAccountImplCopyWith<$Res> {
+  __$$ParcelErrorBannerMissingAccountImplCopyWithImpl(
+      _$ParcelErrorBannerMissingAccountImpl _value,
+      $Res Function(_$ParcelErrorBannerMissingAccountImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$ParcelErrorBannerMissingAccount
+class _$ParcelErrorBannerMissingAccountImpl
     implements ParcelErrorBannerMissingAccount {
-  const _$ParcelErrorBannerMissingAccount();
+  const _$ParcelErrorBannerMissingAccountImpl();
 
   @override
   String toString() {
@@ -609,8 +581,10 @@ class _$ParcelErrorBannerMissingAccount
   }
 
   @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) || (other is ParcelErrorBannerMissingAccount);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ParcelErrorBannerMissingAccountImpl);
   }
 
   @override
@@ -630,10 +604,10 @@ class _$ParcelErrorBannerMissingAccount
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? hardError,
-    TResult Function()? missingAuthData,
-    TResult Function()? missingAccount,
-    TResult Function()? authError,
+    TResult? Function()? hardError,
+    TResult? Function()? missingAuthData,
+    TResult? Function()? missingAccount,
+    TResult? Function()? authError,
   }) {
     return missingAccount?.call();
   }
@@ -669,10 +643,10 @@ class _$ParcelErrorBannerMissingAccount
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(ParcelErrorBannerHardError value)? hardError,
-    TResult Function(ParcelErrorBannerMissingAuthData value)? missingAuthData,
-    TResult Function(ParcelErrorBannerMissingAccount value)? missingAccount,
-    TResult Function(ParcelErrorBannerAuth value)? authError,
+    TResult? Function(ParcelErrorBannerHardError value)? hardError,
+    TResult? Function(ParcelErrorBannerMissingAuthData value)? missingAuthData,
+    TResult? Function(ParcelErrorBannerMissingAccount value)? missingAccount,
+    TResult? Function(ParcelErrorBannerAuth value)? authError,
   }) {
     return missingAccount?.call(this);
   }
@@ -695,32 +669,30 @@ class _$ParcelErrorBannerMissingAccount
 
 abstract class ParcelErrorBannerMissingAccount implements ParcelErrorBanner {
   const factory ParcelErrorBannerMissingAccount() =
-      _$ParcelErrorBannerMissingAccount;
+      _$ParcelErrorBannerMissingAccountImpl;
 }
 
 /// @nodoc
-abstract class $ParcelErrorBannerAuthCopyWith<$Res> {
-  factory $ParcelErrorBannerAuthCopyWith(ParcelErrorBannerAuth value,
-          $Res Function(ParcelErrorBannerAuth) then) =
-      _$ParcelErrorBannerAuthCopyWithImpl<$Res>;
+abstract class _$$ParcelErrorBannerAuthImplCopyWith<$Res> {
+  factory _$$ParcelErrorBannerAuthImplCopyWith(
+          _$ParcelErrorBannerAuthImpl value,
+          $Res Function(_$ParcelErrorBannerAuthImpl) then) =
+      __$$ParcelErrorBannerAuthImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$ParcelErrorBannerAuthCopyWithImpl<$Res>
-    extends _$ParcelErrorBannerCopyWithImpl<$Res>
-    implements $ParcelErrorBannerAuthCopyWith<$Res> {
-  _$ParcelErrorBannerAuthCopyWithImpl(
-      ParcelErrorBannerAuth _value, $Res Function(ParcelErrorBannerAuth) _then)
-      : super(_value, (v) => _then(v as ParcelErrorBannerAuth));
-
-  @override
-  ParcelErrorBannerAuth get _value => super._value as ParcelErrorBannerAuth;
+class __$$ParcelErrorBannerAuthImplCopyWithImpl<$Res>
+    extends _$ParcelErrorBannerCopyWithImpl<$Res, _$ParcelErrorBannerAuthImpl>
+    implements _$$ParcelErrorBannerAuthImplCopyWith<$Res> {
+  __$$ParcelErrorBannerAuthImplCopyWithImpl(_$ParcelErrorBannerAuthImpl _value,
+      $Res Function(_$ParcelErrorBannerAuthImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$ParcelErrorBannerAuth implements ParcelErrorBannerAuth {
-  const _$ParcelErrorBannerAuth();
+class _$ParcelErrorBannerAuthImpl implements ParcelErrorBannerAuth {
+  const _$ParcelErrorBannerAuthImpl();
 
   @override
   String toString() {
@@ -728,8 +700,10 @@ class _$ParcelErrorBannerAuth implements ParcelErrorBannerAuth {
   }
 
   @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) || (other is ParcelErrorBannerAuth);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ParcelErrorBannerAuthImpl);
   }
 
   @override
@@ -749,10 +723,10 @@ class _$ParcelErrorBannerAuth implements ParcelErrorBannerAuth {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? hardError,
-    TResult Function()? missingAuthData,
-    TResult Function()? missingAccount,
-    TResult Function()? authError,
+    TResult? Function()? hardError,
+    TResult? Function()? missingAuthData,
+    TResult? Function()? missingAccount,
+    TResult? Function()? authError,
   }) {
     return authError?.call();
   }
@@ -788,10 +762,10 @@ class _$ParcelErrorBannerAuth implements ParcelErrorBannerAuth {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(ParcelErrorBannerHardError value)? hardError,
-    TResult Function(ParcelErrorBannerMissingAuthData value)? missingAuthData,
-    TResult Function(ParcelErrorBannerMissingAccount value)? missingAccount,
-    TResult Function(ParcelErrorBannerAuth value)? authError,
+    TResult? Function(ParcelErrorBannerHardError value)? hardError,
+    TResult? Function(ParcelErrorBannerMissingAuthData value)? missingAuthData,
+    TResult? Function(ParcelErrorBannerMissingAccount value)? missingAccount,
+    TResult? Function(ParcelErrorBannerAuth value)? authError,
   }) {
     return authError?.call(this);
   }
@@ -813,5 +787,5 @@ class _$ParcelErrorBannerAuth implements ParcelErrorBannerAuth {
 }
 
 abstract class ParcelErrorBannerAuth implements ParcelErrorBanner {
-  const factory ParcelErrorBannerAuth() = _$ParcelErrorBannerAuth;
+  const factory ParcelErrorBannerAuth() = _$ParcelErrorBannerAuthImpl;
 }

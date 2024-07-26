@@ -1,6 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'tracking_info.dart';
 
@@ -11,38 +12,11 @@ part of 'tracking_info.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 TrackingError _$TrackingErrorFromJson(Map<String, dynamic> json) {
   return _TrackingError.fromJson(json);
 }
-
-/// @nodoc
-class _$TrackingErrorTearOff {
-  const _$TrackingErrorTearOff();
-
-  _TrackingError call(
-      {required TrackingErrorType type,
-      required bool isRetryable,
-      String? message,
-      String? code,
-      String? stackTrace}) {
-    return _TrackingError(
-      type: type,
-      isRetryable: isRetryable,
-      message: message,
-      code: code,
-      stackTrace: stackTrace,
-    );
-  }
-
-  TrackingError fromJson(Map<String, Object> json) {
-    return TrackingError.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $TrackingError = _$TrackingErrorTearOff();
 
 /// @nodoc
 mixin _$TrackingError {
@@ -62,7 +36,8 @@ mixin _$TrackingError {
 abstract class $TrackingErrorCopyWith<$Res> {
   factory $TrackingErrorCopyWith(
           TrackingError value, $Res Function(TrackingError) then) =
-      _$TrackingErrorCopyWithImpl<$Res>;
+      _$TrackingErrorCopyWithImpl<$Res, TrackingError>;
+  @useResult
   $Res call(
       {TrackingErrorType type,
       bool isRetryable,
@@ -72,54 +47,57 @@ abstract class $TrackingErrorCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$TrackingErrorCopyWithImpl<$Res>
+class _$TrackingErrorCopyWithImpl<$Res, $Val extends TrackingError>
     implements $TrackingErrorCopyWith<$Res> {
   _$TrackingErrorCopyWithImpl(this._value, this._then);
 
-  final TrackingError _value;
   // ignore: unused_field
-  final $Res Function(TrackingError) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? type = freezed,
-    Object? isRetryable = freezed,
+    Object? type = null,
+    Object? isRetryable = null,
     Object? message = freezed,
     Object? code = freezed,
     Object? stackTrace = freezed,
   }) {
     return _then(_value.copyWith(
-      type: type == freezed
+      type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as TrackingErrorType,
-      isRetryable: isRetryable == freezed
+      isRetryable: null == isRetryable
           ? _value.isRetryable
           : isRetryable // ignore: cast_nullable_to_non_nullable
               as bool,
-      message: message == freezed
+      message: freezed == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
               as String?,
-      code: code == freezed
+      code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
               as String?,
-      stackTrace: stackTrace == freezed
+      stackTrace: freezed == stackTrace
           ? _value.stackTrace
           : stackTrace // ignore: cast_nullable_to_non_nullable
               as String?,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$TrackingErrorCopyWith<$Res>
+abstract class _$$TrackingErrorImplCopyWith<$Res>
     implements $TrackingErrorCopyWith<$Res> {
-  factory _$TrackingErrorCopyWith(
-          _TrackingError value, $Res Function(_TrackingError) then) =
-      __$TrackingErrorCopyWithImpl<$Res>;
+  factory _$$TrackingErrorImplCopyWith(
+          _$TrackingErrorImpl value, $Res Function(_$TrackingErrorImpl) then) =
+      __$$TrackingErrorImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {TrackingErrorType type,
       bool isRetryable,
@@ -129,42 +107,40 @@ abstract class _$TrackingErrorCopyWith<$Res>
 }
 
 /// @nodoc
-class __$TrackingErrorCopyWithImpl<$Res>
-    extends _$TrackingErrorCopyWithImpl<$Res>
-    implements _$TrackingErrorCopyWith<$Res> {
-  __$TrackingErrorCopyWithImpl(
-      _TrackingError _value, $Res Function(_TrackingError) _then)
-      : super(_value, (v) => _then(v as _TrackingError));
+class __$$TrackingErrorImplCopyWithImpl<$Res>
+    extends _$TrackingErrorCopyWithImpl<$Res, _$TrackingErrorImpl>
+    implements _$$TrackingErrorImplCopyWith<$Res> {
+  __$$TrackingErrorImplCopyWithImpl(
+      _$TrackingErrorImpl _value, $Res Function(_$TrackingErrorImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _TrackingError get _value => super._value as _TrackingError;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? type = freezed,
-    Object? isRetryable = freezed,
+    Object? type = null,
+    Object? isRetryable = null,
     Object? message = freezed,
     Object? code = freezed,
     Object? stackTrace = freezed,
   }) {
-    return _then(_TrackingError(
-      type: type == freezed
+    return _then(_$TrackingErrorImpl(
+      type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as TrackingErrorType,
-      isRetryable: isRetryable == freezed
+      isRetryable: null == isRetryable
           ? _value.isRetryable
           : isRetryable // ignore: cast_nullable_to_non_nullable
               as bool,
-      message: message == freezed
+      message: freezed == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
               as String?,
-      code: code == freezed
+      code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
               as String?,
-      stackTrace: stackTrace == freezed
+      stackTrace: freezed == stackTrace
           ? _value.stackTrace
           : stackTrace // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -174,16 +150,18 @@ class __$TrackingErrorCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_TrackingError with DiagnosticableTreeMixin implements _TrackingError {
-  const _$_TrackingError(
+class _$TrackingErrorImpl
+    with DiagnosticableTreeMixin
+    implements _TrackingError {
+  const _$TrackingErrorImpl(
       {required this.type,
       required this.isRetryable,
       this.message,
       this.code,
       this.stackTrace});
 
-  factory _$_TrackingError.fromJson(Map<String, dynamic> json) =>
-      _$$_TrackingErrorFromJson(json);
+  factory _$TrackingErrorImpl.fromJson(Map<String, dynamic> json) =>
+      _$$TrackingErrorImplFromJson(json);
 
   @override
   final TrackingErrorType type;
@@ -214,67 +192,61 @@ class _$_TrackingError with DiagnosticableTreeMixin implements _TrackingError {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is _TrackingError &&
-            (identical(other.type, type) ||
-                const DeepCollectionEquality().equals(other.type, type)) &&
+        (other.runtimeType == runtimeType &&
+            other is _$TrackingErrorImpl &&
+            (identical(other.type, type) || other.type == type) &&
             (identical(other.isRetryable, isRetryable) ||
-                const DeepCollectionEquality()
-                    .equals(other.isRetryable, isRetryable)) &&
-            (identical(other.message, message) ||
-                const DeepCollectionEquality()
-                    .equals(other.message, message)) &&
-            (identical(other.code, code) ||
-                const DeepCollectionEquality().equals(other.code, code)) &&
+                other.isRetryable == isRetryable) &&
+            (identical(other.message, message) || other.message == message) &&
+            (identical(other.code, code) || other.code == code) &&
             (identical(other.stackTrace, stackTrace) ||
-                const DeepCollectionEquality()
-                    .equals(other.stackTrace, stackTrace)));
+                other.stackTrace == stackTrace));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(type) ^
-      const DeepCollectionEquality().hash(isRetryable) ^
-      const DeepCollectionEquality().hash(message) ^
-      const DeepCollectionEquality().hash(code) ^
-      const DeepCollectionEquality().hash(stackTrace);
 
   @JsonKey(ignore: true)
   @override
-  _$TrackingErrorCopyWith<_TrackingError> get copyWith =>
-      __$TrackingErrorCopyWithImpl<_TrackingError>(this, _$identity);
+  int get hashCode =>
+      Object.hash(runtimeType, type, isRetryable, message, code, stackTrace);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$TrackingErrorImplCopyWith<_$TrackingErrorImpl> get copyWith =>
+      __$$TrackingErrorImplCopyWithImpl<_$TrackingErrorImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TrackingErrorToJson(this);
+    return _$$TrackingErrorImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _TrackingError implements TrackingError {
   const factory _TrackingError(
-      {required TrackingErrorType type,
-      required bool isRetryable,
-      String? message,
-      String? code,
-      String? stackTrace}) = _$_TrackingError;
+      {required final TrackingErrorType type,
+      required final bool isRetryable,
+      final String? message,
+      final String? code,
+      final String? stackTrace}) = _$TrackingErrorImpl;
 
   factory _TrackingError.fromJson(Map<String, dynamic> json) =
-      _$_TrackingError.fromJson;
+      _$TrackingErrorImpl.fromJson;
 
   @override
-  TrackingErrorType get type => throw _privateConstructorUsedError;
+  TrackingErrorType get type;
   @override
-  bool get isRetryable => throw _privateConstructorUsedError;
+  bool get isRetryable;
   @override
-  String? get message => throw _privateConstructorUsedError;
+  String? get message;
   @override
-  String? get code => throw _privateConstructorUsedError;
+  String? get code;
   @override
-  String? get stackTrace => throw _privateConstructorUsedError;
+  String? get stackTrace;
   @override
   @JsonKey(ignore: true)
-  _$TrackingErrorCopyWith<_TrackingError> get copyWith =>
+  _$$TrackingErrorImplCopyWith<_$TrackingErrorImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

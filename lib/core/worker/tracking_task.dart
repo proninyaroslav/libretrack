@@ -123,7 +123,8 @@ class TrackingTask {
               (service) => service,
               error: (e) {
                 e.when(database: (e, stackTrace) {
-                  log().e('Unable to get service', e, stackTrace);
+                  log().e('Unable to get service',
+                      error: e, stackTrace: stackTrace);
                 });
                 return null;
               },
@@ -148,7 +149,8 @@ class TrackingTask {
               (authData) => authData,
               error: (e) {
                 e.when(database: (e, stackTrace) {
-                  log().e('Unable to get auth data', e, stackTrace);
+                  log().e('Unable to get auth data',
+                      error: e, stackTrace: stackTrace);
                 });
                 return null;
               },
@@ -549,7 +551,8 @@ class TrackingTask {
                 (currentActivity) => currentActivity,
                 error: (e) {
                   e.when(database: (e, stackTrace) {
-                    log().e('Unable to get activity list', e, stackTrace);
+                    log().e('Unable to get activity list',
+                        error: e, stackTrace: stackTrace);
                   });
                   return null;
                 },
@@ -575,7 +578,7 @@ class _BuildRequestResult {
 }
 
 @freezed
-class _FailedRequest with _$_FailedRequest {
+class _FailedRequest with _$FailedRequest {
   const factory _FailedRequest({
     required TransactionId id,
     required TrackNumberService trackService,
@@ -584,7 +587,7 @@ class _FailedRequest with _$_FailedRequest {
 }
 
 @freezed
-class _FailedRequestReason with _$_FailedRequestReason {
+class _FailedRequestReason with _$FailedRequestReason {
   const factory _FailedRequestReason.missingService() =
       _FailedRequestMissingService;
   const factory _FailedRequestReason.missingAuthData() =

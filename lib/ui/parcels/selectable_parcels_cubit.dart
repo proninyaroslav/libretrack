@@ -18,10 +18,7 @@
 
 import 'package:equatable/equatable.dart';
 import 'package:injectable/injectable.dart';
-import 'package:libretrack/ui/cubit/selectable_cubit.dart';
 import 'package:libretrack/ui/parcels/parcels.dart';
-
-import 'parcels_page_type.dart';
 
 export 'package:libretrack/ui/cubit/selectable_cubit.dart';
 

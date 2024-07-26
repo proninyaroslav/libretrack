@@ -33,9 +33,9 @@ class TrackingErrorDialog extends StatelessWidget {
   final TrackingError error;
 
   const TrackingErrorDialog({
-    Key? key,
+    super.key,
     required this.error,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -77,9 +77,8 @@ class _Body extends StatelessWidget {
   final TrackingError error;
 
   const _Body({
-    Key? key,
     required this.error,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -119,7 +118,7 @@ class _Body extends StatelessWidget {
               body: error.stackTrace!,
               bodyStyle: Theme.of(context)
                   .textTheme
-                  .bodyText2!
+                  .bodyMedium!
                   .copyWith(fontFamily: 'Monospace'),
             ),
           ],
@@ -142,11 +141,10 @@ class _ErrorSection extends StatelessWidget {
   final TextStyle? bodyStyle;
 
   const _ErrorSection({
-    Key? key,
     required this.title,
     required this.body,
     this.bodyStyle,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -155,12 +153,12 @@ class _ErrorSection extends StatelessWidget {
       children: [
         Text(
           title,
-          style: Theme.of(context).textTheme.subtitle2,
+          style: Theme.of(context).textTheme.titleSmall,
         ),
         const SizedBox(height: 8.0),
         SelectableText(
           body,
-          style: bodyStyle ?? Theme.of(context).textTheme.bodyText2,
+          style: bodyStyle ?? Theme.of(context).textTheme.bodyMedium,
         ),
       ],
     );

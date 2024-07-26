@@ -20,7 +20,6 @@ import 'package:expandable_page_view/expandable_page_view.dart';
 import 'package:flutter/material.dart';
 import 'package:libretrack/core/entity/entity.dart';
 import 'package:libretrack/ui/parcel_details/utils.dart';
-import 'package:libretrack/ui/utils/service_metadata.dart';
 import 'package:libretrack/ui/widget/widget.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
@@ -35,10 +34,10 @@ class ShipmentInfoList extends StatefulWidget {
   final OnAddParcelCallback? onAddParcel;
 
   const ShipmentInfoList({
-    Key? key,
+    super.key,
     required this.shipmentInfoList,
     this.onAddParcel,
-  }) : super(key: key);
+  });
 
   @override
   _ShipmentInfoListState createState() => _ShipmentInfoListState();
@@ -116,10 +115,9 @@ class _ShipmentInfoPageView extends StatelessWidget {
   final List<Widget> children;
 
   const _ShipmentInfoPageView({
-    Key? key,
     required this.controller,
     required this.children,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -142,11 +140,10 @@ class _ShipmentInfoItem extends StatelessWidget {
   final OnAddParcelCallback? onAddParcel;
 
   const _ShipmentInfoItem({
-    Key? key,
     required this.entry,
     required this.maxVisibleStrings,
     this.onAddParcel,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -300,9 +297,8 @@ class _ServiceInfoHeader extends StatelessWidget {
   final ShipmentInfo info;
 
   const _ServiceInfoHeader({
-    Key? key,
     required this.info,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -339,9 +335,8 @@ class _ServiceType extends StatelessWidget {
   final PostalServiceType serviceType;
 
   const _ServiceType({
-    Key? key,
     required this.serviceType,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -357,7 +352,7 @@ class _ServiceType extends StatelessWidget {
         const SizedBox(width: 8.0),
         Text(
           metadata.localizedName,
-          style: Theme.of(context).textTheme.subtitle2,
+          style: Theme.of(context).textTheme.titleSmall,
         ),
       ],
     );
@@ -368,9 +363,8 @@ class _ServiceMessage extends StatelessWidget {
   final String message;
 
   const _ServiceMessage({
-    Key? key,
     required this.message,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -395,11 +389,10 @@ class _InfoString extends StatelessWidget {
   final String content;
 
   const _InfoString({
-    Key? key,
     required this.iconData,
     required this.title,
     required this.content,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -420,7 +413,7 @@ class _InfoString extends StatelessWidget {
                 ),
                 TextSpan(
                   text: title,
-                  style: Theme.of(context).textTheme.bodyText1,
+                  style: Theme.of(context).textTheme.bodyLarge,
                 ),
               ],
             ),
@@ -437,9 +430,9 @@ class _ExpandableInfoContainer extends StatefulWidget {
   final List<Widget>? children;
 
   const _ExpandableInfoContainer({
-    Key? key,
+    super.key,
     this.children,
-  }) : super(key: key);
+  });
 
   @override
   _ExpandableInfoContainerState createState() =>
@@ -452,7 +445,7 @@ class _ExpandableInfoContainerState extends State<_ExpandableInfoContainer> {
   @override
   void initState() {
     super.initState();
-    _isExpanded = PageStorage.of(context)?.readState(context) as bool? ?? false;
+    _isExpanded = PageStorage.of(context).readState(context) as bool? ?? false;
   }
 
   @override
@@ -461,7 +454,7 @@ class _ExpandableInfoContainerState extends State<_ExpandableInfoContainer> {
       key: const PageStorageKey('expandable_info_tile'),
       title: Text(
         _isExpanded ? S.of(context).hide : S.of(context).showMore,
-        style: Theme.of(context).textTheme.button,
+        style: Theme.of(context).textTheme.labelLarge,
       ),
       expandedCrossAxisAlignment: CrossAxisAlignment.start,
       expandedAlignment: AlignmentDirectional.centerStart.resolve(
@@ -470,7 +463,7 @@ class _ExpandableInfoContainerState extends State<_ExpandableInfoContainer> {
       bottomPosition: true,
       onExpansionChanged: (expanded) {
         setState(() => _isExpanded = expanded);
-        PageStorage.of(context)?.writeState(context, _isExpanded);
+        PageStorage.of(context).writeState(context, _isExpanded);
       },
       children: widget.children,
     );
@@ -482,10 +475,9 @@ class _AlternateTrackNumbersList extends StatelessWidget {
   final OnAddParcelCallback? onAddParcel;
 
   const _AlternateTrackNumbersList({
-    Key? key,
     required this.infoList,
     this.onAddParcel,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -496,7 +488,7 @@ class _AlternateTrackNumbersList extends StatelessWidget {
         children: [
           Text(
             S.of(context).shipmentAlternateTrackingNumber,
-            style: Theme.of(context).textTheme.bodyText1,
+            style: Theme.of(context).textTheme.bodyLarge,
           ),
           const SizedBox(height: 8.0),
           ...infoList.map(
@@ -517,10 +509,9 @@ class _AlternateTrackNumberItem extends StatelessWidget {
   final VoidCallback? onAddParcel;
 
   const _AlternateTrackNumberItem({
-    Key? key,
     required this.info,
     this.onAddParcel,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

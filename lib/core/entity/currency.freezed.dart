@@ -1,6 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'currency.dart';
 
@@ -11,22 +12,7 @@ part of 'currency.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$CurrencyTearOff {
-  const _$CurrencyTearOff();
-
-  _Currency call(double value, String currencyCode) {
-    return _Currency(
-      value,
-      currencyCode,
-    );
-  }
-}
-
-/// @nodoc
-const $Currency = _$CurrencyTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$Currency {
@@ -41,64 +27,71 @@ mixin _$Currency {
 /// @nodoc
 abstract class $CurrencyCopyWith<$Res> {
   factory $CurrencyCopyWith(Currency value, $Res Function(Currency) then) =
-      _$CurrencyCopyWithImpl<$Res>;
+      _$CurrencyCopyWithImpl<$Res, Currency>;
+  @useResult
   $Res call({double value, String currencyCode});
 }
 
 /// @nodoc
-class _$CurrencyCopyWithImpl<$Res> implements $CurrencyCopyWith<$Res> {
+class _$CurrencyCopyWithImpl<$Res, $Val extends Currency>
+    implements $CurrencyCopyWith<$Res> {
   _$CurrencyCopyWithImpl(this._value, this._then);
 
-  final Currency _value;
   // ignore: unused_field
-  final $Res Function(Currency) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? value = freezed,
-    Object? currencyCode = freezed,
+    Object? value = null,
+    Object? currencyCode = null,
   }) {
     return _then(_value.copyWith(
-      value: value == freezed
+      value: null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
               as double,
-      currencyCode: currencyCode == freezed
+      currencyCode: null == currencyCode
           ? _value.currencyCode
           : currencyCode // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$CurrencyCopyWith<$Res> implements $CurrencyCopyWith<$Res> {
-  factory _$CurrencyCopyWith(_Currency value, $Res Function(_Currency) then) =
-      __$CurrencyCopyWithImpl<$Res>;
+abstract class _$$CurrencyImplCopyWith<$Res>
+    implements $CurrencyCopyWith<$Res> {
+  factory _$$CurrencyImplCopyWith(
+          _$CurrencyImpl value, $Res Function(_$CurrencyImpl) then) =
+      __$$CurrencyImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({double value, String currencyCode});
 }
 
 /// @nodoc
-class __$CurrencyCopyWithImpl<$Res> extends _$CurrencyCopyWithImpl<$Res>
-    implements _$CurrencyCopyWith<$Res> {
-  __$CurrencyCopyWithImpl(_Currency _value, $Res Function(_Currency) _then)
-      : super(_value, (v) => _then(v as _Currency));
+class __$$CurrencyImplCopyWithImpl<$Res>
+    extends _$CurrencyCopyWithImpl<$Res, _$CurrencyImpl>
+    implements _$$CurrencyImplCopyWith<$Res> {
+  __$$CurrencyImplCopyWithImpl(
+      _$CurrencyImpl _value, $Res Function(_$CurrencyImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _Currency get _value => super._value as _Currency;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? value = freezed,
-    Object? currencyCode = freezed,
+    Object? value = null,
+    Object? currencyCode = null,
   }) {
-    return _then(_Currency(
-      value == freezed
+    return _then(_$CurrencyImpl(
+      null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
               as double,
-      currencyCode == freezed
+      null == currencyCode
           ? _value.currencyCode
           : currencyCode // ignore: cast_nullable_to_non_nullable
               as String,
@@ -108,8 +101,8 @@ class __$CurrencyCopyWithImpl<$Res> extends _$CurrencyCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_Currency with DiagnosticableTreeMixin implements _Currency {
-  const _$_Currency(this.value, this.currencyCode);
+class _$CurrencyImpl with DiagnosticableTreeMixin implements _Currency {
+  const _$CurrencyImpl(this.value, this.currencyCode);
 
   @override
   final double value;
@@ -131,37 +124,35 @@ class _$_Currency with DiagnosticableTreeMixin implements _Currency {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is _Currency &&
-            (identical(other.value, value) ||
-                const DeepCollectionEquality().equals(other.value, value)) &&
+        (other.runtimeType == runtimeType &&
+            other is _$CurrencyImpl &&
+            (identical(other.value, value) || other.value == value) &&
             (identical(other.currencyCode, currencyCode) ||
-                const DeepCollectionEquality()
-                    .equals(other.currencyCode, currencyCode)));
+                other.currencyCode == currencyCode));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(value) ^
-      const DeepCollectionEquality().hash(currencyCode);
+  int get hashCode => Object.hash(runtimeType, value, currencyCode);
 
   @JsonKey(ignore: true)
   @override
-  _$CurrencyCopyWith<_Currency> get copyWith =>
-      __$CurrencyCopyWithImpl<_Currency>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$CurrencyImplCopyWith<_$CurrencyImpl> get copyWith =>
+      __$$CurrencyImplCopyWithImpl<_$CurrencyImpl>(this, _$identity);
 }
 
 abstract class _Currency implements Currency {
-  const factory _Currency(double value, String currencyCode) = _$_Currency;
+  const factory _Currency(final double value, final String currencyCode) =
+      _$CurrencyImpl;
 
   @override
-  double get value => throw _privateConstructorUsedError;
+  double get value;
   @override
-  String get currencyCode => throw _privateConstructorUsedError;
+  String get currencyCode;
   @override
   @JsonKey(ignore: true)
-  _$CurrencyCopyWith<_Currency> get copyWith =>
+  _$$CurrencyImplCopyWith<_$CurrencyImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

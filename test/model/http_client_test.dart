@@ -34,7 +34,7 @@ void main() {
     late HttpClient httpClient;
     late http.Client mockClient;
 
-    TransactionId _makeTransactionId() {
+    TransactionId makeTransactionId() {
       return TransactionId(const Uuid().v4());
     }
 
@@ -46,7 +46,7 @@ void main() {
     test('GET method', () async {
       const expectedBody = 'body';
       final request = ServiceRequest(
-        transactionId: _makeTransactionId(),
+        transactionId: makeTransactionId(),
         url: Uri.parse('https://example.org'),
         method: RequestMethod.get,
       );
@@ -73,7 +73,7 @@ void main() {
     test('POST method', () async {
       const expectedBody = 'body';
       final request = ServiceRequest(
-        transactionId: _makeTransactionId(),
+        transactionId: makeTransactionId(),
         url: Uri.parse('https://example.org'),
         method: RequestMethod.post,
         body: jsonEncode({
@@ -108,7 +108,7 @@ void main() {
     test('PUT method', () async {
       const expectedBody = 'body';
       final request = ServiceRequest(
-        transactionId: _makeTransactionId(),
+        transactionId: makeTransactionId(),
         url: Uri.parse('https://example.org'),
         method: RequestMethod.put,
         body: jsonEncode({
@@ -143,7 +143,7 @@ void main() {
     test('PATCH method', () async {
       const expectedBody = 'body';
       final request = ServiceRequest(
-        transactionId: _makeTransactionId(),
+        transactionId: makeTransactionId(),
         url: Uri.parse('https://example.org'),
         method: RequestMethod.patch,
         body: jsonEncode({
@@ -177,7 +177,7 @@ void main() {
 
     test('Invalid request URL', () async {
       final request = ServiceRequest(
-        transactionId: _makeTransactionId(),
+        transactionId: makeTransactionId(),
         url: Uri.parse('http://http.get'),
         method: RequestMethod.get,
       );
@@ -201,7 +201,7 @@ void main() {
     test('HTTP error', () async {
       const expectedBody = 'body';
       final request = ServiceRequest(
-        transactionId: _makeTransactionId(),
+        transactionId: makeTransactionId(),
         url: Uri.parse('https://example.org'),
         method: RequestMethod.get,
       );

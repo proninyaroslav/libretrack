@@ -51,7 +51,7 @@ class TrackingAllWorker implements Worker {
       (list) => list.map((info) => info.trackNumber).toList(),
       error: (e) {
         e.when(database: (e, stackTrace) {
-          log().e('Unable to get track list', e, stackTrace);
+          log().e('Unable to get track list', error: e, stackTrace: stackTrace);
         });
         return null;
       },
@@ -70,8 +70,8 @@ class TrackingAllWorker implements Worker {
                 database: (e, stackTrace) {
                   log().e(
                     'Unable to get track service list',
-                    e,
-                    stackTrace,
+                    error: e,
+                    stackTrace: stackTrace,
                   );
                 },
               );

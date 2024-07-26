@@ -1,6 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'appearance_cubit.dart';
 
@@ -11,58 +12,11 @@ part of 'appearance_cubit.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$AppearanceStateTearOff {
-  const _$AppearanceStateTearOff();
-
-  AppearanceStateInitial initial(AppearanceInfo info) {
-    return AppearanceStateInitial(
-      info,
-    );
-  }
-
-  AppearanceStateThemeChanged themeChanged(AppearanceInfo info) {
-    return AppearanceStateThemeChanged(
-      info,
-    );
-  }
-
-  AppearanceStateTrackingNotifyChanged trackingNotifyChanged(
-      AppearanceInfo info) {
-    return AppearanceStateTrackingNotifyChanged(
-      info,
-    );
-  }
-
-  AppearanceStateLocaleChanged localeChanged(AppearanceInfo info) {
-    return AppearanceStateLocaleChanged(
-      info,
-    );
-  }
-
-  AppearanceStateTrackingErrorNotifyChanged trackingErrorNotifyChanged(
-      AppearanceInfo info) {
-    return AppearanceStateTrackingErrorNotifyChanged(
-      info,
-    );
-  }
-
-  AppearanceStateTrayIconChanged trayIconChanged(AppearanceInfo info) {
-    return AppearanceStateTrayIconChanged(
-      info,
-    );
-  }
-}
-
-/// @nodoc
-const $AppearanceState = _$AppearanceStateTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$AppearanceState {
   AppearanceInfo get info => throw _privateConstructorUsedError;
-
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(AppearanceInfo info) initial,
@@ -75,12 +29,12 @@ mixin _$AppearanceState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(AppearanceInfo info)? initial,
-    TResult Function(AppearanceInfo info)? themeChanged,
-    TResult Function(AppearanceInfo info)? trackingNotifyChanged,
-    TResult Function(AppearanceInfo info)? localeChanged,
-    TResult Function(AppearanceInfo info)? trackingErrorNotifyChanged,
-    TResult Function(AppearanceInfo info)? trayIconChanged,
+    TResult? Function(AppearanceInfo info)? initial,
+    TResult? Function(AppearanceInfo info)? themeChanged,
+    TResult? Function(AppearanceInfo info)? trackingNotifyChanged,
+    TResult? Function(AppearanceInfo info)? localeChanged,
+    TResult? Function(AppearanceInfo info)? trackingErrorNotifyChanged,
+    TResult? Function(AppearanceInfo info)? trayIconChanged,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -109,14 +63,14 @@ mixin _$AppearanceState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(AppearanceStateInitial value)? initial,
-    TResult Function(AppearanceStateThemeChanged value)? themeChanged,
-    TResult Function(AppearanceStateTrackingNotifyChanged value)?
+    TResult? Function(AppearanceStateInitial value)? initial,
+    TResult? Function(AppearanceStateThemeChanged value)? themeChanged,
+    TResult? Function(AppearanceStateTrackingNotifyChanged value)?
         trackingNotifyChanged,
-    TResult Function(AppearanceStateLocaleChanged value)? localeChanged,
-    TResult Function(AppearanceStateTrackingErrorNotifyChanged value)?
+    TResult? Function(AppearanceStateLocaleChanged value)? localeChanged,
+    TResult? Function(AppearanceStateTrackingErrorNotifyChanged value)?
         trackingErrorNotifyChanged,
-    TResult Function(AppearanceStateTrayIconChanged value)? trayIconChanged,
+    TResult? Function(AppearanceStateTrayIconChanged value)? trayIconChanged,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -142,48 +96,54 @@ mixin _$AppearanceState {
 abstract class $AppearanceStateCopyWith<$Res> {
   factory $AppearanceStateCopyWith(
           AppearanceState value, $Res Function(AppearanceState) then) =
-      _$AppearanceStateCopyWithImpl<$Res>;
+      _$AppearanceStateCopyWithImpl<$Res, AppearanceState>;
+  @useResult
   $Res call({AppearanceInfo info});
 
   $AppearanceInfoCopyWith<$Res> get info;
 }
 
 /// @nodoc
-class _$AppearanceStateCopyWithImpl<$Res>
+class _$AppearanceStateCopyWithImpl<$Res, $Val extends AppearanceState>
     implements $AppearanceStateCopyWith<$Res> {
   _$AppearanceStateCopyWithImpl(this._value, this._then);
 
-  final AppearanceState _value;
   // ignore: unused_field
-  final $Res Function(AppearanceState) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? info = freezed,
+    Object? info = null,
   }) {
     return _then(_value.copyWith(
-      info: info == freezed
+      info: null == info
           ? _value.info
           : info // ignore: cast_nullable_to_non_nullable
               as AppearanceInfo,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $AppearanceInfoCopyWith<$Res> get info {
     return $AppearanceInfoCopyWith<$Res>(_value.info, (value) {
-      return _then(_value.copyWith(info: value));
+      return _then(_value.copyWith(info: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class $AppearanceStateInitialCopyWith<$Res>
+abstract class _$$AppearanceStateInitialImplCopyWith<$Res>
     implements $AppearanceStateCopyWith<$Res> {
-  factory $AppearanceStateInitialCopyWith(AppearanceStateInitial value,
-          $Res Function(AppearanceStateInitial) then) =
-      _$AppearanceStateInitialCopyWithImpl<$Res>;
+  factory _$$AppearanceStateInitialImplCopyWith(
+          _$AppearanceStateInitialImpl value,
+          $Res Function(_$AppearanceStateInitialImpl) then) =
+      __$$AppearanceStateInitialImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({AppearanceInfo info});
 
   @override
@@ -191,22 +151,21 @@ abstract class $AppearanceStateInitialCopyWith<$Res>
 }
 
 /// @nodoc
-class _$AppearanceStateInitialCopyWithImpl<$Res>
-    extends _$AppearanceStateCopyWithImpl<$Res>
-    implements $AppearanceStateInitialCopyWith<$Res> {
-  _$AppearanceStateInitialCopyWithImpl(AppearanceStateInitial _value,
-      $Res Function(AppearanceStateInitial) _then)
-      : super(_value, (v) => _then(v as AppearanceStateInitial));
+class __$$AppearanceStateInitialImplCopyWithImpl<$Res>
+    extends _$AppearanceStateCopyWithImpl<$Res, _$AppearanceStateInitialImpl>
+    implements _$$AppearanceStateInitialImplCopyWith<$Res> {
+  __$$AppearanceStateInitialImplCopyWithImpl(
+      _$AppearanceStateInitialImpl _value,
+      $Res Function(_$AppearanceStateInitialImpl) _then)
+      : super(_value, _then);
 
-  @override
-  AppearanceStateInitial get _value => super._value as AppearanceStateInitial;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? info = freezed,
+    Object? info = null,
   }) {
-    return _then(AppearanceStateInitial(
-      info == freezed
+    return _then(_$AppearanceStateInitialImpl(
+      null == info
           ? _value.info
           : info // ignore: cast_nullable_to_non_nullable
               as AppearanceInfo,
@@ -216,8 +175,8 @@ class _$AppearanceStateInitialCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$AppearanceStateInitial implements AppearanceStateInitial {
-  const _$AppearanceStateInitial(this.info);
+class _$AppearanceStateInitialImpl implements AppearanceStateInitial {
+  const _$AppearanceStateInitialImpl(this.info);
 
   @override
   final AppearanceInfo info;
@@ -228,22 +187,22 @@ class _$AppearanceStateInitial implements AppearanceStateInitial {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is AppearanceStateInitial &&
-            (identical(other.info, info) ||
-                const DeepCollectionEquality().equals(other.info, info)));
+        (other.runtimeType == runtimeType &&
+            other is _$AppearanceStateInitialImpl &&
+            (identical(other.info, info) || other.info == info));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(info);
+  int get hashCode => Object.hash(runtimeType, info);
 
   @JsonKey(ignore: true)
   @override
-  $AppearanceStateInitialCopyWith<AppearanceStateInitial> get copyWith =>
-      _$AppearanceStateInitialCopyWithImpl<AppearanceStateInitial>(
-          this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$AppearanceStateInitialImplCopyWith<_$AppearanceStateInitialImpl>
+      get copyWith => __$$AppearanceStateInitialImplCopyWithImpl<
+          _$AppearanceStateInitialImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -261,12 +220,12 @@ class _$AppearanceStateInitial implements AppearanceStateInitial {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(AppearanceInfo info)? initial,
-    TResult Function(AppearanceInfo info)? themeChanged,
-    TResult Function(AppearanceInfo info)? trackingNotifyChanged,
-    TResult Function(AppearanceInfo info)? localeChanged,
-    TResult Function(AppearanceInfo info)? trackingErrorNotifyChanged,
-    TResult Function(AppearanceInfo info)? trayIconChanged,
+    TResult? Function(AppearanceInfo info)? initial,
+    TResult? Function(AppearanceInfo info)? themeChanged,
+    TResult? Function(AppearanceInfo info)? trackingNotifyChanged,
+    TResult? Function(AppearanceInfo info)? localeChanged,
+    TResult? Function(AppearanceInfo info)? trackingErrorNotifyChanged,
+    TResult? Function(AppearanceInfo info)? trayIconChanged,
   }) {
     return initial?.call(info);
   }
@@ -307,14 +266,14 @@ class _$AppearanceStateInitial implements AppearanceStateInitial {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(AppearanceStateInitial value)? initial,
-    TResult Function(AppearanceStateThemeChanged value)? themeChanged,
-    TResult Function(AppearanceStateTrackingNotifyChanged value)?
+    TResult? Function(AppearanceStateInitial value)? initial,
+    TResult? Function(AppearanceStateThemeChanged value)? themeChanged,
+    TResult? Function(AppearanceStateTrackingNotifyChanged value)?
         trackingNotifyChanged,
-    TResult Function(AppearanceStateLocaleChanged value)? localeChanged,
-    TResult Function(AppearanceStateTrackingErrorNotifyChanged value)?
+    TResult? Function(AppearanceStateLocaleChanged value)? localeChanged,
+    TResult? Function(AppearanceStateTrackingErrorNotifyChanged value)?
         trackingErrorNotifyChanged,
-    TResult Function(AppearanceStateTrayIconChanged value)? trayIconChanged,
+    TResult? Function(AppearanceStateTrayIconChanged value)? trayIconChanged,
   }) {
     return initial?.call(this);
   }
@@ -340,25 +299,26 @@ class _$AppearanceStateInitial implements AppearanceStateInitial {
 }
 
 abstract class AppearanceStateInitial implements AppearanceState {
-  const factory AppearanceStateInitial(AppearanceInfo info) =
-      _$AppearanceStateInitial;
+  const factory AppearanceStateInitial(final AppearanceInfo info) =
+      _$AppearanceStateInitialImpl;
 
   @override
-  AppearanceInfo get info => throw _privateConstructorUsedError;
+  AppearanceInfo get info;
   @override
   @JsonKey(ignore: true)
-  $AppearanceStateInitialCopyWith<AppearanceStateInitial> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$AppearanceStateInitialImplCopyWith<_$AppearanceStateInitialImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $AppearanceStateThemeChangedCopyWith<$Res>
+abstract class _$$AppearanceStateThemeChangedImplCopyWith<$Res>
     implements $AppearanceStateCopyWith<$Res> {
-  factory $AppearanceStateThemeChangedCopyWith(
-          AppearanceStateThemeChanged value,
-          $Res Function(AppearanceStateThemeChanged) then) =
-      _$AppearanceStateThemeChangedCopyWithImpl<$Res>;
+  factory _$$AppearanceStateThemeChangedImplCopyWith(
+          _$AppearanceStateThemeChangedImpl value,
+          $Res Function(_$AppearanceStateThemeChangedImpl) then) =
+      __$$AppearanceStateThemeChangedImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({AppearanceInfo info});
 
   @override
@@ -366,23 +326,22 @@ abstract class $AppearanceStateThemeChangedCopyWith<$Res>
 }
 
 /// @nodoc
-class _$AppearanceStateThemeChangedCopyWithImpl<$Res>
-    extends _$AppearanceStateCopyWithImpl<$Res>
-    implements $AppearanceStateThemeChangedCopyWith<$Res> {
-  _$AppearanceStateThemeChangedCopyWithImpl(AppearanceStateThemeChanged _value,
-      $Res Function(AppearanceStateThemeChanged) _then)
-      : super(_value, (v) => _then(v as AppearanceStateThemeChanged));
+class __$$AppearanceStateThemeChangedImplCopyWithImpl<$Res>
+    extends _$AppearanceStateCopyWithImpl<$Res,
+        _$AppearanceStateThemeChangedImpl>
+    implements _$$AppearanceStateThemeChangedImplCopyWith<$Res> {
+  __$$AppearanceStateThemeChangedImplCopyWithImpl(
+      _$AppearanceStateThemeChangedImpl _value,
+      $Res Function(_$AppearanceStateThemeChangedImpl) _then)
+      : super(_value, _then);
 
-  @override
-  AppearanceStateThemeChanged get _value =>
-      super._value as AppearanceStateThemeChanged;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? info = freezed,
+    Object? info = null,
   }) {
-    return _then(AppearanceStateThemeChanged(
-      info == freezed
+    return _then(_$AppearanceStateThemeChangedImpl(
+      null == info
           ? _value.info
           : info // ignore: cast_nullable_to_non_nullable
               as AppearanceInfo,
@@ -392,8 +351,8 @@ class _$AppearanceStateThemeChangedCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$AppearanceStateThemeChanged implements AppearanceStateThemeChanged {
-  const _$AppearanceStateThemeChanged(this.info);
+class _$AppearanceStateThemeChangedImpl implements AppearanceStateThemeChanged {
+  const _$AppearanceStateThemeChangedImpl(this.info);
 
   @override
   final AppearanceInfo info;
@@ -404,22 +363,22 @@ class _$AppearanceStateThemeChanged implements AppearanceStateThemeChanged {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is AppearanceStateThemeChanged &&
-            (identical(other.info, info) ||
-                const DeepCollectionEquality().equals(other.info, info)));
+        (other.runtimeType == runtimeType &&
+            other is _$AppearanceStateThemeChangedImpl &&
+            (identical(other.info, info) || other.info == info));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(info);
+  int get hashCode => Object.hash(runtimeType, info);
 
   @JsonKey(ignore: true)
   @override
-  $AppearanceStateThemeChangedCopyWith<AppearanceStateThemeChanged>
-      get copyWith => _$AppearanceStateThemeChangedCopyWithImpl<
-          AppearanceStateThemeChanged>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$AppearanceStateThemeChangedImplCopyWith<_$AppearanceStateThemeChangedImpl>
+      get copyWith => __$$AppearanceStateThemeChangedImplCopyWithImpl<
+          _$AppearanceStateThemeChangedImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -437,12 +396,12 @@ class _$AppearanceStateThemeChanged implements AppearanceStateThemeChanged {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(AppearanceInfo info)? initial,
-    TResult Function(AppearanceInfo info)? themeChanged,
-    TResult Function(AppearanceInfo info)? trackingNotifyChanged,
-    TResult Function(AppearanceInfo info)? localeChanged,
-    TResult Function(AppearanceInfo info)? trackingErrorNotifyChanged,
-    TResult Function(AppearanceInfo info)? trayIconChanged,
+    TResult? Function(AppearanceInfo info)? initial,
+    TResult? Function(AppearanceInfo info)? themeChanged,
+    TResult? Function(AppearanceInfo info)? trackingNotifyChanged,
+    TResult? Function(AppearanceInfo info)? localeChanged,
+    TResult? Function(AppearanceInfo info)? trackingErrorNotifyChanged,
+    TResult? Function(AppearanceInfo info)? trayIconChanged,
   }) {
     return themeChanged?.call(info);
   }
@@ -483,14 +442,14 @@ class _$AppearanceStateThemeChanged implements AppearanceStateThemeChanged {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(AppearanceStateInitial value)? initial,
-    TResult Function(AppearanceStateThemeChanged value)? themeChanged,
-    TResult Function(AppearanceStateTrackingNotifyChanged value)?
+    TResult? Function(AppearanceStateInitial value)? initial,
+    TResult? Function(AppearanceStateThemeChanged value)? themeChanged,
+    TResult? Function(AppearanceStateTrackingNotifyChanged value)?
         trackingNotifyChanged,
-    TResult Function(AppearanceStateLocaleChanged value)? localeChanged,
-    TResult Function(AppearanceStateTrackingErrorNotifyChanged value)?
+    TResult? Function(AppearanceStateLocaleChanged value)? localeChanged,
+    TResult? Function(AppearanceStateTrackingErrorNotifyChanged value)?
         trackingErrorNotifyChanged,
-    TResult Function(AppearanceStateTrayIconChanged value)? trayIconChanged,
+    TResult? Function(AppearanceStateTrayIconChanged value)? trayIconChanged,
   }) {
     return themeChanged?.call(this);
   }
@@ -516,25 +475,26 @@ class _$AppearanceStateThemeChanged implements AppearanceStateThemeChanged {
 }
 
 abstract class AppearanceStateThemeChanged implements AppearanceState {
-  const factory AppearanceStateThemeChanged(AppearanceInfo info) =
-      _$AppearanceStateThemeChanged;
+  const factory AppearanceStateThemeChanged(final AppearanceInfo info) =
+      _$AppearanceStateThemeChangedImpl;
 
   @override
-  AppearanceInfo get info => throw _privateConstructorUsedError;
+  AppearanceInfo get info;
   @override
   @JsonKey(ignore: true)
-  $AppearanceStateThemeChangedCopyWith<AppearanceStateThemeChanged>
+  _$$AppearanceStateThemeChangedImplCopyWith<_$AppearanceStateThemeChangedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $AppearanceStateTrackingNotifyChangedCopyWith<$Res>
+abstract class _$$AppearanceStateTrackingNotifyChangedImplCopyWith<$Res>
     implements $AppearanceStateCopyWith<$Res> {
-  factory $AppearanceStateTrackingNotifyChangedCopyWith(
-          AppearanceStateTrackingNotifyChanged value,
-          $Res Function(AppearanceStateTrackingNotifyChanged) then) =
-      _$AppearanceStateTrackingNotifyChangedCopyWithImpl<$Res>;
+  factory _$$AppearanceStateTrackingNotifyChangedImplCopyWith(
+          _$AppearanceStateTrackingNotifyChangedImpl value,
+          $Res Function(_$AppearanceStateTrackingNotifyChangedImpl) then) =
+      __$$AppearanceStateTrackingNotifyChangedImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({AppearanceInfo info});
 
   @override
@@ -542,24 +502,22 @@ abstract class $AppearanceStateTrackingNotifyChangedCopyWith<$Res>
 }
 
 /// @nodoc
-class _$AppearanceStateTrackingNotifyChangedCopyWithImpl<$Res>
-    extends _$AppearanceStateCopyWithImpl<$Res>
-    implements $AppearanceStateTrackingNotifyChangedCopyWith<$Res> {
-  _$AppearanceStateTrackingNotifyChangedCopyWithImpl(
-      AppearanceStateTrackingNotifyChanged _value,
-      $Res Function(AppearanceStateTrackingNotifyChanged) _then)
-      : super(_value, (v) => _then(v as AppearanceStateTrackingNotifyChanged));
+class __$$AppearanceStateTrackingNotifyChangedImplCopyWithImpl<$Res>
+    extends _$AppearanceStateCopyWithImpl<$Res,
+        _$AppearanceStateTrackingNotifyChangedImpl>
+    implements _$$AppearanceStateTrackingNotifyChangedImplCopyWith<$Res> {
+  __$$AppearanceStateTrackingNotifyChangedImplCopyWithImpl(
+      _$AppearanceStateTrackingNotifyChangedImpl _value,
+      $Res Function(_$AppearanceStateTrackingNotifyChangedImpl) _then)
+      : super(_value, _then);
 
-  @override
-  AppearanceStateTrackingNotifyChanged get _value =>
-      super._value as AppearanceStateTrackingNotifyChanged;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? info = freezed,
+    Object? info = null,
   }) {
-    return _then(AppearanceStateTrackingNotifyChanged(
-      info == freezed
+    return _then(_$AppearanceStateTrackingNotifyChangedImpl(
+      null == info
           ? _value.info
           : info // ignore: cast_nullable_to_non_nullable
               as AppearanceInfo,
@@ -569,9 +527,9 @@ class _$AppearanceStateTrackingNotifyChangedCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$AppearanceStateTrackingNotifyChanged
+class _$AppearanceStateTrackingNotifyChangedImpl
     implements AppearanceStateTrackingNotifyChanged {
-  const _$AppearanceStateTrackingNotifyChanged(this.info);
+  const _$AppearanceStateTrackingNotifyChangedImpl(this.info);
 
   @override
   final AppearanceInfo info;
@@ -582,23 +540,23 @@ class _$AppearanceStateTrackingNotifyChanged
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is AppearanceStateTrackingNotifyChanged &&
-            (identical(other.info, info) ||
-                const DeepCollectionEquality().equals(other.info, info)));
+        (other.runtimeType == runtimeType &&
+            other is _$AppearanceStateTrackingNotifyChangedImpl &&
+            (identical(other.info, info) || other.info == info));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(info);
+  int get hashCode => Object.hash(runtimeType, info);
 
   @JsonKey(ignore: true)
   @override
-  $AppearanceStateTrackingNotifyChangedCopyWith<
-          AppearanceStateTrackingNotifyChanged>
-      get copyWith => _$AppearanceStateTrackingNotifyChangedCopyWithImpl<
-          AppearanceStateTrackingNotifyChanged>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$AppearanceStateTrackingNotifyChangedImplCopyWith<
+          _$AppearanceStateTrackingNotifyChangedImpl>
+      get copyWith => __$$AppearanceStateTrackingNotifyChangedImplCopyWithImpl<
+          _$AppearanceStateTrackingNotifyChangedImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -616,12 +574,12 @@ class _$AppearanceStateTrackingNotifyChanged
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(AppearanceInfo info)? initial,
-    TResult Function(AppearanceInfo info)? themeChanged,
-    TResult Function(AppearanceInfo info)? trackingNotifyChanged,
-    TResult Function(AppearanceInfo info)? localeChanged,
-    TResult Function(AppearanceInfo info)? trackingErrorNotifyChanged,
-    TResult Function(AppearanceInfo info)? trayIconChanged,
+    TResult? Function(AppearanceInfo info)? initial,
+    TResult? Function(AppearanceInfo info)? themeChanged,
+    TResult? Function(AppearanceInfo info)? trackingNotifyChanged,
+    TResult? Function(AppearanceInfo info)? localeChanged,
+    TResult? Function(AppearanceInfo info)? trackingErrorNotifyChanged,
+    TResult? Function(AppearanceInfo info)? trayIconChanged,
   }) {
     return trackingNotifyChanged?.call(info);
   }
@@ -662,14 +620,14 @@ class _$AppearanceStateTrackingNotifyChanged
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(AppearanceStateInitial value)? initial,
-    TResult Function(AppearanceStateThemeChanged value)? themeChanged,
-    TResult Function(AppearanceStateTrackingNotifyChanged value)?
+    TResult? Function(AppearanceStateInitial value)? initial,
+    TResult? Function(AppearanceStateThemeChanged value)? themeChanged,
+    TResult? Function(AppearanceStateTrackingNotifyChanged value)?
         trackingNotifyChanged,
-    TResult Function(AppearanceStateLocaleChanged value)? localeChanged,
-    TResult Function(AppearanceStateTrackingErrorNotifyChanged value)?
+    TResult? Function(AppearanceStateLocaleChanged value)? localeChanged,
+    TResult? Function(AppearanceStateTrackingErrorNotifyChanged value)?
         trackingErrorNotifyChanged,
-    TResult Function(AppearanceStateTrayIconChanged value)? trayIconChanged,
+    TResult? Function(AppearanceStateTrayIconChanged value)? trayIconChanged,
   }) {
     return trackingNotifyChanged?.call(this);
   }
@@ -695,26 +653,27 @@ class _$AppearanceStateTrackingNotifyChanged
 }
 
 abstract class AppearanceStateTrackingNotifyChanged implements AppearanceState {
-  const factory AppearanceStateTrackingNotifyChanged(AppearanceInfo info) =
-      _$AppearanceStateTrackingNotifyChanged;
+  const factory AppearanceStateTrackingNotifyChanged(
+      final AppearanceInfo info) = _$AppearanceStateTrackingNotifyChangedImpl;
 
   @override
-  AppearanceInfo get info => throw _privateConstructorUsedError;
+  AppearanceInfo get info;
   @override
   @JsonKey(ignore: true)
-  $AppearanceStateTrackingNotifyChangedCopyWith<
-          AppearanceStateTrackingNotifyChanged>
+  _$$AppearanceStateTrackingNotifyChangedImplCopyWith<
+          _$AppearanceStateTrackingNotifyChangedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $AppearanceStateLocaleChangedCopyWith<$Res>
+abstract class _$$AppearanceStateLocaleChangedImplCopyWith<$Res>
     implements $AppearanceStateCopyWith<$Res> {
-  factory $AppearanceStateLocaleChangedCopyWith(
-          AppearanceStateLocaleChanged value,
-          $Res Function(AppearanceStateLocaleChanged) then) =
-      _$AppearanceStateLocaleChangedCopyWithImpl<$Res>;
+  factory _$$AppearanceStateLocaleChangedImplCopyWith(
+          _$AppearanceStateLocaleChangedImpl value,
+          $Res Function(_$AppearanceStateLocaleChangedImpl) then) =
+      __$$AppearanceStateLocaleChangedImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({AppearanceInfo info});
 
   @override
@@ -722,24 +681,22 @@ abstract class $AppearanceStateLocaleChangedCopyWith<$Res>
 }
 
 /// @nodoc
-class _$AppearanceStateLocaleChangedCopyWithImpl<$Res>
-    extends _$AppearanceStateCopyWithImpl<$Res>
-    implements $AppearanceStateLocaleChangedCopyWith<$Res> {
-  _$AppearanceStateLocaleChangedCopyWithImpl(
-      AppearanceStateLocaleChanged _value,
-      $Res Function(AppearanceStateLocaleChanged) _then)
-      : super(_value, (v) => _then(v as AppearanceStateLocaleChanged));
+class __$$AppearanceStateLocaleChangedImplCopyWithImpl<$Res>
+    extends _$AppearanceStateCopyWithImpl<$Res,
+        _$AppearanceStateLocaleChangedImpl>
+    implements _$$AppearanceStateLocaleChangedImplCopyWith<$Res> {
+  __$$AppearanceStateLocaleChangedImplCopyWithImpl(
+      _$AppearanceStateLocaleChangedImpl _value,
+      $Res Function(_$AppearanceStateLocaleChangedImpl) _then)
+      : super(_value, _then);
 
-  @override
-  AppearanceStateLocaleChanged get _value =>
-      super._value as AppearanceStateLocaleChanged;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? info = freezed,
+    Object? info = null,
   }) {
-    return _then(AppearanceStateLocaleChanged(
-      info == freezed
+    return _then(_$AppearanceStateLocaleChangedImpl(
+      null == info
           ? _value.info
           : info // ignore: cast_nullable_to_non_nullable
               as AppearanceInfo,
@@ -749,8 +706,9 @@ class _$AppearanceStateLocaleChangedCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$AppearanceStateLocaleChanged implements AppearanceStateLocaleChanged {
-  const _$AppearanceStateLocaleChanged(this.info);
+class _$AppearanceStateLocaleChangedImpl
+    implements AppearanceStateLocaleChanged {
+  const _$AppearanceStateLocaleChangedImpl(this.info);
 
   @override
   final AppearanceInfo info;
@@ -761,22 +719,23 @@ class _$AppearanceStateLocaleChanged implements AppearanceStateLocaleChanged {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is AppearanceStateLocaleChanged &&
-            (identical(other.info, info) ||
-                const DeepCollectionEquality().equals(other.info, info)));
+        (other.runtimeType == runtimeType &&
+            other is _$AppearanceStateLocaleChangedImpl &&
+            (identical(other.info, info) || other.info == info));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(info);
+  int get hashCode => Object.hash(runtimeType, info);
 
   @JsonKey(ignore: true)
   @override
-  $AppearanceStateLocaleChangedCopyWith<AppearanceStateLocaleChanged>
-      get copyWith => _$AppearanceStateLocaleChangedCopyWithImpl<
-          AppearanceStateLocaleChanged>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$AppearanceStateLocaleChangedImplCopyWith<
+          _$AppearanceStateLocaleChangedImpl>
+      get copyWith => __$$AppearanceStateLocaleChangedImplCopyWithImpl<
+          _$AppearanceStateLocaleChangedImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -794,12 +753,12 @@ class _$AppearanceStateLocaleChanged implements AppearanceStateLocaleChanged {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(AppearanceInfo info)? initial,
-    TResult Function(AppearanceInfo info)? themeChanged,
-    TResult Function(AppearanceInfo info)? trackingNotifyChanged,
-    TResult Function(AppearanceInfo info)? localeChanged,
-    TResult Function(AppearanceInfo info)? trackingErrorNotifyChanged,
-    TResult Function(AppearanceInfo info)? trayIconChanged,
+    TResult? Function(AppearanceInfo info)? initial,
+    TResult? Function(AppearanceInfo info)? themeChanged,
+    TResult? Function(AppearanceInfo info)? trackingNotifyChanged,
+    TResult? Function(AppearanceInfo info)? localeChanged,
+    TResult? Function(AppearanceInfo info)? trackingErrorNotifyChanged,
+    TResult? Function(AppearanceInfo info)? trayIconChanged,
   }) {
     return localeChanged?.call(info);
   }
@@ -840,14 +799,14 @@ class _$AppearanceStateLocaleChanged implements AppearanceStateLocaleChanged {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(AppearanceStateInitial value)? initial,
-    TResult Function(AppearanceStateThemeChanged value)? themeChanged,
-    TResult Function(AppearanceStateTrackingNotifyChanged value)?
+    TResult? Function(AppearanceStateInitial value)? initial,
+    TResult? Function(AppearanceStateThemeChanged value)? themeChanged,
+    TResult? Function(AppearanceStateTrackingNotifyChanged value)?
         trackingNotifyChanged,
-    TResult Function(AppearanceStateLocaleChanged value)? localeChanged,
-    TResult Function(AppearanceStateTrackingErrorNotifyChanged value)?
+    TResult? Function(AppearanceStateLocaleChanged value)? localeChanged,
+    TResult? Function(AppearanceStateTrackingErrorNotifyChanged value)?
         trackingErrorNotifyChanged,
-    TResult Function(AppearanceStateTrayIconChanged value)? trayIconChanged,
+    TResult? Function(AppearanceStateTrayIconChanged value)? trayIconChanged,
   }) {
     return localeChanged?.call(this);
   }
@@ -873,25 +832,27 @@ class _$AppearanceStateLocaleChanged implements AppearanceStateLocaleChanged {
 }
 
 abstract class AppearanceStateLocaleChanged implements AppearanceState {
-  const factory AppearanceStateLocaleChanged(AppearanceInfo info) =
-      _$AppearanceStateLocaleChanged;
+  const factory AppearanceStateLocaleChanged(final AppearanceInfo info) =
+      _$AppearanceStateLocaleChangedImpl;
 
   @override
-  AppearanceInfo get info => throw _privateConstructorUsedError;
+  AppearanceInfo get info;
   @override
   @JsonKey(ignore: true)
-  $AppearanceStateLocaleChangedCopyWith<AppearanceStateLocaleChanged>
+  _$$AppearanceStateLocaleChangedImplCopyWith<
+          _$AppearanceStateLocaleChangedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $AppearanceStateTrackingErrorNotifyChangedCopyWith<$Res>
+abstract class _$$AppearanceStateTrackingErrorNotifyChangedImplCopyWith<$Res>
     implements $AppearanceStateCopyWith<$Res> {
-  factory $AppearanceStateTrackingErrorNotifyChangedCopyWith(
-          AppearanceStateTrackingErrorNotifyChanged value,
-          $Res Function(AppearanceStateTrackingErrorNotifyChanged) then) =
-      _$AppearanceStateTrackingErrorNotifyChangedCopyWithImpl<$Res>;
+  factory _$$AppearanceStateTrackingErrorNotifyChangedImplCopyWith(
+          _$AppearanceStateTrackingErrorNotifyChangedImpl value,
+          $Res Function(_$AppearanceStateTrackingErrorNotifyChangedImpl) then) =
+      __$$AppearanceStateTrackingErrorNotifyChangedImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({AppearanceInfo info});
 
   @override
@@ -899,25 +860,22 @@ abstract class $AppearanceStateTrackingErrorNotifyChangedCopyWith<$Res>
 }
 
 /// @nodoc
-class _$AppearanceStateTrackingErrorNotifyChangedCopyWithImpl<$Res>
-    extends _$AppearanceStateCopyWithImpl<$Res>
-    implements $AppearanceStateTrackingErrorNotifyChangedCopyWith<$Res> {
-  _$AppearanceStateTrackingErrorNotifyChangedCopyWithImpl(
-      AppearanceStateTrackingErrorNotifyChanged _value,
-      $Res Function(AppearanceStateTrackingErrorNotifyChanged) _then)
-      : super(_value,
-            (v) => _then(v as AppearanceStateTrackingErrorNotifyChanged));
+class __$$AppearanceStateTrackingErrorNotifyChangedImplCopyWithImpl<$Res>
+    extends _$AppearanceStateCopyWithImpl<$Res,
+        _$AppearanceStateTrackingErrorNotifyChangedImpl>
+    implements _$$AppearanceStateTrackingErrorNotifyChangedImplCopyWith<$Res> {
+  __$$AppearanceStateTrackingErrorNotifyChangedImplCopyWithImpl(
+      _$AppearanceStateTrackingErrorNotifyChangedImpl _value,
+      $Res Function(_$AppearanceStateTrackingErrorNotifyChangedImpl) _then)
+      : super(_value, _then);
 
-  @override
-  AppearanceStateTrackingErrorNotifyChanged get _value =>
-      super._value as AppearanceStateTrackingErrorNotifyChanged;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? info = freezed,
+    Object? info = null,
   }) {
-    return _then(AppearanceStateTrackingErrorNotifyChanged(
-      info == freezed
+    return _then(_$AppearanceStateTrackingErrorNotifyChangedImpl(
+      null == info
           ? _value.info
           : info // ignore: cast_nullable_to_non_nullable
               as AppearanceInfo,
@@ -927,9 +885,9 @@ class _$AppearanceStateTrackingErrorNotifyChangedCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$AppearanceStateTrackingErrorNotifyChanged
+class _$AppearanceStateTrackingErrorNotifyChangedImpl
     implements AppearanceStateTrackingErrorNotifyChanged {
-  const _$AppearanceStateTrackingErrorNotifyChanged(this.info);
+  const _$AppearanceStateTrackingErrorNotifyChangedImpl(this.info);
 
   @override
   final AppearanceInfo info;
@@ -940,23 +898,25 @@ class _$AppearanceStateTrackingErrorNotifyChanged
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is AppearanceStateTrackingErrorNotifyChanged &&
-            (identical(other.info, info) ||
-                const DeepCollectionEquality().equals(other.info, info)));
+        (other.runtimeType == runtimeType &&
+            other is _$AppearanceStateTrackingErrorNotifyChangedImpl &&
+            (identical(other.info, info) || other.info == info));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(info);
+  int get hashCode => Object.hash(runtimeType, info);
 
   @JsonKey(ignore: true)
   @override
-  $AppearanceStateTrackingErrorNotifyChangedCopyWith<
-          AppearanceStateTrackingErrorNotifyChanged>
-      get copyWith => _$AppearanceStateTrackingErrorNotifyChangedCopyWithImpl<
-          AppearanceStateTrackingErrorNotifyChanged>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$AppearanceStateTrackingErrorNotifyChangedImplCopyWith<
+          _$AppearanceStateTrackingErrorNotifyChangedImpl>
+      get copyWith =>
+          __$$AppearanceStateTrackingErrorNotifyChangedImplCopyWithImpl<
+                  _$AppearanceStateTrackingErrorNotifyChangedImpl>(
+              this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -974,12 +934,12 @@ class _$AppearanceStateTrackingErrorNotifyChanged
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(AppearanceInfo info)? initial,
-    TResult Function(AppearanceInfo info)? themeChanged,
-    TResult Function(AppearanceInfo info)? trackingNotifyChanged,
-    TResult Function(AppearanceInfo info)? localeChanged,
-    TResult Function(AppearanceInfo info)? trackingErrorNotifyChanged,
-    TResult Function(AppearanceInfo info)? trayIconChanged,
+    TResult? Function(AppearanceInfo info)? initial,
+    TResult? Function(AppearanceInfo info)? themeChanged,
+    TResult? Function(AppearanceInfo info)? trackingNotifyChanged,
+    TResult? Function(AppearanceInfo info)? localeChanged,
+    TResult? Function(AppearanceInfo info)? trackingErrorNotifyChanged,
+    TResult? Function(AppearanceInfo info)? trayIconChanged,
   }) {
     return trackingErrorNotifyChanged?.call(info);
   }
@@ -1020,14 +980,14 @@ class _$AppearanceStateTrackingErrorNotifyChanged
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(AppearanceStateInitial value)? initial,
-    TResult Function(AppearanceStateThemeChanged value)? themeChanged,
-    TResult Function(AppearanceStateTrackingNotifyChanged value)?
+    TResult? Function(AppearanceStateInitial value)? initial,
+    TResult? Function(AppearanceStateThemeChanged value)? themeChanged,
+    TResult? Function(AppearanceStateTrackingNotifyChanged value)?
         trackingNotifyChanged,
-    TResult Function(AppearanceStateLocaleChanged value)? localeChanged,
-    TResult Function(AppearanceStateTrackingErrorNotifyChanged value)?
+    TResult? Function(AppearanceStateLocaleChanged value)? localeChanged,
+    TResult? Function(AppearanceStateTrackingErrorNotifyChanged value)?
         trackingErrorNotifyChanged,
-    TResult Function(AppearanceStateTrayIconChanged value)? trayIconChanged,
+    TResult? Function(AppearanceStateTrayIconChanged value)? trayIconChanged,
   }) {
     return trackingErrorNotifyChanged?.call(this);
   }
@@ -1054,26 +1014,28 @@ class _$AppearanceStateTrackingErrorNotifyChanged
 
 abstract class AppearanceStateTrackingErrorNotifyChanged
     implements AppearanceState {
-  const factory AppearanceStateTrackingErrorNotifyChanged(AppearanceInfo info) =
-      _$AppearanceStateTrackingErrorNotifyChanged;
+  const factory AppearanceStateTrackingErrorNotifyChanged(
+          final AppearanceInfo info) =
+      _$AppearanceStateTrackingErrorNotifyChangedImpl;
 
   @override
-  AppearanceInfo get info => throw _privateConstructorUsedError;
+  AppearanceInfo get info;
   @override
   @JsonKey(ignore: true)
-  $AppearanceStateTrackingErrorNotifyChangedCopyWith<
-          AppearanceStateTrackingErrorNotifyChanged>
+  _$$AppearanceStateTrackingErrorNotifyChangedImplCopyWith<
+          _$AppearanceStateTrackingErrorNotifyChangedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $AppearanceStateTrayIconChangedCopyWith<$Res>
+abstract class _$$AppearanceStateTrayIconChangedImplCopyWith<$Res>
     implements $AppearanceStateCopyWith<$Res> {
-  factory $AppearanceStateTrayIconChangedCopyWith(
-          AppearanceStateTrayIconChanged value,
-          $Res Function(AppearanceStateTrayIconChanged) then) =
-      _$AppearanceStateTrayIconChangedCopyWithImpl<$Res>;
+  factory _$$AppearanceStateTrayIconChangedImplCopyWith(
+          _$AppearanceStateTrayIconChangedImpl value,
+          $Res Function(_$AppearanceStateTrayIconChangedImpl) then) =
+      __$$AppearanceStateTrayIconChangedImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({AppearanceInfo info});
 
   @override
@@ -1081,24 +1043,22 @@ abstract class $AppearanceStateTrayIconChangedCopyWith<$Res>
 }
 
 /// @nodoc
-class _$AppearanceStateTrayIconChangedCopyWithImpl<$Res>
-    extends _$AppearanceStateCopyWithImpl<$Res>
-    implements $AppearanceStateTrayIconChangedCopyWith<$Res> {
-  _$AppearanceStateTrayIconChangedCopyWithImpl(
-      AppearanceStateTrayIconChanged _value,
-      $Res Function(AppearanceStateTrayIconChanged) _then)
-      : super(_value, (v) => _then(v as AppearanceStateTrayIconChanged));
+class __$$AppearanceStateTrayIconChangedImplCopyWithImpl<$Res>
+    extends _$AppearanceStateCopyWithImpl<$Res,
+        _$AppearanceStateTrayIconChangedImpl>
+    implements _$$AppearanceStateTrayIconChangedImplCopyWith<$Res> {
+  __$$AppearanceStateTrayIconChangedImplCopyWithImpl(
+      _$AppearanceStateTrayIconChangedImpl _value,
+      $Res Function(_$AppearanceStateTrayIconChangedImpl) _then)
+      : super(_value, _then);
 
-  @override
-  AppearanceStateTrayIconChanged get _value =>
-      super._value as AppearanceStateTrayIconChanged;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? info = freezed,
+    Object? info = null,
   }) {
-    return _then(AppearanceStateTrayIconChanged(
-      info == freezed
+    return _then(_$AppearanceStateTrayIconChangedImpl(
+      null == info
           ? _value.info
           : info // ignore: cast_nullable_to_non_nullable
               as AppearanceInfo,
@@ -1108,9 +1068,9 @@ class _$AppearanceStateTrayIconChangedCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$AppearanceStateTrayIconChanged
+class _$AppearanceStateTrayIconChangedImpl
     implements AppearanceStateTrayIconChanged {
-  const _$AppearanceStateTrayIconChanged(this.info);
+  const _$AppearanceStateTrayIconChangedImpl(this.info);
 
   @override
   final AppearanceInfo info;
@@ -1121,22 +1081,23 @@ class _$AppearanceStateTrayIconChanged
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is AppearanceStateTrayIconChanged &&
-            (identical(other.info, info) ||
-                const DeepCollectionEquality().equals(other.info, info)));
+        (other.runtimeType == runtimeType &&
+            other is _$AppearanceStateTrayIconChangedImpl &&
+            (identical(other.info, info) || other.info == info));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(info);
+  int get hashCode => Object.hash(runtimeType, info);
 
   @JsonKey(ignore: true)
   @override
-  $AppearanceStateTrayIconChangedCopyWith<AppearanceStateTrayIconChanged>
-      get copyWith => _$AppearanceStateTrayIconChangedCopyWithImpl<
-          AppearanceStateTrayIconChanged>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$AppearanceStateTrayIconChangedImplCopyWith<
+          _$AppearanceStateTrayIconChangedImpl>
+      get copyWith => __$$AppearanceStateTrayIconChangedImplCopyWithImpl<
+          _$AppearanceStateTrayIconChangedImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1154,12 +1115,12 @@ class _$AppearanceStateTrayIconChanged
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(AppearanceInfo info)? initial,
-    TResult Function(AppearanceInfo info)? themeChanged,
-    TResult Function(AppearanceInfo info)? trackingNotifyChanged,
-    TResult Function(AppearanceInfo info)? localeChanged,
-    TResult Function(AppearanceInfo info)? trackingErrorNotifyChanged,
-    TResult Function(AppearanceInfo info)? trayIconChanged,
+    TResult? Function(AppearanceInfo info)? initial,
+    TResult? Function(AppearanceInfo info)? themeChanged,
+    TResult? Function(AppearanceInfo info)? trackingNotifyChanged,
+    TResult? Function(AppearanceInfo info)? localeChanged,
+    TResult? Function(AppearanceInfo info)? trackingErrorNotifyChanged,
+    TResult? Function(AppearanceInfo info)? trayIconChanged,
   }) {
     return trayIconChanged?.call(info);
   }
@@ -1200,14 +1161,14 @@ class _$AppearanceStateTrayIconChanged
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(AppearanceStateInitial value)? initial,
-    TResult Function(AppearanceStateThemeChanged value)? themeChanged,
-    TResult Function(AppearanceStateTrackingNotifyChanged value)?
+    TResult? Function(AppearanceStateInitial value)? initial,
+    TResult? Function(AppearanceStateThemeChanged value)? themeChanged,
+    TResult? Function(AppearanceStateTrackingNotifyChanged value)?
         trackingNotifyChanged,
-    TResult Function(AppearanceStateLocaleChanged value)? localeChanged,
-    TResult Function(AppearanceStateTrackingErrorNotifyChanged value)?
+    TResult? Function(AppearanceStateLocaleChanged value)? localeChanged,
+    TResult? Function(AppearanceStateTrackingErrorNotifyChanged value)?
         trackingErrorNotifyChanged,
-    TResult Function(AppearanceStateTrayIconChanged value)? trayIconChanged,
+    TResult? Function(AppearanceStateTrayIconChanged value)? trayIconChanged,
   }) {
     return trayIconChanged?.call(this);
   }
@@ -1233,39 +1194,17 @@ class _$AppearanceStateTrayIconChanged
 }
 
 abstract class AppearanceStateTrayIconChanged implements AppearanceState {
-  const factory AppearanceStateTrayIconChanged(AppearanceInfo info) =
-      _$AppearanceStateTrayIconChanged;
+  const factory AppearanceStateTrayIconChanged(final AppearanceInfo info) =
+      _$AppearanceStateTrayIconChangedImpl;
 
   @override
-  AppearanceInfo get info => throw _privateConstructorUsedError;
+  AppearanceInfo get info;
   @override
   @JsonKey(ignore: true)
-  $AppearanceStateTrayIconChangedCopyWith<AppearanceStateTrayIconChanged>
+  _$$AppearanceStateTrayIconChangedImplCopyWith<
+          _$AppearanceStateTrayIconChangedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
-
-/// @nodoc
-class _$AppearanceInfoTearOff {
-  const _$AppearanceInfoTearOff();
-
-  _AppearanceInfo call(
-      {required AppThemeType theme,
-      required bool trackingNotify,
-      required AppLocaleType locale,
-      required bool trackingErrorNotify,
-      required bool trayIcon}) {
-    return _AppearanceInfo(
-      theme: theme,
-      trackingNotify: trackingNotify,
-      locale: locale,
-      trackingErrorNotify: trackingErrorNotify,
-      trayIcon: trayIcon,
-    );
-  }
-}
-
-/// @nodoc
-const $AppearanceInfo = _$AppearanceInfoTearOff();
 
 /// @nodoc
 mixin _$AppearanceInfo {
@@ -1284,7 +1223,8 @@ mixin _$AppearanceInfo {
 abstract class $AppearanceInfoCopyWith<$Res> {
   factory $AppearanceInfoCopyWith(
           AppearanceInfo value, $Res Function(AppearanceInfo) then) =
-      _$AppearanceInfoCopyWithImpl<$Res>;
+      _$AppearanceInfoCopyWithImpl<$Res, AppearanceInfo>;
+  @useResult
   $Res call(
       {AppThemeType theme,
       bool trackingNotify,
@@ -1297,68 +1237,73 @@ abstract class $AppearanceInfoCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$AppearanceInfoCopyWithImpl<$Res>
+class _$AppearanceInfoCopyWithImpl<$Res, $Val extends AppearanceInfo>
     implements $AppearanceInfoCopyWith<$Res> {
   _$AppearanceInfoCopyWithImpl(this._value, this._then);
 
-  final AppearanceInfo _value;
   // ignore: unused_field
-  final $Res Function(AppearanceInfo) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? theme = freezed,
-    Object? trackingNotify = freezed,
-    Object? locale = freezed,
-    Object? trackingErrorNotify = freezed,
-    Object? trayIcon = freezed,
+    Object? theme = null,
+    Object? trackingNotify = null,
+    Object? locale = null,
+    Object? trackingErrorNotify = null,
+    Object? trayIcon = null,
   }) {
     return _then(_value.copyWith(
-      theme: theme == freezed
+      theme: null == theme
           ? _value.theme
           : theme // ignore: cast_nullable_to_non_nullable
               as AppThemeType,
-      trackingNotify: trackingNotify == freezed
+      trackingNotify: null == trackingNotify
           ? _value.trackingNotify
           : trackingNotify // ignore: cast_nullable_to_non_nullable
               as bool,
-      locale: locale == freezed
+      locale: null == locale
           ? _value.locale
           : locale // ignore: cast_nullable_to_non_nullable
               as AppLocaleType,
-      trackingErrorNotify: trackingErrorNotify == freezed
+      trackingErrorNotify: null == trackingErrorNotify
           ? _value.trackingErrorNotify
           : trackingErrorNotify // ignore: cast_nullable_to_non_nullable
               as bool,
-      trayIcon: trayIcon == freezed
+      trayIcon: null == trayIcon
           ? _value.trayIcon
           : trayIcon // ignore: cast_nullable_to_non_nullable
               as bool,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $AppThemeTypeCopyWith<$Res> get theme {
     return $AppThemeTypeCopyWith<$Res>(_value.theme, (value) {
-      return _then(_value.copyWith(theme: value));
+      return _then(_value.copyWith(theme: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $AppLocaleTypeCopyWith<$Res> get locale {
     return $AppLocaleTypeCopyWith<$Res>(_value.locale, (value) {
-      return _then(_value.copyWith(locale: value));
+      return _then(_value.copyWith(locale: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$AppearanceInfoCopyWith<$Res>
+abstract class _$$AppearanceInfoImplCopyWith<$Res>
     implements $AppearanceInfoCopyWith<$Res> {
-  factory _$AppearanceInfoCopyWith(
-          _AppearanceInfo value, $Res Function(_AppearanceInfo) then) =
-      __$AppearanceInfoCopyWithImpl<$Res>;
+  factory _$$AppearanceInfoImplCopyWith(_$AppearanceInfoImpl value,
+          $Res Function(_$AppearanceInfoImpl) then) =
+      __$$AppearanceInfoImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {AppThemeType theme,
       bool trackingNotify,
@@ -1373,42 +1318,40 @@ abstract class _$AppearanceInfoCopyWith<$Res>
 }
 
 /// @nodoc
-class __$AppearanceInfoCopyWithImpl<$Res>
-    extends _$AppearanceInfoCopyWithImpl<$Res>
-    implements _$AppearanceInfoCopyWith<$Res> {
-  __$AppearanceInfoCopyWithImpl(
-      _AppearanceInfo _value, $Res Function(_AppearanceInfo) _then)
-      : super(_value, (v) => _then(v as _AppearanceInfo));
+class __$$AppearanceInfoImplCopyWithImpl<$Res>
+    extends _$AppearanceInfoCopyWithImpl<$Res, _$AppearanceInfoImpl>
+    implements _$$AppearanceInfoImplCopyWith<$Res> {
+  __$$AppearanceInfoImplCopyWithImpl(
+      _$AppearanceInfoImpl _value, $Res Function(_$AppearanceInfoImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _AppearanceInfo get _value => super._value as _AppearanceInfo;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? theme = freezed,
-    Object? trackingNotify = freezed,
-    Object? locale = freezed,
-    Object? trackingErrorNotify = freezed,
-    Object? trayIcon = freezed,
+    Object? theme = null,
+    Object? trackingNotify = null,
+    Object? locale = null,
+    Object? trackingErrorNotify = null,
+    Object? trayIcon = null,
   }) {
-    return _then(_AppearanceInfo(
-      theme: theme == freezed
+    return _then(_$AppearanceInfoImpl(
+      theme: null == theme
           ? _value.theme
           : theme // ignore: cast_nullable_to_non_nullable
               as AppThemeType,
-      trackingNotify: trackingNotify == freezed
+      trackingNotify: null == trackingNotify
           ? _value.trackingNotify
           : trackingNotify // ignore: cast_nullable_to_non_nullable
               as bool,
-      locale: locale == freezed
+      locale: null == locale
           ? _value.locale
           : locale // ignore: cast_nullable_to_non_nullable
               as AppLocaleType,
-      trackingErrorNotify: trackingErrorNotify == freezed
+      trackingErrorNotify: null == trackingErrorNotify
           ? _value.trackingErrorNotify
           : trackingErrorNotify // ignore: cast_nullable_to_non_nullable
               as bool,
-      trayIcon: trayIcon == freezed
+      trayIcon: null == trayIcon
           ? _value.trayIcon
           : trayIcon // ignore: cast_nullable_to_non_nullable
               as bool,
@@ -1418,8 +1361,8 @@ class __$AppearanceInfoCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_AppearanceInfo implements _AppearanceInfo {
-  const _$_AppearanceInfo(
+class _$AppearanceInfoImpl implements _AppearanceInfo {
+  const _$AppearanceInfoImpl(
       {required this.theme,
       required this.trackingNotify,
       required this.locale,
@@ -1443,59 +1386,52 @@ class _$_AppearanceInfo implements _AppearanceInfo {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is _AppearanceInfo &&
-            (identical(other.theme, theme) ||
-                const DeepCollectionEquality().equals(other.theme, theme)) &&
+        (other.runtimeType == runtimeType &&
+            other is _$AppearanceInfoImpl &&
+            (identical(other.theme, theme) || other.theme == theme) &&
             (identical(other.trackingNotify, trackingNotify) ||
-                const DeepCollectionEquality()
-                    .equals(other.trackingNotify, trackingNotify)) &&
-            (identical(other.locale, locale) ||
-                const DeepCollectionEquality().equals(other.locale, locale)) &&
+                other.trackingNotify == trackingNotify) &&
+            (identical(other.locale, locale) || other.locale == locale) &&
             (identical(other.trackingErrorNotify, trackingErrorNotify) ||
-                const DeepCollectionEquality()
-                    .equals(other.trackingErrorNotify, trackingErrorNotify)) &&
+                other.trackingErrorNotify == trackingErrorNotify) &&
             (identical(other.trayIcon, trayIcon) ||
-                const DeepCollectionEquality()
-                    .equals(other.trayIcon, trayIcon)));
+                other.trayIcon == trayIcon));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(theme) ^
-      const DeepCollectionEquality().hash(trackingNotify) ^
-      const DeepCollectionEquality().hash(locale) ^
-      const DeepCollectionEquality().hash(trackingErrorNotify) ^
-      const DeepCollectionEquality().hash(trayIcon);
+  int get hashCode => Object.hash(runtimeType, theme, trackingNotify, locale,
+      trackingErrorNotify, trayIcon);
 
   @JsonKey(ignore: true)
   @override
-  _$AppearanceInfoCopyWith<_AppearanceInfo> get copyWith =>
-      __$AppearanceInfoCopyWithImpl<_AppearanceInfo>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$AppearanceInfoImplCopyWith<_$AppearanceInfoImpl> get copyWith =>
+      __$$AppearanceInfoImplCopyWithImpl<_$AppearanceInfoImpl>(
+          this, _$identity);
 }
 
 abstract class _AppearanceInfo implements AppearanceInfo {
   const factory _AppearanceInfo(
-      {required AppThemeType theme,
-      required bool trackingNotify,
-      required AppLocaleType locale,
-      required bool trackingErrorNotify,
-      required bool trayIcon}) = _$_AppearanceInfo;
+      {required final AppThemeType theme,
+      required final bool trackingNotify,
+      required final AppLocaleType locale,
+      required final bool trackingErrorNotify,
+      required final bool trayIcon}) = _$AppearanceInfoImpl;
 
   @override
-  AppThemeType get theme => throw _privateConstructorUsedError;
+  AppThemeType get theme;
   @override
-  bool get trackingNotify => throw _privateConstructorUsedError;
+  bool get trackingNotify;
   @override
-  AppLocaleType get locale => throw _privateConstructorUsedError;
+  AppLocaleType get locale;
   @override
-  bool get trackingErrorNotify => throw _privateConstructorUsedError;
+  bool get trackingErrorNotify;
   @override
-  bool get trayIcon => throw _privateConstructorUsedError;
+  bool get trayIcon;
   @override
   @JsonKey(ignore: true)
-  _$AppearanceInfoCopyWith<_AppearanceInfo> get copyWith =>
+  _$$AppearanceInfoImplCopyWith<_$AppearanceInfoImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

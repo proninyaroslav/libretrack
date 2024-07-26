@@ -30,11 +30,11 @@ class CrashReportDialog extends StatefulWidget {
   final OnReportCallback? onReport;
 
   const CrashReportDialog({
-    Key? key,
+    super.key,
     required this.error,
     this.stackTrace,
     this.onReport,
-  }) : super(key: key);
+  });
 
   @override
   _CrashReportDialogState createState() => _CrashReportDialogState();
@@ -107,11 +107,10 @@ class _Body extends StatelessWidget {
   final StackTrace? stackTrace;
 
   const _Body({
-    Key? key,
     required this.controller,
     required this.error,
     this.stackTrace,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -137,7 +136,7 @@ class _Body extends StatelessWidget {
               ].join('\n'),
               style: Theme.of(context)
                   .textTheme
-                  .bodyText2!
+                  .bodyMedium!
                   .copyWith(fontFamily: 'RobotoMono'),
             ),
           ],

@@ -22,12 +22,11 @@ import 'dart:convert';
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:image/image.dart' as image;
 import 'package:injectable/injectable.dart';
-import 'package:libretrack/core/crash_report/model.dart';
 import 'package:libretrack/ui/theme.dart';
 import 'package:libretrack/ui/utils/utils.dart';
 import 'package:quiver/core.dart';
-import 'package:image/image.dart' as image;
 
 import '../locale.dart';
 import 'crash_report/crash_report_manager.dart';
@@ -40,6 +39,8 @@ part 'notification_manager.g.dart';
 
 abstract class NotificationManager {
   Future<void> init();
+
+  Future<void> requestPermissions();
 
   Future<NotificationAction?> getAppLaunchDetails();
 
@@ -110,11 +111,11 @@ class NotificationManagerImpl implements NotificationManager {
       'ic_app_notification',
     );
 
-    const initSettingsIOS = IOSInitializationSettings();
+    const initSettingsIOS = DarwinInitializationSettings();
 
     final assetIcon = await rootBundle.load('assets/notify_icon.png');
     final iconData = image.decodePng(
-      assetIcon.buffer.asUint8List().toList(),
+      assetIcon.buffer.asUint8List(),
     );
     final iconBytes = iconData!.getBytes();
 
@@ -140,8 +141,8 @@ class NotificationManagerImpl implements NotificationManager {
 
     await _notifyPlugin.initialize(
       initSettings,
-      onSelectNotification: (payload) async {
-        final action = _parsePayload(payload);
+      onDidReceiveNotificationResponse: (response) async {
+        final action = _parsePayload(response.payload);
         if (action != null) {
           _onNotifySelected.add(action);
         }
@@ -150,12 +151,22 @@ class NotificationManagerImpl implements NotificationManager {
   }
 
   @override
+  Future<void> requestPermissions() async {
+    if (_platformInfo.isAndroid) {
+      _notifyPlugin
+          .resolvePlatformSpecificImplementation<
+              AndroidFlutterLocalNotificationsPlugin>()
+          ?.requestNotificationsPermission();
+    }
+  }
+
+  @override
   Future<NotificationAction?> getAppLaunchDetails() async {
     final details = await _notifyPlugin.getNotificationAppLaunchDetails();
     if (details == null || !details.didNotificationLaunchApp) {
       return null;
     } else {
-      return _parsePayload(details.payload);
+      return _parsePayload(details.notificationResponse?.payload);
     }
   }
 
@@ -182,7 +193,7 @@ class NotificationManagerImpl implements NotificationManager {
         final androidDetails = AndroidNotificationDetails(
           parcelActivityChannel.id,
           parcelActivityChannel.name,
-          parcelActivityChannel.description,
+          channelDescription: parcelActivityChannel.description,
           enableLights: true,
           ledColor: _ledColor,
           ledOnMs: _ledOnMs,
@@ -198,7 +209,7 @@ class NotificationManagerImpl implements NotificationManager {
           ),
           playSound: true,
         );
-        final iosDetails = IOSNotificationDetails(
+        final iosDetails = DarwinNotificationDetails(
           subtitle: e.subtitle,
           badgeNumber: contentList.length,
           presentBadge: true,
@@ -228,7 +239,7 @@ class NotificationManagerImpl implements NotificationManager {
       final androidInboxDetails = AndroidNotificationDetails(
         parcelActivityChannel.id,
         parcelActivityChannel.name,
-        parcelActivityChannel.description,
+        channelDescription: parcelActivityChannel.description,
         enableLights: true,
         ledColor: _ledColor,
         ledOnMs: _ledOnMs,
@@ -342,7 +353,7 @@ class NotificationManagerImpl implements NotificationManager {
         final androidDetails = AndroidNotificationDetails(
           trackingErrorChannel.id,
           trackingErrorChannel.name,
-          trackingErrorChannel.description,
+          channelDescription: trackingErrorChannel.description,
           groupKey: groupKey,
           ticker: ticker,
           styleInformation: BigTextStyleInformation(
@@ -351,7 +362,7 @@ class NotificationManagerImpl implements NotificationManager {
           ),
           playSound: true,
         );
-        final iosDetails = IOSNotificationDetails(
+        final iosDetails = DarwinNotificationDetails(
           subtitle: e.subtitle,
           threadIdentifier: groupKey,
           presentSound: true,
@@ -379,7 +390,7 @@ class NotificationManagerImpl implements NotificationManager {
       final androidInboxDetails = AndroidNotificationDetails(
         trackingErrorChannel.id,
         trackingErrorChannel.name,
-        trackingErrorChannel.description,
+        channelDescription: trackingErrorChannel.description,
         groupKey: groupKey,
         setAsGroupSummary: true,
         ticker: ticker,
@@ -459,12 +470,12 @@ class NotificationManagerImpl implements NotificationManager {
     final androidDetails = AndroidNotificationDetails(
       trackingErrorChannel.id,
       trackingErrorChannel.name,
-      trackingErrorChannel.description,
+      channelDescription: trackingErrorChannel.description,
       ticker: title,
       playSound: false,
       styleInformation: InboxStyleInformation(body),
     );
-    const iosDetails = IOSNotificationDetails(
+    const iosDetails = DarwinNotificationDetails(
       presentSound: false,
     );
     const linuxDetails = LinuxNotificationDetails(
@@ -488,7 +499,7 @@ class NotificationManagerImpl implements NotificationManager {
     final androidDetails = AndroidNotificationDetails(
       defaultChannel.id,
       defaultChannel.name,
-      defaultChannel.description,
+      channelDescription: defaultChannel.description,
       ticker: title,
       styleInformation: BigTextStyleInformation(body),
     );
@@ -523,7 +534,7 @@ class NotificationManagerImpl implements NotificationManager {
     final androidDetails = AndroidNotificationDetails(
       defaultChannel.id,
       defaultChannel.name,
-      defaultChannel.description,
+      channelDescription: defaultChannel.description,
       ticker: title,
       styleInformation: BigTextStyleInformation(body),
     );

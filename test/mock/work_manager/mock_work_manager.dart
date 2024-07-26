@@ -19,7 +19,6 @@
 import 'package:libretrack/core/work_manager/fallback_work_manager.dart';
 import 'package:libretrack/core/work_manager/registered_workers.dart';
 import 'package:libretrack/core/work_manager/work_manager.dart';
-import 'package:libretrack/core/work_manager/worker.dart';
 import 'package:mocktail/mocktail.dart';
 
 class MockConstraintsManager with Mock implements ConstraintsManager {}

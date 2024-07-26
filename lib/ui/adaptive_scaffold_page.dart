@@ -29,10 +29,10 @@ class AdaptiveScaffoldPage<T> extends Page<T> {
     this.maintainState = true,
     this.barrierDismissible = true,
     this.barrierColor = Colors.black54,
-    LocalKey? key,
-    String? name,
-    Object? arguments,
-  }) : super(key: key, name: name, arguments: arguments);
+    super.key,
+    super.name,
+    super.arguments,
+  });
 
   @override
   Route<T> createRoute(BuildContext context) {

@@ -7,7 +7,7 @@
 // ignore_for_file:unnecessary_brace_in_string_interps, unnecessary_new
 // ignore_for_file:prefer_single_quotes,comment_references, directives_ordering
 // ignore_for_file:annotate_overrides,prefer_generic_function_type_aliases
-// ignore_for_file:unused_import, file_names, avoid_escaping_inner_quotes
+// ignore_for_file:unused_import, file_names
 
 import 'package:intl/intl.dart';
 import 'package:intl/message_lookup_by_library.dart';
@@ -19,74 +19,74 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'en_US';
 
-  static String m0(value) => "${value} bbl";
+  static m0(value) => "${value} bbl";
 
-  static String m1(email, pageUrl) =>
+  static m1(email, pageUrl) =>
       "No email app found. You can manually copy the error and send it to ${email}\nor send on the project page ${pageUrl}";
 
-  static String m2(howMany) =>
+  static m2(howMany) =>
       "${Intl.plural(howMany, one: 'Are you sure to delete the selected package?', other: 'Are you sure to delete the selected packages?')}";
 
-  static String m3(howMany) =>
+  static m3(howMany) =>
       "${Intl.plural(howMany, one: 'Failed to delete package', other: 'Failed to delete packages')}";
 
-  static String m4(value) => "${value} gal";
+  static m4(value) => "${value} gal";
 
-  static String m5(error) => "Failed to generate barcode: ${error}";
+  static m5(error) => "Failed to generate barcode: ${error}";
 
-  static String m6(value) => "${value} h.";
+  static m6(value) => "${value} h.";
 
-  static String m7(value) => "${value} kg";
+  static m7(value) => "${value} kg";
 
-  static String m8(date) => "Last tracking: ${date}";
+  static m8(date) => "Last tracking: ${date}";
 
-  static String m9(value) => "${value} L";
+  static m9(value) => "${value} L";
 
-  static String m10(howMany) =>
+  static m10(howMany) =>
       "${Intl.plural(howMany, one: 'Failed to mark package as read', other: 'Failed to mark packages as read')}";
 
-  static String m11(value) => "${value} min.";
+  static m11(value) => "${value} min.";
 
-  static String m12(howMany) =>
+  static m12(howMany) =>
       "${Intl.plural(howMany, one: 'Failed to move package', other: 'Failed to move packages')}";
 
-  static String m13(value) => "${value} oz";
+  static m13(value) => "${value} oz";
 
-  static String m14(date) => "Package delivered on ${date}";
+  static m14(date) => "Package delivered on ${date}";
 
-  static String m15(days) =>
+  static m15(days) =>
       "${Intl.plural(days, zero: 'Package in transit ${days} days', one: 'Package in transit ${days} day', few: 'Package in transit ${days} days', many: 'Package in transit ${days} days', other: 'Package in transit ${days} days')}";
 
-  static String m16(name) => "Signed by: ${name}";
+  static m16(name) => "Signed by: ${name}";
 
-  static String m17(time) =>
+  static m17(time) =>
       "Tracking is not available, because a little time has passed since the last tracking. Please try again after ${time}";
 
-  static String m18(parcelName) => "• ${parcelName}";
+  static m18(parcelName) => "• ${parcelName}";
 
-  static String m19(title, body) => "${title}: ${body}";
+  static m19(title, body) => "${title}: ${body}";
 
-  static String m20(value) => "${value} lb";
+  static m20(value) => "${value} lb";
 
-  static String m21(howMany) =>
+  static m21(howMany) =>
       "${Intl.plural(howMany, one: 'Failed to refresh package', other: 'Failed to refresh packages')}";
 
-  static String m22(value) => "${value} sec.";
+  static m22(value) => "${value} sec.";
 
-  static String m23(count) => "Selected: ${count}";
+  static m23(count) => "Selected: ${count}";
 
-  static String m24(time) => "No more than once every ${time}";
+  static m24(time) => "No more than once every ${time}";
 
-  static String m25(value) => "${value} ft²";
+  static m25(value) => "${value} ft²";
 
-  static String m26(value) => "${value} m²";
+  static m26(value) => "${value} m²";
 
-  static String m27(value) => "${value} yd²";
+  static m27(value) => "${value} yd²";
 
-  static String m28(date) => "Tracking started: ${date}";
+  static m28(date) => "Tracking started: ${date}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
-  static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+  static _notInlinedMessages(_) => <String, Function>{
         "aboutApp": MessageLookupByLibrary.simpleMessage("About"),
         "accessKey": MessageLookupByLibrary.simpleMessage("Access Key"),
         "accounts": MessageLookupByLibrary.simpleMessage("Accounts"),

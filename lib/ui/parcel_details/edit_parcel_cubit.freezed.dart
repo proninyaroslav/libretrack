@@ -1,6 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'edit_parcel_cubit.dart';
 
@@ -11,48 +12,7 @@ part of 'edit_parcel_cubit.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$EditParcelStateTearOff {
-  const _$EditParcelStateTearOff();
-
-  EditParcelStateInitial initial({ParcelName name = const ParcelName()}) {
-    return EditParcelStateInitial(
-      name: name,
-    );
-  }
-
-  EditParcelStateFieldChanged fieldChanged({required ParcelName name}) {
-    return EditParcelStateFieldChanged(
-      name: name,
-    );
-  }
-
-  EditParcelStateEditing editing() {
-    return const EditParcelStateEditing();
-  }
-
-  EditParcelStateEdited edited({required ParcelName name}) {
-    return EditParcelStateEdited(
-      name: name,
-    );
-  }
-
-  EditParcelStateEditFailed editFailed(
-      {required ParcelName name,
-      Exception? exception,
-      StackTrace? stackTrace}) {
-    return EditParcelStateEditFailed(
-      name: name,
-      exception: exception,
-      stackTrace: stackTrace,
-    );
-  }
-}
-
-/// @nodoc
-const $EditParcelState = _$EditParcelStateTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$EditParcelState {
@@ -69,11 +29,11 @@ mixin _$EditParcelState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(ParcelName name)? initial,
-    TResult Function(ParcelName name)? fieldChanged,
-    TResult Function()? editing,
-    TResult Function(ParcelName name)? edited,
-    TResult Function(
+    TResult? Function(ParcelName name)? initial,
+    TResult? Function(ParcelName name)? fieldChanged,
+    TResult? Function()? editing,
+    TResult? Function(ParcelName name)? edited,
+    TResult? Function(
             ParcelName name, Exception? exception, StackTrace? stackTrace)?
         editFailed,
   }) =>
@@ -101,11 +61,11 @@ mixin _$EditParcelState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(EditParcelStateInitial value)? initial,
-    TResult Function(EditParcelStateFieldChanged value)? fieldChanged,
-    TResult Function(EditParcelStateEditing value)? editing,
-    TResult Function(EditParcelStateEdited value)? edited,
-    TResult Function(EditParcelStateEditFailed value)? editFailed,
+    TResult? Function(EditParcelStateInitial value)? initial,
+    TResult? Function(EditParcelStateFieldChanged value)? fieldChanged,
+    TResult? Function(EditParcelStateEditing value)? editing,
+    TResult? Function(EditParcelStateEdited value)? edited,
+    TResult? Function(EditParcelStateEditFailed value)? editFailed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -124,46 +84,48 @@ mixin _$EditParcelState {
 abstract class $EditParcelStateCopyWith<$Res> {
   factory $EditParcelStateCopyWith(
           EditParcelState value, $Res Function(EditParcelState) then) =
-      _$EditParcelStateCopyWithImpl<$Res>;
+      _$EditParcelStateCopyWithImpl<$Res, EditParcelState>;
 }
 
 /// @nodoc
-class _$EditParcelStateCopyWithImpl<$Res>
+class _$EditParcelStateCopyWithImpl<$Res, $Val extends EditParcelState>
     implements $EditParcelStateCopyWith<$Res> {
   _$EditParcelStateCopyWithImpl(this._value, this._then);
 
-  final EditParcelState _value;
   // ignore: unused_field
-  final $Res Function(EditParcelState) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 }
 
 /// @nodoc
-abstract class $EditParcelStateInitialCopyWith<$Res> {
-  factory $EditParcelStateInitialCopyWith(EditParcelStateInitial value,
-          $Res Function(EditParcelStateInitial) then) =
-      _$EditParcelStateInitialCopyWithImpl<$Res>;
+abstract class _$$EditParcelStateInitialImplCopyWith<$Res> {
+  factory _$$EditParcelStateInitialImplCopyWith(
+          _$EditParcelStateInitialImpl value,
+          $Res Function(_$EditParcelStateInitialImpl) then) =
+      __$$EditParcelStateInitialImplCopyWithImpl<$Res>;
+  @useResult
   $Res call({ParcelName name});
 
   $ParcelNameCopyWith<$Res> get name;
 }
 
 /// @nodoc
-class _$EditParcelStateInitialCopyWithImpl<$Res>
-    extends _$EditParcelStateCopyWithImpl<$Res>
-    implements $EditParcelStateInitialCopyWith<$Res> {
-  _$EditParcelStateInitialCopyWithImpl(EditParcelStateInitial _value,
-      $Res Function(EditParcelStateInitial) _then)
-      : super(_value, (v) => _then(v as EditParcelStateInitial));
+class __$$EditParcelStateInitialImplCopyWithImpl<$Res>
+    extends _$EditParcelStateCopyWithImpl<$Res, _$EditParcelStateInitialImpl>
+    implements _$$EditParcelStateInitialImplCopyWith<$Res> {
+  __$$EditParcelStateInitialImplCopyWithImpl(
+      _$EditParcelStateInitialImpl _value,
+      $Res Function(_$EditParcelStateInitialImpl) _then)
+      : super(_value, _then);
 
-  @override
-  EditParcelStateInitial get _value => super._value as EditParcelStateInitial;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? name = freezed,
+    Object? name = null,
   }) {
-    return _then(EditParcelStateInitial(
-      name: name == freezed
+    return _then(_$EditParcelStateInitialImpl(
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as ParcelName,
@@ -171,6 +133,7 @@ class _$EditParcelStateInitialCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ParcelNameCopyWith<$Res> get name {
     return $ParcelNameCopyWith<$Res>(_value.name, (value) {
       return _then(_value.copyWith(name: value));
@@ -180,13 +143,13 @@ class _$EditParcelStateInitialCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$EditParcelStateInitial
+class _$EditParcelStateInitialImpl
     with DiagnosticableTreeMixin
     implements EditParcelStateInitial {
-  const _$EditParcelStateInitial({this.name = const ParcelName()});
+  const _$EditParcelStateInitialImpl({this.name = const ParcelName()});
 
-  @JsonKey(defaultValue: const ParcelName())
   @override
+  @JsonKey()
   final ParcelName name;
 
   @override
@@ -203,22 +166,22 @@ class _$EditParcelStateInitial
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is EditParcelStateInitial &&
-            (identical(other.name, name) ||
-                const DeepCollectionEquality().equals(other.name, name)));
+        (other.runtimeType == runtimeType &&
+            other is _$EditParcelStateInitialImpl &&
+            (identical(other.name, name) || other.name == name));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(name);
+  int get hashCode => Object.hash(runtimeType, name);
 
   @JsonKey(ignore: true)
   @override
-  $EditParcelStateInitialCopyWith<EditParcelStateInitial> get copyWith =>
-      _$EditParcelStateInitialCopyWithImpl<EditParcelStateInitial>(
-          this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$EditParcelStateInitialImplCopyWith<_$EditParcelStateInitialImpl>
+      get copyWith => __$$EditParcelStateInitialImplCopyWithImpl<
+          _$EditParcelStateInitialImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -237,11 +200,11 @@ class _$EditParcelStateInitial
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(ParcelName name)? initial,
-    TResult Function(ParcelName name)? fieldChanged,
-    TResult Function()? editing,
-    TResult Function(ParcelName name)? edited,
-    TResult Function(
+    TResult? Function(ParcelName name)? initial,
+    TResult? Function(ParcelName name)? fieldChanged,
+    TResult? Function()? editing,
+    TResult? Function(ParcelName name)? edited,
+    TResult? Function(
             ParcelName name, Exception? exception, StackTrace? stackTrace)?
         editFailed,
   }) {
@@ -281,11 +244,11 @@ class _$EditParcelStateInitial
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(EditParcelStateInitial value)? initial,
-    TResult Function(EditParcelStateFieldChanged value)? fieldChanged,
-    TResult Function(EditParcelStateEditing value)? editing,
-    TResult Function(EditParcelStateEdited value)? edited,
-    TResult Function(EditParcelStateEditFailed value)? editFailed,
+    TResult? Function(EditParcelStateInitial value)? initial,
+    TResult? Function(EditParcelStateFieldChanged value)? fieldChanged,
+    TResult? Function(EditParcelStateEditing value)? editing,
+    TResult? Function(EditParcelStateEdited value)? edited,
+    TResult? Function(EditParcelStateEditFailed value)? editFailed,
   }) {
     return initial?.call(this);
   }
@@ -308,44 +271,44 @@ class _$EditParcelStateInitial
 }
 
 abstract class EditParcelStateInitial implements EditParcelState {
-  const factory EditParcelStateInitial({ParcelName name}) =
-      _$EditParcelStateInitial;
+  const factory EditParcelStateInitial({final ParcelName name}) =
+      _$EditParcelStateInitialImpl;
 
-  ParcelName get name => throw _privateConstructorUsedError;
+  ParcelName get name;
   @JsonKey(ignore: true)
-  $EditParcelStateInitialCopyWith<EditParcelStateInitial> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$EditParcelStateInitialImplCopyWith<_$EditParcelStateInitialImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $EditParcelStateFieldChangedCopyWith<$Res> {
-  factory $EditParcelStateFieldChangedCopyWith(
-          EditParcelStateFieldChanged value,
-          $Res Function(EditParcelStateFieldChanged) then) =
-      _$EditParcelStateFieldChangedCopyWithImpl<$Res>;
+abstract class _$$EditParcelStateFieldChangedImplCopyWith<$Res> {
+  factory _$$EditParcelStateFieldChangedImplCopyWith(
+          _$EditParcelStateFieldChangedImpl value,
+          $Res Function(_$EditParcelStateFieldChangedImpl) then) =
+      __$$EditParcelStateFieldChangedImplCopyWithImpl<$Res>;
+  @useResult
   $Res call({ParcelName name});
 
   $ParcelNameCopyWith<$Res> get name;
 }
 
 /// @nodoc
-class _$EditParcelStateFieldChangedCopyWithImpl<$Res>
-    extends _$EditParcelStateCopyWithImpl<$Res>
-    implements $EditParcelStateFieldChangedCopyWith<$Res> {
-  _$EditParcelStateFieldChangedCopyWithImpl(EditParcelStateFieldChanged _value,
-      $Res Function(EditParcelStateFieldChanged) _then)
-      : super(_value, (v) => _then(v as EditParcelStateFieldChanged));
+class __$$EditParcelStateFieldChangedImplCopyWithImpl<$Res>
+    extends _$EditParcelStateCopyWithImpl<$Res,
+        _$EditParcelStateFieldChangedImpl>
+    implements _$$EditParcelStateFieldChangedImplCopyWith<$Res> {
+  __$$EditParcelStateFieldChangedImplCopyWithImpl(
+      _$EditParcelStateFieldChangedImpl _value,
+      $Res Function(_$EditParcelStateFieldChangedImpl) _then)
+      : super(_value, _then);
 
-  @override
-  EditParcelStateFieldChanged get _value =>
-      super._value as EditParcelStateFieldChanged;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? name = freezed,
+    Object? name = null,
   }) {
-    return _then(EditParcelStateFieldChanged(
-      name: name == freezed
+    return _then(_$EditParcelStateFieldChangedImpl(
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as ParcelName,
@@ -353,6 +316,7 @@ class _$EditParcelStateFieldChangedCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ParcelNameCopyWith<$Res> get name {
     return $ParcelNameCopyWith<$Res>(_value.name, (value) {
       return _then(_value.copyWith(name: value));
@@ -362,10 +326,10 @@ class _$EditParcelStateFieldChangedCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$EditParcelStateFieldChanged
+class _$EditParcelStateFieldChangedImpl
     with DiagnosticableTreeMixin
     implements EditParcelStateFieldChanged {
-  const _$EditParcelStateFieldChanged({required this.name});
+  const _$EditParcelStateFieldChangedImpl({required this.name});
 
   @override
   final ParcelName name;
@@ -384,22 +348,22 @@ class _$EditParcelStateFieldChanged
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is EditParcelStateFieldChanged &&
-            (identical(other.name, name) ||
-                const DeepCollectionEquality().equals(other.name, name)));
+        (other.runtimeType == runtimeType &&
+            other is _$EditParcelStateFieldChangedImpl &&
+            (identical(other.name, name) || other.name == name));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(name);
+  int get hashCode => Object.hash(runtimeType, name);
 
   @JsonKey(ignore: true)
   @override
-  $EditParcelStateFieldChangedCopyWith<EditParcelStateFieldChanged>
-      get copyWith => _$EditParcelStateFieldChangedCopyWithImpl<
-          EditParcelStateFieldChanged>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$EditParcelStateFieldChangedImplCopyWith<_$EditParcelStateFieldChangedImpl>
+      get copyWith => __$$EditParcelStateFieldChangedImplCopyWithImpl<
+          _$EditParcelStateFieldChangedImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -418,11 +382,11 @@ class _$EditParcelStateFieldChanged
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(ParcelName name)? initial,
-    TResult Function(ParcelName name)? fieldChanged,
-    TResult Function()? editing,
-    TResult Function(ParcelName name)? edited,
-    TResult Function(
+    TResult? Function(ParcelName name)? initial,
+    TResult? Function(ParcelName name)? fieldChanged,
+    TResult? Function()? editing,
+    TResult? Function(ParcelName name)? edited,
+    TResult? Function(
             ParcelName name, Exception? exception, StackTrace? stackTrace)?
         editFailed,
   }) {
@@ -462,11 +426,11 @@ class _$EditParcelStateFieldChanged
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(EditParcelStateInitial value)? initial,
-    TResult Function(EditParcelStateFieldChanged value)? fieldChanged,
-    TResult Function(EditParcelStateEditing value)? editing,
-    TResult Function(EditParcelStateEdited value)? edited,
-    TResult Function(EditParcelStateEditFailed value)? editFailed,
+    TResult? Function(EditParcelStateInitial value)? initial,
+    TResult? Function(EditParcelStateFieldChanged value)? fieldChanged,
+    TResult? Function(EditParcelStateEditing value)? editing,
+    TResult? Function(EditParcelStateEdited value)? edited,
+    TResult? Function(EditParcelStateEditFailed value)? editFailed,
   }) {
     return fieldChanged?.call(this);
   }
@@ -489,40 +453,39 @@ class _$EditParcelStateFieldChanged
 }
 
 abstract class EditParcelStateFieldChanged implements EditParcelState {
-  const factory EditParcelStateFieldChanged({required ParcelName name}) =
-      _$EditParcelStateFieldChanged;
+  const factory EditParcelStateFieldChanged({required final ParcelName name}) =
+      _$EditParcelStateFieldChangedImpl;
 
-  ParcelName get name => throw _privateConstructorUsedError;
+  ParcelName get name;
   @JsonKey(ignore: true)
-  $EditParcelStateFieldChangedCopyWith<EditParcelStateFieldChanged>
+  _$$EditParcelStateFieldChangedImplCopyWith<_$EditParcelStateFieldChangedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $EditParcelStateEditingCopyWith<$Res> {
-  factory $EditParcelStateEditingCopyWith(EditParcelStateEditing value,
-          $Res Function(EditParcelStateEditing) then) =
-      _$EditParcelStateEditingCopyWithImpl<$Res>;
+abstract class _$$EditParcelStateEditingImplCopyWith<$Res> {
+  factory _$$EditParcelStateEditingImplCopyWith(
+          _$EditParcelStateEditingImpl value,
+          $Res Function(_$EditParcelStateEditingImpl) then) =
+      __$$EditParcelStateEditingImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$EditParcelStateEditingCopyWithImpl<$Res>
-    extends _$EditParcelStateCopyWithImpl<$Res>
-    implements $EditParcelStateEditingCopyWith<$Res> {
-  _$EditParcelStateEditingCopyWithImpl(EditParcelStateEditing _value,
-      $Res Function(EditParcelStateEditing) _then)
-      : super(_value, (v) => _then(v as EditParcelStateEditing));
-
-  @override
-  EditParcelStateEditing get _value => super._value as EditParcelStateEditing;
+class __$$EditParcelStateEditingImplCopyWithImpl<$Res>
+    extends _$EditParcelStateCopyWithImpl<$Res, _$EditParcelStateEditingImpl>
+    implements _$$EditParcelStateEditingImplCopyWith<$Res> {
+  __$$EditParcelStateEditingImplCopyWithImpl(
+      _$EditParcelStateEditingImpl _value,
+      $Res Function(_$EditParcelStateEditingImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$EditParcelStateEditing
+class _$EditParcelStateEditingImpl
     with DiagnosticableTreeMixin
     implements EditParcelStateEditing {
-  const _$EditParcelStateEditing();
+  const _$EditParcelStateEditingImpl();
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
@@ -532,12 +495,14 @@ class _$EditParcelStateEditing
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
-    properties..add(DiagnosticsProperty('type', 'EditParcelState.editing'));
+    properties.add(DiagnosticsProperty('type', 'EditParcelState.editing'));
   }
 
   @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) || (other is EditParcelStateEditing);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$EditParcelStateEditingImpl);
   }
 
   @override
@@ -560,11 +525,11 @@ class _$EditParcelStateEditing
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(ParcelName name)? initial,
-    TResult Function(ParcelName name)? fieldChanged,
-    TResult Function()? editing,
-    TResult Function(ParcelName name)? edited,
-    TResult Function(
+    TResult? Function(ParcelName name)? initial,
+    TResult? Function(ParcelName name)? fieldChanged,
+    TResult? Function()? editing,
+    TResult? Function(ParcelName name)? edited,
+    TResult? Function(
             ParcelName name, Exception? exception, StackTrace? stackTrace)?
         editFailed,
   }) {
@@ -604,11 +569,11 @@ class _$EditParcelStateEditing
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(EditParcelStateInitial value)? initial,
-    TResult Function(EditParcelStateFieldChanged value)? fieldChanged,
-    TResult Function(EditParcelStateEditing value)? editing,
-    TResult Function(EditParcelStateEdited value)? edited,
-    TResult Function(EditParcelStateEditFailed value)? editFailed,
+    TResult? Function(EditParcelStateInitial value)? initial,
+    TResult? Function(EditParcelStateFieldChanged value)? fieldChanged,
+    TResult? Function(EditParcelStateEditing value)? editing,
+    TResult? Function(EditParcelStateEdited value)? edited,
+    TResult? Function(EditParcelStateEditFailed value)? editFailed,
   }) {
     return editing?.call(this);
   }
@@ -631,36 +596,36 @@ class _$EditParcelStateEditing
 }
 
 abstract class EditParcelStateEditing implements EditParcelState {
-  const factory EditParcelStateEditing() = _$EditParcelStateEditing;
+  const factory EditParcelStateEditing() = _$EditParcelStateEditingImpl;
 }
 
 /// @nodoc
-abstract class $EditParcelStateEditedCopyWith<$Res> {
-  factory $EditParcelStateEditedCopyWith(EditParcelStateEdited value,
-          $Res Function(EditParcelStateEdited) then) =
-      _$EditParcelStateEditedCopyWithImpl<$Res>;
+abstract class _$$EditParcelStateEditedImplCopyWith<$Res> {
+  factory _$$EditParcelStateEditedImplCopyWith(
+          _$EditParcelStateEditedImpl value,
+          $Res Function(_$EditParcelStateEditedImpl) then) =
+      __$$EditParcelStateEditedImplCopyWithImpl<$Res>;
+  @useResult
   $Res call({ParcelName name});
 
   $ParcelNameCopyWith<$Res> get name;
 }
 
 /// @nodoc
-class _$EditParcelStateEditedCopyWithImpl<$Res>
-    extends _$EditParcelStateCopyWithImpl<$Res>
-    implements $EditParcelStateEditedCopyWith<$Res> {
-  _$EditParcelStateEditedCopyWithImpl(
-      EditParcelStateEdited _value, $Res Function(EditParcelStateEdited) _then)
-      : super(_value, (v) => _then(v as EditParcelStateEdited));
+class __$$EditParcelStateEditedImplCopyWithImpl<$Res>
+    extends _$EditParcelStateCopyWithImpl<$Res, _$EditParcelStateEditedImpl>
+    implements _$$EditParcelStateEditedImplCopyWith<$Res> {
+  __$$EditParcelStateEditedImplCopyWithImpl(_$EditParcelStateEditedImpl _value,
+      $Res Function(_$EditParcelStateEditedImpl) _then)
+      : super(_value, _then);
 
-  @override
-  EditParcelStateEdited get _value => super._value as EditParcelStateEdited;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? name = freezed,
+    Object? name = null,
   }) {
-    return _then(EditParcelStateEdited(
-      name: name == freezed
+    return _then(_$EditParcelStateEditedImpl(
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as ParcelName,
@@ -668,6 +633,7 @@ class _$EditParcelStateEditedCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ParcelNameCopyWith<$Res> get name {
     return $ParcelNameCopyWith<$Res>(_value.name, (value) {
       return _then(_value.copyWith(name: value));
@@ -677,10 +643,10 @@ class _$EditParcelStateEditedCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$EditParcelStateEdited
+class _$EditParcelStateEditedImpl
     with DiagnosticableTreeMixin
     implements EditParcelStateEdited {
-  const _$EditParcelStateEdited({required this.name});
+  const _$EditParcelStateEditedImpl({required this.name});
 
   @override
   final ParcelName name;
@@ -699,22 +665,22 @@ class _$EditParcelStateEdited
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is EditParcelStateEdited &&
-            (identical(other.name, name) ||
-                const DeepCollectionEquality().equals(other.name, name)));
+        (other.runtimeType == runtimeType &&
+            other is _$EditParcelStateEditedImpl &&
+            (identical(other.name, name) || other.name == name));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(name);
+  int get hashCode => Object.hash(runtimeType, name);
 
   @JsonKey(ignore: true)
   @override
-  $EditParcelStateEditedCopyWith<EditParcelStateEdited> get copyWith =>
-      _$EditParcelStateEditedCopyWithImpl<EditParcelStateEdited>(
-          this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$EditParcelStateEditedImplCopyWith<_$EditParcelStateEditedImpl>
+      get copyWith => __$$EditParcelStateEditedImplCopyWithImpl<
+          _$EditParcelStateEditedImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -733,11 +699,11 @@ class _$EditParcelStateEdited
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(ParcelName name)? initial,
-    TResult Function(ParcelName name)? fieldChanged,
-    TResult Function()? editing,
-    TResult Function(ParcelName name)? edited,
-    TResult Function(
+    TResult? Function(ParcelName name)? initial,
+    TResult? Function(ParcelName name)? fieldChanged,
+    TResult? Function()? editing,
+    TResult? Function(ParcelName name)? edited,
+    TResult? Function(
             ParcelName name, Exception? exception, StackTrace? stackTrace)?
         editFailed,
   }) {
@@ -777,11 +743,11 @@ class _$EditParcelStateEdited
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(EditParcelStateInitial value)? initial,
-    TResult Function(EditParcelStateFieldChanged value)? fieldChanged,
-    TResult Function(EditParcelStateEditing value)? editing,
-    TResult Function(EditParcelStateEdited value)? edited,
-    TResult Function(EditParcelStateEditFailed value)? editFailed,
+    TResult? Function(EditParcelStateInitial value)? initial,
+    TResult? Function(EditParcelStateFieldChanged value)? fieldChanged,
+    TResult? Function(EditParcelStateEditing value)? editing,
+    TResult? Function(EditParcelStateEdited value)? edited,
+    TResult? Function(EditParcelStateEditFailed value)? editFailed,
   }) {
     return edited?.call(this);
   }
@@ -804,53 +770,53 @@ class _$EditParcelStateEdited
 }
 
 abstract class EditParcelStateEdited implements EditParcelState {
-  const factory EditParcelStateEdited({required ParcelName name}) =
-      _$EditParcelStateEdited;
+  const factory EditParcelStateEdited({required final ParcelName name}) =
+      _$EditParcelStateEditedImpl;
 
-  ParcelName get name => throw _privateConstructorUsedError;
+  ParcelName get name;
   @JsonKey(ignore: true)
-  $EditParcelStateEditedCopyWith<EditParcelStateEdited> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$EditParcelStateEditedImplCopyWith<_$EditParcelStateEditedImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $EditParcelStateEditFailedCopyWith<$Res> {
-  factory $EditParcelStateEditFailedCopyWith(EditParcelStateEditFailed value,
-          $Res Function(EditParcelStateEditFailed) then) =
-      _$EditParcelStateEditFailedCopyWithImpl<$Res>;
+abstract class _$$EditParcelStateEditFailedImplCopyWith<$Res> {
+  factory _$$EditParcelStateEditFailedImplCopyWith(
+          _$EditParcelStateEditFailedImpl value,
+          $Res Function(_$EditParcelStateEditFailedImpl) then) =
+      __$$EditParcelStateEditFailedImplCopyWithImpl<$Res>;
+  @useResult
   $Res call({ParcelName name, Exception? exception, StackTrace? stackTrace});
 
   $ParcelNameCopyWith<$Res> get name;
 }
 
 /// @nodoc
-class _$EditParcelStateEditFailedCopyWithImpl<$Res>
-    extends _$EditParcelStateCopyWithImpl<$Res>
-    implements $EditParcelStateEditFailedCopyWith<$Res> {
-  _$EditParcelStateEditFailedCopyWithImpl(EditParcelStateEditFailed _value,
-      $Res Function(EditParcelStateEditFailed) _then)
-      : super(_value, (v) => _then(v as EditParcelStateEditFailed));
+class __$$EditParcelStateEditFailedImplCopyWithImpl<$Res>
+    extends _$EditParcelStateCopyWithImpl<$Res, _$EditParcelStateEditFailedImpl>
+    implements _$$EditParcelStateEditFailedImplCopyWith<$Res> {
+  __$$EditParcelStateEditFailedImplCopyWithImpl(
+      _$EditParcelStateEditFailedImpl _value,
+      $Res Function(_$EditParcelStateEditFailedImpl) _then)
+      : super(_value, _then);
 
-  @override
-  EditParcelStateEditFailed get _value =>
-      super._value as EditParcelStateEditFailed;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? name = freezed,
+    Object? name = null,
     Object? exception = freezed,
     Object? stackTrace = freezed,
   }) {
-    return _then(EditParcelStateEditFailed(
-      name: name == freezed
+    return _then(_$EditParcelStateEditFailedImpl(
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as ParcelName,
-      exception: exception == freezed
+      exception: freezed == exception
           ? _value.exception
           : exception // ignore: cast_nullable_to_non_nullable
               as Exception?,
-      stackTrace: stackTrace == freezed
+      stackTrace: freezed == stackTrace
           ? _value.stackTrace
           : stackTrace // ignore: cast_nullable_to_non_nullable
               as StackTrace?,
@@ -858,6 +824,7 @@ class _$EditParcelStateEditFailedCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ParcelNameCopyWith<$Res> get name {
     return $ParcelNameCopyWith<$Res>(_value.name, (value) {
       return _then(_value.copyWith(name: value));
@@ -867,10 +834,10 @@ class _$EditParcelStateEditFailedCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$EditParcelStateEditFailed
+class _$EditParcelStateEditFailedImpl
     with DiagnosticableTreeMixin
     implements EditParcelStateEditFailed {
-  const _$EditParcelStateEditFailed(
+  const _$EditParcelStateEditFailedImpl(
       {required this.name, this.exception, this.stackTrace});
 
   @override
@@ -896,31 +863,26 @@ class _$EditParcelStateEditFailed
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is EditParcelStateEditFailed &&
-            (identical(other.name, name) ||
-                const DeepCollectionEquality().equals(other.name, name)) &&
+        (other.runtimeType == runtimeType &&
+            other is _$EditParcelStateEditFailedImpl &&
+            (identical(other.name, name) || other.name == name) &&
             (identical(other.exception, exception) ||
-                const DeepCollectionEquality()
-                    .equals(other.exception, exception)) &&
+                other.exception == exception) &&
             (identical(other.stackTrace, stackTrace) ||
-                const DeepCollectionEquality()
-                    .equals(other.stackTrace, stackTrace)));
+                other.stackTrace == stackTrace));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(name) ^
-      const DeepCollectionEquality().hash(exception) ^
-      const DeepCollectionEquality().hash(stackTrace);
+  int get hashCode => Object.hash(runtimeType, name, exception, stackTrace);
 
   @JsonKey(ignore: true)
   @override
-  $EditParcelStateEditFailedCopyWith<EditParcelStateEditFailed> get copyWith =>
-      _$EditParcelStateEditFailedCopyWithImpl<EditParcelStateEditFailed>(
-          this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$EditParcelStateEditFailedImplCopyWith<_$EditParcelStateEditFailedImpl>
+      get copyWith => __$$EditParcelStateEditFailedImplCopyWithImpl<
+          _$EditParcelStateEditFailedImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -939,11 +901,11 @@ class _$EditParcelStateEditFailed
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(ParcelName name)? initial,
-    TResult Function(ParcelName name)? fieldChanged,
-    TResult Function()? editing,
-    TResult Function(ParcelName name)? edited,
-    TResult Function(
+    TResult? Function(ParcelName name)? initial,
+    TResult? Function(ParcelName name)? fieldChanged,
+    TResult? Function()? editing,
+    TResult? Function(ParcelName name)? edited,
+    TResult? Function(
             ParcelName name, Exception? exception, StackTrace? stackTrace)?
         editFailed,
   }) {
@@ -983,11 +945,11 @@ class _$EditParcelStateEditFailed
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(EditParcelStateInitial value)? initial,
-    TResult Function(EditParcelStateFieldChanged value)? fieldChanged,
-    TResult Function(EditParcelStateEditing value)? editing,
-    TResult Function(EditParcelStateEdited value)? edited,
-    TResult Function(EditParcelStateEditFailed value)? editFailed,
+    TResult? Function(EditParcelStateInitial value)? initial,
+    TResult? Function(EditParcelStateFieldChanged value)? fieldChanged,
+    TResult? Function(EditParcelStateEditing value)? editing,
+    TResult? Function(EditParcelStateEdited value)? edited,
+    TResult? Function(EditParcelStateEditFailed value)? editFailed,
   }) {
     return editFailed?.call(this);
   }
@@ -1011,31 +973,17 @@ class _$EditParcelStateEditFailed
 
 abstract class EditParcelStateEditFailed implements EditParcelState {
   const factory EditParcelStateEditFailed(
-      {required ParcelName name,
-      Exception? exception,
-      StackTrace? stackTrace}) = _$EditParcelStateEditFailed;
+      {required final ParcelName name,
+      final Exception? exception,
+      final StackTrace? stackTrace}) = _$EditParcelStateEditFailedImpl;
 
-  ParcelName get name => throw _privateConstructorUsedError;
-  Exception? get exception => throw _privateConstructorUsedError;
-  StackTrace? get stackTrace => throw _privateConstructorUsedError;
+  ParcelName get name;
+  Exception? get exception;
+  StackTrace? get stackTrace;
   @JsonKey(ignore: true)
-  $EditParcelStateEditFailedCopyWith<EditParcelStateEditFailed> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$EditParcelStateEditFailedImplCopyWith<_$EditParcelStateEditFailedImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
-
-/// @nodoc
-class _$ParcelNameTearOff {
-  const _$ParcelNameTearOff();
-
-  _ParcelName call({String? value}) {
-    return _ParcelName(
-      value: value,
-    );
-  }
-}
-
-/// @nodoc
-const $ParcelName = _$ParcelNameTearOff();
 
 /// @nodoc
 mixin _$ParcelName {
@@ -1050,56 +998,61 @@ mixin _$ParcelName {
 abstract class $ParcelNameCopyWith<$Res> {
   factory $ParcelNameCopyWith(
           ParcelName value, $Res Function(ParcelName) then) =
-      _$ParcelNameCopyWithImpl<$Res>;
+      _$ParcelNameCopyWithImpl<$Res, ParcelName>;
+  @useResult
   $Res call({String? value});
 }
 
 /// @nodoc
-class _$ParcelNameCopyWithImpl<$Res> implements $ParcelNameCopyWith<$Res> {
+class _$ParcelNameCopyWithImpl<$Res, $Val extends ParcelName>
+    implements $ParcelNameCopyWith<$Res> {
   _$ParcelNameCopyWithImpl(this._value, this._then);
 
-  final ParcelName _value;
   // ignore: unused_field
-  final $Res Function(ParcelName) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? value = freezed,
   }) {
     return _then(_value.copyWith(
-      value: value == freezed
+      value: freezed == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
               as String?,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$ParcelNameCopyWith<$Res> implements $ParcelNameCopyWith<$Res> {
-  factory _$ParcelNameCopyWith(
-          _ParcelName value, $Res Function(_ParcelName) then) =
-      __$ParcelNameCopyWithImpl<$Res>;
+abstract class _$$ParcelNameImplCopyWith<$Res>
+    implements $ParcelNameCopyWith<$Res> {
+  factory _$$ParcelNameImplCopyWith(
+          _$ParcelNameImpl value, $Res Function(_$ParcelNameImpl) then) =
+      __$$ParcelNameImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({String? value});
 }
 
 /// @nodoc
-class __$ParcelNameCopyWithImpl<$Res> extends _$ParcelNameCopyWithImpl<$Res>
-    implements _$ParcelNameCopyWith<$Res> {
-  __$ParcelNameCopyWithImpl(
-      _ParcelName _value, $Res Function(_ParcelName) _then)
-      : super(_value, (v) => _then(v as _ParcelName));
+class __$$ParcelNameImplCopyWithImpl<$Res>
+    extends _$ParcelNameCopyWithImpl<$Res, _$ParcelNameImpl>
+    implements _$$ParcelNameImplCopyWith<$Res> {
+  __$$ParcelNameImplCopyWithImpl(
+      _$ParcelNameImpl _value, $Res Function(_$ParcelNameImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _ParcelName get _value => super._value as _ParcelName;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? value = freezed,
   }) {
-    return _then(_ParcelName(
-      value: value == freezed
+    return _then(_$ParcelNameImpl(
+      value: freezed == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -1109,8 +1062,8 @@ class __$ParcelNameCopyWithImpl<$Res> extends _$ParcelNameCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_ParcelName with DiagnosticableTreeMixin implements _ParcelName {
-  const _$_ParcelName({this.value});
+class _$ParcelNameImpl with DiagnosticableTreeMixin implements _ParcelName {
+  const _$ParcelNameImpl({this.value});
 
   @override
   final String? value;
@@ -1129,30 +1082,30 @@ class _$_ParcelName with DiagnosticableTreeMixin implements _ParcelName {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is _ParcelName &&
-            (identical(other.value, value) ||
-                const DeepCollectionEquality().equals(other.value, value)));
+        (other.runtimeType == runtimeType &&
+            other is _$ParcelNameImpl &&
+            (identical(other.value, value) || other.value == value));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(value);
+  int get hashCode => Object.hash(runtimeType, value);
 
   @JsonKey(ignore: true)
   @override
-  _$ParcelNameCopyWith<_ParcelName> get copyWith =>
-      __$ParcelNameCopyWithImpl<_ParcelName>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$ParcelNameImplCopyWith<_$ParcelNameImpl> get copyWith =>
+      __$$ParcelNameImplCopyWithImpl<_$ParcelNameImpl>(this, _$identity);
 }
 
 abstract class _ParcelName implements ParcelName {
-  const factory _ParcelName({String? value}) = _$_ParcelName;
+  const factory _ParcelName({final String? value}) = _$ParcelNameImpl;
 
   @override
-  String? get value => throw _privateConstructorUsedError;
+  String? get value;
   @override
   @JsonKey(ignore: true)
-  _$ParcelNameCopyWith<_ParcelName> get copyWith =>
+  _$$ParcelNameImplCopyWith<_$ParcelNameImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -1,6 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'storage_result.dart';
 
@@ -11,30 +12,11 @@ part of 'storage_result.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$StorageResultTearOff {
-  const _$StorageResultTearOff();
-
-  StorageResultValue<T> call<T>(T value) {
-    return StorageResultValue<T>(
-      value,
-    );
-  }
-
-  StorageResultError<T> error<T>(StorageError value) {
-    return StorageResultError<T>(
-      value,
-    );
-  }
-}
-
-/// @nodoc
-const $StorageResult = _$StorageResultTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$StorageResult<T> {
+  Object? get value => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>(
     TResult Function(T value) $default, {
@@ -43,8 +25,8 @@ mixin _$StorageResult<T> {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>(
-    TResult Function(T value)? $default, {
-    TResult Function(StorageError value)? error,
+    TResult? Function(T value)? $default, {
+    TResult? Function(StorageError value)? error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -62,8 +44,8 @@ mixin _$StorageResult<T> {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>(
-    TResult Function(StorageResultValue<T> value)? $default, {
-    TResult Function(StorageResultError<T> value)? error,
+    TResult? Function(StorageResultValue<T> value)? $default, {
+    TResult? Function(StorageResultError<T> value)? error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -79,44 +61,44 @@ mixin _$StorageResult<T> {
 abstract class $StorageResultCopyWith<T, $Res> {
   factory $StorageResultCopyWith(
           StorageResult<T> value, $Res Function(StorageResult<T>) then) =
-      _$StorageResultCopyWithImpl<T, $Res>;
+      _$StorageResultCopyWithImpl<T, $Res, StorageResult<T>>;
 }
 
 /// @nodoc
-class _$StorageResultCopyWithImpl<T, $Res>
+class _$StorageResultCopyWithImpl<T, $Res, $Val extends StorageResult<T>>
     implements $StorageResultCopyWith<T, $Res> {
   _$StorageResultCopyWithImpl(this._value, this._then);
 
-  final StorageResult<T> _value;
   // ignore: unused_field
-  final $Res Function(StorageResult<T>) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 }
 
 /// @nodoc
-abstract class $StorageResultValueCopyWith<T, $Res> {
-  factory $StorageResultValueCopyWith(StorageResultValue<T> value,
-          $Res Function(StorageResultValue<T>) then) =
-      _$StorageResultValueCopyWithImpl<T, $Res>;
+abstract class _$$StorageResultValueImplCopyWith<T, $Res> {
+  factory _$$StorageResultValueImplCopyWith(_$StorageResultValueImpl<T> value,
+          $Res Function(_$StorageResultValueImpl<T>) then) =
+      __$$StorageResultValueImplCopyWithImpl<T, $Res>;
+  @useResult
   $Res call({T value});
 }
 
 /// @nodoc
-class _$StorageResultValueCopyWithImpl<T, $Res>
-    extends _$StorageResultCopyWithImpl<T, $Res>
-    implements $StorageResultValueCopyWith<T, $Res> {
-  _$StorageResultValueCopyWithImpl(
-      StorageResultValue<T> _value, $Res Function(StorageResultValue<T>) _then)
-      : super(_value, (v) => _then(v as StorageResultValue<T>));
+class __$$StorageResultValueImplCopyWithImpl<T, $Res>
+    extends _$StorageResultCopyWithImpl<T, $Res, _$StorageResultValueImpl<T>>
+    implements _$$StorageResultValueImplCopyWith<T, $Res> {
+  __$$StorageResultValueImplCopyWithImpl(_$StorageResultValueImpl<T> _value,
+      $Res Function(_$StorageResultValueImpl<T>) _then)
+      : super(_value, _then);
 
-  @override
-  StorageResultValue<T> get _value => super._value as StorageResultValue<T>;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? value = freezed,
   }) {
-    return _then(StorageResultValue<T>(
-      value == freezed
+    return _then(_$StorageResultValueImpl<T>(
+      freezed == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
               as T,
@@ -126,8 +108,8 @@ class _$StorageResultValueCopyWithImpl<T, $Res>
 
 /// @nodoc
 
-class _$StorageResultValue<T> implements StorageResultValue<T> {
-  const _$StorageResultValue(this.value);
+class _$StorageResultValueImpl<T> implements StorageResultValue<T> {
+  const _$StorageResultValueImpl(this.value);
 
   @override
   final T value;
@@ -138,22 +120,23 @@ class _$StorageResultValue<T> implements StorageResultValue<T> {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is StorageResultValue<T> &&
-            (identical(other.value, value) ||
-                const DeepCollectionEquality().equals(other.value, value)));
+        (other.runtimeType == runtimeType &&
+            other is _$StorageResultValueImpl<T> &&
+            const DeepCollectionEquality().equals(other.value, value));
   }
 
   @override
   int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(value);
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(value));
 
   @JsonKey(ignore: true)
   @override
-  $StorageResultValueCopyWith<T, StorageResultValue<T>> get copyWith =>
-      _$StorageResultValueCopyWithImpl<T, StorageResultValue<T>>(
-          this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$StorageResultValueImplCopyWith<T, _$StorageResultValueImpl<T>>
+      get copyWith => __$$StorageResultValueImplCopyWithImpl<T,
+          _$StorageResultValueImpl<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -167,8 +150,8 @@ class _$StorageResultValue<T> implements StorageResultValue<T> {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>(
-    TResult Function(T value)? $default, {
-    TResult Function(StorageError value)? error,
+    TResult? Function(T value)? $default, {
+    TResult? Function(StorageError value)? error,
   }) {
     return $default?.call(value);
   }
@@ -198,8 +181,8 @@ class _$StorageResultValue<T> implements StorageResultValue<T> {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>(
-    TResult Function(StorageResultValue<T> value)? $default, {
-    TResult Function(StorageResultError<T> value)? error,
+    TResult? Function(StorageResultValue<T> value)? $default, {
+    TResult? Function(StorageResultError<T> value)? error,
   }) {
     return $default?.call(this);
   }
@@ -219,41 +202,41 @@ class _$StorageResultValue<T> implements StorageResultValue<T> {
 }
 
 abstract class StorageResultValue<T> implements StorageResult<T> {
-  const factory StorageResultValue(T value) = _$StorageResultValue<T>;
+  const factory StorageResultValue(final T value) = _$StorageResultValueImpl<T>;
 
-  T get value => throw _privateConstructorUsedError;
+  @override
+  T get value;
   @JsonKey(ignore: true)
-  $StorageResultValueCopyWith<T, StorageResultValue<T>> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$StorageResultValueImplCopyWith<T, _$StorageResultValueImpl<T>>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $StorageResultErrorCopyWith<T, $Res> {
-  factory $StorageResultErrorCopyWith(StorageResultError<T> value,
-          $Res Function(StorageResultError<T>) then) =
-      _$StorageResultErrorCopyWithImpl<T, $Res>;
+abstract class _$$StorageResultErrorImplCopyWith<T, $Res> {
+  factory _$$StorageResultErrorImplCopyWith(_$StorageResultErrorImpl<T> value,
+          $Res Function(_$StorageResultErrorImpl<T>) then) =
+      __$$StorageResultErrorImplCopyWithImpl<T, $Res>;
+  @useResult
   $Res call({StorageError value});
 
   $StorageErrorCopyWith<$Res> get value;
 }
 
 /// @nodoc
-class _$StorageResultErrorCopyWithImpl<T, $Res>
-    extends _$StorageResultCopyWithImpl<T, $Res>
-    implements $StorageResultErrorCopyWith<T, $Res> {
-  _$StorageResultErrorCopyWithImpl(
-      StorageResultError<T> _value, $Res Function(StorageResultError<T>) _then)
-      : super(_value, (v) => _then(v as StorageResultError<T>));
+class __$$StorageResultErrorImplCopyWithImpl<T, $Res>
+    extends _$StorageResultCopyWithImpl<T, $Res, _$StorageResultErrorImpl<T>>
+    implements _$$StorageResultErrorImplCopyWith<T, $Res> {
+  __$$StorageResultErrorImplCopyWithImpl(_$StorageResultErrorImpl<T> _value,
+      $Res Function(_$StorageResultErrorImpl<T>) _then)
+      : super(_value, _then);
 
-  @override
-  StorageResultError<T> get _value => super._value as StorageResultError<T>;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? value = freezed,
+    Object? value = null,
   }) {
-    return _then(StorageResultError<T>(
-      value == freezed
+    return _then(_$StorageResultErrorImpl<T>(
+      null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
               as StorageError,
@@ -261,6 +244,7 @@ class _$StorageResultErrorCopyWithImpl<T, $Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $StorageErrorCopyWith<$Res> get value {
     return $StorageErrorCopyWith<$Res>(_value.value, (value) {
       return _then(_value.copyWith(value: value));
@@ -270,8 +254,8 @@ class _$StorageResultErrorCopyWithImpl<T, $Res>
 
 /// @nodoc
 
-class _$StorageResultError<T> implements StorageResultError<T> {
-  const _$StorageResultError(this.value);
+class _$StorageResultErrorImpl<T> implements StorageResultError<T> {
+  const _$StorageResultErrorImpl(this.value);
 
   @override
   final StorageError value;
@@ -282,22 +266,22 @@ class _$StorageResultError<T> implements StorageResultError<T> {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is StorageResultError<T> &&
-            (identical(other.value, value) ||
-                const DeepCollectionEquality().equals(other.value, value)));
+        (other.runtimeType == runtimeType &&
+            other is _$StorageResultErrorImpl<T> &&
+            (identical(other.value, value) || other.value == value));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(value);
+  int get hashCode => Object.hash(runtimeType, value);
 
   @JsonKey(ignore: true)
   @override
-  $StorageResultErrorCopyWith<T, StorageResultError<T>> get copyWith =>
-      _$StorageResultErrorCopyWithImpl<T, StorageResultError<T>>(
-          this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$StorageResultErrorImplCopyWith<T, _$StorageResultErrorImpl<T>>
+      get copyWith => __$$StorageResultErrorImplCopyWithImpl<T,
+          _$StorageResultErrorImpl<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -311,8 +295,8 @@ class _$StorageResultError<T> implements StorageResultError<T> {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>(
-    TResult Function(T value)? $default, {
-    TResult Function(StorageError value)? error,
+    TResult? Function(T value)? $default, {
+    TResult? Function(StorageError value)? error,
   }) {
     return error?.call(value);
   }
@@ -342,8 +326,8 @@ class _$StorageResultError<T> implements StorageResultError<T> {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>(
-    TResult Function(StorageResultValue<T> value)? $default, {
-    TResult Function(StorageResultError<T> value)? error,
+    TResult? Function(StorageResultValue<T> value)? $default, {
+    TResult? Function(StorageResultError<T> value)? error,
   }) {
     return error?.call(this);
   }
@@ -363,36 +347,20 @@ class _$StorageResultError<T> implements StorageResultError<T> {
 }
 
 abstract class StorageResultError<T> implements StorageResult<T> {
-  const factory StorageResultError(StorageError value) =
-      _$StorageResultError<T>;
+  const factory StorageResultError(final StorageError value) =
+      _$StorageResultErrorImpl<T>;
 
-  StorageError get value => throw _privateConstructorUsedError;
+  @override
+  StorageError get value;
   @JsonKey(ignore: true)
-  $StorageResultErrorCopyWith<T, StorageResultError<T>> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$StorageResultErrorImplCopyWith<T, _$StorageResultErrorImpl<T>>
+      get copyWith => throw _privateConstructorUsedError;
 }
-
-/// @nodoc
-class _$StorageErrorTearOff {
-  const _$StorageErrorTearOff();
-
-  StorageErrorDatabase database(
-      {Exception? exception, StackTrace? stackTrace}) {
-    return StorageErrorDatabase(
-      exception: exception,
-      stackTrace: stackTrace,
-    );
-  }
-}
-
-/// @nodoc
-const $StorageError = _$StorageErrorTearOff();
 
 /// @nodoc
 mixin _$StorageError {
   Exception? get exception => throw _privateConstructorUsedError;
   StackTrace? get stackTrace => throw _privateConstructorUsedError;
-
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(Exception? exception, StackTrace? stackTrace)
@@ -401,7 +369,7 @@ mixin _$StorageError {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(Exception? exception, StackTrace? stackTrace)? database,
+    TResult? Function(Exception? exception, StackTrace? stackTrace)? database,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -417,7 +385,7 @@ mixin _$StorageError {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(StorageErrorDatabase value)? database,
+    TResult? Function(StorageErrorDatabase value)? database,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -436,68 +404,71 @@ mixin _$StorageError {
 abstract class $StorageErrorCopyWith<$Res> {
   factory $StorageErrorCopyWith(
           StorageError value, $Res Function(StorageError) then) =
-      _$StorageErrorCopyWithImpl<$Res>;
+      _$StorageErrorCopyWithImpl<$Res, StorageError>;
+  @useResult
   $Res call({Exception? exception, StackTrace? stackTrace});
 }
 
 /// @nodoc
-class _$StorageErrorCopyWithImpl<$Res> implements $StorageErrorCopyWith<$Res> {
+class _$StorageErrorCopyWithImpl<$Res, $Val extends StorageError>
+    implements $StorageErrorCopyWith<$Res> {
   _$StorageErrorCopyWithImpl(this._value, this._then);
 
-  final StorageError _value;
   // ignore: unused_field
-  final $Res Function(StorageError) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? exception = freezed,
     Object? stackTrace = freezed,
   }) {
     return _then(_value.copyWith(
-      exception: exception == freezed
+      exception: freezed == exception
           ? _value.exception
           : exception // ignore: cast_nullable_to_non_nullable
               as Exception?,
-      stackTrace: stackTrace == freezed
+      stackTrace: freezed == stackTrace
           ? _value.stackTrace
           : stackTrace // ignore: cast_nullable_to_non_nullable
               as StackTrace?,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class $StorageErrorDatabaseCopyWith<$Res>
+abstract class _$$StorageErrorDatabaseImplCopyWith<$Res>
     implements $StorageErrorCopyWith<$Res> {
-  factory $StorageErrorDatabaseCopyWith(StorageErrorDatabase value,
-          $Res Function(StorageErrorDatabase) then) =
-      _$StorageErrorDatabaseCopyWithImpl<$Res>;
+  factory _$$StorageErrorDatabaseImplCopyWith(_$StorageErrorDatabaseImpl value,
+          $Res Function(_$StorageErrorDatabaseImpl) then) =
+      __$$StorageErrorDatabaseImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({Exception? exception, StackTrace? stackTrace});
 }
 
 /// @nodoc
-class _$StorageErrorDatabaseCopyWithImpl<$Res>
-    extends _$StorageErrorCopyWithImpl<$Res>
-    implements $StorageErrorDatabaseCopyWith<$Res> {
-  _$StorageErrorDatabaseCopyWithImpl(
-      StorageErrorDatabase _value, $Res Function(StorageErrorDatabase) _then)
-      : super(_value, (v) => _then(v as StorageErrorDatabase));
+class __$$StorageErrorDatabaseImplCopyWithImpl<$Res>
+    extends _$StorageErrorCopyWithImpl<$Res, _$StorageErrorDatabaseImpl>
+    implements _$$StorageErrorDatabaseImplCopyWith<$Res> {
+  __$$StorageErrorDatabaseImplCopyWithImpl(_$StorageErrorDatabaseImpl _value,
+      $Res Function(_$StorageErrorDatabaseImpl) _then)
+      : super(_value, _then);
 
-  @override
-  StorageErrorDatabase get _value => super._value as StorageErrorDatabase;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? exception = freezed,
     Object? stackTrace = freezed,
   }) {
-    return _then(StorageErrorDatabase(
-      exception: exception == freezed
+    return _then(_$StorageErrorDatabaseImpl(
+      exception: freezed == exception
           ? _value.exception
           : exception // ignore: cast_nullable_to_non_nullable
               as Exception?,
-      stackTrace: stackTrace == freezed
+      stackTrace: freezed == stackTrace
           ? _value.stackTrace
           : stackTrace // ignore: cast_nullable_to_non_nullable
               as StackTrace?,
@@ -507,8 +478,8 @@ class _$StorageErrorDatabaseCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$StorageErrorDatabase implements StorageErrorDatabase {
-  const _$StorageErrorDatabase({this.exception, this.stackTrace});
+class _$StorageErrorDatabaseImpl implements StorageErrorDatabase {
+  const _$StorageErrorDatabaseImpl({this.exception, this.stackTrace});
 
   @override
   final Exception? exception;
@@ -521,28 +492,26 @@ class _$StorageErrorDatabase implements StorageErrorDatabase {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is StorageErrorDatabase &&
+        (other.runtimeType == runtimeType &&
+            other is _$StorageErrorDatabaseImpl &&
             (identical(other.exception, exception) ||
-                const DeepCollectionEquality()
-                    .equals(other.exception, exception)) &&
+                other.exception == exception) &&
             (identical(other.stackTrace, stackTrace) ||
-                const DeepCollectionEquality()
-                    .equals(other.stackTrace, stackTrace)));
+                other.stackTrace == stackTrace));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(exception) ^
-      const DeepCollectionEquality().hash(stackTrace);
+  int get hashCode => Object.hash(runtimeType, exception, stackTrace);
 
   @JsonKey(ignore: true)
   @override
-  $StorageErrorDatabaseCopyWith<StorageErrorDatabase> get copyWith =>
-      _$StorageErrorDatabaseCopyWithImpl<StorageErrorDatabase>(
-          this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$StorageErrorDatabaseImplCopyWith<_$StorageErrorDatabaseImpl>
+      get copyWith =>
+          __$$StorageErrorDatabaseImplCopyWithImpl<_$StorageErrorDatabaseImpl>(
+              this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -556,7 +525,7 @@ class _$StorageErrorDatabase implements StorageErrorDatabase {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(Exception? exception, StackTrace? stackTrace)? database,
+    TResult? Function(Exception? exception, StackTrace? stackTrace)? database,
   }) {
     return database?.call(exception, stackTrace);
   }
@@ -584,7 +553,7 @@ class _$StorageErrorDatabase implements StorageErrorDatabase {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(StorageErrorDatabase value)? database,
+    TResult? Function(StorageErrorDatabase value)? database,
   }) {
     return database?.call(this);
   }
@@ -604,14 +573,15 @@ class _$StorageErrorDatabase implements StorageErrorDatabase {
 
 abstract class StorageErrorDatabase implements StorageError {
   const factory StorageErrorDatabase(
-      {Exception? exception, StackTrace? stackTrace}) = _$StorageErrorDatabase;
+      {final Exception? exception,
+      final StackTrace? stackTrace}) = _$StorageErrorDatabaseImpl;
 
   @override
-  Exception? get exception => throw _privateConstructorUsedError;
+  Exception? get exception;
   @override
-  StackTrace? get stackTrace => throw _privateConstructorUsedError;
+  StackTrace? get stackTrace;
   @override
   @JsonKey(ignore: true)
-  $StorageErrorDatabaseCopyWith<StorageErrorDatabase> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$StorageErrorDatabaseImplCopyWith<_$StorageErrorDatabaseImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

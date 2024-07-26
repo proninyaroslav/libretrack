@@ -1,6 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'first_start_cubit.dart';
 
@@ -11,27 +12,7 @@ part of 'first_start_cubit.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$FirstStartStateTearOff {
-  const _$FirstStartStateTearOff();
-
-  FirstStartStateInitial initial() {
-    return const FirstStartStateInitial();
-  }
-
-  FirstStartStateShowAddAccountTip showAddAccountTip() {
-    return const FirstStartStateShowAddAccountTip();
-  }
-
-  FirstStartStateHideAddAccountTip hideAddAccountTip() {
-    return const FirstStartStateHideAddAccountTip();
-  }
-}
-
-/// @nodoc
-const $FirstStartState = _$FirstStartStateTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$FirstStartState {
@@ -44,9 +25,9 @@ mixin _$FirstStartState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? showAddAccountTip,
-    TResult Function()? hideAddAccountTip,
+    TResult? Function()? initial,
+    TResult? Function()? showAddAccountTip,
+    TResult? Function()? hideAddAccountTip,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -68,9 +49,11 @@ mixin _$FirstStartState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(FirstStartStateInitial value)? initial,
-    TResult Function(FirstStartStateShowAddAccountTip value)? showAddAccountTip,
-    TResult Function(FirstStartStateHideAddAccountTip value)? hideAddAccountTip,
+    TResult? Function(FirstStartStateInitial value)? initial,
+    TResult? Function(FirstStartStateShowAddAccountTip value)?
+        showAddAccountTip,
+    TResult? Function(FirstStartStateHideAddAccountTip value)?
+        hideAddAccountTip,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -87,44 +70,44 @@ mixin _$FirstStartState {
 abstract class $FirstStartStateCopyWith<$Res> {
   factory $FirstStartStateCopyWith(
           FirstStartState value, $Res Function(FirstStartState) then) =
-      _$FirstStartStateCopyWithImpl<$Res>;
+      _$FirstStartStateCopyWithImpl<$Res, FirstStartState>;
 }
 
 /// @nodoc
-class _$FirstStartStateCopyWithImpl<$Res>
+class _$FirstStartStateCopyWithImpl<$Res, $Val extends FirstStartState>
     implements $FirstStartStateCopyWith<$Res> {
   _$FirstStartStateCopyWithImpl(this._value, this._then);
 
-  final FirstStartState _value;
   // ignore: unused_field
-  final $Res Function(FirstStartState) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 }
 
 /// @nodoc
-abstract class $FirstStartStateInitialCopyWith<$Res> {
-  factory $FirstStartStateInitialCopyWith(FirstStartStateInitial value,
-          $Res Function(FirstStartStateInitial) then) =
-      _$FirstStartStateInitialCopyWithImpl<$Res>;
+abstract class _$$FirstStartStateInitialImplCopyWith<$Res> {
+  factory _$$FirstStartStateInitialImplCopyWith(
+          _$FirstStartStateInitialImpl value,
+          $Res Function(_$FirstStartStateInitialImpl) then) =
+      __$$FirstStartStateInitialImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$FirstStartStateInitialCopyWithImpl<$Res>
-    extends _$FirstStartStateCopyWithImpl<$Res>
-    implements $FirstStartStateInitialCopyWith<$Res> {
-  _$FirstStartStateInitialCopyWithImpl(FirstStartStateInitial _value,
-      $Res Function(FirstStartStateInitial) _then)
-      : super(_value, (v) => _then(v as FirstStartStateInitial));
-
-  @override
-  FirstStartStateInitial get _value => super._value as FirstStartStateInitial;
+class __$$FirstStartStateInitialImplCopyWithImpl<$Res>
+    extends _$FirstStartStateCopyWithImpl<$Res, _$FirstStartStateInitialImpl>
+    implements _$$FirstStartStateInitialImplCopyWith<$Res> {
+  __$$FirstStartStateInitialImplCopyWithImpl(
+      _$FirstStartStateInitialImpl _value,
+      $Res Function(_$FirstStartStateInitialImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$FirstStartStateInitial
+class _$FirstStartStateInitialImpl
     with DiagnosticableTreeMixin
     implements FirstStartStateInitial {
-  const _$FirstStartStateInitial();
+  const _$FirstStartStateInitialImpl();
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
@@ -134,12 +117,14 @@ class _$FirstStartStateInitial
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
-    properties..add(DiagnosticsProperty('type', 'FirstStartState.initial'));
+    properties.add(DiagnosticsProperty('type', 'FirstStartState.initial'));
   }
 
   @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) || (other is FirstStartStateInitial);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$FirstStartStateInitialImpl);
   }
 
   @override
@@ -158,9 +143,9 @@ class _$FirstStartStateInitial
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? showAddAccountTip,
-    TResult Function()? hideAddAccountTip,
+    TResult? Function()? initial,
+    TResult? Function()? showAddAccountTip,
+    TResult? Function()? hideAddAccountTip,
   }) {
     return initial?.call();
   }
@@ -194,9 +179,11 @@ class _$FirstStartStateInitial
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(FirstStartStateInitial value)? initial,
-    TResult Function(FirstStartStateShowAddAccountTip value)? showAddAccountTip,
-    TResult Function(FirstStartStateHideAddAccountTip value)? hideAddAccountTip,
+    TResult? Function(FirstStartStateInitial value)? initial,
+    TResult? Function(FirstStartStateShowAddAccountTip value)?
+        showAddAccountTip,
+    TResult? Function(FirstStartStateHideAddAccountTip value)?
+        hideAddAccountTip,
   }) {
     return initial?.call(this);
   }
@@ -217,37 +204,34 @@ class _$FirstStartStateInitial
 }
 
 abstract class FirstStartStateInitial implements FirstStartState {
-  const factory FirstStartStateInitial() = _$FirstStartStateInitial;
+  const factory FirstStartStateInitial() = _$FirstStartStateInitialImpl;
 }
 
 /// @nodoc
-abstract class $FirstStartStateShowAddAccountTipCopyWith<$Res> {
-  factory $FirstStartStateShowAddAccountTipCopyWith(
-          FirstStartStateShowAddAccountTip value,
-          $Res Function(FirstStartStateShowAddAccountTip) then) =
-      _$FirstStartStateShowAddAccountTipCopyWithImpl<$Res>;
+abstract class _$$FirstStartStateShowAddAccountTipImplCopyWith<$Res> {
+  factory _$$FirstStartStateShowAddAccountTipImplCopyWith(
+          _$FirstStartStateShowAddAccountTipImpl value,
+          $Res Function(_$FirstStartStateShowAddAccountTipImpl) then) =
+      __$$FirstStartStateShowAddAccountTipImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$FirstStartStateShowAddAccountTipCopyWithImpl<$Res>
-    extends _$FirstStartStateCopyWithImpl<$Res>
-    implements $FirstStartStateShowAddAccountTipCopyWith<$Res> {
-  _$FirstStartStateShowAddAccountTipCopyWithImpl(
-      FirstStartStateShowAddAccountTip _value,
-      $Res Function(FirstStartStateShowAddAccountTip) _then)
-      : super(_value, (v) => _then(v as FirstStartStateShowAddAccountTip));
-
-  @override
-  FirstStartStateShowAddAccountTip get _value =>
-      super._value as FirstStartStateShowAddAccountTip;
+class __$$FirstStartStateShowAddAccountTipImplCopyWithImpl<$Res>
+    extends _$FirstStartStateCopyWithImpl<$Res,
+        _$FirstStartStateShowAddAccountTipImpl>
+    implements _$$FirstStartStateShowAddAccountTipImplCopyWith<$Res> {
+  __$$FirstStartStateShowAddAccountTipImplCopyWithImpl(
+      _$FirstStartStateShowAddAccountTipImpl _value,
+      $Res Function(_$FirstStartStateShowAddAccountTipImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$FirstStartStateShowAddAccountTip
+class _$FirstStartStateShowAddAccountTipImpl
     with DiagnosticableTreeMixin
     implements FirstStartStateShowAddAccountTip {
-  const _$FirstStartStateShowAddAccountTip();
+  const _$FirstStartStateShowAddAccountTipImpl();
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
@@ -258,13 +242,14 @@ class _$FirstStartStateShowAddAccountTip
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
     properties
-      ..add(DiagnosticsProperty('type', 'FirstStartState.showAddAccountTip'));
+        .add(DiagnosticsProperty('type', 'FirstStartState.showAddAccountTip'));
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is FirstStartStateShowAddAccountTip);
+        (other.runtimeType == runtimeType &&
+            other is _$FirstStartStateShowAddAccountTipImpl);
   }
 
   @override
@@ -283,9 +268,9 @@ class _$FirstStartStateShowAddAccountTip
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? showAddAccountTip,
-    TResult Function()? hideAddAccountTip,
+    TResult? Function()? initial,
+    TResult? Function()? showAddAccountTip,
+    TResult? Function()? hideAddAccountTip,
   }) {
     return showAddAccountTip?.call();
   }
@@ -319,9 +304,11 @@ class _$FirstStartStateShowAddAccountTip
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(FirstStartStateInitial value)? initial,
-    TResult Function(FirstStartStateShowAddAccountTip value)? showAddAccountTip,
-    TResult Function(FirstStartStateHideAddAccountTip value)? hideAddAccountTip,
+    TResult? Function(FirstStartStateInitial value)? initial,
+    TResult? Function(FirstStartStateShowAddAccountTip value)?
+        showAddAccountTip,
+    TResult? Function(FirstStartStateHideAddAccountTip value)?
+        hideAddAccountTip,
   }) {
     return showAddAccountTip?.call(this);
   }
@@ -343,37 +330,34 @@ class _$FirstStartStateShowAddAccountTip
 
 abstract class FirstStartStateShowAddAccountTip implements FirstStartState {
   const factory FirstStartStateShowAddAccountTip() =
-      _$FirstStartStateShowAddAccountTip;
+      _$FirstStartStateShowAddAccountTipImpl;
 }
 
 /// @nodoc
-abstract class $FirstStartStateHideAddAccountTipCopyWith<$Res> {
-  factory $FirstStartStateHideAddAccountTipCopyWith(
-          FirstStartStateHideAddAccountTip value,
-          $Res Function(FirstStartStateHideAddAccountTip) then) =
-      _$FirstStartStateHideAddAccountTipCopyWithImpl<$Res>;
+abstract class _$$FirstStartStateHideAddAccountTipImplCopyWith<$Res> {
+  factory _$$FirstStartStateHideAddAccountTipImplCopyWith(
+          _$FirstStartStateHideAddAccountTipImpl value,
+          $Res Function(_$FirstStartStateHideAddAccountTipImpl) then) =
+      __$$FirstStartStateHideAddAccountTipImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$FirstStartStateHideAddAccountTipCopyWithImpl<$Res>
-    extends _$FirstStartStateCopyWithImpl<$Res>
-    implements $FirstStartStateHideAddAccountTipCopyWith<$Res> {
-  _$FirstStartStateHideAddAccountTipCopyWithImpl(
-      FirstStartStateHideAddAccountTip _value,
-      $Res Function(FirstStartStateHideAddAccountTip) _then)
-      : super(_value, (v) => _then(v as FirstStartStateHideAddAccountTip));
-
-  @override
-  FirstStartStateHideAddAccountTip get _value =>
-      super._value as FirstStartStateHideAddAccountTip;
+class __$$FirstStartStateHideAddAccountTipImplCopyWithImpl<$Res>
+    extends _$FirstStartStateCopyWithImpl<$Res,
+        _$FirstStartStateHideAddAccountTipImpl>
+    implements _$$FirstStartStateHideAddAccountTipImplCopyWith<$Res> {
+  __$$FirstStartStateHideAddAccountTipImplCopyWithImpl(
+      _$FirstStartStateHideAddAccountTipImpl _value,
+      $Res Function(_$FirstStartStateHideAddAccountTipImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$FirstStartStateHideAddAccountTip
+class _$FirstStartStateHideAddAccountTipImpl
     with DiagnosticableTreeMixin
     implements FirstStartStateHideAddAccountTip {
-  const _$FirstStartStateHideAddAccountTip();
+  const _$FirstStartStateHideAddAccountTipImpl();
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
@@ -384,13 +368,14 @@ class _$FirstStartStateHideAddAccountTip
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
     properties
-      ..add(DiagnosticsProperty('type', 'FirstStartState.hideAddAccountTip'));
+        .add(DiagnosticsProperty('type', 'FirstStartState.hideAddAccountTip'));
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is FirstStartStateHideAddAccountTip);
+        (other.runtimeType == runtimeType &&
+            other is _$FirstStartStateHideAddAccountTipImpl);
   }
 
   @override
@@ -409,9 +394,9 @@ class _$FirstStartStateHideAddAccountTip
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? showAddAccountTip,
-    TResult Function()? hideAddAccountTip,
+    TResult? Function()? initial,
+    TResult? Function()? showAddAccountTip,
+    TResult? Function()? hideAddAccountTip,
   }) {
     return hideAddAccountTip?.call();
   }
@@ -445,9 +430,11 @@ class _$FirstStartStateHideAddAccountTip
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(FirstStartStateInitial value)? initial,
-    TResult Function(FirstStartStateShowAddAccountTip value)? showAddAccountTip,
-    TResult Function(FirstStartStateHideAddAccountTip value)? hideAddAccountTip,
+    TResult? Function(FirstStartStateInitial value)? initial,
+    TResult? Function(FirstStartStateShowAddAccountTip value)?
+        showAddAccountTip,
+    TResult? Function(FirstStartStateHideAddAccountTip value)?
+        hideAddAccountTip,
   }) {
     return hideAddAccountTip?.call(this);
   }
@@ -469,5 +456,5 @@ class _$FirstStartStateHideAddAccountTip
 
 abstract class FirstStartStateHideAddAccountTip implements FirstStartState {
   const factory FirstStartStateHideAddAccountTip() =
-      _$FirstStartStateHideAddAccountTip;
+      _$FirstStartStateHideAddAccountTipImpl;
 }

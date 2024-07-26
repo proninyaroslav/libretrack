@@ -16,6 +16,7 @@
 // You should have received a copy of the GNU General Public License
 // along with LibreTrack.  If not, see <http://www.gnu.org/licenses/>.
 
+import 'package:flutter/src/foundation/basic_types.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:libretrack/core/entity/entity.dart';
@@ -212,61 +213,122 @@ class _UnexpectedFlutterSecureStorage implements FlutterSecureStorage {
       'Unexpected access to the secure storage instead of database';
 
   @override
-  Future<bool> containsKey({
-    required String key,
-    IOSOptions? iOptions = IOSOptions.defaultOptions,
-    AndroidOptions? aOptions,
-    LinuxOptions? lOptions,
-  }) {
+  AndroidOptions get aOptions => throw message;
+
+  @override
+  Future<bool> containsKey(
+      {required String key,
+      IOSOptions? iOptions,
+      AndroidOptions? aOptions,
+      LinuxOptions? lOptions,
+      WebOptions? webOptions,
+      MacOsOptions? mOptions,
+      WindowsOptions? wOptions}) {
     throw message;
   }
 
   @override
-  Future<void> delete({
-    required String key,
-    IOSOptions? iOptions = IOSOptions.defaultOptions,
-    AndroidOptions? aOptions,
-    LinuxOptions? lOptions,
-  }) {
+  Future<void> delete(
+      {required String key,
+      IOSOptions? iOptions,
+      AndroidOptions? aOptions,
+      LinuxOptions? lOptions,
+      WebOptions? webOptions,
+      MacOsOptions? mOptions,
+      WindowsOptions? wOptions}) {
     throw message;
   }
 
   @override
-  Future<void> deleteAll({
-    IOSOptions? iOptions = IOSOptions.defaultOptions,
-    AndroidOptions? aOptions,
-    LinuxOptions? lOptions,
-  }) {
+  Future<void> deleteAll(
+      {IOSOptions? iOptions,
+      AndroidOptions? aOptions,
+      LinuxOptions? lOptions,
+      WebOptions? webOptions,
+      MacOsOptions? mOptions,
+      WindowsOptions? wOptions}) {
     throw message;
   }
 
   @override
-  Future<String?> read({
-    required String key,
-    IOSOptions? iOptions = IOSOptions.defaultOptions,
-    AndroidOptions? aOptions,
-    LinuxOptions? lOptions,
-  }) {
+  IOSOptions get iOptions => throw message;
+
+  @override
+  Future<bool?> isCupertinoProtectedDataAvailable() {
     throw message;
   }
 
   @override
-  Future<Map<String, String>> readAll({
-    IOSOptions? iOptions = IOSOptions.defaultOptions,
-    AndroidOptions? aOptions,
-    LinuxOptions? lOptions,
-  }) {
+  LinuxOptions get lOptions => throw message;
+
+  @override
+  MacOsOptions get mOptions => throw message;
+
+  @override
+  Stream<bool>? get onCupertinoProtectedDataAvailabilityChanged =>
+      throw message;
+
+  @override
+  Future<String?> read(
+      {required String key,
+      IOSOptions? iOptions,
+      AndroidOptions? aOptions,
+      LinuxOptions? lOptions,
+      WebOptions? webOptions,
+      MacOsOptions? mOptions,
+      WindowsOptions? wOptions}) {
     throw message;
   }
 
   @override
-  Future<void> write({
-    required String key,
-    required String? value,
-    IOSOptions? iOptions = IOSOptions.defaultOptions,
-    AndroidOptions? aOptions,
-    LinuxOptions? lOptions,
-  }) {
+  Future<Map<String, String>> readAll(
+      {IOSOptions? iOptions,
+      AndroidOptions? aOptions,
+      LinuxOptions? lOptions,
+      WebOptions? webOptions,
+      MacOsOptions? mOptions,
+      WindowsOptions? wOptions}) {
+    throw message;
+  }
+
+  @override
+  void registerListener(
+      {required String key, required ValueChanged<String?> listener}) {
+    throw message;
+  }
+
+  @override
+  void unregisterAllListeners() {
+    throw message;
+  }
+
+  @override
+  void unregisterAllListenersForKey({required String key}) {
+    throw message;
+  }
+
+  @override
+  void unregisterListener(
+      {required String key, required ValueChanged<String?> listener}) {
+    throw message;
+  }
+
+  @override
+  WindowsOptions get wOptions => throw message;
+
+  @override
+  WebOptions get webOptions => throw message;
+
+  @override
+  Future<void> write(
+      {required String key,
+      required String? value,
+      IOSOptions? iOptions,
+      AndroidOptions? aOptions,
+      LinuxOptions? lOptions,
+      WebOptions? webOptions,
+      MacOsOptions? mOptions,
+      WindowsOptions? wOptions}) {
     throw message;
   }
 }

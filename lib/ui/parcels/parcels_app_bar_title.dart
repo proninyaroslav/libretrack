@@ -18,7 +18,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:libretrack/ui/widget/search_bar.dart';
+import 'package:libretrack/ui/widget/search_bar.dart' as search_bar;
 import 'package:libretrack/ui/widget/widget.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
@@ -26,7 +26,7 @@ import '../theme.dart';
 import 'parcels_cubit.dart';
 
 class ParcelsAppBarTitle extends StatefulWidget {
-  const ParcelsAppBarTitle({Key? key}) : super(key: key);
+  const ParcelsAppBarTitle({super.key});
 
   @override
   _ParcelsAppBarTitleState createState() => _ParcelsAppBarTitleState();
@@ -60,7 +60,7 @@ class _ParcelsAppBarTitleState extends State<ParcelsAppBarTitle> {
 
   @override
   Widget build(BuildContext context) {
-    final searchBar = SearchBar(controller: _controller);
+    final searchBar = search_bar.SearchBar(controller: _controller);
     final appLogo = Icon(
       AppLogoInfo.foreground_logo,
       color: AppTheme.palette(context).appLogoColor,
@@ -68,9 +68,9 @@ class _ParcelsAppBarTitleState extends State<ParcelsAppBarTitle> {
     );
     return Row(
       children: [
-        ScreenTypeLayout(
-          mobile: appLogo,
-          tablet: OrientationLayoutBuilder(
+        ScreenTypeLayout.builder(
+          mobile: (context) => appLogo,
+          tablet: (context) => OrientationLayoutBuilder(
             portrait: (context) => Padding(
               padding: const EdgeInsetsDirectional.only(start: 16.0),
               child: appLogo,
@@ -83,8 +83,8 @@ class _ParcelsAppBarTitleState extends State<ParcelsAppBarTitle> {
         ),
         const SizedBox(width: 8.0),
         Flexible(
-          child: ScreenTypeLayout(
-            mobile: OrientationLayoutBuilder(
+          child: ScreenTypeLayout.builder(
+            mobile: (context) => OrientationLayoutBuilder(
               portrait: (context) => searchBar,
               landscape: (context) => _buildTightSearchBar(
                 context,
@@ -92,7 +92,7 @@ class _ParcelsAppBarTitleState extends State<ParcelsAppBarTitle> {
                 factor: 2,
               ),
             ),
-            tablet: OrientationLayoutBuilder(
+            tablet: (context) => OrientationLayoutBuilder(
               portrait: (context) => _buildTightSearchBar(
                 context,
                 searchBar,

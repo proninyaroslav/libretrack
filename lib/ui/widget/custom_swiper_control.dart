@@ -25,11 +25,11 @@ class CustomSwiperControl extends SwiperPlugin {
     Color prevColor;
     Color nextColor;
 
-    if (config.loop!) {
+    if (config.loop) {
       prevColor = nextColor = color;
     } else {
-      final next = config.activeIndex! < config.itemCount! - 1;
-      final prev = config.activeIndex! > 0;
+      final next = config.activeIndex < config.itemCount - 1;
+      final prev = config.activeIndex > 0;
       prevColor = prev ? color : disableColor;
       nextColor = next ? color : disableColor;
     }

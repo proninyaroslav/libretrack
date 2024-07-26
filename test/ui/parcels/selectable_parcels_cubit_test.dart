@@ -169,7 +169,7 @@ void main() {
             pageType: ParcelsPageType.active,
           ),
         }),
-        const SelectableState.noSelection(),
+        const SelectableState<SelectableParcelsItem>.noSelection(),
         SelectableState.selected({
           const SelectableParcelsItem(
             info: ParcelInfo(trackInfo: TrackNumberInfo('3')),
@@ -207,7 +207,7 @@ void main() {
             pageType: ParcelsPageType.active,
           ),
         }),
-        const SelectableState.noSelection(),
+        const SelectableState<SelectableParcelsItem>.noSelection(),
         SelectableState.selected({
           const SelectableParcelsItem(
             info: ParcelInfo(trackInfo: TrackNumberInfo('2')),
@@ -310,7 +310,7 @@ void main() {
             pageType: ParcelsPageType.active,
           ),
         }),
-        const SelectableState.noSelection(),
+        const SelectableState<SelectableParcelsItem>.noSelection(),
       ],
     );
 
@@ -369,7 +369,7 @@ void main() {
             pageType: ParcelsPageType.active,
           ),
         }),
-        const SelectableState.noSelection(),
+        const SelectableState<SelectableParcelsItem>.noSelection(),
       ],
     );
   });

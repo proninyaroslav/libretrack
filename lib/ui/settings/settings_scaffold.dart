@@ -24,10 +24,10 @@ class SettingsScaffold extends StatelessWidget {
   final Widget body;
 
   const SettingsScaffold({
-    Key? key,
+    super.key,
     required this.appBar,
     required this.body,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

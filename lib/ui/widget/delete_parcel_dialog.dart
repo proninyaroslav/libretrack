@@ -25,10 +25,10 @@ class DeleteParcelDialog extends StatelessWidget {
   final VoidCallback onDelete;
 
   const DeleteParcelDialog({
-    Key? key,
+    super.key,
     required this.parcelsCount,
     required this.onDelete,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

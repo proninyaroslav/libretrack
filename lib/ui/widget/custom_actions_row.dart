@@ -9,11 +9,11 @@ class CustomActionsRow extends StatelessWidget {
   final List<CustomAction> actions;
 
   const CustomActionsRow({
-    Key? key,
+    super.key,
     required this.availableWidth,
     required this.actionWidth,
     required this.actions,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

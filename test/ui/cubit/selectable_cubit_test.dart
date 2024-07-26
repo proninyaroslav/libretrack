@@ -79,7 +79,7 @@ void main() {
         const SelectableState.selected({1, 2, 3}),
         const SelectableState.selected({1, 3}),
         const SelectableState.selected({3}),
-        const SelectableState.noSelection(),
+        const SelectableState<int>.noSelection(),
       ],
     );
 
@@ -96,7 +96,7 @@ void main() {
         const SelectableState.selected({1}),
         const SelectableState.selected({1, 2}),
         const SelectableState.selected({1, 2, 3}),
-        const SelectableState.noSelection(),
+        const SelectableState<int>.noSelection(),
       ],
     );
   });

@@ -1,6 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'add_account_cubit.dart';
 
@@ -11,35 +12,7 @@ part of 'add_account_cubit.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$AddAccountStateTearOff {
-  const _$AddAccountStateTearOff();
-
-  AddAccountStateInitial initial() {
-    return const AddAccountStateInitial();
-  }
-
-  AddAccountStateAdding adding() {
-    return const AddAccountStateAdding();
-  }
-
-  AddAccountStateAdded added() {
-    return const AddAccountStateAdded();
-  }
-
-  AddAccountStateAddFailed addFailed(
-      {Exception? exception, StackTrace? stackTrace}) {
-    return AddAccountStateAddFailed(
-      exception: exception,
-      stackTrace: stackTrace,
-    );
-  }
-}
-
-/// @nodoc
-const $AddAccountState = _$AddAccountStateTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$AddAccountState {
@@ -54,10 +27,10 @@ mixin _$AddAccountState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? adding,
-    TResult Function()? added,
-    TResult Function(Exception? exception, StackTrace? stackTrace)? addFailed,
+    TResult? Function()? initial,
+    TResult? Function()? adding,
+    TResult? Function()? added,
+    TResult? Function(Exception? exception, StackTrace? stackTrace)? addFailed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -79,10 +52,10 @@ mixin _$AddAccountState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(AddAccountStateInitial value)? initial,
-    TResult Function(AddAccountStateAdding value)? adding,
-    TResult Function(AddAccountStateAdded value)? added,
-    TResult Function(AddAccountStateAddFailed value)? addFailed,
+    TResult? Function(AddAccountStateInitial value)? initial,
+    TResult? Function(AddAccountStateAdding value)? adding,
+    TResult? Function(AddAccountStateAdded value)? added,
+    TResult? Function(AddAccountStateAddFailed value)? addFailed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -100,44 +73,44 @@ mixin _$AddAccountState {
 abstract class $AddAccountStateCopyWith<$Res> {
   factory $AddAccountStateCopyWith(
           AddAccountState value, $Res Function(AddAccountState) then) =
-      _$AddAccountStateCopyWithImpl<$Res>;
+      _$AddAccountStateCopyWithImpl<$Res, AddAccountState>;
 }
 
 /// @nodoc
-class _$AddAccountStateCopyWithImpl<$Res>
+class _$AddAccountStateCopyWithImpl<$Res, $Val extends AddAccountState>
     implements $AddAccountStateCopyWith<$Res> {
   _$AddAccountStateCopyWithImpl(this._value, this._then);
 
-  final AddAccountState _value;
   // ignore: unused_field
-  final $Res Function(AddAccountState) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 }
 
 /// @nodoc
-abstract class $AddAccountStateInitialCopyWith<$Res> {
-  factory $AddAccountStateInitialCopyWith(AddAccountStateInitial value,
-          $Res Function(AddAccountStateInitial) then) =
-      _$AddAccountStateInitialCopyWithImpl<$Res>;
+abstract class _$$AddAccountStateInitialImplCopyWith<$Res> {
+  factory _$$AddAccountStateInitialImplCopyWith(
+          _$AddAccountStateInitialImpl value,
+          $Res Function(_$AddAccountStateInitialImpl) then) =
+      __$$AddAccountStateInitialImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$AddAccountStateInitialCopyWithImpl<$Res>
-    extends _$AddAccountStateCopyWithImpl<$Res>
-    implements $AddAccountStateInitialCopyWith<$Res> {
-  _$AddAccountStateInitialCopyWithImpl(AddAccountStateInitial _value,
-      $Res Function(AddAccountStateInitial) _then)
-      : super(_value, (v) => _then(v as AddAccountStateInitial));
-
-  @override
-  AddAccountStateInitial get _value => super._value as AddAccountStateInitial;
+class __$$AddAccountStateInitialImplCopyWithImpl<$Res>
+    extends _$AddAccountStateCopyWithImpl<$Res, _$AddAccountStateInitialImpl>
+    implements _$$AddAccountStateInitialImplCopyWith<$Res> {
+  __$$AddAccountStateInitialImplCopyWithImpl(
+      _$AddAccountStateInitialImpl _value,
+      $Res Function(_$AddAccountStateInitialImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$AddAccountStateInitial
+class _$AddAccountStateInitialImpl
     with DiagnosticableTreeMixin
     implements AddAccountStateInitial {
-  const _$AddAccountStateInitial();
+  const _$AddAccountStateInitialImpl();
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
@@ -147,12 +120,14 @@ class _$AddAccountStateInitial
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
-    properties..add(DiagnosticsProperty('type', 'AddAccountState.initial'));
+    properties.add(DiagnosticsProperty('type', 'AddAccountState.initial'));
   }
 
   @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) || (other is AddAccountStateInitial);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AddAccountStateInitialImpl);
   }
 
   @override
@@ -173,10 +148,10 @@ class _$AddAccountStateInitial
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? adding,
-    TResult Function()? added,
-    TResult Function(Exception? exception, StackTrace? stackTrace)? addFailed,
+    TResult? Function()? initial,
+    TResult? Function()? adding,
+    TResult? Function()? added,
+    TResult? Function(Exception? exception, StackTrace? stackTrace)? addFailed,
   }) {
     return initial?.call();
   }
@@ -210,10 +185,10 @@ class _$AddAccountStateInitial
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(AddAccountStateInitial value)? initial,
-    TResult Function(AddAccountStateAdding value)? adding,
-    TResult Function(AddAccountStateAdded value)? added,
-    TResult Function(AddAccountStateAddFailed value)? addFailed,
+    TResult? Function(AddAccountStateInitial value)? initial,
+    TResult? Function(AddAccountStateAdding value)? adding,
+    TResult? Function(AddAccountStateAdded value)? added,
+    TResult? Function(AddAccountStateAddFailed value)? addFailed,
   }) {
     return initial?.call(this);
   }
@@ -235,34 +210,32 @@ class _$AddAccountStateInitial
 }
 
 abstract class AddAccountStateInitial implements AddAccountState {
-  const factory AddAccountStateInitial() = _$AddAccountStateInitial;
+  const factory AddAccountStateInitial() = _$AddAccountStateInitialImpl;
 }
 
 /// @nodoc
-abstract class $AddAccountStateAddingCopyWith<$Res> {
-  factory $AddAccountStateAddingCopyWith(AddAccountStateAdding value,
-          $Res Function(AddAccountStateAdding) then) =
-      _$AddAccountStateAddingCopyWithImpl<$Res>;
+abstract class _$$AddAccountStateAddingImplCopyWith<$Res> {
+  factory _$$AddAccountStateAddingImplCopyWith(
+          _$AddAccountStateAddingImpl value,
+          $Res Function(_$AddAccountStateAddingImpl) then) =
+      __$$AddAccountStateAddingImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$AddAccountStateAddingCopyWithImpl<$Res>
-    extends _$AddAccountStateCopyWithImpl<$Res>
-    implements $AddAccountStateAddingCopyWith<$Res> {
-  _$AddAccountStateAddingCopyWithImpl(
-      AddAccountStateAdding _value, $Res Function(AddAccountStateAdding) _then)
-      : super(_value, (v) => _then(v as AddAccountStateAdding));
-
-  @override
-  AddAccountStateAdding get _value => super._value as AddAccountStateAdding;
+class __$$AddAccountStateAddingImplCopyWithImpl<$Res>
+    extends _$AddAccountStateCopyWithImpl<$Res, _$AddAccountStateAddingImpl>
+    implements _$$AddAccountStateAddingImplCopyWith<$Res> {
+  __$$AddAccountStateAddingImplCopyWithImpl(_$AddAccountStateAddingImpl _value,
+      $Res Function(_$AddAccountStateAddingImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$AddAccountStateAdding
+class _$AddAccountStateAddingImpl
     with DiagnosticableTreeMixin
     implements AddAccountStateAdding {
-  const _$AddAccountStateAdding();
+  const _$AddAccountStateAddingImpl();
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
@@ -272,12 +245,14 @@ class _$AddAccountStateAdding
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
-    properties..add(DiagnosticsProperty('type', 'AddAccountState.adding'));
+    properties.add(DiagnosticsProperty('type', 'AddAccountState.adding'));
   }
 
   @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) || (other is AddAccountStateAdding);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AddAccountStateAddingImpl);
   }
 
   @override
@@ -298,10 +273,10 @@ class _$AddAccountStateAdding
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? adding,
-    TResult Function()? added,
-    TResult Function(Exception? exception, StackTrace? stackTrace)? addFailed,
+    TResult? Function()? initial,
+    TResult? Function()? adding,
+    TResult? Function()? added,
+    TResult? Function(Exception? exception, StackTrace? stackTrace)? addFailed,
   }) {
     return adding?.call();
   }
@@ -335,10 +310,10 @@ class _$AddAccountStateAdding
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(AddAccountStateInitial value)? initial,
-    TResult Function(AddAccountStateAdding value)? adding,
-    TResult Function(AddAccountStateAdded value)? added,
-    TResult Function(AddAccountStateAddFailed value)? addFailed,
+    TResult? Function(AddAccountStateInitial value)? initial,
+    TResult? Function(AddAccountStateAdding value)? adding,
+    TResult? Function(AddAccountStateAdded value)? added,
+    TResult? Function(AddAccountStateAddFailed value)? addFailed,
   }) {
     return adding?.call(this);
   }
@@ -360,34 +335,31 @@ class _$AddAccountStateAdding
 }
 
 abstract class AddAccountStateAdding implements AddAccountState {
-  const factory AddAccountStateAdding() = _$AddAccountStateAdding;
+  const factory AddAccountStateAdding() = _$AddAccountStateAddingImpl;
 }
 
 /// @nodoc
-abstract class $AddAccountStateAddedCopyWith<$Res> {
-  factory $AddAccountStateAddedCopyWith(AddAccountStateAdded value,
-          $Res Function(AddAccountStateAdded) then) =
-      _$AddAccountStateAddedCopyWithImpl<$Res>;
+abstract class _$$AddAccountStateAddedImplCopyWith<$Res> {
+  factory _$$AddAccountStateAddedImplCopyWith(_$AddAccountStateAddedImpl value,
+          $Res Function(_$AddAccountStateAddedImpl) then) =
+      __$$AddAccountStateAddedImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$AddAccountStateAddedCopyWithImpl<$Res>
-    extends _$AddAccountStateCopyWithImpl<$Res>
-    implements $AddAccountStateAddedCopyWith<$Res> {
-  _$AddAccountStateAddedCopyWithImpl(
-      AddAccountStateAdded _value, $Res Function(AddAccountStateAdded) _then)
-      : super(_value, (v) => _then(v as AddAccountStateAdded));
-
-  @override
-  AddAccountStateAdded get _value => super._value as AddAccountStateAdded;
+class __$$AddAccountStateAddedImplCopyWithImpl<$Res>
+    extends _$AddAccountStateCopyWithImpl<$Res, _$AddAccountStateAddedImpl>
+    implements _$$AddAccountStateAddedImplCopyWith<$Res> {
+  __$$AddAccountStateAddedImplCopyWithImpl(_$AddAccountStateAddedImpl _value,
+      $Res Function(_$AddAccountStateAddedImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$AddAccountStateAdded
+class _$AddAccountStateAddedImpl
     with DiagnosticableTreeMixin
     implements AddAccountStateAdded {
-  const _$AddAccountStateAdded();
+  const _$AddAccountStateAddedImpl();
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
@@ -397,12 +369,14 @@ class _$AddAccountStateAdded
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
-    properties..add(DiagnosticsProperty('type', 'AddAccountState.added'));
+    properties.add(DiagnosticsProperty('type', 'AddAccountState.added'));
   }
 
   @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) || (other is AddAccountStateAdded);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AddAccountStateAddedImpl);
   }
 
   @override
@@ -423,10 +397,10 @@ class _$AddAccountStateAdded
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? adding,
-    TResult Function()? added,
-    TResult Function(Exception? exception, StackTrace? stackTrace)? addFailed,
+    TResult? Function()? initial,
+    TResult? Function()? adding,
+    TResult? Function()? added,
+    TResult? Function(Exception? exception, StackTrace? stackTrace)? addFailed,
   }) {
     return added?.call();
   }
@@ -460,10 +434,10 @@ class _$AddAccountStateAdded
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(AddAccountStateInitial value)? initial,
-    TResult Function(AddAccountStateAdding value)? adding,
-    TResult Function(AddAccountStateAdded value)? added,
-    TResult Function(AddAccountStateAddFailed value)? addFailed,
+    TResult? Function(AddAccountStateInitial value)? initial,
+    TResult? Function(AddAccountStateAdding value)? adding,
+    TResult? Function(AddAccountStateAdded value)? added,
+    TResult? Function(AddAccountStateAddFailed value)? addFailed,
   }) {
     return added?.call(this);
   }
@@ -485,40 +459,40 @@ class _$AddAccountStateAdded
 }
 
 abstract class AddAccountStateAdded implements AddAccountState {
-  const factory AddAccountStateAdded() = _$AddAccountStateAdded;
+  const factory AddAccountStateAdded() = _$AddAccountStateAddedImpl;
 }
 
 /// @nodoc
-abstract class $AddAccountStateAddFailedCopyWith<$Res> {
-  factory $AddAccountStateAddFailedCopyWith(AddAccountStateAddFailed value,
-          $Res Function(AddAccountStateAddFailed) then) =
-      _$AddAccountStateAddFailedCopyWithImpl<$Res>;
+abstract class _$$AddAccountStateAddFailedImplCopyWith<$Res> {
+  factory _$$AddAccountStateAddFailedImplCopyWith(
+          _$AddAccountStateAddFailedImpl value,
+          $Res Function(_$AddAccountStateAddFailedImpl) then) =
+      __$$AddAccountStateAddFailedImplCopyWithImpl<$Res>;
+  @useResult
   $Res call({Exception? exception, StackTrace? stackTrace});
 }
 
 /// @nodoc
-class _$AddAccountStateAddFailedCopyWithImpl<$Res>
-    extends _$AddAccountStateCopyWithImpl<$Res>
-    implements $AddAccountStateAddFailedCopyWith<$Res> {
-  _$AddAccountStateAddFailedCopyWithImpl(AddAccountStateAddFailed _value,
-      $Res Function(AddAccountStateAddFailed) _then)
-      : super(_value, (v) => _then(v as AddAccountStateAddFailed));
+class __$$AddAccountStateAddFailedImplCopyWithImpl<$Res>
+    extends _$AddAccountStateCopyWithImpl<$Res, _$AddAccountStateAddFailedImpl>
+    implements _$$AddAccountStateAddFailedImplCopyWith<$Res> {
+  __$$AddAccountStateAddFailedImplCopyWithImpl(
+      _$AddAccountStateAddFailedImpl _value,
+      $Res Function(_$AddAccountStateAddFailedImpl) _then)
+      : super(_value, _then);
 
-  @override
-  AddAccountStateAddFailed get _value =>
-      super._value as AddAccountStateAddFailed;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? exception = freezed,
     Object? stackTrace = freezed,
   }) {
-    return _then(AddAccountStateAddFailed(
-      exception: exception == freezed
+    return _then(_$AddAccountStateAddFailedImpl(
+      exception: freezed == exception
           ? _value.exception
           : exception // ignore: cast_nullable_to_non_nullable
               as Exception?,
-      stackTrace: stackTrace == freezed
+      stackTrace: freezed == stackTrace
           ? _value.stackTrace
           : stackTrace // ignore: cast_nullable_to_non_nullable
               as StackTrace?,
@@ -528,10 +502,10 @@ class _$AddAccountStateAddFailedCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$AddAccountStateAddFailed
+class _$AddAccountStateAddFailedImpl
     with DiagnosticableTreeMixin
     implements AddAccountStateAddFailed {
-  const _$AddAccountStateAddFailed({this.exception, this.stackTrace});
+  const _$AddAccountStateAddFailedImpl({this.exception, this.stackTrace});
 
   @override
   final Exception? exception;
@@ -553,28 +527,25 @@ class _$AddAccountStateAddFailed
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is AddAccountStateAddFailed &&
+        (other.runtimeType == runtimeType &&
+            other is _$AddAccountStateAddFailedImpl &&
             (identical(other.exception, exception) ||
-                const DeepCollectionEquality()
-                    .equals(other.exception, exception)) &&
+                other.exception == exception) &&
             (identical(other.stackTrace, stackTrace) ||
-                const DeepCollectionEquality()
-                    .equals(other.stackTrace, stackTrace)));
+                other.stackTrace == stackTrace));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(exception) ^
-      const DeepCollectionEquality().hash(stackTrace);
+  int get hashCode => Object.hash(runtimeType, exception, stackTrace);
 
   @JsonKey(ignore: true)
   @override
-  $AddAccountStateAddFailedCopyWith<AddAccountStateAddFailed> get copyWith =>
-      _$AddAccountStateAddFailedCopyWithImpl<AddAccountStateAddFailed>(
-          this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$AddAccountStateAddFailedImplCopyWith<_$AddAccountStateAddFailedImpl>
+      get copyWith => __$$AddAccountStateAddFailedImplCopyWithImpl<
+          _$AddAccountStateAddFailedImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -591,10 +562,10 @@ class _$AddAccountStateAddFailed
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? adding,
-    TResult Function()? added,
-    TResult Function(Exception? exception, StackTrace? stackTrace)? addFailed,
+    TResult? Function()? initial,
+    TResult? Function()? adding,
+    TResult? Function()? added,
+    TResult? Function(Exception? exception, StackTrace? stackTrace)? addFailed,
   }) {
     return addFailed?.call(exception, stackTrace);
   }
@@ -628,10 +599,10 @@ class _$AddAccountStateAddFailed
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(AddAccountStateInitial value)? initial,
-    TResult Function(AddAccountStateAdding value)? adding,
-    TResult Function(AddAccountStateAdded value)? added,
-    TResult Function(AddAccountStateAddFailed value)? addFailed,
+    TResult? Function(AddAccountStateInitial value)? initial,
+    TResult? Function(AddAccountStateAdding value)? adding,
+    TResult? Function(AddAccountStateAdded value)? added,
+    TResult? Function(AddAccountStateAddFailed value)? addFailed,
   }) {
     return addFailed?.call(this);
   }
@@ -654,12 +625,12 @@ class _$AddAccountStateAddFailed
 
 abstract class AddAccountStateAddFailed implements AddAccountState {
   const factory AddAccountStateAddFailed(
-      {Exception? exception,
-      StackTrace? stackTrace}) = _$AddAccountStateAddFailed;
+      {final Exception? exception,
+      final StackTrace? stackTrace}) = _$AddAccountStateAddFailedImpl;
 
-  Exception? get exception => throw _privateConstructorUsedError;
-  StackTrace? get stackTrace => throw _privateConstructorUsedError;
+  Exception? get exception;
+  StackTrace? get stackTrace;
   @JsonKey(ignore: true)
-  $AddAccountStateAddFailedCopyWith<AddAccountStateAddFailed> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$AddAccountStateAddFailedImplCopyWith<_$AddAccountStateAddFailedImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

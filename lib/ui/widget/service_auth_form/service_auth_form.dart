@@ -31,11 +31,11 @@ class ServiceAuthForm extends StatefulWidget {
   final bool isDataSecured;
 
   const ServiceAuthForm({
-    Key? key,
+    super.key,
     required this.type,
     this.initValue,
     required this.isDataSecured,
-  }) : super(key: key);
+  });
 
   @override
   ServiceAuthFormState createState() => ServiceAuthFormState();
@@ -78,9 +78,9 @@ class _Form extends StatefulWidget {
   final List<AuthFormField> fields;
 
   const _Form({
-    Key? key,
+    super.key,
     required this.fields,
-  }) : super(key: key);
+  });
 
   @override
   _FormState createState() => _FormState();
@@ -136,10 +136,9 @@ class _FormFieldInput extends StatefulWidget {
   final TextEditingController? controller;
 
   const _FormFieldInput({
-    Key? key,
     required this.field,
     required this.controller,
-  }) : super(key: key);
+  });
 
   @override
   _FormFieldInputState createState() => _FormFieldInputState();
@@ -183,7 +182,7 @@ class _FormFieldInputState extends State<_FormFieldInput> {
   Widget? _buildShowObscuredTextButton() {
     if (widget.field.secured) {
       return IconButton(
-        icon: _secured ? const Icon(MdiIcons.eye) : const Icon(MdiIcons.eyeOff),
+        icon: _secured ? Icon(MdiIcons.eye) : Icon(MdiIcons.eyeOff),
         tooltip: _secured ? S.of(context).show : S.of(context).hide,
         onPressed: () {
           setState(() => _secured = !_secured);
@@ -199,9 +198,8 @@ class _HelperDescription extends StatelessWidget {
   final String text;
 
   const _HelperDescription({
-    Key? key,
     required this.text,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -210,7 +208,7 @@ class _HelperDescription extends StatelessWidget {
       children: [
         Icon(
           Icons.info_outline,
-          color: Theme.of(context).textTheme.caption!.color,
+          color: Theme.of(context).textTheme.bodySmall!.color,
         ),
         Flexible(
           child: Padding(
@@ -227,9 +225,8 @@ class _SecuredDataMessage extends StatelessWidget {
   final bool isSecured;
 
   const _SecuredDataMessage({
-    Key? key,
     required this.isSecured,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -250,7 +247,7 @@ class _SecuredDataMessage extends StatelessWidget {
                 message,
                 style: Theme.of(context)
                     .textTheme
-                    .bodyText1!
+                    .bodyLarge!
                     .copyWith(color: color),
               ),
             ),
@@ -272,7 +269,7 @@ class _SecuredDataMessage extends StatelessWidget {
     if (isSecured) {
       return AppTheme.palette(context).ok;
     } else {
-      return Theme.of(context).errorColor;
+      return Theme.of(context).colorScheme.error;
     }
   }
 

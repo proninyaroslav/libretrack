@@ -36,10 +36,10 @@ void main() {
     late DateTimeProvider mockDateTimeProvider;
 
     setUpAll(() {
-      registerFallbackValue<List<TrackNumberInfo>>(
+      registerFallbackValue(
         FakeList<TrackNumberInfo>(),
       );
-      registerFallbackValue<List<TrackNumberService>>(
+      registerFallbackValue(
         FakeList<TrackNumberService>(),
       );
       mockTrackRepo = MockTrackNumberRepository();

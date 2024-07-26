@@ -7,7 +7,7 @@
 // ignore_for_file:unnecessary_brace_in_string_interps, unnecessary_new
 // ignore_for_file:prefer_single_quotes,comment_references, directives_ordering
 // ignore_for_file:annotate_overrides,prefer_generic_function_type_aliases
-// ignore_for_file:unused_import, file_names, avoid_escaping_inner_quotes
+// ignore_for_file:unused_import, file_names
 
 import 'package:intl/intl.dart';
 import 'package:intl/message_lookup_by_library.dart';
@@ -19,74 +19,74 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'es_ES';
 
-  static String m0(value) => "${value} bbl";
+  static m0(value) => "${value} bbl";
 
-  static String m1(email, pageUrl) =>
+  static m1(email, pageUrl) =>
       "No se ha encontrado ninguna aplicación de correo electrónico. Puedes copiar manualmente el error y enviarlo a ${email}\no enviar a la página del proyecto ${pageUrl}";
 
-  static String m2(howMany) =>
+  static m2(howMany) =>
       "${Intl.plural(howMany, one: '¿Está seguro de borrar el paquete seleccionado?', other: '¿Está seguro de borrar los paquetes seleccionados?')}";
 
-  static String m3(howMany) =>
+  static m3(howMany) =>
       "${Intl.plural(howMany, one: 'Error al borrar el paquete', other: 'Error al borrar los paquetes')}";
 
-  static String m4(value) => "${value} gal";
+  static m4(value) => "${value} gal";
 
-  static String m5(error) => "Error al generar el código de barras: ${error}";
+  static m5(error) => "Error al generar el código de barras: ${error}";
 
-  static String m6(value) => "${value} h.";
+  static m6(value) => "${value} h.";
 
-  static String m7(value) => "${value} kg";
+  static m7(value) => "${value} kg";
 
-  static String m8(date) => "Último seguimiento: ${date}";
+  static m8(date) => "Último seguimiento: ${date}";
 
-  static String m9(value) => "${value} L";
+  static m9(value) => "${value} L";
 
-  static String m10(howMany) =>
+  static m10(howMany) =>
       "{howMany, plural, one {{Error al marcar el paquete como leído} other {Error al marcar los paquetes como leídos}}";
 
-  static String m11(value) => "${value} min.";
+  static m11(value) => "${value} min.";
 
-  static String m12(howMany) =>
+  static m12(howMany) =>
       "${Intl.plural(howMany, one: 'Error al mover el paquete', other: 'Error al mover los paquetes')}";
 
-  static String m13(value) => "${value} oz";
+  static m13(value) => "${value} oz";
 
-  static String m14(date) => "Paquete llevado el ${date}";
+  static m14(date) => "Paquete llevado el ${date}";
 
-  static String m15(days) =>
+  static m15(days) =>
       "${Intl.plural(days, zero: 'Páquete en transito ${days} días', one: 'Páquete en transito ${days} día', few: 'Páquete en transito ${days} días', many: 'Páquete en transito ${days} días', other: 'Páquete en transito ${days} días')}";
 
-  static String m16(name) => "Firmado por: ${name}";
+  static m16(name) => "Firmado por: ${name}";
 
-  static String m17(time) =>
+  static m17(time) =>
       "El seguimiento no está disponible, porque ha pasado un poco de tiempo desde el último seguimiento. Por favor, inténtelo de nuevo después de ${time}";
 
-  static String m18(parcelName) => "• ${parcelName}";
+  static m18(parcelName) => "• ${parcelName}";
 
-  static String m19(title, body) => "${title}: ${body}";
+  static m19(title, body) => "${title}: ${body}";
 
-  static String m20(value) => "${value} lb";
+  static m20(value) => "${value} lb";
 
-  static String m21(howMany) =>
+  static m21(howMany) =>
       "${Intl.plural(howMany, one: 'Error al actualizar el paquete', other: 'Error al actualiza los paquetes')}";
 
-  static String m22(value) => "${value} sec.";
+  static m22(value) => "${value} sec.";
 
-  static String m23(count) => "Seleccionado: ${count}";
+  static m23(count) => "Seleccionado: ${count}";
 
-  static String m24(time) => "No más de una vez cada ${time}";
+  static m24(time) => "No más de una vez cada ${time}";
 
-  static String m25(value) => "${value} ft²";
+  static m25(value) => "${value} ft²";
 
-  static String m26(value) => "${value} m²";
+  static m26(value) => "${value} m²";
 
-  static String m27(value) => "${value} yd²";
+  static m27(value) => "${value} yd²";
 
-  static String m28(date) => "Seguimiento iniciado: ${date}";
+  static m28(date) => "Seguimiento iniciado: ${date}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
-  static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+  static _notInlinedMessages(_) => <String, Function>{
         "aboutApp": MessageLookupByLibrary.simpleMessage("Acerca de"),
         "accessKey": MessageLookupByLibrary.simpleMessage("Clave de acceso"),
         "accounts": MessageLookupByLibrary.simpleMessage("Cuentas"),

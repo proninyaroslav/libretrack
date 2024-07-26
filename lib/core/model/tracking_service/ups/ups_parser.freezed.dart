@@ -1,6 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'ups_parser.dart';
 
@@ -11,38 +12,11 @@ part of 'ups_parser.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
-class _$_DeliveryDetailTearOff {
-  const _$_DeliveryDetailTearOff();
-
-  _DeliveryDetailDelivery delivery(_DateTime dateTime) {
-    return _DeliveryDetailDelivery(
-      dateTime,
-    );
-  }
-
-  _DetailEstimatedDelivery estimatedDelivery(_DateTime dateTime) {
-    return _DetailEstimatedDelivery(
-      dateTime,
-    );
-  }
-
-  _DetailScheduledDelivery scheduledDelivery(_DateTime dateTime) {
-    return _DetailScheduledDelivery(
-      dateTime,
-    );
-  }
-}
-
-/// @nodoc
-const _$DeliveryDetail = _$_DeliveryDetailTearOff();
-
-/// @nodoc
-mixin _$_DeliveryDetail {
+mixin _$DeliveryDetail {
   _DateTime get dateTime => throw _privateConstructorUsedError;
-
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(_DateTime dateTime) delivery,
@@ -52,9 +26,9 @@ mixin _$_DeliveryDetail {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(_DateTime dateTime)? delivery,
-    TResult Function(_DateTime dateTime)? estimatedDelivery,
-    TResult Function(_DateTime dateTime)? scheduledDelivery,
+    TResult? Function(_DateTime dateTime)? delivery,
+    TResult? Function(_DateTime dateTime)? estimatedDelivery,
+    TResult? Function(_DateTime dateTime)? scheduledDelivery,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -74,9 +48,9 @@ mixin _$_DeliveryDetail {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_DeliveryDetailDelivery value)? delivery,
-    TResult Function(_DetailEstimatedDelivery value)? estimatedDelivery,
-    TResult Function(_DetailScheduledDelivery value)? scheduledDelivery,
+    TResult? Function(_DeliveryDetailDelivery value)? delivery,
+    TResult? Function(_DetailEstimatedDelivery value)? estimatedDelivery,
+    TResult? Function(_DetailScheduledDelivery value)? scheduledDelivery,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -97,59 +71,63 @@ mixin _$_DeliveryDetail {
 abstract class _$DeliveryDetailCopyWith<$Res> {
   factory _$DeliveryDetailCopyWith(
           _DeliveryDetail value, $Res Function(_DeliveryDetail) then) =
-      __$DeliveryDetailCopyWithImpl<$Res>;
+      __$DeliveryDetailCopyWithImpl<$Res, _DeliveryDetail>;
+  @useResult
   $Res call({_DateTime dateTime});
 }
 
 /// @nodoc
-class __$DeliveryDetailCopyWithImpl<$Res>
+class __$DeliveryDetailCopyWithImpl<$Res, $Val extends _DeliveryDetail>
     implements _$DeliveryDetailCopyWith<$Res> {
   __$DeliveryDetailCopyWithImpl(this._value, this._then);
 
-  final _DeliveryDetail _value;
   // ignore: unused_field
-  final $Res Function(_DeliveryDetail) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? dateTime = freezed,
+    Object? dateTime = null,
   }) {
     return _then(_value.copyWith(
-      dateTime: dateTime == freezed
+      dateTime: null == dateTime
           ? _value.dateTime
           : dateTime // ignore: cast_nullable_to_non_nullable
               as _DateTime,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$DeliveryDetailDeliveryCopyWith<$Res>
+abstract class _$$DeliveryDetailDeliveryImplCopyWith<$Res>
     implements _$DeliveryDetailCopyWith<$Res> {
-  factory _$DeliveryDetailDeliveryCopyWith(_DeliveryDetailDelivery value,
-          $Res Function(_DeliveryDetailDelivery) then) =
-      __$DeliveryDetailDeliveryCopyWithImpl<$Res>;
+  factory _$$DeliveryDetailDeliveryImplCopyWith(
+          _$DeliveryDetailDeliveryImpl value,
+          $Res Function(_$DeliveryDetailDeliveryImpl) then) =
+      __$$DeliveryDetailDeliveryImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({_DateTime dateTime});
 }
 
 /// @nodoc
-class __$DeliveryDetailDeliveryCopyWithImpl<$Res>
-    extends __$DeliveryDetailCopyWithImpl<$Res>
-    implements _$DeliveryDetailDeliveryCopyWith<$Res> {
-  __$DeliveryDetailDeliveryCopyWithImpl(_DeliveryDetailDelivery _value,
-      $Res Function(_DeliveryDetailDelivery) _then)
-      : super(_value, (v) => _then(v as _DeliveryDetailDelivery));
+class __$$DeliveryDetailDeliveryImplCopyWithImpl<$Res>
+    extends __$DeliveryDetailCopyWithImpl<$Res, _$DeliveryDetailDeliveryImpl>
+    implements _$$DeliveryDetailDeliveryImplCopyWith<$Res> {
+  __$$DeliveryDetailDeliveryImplCopyWithImpl(
+      _$DeliveryDetailDeliveryImpl _value,
+      $Res Function(_$DeliveryDetailDeliveryImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _DeliveryDetailDelivery get _value => super._value as _DeliveryDetailDelivery;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? dateTime = freezed,
+    Object? dateTime = null,
   }) {
-    return _then(_DeliveryDetailDelivery(
-      dateTime == freezed
+    return _then(_$DeliveryDetailDeliveryImpl(
+      null == dateTime
           ? _value.dateTime
           : dateTime // ignore: cast_nullable_to_non_nullable
               as _DateTime,
@@ -159,10 +137,10 @@ class __$DeliveryDetailDeliveryCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_DeliveryDetailDelivery
+class _$DeliveryDetailDeliveryImpl
     with DiagnosticableTreeMixin
     implements _DeliveryDetailDelivery {
-  _$_DeliveryDetailDelivery(this.dateTime);
+  _$DeliveryDetailDeliveryImpl(this.dateTime);
 
   @override
   final _DateTime dateTime;
@@ -181,23 +159,23 @@ class _$_DeliveryDetailDelivery
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is _DeliveryDetailDelivery &&
+        (other.runtimeType == runtimeType &&
+            other is _$DeliveryDetailDeliveryImpl &&
             (identical(other.dateTime, dateTime) ||
-                const DeepCollectionEquality()
-                    .equals(other.dateTime, dateTime)));
+                other.dateTime == dateTime));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(dateTime);
+  int get hashCode => Object.hash(runtimeType, dateTime);
 
   @JsonKey(ignore: true)
   @override
-  _$DeliveryDetailDeliveryCopyWith<_DeliveryDetailDelivery> get copyWith =>
-      __$DeliveryDetailDeliveryCopyWithImpl<_DeliveryDetailDelivery>(
-          this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$DeliveryDetailDeliveryImplCopyWith<_$DeliveryDetailDeliveryImpl>
+      get copyWith => __$$DeliveryDetailDeliveryImplCopyWithImpl<
+          _$DeliveryDetailDeliveryImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -212,9 +190,9 @@ class _$_DeliveryDetailDelivery
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(_DateTime dateTime)? delivery,
-    TResult Function(_DateTime dateTime)? estimatedDelivery,
-    TResult Function(_DateTime dateTime)? scheduledDelivery,
+    TResult? Function(_DateTime dateTime)? delivery,
+    TResult? Function(_DateTime dateTime)? estimatedDelivery,
+    TResult? Function(_DateTime dateTime)? scheduledDelivery,
   }) {
     return delivery?.call(dateTime);
   }
@@ -246,9 +224,9 @@ class _$_DeliveryDetailDelivery
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_DeliveryDetailDelivery value)? delivery,
-    TResult Function(_DetailEstimatedDelivery value)? estimatedDelivery,
-    TResult Function(_DetailScheduledDelivery value)? scheduledDelivery,
+    TResult? Function(_DeliveryDetailDelivery value)? delivery,
+    TResult? Function(_DetailEstimatedDelivery value)? estimatedDelivery,
+    TResult? Function(_DetailScheduledDelivery value)? scheduledDelivery,
   }) {
     return delivery?.call(this);
   }
@@ -269,45 +247,45 @@ class _$_DeliveryDetailDelivery
 }
 
 abstract class _DeliveryDetailDelivery implements _DeliveryDetail {
-  factory _DeliveryDetailDelivery(_DateTime dateTime) =
-      _$_DeliveryDetailDelivery;
+  factory _DeliveryDetailDelivery(final _DateTime dateTime) =
+      _$DeliveryDetailDeliveryImpl;
 
   @override
-  _DateTime get dateTime => throw _privateConstructorUsedError;
+  _DateTime get dateTime;
   @override
   @JsonKey(ignore: true)
-  _$DeliveryDetailDeliveryCopyWith<_DeliveryDetailDelivery> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$DeliveryDetailDeliveryImplCopyWith<_$DeliveryDetailDeliveryImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$DetailEstimatedDeliveryCopyWith<$Res>
+abstract class _$$DetailEstimatedDeliveryImplCopyWith<$Res>
     implements _$DeliveryDetailCopyWith<$Res> {
-  factory _$DetailEstimatedDeliveryCopyWith(_DetailEstimatedDelivery value,
-          $Res Function(_DetailEstimatedDelivery) then) =
-      __$DetailEstimatedDeliveryCopyWithImpl<$Res>;
+  factory _$$DetailEstimatedDeliveryImplCopyWith(
+          _$DetailEstimatedDeliveryImpl value,
+          $Res Function(_$DetailEstimatedDeliveryImpl) then) =
+      __$$DetailEstimatedDeliveryImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({_DateTime dateTime});
 }
 
 /// @nodoc
-class __$DetailEstimatedDeliveryCopyWithImpl<$Res>
-    extends __$DeliveryDetailCopyWithImpl<$Res>
-    implements _$DetailEstimatedDeliveryCopyWith<$Res> {
-  __$DetailEstimatedDeliveryCopyWithImpl(_DetailEstimatedDelivery _value,
-      $Res Function(_DetailEstimatedDelivery) _then)
-      : super(_value, (v) => _then(v as _DetailEstimatedDelivery));
+class __$$DetailEstimatedDeliveryImplCopyWithImpl<$Res>
+    extends __$DeliveryDetailCopyWithImpl<$Res, _$DetailEstimatedDeliveryImpl>
+    implements _$$DetailEstimatedDeliveryImplCopyWith<$Res> {
+  __$$DetailEstimatedDeliveryImplCopyWithImpl(
+      _$DetailEstimatedDeliveryImpl _value,
+      $Res Function(_$DetailEstimatedDeliveryImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _DetailEstimatedDelivery get _value =>
-      super._value as _DetailEstimatedDelivery;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? dateTime = freezed,
+    Object? dateTime = null,
   }) {
-    return _then(_DetailEstimatedDelivery(
-      dateTime == freezed
+    return _then(_$DetailEstimatedDeliveryImpl(
+      null == dateTime
           ? _value.dateTime
           : dateTime // ignore: cast_nullable_to_non_nullable
               as _DateTime,
@@ -317,10 +295,10 @@ class __$DetailEstimatedDeliveryCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_DetailEstimatedDelivery
+class _$DetailEstimatedDeliveryImpl
     with DiagnosticableTreeMixin
     implements _DetailEstimatedDelivery {
-  _$_DetailEstimatedDelivery(this.dateTime);
+  _$DetailEstimatedDeliveryImpl(this.dateTime);
 
   @override
   final _DateTime dateTime;
@@ -339,23 +317,23 @@ class _$_DetailEstimatedDelivery
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is _DetailEstimatedDelivery &&
+        (other.runtimeType == runtimeType &&
+            other is _$DetailEstimatedDeliveryImpl &&
             (identical(other.dateTime, dateTime) ||
-                const DeepCollectionEquality()
-                    .equals(other.dateTime, dateTime)));
+                other.dateTime == dateTime));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(dateTime);
+  int get hashCode => Object.hash(runtimeType, dateTime);
 
   @JsonKey(ignore: true)
   @override
-  _$DetailEstimatedDeliveryCopyWith<_DetailEstimatedDelivery> get copyWith =>
-      __$DetailEstimatedDeliveryCopyWithImpl<_DetailEstimatedDelivery>(
-          this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$DetailEstimatedDeliveryImplCopyWith<_$DetailEstimatedDeliveryImpl>
+      get copyWith => __$$DetailEstimatedDeliveryImplCopyWithImpl<
+          _$DetailEstimatedDeliveryImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -370,9 +348,9 @@ class _$_DetailEstimatedDelivery
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(_DateTime dateTime)? delivery,
-    TResult Function(_DateTime dateTime)? estimatedDelivery,
-    TResult Function(_DateTime dateTime)? scheduledDelivery,
+    TResult? Function(_DateTime dateTime)? delivery,
+    TResult? Function(_DateTime dateTime)? estimatedDelivery,
+    TResult? Function(_DateTime dateTime)? scheduledDelivery,
   }) {
     return estimatedDelivery?.call(dateTime);
   }
@@ -404,9 +382,9 @@ class _$_DetailEstimatedDelivery
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_DeliveryDetailDelivery value)? delivery,
-    TResult Function(_DetailEstimatedDelivery value)? estimatedDelivery,
-    TResult Function(_DetailScheduledDelivery value)? scheduledDelivery,
+    TResult? Function(_DeliveryDetailDelivery value)? delivery,
+    TResult? Function(_DetailEstimatedDelivery value)? estimatedDelivery,
+    TResult? Function(_DetailScheduledDelivery value)? scheduledDelivery,
   }) {
     return estimatedDelivery?.call(this);
   }
@@ -427,45 +405,45 @@ class _$_DetailEstimatedDelivery
 }
 
 abstract class _DetailEstimatedDelivery implements _DeliveryDetail {
-  factory _DetailEstimatedDelivery(_DateTime dateTime) =
-      _$_DetailEstimatedDelivery;
+  factory _DetailEstimatedDelivery(final _DateTime dateTime) =
+      _$DetailEstimatedDeliveryImpl;
 
   @override
-  _DateTime get dateTime => throw _privateConstructorUsedError;
+  _DateTime get dateTime;
   @override
   @JsonKey(ignore: true)
-  _$DetailEstimatedDeliveryCopyWith<_DetailEstimatedDelivery> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$DetailEstimatedDeliveryImplCopyWith<_$DetailEstimatedDeliveryImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$DetailScheduledDeliveryCopyWith<$Res>
+abstract class _$$DetailScheduledDeliveryImplCopyWith<$Res>
     implements _$DeliveryDetailCopyWith<$Res> {
-  factory _$DetailScheduledDeliveryCopyWith(_DetailScheduledDelivery value,
-          $Res Function(_DetailScheduledDelivery) then) =
-      __$DetailScheduledDeliveryCopyWithImpl<$Res>;
+  factory _$$DetailScheduledDeliveryImplCopyWith(
+          _$DetailScheduledDeliveryImpl value,
+          $Res Function(_$DetailScheduledDeliveryImpl) then) =
+      __$$DetailScheduledDeliveryImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({_DateTime dateTime});
 }
 
 /// @nodoc
-class __$DetailScheduledDeliveryCopyWithImpl<$Res>
-    extends __$DeliveryDetailCopyWithImpl<$Res>
-    implements _$DetailScheduledDeliveryCopyWith<$Res> {
-  __$DetailScheduledDeliveryCopyWithImpl(_DetailScheduledDelivery _value,
-      $Res Function(_DetailScheduledDelivery) _then)
-      : super(_value, (v) => _then(v as _DetailScheduledDelivery));
+class __$$DetailScheduledDeliveryImplCopyWithImpl<$Res>
+    extends __$DeliveryDetailCopyWithImpl<$Res, _$DetailScheduledDeliveryImpl>
+    implements _$$DetailScheduledDeliveryImplCopyWith<$Res> {
+  __$$DetailScheduledDeliveryImplCopyWithImpl(
+      _$DetailScheduledDeliveryImpl _value,
+      $Res Function(_$DetailScheduledDeliveryImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _DetailScheduledDelivery get _value =>
-      super._value as _DetailScheduledDelivery;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? dateTime = freezed,
+    Object? dateTime = null,
   }) {
-    return _then(_DetailScheduledDelivery(
-      dateTime == freezed
+    return _then(_$DetailScheduledDeliveryImpl(
+      null == dateTime
           ? _value.dateTime
           : dateTime // ignore: cast_nullable_to_non_nullable
               as _DateTime,
@@ -475,10 +453,10 @@ class __$DetailScheduledDeliveryCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_DetailScheduledDelivery
+class _$DetailScheduledDeliveryImpl
     with DiagnosticableTreeMixin
     implements _DetailScheduledDelivery {
-  _$_DetailScheduledDelivery(this.dateTime);
+  _$DetailScheduledDeliveryImpl(this.dateTime);
 
   @override
   final _DateTime dateTime;
@@ -497,23 +475,23 @@ class _$_DetailScheduledDelivery
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is _DetailScheduledDelivery &&
+        (other.runtimeType == runtimeType &&
+            other is _$DetailScheduledDeliveryImpl &&
             (identical(other.dateTime, dateTime) ||
-                const DeepCollectionEquality()
-                    .equals(other.dateTime, dateTime)));
+                other.dateTime == dateTime));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(dateTime);
+  int get hashCode => Object.hash(runtimeType, dateTime);
 
   @JsonKey(ignore: true)
   @override
-  _$DetailScheduledDeliveryCopyWith<_DetailScheduledDelivery> get copyWith =>
-      __$DetailScheduledDeliveryCopyWithImpl<_DetailScheduledDelivery>(
-          this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$DetailScheduledDeliveryImplCopyWith<_$DetailScheduledDeliveryImpl>
+      get copyWith => __$$DetailScheduledDeliveryImplCopyWithImpl<
+          _$DetailScheduledDeliveryImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -528,9 +506,9 @@ class _$_DetailScheduledDelivery
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(_DateTime dateTime)? delivery,
-    TResult Function(_DateTime dateTime)? estimatedDelivery,
-    TResult Function(_DateTime dateTime)? scheduledDelivery,
+    TResult? Function(_DateTime dateTime)? delivery,
+    TResult? Function(_DateTime dateTime)? estimatedDelivery,
+    TResult? Function(_DateTime dateTime)? scheduledDelivery,
   }) {
     return scheduledDelivery?.call(dateTime);
   }
@@ -562,9 +540,9 @@ class _$_DetailScheduledDelivery
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_DeliveryDetailDelivery value)? delivery,
-    TResult Function(_DetailEstimatedDelivery value)? estimatedDelivery,
-    TResult Function(_DetailScheduledDelivery value)? scheduledDelivery,
+    TResult? Function(_DeliveryDetailDelivery value)? delivery,
+    TResult? Function(_DetailEstimatedDelivery value)? estimatedDelivery,
+    TResult? Function(_DetailScheduledDelivery value)? scheduledDelivery,
   }) {
     return scheduledDelivery?.call(this);
   }
@@ -585,41 +563,20 @@ class _$_DetailScheduledDelivery
 }
 
 abstract class _DetailScheduledDelivery implements _DeliveryDetail {
-  factory _DetailScheduledDelivery(_DateTime dateTime) =
-      _$_DetailScheduledDelivery;
+  factory _DetailScheduledDelivery(final _DateTime dateTime) =
+      _$DetailScheduledDeliveryImpl;
 
   @override
-  _DateTime get dateTime => throw _privateConstructorUsedError;
+  _DateTime get dateTime;
   @override
   @JsonKey(ignore: true)
-  _$DetailScheduledDeliveryCopyWith<_DetailScheduledDelivery> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$DetailScheduledDeliveryImplCopyWith<_$DetailScheduledDeliveryImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-class _$_ShipmentAddressTearOff {
-  const _$_ShipmentAddressTearOff();
-
-  _ShipmentAddressShipper shipper(Address address) {
-    return _ShipmentAddressShipper(
-      address,
-    );
-  }
-
-  _ShipmentAddressShipTo shipTo(Address address) {
-    return _ShipmentAddressShipTo(
-      address,
-    );
-  }
-}
-
-/// @nodoc
-const _$ShipmentAddress = _$_ShipmentAddressTearOff();
-
-/// @nodoc
-mixin _$_ShipmentAddress {
+mixin _$ShipmentAddress {
   Address get address => throw _privateConstructorUsedError;
-
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(Address address) shipper,
@@ -628,8 +585,8 @@ mixin _$_ShipmentAddress {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(Address address)? shipper,
-    TResult Function(Address address)? shipTo,
+    TResult? Function(Address address)? shipper,
+    TResult? Function(Address address)? shipTo,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -647,8 +604,8 @@ mixin _$_ShipmentAddress {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_ShipmentAddressShipper value)? shipper,
-    TResult Function(_ShipmentAddressShipTo value)? shipTo,
+    TResult? Function(_ShipmentAddressShipper value)? shipper,
+    TResult? Function(_ShipmentAddressShipTo value)? shipTo,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -668,48 +625,54 @@ mixin _$_ShipmentAddress {
 abstract class _$ShipmentAddressCopyWith<$Res> {
   factory _$ShipmentAddressCopyWith(
           _ShipmentAddress value, $Res Function(_ShipmentAddress) then) =
-      __$ShipmentAddressCopyWithImpl<$Res>;
+      __$ShipmentAddressCopyWithImpl<$Res, _ShipmentAddress>;
+  @useResult
   $Res call({Address address});
 
   $AddressCopyWith<$Res> get address;
 }
 
 /// @nodoc
-class __$ShipmentAddressCopyWithImpl<$Res>
+class __$ShipmentAddressCopyWithImpl<$Res, $Val extends _ShipmentAddress>
     implements _$ShipmentAddressCopyWith<$Res> {
   __$ShipmentAddressCopyWithImpl(this._value, this._then);
 
-  final _ShipmentAddress _value;
   // ignore: unused_field
-  final $Res Function(_ShipmentAddress) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? address = freezed,
+    Object? address = null,
   }) {
     return _then(_value.copyWith(
-      address: address == freezed
+      address: null == address
           ? _value.address
           : address // ignore: cast_nullable_to_non_nullable
               as Address,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $AddressCopyWith<$Res> get address {
     return $AddressCopyWith<$Res>(_value.address, (value) {
-      return _then(_value.copyWith(address: value));
+      return _then(_value.copyWith(address: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$ShipmentAddressShipperCopyWith<$Res>
+abstract class _$$ShipmentAddressShipperImplCopyWith<$Res>
     implements _$ShipmentAddressCopyWith<$Res> {
-  factory _$ShipmentAddressShipperCopyWith(_ShipmentAddressShipper value,
-          $Res Function(_ShipmentAddressShipper) then) =
-      __$ShipmentAddressShipperCopyWithImpl<$Res>;
+  factory _$$ShipmentAddressShipperImplCopyWith(
+          _$ShipmentAddressShipperImpl value,
+          $Res Function(_$ShipmentAddressShipperImpl) then) =
+      __$$ShipmentAddressShipperImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({Address address});
 
   @override
@@ -717,22 +680,21 @@ abstract class _$ShipmentAddressShipperCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ShipmentAddressShipperCopyWithImpl<$Res>
-    extends __$ShipmentAddressCopyWithImpl<$Res>
-    implements _$ShipmentAddressShipperCopyWith<$Res> {
-  __$ShipmentAddressShipperCopyWithImpl(_ShipmentAddressShipper _value,
-      $Res Function(_ShipmentAddressShipper) _then)
-      : super(_value, (v) => _then(v as _ShipmentAddressShipper));
+class __$$ShipmentAddressShipperImplCopyWithImpl<$Res>
+    extends __$ShipmentAddressCopyWithImpl<$Res, _$ShipmentAddressShipperImpl>
+    implements _$$ShipmentAddressShipperImplCopyWith<$Res> {
+  __$$ShipmentAddressShipperImplCopyWithImpl(
+      _$ShipmentAddressShipperImpl _value,
+      $Res Function(_$ShipmentAddressShipperImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _ShipmentAddressShipper get _value => super._value as _ShipmentAddressShipper;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? address = freezed,
+    Object? address = null,
   }) {
-    return _then(_ShipmentAddressShipper(
-      address == freezed
+    return _then(_$ShipmentAddressShipperImpl(
+      null == address
           ? _value.address
           : address // ignore: cast_nullable_to_non_nullable
               as Address,
@@ -742,10 +704,10 @@ class __$ShipmentAddressShipperCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_ShipmentAddressShipper
+class _$ShipmentAddressShipperImpl
     with DiagnosticableTreeMixin
     implements _ShipmentAddressShipper {
-  const _$_ShipmentAddressShipper(this.address);
+  const _$ShipmentAddressShipperImpl(this.address);
 
   @override
   final Address address;
@@ -764,22 +726,22 @@ class _$_ShipmentAddressShipper
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is _ShipmentAddressShipper &&
-            (identical(other.address, address) ||
-                const DeepCollectionEquality().equals(other.address, address)));
+        (other.runtimeType == runtimeType &&
+            other is _$ShipmentAddressShipperImpl &&
+            (identical(other.address, address) || other.address == address));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(address);
+  int get hashCode => Object.hash(runtimeType, address);
 
   @JsonKey(ignore: true)
   @override
-  _$ShipmentAddressShipperCopyWith<_ShipmentAddressShipper> get copyWith =>
-      __$ShipmentAddressShipperCopyWithImpl<_ShipmentAddressShipper>(
-          this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$ShipmentAddressShipperImplCopyWith<_$ShipmentAddressShipperImpl>
+      get copyWith => __$$ShipmentAddressShipperImplCopyWithImpl<
+          _$ShipmentAddressShipperImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -793,8 +755,8 @@ class _$_ShipmentAddressShipper
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(Address address)? shipper,
-    TResult Function(Address address)? shipTo,
+    TResult? Function(Address address)? shipper,
+    TResult? Function(Address address)? shipTo,
   }) {
     return shipper?.call(address);
   }
@@ -824,8 +786,8 @@ class _$_ShipmentAddressShipper
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_ShipmentAddressShipper value)? shipper,
-    TResult Function(_ShipmentAddressShipTo value)? shipTo,
+    TResult? Function(_ShipmentAddressShipper value)? shipper,
+    TResult? Function(_ShipmentAddressShipTo value)? shipTo,
   }) {
     return shipper?.call(this);
   }
@@ -845,24 +807,26 @@ class _$_ShipmentAddressShipper
 }
 
 abstract class _ShipmentAddressShipper implements _ShipmentAddress {
-  const factory _ShipmentAddressShipper(Address address) =
-      _$_ShipmentAddressShipper;
+  const factory _ShipmentAddressShipper(final Address address) =
+      _$ShipmentAddressShipperImpl;
 
   @override
-  Address get address => throw _privateConstructorUsedError;
+  Address get address;
   @override
   @JsonKey(ignore: true)
-  _$ShipmentAddressShipperCopyWith<_ShipmentAddressShipper> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$ShipmentAddressShipperImplCopyWith<_$ShipmentAddressShipperImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$ShipmentAddressShipToCopyWith<$Res>
+abstract class _$$ShipmentAddressShipToImplCopyWith<$Res>
     implements _$ShipmentAddressCopyWith<$Res> {
-  factory _$ShipmentAddressShipToCopyWith(_ShipmentAddressShipTo value,
-          $Res Function(_ShipmentAddressShipTo) then) =
-      __$ShipmentAddressShipToCopyWithImpl<$Res>;
+  factory _$$ShipmentAddressShipToImplCopyWith(
+          _$ShipmentAddressShipToImpl value,
+          $Res Function(_$ShipmentAddressShipToImpl) then) =
+      __$$ShipmentAddressShipToImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({Address address});
 
   @override
@@ -870,22 +834,20 @@ abstract class _$ShipmentAddressShipToCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ShipmentAddressShipToCopyWithImpl<$Res>
-    extends __$ShipmentAddressCopyWithImpl<$Res>
-    implements _$ShipmentAddressShipToCopyWith<$Res> {
-  __$ShipmentAddressShipToCopyWithImpl(_ShipmentAddressShipTo _value,
-      $Res Function(_ShipmentAddressShipTo) _then)
-      : super(_value, (v) => _then(v as _ShipmentAddressShipTo));
+class __$$ShipmentAddressShipToImplCopyWithImpl<$Res>
+    extends __$ShipmentAddressCopyWithImpl<$Res, _$ShipmentAddressShipToImpl>
+    implements _$$ShipmentAddressShipToImplCopyWith<$Res> {
+  __$$ShipmentAddressShipToImplCopyWithImpl(_$ShipmentAddressShipToImpl _value,
+      $Res Function(_$ShipmentAddressShipToImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _ShipmentAddressShipTo get _value => super._value as _ShipmentAddressShipTo;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? address = freezed,
+    Object? address = null,
   }) {
-    return _then(_ShipmentAddressShipTo(
-      address == freezed
+    return _then(_$ShipmentAddressShipToImpl(
+      null == address
           ? _value.address
           : address // ignore: cast_nullable_to_non_nullable
               as Address,
@@ -895,10 +857,10 @@ class __$ShipmentAddressShipToCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_ShipmentAddressShipTo
+class _$ShipmentAddressShipToImpl
     with DiagnosticableTreeMixin
     implements _ShipmentAddressShipTo {
-  const _$_ShipmentAddressShipTo(this.address);
+  const _$ShipmentAddressShipToImpl(this.address);
 
   @override
   final Address address;
@@ -917,22 +879,22 @@ class _$_ShipmentAddressShipTo
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is _ShipmentAddressShipTo &&
-            (identical(other.address, address) ||
-                const DeepCollectionEquality().equals(other.address, address)));
+        (other.runtimeType == runtimeType &&
+            other is _$ShipmentAddressShipToImpl &&
+            (identical(other.address, address) || other.address == address));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(address);
+  int get hashCode => Object.hash(runtimeType, address);
 
   @JsonKey(ignore: true)
   @override
-  _$ShipmentAddressShipToCopyWith<_ShipmentAddressShipTo> get copyWith =>
-      __$ShipmentAddressShipToCopyWithImpl<_ShipmentAddressShipTo>(
-          this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$ShipmentAddressShipToImplCopyWith<_$ShipmentAddressShipToImpl>
+      get copyWith => __$$ShipmentAddressShipToImplCopyWithImpl<
+          _$ShipmentAddressShipToImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -946,8 +908,8 @@ class _$_ShipmentAddressShipTo
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(Address address)? shipper,
-    TResult Function(Address address)? shipTo,
+    TResult? Function(Address address)? shipper,
+    TResult? Function(Address address)? shipTo,
   }) {
     return shipTo?.call(address);
   }
@@ -977,8 +939,8 @@ class _$_ShipmentAddressShipTo
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_ShipmentAddressShipper value)? shipper,
-    TResult Function(_ShipmentAddressShipTo value)? shipTo,
+    TResult? Function(_ShipmentAddressShipper value)? shipper,
+    TResult? Function(_ShipmentAddressShipTo value)? shipTo,
   }) {
     return shipTo?.call(this);
   }
@@ -998,13 +960,13 @@ class _$_ShipmentAddressShipTo
 }
 
 abstract class _ShipmentAddressShipTo implements _ShipmentAddress {
-  const factory _ShipmentAddressShipTo(Address address) =
-      _$_ShipmentAddressShipTo;
+  const factory _ShipmentAddressShipTo(final Address address) =
+      _$ShipmentAddressShipToImpl;
 
   @override
-  Address get address => throw _privateConstructorUsedError;
+  Address get address;
   @override
   @JsonKey(ignore: true)
-  _$ShipmentAddressShipToCopyWith<_ShipmentAddressShipTo> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$ShipmentAddressShipToImplCopyWith<_$ShipmentAddressShipToImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

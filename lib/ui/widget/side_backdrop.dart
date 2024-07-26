@@ -36,10 +36,10 @@ class SideBackdrop extends InheritedWidget {
 
   /// Creates a [SideBackdrop] instance.
   const SideBackdrop({
-    Key? key,
+    super.key,
     required this.data,
-    required Widget child,
-  }) : super(key: key, child: child);
+    required super.child,
+  });
 
   /// Provides access to the state from everywhere in the widget tree.
   static SideBackdropScaffoldState of(BuildContext context) =>
@@ -216,7 +216,7 @@ class SideBackdropScaffold extends StatefulWidget {
   final bool endDrawerEnableOpenDragGesture;
 
   const SideBackdropScaffold({
-    Key? key,
+    super.key,
     this.startSideController,
     this.endSideController,
     this.startSide,
@@ -261,8 +261,7 @@ class SideBackdropScaffold extends StatefulWidget {
         assert(
           startSide != null || endSide != null,
           'StartSide or/and endSide must be provided',
-        ),
-        super(key: key);
+        );
 
   @override
   SideBackdropScaffoldState createState() => SideBackdropScaffoldState();
@@ -746,10 +745,9 @@ class _MeasureSize extends StatefulWidget {
   final ValueChanged<Size> onChange;
 
   const _MeasureSize({
-    Key? key,
     required this.onChange,
     required this.child,
-  }) : super(key: key);
+  });
 
   @override
   _MeasureSizeState createState() => _MeasureSizeState();
@@ -772,10 +770,10 @@ class _MeasureSizeState extends State<_MeasureSize> {
 
   @override
   Widget build(BuildContext context) {
-    SchedulerBinding.instance!.addPostFrameCallback((_) => _notify());
+    SchedulerBinding.instance.addPostFrameCallback((_) => _notify());
     return NotificationListener<SizeChangedLayoutNotification>(
       onNotification: (_) {
-        SchedulerBinding.instance!.addPostFrameCallback((_) => _notify());
+        SchedulerBinding.instance.addPostFrameCallback((_) => _notify());
         return true;
       },
       child: SizeChangedLayoutNotifier(

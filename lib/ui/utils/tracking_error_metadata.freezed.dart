@@ -1,6 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'tracking_error_metadata.dart';
 
@@ -11,26 +12,7 @@ part of 'tracking_error_metadata.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$TrackingErrorMetadataTearOff {
-  const _$TrackingErrorMetadataTearOff();
-
-  _TrackingErrorMetadata call(
-      {required TrackingError error,
-      required String localizedMessage,
-      required bool isReportable}) {
-    return _TrackingErrorMetadata(
-      error: error,
-      localizedMessage: localizedMessage,
-      isReportable: isReportable,
-    );
-  }
-}
-
-/// @nodoc
-const $TrackingErrorMetadata = _$TrackingErrorMetadataTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$TrackingErrorMetadata {
@@ -47,58 +29,65 @@ mixin _$TrackingErrorMetadata {
 abstract class $TrackingErrorMetadataCopyWith<$Res> {
   factory $TrackingErrorMetadataCopyWith(TrackingErrorMetadata value,
           $Res Function(TrackingErrorMetadata) then) =
-      _$TrackingErrorMetadataCopyWithImpl<$Res>;
+      _$TrackingErrorMetadataCopyWithImpl<$Res, TrackingErrorMetadata>;
+  @useResult
   $Res call({TrackingError error, String localizedMessage, bool isReportable});
 
   $TrackingErrorCopyWith<$Res> get error;
 }
 
 /// @nodoc
-class _$TrackingErrorMetadataCopyWithImpl<$Res>
+class _$TrackingErrorMetadataCopyWithImpl<$Res,
+        $Val extends TrackingErrorMetadata>
     implements $TrackingErrorMetadataCopyWith<$Res> {
   _$TrackingErrorMetadataCopyWithImpl(this._value, this._then);
 
-  final TrackingErrorMetadata _value;
   // ignore: unused_field
-  final $Res Function(TrackingErrorMetadata) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? error = freezed,
-    Object? localizedMessage = freezed,
-    Object? isReportable = freezed,
+    Object? error = null,
+    Object? localizedMessage = null,
+    Object? isReportable = null,
   }) {
     return _then(_value.copyWith(
-      error: error == freezed
+      error: null == error
           ? _value.error
           : error // ignore: cast_nullable_to_non_nullable
               as TrackingError,
-      localizedMessage: localizedMessage == freezed
+      localizedMessage: null == localizedMessage
           ? _value.localizedMessage
           : localizedMessage // ignore: cast_nullable_to_non_nullable
               as String,
-      isReportable: isReportable == freezed
+      isReportable: null == isReportable
           ? _value.isReportable
           : isReportable // ignore: cast_nullable_to_non_nullable
               as bool,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $TrackingErrorCopyWith<$Res> get error {
     return $TrackingErrorCopyWith<$Res>(_value.error, (value) {
-      return _then(_value.copyWith(error: value));
+      return _then(_value.copyWith(error: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$TrackingErrorMetadataCopyWith<$Res>
+abstract class _$$TrackingErrorMetadataImplCopyWith<$Res>
     implements $TrackingErrorMetadataCopyWith<$Res> {
-  factory _$TrackingErrorMetadataCopyWith(_TrackingErrorMetadata value,
-          $Res Function(_TrackingErrorMetadata) then) =
-      __$TrackingErrorMetadataCopyWithImpl<$Res>;
+  factory _$$TrackingErrorMetadataImplCopyWith(
+          _$TrackingErrorMetadataImpl value,
+          $Res Function(_$TrackingErrorMetadataImpl) then) =
+      __$$TrackingErrorMetadataImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({TrackingError error, String localizedMessage, bool isReportable});
 
   @override
@@ -106,32 +95,31 @@ abstract class _$TrackingErrorMetadataCopyWith<$Res>
 }
 
 /// @nodoc
-class __$TrackingErrorMetadataCopyWithImpl<$Res>
-    extends _$TrackingErrorMetadataCopyWithImpl<$Res>
-    implements _$TrackingErrorMetadataCopyWith<$Res> {
-  __$TrackingErrorMetadataCopyWithImpl(_TrackingErrorMetadata _value,
-      $Res Function(_TrackingErrorMetadata) _then)
-      : super(_value, (v) => _then(v as _TrackingErrorMetadata));
+class __$$TrackingErrorMetadataImplCopyWithImpl<$Res>
+    extends _$TrackingErrorMetadataCopyWithImpl<$Res,
+        _$TrackingErrorMetadataImpl>
+    implements _$$TrackingErrorMetadataImplCopyWith<$Res> {
+  __$$TrackingErrorMetadataImplCopyWithImpl(_$TrackingErrorMetadataImpl _value,
+      $Res Function(_$TrackingErrorMetadataImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _TrackingErrorMetadata get _value => super._value as _TrackingErrorMetadata;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? error = freezed,
-    Object? localizedMessage = freezed,
-    Object? isReportable = freezed,
+    Object? error = null,
+    Object? localizedMessage = null,
+    Object? isReportable = null,
   }) {
-    return _then(_TrackingErrorMetadata(
-      error: error == freezed
+    return _then(_$TrackingErrorMetadataImpl(
+      error: null == error
           ? _value.error
           : error // ignore: cast_nullable_to_non_nullable
               as TrackingError,
-      localizedMessage: localizedMessage == freezed
+      localizedMessage: null == localizedMessage
           ? _value.localizedMessage
           : localizedMessage // ignore: cast_nullable_to_non_nullable
               as String,
-      isReportable: isReportable == freezed
+      isReportable: null == isReportable
           ? _value.isReportable
           : isReportable // ignore: cast_nullable_to_non_nullable
               as bool,
@@ -141,8 +129,8 @@ class __$TrackingErrorMetadataCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_TrackingErrorMetadata implements _TrackingErrorMetadata {
-  const _$_TrackingErrorMetadata(
+class _$TrackingErrorMetadataImpl implements _TrackingErrorMetadata {
+  const _$TrackingErrorMetadataImpl(
       {required this.error,
       required this.localizedMessage,
       required this.isReportable});
@@ -160,47 +148,43 @@ class _$_TrackingErrorMetadata implements _TrackingErrorMetadata {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is _TrackingErrorMetadata &&
-            (identical(other.error, error) ||
-                const DeepCollectionEquality().equals(other.error, error)) &&
+        (other.runtimeType == runtimeType &&
+            other is _$TrackingErrorMetadataImpl &&
+            (identical(other.error, error) || other.error == error) &&
             (identical(other.localizedMessage, localizedMessage) ||
-                const DeepCollectionEquality()
-                    .equals(other.localizedMessage, localizedMessage)) &&
+                other.localizedMessage == localizedMessage) &&
             (identical(other.isReportable, isReportable) ||
-                const DeepCollectionEquality()
-                    .equals(other.isReportable, isReportable)));
+                other.isReportable == isReportable));
   }
 
   @override
   int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(error) ^
-      const DeepCollectionEquality().hash(localizedMessage) ^
-      const DeepCollectionEquality().hash(isReportable);
+      Object.hash(runtimeType, error, localizedMessage, isReportable);
 
   @JsonKey(ignore: true)
   @override
-  _$TrackingErrorMetadataCopyWith<_TrackingErrorMetadata> get copyWith =>
-      __$TrackingErrorMetadataCopyWithImpl<_TrackingErrorMetadata>(
-          this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$TrackingErrorMetadataImplCopyWith<_$TrackingErrorMetadataImpl>
+      get copyWith => __$$TrackingErrorMetadataImplCopyWithImpl<
+          _$TrackingErrorMetadataImpl>(this, _$identity);
 }
 
 abstract class _TrackingErrorMetadata implements TrackingErrorMetadata {
   const factory _TrackingErrorMetadata(
-      {required TrackingError error,
-      required String localizedMessage,
-      required bool isReportable}) = _$_TrackingErrorMetadata;
+      {required final TrackingError error,
+      required final String localizedMessage,
+      required final bool isReportable}) = _$TrackingErrorMetadataImpl;
 
   @override
-  TrackingError get error => throw _privateConstructorUsedError;
+  TrackingError get error;
   @override
-  String get localizedMessage => throw _privateConstructorUsedError;
+  String get localizedMessage;
   @override
-  bool get isReportable => throw _privateConstructorUsedError;
+  bool get isReportable;
   @override
   @JsonKey(ignore: true)
-  _$TrackingErrorMetadataCopyWith<_TrackingErrorMetadata> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$TrackingErrorMetadataImplCopyWith<_$TrackingErrorMetadataImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

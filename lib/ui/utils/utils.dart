@@ -85,9 +85,9 @@ class UiUtils {
         ),
       )
       .toList()
-        ..sort(
-          (a, b) => a.value.compareTo(b.value),
-        );
+    ..sort(
+      (a, b) => a.value.compareTo(b.value),
+    );
 
   static String localeToLocalizedStr(String locale) {
     return locale_names.all_native_names[locale] ?? locale;

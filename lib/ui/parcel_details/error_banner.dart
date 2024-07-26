@@ -27,12 +27,12 @@ class ErrorBanner extends StatelessWidget {
   final List<Widget> customActions;
 
   const ErrorBanner({
-    Key? key,
+    super.key,
     required this.expanded,
     required this.message,
     this.onShowErrors,
     this.customActions = const [],
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -60,7 +60,7 @@ class ErrorBanner extends StatelessWidget {
         clipBehavior: Clip.antiAlias,
         child: MaterialBanner(
           leading: CircleAvatar(
-            backgroundColor: Theme.of(context).errorColor,
+            backgroundColor: Theme.of(context).colorScheme.error,
             foregroundColor: Theme.of(context).colorScheme.onError,
             child: const Icon(
               Icons.error_outline,

@@ -27,13 +27,13 @@ class AdaptiveFab extends StatelessWidget {
   final String? heroTag;
 
   const AdaptiveFab({
-    Key? key,
+    super.key,
     this.icon,
     required this.label,
     this.tooltip,
     this.heroTag,
     this.onPressed,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

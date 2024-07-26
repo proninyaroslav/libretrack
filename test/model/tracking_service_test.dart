@@ -43,8 +43,8 @@ void main() {
     late TrackingService trackingService;
 
     setUpAll(() async {
-      registerFallbackValue<TrackingServiceInfo>(FakeTrackingServiceInfo());
-      registerFallbackValue<AuthData>(FakeAuthData());
+      registerFallbackValue(FakeTrackingServiceInfo());
+      registerFallbackValue(FakeAuthData());
       await initInjector(Env.test);
       getIt.allowReassignment = true;
     });

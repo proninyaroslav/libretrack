@@ -31,14 +31,14 @@ class AdaptiveScaffold extends StatefulWidget {
   final Widget? bottomNavigationBar;
 
   const AdaptiveScaffold({
-    Key? key,
+    super.key,
     this.title,
     this.body,
     this.floatingActionButton,
     this.floatingActionButtonLocation,
     this.actions,
     this.bottomNavigationBar,
-  }) : super(key: key);
+  });
 
   static AdaptiveScaffoldState of(BuildContext context) {
     return context.findAncestorStateOfType<AdaptiveScaffoldState>()!;

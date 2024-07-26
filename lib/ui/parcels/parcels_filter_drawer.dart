@@ -36,9 +36,9 @@ class ParcelsFilterDrawer extends StatelessWidget {
   final double frontLayerVisibleSize;
 
   const ParcelsFilterDrawer({
-    Key? key,
+    super.key,
     required this.frontLayerVisibleSize,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -96,7 +96,7 @@ class ParcelsFilterDrawer extends StatelessWidget {
             children: [
               _SectionHeader(
                 title: S.of(context).filters,
-                icon: const Icon(MdiIcons.filter),
+                icon: Icon(MdiIcons.filter),
               ),
               const SizedBox(height: 20.0),
               _FiltersList(),
@@ -108,7 +108,7 @@ class ParcelsFilterDrawer extends StatelessWidget {
               ),
               _SectionHeader(
                 title: S.of(context).sorting,
-                icon: const Icon(MdiIcons.sortVariant),
+                icon: Icon(MdiIcons.sortVariant),
               ),
               const SizedBox(height: 20.0),
               _SortList(),
@@ -125,10 +125,9 @@ class _SectionHeader extends StatelessWidget {
   final Icon icon;
 
   const _SectionHeader({
-    Key? key,
     required this.title,
     required this.icon,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -140,7 +139,7 @@ class _SectionHeader extends StatelessWidget {
       title: Text(
         title.toUpperCase(),
         style: _getTextTheme(context)
-            .overline!
+            .labelSmall!
             .copyWith(fontSize: 16.0, fontWeight: FontWeight.w500),
       ),
     );
@@ -178,9 +177,8 @@ class _StatusFilterList extends StatelessWidget {
   final ShipmentStatusType? statusType;
 
   const _StatusFilterList({
-    Key? key,
     this.statusType,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -188,7 +186,7 @@ class _StatusFilterList extends StatelessWidget {
       DropdownMenuItem<ShipmentStatusType>(
         child: ListTile(
           contentPadding: EdgeInsets.zero,
-          leading: const RRectIcon(
+          leading: RRectIcon(
             iconData: RRectIconData(
               iconData: MdiIcons.allInclusive,
               iconColor: Colors.white,
@@ -209,7 +207,7 @@ class _StatusFilterList extends StatelessWidget {
     ];
 
     return _FilterDropdownListTile<ShipmentStatusType>(
-      icon: const Icon(MdiIcons.cubeSend),
+      icon: Icon(MdiIcons.cubeSend),
       title: S.of(context).status,
       value: statusType,
       items: items,
@@ -238,12 +236,12 @@ class _StatusFilterList extends StatelessWidget {
 class _NewInfoFilter extends StatelessWidget {
   final bool enabled;
 
-  const _NewInfoFilter({Key? key, required this.enabled}) : super(key: key);
+  const _NewInfoFilter({required this.enabled});
 
   @override
   Widget build(BuildContext context) {
     return _FilterSwitchListTile(
-      icon: const Icon(MdiIcons.newBox),
+      icon: Icon(MdiIcons.newBox),
       title: S.of(context).unreadParcels,
       value: enabled,
       onChanged: (enable) =>
@@ -255,7 +253,7 @@ class _NewInfoFilter extends StatelessWidget {
 class _ErrorFilter extends StatelessWidget {
   final bool enabled;
 
-  const _ErrorFilter({Key? key, required this.enabled}) : super(key: key);
+  const _ErrorFilter({required this.enabled});
 
   @override
   Widget build(BuildContext context) {
@@ -273,9 +271,8 @@ class _PostalServiceFilter extends StatelessWidget {
   final PostalServiceType? serviceType;
 
   const _PostalServiceFilter({
-    Key? key,
     required this.serviceType,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -283,7 +280,7 @@ class _PostalServiceFilter extends StatelessWidget {
       DropdownMenuItem<PostalServiceType>(
         child: ListTile(
           contentPadding: EdgeInsets.zero,
-          leading: const RRectIcon(
+          leading: RRectIcon(
             iconData: RRectIconData(
               iconData: MdiIcons.allInclusive,
               iconColor: Colors.white,
@@ -303,7 +300,7 @@ class _PostalServiceFilter extends StatelessWidget {
     ];
 
     return _FilterDropdownListTile<PostalServiceType>(
-      icon: const Icon(MdiIcons.mail),
+      icon: Icon(MdiIcons.mail),
       title: S.of(context).postalService,
       value: serviceType,
       items: items,
@@ -336,12 +333,11 @@ class _FilterSwitchListTile extends StatelessWidget {
   final ValueChanged<bool> onChanged;
 
   const _FilterSwitchListTile({
-    Key? key,
     required this.icon,
     required this.title,
     required this.value,
     required this.onChanged,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -356,7 +352,7 @@ class _FilterSwitchListTile extends StatelessWidget {
       ),
       title: Text(
         title,
-        style: _getTextTheme(context).subtitle1!.copyWith(
+        style: _getTextTheme(context).titleMedium!.copyWith(
               color: iconTheme.color!.withOpacity(0.87),
             ),
       ),
@@ -373,13 +369,13 @@ class _FilterDropdownListTile<T> extends StatelessWidget {
   final ValueChanged<T?> onChanged;
 
   const _FilterDropdownListTile({
-    Key? key,
+    super.key,
     required this.icon,
     required this.title,
     required this.value,
     required this.items,
     required this.onChanged,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -421,7 +417,7 @@ class _FilterDropdownListTile<T> extends StatelessWidget {
           ),
           title: Text(
             title,
-            style: textTheme.subtitle1!.copyWith(
+            style: textTheme.titleMedium!.copyWith(
               color: iconTheme.color!.withOpacity(0.87),
             ),
           ),
@@ -466,42 +462,42 @@ class _SortList extends StatelessWidget {
               sort: const ParcelsSort.activityDate(),
               currentSort: state.sort!,
               title: S.of(context).sortActivityDateAsc,
-              icon: const Icon(MdiIcons.sortClockAscendingOutline),
+              icon: Icon(MdiIcons.sortClockAscendingOutline),
               onSelected: () => cubit.setActivityDateSort(),
             ),
             _SortListItem(
               sort: const ParcelsSort.activityDate(oldestFirst: true),
               currentSort: state.sort!,
               title: S.of(context).sortActivityDateDesc,
-              icon: const Icon(MdiIcons.sortClockDescendingOutline),
+              icon: Icon(MdiIcons.sortClockDescendingOutline),
               onSelected: () => cubit.setActivityDateSort(oldestFirst: true),
             ),
             _SortListItem(
               sort: const ParcelsSort.dateAdded(),
               currentSort: state.sort!,
               title: S.of(context).sortDateAddedAsc,
-              icon: const Icon(MdiIcons.sortCalendarAscending),
+              icon: Icon(MdiIcons.sortCalendarAscending),
               onSelected: () => cubit.setDateAddedSort(),
             ),
             _SortListItem(
               sort: const ParcelsSort.dateAdded(oldestFirst: true),
               currentSort: state.sort!,
               title: S.of(context).sortDateAddedDesc,
-              icon: const Icon(MdiIcons.sortCalendarDescending),
+              icon: Icon(MdiIcons.sortCalendarDescending),
               onSelected: () => cubit.setDateAddedSort(oldestFirst: true),
             ),
             _SortListItem(
               sort: const ParcelsSort.alphabetically(),
               currentSort: state.sort!,
               title: S.of(context).sortAlphabeticallyAsc,
-              icon: const Icon(MdiIcons.sortAlphabeticalAscending),
+              icon: Icon(MdiIcons.sortAlphabeticalAscending),
               onSelected: () => cubit.setAlphabeticallySort(),
             ),
             _SortListItem(
               sort: const ParcelsSort.alphabetically(isDesc: true),
               currentSort: state.sort!,
               title: S.of(context).sortAlphabeticallyDesc,
-              icon: const Icon(MdiIcons.sortAlphabeticalDescending),
+              icon: Icon(MdiIcons.sortAlphabeticalDescending),
               onSelected: () => cubit.setAlphabeticallySort(isDesc: true),
             ),
           ],
@@ -519,13 +515,12 @@ class _SortListItem extends StatelessWidget {
   final VoidCallback onSelected;
 
   const _SortListItem({
-    Key? key,
     required this.sort,
     required this.currentSort,
     required this.title,
     required this.icon,
     required this.onSelected,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -550,7 +545,7 @@ class _SortListItem extends StatelessWidget {
         ),
         title: Text(
           title,
-          style: textTheme.subtitle1!.copyWith(
+          style: textTheme.titleMedium!.copyWith(
             color: iconTheme.color!.withOpacity(0.87),
           ),
         ),

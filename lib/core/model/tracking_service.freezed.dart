@@ -1,6 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'tracking_service.dart';
 
@@ -11,50 +12,11 @@ part of 'tracking_service.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$TrackingServiceResultTearOff {
-  const _$TrackingServiceResultTearOff();
-
-  TrackingServiceResultData call(
-      {required TrackingRequest request,
-      required ShipmentInfo info,
-      required List<ShipmentActivityInfo> activity,
-      List<String>? alternateTracks}) {
-    return TrackingServiceResultData(
-      request: request,
-      info: info,
-      activity: activity,
-      alternateTracks: alternateTracks,
-    );
-  }
-
-  TrackingServiceResultNoInfo noInfo(TrackingRequest request) {
-    return TrackingServiceResultNoInfo(
-      request,
-    );
-  }
-
-  TrackingResultError error(
-      {required TrackingRequest request,
-      required TrackingServiceError error,
-      required bool isRetryable}) {
-    return TrackingResultError(
-      request: request,
-      error: error,
-      isRetryable: isRetryable,
-    );
-  }
-}
-
-/// @nodoc
-const $TrackingServiceResult = _$TrackingServiceResultTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$TrackingServiceResult {
   TrackingRequest get request => throw _privateConstructorUsedError;
-
   @optionalTypeArgs
   TResult when<TResult extends Object?>(
     TResult Function(TrackingRequest request, ShipmentInfo info,
@@ -68,11 +30,11 @@ mixin _$TrackingServiceResult {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>(
-    TResult Function(TrackingRequest request, ShipmentInfo info,
+    TResult? Function(TrackingRequest request, ShipmentInfo info,
             List<ShipmentActivityInfo> activity, List<String>? alternateTracks)?
         $default, {
-    TResult Function(TrackingRequest request)? noInfo,
-    TResult Function(TrackingRequest request, TrackingServiceError error,
+    TResult? Function(TrackingRequest request)? noInfo,
+    TResult? Function(TrackingRequest request, TrackingServiceError error,
             bool isRetryable)?
         error,
   }) =>
@@ -98,9 +60,9 @@ mixin _$TrackingServiceResult {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>(
-    TResult Function(TrackingServiceResultData value)? $default, {
-    TResult Function(TrackingServiceResultNoInfo value)? noInfo,
-    TResult Function(TrackingResultError value)? error,
+    TResult? Function(TrackingServiceResultData value)? $default, {
+    TResult? Function(TrackingServiceResultNoInfo value)? noInfo,
+    TResult? Function(TrackingResultError value)? error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -121,39 +83,45 @@ mixin _$TrackingServiceResult {
 abstract class $TrackingServiceResultCopyWith<$Res> {
   factory $TrackingServiceResultCopyWith(TrackingServiceResult value,
           $Res Function(TrackingServiceResult) then) =
-      _$TrackingServiceResultCopyWithImpl<$Res>;
+      _$TrackingServiceResultCopyWithImpl<$Res, TrackingServiceResult>;
+  @useResult
   $Res call({TrackingRequest request});
 }
 
 /// @nodoc
-class _$TrackingServiceResultCopyWithImpl<$Res>
+class _$TrackingServiceResultCopyWithImpl<$Res,
+        $Val extends TrackingServiceResult>
     implements $TrackingServiceResultCopyWith<$Res> {
   _$TrackingServiceResultCopyWithImpl(this._value, this._then);
 
-  final TrackingServiceResult _value;
   // ignore: unused_field
-  final $Res Function(TrackingServiceResult) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? request = freezed,
+    Object? request = null,
   }) {
     return _then(_value.copyWith(
-      request: request == freezed
+      request: null == request
           ? _value.request
           : request // ignore: cast_nullable_to_non_nullable
               as TrackingRequest,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class $TrackingServiceResultDataCopyWith<$Res>
+abstract class _$$TrackingServiceResultDataImplCopyWith<$Res>
     implements $TrackingServiceResultCopyWith<$Res> {
-  factory $TrackingServiceResultDataCopyWith(TrackingServiceResultData value,
-          $Res Function(TrackingServiceResultData) then) =
-      _$TrackingServiceResultDataCopyWithImpl<$Res>;
+  factory _$$TrackingServiceResultDataImplCopyWith(
+          _$TrackingServiceResultDataImpl value,
+          $Res Function(_$TrackingServiceResultDataImpl) then) =
+      __$$TrackingServiceResultDataImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {TrackingRequest request,
       ShipmentInfo info,
@@ -162,39 +130,38 @@ abstract class $TrackingServiceResultDataCopyWith<$Res>
 }
 
 /// @nodoc
-class _$TrackingServiceResultDataCopyWithImpl<$Res>
-    extends _$TrackingServiceResultCopyWithImpl<$Res>
-    implements $TrackingServiceResultDataCopyWith<$Res> {
-  _$TrackingServiceResultDataCopyWithImpl(TrackingServiceResultData _value,
-      $Res Function(TrackingServiceResultData) _then)
-      : super(_value, (v) => _then(v as TrackingServiceResultData));
+class __$$TrackingServiceResultDataImplCopyWithImpl<$Res>
+    extends _$TrackingServiceResultCopyWithImpl<$Res,
+        _$TrackingServiceResultDataImpl>
+    implements _$$TrackingServiceResultDataImplCopyWith<$Res> {
+  __$$TrackingServiceResultDataImplCopyWithImpl(
+      _$TrackingServiceResultDataImpl _value,
+      $Res Function(_$TrackingServiceResultDataImpl) _then)
+      : super(_value, _then);
 
-  @override
-  TrackingServiceResultData get _value =>
-      super._value as TrackingServiceResultData;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? request = freezed,
-    Object? info = freezed,
-    Object? activity = freezed,
+    Object? request = null,
+    Object? info = null,
+    Object? activity = null,
     Object? alternateTracks = freezed,
   }) {
-    return _then(TrackingServiceResultData(
-      request: request == freezed
+    return _then(_$TrackingServiceResultDataImpl(
+      request: null == request
           ? _value.request
           : request // ignore: cast_nullable_to_non_nullable
               as TrackingRequest,
-      info: info == freezed
+      info: null == info
           ? _value.info
           : info // ignore: cast_nullable_to_non_nullable
               as ShipmentInfo,
-      activity: activity == freezed
-          ? _value.activity
+      activity: null == activity
+          ? _value._activity
           : activity // ignore: cast_nullable_to_non_nullable
               as List<ShipmentActivityInfo>,
-      alternateTracks: alternateTracks == freezed
-          ? _value.alternateTracks
+      alternateTracks: freezed == alternateTracks
+          ? _value._alternateTracks
           : alternateTracks // ignore: cast_nullable_to_non_nullable
               as List<String>?,
     ));
@@ -203,23 +170,38 @@ class _$TrackingServiceResultDataCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$TrackingServiceResultData
+class _$TrackingServiceResultDataImpl
     with DiagnosticableTreeMixin
     implements TrackingServiceResultData {
-  const _$TrackingServiceResultData(
+  const _$TrackingServiceResultDataImpl(
       {required this.request,
       required this.info,
-      required this.activity,
-      this.alternateTracks});
+      required final List<ShipmentActivityInfo> activity,
+      final List<String>? alternateTracks})
+      : _activity = activity,
+        _alternateTracks = alternateTracks;
 
   @override
   final TrackingRequest request;
   @override
   final ShipmentInfo info;
+  final List<ShipmentActivityInfo> _activity;
   @override
-  final List<ShipmentActivityInfo> activity;
+  List<ShipmentActivityInfo> get activity {
+    if (_activity is EqualUnmodifiableListView) return _activity;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_activity);
+  }
+
+  final List<String>? _alternateTracks;
   @override
-  final List<String>? alternateTracks;
+  List<String>? get alternateTracks {
+    final value = _alternateTracks;
+    if (value == null) return null;
+    if (_alternateTracks is EqualUnmodifiableListView) return _alternateTracks;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
@@ -238,35 +220,31 @@ class _$TrackingServiceResultData
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is TrackingServiceResultData &&
-            (identical(other.request, request) ||
-                const DeepCollectionEquality()
-                    .equals(other.request, request)) &&
-            (identical(other.info, info) ||
-                const DeepCollectionEquality().equals(other.info, info)) &&
-            (identical(other.activity, activity) ||
-                const DeepCollectionEquality()
-                    .equals(other.activity, activity)) &&
-            (identical(other.alternateTracks, alternateTracks) ||
-                const DeepCollectionEquality()
-                    .equals(other.alternateTracks, alternateTracks)));
+        (other.runtimeType == runtimeType &&
+            other is _$TrackingServiceResultDataImpl &&
+            (identical(other.request, request) || other.request == request) &&
+            (identical(other.info, info) || other.info == info) &&
+            const DeepCollectionEquality().equals(other._activity, _activity) &&
+            const DeepCollectionEquality()
+                .equals(other._alternateTracks, _alternateTracks));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(request) ^
-      const DeepCollectionEquality().hash(info) ^
-      const DeepCollectionEquality().hash(activity) ^
-      const DeepCollectionEquality().hash(alternateTracks);
+  int get hashCode => Object.hash(
+      runtimeType,
+      request,
+      info,
+      const DeepCollectionEquality().hash(_activity),
+      const DeepCollectionEquality().hash(_alternateTracks));
 
   @JsonKey(ignore: true)
   @override
-  $TrackingServiceResultDataCopyWith<TrackingServiceResultData> get copyWith =>
-      _$TrackingServiceResultDataCopyWithImpl<TrackingServiceResultData>(
-          this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$TrackingServiceResultDataImplCopyWith<_$TrackingServiceResultDataImpl>
+      get copyWith => __$$TrackingServiceResultDataImplCopyWithImpl<
+          _$TrackingServiceResultDataImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -285,11 +263,11 @@ class _$TrackingServiceResultData
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>(
-    TResult Function(TrackingRequest request, ShipmentInfo info,
+    TResult? Function(TrackingRequest request, ShipmentInfo info,
             List<ShipmentActivityInfo> activity, List<String>? alternateTracks)?
         $default, {
-    TResult Function(TrackingRequest request)? noInfo,
-    TResult Function(TrackingRequest request, TrackingServiceError error,
+    TResult? Function(TrackingRequest request)? noInfo,
+    TResult? Function(TrackingRequest request, TrackingServiceError error,
             bool isRetryable)?
         error,
   }) {
@@ -327,9 +305,9 @@ class _$TrackingServiceResultData
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>(
-    TResult Function(TrackingServiceResultData value)? $default, {
-    TResult Function(TrackingServiceResultNoInfo value)? noInfo,
-    TResult Function(TrackingResultError value)? error,
+    TResult? Function(TrackingServiceResultData value)? $default, {
+    TResult? Function(TrackingServiceResultNoInfo value)? noInfo,
+    TResult? Function(TrackingResultError value)? error,
   }) {
     return $default?.call(this);
   }
@@ -351,51 +329,51 @@ class _$TrackingServiceResultData
 
 abstract class TrackingServiceResultData implements TrackingServiceResult {
   const factory TrackingServiceResultData(
-      {required TrackingRequest request,
-      required ShipmentInfo info,
-      required List<ShipmentActivityInfo> activity,
-      List<String>? alternateTracks}) = _$TrackingServiceResultData;
+      {required final TrackingRequest request,
+      required final ShipmentInfo info,
+      required final List<ShipmentActivityInfo> activity,
+      final List<String>? alternateTracks}) = _$TrackingServiceResultDataImpl;
 
   @override
-  TrackingRequest get request => throw _privateConstructorUsedError;
-  ShipmentInfo get info => throw _privateConstructorUsedError;
-  List<ShipmentActivityInfo> get activity => throw _privateConstructorUsedError;
-  List<String>? get alternateTracks => throw _privateConstructorUsedError;
+  TrackingRequest get request;
+  ShipmentInfo get info;
+  List<ShipmentActivityInfo> get activity;
+  List<String>? get alternateTracks;
   @override
   @JsonKey(ignore: true)
-  $TrackingServiceResultDataCopyWith<TrackingServiceResultData> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$TrackingServiceResultDataImplCopyWith<_$TrackingServiceResultDataImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $TrackingServiceResultNoInfoCopyWith<$Res>
+abstract class _$$TrackingServiceResultNoInfoImplCopyWith<$Res>
     implements $TrackingServiceResultCopyWith<$Res> {
-  factory $TrackingServiceResultNoInfoCopyWith(
-          TrackingServiceResultNoInfo value,
-          $Res Function(TrackingServiceResultNoInfo) then) =
-      _$TrackingServiceResultNoInfoCopyWithImpl<$Res>;
+  factory _$$TrackingServiceResultNoInfoImplCopyWith(
+          _$TrackingServiceResultNoInfoImpl value,
+          $Res Function(_$TrackingServiceResultNoInfoImpl) then) =
+      __$$TrackingServiceResultNoInfoImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({TrackingRequest request});
 }
 
 /// @nodoc
-class _$TrackingServiceResultNoInfoCopyWithImpl<$Res>
-    extends _$TrackingServiceResultCopyWithImpl<$Res>
-    implements $TrackingServiceResultNoInfoCopyWith<$Res> {
-  _$TrackingServiceResultNoInfoCopyWithImpl(TrackingServiceResultNoInfo _value,
-      $Res Function(TrackingServiceResultNoInfo) _then)
-      : super(_value, (v) => _then(v as TrackingServiceResultNoInfo));
+class __$$TrackingServiceResultNoInfoImplCopyWithImpl<$Res>
+    extends _$TrackingServiceResultCopyWithImpl<$Res,
+        _$TrackingServiceResultNoInfoImpl>
+    implements _$$TrackingServiceResultNoInfoImplCopyWith<$Res> {
+  __$$TrackingServiceResultNoInfoImplCopyWithImpl(
+      _$TrackingServiceResultNoInfoImpl _value,
+      $Res Function(_$TrackingServiceResultNoInfoImpl) _then)
+      : super(_value, _then);
 
-  @override
-  TrackingServiceResultNoInfo get _value =>
-      super._value as TrackingServiceResultNoInfo;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? request = freezed,
+    Object? request = null,
   }) {
-    return _then(TrackingServiceResultNoInfo(
-      request == freezed
+    return _then(_$TrackingServiceResultNoInfoImpl(
+      null == request
           ? _value.request
           : request // ignore: cast_nullable_to_non_nullable
               as TrackingRequest,
@@ -405,10 +383,10 @@ class _$TrackingServiceResultNoInfoCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$TrackingServiceResultNoInfo
+class _$TrackingServiceResultNoInfoImpl
     with DiagnosticableTreeMixin
     implements TrackingServiceResultNoInfo {
-  const _$TrackingServiceResultNoInfo(this.request);
+  const _$TrackingServiceResultNoInfoImpl(this.request);
 
   @override
   final TrackingRequest request;
@@ -427,22 +405,22 @@ class _$TrackingServiceResultNoInfo
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is TrackingServiceResultNoInfo &&
-            (identical(other.request, request) ||
-                const DeepCollectionEquality().equals(other.request, request)));
+        (other.runtimeType == runtimeType &&
+            other is _$TrackingServiceResultNoInfoImpl &&
+            (identical(other.request, request) || other.request == request));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(request);
+  int get hashCode => Object.hash(runtimeType, request);
 
   @JsonKey(ignore: true)
   @override
-  $TrackingServiceResultNoInfoCopyWith<TrackingServiceResultNoInfo>
-      get copyWith => _$TrackingServiceResultNoInfoCopyWithImpl<
-          TrackingServiceResultNoInfo>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$TrackingServiceResultNoInfoImplCopyWith<_$TrackingServiceResultNoInfoImpl>
+      get copyWith => __$$TrackingServiceResultNoInfoImplCopyWithImpl<
+          _$TrackingServiceResultNoInfoImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -461,11 +439,11 @@ class _$TrackingServiceResultNoInfo
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>(
-    TResult Function(TrackingRequest request, ShipmentInfo info,
+    TResult? Function(TrackingRequest request, ShipmentInfo info,
             List<ShipmentActivityInfo> activity, List<String>? alternateTracks)?
         $default, {
-    TResult Function(TrackingRequest request)? noInfo,
-    TResult Function(TrackingRequest request, TrackingServiceError error,
+    TResult? Function(TrackingRequest request)? noInfo,
+    TResult? Function(TrackingRequest request, TrackingServiceError error,
             bool isRetryable)?
         error,
   }) {
@@ -503,9 +481,9 @@ class _$TrackingServiceResultNoInfo
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>(
-    TResult Function(TrackingServiceResultData value)? $default, {
-    TResult Function(TrackingServiceResultNoInfo value)? noInfo,
-    TResult Function(TrackingResultError value)? error,
+    TResult? Function(TrackingServiceResultData value)? $default, {
+    TResult? Function(TrackingServiceResultNoInfo value)? noInfo,
+    TResult? Function(TrackingResultError value)? error,
   }) {
     return noInfo?.call(this);
   }
@@ -526,24 +504,25 @@ class _$TrackingServiceResultNoInfo
 }
 
 abstract class TrackingServiceResultNoInfo implements TrackingServiceResult {
-  const factory TrackingServiceResultNoInfo(TrackingRequest request) =
-      _$TrackingServiceResultNoInfo;
+  const factory TrackingServiceResultNoInfo(final TrackingRequest request) =
+      _$TrackingServiceResultNoInfoImpl;
 
   @override
-  TrackingRequest get request => throw _privateConstructorUsedError;
+  TrackingRequest get request;
   @override
   @JsonKey(ignore: true)
-  $TrackingServiceResultNoInfoCopyWith<TrackingServiceResultNoInfo>
+  _$$TrackingServiceResultNoInfoImplCopyWith<_$TrackingServiceResultNoInfoImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $TrackingResultErrorCopyWith<$Res>
+abstract class _$$TrackingResultErrorImplCopyWith<$Res>
     implements $TrackingServiceResultCopyWith<$Res> {
-  factory $TrackingResultErrorCopyWith(
-          TrackingResultError value, $Res Function(TrackingResultError) then) =
-      _$TrackingResultErrorCopyWithImpl<$Res>;
+  factory _$$TrackingResultErrorImplCopyWith(_$TrackingResultErrorImpl value,
+          $Res Function(_$TrackingResultErrorImpl) then) =
+      __$$TrackingResultErrorImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {TrackingRequest request, TrackingServiceError error, bool isRetryable});
 
@@ -551,32 +530,30 @@ abstract class $TrackingResultErrorCopyWith<$Res>
 }
 
 /// @nodoc
-class _$TrackingResultErrorCopyWithImpl<$Res>
-    extends _$TrackingServiceResultCopyWithImpl<$Res>
-    implements $TrackingResultErrorCopyWith<$Res> {
-  _$TrackingResultErrorCopyWithImpl(
-      TrackingResultError _value, $Res Function(TrackingResultError) _then)
-      : super(_value, (v) => _then(v as TrackingResultError));
+class __$$TrackingResultErrorImplCopyWithImpl<$Res>
+    extends _$TrackingServiceResultCopyWithImpl<$Res, _$TrackingResultErrorImpl>
+    implements _$$TrackingResultErrorImplCopyWith<$Res> {
+  __$$TrackingResultErrorImplCopyWithImpl(_$TrackingResultErrorImpl _value,
+      $Res Function(_$TrackingResultErrorImpl) _then)
+      : super(_value, _then);
 
-  @override
-  TrackingResultError get _value => super._value as TrackingResultError;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? request = freezed,
-    Object? error = freezed,
-    Object? isRetryable = freezed,
+    Object? request = null,
+    Object? error = null,
+    Object? isRetryable = null,
   }) {
-    return _then(TrackingResultError(
-      request: request == freezed
+    return _then(_$TrackingResultErrorImpl(
+      request: null == request
           ? _value.request
           : request // ignore: cast_nullable_to_non_nullable
               as TrackingRequest,
-      error: error == freezed
+      error: null == error
           ? _value.error
           : error // ignore: cast_nullable_to_non_nullable
               as TrackingServiceError,
-      isRetryable: isRetryable == freezed
+      isRetryable: null == isRetryable
           ? _value.isRetryable
           : isRetryable // ignore: cast_nullable_to_non_nullable
               as bool,
@@ -584,6 +561,7 @@ class _$TrackingResultErrorCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $TrackingServiceErrorCopyWith<$Res> get error {
     return $TrackingServiceErrorCopyWith<$Res>(_value.error, (value) {
       return _then(_value.copyWith(error: value));
@@ -593,10 +571,10 @@ class _$TrackingResultErrorCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$TrackingResultError
+class _$TrackingResultErrorImpl
     with DiagnosticableTreeMixin
     implements TrackingResultError {
-  const _$TrackingResultError(
+  const _$TrackingResultErrorImpl(
       {required this.request, required this.error, required this.isRetryable});
 
   @override
@@ -622,30 +600,25 @@ class _$TrackingResultError
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is TrackingResultError &&
-            (identical(other.request, request) ||
-                const DeepCollectionEquality()
-                    .equals(other.request, request)) &&
-            (identical(other.error, error) ||
-                const DeepCollectionEquality().equals(other.error, error)) &&
+        (other.runtimeType == runtimeType &&
+            other is _$TrackingResultErrorImpl &&
+            (identical(other.request, request) || other.request == request) &&
+            (identical(other.error, error) || other.error == error) &&
             (identical(other.isRetryable, isRetryable) ||
-                const DeepCollectionEquality()
-                    .equals(other.isRetryable, isRetryable)));
+                other.isRetryable == isRetryable));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(request) ^
-      const DeepCollectionEquality().hash(error) ^
-      const DeepCollectionEquality().hash(isRetryable);
+  int get hashCode => Object.hash(runtimeType, request, error, isRetryable);
 
   @JsonKey(ignore: true)
   @override
-  $TrackingResultErrorCopyWith<TrackingResultError> get copyWith =>
-      _$TrackingResultErrorCopyWithImpl<TrackingResultError>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$TrackingResultErrorImplCopyWith<_$TrackingResultErrorImpl> get copyWith =>
+      __$$TrackingResultErrorImplCopyWithImpl<_$TrackingResultErrorImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -664,11 +637,11 @@ class _$TrackingResultError
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>(
-    TResult Function(TrackingRequest request, ShipmentInfo info,
+    TResult? Function(TrackingRequest request, ShipmentInfo info,
             List<ShipmentActivityInfo> activity, List<String>? alternateTracks)?
         $default, {
-    TResult Function(TrackingRequest request)? noInfo,
-    TResult Function(TrackingRequest request, TrackingServiceError error,
+    TResult? Function(TrackingRequest request)? noInfo,
+    TResult? Function(TrackingRequest request, TrackingServiceError error,
             bool isRetryable)?
         error,
   }) {
@@ -706,9 +679,9 @@ class _$TrackingResultError
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>(
-    TResult Function(TrackingServiceResultData value)? $default, {
-    TResult Function(TrackingServiceResultNoInfo value)? noInfo,
-    TResult Function(TrackingResultError value)? error,
+    TResult? Function(TrackingServiceResultData value)? $default, {
+    TResult? Function(TrackingServiceResultNoInfo value)? noInfo,
+    TResult? Function(TrackingResultError value)? error,
   }) {
     return error?.call(this);
   }
@@ -730,42 +703,23 @@ class _$TrackingResultError
 
 abstract class TrackingResultError implements TrackingServiceResult {
   const factory TrackingResultError(
-      {required TrackingRequest request,
-      required TrackingServiceError error,
-      required bool isRetryable}) = _$TrackingResultError;
+      {required final TrackingRequest request,
+      required final TrackingServiceError error,
+      required final bool isRetryable}) = _$TrackingResultErrorImpl;
 
   @override
-  TrackingRequest get request => throw _privateConstructorUsedError;
-  TrackingServiceError get error => throw _privateConstructorUsedError;
-  bool get isRetryable => throw _privateConstructorUsedError;
+  TrackingRequest get request;
+  TrackingServiceError get error;
+  bool get isRetryable;
   @override
   @JsonKey(ignore: true)
-  $TrackingResultErrorCopyWith<TrackingResultError> get copyWith =>
+  _$$TrackingResultErrorImplCopyWith<_$TrackingResultErrorImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-class _$TrackingServiceErrorTearOff {
-  const _$TrackingServiceErrorTearOff();
-
-  TrackingServiceErrorFetch fetch(FetchError e) {
-    return TrackingServiceErrorFetch(
-      e,
-    );
-  }
-
-  TrackingServiceErrorParse parse(ParseError e) {
-    return TrackingServiceErrorParse(
-      e,
-    );
-  }
-}
-
-/// @nodoc
-const $TrackingServiceError = _$TrackingServiceErrorTearOff();
-
-/// @nodoc
 mixin _$TrackingServiceError {
+  Object get e => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(FetchError e) fetch,
@@ -774,8 +728,8 @@ mixin _$TrackingServiceError {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(FetchError e)? fetch,
-    TResult Function(ParseError e)? parse,
+    TResult? Function(FetchError e)? fetch,
+    TResult? Function(ParseError e)? parse,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -793,8 +747,8 @@ mixin _$TrackingServiceError {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(TrackingServiceErrorFetch value)? fetch,
-    TResult Function(TrackingServiceErrorParse value)? parse,
+    TResult? Function(TrackingServiceErrorFetch value)? fetch,
+    TResult? Function(TrackingServiceErrorParse value)? parse,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -810,47 +764,50 @@ mixin _$TrackingServiceError {
 abstract class $TrackingServiceErrorCopyWith<$Res> {
   factory $TrackingServiceErrorCopyWith(TrackingServiceError value,
           $Res Function(TrackingServiceError) then) =
-      _$TrackingServiceErrorCopyWithImpl<$Res>;
+      _$TrackingServiceErrorCopyWithImpl<$Res, TrackingServiceError>;
 }
 
 /// @nodoc
-class _$TrackingServiceErrorCopyWithImpl<$Res>
+class _$TrackingServiceErrorCopyWithImpl<$Res,
+        $Val extends TrackingServiceError>
     implements $TrackingServiceErrorCopyWith<$Res> {
   _$TrackingServiceErrorCopyWithImpl(this._value, this._then);
 
-  final TrackingServiceError _value;
   // ignore: unused_field
-  final $Res Function(TrackingServiceError) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 }
 
 /// @nodoc
-abstract class $TrackingServiceErrorFetchCopyWith<$Res> {
-  factory $TrackingServiceErrorFetchCopyWith(TrackingServiceErrorFetch value,
-          $Res Function(TrackingServiceErrorFetch) then) =
-      _$TrackingServiceErrorFetchCopyWithImpl<$Res>;
+abstract class _$$TrackingServiceErrorFetchImplCopyWith<$Res> {
+  factory _$$TrackingServiceErrorFetchImplCopyWith(
+          _$TrackingServiceErrorFetchImpl value,
+          $Res Function(_$TrackingServiceErrorFetchImpl) then) =
+      __$$TrackingServiceErrorFetchImplCopyWithImpl<$Res>;
+  @useResult
   $Res call({FetchError e});
 
   $FetchErrorCopyWith<$Res> get e;
 }
 
 /// @nodoc
-class _$TrackingServiceErrorFetchCopyWithImpl<$Res>
-    extends _$TrackingServiceErrorCopyWithImpl<$Res>
-    implements $TrackingServiceErrorFetchCopyWith<$Res> {
-  _$TrackingServiceErrorFetchCopyWithImpl(TrackingServiceErrorFetch _value,
-      $Res Function(TrackingServiceErrorFetch) _then)
-      : super(_value, (v) => _then(v as TrackingServiceErrorFetch));
+class __$$TrackingServiceErrorFetchImplCopyWithImpl<$Res>
+    extends _$TrackingServiceErrorCopyWithImpl<$Res,
+        _$TrackingServiceErrorFetchImpl>
+    implements _$$TrackingServiceErrorFetchImplCopyWith<$Res> {
+  __$$TrackingServiceErrorFetchImplCopyWithImpl(
+      _$TrackingServiceErrorFetchImpl _value,
+      $Res Function(_$TrackingServiceErrorFetchImpl) _then)
+      : super(_value, _then);
 
-  @override
-  TrackingServiceErrorFetch get _value =>
-      super._value as TrackingServiceErrorFetch;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? e = freezed,
+    Object? e = null,
   }) {
-    return _then(TrackingServiceErrorFetch(
-      e == freezed
+    return _then(_$TrackingServiceErrorFetchImpl(
+      null == e
           ? _value.e
           : e // ignore: cast_nullable_to_non_nullable
               as FetchError,
@@ -858,6 +815,7 @@ class _$TrackingServiceErrorFetchCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $FetchErrorCopyWith<$Res> get e {
     return $FetchErrorCopyWith<$Res>(_value.e, (value) {
       return _then(_value.copyWith(e: value));
@@ -867,10 +825,10 @@ class _$TrackingServiceErrorFetchCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$TrackingServiceErrorFetch
+class _$TrackingServiceErrorFetchImpl
     with DiagnosticableTreeMixin
     implements TrackingServiceErrorFetch {
-  const _$TrackingServiceErrorFetch(this.e);
+  const _$TrackingServiceErrorFetchImpl(this.e);
 
   @override
   final FetchError e;
@@ -889,22 +847,22 @@ class _$TrackingServiceErrorFetch
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is TrackingServiceErrorFetch &&
-            (identical(other.e, e) ||
-                const DeepCollectionEquality().equals(other.e, e)));
+        (other.runtimeType == runtimeType &&
+            other is _$TrackingServiceErrorFetchImpl &&
+            (identical(other.e, e) || other.e == e));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(e);
+  int get hashCode => Object.hash(runtimeType, e);
 
   @JsonKey(ignore: true)
   @override
-  $TrackingServiceErrorFetchCopyWith<TrackingServiceErrorFetch> get copyWith =>
-      _$TrackingServiceErrorFetchCopyWithImpl<TrackingServiceErrorFetch>(
-          this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$TrackingServiceErrorFetchImplCopyWith<_$TrackingServiceErrorFetchImpl>
+      get copyWith => __$$TrackingServiceErrorFetchImplCopyWithImpl<
+          _$TrackingServiceErrorFetchImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -918,8 +876,8 @@ class _$TrackingServiceErrorFetch
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(FetchError e)? fetch,
-    TResult Function(ParseError e)? parse,
+    TResult? Function(FetchError e)? fetch,
+    TResult? Function(ParseError e)? parse,
   }) {
     return fetch?.call(e);
   }
@@ -949,8 +907,8 @@ class _$TrackingServiceErrorFetch
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(TrackingServiceErrorFetch value)? fetch,
-    TResult Function(TrackingServiceErrorParse value)? parse,
+    TResult? Function(TrackingServiceErrorFetch value)? fetch,
+    TResult? Function(TrackingServiceErrorParse value)? parse,
   }) {
     return fetch?.call(this);
   }
@@ -970,43 +928,45 @@ class _$TrackingServiceErrorFetch
 }
 
 abstract class TrackingServiceErrorFetch implements TrackingServiceError {
-  const factory TrackingServiceErrorFetch(FetchError e) =
-      _$TrackingServiceErrorFetch;
+  const factory TrackingServiceErrorFetch(final FetchError e) =
+      _$TrackingServiceErrorFetchImpl;
 
-  FetchError get e => throw _privateConstructorUsedError;
+  @override
+  FetchError get e;
   @JsonKey(ignore: true)
-  $TrackingServiceErrorFetchCopyWith<TrackingServiceErrorFetch> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$TrackingServiceErrorFetchImplCopyWith<_$TrackingServiceErrorFetchImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $TrackingServiceErrorParseCopyWith<$Res> {
-  factory $TrackingServiceErrorParseCopyWith(TrackingServiceErrorParse value,
-          $Res Function(TrackingServiceErrorParse) then) =
-      _$TrackingServiceErrorParseCopyWithImpl<$Res>;
+abstract class _$$TrackingServiceErrorParseImplCopyWith<$Res> {
+  factory _$$TrackingServiceErrorParseImplCopyWith(
+          _$TrackingServiceErrorParseImpl value,
+          $Res Function(_$TrackingServiceErrorParseImpl) then) =
+      __$$TrackingServiceErrorParseImplCopyWithImpl<$Res>;
+  @useResult
   $Res call({ParseError e});
 
   $ParseErrorCopyWith<$Res> get e;
 }
 
 /// @nodoc
-class _$TrackingServiceErrorParseCopyWithImpl<$Res>
-    extends _$TrackingServiceErrorCopyWithImpl<$Res>
-    implements $TrackingServiceErrorParseCopyWith<$Res> {
-  _$TrackingServiceErrorParseCopyWithImpl(TrackingServiceErrorParse _value,
-      $Res Function(TrackingServiceErrorParse) _then)
-      : super(_value, (v) => _then(v as TrackingServiceErrorParse));
+class __$$TrackingServiceErrorParseImplCopyWithImpl<$Res>
+    extends _$TrackingServiceErrorCopyWithImpl<$Res,
+        _$TrackingServiceErrorParseImpl>
+    implements _$$TrackingServiceErrorParseImplCopyWith<$Res> {
+  __$$TrackingServiceErrorParseImplCopyWithImpl(
+      _$TrackingServiceErrorParseImpl _value,
+      $Res Function(_$TrackingServiceErrorParseImpl) _then)
+      : super(_value, _then);
 
-  @override
-  TrackingServiceErrorParse get _value =>
-      super._value as TrackingServiceErrorParse;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? e = freezed,
+    Object? e = null,
   }) {
-    return _then(TrackingServiceErrorParse(
-      e == freezed
+    return _then(_$TrackingServiceErrorParseImpl(
+      null == e
           ? _value.e
           : e // ignore: cast_nullable_to_non_nullable
               as ParseError,
@@ -1014,6 +974,7 @@ class _$TrackingServiceErrorParseCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ParseErrorCopyWith<$Res> get e {
     return $ParseErrorCopyWith<$Res>(_value.e, (value) {
       return _then(_value.copyWith(e: value));
@@ -1023,10 +984,10 @@ class _$TrackingServiceErrorParseCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$TrackingServiceErrorParse
+class _$TrackingServiceErrorParseImpl
     with DiagnosticableTreeMixin
     implements TrackingServiceErrorParse {
-  const _$TrackingServiceErrorParse(this.e);
+  const _$TrackingServiceErrorParseImpl(this.e);
 
   @override
   final ParseError e;
@@ -1045,22 +1006,22 @@ class _$TrackingServiceErrorParse
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is TrackingServiceErrorParse &&
-            (identical(other.e, e) ||
-                const DeepCollectionEquality().equals(other.e, e)));
+        (other.runtimeType == runtimeType &&
+            other is _$TrackingServiceErrorParseImpl &&
+            (identical(other.e, e) || other.e == e));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(e);
+  int get hashCode => Object.hash(runtimeType, e);
 
   @JsonKey(ignore: true)
   @override
-  $TrackingServiceErrorParseCopyWith<TrackingServiceErrorParse> get copyWith =>
-      _$TrackingServiceErrorParseCopyWithImpl<TrackingServiceErrorParse>(
-          this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$TrackingServiceErrorParseImplCopyWith<_$TrackingServiceErrorParseImpl>
+      get copyWith => __$$TrackingServiceErrorParseImplCopyWithImpl<
+          _$TrackingServiceErrorParseImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1074,8 +1035,8 @@ class _$TrackingServiceErrorParse
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(FetchError e)? fetch,
-    TResult Function(ParseError e)? parse,
+    TResult? Function(FetchError e)? fetch,
+    TResult? Function(ParseError e)? parse,
   }) {
     return parse?.call(e);
   }
@@ -1105,8 +1066,8 @@ class _$TrackingServiceErrorParse
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(TrackingServiceErrorFetch value)? fetch,
-    TResult Function(TrackingServiceErrorParse value)? parse,
+    TResult? Function(TrackingServiceErrorFetch value)? fetch,
+    TResult? Function(TrackingServiceErrorParse value)? parse,
   }) {
     return parse?.call(this);
   }
@@ -1126,11 +1087,12 @@ class _$TrackingServiceErrorParse
 }
 
 abstract class TrackingServiceErrorParse implements TrackingServiceError {
-  const factory TrackingServiceErrorParse(ParseError e) =
-      _$TrackingServiceErrorParse;
+  const factory TrackingServiceErrorParse(final ParseError e) =
+      _$TrackingServiceErrorParseImpl;
 
-  ParseError get e => throw _privateConstructorUsedError;
+  @override
+  ParseError get e;
   @JsonKey(ignore: true)
-  $TrackingServiceErrorParseCopyWith<TrackingServiceErrorParse> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$TrackingServiceErrorParseImplCopyWith<_$TrackingServiceErrorParseImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

@@ -6,119 +6,100 @@ part of 'model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$ParcelsSortAlphabetically _$$ParcelsSortAlphabeticallyFromJson(
+_$ParcelsSortAlphabeticallyImpl _$$ParcelsSortAlphabeticallyImplFromJson(
         Map<String, dynamic> json) =>
-    _$ParcelsSortAlphabetically(
+    _$ParcelsSortAlphabeticallyImpl(
       isDesc: json['isDesc'] as bool? ?? false,
+      $type: json['runtimeType'] as String?,
     );
 
-Map<String, dynamic> _$$ParcelsSortAlphabeticallyToJson(
-        _$ParcelsSortAlphabetically instance) =>
+Map<String, dynamic> _$$ParcelsSortAlphabeticallyImplToJson(
+        _$ParcelsSortAlphabeticallyImpl instance) =>
     <String, dynamic>{
       'isDesc': instance.isDesc,
+      'runtimeType': instance.$type,
     };
 
-_$ParcelsSortActivityDate _$$ParcelsSortActivityDateFromJson(
+_$ParcelsSortActivityDateImpl _$$ParcelsSortActivityDateImplFromJson(
         Map<String, dynamic> json) =>
-    _$ParcelsSortActivityDate(
+    _$ParcelsSortActivityDateImpl(
       oldestFirst: json['oldestFirst'] as bool? ?? false,
+      $type: json['runtimeType'] as String?,
     );
 
-Map<String, dynamic> _$$ParcelsSortActivityDateToJson(
-        _$ParcelsSortActivityDate instance) =>
+Map<String, dynamic> _$$ParcelsSortActivityDateImplToJson(
+        _$ParcelsSortActivityDateImpl instance) =>
     <String, dynamic>{
       'oldestFirst': instance.oldestFirst,
+      'runtimeType': instance.$type,
     };
 
-_$ParcelsSortDateAdded _$$ParcelsSortDateAddedFromJson(
+_$ParcelsSortDateAddedImpl _$$ParcelsSortDateAddedImplFromJson(
         Map<String, dynamic> json) =>
-    _$ParcelsSortDateAdded(
+    _$ParcelsSortDateAddedImpl(
       oldestFirst: json['oldestFirst'] as bool? ?? false,
+      $type: json['runtimeType'] as String?,
     );
 
-Map<String, dynamic> _$$ParcelsSortDateAddedToJson(
-        _$ParcelsSortDateAdded instance) =>
+Map<String, dynamic> _$$ParcelsSortDateAddedImplToJson(
+        _$ParcelsSortDateAddedImpl instance) =>
     <String, dynamic>{
       'oldestFirst': instance.oldestFirst,
+      'runtimeType': instance.$type,
     };
 
-_$ParcelsFilterSearch _$$ParcelsFilterSearchFromJson(
+_$ParcelsFilterSearchImpl _$$ParcelsFilterSearchImplFromJson(
         Map<String, dynamic> json) =>
-    _$ParcelsFilterSearch(
+    _$ParcelsFilterSearchImpl(
       query: json['query'] as String?,
+      $type: json['runtimeType'] as String?,
     );
 
-Map<String, dynamic> _$$ParcelsFilterSearchToJson(
-        _$ParcelsFilterSearch instance) =>
+Map<String, dynamic> _$$ParcelsFilterSearchImplToJson(
+        _$ParcelsFilterSearchImpl instance) =>
     <String, dynamic>{
       'query': instance.query,
+      'runtimeType': instance.$type,
     };
 
-_$ParcelsFilterActive _$$ParcelsFilterActiveFromJson(
+_$ParcelsFilterActiveImpl _$$ParcelsFilterActiveImplFromJson(
         Map<String, dynamic> json) =>
-    _$ParcelsFilterActive();
-
-Map<String, dynamic> _$$ParcelsFilterActiveToJson(
-        _$ParcelsFilterActive instance) =>
-    <String, dynamic>{};
-
-_$ParcelsFilterArchive _$$ParcelsFilterArchiveFromJson(
-        Map<String, dynamic> json) =>
-    _$ParcelsFilterArchive();
-
-Map<String, dynamic> _$$ParcelsFilterArchiveToJson(
-        _$ParcelsFilterArchive instance) =>
-    <String, dynamic>{};
-
-_$ParcelsFilterStatus _$$ParcelsFilterStatusFromJson(
-        Map<String, dynamic> json) =>
-    _$ParcelsFilterStatus(
-      statusType:
-          _$enumDecodeNullable(_$ShipmentStatusTypeEnumMap, json['statusType']),
+    _$ParcelsFilterActiveImpl(
+      $type: json['runtimeType'] as String?,
     );
 
-Map<String, dynamic> _$$ParcelsFilterStatusToJson(
-        _$ParcelsFilterStatus instance) =>
+Map<String, dynamic> _$$ParcelsFilterActiveImplToJson(
+        _$ParcelsFilterActiveImpl instance) =>
+    <String, dynamic>{
+      'runtimeType': instance.$type,
+    };
+
+_$ParcelsFilterArchiveImpl _$$ParcelsFilterArchiveImplFromJson(
+        Map<String, dynamic> json) =>
+    _$ParcelsFilterArchiveImpl(
+      $type: json['runtimeType'] as String?,
+    );
+
+Map<String, dynamic> _$$ParcelsFilterArchiveImplToJson(
+        _$ParcelsFilterArchiveImpl instance) =>
+    <String, dynamic>{
+      'runtimeType': instance.$type,
+    };
+
+_$ParcelsFilterStatusImpl _$$ParcelsFilterStatusImplFromJson(
+        Map<String, dynamic> json) =>
+    _$ParcelsFilterStatusImpl(
+      statusType:
+          $enumDecodeNullable(_$ShipmentStatusTypeEnumMap, json['statusType']),
+      $type: json['runtimeType'] as String?,
+    );
+
+Map<String, dynamic> _$$ParcelsFilterStatusImplToJson(
+        _$ParcelsFilterStatusImpl instance) =>
     <String, dynamic>{
       'statusType': _$ShipmentStatusTypeEnumMap[instance.statusType],
+      'runtimeType': instance.$type,
     };
-
-K _$enumDecode<K, V>(
-  Map<K, V> enumValues,
-  Object? source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    throw ArgumentError(
-      'A value must be provided. Supported values: '
-      '${enumValues.values.join(', ')}',
-    );
-  }
-
-  return enumValues.entries.singleWhere(
-    (e) => e.value == source,
-    orElse: () {
-      if (unknownValue == null) {
-        throw ArgumentError(
-          '`$source` is not one of the supported values: '
-          '${enumValues.values.join(', ')}',
-        );
-      }
-      return MapEntry(unknownValue, enumValues.values.first);
-    },
-  ).key;
-}
-
-K? _$enumDecodeNullable<K, V>(
-  Map<K, V> enumValues,
-  dynamic source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    return null;
-  }
-  return _$enumDecode<K, V>(enumValues, source, unknownValue: unknownValue);
-}
 
 const _$ShipmentStatusTypeEnumMap = {
   ShipmentStatusType.notAvailable: 'notAvailable',
@@ -141,32 +122,43 @@ const _$ShipmentStatusTypeEnumMap = {
   ShipmentStatusType.customsClearanceComplete: 'customsClearanceComplete',
 };
 
-_$ParcelsFilterNewInfo _$$ParcelsFilterNewInfoFromJson(
+_$ParcelsFilterNewInfoImpl _$$ParcelsFilterNewInfoImplFromJson(
         Map<String, dynamic> json) =>
-    _$ParcelsFilterNewInfo();
-
-Map<String, dynamic> _$$ParcelsFilterNewInfoToJson(
-        _$ParcelsFilterNewInfo instance) =>
-    <String, dynamic>{};
-
-_$ParcelsFilterError _$$ParcelsFilterErrorFromJson(Map<String, dynamic> json) =>
-    _$ParcelsFilterError();
-
-Map<String, dynamic> _$$ParcelsFilterErrorToJson(
-        _$ParcelsFilterError instance) =>
-    <String, dynamic>{};
-
-_$ParcelsFilterPostalService _$$ParcelsFilterPostalServiceFromJson(
-        Map<String, dynamic> json) =>
-    _$ParcelsFilterPostalService(
-      serviceType:
-          _$enumDecodeNullable(_$PostalServiceTypeEnumMap, json['serviceType']),
+    _$ParcelsFilterNewInfoImpl(
+      $type: json['runtimeType'] as String?,
     );
 
-Map<String, dynamic> _$$ParcelsFilterPostalServiceToJson(
-        _$ParcelsFilterPostalService instance) =>
+Map<String, dynamic> _$$ParcelsFilterNewInfoImplToJson(
+        _$ParcelsFilterNewInfoImpl instance) =>
+    <String, dynamic>{
+      'runtimeType': instance.$type,
+    };
+
+_$ParcelsFilterErrorImpl _$$ParcelsFilterErrorImplFromJson(
+        Map<String, dynamic> json) =>
+    _$ParcelsFilterErrorImpl(
+      $type: json['runtimeType'] as String?,
+    );
+
+Map<String, dynamic> _$$ParcelsFilterErrorImplToJson(
+        _$ParcelsFilterErrorImpl instance) =>
+    <String, dynamic>{
+      'runtimeType': instance.$type,
+    };
+
+_$ParcelsFilterPostalServiceImpl _$$ParcelsFilterPostalServiceImplFromJson(
+        Map<String, dynamic> json) =>
+    _$ParcelsFilterPostalServiceImpl(
+      serviceType:
+          $enumDecodeNullable(_$PostalServiceTypeEnumMap, json['serviceType']),
+      $type: json['runtimeType'] as String?,
+    );
+
+Map<String, dynamic> _$$ParcelsFilterPostalServiceImplToJson(
+        _$ParcelsFilterPostalServiceImpl instance) =>
     <String, dynamic>{
       'serviceType': _$PostalServiceTypeEnumMap[instance.serviceType],
+      'runtimeType': instance.$type,
     };
 
 const _$PostalServiceTypeEnumMap = {
@@ -175,112 +167,172 @@ const _$PostalServiceTypeEnumMap = {
   PostalServiceType.usps: 'usps',
 };
 
-_$AppThemeTypeLight _$$AppThemeTypeLightFromJson(Map<String, dynamic> json) =>
-    _$AppThemeTypeLight();
-
-Map<String, dynamic> _$$AppThemeTypeLightToJson(_$AppThemeTypeLight instance) =>
-    <String, dynamic>{};
-
-_$AppThemeTypeDark _$$AppThemeTypeDarkFromJson(Map<String, dynamic> json) =>
-    _$AppThemeTypeDark();
-
-Map<String, dynamic> _$$AppThemeTypeDarkToJson(_$AppThemeTypeDark instance) =>
-    <String, dynamic>{};
-
-_$AppThemeTypeSystem _$$AppThemeTypeSystemFromJson(Map<String, dynamic> json) =>
-    _$AppThemeTypeSystem();
-
-Map<String, dynamic> _$$AppThemeTypeSystemToJson(
-        _$AppThemeTypeSystem instance) =>
-    <String, dynamic>{};
-
-_$AppLocaleTypeSystem _$$AppLocaleTypeSystemFromJson(
+_$AppThemeTypeLightImpl _$$AppThemeTypeLightImplFromJson(
         Map<String, dynamic> json) =>
-    _$AppLocaleTypeSystem();
-
-Map<String, dynamic> _$$AppLocaleTypeSystemToJson(
-        _$AppLocaleTypeSystem instance) =>
-    <String, dynamic>{};
-
-_$AppLocaleTypeInner _$$AppLocaleTypeInnerFromJson(Map<String, dynamic> json) =>
-    _$AppLocaleTypeInner(
-      locale: Locale.fromJson(json['locale'] as Map<String, dynamic>),
+    _$AppThemeTypeLightImpl(
+      $type: json['runtimeType'] as String?,
     );
 
-Map<String, dynamic> _$$AppLocaleTypeInnerToJson(
-        _$AppLocaleTypeInner instance) =>
+Map<String, dynamic> _$$AppThemeTypeLightImplToJson(
+        _$AppThemeTypeLightImpl instance) =>
     <String, dynamic>{
-      'locale': instance.locale.toJson(),
+      'runtimeType': instance.$type,
     };
 
-_$TrackingFreqLimitFifteenMin _$$TrackingFreqLimitFifteenMinFromJson(
+_$AppThemeTypeDarkImpl _$$AppThemeTypeDarkImplFromJson(
         Map<String, dynamic> json) =>
-    _$TrackingFreqLimitFifteenMin();
+    _$AppThemeTypeDarkImpl(
+      $type: json['runtimeType'] as String?,
+    );
 
-Map<String, dynamic> _$$TrackingFreqLimitFifteenMinToJson(
-        _$TrackingFreqLimitFifteenMin instance) =>
-    <String, dynamic>{};
+Map<String, dynamic> _$$AppThemeTypeDarkImplToJson(
+        _$AppThemeTypeDarkImpl instance) =>
+    <String, dynamic>{
+      'runtimeType': instance.$type,
+    };
 
-_$TrackingFreqLimitThirtyMin _$$TrackingFreqLimitThirtyMinFromJson(
+_$AppThemeTypeSystemImpl _$$AppThemeTypeSystemImplFromJson(
         Map<String, dynamic> json) =>
-    _$TrackingFreqLimitThirtyMin();
+    _$AppThemeTypeSystemImpl(
+      $type: json['runtimeType'] as String?,
+    );
 
-Map<String, dynamic> _$$TrackingFreqLimitThirtyMinToJson(
-        _$TrackingFreqLimitThirtyMin instance) =>
-    <String, dynamic>{};
+Map<String, dynamic> _$$AppThemeTypeSystemImplToJson(
+        _$AppThemeTypeSystemImpl instance) =>
+    <String, dynamic>{
+      'runtimeType': instance.$type,
+    };
 
-_$TrackingFreqLimitFortyFiveMin _$$TrackingFreqLimitFortyFiveMinFromJson(
+_$AppLocaleTypeSystemImpl _$$AppLocaleTypeSystemImplFromJson(
         Map<String, dynamic> json) =>
-    _$TrackingFreqLimitFortyFiveMin();
+    _$AppLocaleTypeSystemImpl(
+      $type: json['runtimeType'] as String?,
+    );
 
-Map<String, dynamic> _$$TrackingFreqLimitFortyFiveMinToJson(
-        _$TrackingFreqLimitFortyFiveMin instance) =>
-    <String, dynamic>{};
+Map<String, dynamic> _$$AppLocaleTypeSystemImplToJson(
+        _$AppLocaleTypeSystemImpl instance) =>
+    <String, dynamic>{
+      'runtimeType': instance.$type,
+    };
 
-_$TrackingFreqLimitOneHour _$$TrackingFreqLimitOneHourFromJson(
+_$AppLocaleTypeInnerImpl _$$AppLocaleTypeInnerImplFromJson(
         Map<String, dynamic> json) =>
-    _$TrackingFreqLimitOneHour();
+    _$AppLocaleTypeInnerImpl(
+      locale: Locale.fromJson(json['locale'] as Map<String, dynamic>),
+      $type: json['runtimeType'] as String?,
+    );
 
-Map<String, dynamic> _$$TrackingFreqLimitOneHourToJson(
-        _$TrackingFreqLimitOneHour instance) =>
-    <String, dynamic>{};
+Map<String, dynamic> _$$AppLocaleTypeInnerImplToJson(
+        _$AppLocaleTypeInnerImpl instance) =>
+    <String, dynamic>{
+      'locale': instance.locale.toJson(),
+      'runtimeType': instance.$type,
+    };
 
-_$AutoTrackingFreqSixHours _$$AutoTrackingFreqSixHoursFromJson(
+_$TrackingFreqLimitFifteenMinImpl _$$TrackingFreqLimitFifteenMinImplFromJson(
         Map<String, dynamic> json) =>
-    _$AutoTrackingFreqSixHours();
+    _$TrackingFreqLimitFifteenMinImpl(
+      $type: json['runtimeType'] as String?,
+    );
 
-Map<String, dynamic> _$$AutoTrackingFreqSixHoursToJson(
-        _$AutoTrackingFreqSixHours instance) =>
-    <String, dynamic>{};
+Map<String, dynamic> _$$TrackingFreqLimitFifteenMinImplToJson(
+        _$TrackingFreqLimitFifteenMinImpl instance) =>
+    <String, dynamic>{
+      'runtimeType': instance.$type,
+    };
 
-_$AutoTrackingFreqTwelveHours _$$AutoTrackingFreqTwelveHoursFromJson(
+_$TrackingFreqLimitThirtyMinImpl _$$TrackingFreqLimitThirtyMinImplFromJson(
         Map<String, dynamic> json) =>
-    _$AutoTrackingFreqTwelveHours();
+    _$TrackingFreqLimitThirtyMinImpl(
+      $type: json['runtimeType'] as String?,
+    );
 
-Map<String, dynamic> _$$AutoTrackingFreqTwelveHoursToJson(
-        _$AutoTrackingFreqTwelveHours instance) =>
-    <String, dynamic>{};
+Map<String, dynamic> _$$TrackingFreqLimitThirtyMinImplToJson(
+        _$TrackingFreqLimitThirtyMinImpl instance) =>
+    <String, dynamic>{
+      'runtimeType': instance.$type,
+    };
 
-_$AutoTrackingFreqOneDay _$$AutoTrackingFreqOneDayFromJson(
+_$TrackingFreqLimitFortyFiveMinImpl
+    _$$TrackingFreqLimitFortyFiveMinImplFromJson(Map<String, dynamic> json) =>
+        _$TrackingFreqLimitFortyFiveMinImpl(
+          $type: json['runtimeType'] as String?,
+        );
+
+Map<String, dynamic> _$$TrackingFreqLimitFortyFiveMinImplToJson(
+        _$TrackingFreqLimitFortyFiveMinImpl instance) =>
+    <String, dynamic>{
+      'runtimeType': instance.$type,
+    };
+
+_$TrackingFreqLimitOneHourImpl _$$TrackingFreqLimitOneHourImplFromJson(
         Map<String, dynamic> json) =>
-    _$AutoTrackingFreqOneDay();
+    _$TrackingFreqLimitOneHourImpl(
+      $type: json['runtimeType'] as String?,
+    );
 
-Map<String, dynamic> _$$AutoTrackingFreqOneDayToJson(
-        _$AutoTrackingFreqOneDay instance) =>
-    <String, dynamic>{};
+Map<String, dynamic> _$$TrackingFreqLimitOneHourImplToJson(
+        _$TrackingFreqLimitOneHourImpl instance) =>
+    <String, dynamic>{
+      'runtimeType': instance.$type,
+    };
 
-_$AutoTrackingFreqThreeDays _$$AutoTrackingFreqThreeDaysFromJson(
+_$AutoTrackingFreqSixHoursImpl _$$AutoTrackingFreqSixHoursImplFromJson(
         Map<String, dynamic> json) =>
-    _$AutoTrackingFreqThreeDays();
+    _$AutoTrackingFreqSixHoursImpl(
+      $type: json['runtimeType'] as String?,
+    );
 
-Map<String, dynamic> _$$AutoTrackingFreqThreeDaysToJson(
-        _$AutoTrackingFreqThreeDays instance) =>
-    <String, dynamic>{};
+Map<String, dynamic> _$$AutoTrackingFreqSixHoursImplToJson(
+        _$AutoTrackingFreqSixHoursImpl instance) =>
+    <String, dynamic>{
+      'runtimeType': instance.$type,
+    };
 
-_$AutoTrackingFreqOneWeek _$$AutoTrackingFreqOneWeekFromJson(
+_$AutoTrackingFreqTwelveHoursImpl _$$AutoTrackingFreqTwelveHoursImplFromJson(
         Map<String, dynamic> json) =>
-    _$AutoTrackingFreqOneWeek();
+    _$AutoTrackingFreqTwelveHoursImpl(
+      $type: json['runtimeType'] as String?,
+    );
 
-Map<String, dynamic> _$$AutoTrackingFreqOneWeekToJson(
-        _$AutoTrackingFreqOneWeek instance) =>
-    <String, dynamic>{};
+Map<String, dynamic> _$$AutoTrackingFreqTwelveHoursImplToJson(
+        _$AutoTrackingFreqTwelveHoursImpl instance) =>
+    <String, dynamic>{
+      'runtimeType': instance.$type,
+    };
+
+_$AutoTrackingFreqOneDayImpl _$$AutoTrackingFreqOneDayImplFromJson(
+        Map<String, dynamic> json) =>
+    _$AutoTrackingFreqOneDayImpl(
+      $type: json['runtimeType'] as String?,
+    );
+
+Map<String, dynamic> _$$AutoTrackingFreqOneDayImplToJson(
+        _$AutoTrackingFreqOneDayImpl instance) =>
+    <String, dynamic>{
+      'runtimeType': instance.$type,
+    };
+
+_$AutoTrackingFreqThreeDaysImpl _$$AutoTrackingFreqThreeDaysImplFromJson(
+        Map<String, dynamic> json) =>
+    _$AutoTrackingFreqThreeDaysImpl(
+      $type: json['runtimeType'] as String?,
+    );
+
+Map<String, dynamic> _$$AutoTrackingFreqThreeDaysImplToJson(
+        _$AutoTrackingFreqThreeDaysImpl instance) =>
+    <String, dynamic>{
+      'runtimeType': instance.$type,
+    };
+
+_$AutoTrackingFreqOneWeekImpl _$$AutoTrackingFreqOneWeekImplFromJson(
+        Map<String, dynamic> json) =>
+    _$AutoTrackingFreqOneWeekImpl(
+      $type: json['runtimeType'] as String?,
+    );
+
+Map<String, dynamic> _$$AutoTrackingFreqOneWeekImplToJson(
+        _$AutoTrackingFreqOneWeekImpl instance) =>
+    <String, dynamic>{
+      'runtimeType': instance.$type,
+    };

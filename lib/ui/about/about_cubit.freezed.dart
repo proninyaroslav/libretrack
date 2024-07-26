@@ -1,6 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'about_cubit.dart';
 
@@ -11,31 +12,7 @@ part of 'about_cubit.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$AboutStateTearOff {
-  const _$AboutStateTearOff();
-
-  AboutStateInitial initial() {
-    return const AboutStateInitial();
-  }
-
-  AboutStateLoading loading() {
-    return const AboutStateLoading();
-  }
-
-  AboutStateLoaded loaded(
-      {required String appName, required String appVersion}) {
-    return AboutStateLoaded(
-      appName: appName,
-      appVersion: appVersion,
-    );
-  }
-}
-
-/// @nodoc
-const $AboutState = _$AboutStateTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$AboutState {
@@ -48,9 +25,9 @@ mixin _$AboutState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loading,
-    TResult Function(String appName, String appVersion)? loaded,
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(String appName, String appVersion)? loaded,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -70,9 +47,9 @@ mixin _$AboutState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(AboutStateInitial value)? initial,
-    TResult Function(AboutStateLoading value)? loading,
-    TResult Function(AboutStateLoaded value)? loaded,
+    TResult? Function(AboutStateInitial value)? initial,
+    TResult? Function(AboutStateLoading value)? loading,
+    TResult? Function(AboutStateLoaded value)? loaded,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -89,41 +66,40 @@ mixin _$AboutState {
 abstract class $AboutStateCopyWith<$Res> {
   factory $AboutStateCopyWith(
           AboutState value, $Res Function(AboutState) then) =
-      _$AboutStateCopyWithImpl<$Res>;
+      _$AboutStateCopyWithImpl<$Res, AboutState>;
 }
 
 /// @nodoc
-class _$AboutStateCopyWithImpl<$Res> implements $AboutStateCopyWith<$Res> {
+class _$AboutStateCopyWithImpl<$Res, $Val extends AboutState>
+    implements $AboutStateCopyWith<$Res> {
   _$AboutStateCopyWithImpl(this._value, this._then);
 
-  final AboutState _value;
   // ignore: unused_field
-  final $Res Function(AboutState) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 }
 
 /// @nodoc
-abstract class $AboutStateInitialCopyWith<$Res> {
-  factory $AboutStateInitialCopyWith(
-          AboutStateInitial value, $Res Function(AboutStateInitial) then) =
-      _$AboutStateInitialCopyWithImpl<$Res>;
+abstract class _$$AboutStateInitialImplCopyWith<$Res> {
+  factory _$$AboutStateInitialImplCopyWith(_$AboutStateInitialImpl value,
+          $Res Function(_$AboutStateInitialImpl) then) =
+      __$$AboutStateInitialImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$AboutStateInitialCopyWithImpl<$Res>
-    extends _$AboutStateCopyWithImpl<$Res>
-    implements $AboutStateInitialCopyWith<$Res> {
-  _$AboutStateInitialCopyWithImpl(
-      AboutStateInitial _value, $Res Function(AboutStateInitial) _then)
-      : super(_value, (v) => _then(v as AboutStateInitial));
-
-  @override
-  AboutStateInitial get _value => super._value as AboutStateInitial;
+class __$$AboutStateInitialImplCopyWithImpl<$Res>
+    extends _$AboutStateCopyWithImpl<$Res, _$AboutStateInitialImpl>
+    implements _$$AboutStateInitialImplCopyWith<$Res> {
+  __$$AboutStateInitialImplCopyWithImpl(_$AboutStateInitialImpl _value,
+      $Res Function(_$AboutStateInitialImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$AboutStateInitial implements AboutStateInitial {
-  const _$AboutStateInitial();
+class _$AboutStateInitialImpl implements AboutStateInitial {
+  const _$AboutStateInitialImpl();
 
   @override
   String toString() {
@@ -131,8 +107,9 @@ class _$AboutStateInitial implements AboutStateInitial {
   }
 
   @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) || (other is AboutStateInitial);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$AboutStateInitialImpl);
   }
 
   @override
@@ -151,9 +128,9 @@ class _$AboutStateInitial implements AboutStateInitial {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loading,
-    TResult Function(String appName, String appVersion)? loaded,
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(String appName, String appVersion)? loaded,
   }) {
     return initial?.call();
   }
@@ -185,9 +162,9 @@ class _$AboutStateInitial implements AboutStateInitial {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(AboutStateInitial value)? initial,
-    TResult Function(AboutStateLoading value)? loading,
-    TResult Function(AboutStateLoaded value)? loaded,
+    TResult? Function(AboutStateInitial value)? initial,
+    TResult? Function(AboutStateLoading value)? loading,
+    TResult? Function(AboutStateLoaded value)? loaded,
   }) {
     return initial?.call(this);
   }
@@ -208,32 +185,29 @@ class _$AboutStateInitial implements AboutStateInitial {
 }
 
 abstract class AboutStateInitial implements AboutState {
-  const factory AboutStateInitial() = _$AboutStateInitial;
+  const factory AboutStateInitial() = _$AboutStateInitialImpl;
 }
 
 /// @nodoc
-abstract class $AboutStateLoadingCopyWith<$Res> {
-  factory $AboutStateLoadingCopyWith(
-          AboutStateLoading value, $Res Function(AboutStateLoading) then) =
-      _$AboutStateLoadingCopyWithImpl<$Res>;
+abstract class _$$AboutStateLoadingImplCopyWith<$Res> {
+  factory _$$AboutStateLoadingImplCopyWith(_$AboutStateLoadingImpl value,
+          $Res Function(_$AboutStateLoadingImpl) then) =
+      __$$AboutStateLoadingImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$AboutStateLoadingCopyWithImpl<$Res>
-    extends _$AboutStateCopyWithImpl<$Res>
-    implements $AboutStateLoadingCopyWith<$Res> {
-  _$AboutStateLoadingCopyWithImpl(
-      AboutStateLoading _value, $Res Function(AboutStateLoading) _then)
-      : super(_value, (v) => _then(v as AboutStateLoading));
-
-  @override
-  AboutStateLoading get _value => super._value as AboutStateLoading;
+class __$$AboutStateLoadingImplCopyWithImpl<$Res>
+    extends _$AboutStateCopyWithImpl<$Res, _$AboutStateLoadingImpl>
+    implements _$$AboutStateLoadingImplCopyWith<$Res> {
+  __$$AboutStateLoadingImplCopyWithImpl(_$AboutStateLoadingImpl _value,
+      $Res Function(_$AboutStateLoadingImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$AboutStateLoading implements AboutStateLoading {
-  const _$AboutStateLoading();
+class _$AboutStateLoadingImpl implements AboutStateLoading {
+  const _$AboutStateLoadingImpl();
 
   @override
   String toString() {
@@ -241,8 +215,9 @@ class _$AboutStateLoading implements AboutStateLoading {
   }
 
   @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) || (other is AboutStateLoading);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$AboutStateLoadingImpl);
   }
 
   @override
@@ -261,9 +236,9 @@ class _$AboutStateLoading implements AboutStateLoading {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loading,
-    TResult Function(String appName, String appVersion)? loaded,
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(String appName, String appVersion)? loaded,
   }) {
     return loading?.call();
   }
@@ -295,9 +270,9 @@ class _$AboutStateLoading implements AboutStateLoading {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(AboutStateInitial value)? initial,
-    TResult Function(AboutStateLoading value)? loading,
-    TResult Function(AboutStateLoaded value)? loaded,
+    TResult? Function(AboutStateInitial value)? initial,
+    TResult? Function(AboutStateLoading value)? loading,
+    TResult? Function(AboutStateLoaded value)? loaded,
   }) {
     return loading?.call(this);
   }
@@ -318,39 +293,38 @@ class _$AboutStateLoading implements AboutStateLoading {
 }
 
 abstract class AboutStateLoading implements AboutState {
-  const factory AboutStateLoading() = _$AboutStateLoading;
+  const factory AboutStateLoading() = _$AboutStateLoadingImpl;
 }
 
 /// @nodoc
-abstract class $AboutStateLoadedCopyWith<$Res> {
-  factory $AboutStateLoadedCopyWith(
-          AboutStateLoaded value, $Res Function(AboutStateLoaded) then) =
-      _$AboutStateLoadedCopyWithImpl<$Res>;
+abstract class _$$AboutStateLoadedImplCopyWith<$Res> {
+  factory _$$AboutStateLoadedImplCopyWith(_$AboutStateLoadedImpl value,
+          $Res Function(_$AboutStateLoadedImpl) then) =
+      __$$AboutStateLoadedImplCopyWithImpl<$Res>;
+  @useResult
   $Res call({String appName, String appVersion});
 }
 
 /// @nodoc
-class _$AboutStateLoadedCopyWithImpl<$Res>
-    extends _$AboutStateCopyWithImpl<$Res>
-    implements $AboutStateLoadedCopyWith<$Res> {
-  _$AboutStateLoadedCopyWithImpl(
-      AboutStateLoaded _value, $Res Function(AboutStateLoaded) _then)
-      : super(_value, (v) => _then(v as AboutStateLoaded));
+class __$$AboutStateLoadedImplCopyWithImpl<$Res>
+    extends _$AboutStateCopyWithImpl<$Res, _$AboutStateLoadedImpl>
+    implements _$$AboutStateLoadedImplCopyWith<$Res> {
+  __$$AboutStateLoadedImplCopyWithImpl(_$AboutStateLoadedImpl _value,
+      $Res Function(_$AboutStateLoadedImpl) _then)
+      : super(_value, _then);
 
-  @override
-  AboutStateLoaded get _value => super._value as AboutStateLoaded;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? appName = freezed,
-    Object? appVersion = freezed,
+    Object? appName = null,
+    Object? appVersion = null,
   }) {
-    return _then(AboutStateLoaded(
-      appName: appName == freezed
+    return _then(_$AboutStateLoadedImpl(
+      appName: null == appName
           ? _value.appName
           : appName // ignore: cast_nullable_to_non_nullable
               as String,
-      appVersion: appVersion == freezed
+      appVersion: null == appVersion
           ? _value.appVersion
           : appVersion // ignore: cast_nullable_to_non_nullable
               as String,
@@ -360,8 +334,9 @@ class _$AboutStateLoadedCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$AboutStateLoaded implements AboutStateLoaded {
-  const _$AboutStateLoaded({required this.appName, required this.appVersion});
+class _$AboutStateLoadedImpl implements AboutStateLoaded {
+  const _$AboutStateLoadedImpl(
+      {required this.appName, required this.appVersion});
 
   @override
   final String appName;
@@ -374,27 +349,24 @@ class _$AboutStateLoaded implements AboutStateLoaded {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is AboutStateLoaded &&
-            (identical(other.appName, appName) ||
-                const DeepCollectionEquality()
-                    .equals(other.appName, appName)) &&
+        (other.runtimeType == runtimeType &&
+            other is _$AboutStateLoadedImpl &&
+            (identical(other.appName, appName) || other.appName == appName) &&
             (identical(other.appVersion, appVersion) ||
-                const DeepCollectionEquality()
-                    .equals(other.appVersion, appVersion)));
+                other.appVersion == appVersion));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(appName) ^
-      const DeepCollectionEquality().hash(appVersion);
+  int get hashCode => Object.hash(runtimeType, appName, appVersion);
 
   @JsonKey(ignore: true)
   @override
-  $AboutStateLoadedCopyWith<AboutStateLoaded> get copyWith =>
-      _$AboutStateLoadedCopyWithImpl<AboutStateLoaded>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$AboutStateLoadedImplCopyWith<_$AboutStateLoadedImpl> get copyWith =>
+      __$$AboutStateLoadedImplCopyWithImpl<_$AboutStateLoadedImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -409,9 +381,9 @@ class _$AboutStateLoaded implements AboutStateLoaded {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loading,
-    TResult Function(String appName, String appVersion)? loaded,
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(String appName, String appVersion)? loaded,
   }) {
     return loaded?.call(appName, appVersion);
   }
@@ -443,9 +415,9 @@ class _$AboutStateLoaded implements AboutStateLoaded {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(AboutStateInitial value)? initial,
-    TResult Function(AboutStateLoading value)? loading,
-    TResult Function(AboutStateLoaded value)? loaded,
+    TResult? Function(AboutStateInitial value)? initial,
+    TResult? Function(AboutStateLoading value)? loading,
+    TResult? Function(AboutStateLoaded value)? loaded,
   }) {
     return loaded?.call(this);
   }
@@ -467,12 +439,12 @@ class _$AboutStateLoaded implements AboutStateLoaded {
 
 abstract class AboutStateLoaded implements AboutState {
   const factory AboutStateLoaded(
-      {required String appName,
-      required String appVersion}) = _$AboutStateLoaded;
+      {required final String appName,
+      required final String appVersion}) = _$AboutStateLoadedImpl;
 
-  String get appName => throw _privateConstructorUsedError;
-  String get appVersion => throw _privateConstructorUsedError;
+  String get appName;
+  String get appVersion;
   @JsonKey(ignore: true)
-  $AboutStateLoadedCopyWith<AboutStateLoaded> get copyWith =>
+  _$$AboutStateLoadedImplCopyWith<_$AboutStateLoadedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -832,7 +832,7 @@ abstract class _DeliveryDetailCode {
 }
 
 @freezed
-class _DeliveryDetail with _$_DeliveryDetail {
+class _DeliveryDetail with _$DeliveryDetail {
   factory _DeliveryDetail.delivery(
     _DateTime dateTime,
   ) = _DeliveryDetailDelivery;
@@ -863,7 +863,7 @@ abstract class _ShipmentAddressTypeCode {
 }
 
 @freezed
-class _ShipmentAddress with _$_ShipmentAddress {
+class _ShipmentAddress with _$ShipmentAddress {
   const factory _ShipmentAddress.shipper(
     Address address,
   ) = _ShipmentAddressShipper;

@@ -1,6 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'model.dart';
 
@@ -11,28 +12,7 @@ part of 'model.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$AuthFormFieldTearOff {
-  const _$AuthFormFieldTearOff();
-
-  _AuthFormFieldData call(
-      {required FormFieldId id,
-      required String name,
-      required bool secured,
-      String? value}) {
-    return _AuthFormFieldData(
-      id: id,
-      name: name,
-      secured: secured,
-      value: value,
-    );
-  }
-}
-
-/// @nodoc
-const $AuthFormField = _$AuthFormFieldTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$AuthFormField {
@@ -50,63 +30,68 @@ mixin _$AuthFormField {
 abstract class $AuthFormFieldCopyWith<$Res> {
   factory $AuthFormFieldCopyWith(
           AuthFormField value, $Res Function(AuthFormField) then) =
-      _$AuthFormFieldCopyWithImpl<$Res>;
+      _$AuthFormFieldCopyWithImpl<$Res, AuthFormField>;
+  @useResult
   $Res call({FormFieldId id, String name, bool secured, String? value});
 
   $FormFieldIdCopyWith<$Res> get id;
 }
 
 /// @nodoc
-class _$AuthFormFieldCopyWithImpl<$Res>
+class _$AuthFormFieldCopyWithImpl<$Res, $Val extends AuthFormField>
     implements $AuthFormFieldCopyWith<$Res> {
   _$AuthFormFieldCopyWithImpl(this._value, this._then);
 
-  final AuthFormField _value;
   // ignore: unused_field
-  final $Res Function(AuthFormField) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? name = freezed,
-    Object? secured = freezed,
+    Object? id = null,
+    Object? name = null,
+    Object? secured = null,
     Object? value = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as FormFieldId,
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      secured: secured == freezed
+      secured: null == secured
           ? _value.secured
           : secured // ignore: cast_nullable_to_non_nullable
               as bool,
-      value: value == freezed
+      value: freezed == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
               as String?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $FormFieldIdCopyWith<$Res> get id {
     return $FormFieldIdCopyWith<$Res>(_value.id, (value) {
-      return _then(_value.copyWith(id: value));
+      return _then(_value.copyWith(id: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$AuthFormFieldDataCopyWith<$Res>
+abstract class _$$AuthFormFieldDataImplCopyWith<$Res>
     implements $AuthFormFieldCopyWith<$Res> {
-  factory _$AuthFormFieldDataCopyWith(
-          _AuthFormFieldData value, $Res Function(_AuthFormFieldData) then) =
-      __$AuthFormFieldDataCopyWithImpl<$Res>;
+  factory _$$AuthFormFieldDataImplCopyWith(_$AuthFormFieldDataImpl value,
+          $Res Function(_$AuthFormFieldDataImpl) then) =
+      __$$AuthFormFieldDataImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({FormFieldId id, String name, bool secured, String? value});
 
   @override
@@ -114,37 +99,35 @@ abstract class _$AuthFormFieldDataCopyWith<$Res>
 }
 
 /// @nodoc
-class __$AuthFormFieldDataCopyWithImpl<$Res>
-    extends _$AuthFormFieldCopyWithImpl<$Res>
-    implements _$AuthFormFieldDataCopyWith<$Res> {
-  __$AuthFormFieldDataCopyWithImpl(
-      _AuthFormFieldData _value, $Res Function(_AuthFormFieldData) _then)
-      : super(_value, (v) => _then(v as _AuthFormFieldData));
+class __$$AuthFormFieldDataImplCopyWithImpl<$Res>
+    extends _$AuthFormFieldCopyWithImpl<$Res, _$AuthFormFieldDataImpl>
+    implements _$$AuthFormFieldDataImplCopyWith<$Res> {
+  __$$AuthFormFieldDataImplCopyWithImpl(_$AuthFormFieldDataImpl _value,
+      $Res Function(_$AuthFormFieldDataImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _AuthFormFieldData get _value => super._value as _AuthFormFieldData;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? name = freezed,
-    Object? secured = freezed,
+    Object? id = null,
+    Object? name = null,
+    Object? secured = null,
     Object? value = freezed,
   }) {
-    return _then(_AuthFormFieldData(
-      id: id == freezed
+    return _then(_$AuthFormFieldDataImpl(
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as FormFieldId,
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      secured: secured == freezed
+      secured: null == secured
           ? _value.secured
           : secured // ignore: cast_nullable_to_non_nullable
               as bool,
-      value: value == freezed
+      value: freezed == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -154,8 +137,8 @@ class __$AuthFormFieldDataCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_AuthFormFieldData implements _AuthFormFieldData {
-  const _$_AuthFormFieldData(
+class _$AuthFormFieldDataImpl implements _AuthFormFieldData {
+  const _$AuthFormFieldDataImpl(
       {required this.id,
       required this.name,
       required this.secured,
@@ -176,68 +159,47 @@ class _$_AuthFormFieldData implements _AuthFormFieldData {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is _AuthFormFieldData &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.name, name) ||
-                const DeepCollectionEquality().equals(other.name, name)) &&
-            (identical(other.secured, secured) ||
-                const DeepCollectionEquality()
-                    .equals(other.secured, secured)) &&
-            (identical(other.value, value) ||
-                const DeepCollectionEquality().equals(other.value, value)));
+        (other.runtimeType == runtimeType &&
+            other is _$AuthFormFieldDataImpl &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.secured, secured) || other.secured == secured) &&
+            (identical(other.value, value) || other.value == value));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(name) ^
-      const DeepCollectionEquality().hash(secured) ^
-      const DeepCollectionEquality().hash(value);
+  int get hashCode => Object.hash(runtimeType, id, name, secured, value);
 
   @JsonKey(ignore: true)
   @override
-  _$AuthFormFieldDataCopyWith<_AuthFormFieldData> get copyWith =>
-      __$AuthFormFieldDataCopyWithImpl<_AuthFormFieldData>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$AuthFormFieldDataImplCopyWith<_$AuthFormFieldDataImpl> get copyWith =>
+      __$$AuthFormFieldDataImplCopyWithImpl<_$AuthFormFieldDataImpl>(
+          this, _$identity);
 }
 
 abstract class _AuthFormFieldData implements AuthFormField {
   const factory _AuthFormFieldData(
-      {required FormFieldId id,
-      required String name,
-      required bool secured,
-      String? value}) = _$_AuthFormFieldData;
+      {required final FormFieldId id,
+      required final String name,
+      required final bool secured,
+      final String? value}) = _$AuthFormFieldDataImpl;
 
   @override
-  FormFieldId get id => throw _privateConstructorUsedError;
+  FormFieldId get id;
   @override
-  String get name => throw _privateConstructorUsedError;
+  String get name;
   @override
-  bool get secured => throw _privateConstructorUsedError;
+  bool get secured;
   @override
-  String? get value => throw _privateConstructorUsedError;
+  String? get value;
   @override
   @JsonKey(ignore: true)
-  _$AuthFormFieldDataCopyWith<_AuthFormFieldData> get copyWith =>
+  _$$AuthFormFieldDataImplCopyWith<_$AuthFormFieldDataImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
-
-/// @nodoc
-class _$FormFieldIdTearOff {
-  const _$FormFieldIdTearOff();
-
-  _FormFieldIdData call(String value) {
-    return _FormFieldIdData(
-      value,
-    );
-  }
-}
-
-/// @nodoc
-const $FormFieldId = _$FormFieldIdTearOff();
 
 /// @nodoc
 mixin _$FormFieldId {
@@ -252,58 +214,61 @@ mixin _$FormFieldId {
 abstract class $FormFieldIdCopyWith<$Res> {
   factory $FormFieldIdCopyWith(
           FormFieldId value, $Res Function(FormFieldId) then) =
-      _$FormFieldIdCopyWithImpl<$Res>;
+      _$FormFieldIdCopyWithImpl<$Res, FormFieldId>;
+  @useResult
   $Res call({String value});
 }
 
 /// @nodoc
-class _$FormFieldIdCopyWithImpl<$Res> implements $FormFieldIdCopyWith<$Res> {
+class _$FormFieldIdCopyWithImpl<$Res, $Val extends FormFieldId>
+    implements $FormFieldIdCopyWith<$Res> {
   _$FormFieldIdCopyWithImpl(this._value, this._then);
 
-  final FormFieldId _value;
   // ignore: unused_field
-  final $Res Function(FormFieldId) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? value = freezed,
+    Object? value = null,
   }) {
     return _then(_value.copyWith(
-      value: value == freezed
+      value: null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$FormFieldIdDataCopyWith<$Res>
+abstract class _$$FormFieldIdDataImplCopyWith<$Res>
     implements $FormFieldIdCopyWith<$Res> {
-  factory _$FormFieldIdDataCopyWith(
-          _FormFieldIdData value, $Res Function(_FormFieldIdData) then) =
-      __$FormFieldIdDataCopyWithImpl<$Res>;
+  factory _$$FormFieldIdDataImplCopyWith(_$FormFieldIdDataImpl value,
+          $Res Function(_$FormFieldIdDataImpl) then) =
+      __$$FormFieldIdDataImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({String value});
 }
 
 /// @nodoc
-class __$FormFieldIdDataCopyWithImpl<$Res>
-    extends _$FormFieldIdCopyWithImpl<$Res>
-    implements _$FormFieldIdDataCopyWith<$Res> {
-  __$FormFieldIdDataCopyWithImpl(
-      _FormFieldIdData _value, $Res Function(_FormFieldIdData) _then)
-      : super(_value, (v) => _then(v as _FormFieldIdData));
+class __$$FormFieldIdDataImplCopyWithImpl<$Res>
+    extends _$FormFieldIdCopyWithImpl<$Res, _$FormFieldIdDataImpl>
+    implements _$$FormFieldIdDataImplCopyWith<$Res> {
+  __$$FormFieldIdDataImplCopyWithImpl(
+      _$FormFieldIdDataImpl _value, $Res Function(_$FormFieldIdDataImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _FormFieldIdData get _value => super._value as _FormFieldIdData;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? value = freezed,
+    Object? value = null,
   }) {
-    return _then(_FormFieldIdData(
-      value == freezed
+    return _then(_$FormFieldIdDataImpl(
+      null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
               as String,
@@ -313,8 +278,8 @@ class __$FormFieldIdDataCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_FormFieldIdData implements _FormFieldIdData {
-  const _$_FormFieldIdData(this.value);
+class _$FormFieldIdDataImpl implements _FormFieldIdData {
+  const _$FormFieldIdDataImpl(this.value);
 
   @override
   final String value;
@@ -325,30 +290,31 @@ class _$_FormFieldIdData implements _FormFieldIdData {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is _FormFieldIdData &&
-            (identical(other.value, value) ||
-                const DeepCollectionEquality().equals(other.value, value)));
+        (other.runtimeType == runtimeType &&
+            other is _$FormFieldIdDataImpl &&
+            (identical(other.value, value) || other.value == value));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(value);
+  int get hashCode => Object.hash(runtimeType, value);
 
   @JsonKey(ignore: true)
   @override
-  _$FormFieldIdDataCopyWith<_FormFieldIdData> get copyWith =>
-      __$FormFieldIdDataCopyWithImpl<_FormFieldIdData>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$FormFieldIdDataImplCopyWith<_$FormFieldIdDataImpl> get copyWith =>
+      __$$FormFieldIdDataImplCopyWithImpl<_$FormFieldIdDataImpl>(
+          this, _$identity);
 }
 
 abstract class _FormFieldIdData implements FormFieldId {
-  const factory _FormFieldIdData(String value) = _$_FormFieldIdData;
+  const factory _FormFieldIdData(final String value) = _$FormFieldIdDataImpl;
 
   @override
-  String get value => throw _privateConstructorUsedError;
+  String get value;
   @override
   @JsonKey(ignore: true)
-  _$FormFieldIdDataCopyWith<_FormFieldIdData> get copyWith =>
+  _$$FormFieldIdDataImplCopyWith<_$FormFieldIdDataImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

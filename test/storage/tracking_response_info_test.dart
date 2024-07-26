@@ -155,11 +155,11 @@ void main() {
       );
       expect(
         await trackingRepo.getTrackingInfoByTrack(trackInfo.trackNumber),
-        const StorageResult([]),
+        const StorageResult(<TrackingInfo>[]),
       );
       expect(
         await trackingRepo.getResponseByTrackingId(trackingInfo.id),
-        const StorageResult([]),
+        const StorageResult(<TrackingResponseInfo>[]),
       );
     });
   });

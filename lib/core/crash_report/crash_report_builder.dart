@@ -22,7 +22,6 @@ import 'package:libretrack/core/platform_info.dart';
 
 import '../../env.dart';
 import 'crash_report_manager.dart';
-import 'model.dart';
 
 abstract class CrashReportBuilder {
   Future<CrashReport> build(CrashInfo info);
@@ -100,9 +99,9 @@ abstract class CrashReportBuilderImpl implements CrashReportBuilder {
 @Injectable(as: CrashReportBuilder, env: [Env.prod])
 class ProdCrashReportBuilder extends CrashReportBuilderImpl {
   ProdCrashReportBuilder(
-    PlatformInfo platform,
-    CrashReportIdGenerator idGenerator,
-  ) : super(platform, idGenerator);
+    super.platform,
+    super.idGenerator,
+  );
 
   @override
   String get _email => CrashReportManager.reportEmail;
@@ -111,9 +110,9 @@ class ProdCrashReportBuilder extends CrashReportBuilderImpl {
 @Injectable(as: CrashReportBuilder, env: [Env.dev])
 class DevCrashReportBuilder extends CrashReportBuilderImpl {
   DevCrashReportBuilder(
-    PlatformInfo platform,
-    CrashReportIdGenerator idGenerator,
-  ) : super(platform, idGenerator);
+    super.platform,
+    super.idGenerator,
+  );
 
   @override
   String get _email => 'foo@bar.com';
@@ -122,7 +121,7 @@ class DevCrashReportBuilder extends CrashReportBuilderImpl {
 @Injectable(as: CrashReportBuilder, env: [Env.test])
 class TestCrashReportBuilder extends DevCrashReportBuilder {
   TestCrashReportBuilder(
-    PlatformInfo platform,
-    CrashReportIdGenerator idGenerator,
-  ) : super(platform, idGenerator);
+    super.platform,
+    super.idGenerator,
+  );
 }

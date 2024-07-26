@@ -23,7 +23,7 @@ import '../theme.dart';
 class SearchBar extends StatefulWidget {
   final TextEditingController? controller;
 
-  const SearchBar({Key? key, this.controller}) : super(key: key);
+  const SearchBar({super.key, this.controller});
 
   @override
   _SearchBarState createState() => _SearchBarState();

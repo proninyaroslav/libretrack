@@ -22,7 +22,6 @@ import 'package:libretrack/core/platform_info.dart';
 import 'package:libretrack/core/settings/settings.dart';
 import 'package:libretrack/injector.dart';
 import 'package:libretrack/locale.dart';
-import 'package:libretrack/ui/settings/page/appearance_cubit.dart';
 import 'package:libretrack/ui/settings/settings_list.dart';
 import 'package:libretrack/ui/utils/utils.dart';
 import 'package:libretrack/ui/widget/widget.dart';
@@ -31,7 +30,7 @@ import 'package:material_design_icons_flutter/material_design_icons_flutter.dart
 import '../settings.dart';
 
 class AppearanceSettingsPage extends StatelessWidget {
-  const AppearanceSettingsPage({Key? key}) : super(key: key);
+  const AppearanceSettingsPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -133,7 +132,7 @@ class AppearanceSettingsPage extends StatelessWidget {
         return SwitchListTile(
           value: state.info.trackingNotify,
           title: Text(S.of(context).settingsTrackingNotifications),
-          secondary: const Icon(MdiIcons.cubeSend),
+          secondary: Icon(MdiIcons.cubeSend),
           onChanged: (value) => context
               .read<AppearanceSettingsCubit>()
               .trackingNotify(enable: value),
@@ -234,8 +233,8 @@ class AppearanceSettingsPage extends StatelessWidget {
           subtitle: getIt<PlatformInfo>().isLinux
               ? LinkText(
                   text: S.of(context).linuxTrayIconWarning,
-                  style: textTheme.bodyText2!.copyWith(
-                    color: textTheme.caption!.color,
+                  style: textTheme.bodyMedium!.copyWith(
+                    color: textTheme.bodySmall!.color,
                   ),
                 )
               : null,
@@ -253,10 +252,9 @@ class _ThemeList extends StatefulWidget {
   final ValueChanged<AppThemeType>? onSelected;
 
   const _ThemeList({
-    Key? key,
     required this.initialValue,
     this.onSelected,
-  }) : super(key: key);
+  });
 
   @override
   _ThemeListState createState() => _ThemeListState();
@@ -304,10 +302,9 @@ class _LanguageList extends StatefulWidget {
   final ValueChanged<AppLocaleType>? onSelected;
 
   const _LanguageList({
-    Key? key,
     required this.initialValue,
     this.onSelected,
-  }) : super(key: key);
+  });
 
   @override
   _LanguageListState createState() => _LanguageListState();

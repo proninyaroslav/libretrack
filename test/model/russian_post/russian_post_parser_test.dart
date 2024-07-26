@@ -66,7 +66,7 @@ void main() {
         );
       });
 
-      String _buildFault(
+      String buildFault(
         XmlBuilder builder, {
         required Object? reason,
         String? codeValue,
@@ -94,7 +94,7 @@ void main() {
 
       test('Operation history fault', () {
         final builder = XmlBuilder();
-        final payload = _buildFault(builder, reason: () {
+        final payload = buildFault(builder, reason: () {
           builder.element(
             'ns3:OperationHistoryFaultReason',
             nest: 'Test',
@@ -122,7 +122,7 @@ void main() {
 
       test('Authorization fault', () {
         final builder = XmlBuilder();
-        final payload = _buildFault(builder, reason: () {
+        final payload = buildFault(builder, reason: () {
           builder.element(
             'ns3:AuthorizationFaultReason',
             nest: 'Test',
@@ -150,7 +150,7 @@ void main() {
 
       test('Language fault', () {
         final builder = XmlBuilder();
-        final payload = _buildFault(builder, reason: () {
+        final payload = buildFault(builder, reason: () {
           builder.element(
             'ns3:LanguageFaultReason',
             nest: 'Test',
@@ -178,7 +178,7 @@ void main() {
 
       test('Default fault (receiver)', () {
         final builder = XmlBuilder();
-        final payload = _buildFault(builder, reason: null);
+        final payload = buildFault(builder, reason: null);
         final response = ServiceResponse(
           transactionId: const TransactionId('1'),
           statusCode: 500,
@@ -201,7 +201,7 @@ void main() {
 
       test('Default fault (sender)', () {
         final builder = XmlBuilder();
-        final payload = _buildFault(
+        final payload = buildFault(
           builder,
           reason: null,
           codeValue: 'S:Sender',
@@ -226,9 +226,9 @@ void main() {
       });
 
       group('Invalid tracking number |', () {
-        Future<void> _testInvalidTrackNumber(String message) async {
+        Future<void> testInvalidTrackNumber(String message) async {
           final builder = XmlBuilder();
-          final payload = _buildFault(builder, reason: () {
+          final payload = buildFault(builder, reason: () {
             builder.element(
               'ns3:OperationHistoryFaultReason',
               nest: message,
@@ -253,13 +253,13 @@ void main() {
         }
 
         test('English message', () async {
-          await _testInvalidTrackNumber(
+          await testInvalidTrackNumber(
             'The format of the request data is invalid',
           );
         });
 
         test('Russian message', () async {
-          await _testInvalidTrackNumber(
+          await testInvalidTrackNumber(
             'Формат данных запроса не соответствует установленному в регламенте обмена',
           );
         });
@@ -267,7 +267,7 @@ void main() {
     });
 
     group('Result |', () {
-      String _buildResult(
+      String buildResult(
         XmlBuilder builder, {
         List<VoidCallback>? historyRecord,
       }) {
@@ -294,7 +294,7 @@ void main() {
 
       test('Empty history record', () async {
         final builder = XmlBuilder();
-        final payload = _buildResult(builder);
+        final payload = buildResult(builder);
         final response = ServiceResponse(
           transactionId: const TransactionId('1'),
           statusCode: 200,
@@ -307,7 +307,7 @@ void main() {
 
       test('No barcode', () async {
         final builder = XmlBuilder();
-        final payload = _buildResult(
+        final payload = buildResult(
           builder,
           historyRecord: [() {}],
         );
@@ -327,7 +327,7 @@ void main() {
 
       test('Shipper and receiver address', () async {
         final builder = XmlBuilder();
-        final payload = _buildResult(
+        final payload = buildResult(
           builder,
           historyRecord: [
             () => builder.element('ns3:AddressParameters', nest: () {
@@ -424,7 +424,7 @@ void main() {
 
       test('Cash on delivery', () async {
         final builder = XmlBuilder();
-        final payload = _buildResult(
+        final payload = buildResult(
           builder,
           historyRecord: [
             () => builder.element('ns3:FinanceParameters', nest: () {
@@ -463,7 +463,7 @@ void main() {
 
       test('Declared value', () async {
         final builder = XmlBuilder();
-        final payload = _buildResult(
+        final payload = buildResult(
           builder,
           historyRecord: [
             () => builder.element('ns3:FinanceParameters', nest: () {
@@ -502,7 +502,7 @@ void main() {
 
       test('Custom duty', () async {
         final builder = XmlBuilder();
-        final payload = _buildResult(
+        final payload = buildResult(
           builder,
           historyRecord: [
             () => builder.element('ns3:FinanceParameters', nest: () {
@@ -541,7 +541,7 @@ void main() {
 
       test('Additional rate fee', () async {
         final builder = XmlBuilder();
-        final payload = _buildResult(
+        final payload = buildResult(
           builder,
           historyRecord: [
             () => builder.element('ns3:FinanceParameters', nest: () {
@@ -580,7 +580,7 @@ void main() {
 
       test('Shipping rate fee', () async {
         final builder = XmlBuilder();
-        final payload = _buildResult(
+        final payload = buildResult(
           builder,
           historyRecord: [
             () => builder.element('ns3:FinanceParameters', nest: () {
@@ -619,7 +619,7 @@ void main() {
 
       test('Insurance rate fee', () async {
         final builder = XmlBuilder();
-        final payload = _buildResult(
+        final payload = buildResult(
           builder,
           historyRecord: [
             () => builder.element('ns3:FinanceParameters', nest: () {
@@ -658,7 +658,7 @@ void main() {
 
       test('Service description', () async {
         final builder = XmlBuilder();
-        final payload = _buildResult(
+        final payload = buildResult(
           builder,
           historyRecord: [
             () => builder.element('ns3:ItemParameters', nest: () {
@@ -700,7 +700,7 @@ void main() {
 
       test('Shipment description', () async {
         final builder = XmlBuilder();
-        final payload = _buildResult(
+        final payload = buildResult(
           builder,
           historyRecord: [
             () => builder.element('ns3:ItemParameters', nest: () {
@@ -769,7 +769,7 @@ void main() {
 
       test('Weight', () async {
         final builder = XmlBuilder();
-        final payload = _buildResult(
+        final payload = buildResult(
           builder,
           historyRecord: [
             () => builder.element('ns3:ItemParameters', nest: () {
@@ -807,7 +807,7 @@ void main() {
 
       test('Activity', () async {
         final builder = XmlBuilder();
-        final payload = _buildResult(
+        final payload = buildResult(
           builder,
           historyRecord: [
             () {
@@ -919,7 +919,7 @@ void main() {
 
       test('Shipper and receiver name', () async {
         final builder = XmlBuilder();
-        final payload = _buildResult(
+        final payload = buildResult(
           builder,
           historyRecord: [
             () => builder.element('ns3:UserParameters', nest: () {

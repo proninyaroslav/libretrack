@@ -40,7 +40,7 @@ void main() {
       when(() => mockDateTimeProvider.now()).thenReturn(DateTime(2021, 1, 1));
     });
 
-    String _buildTrackResponseError(
+    String buildTrackResponseError(
       XmlBuilder builder, {
       required String number,
       required String description,
@@ -78,7 +78,7 @@ void main() {
         );
       });
 
-      String _buildError(
+      String buildError(
         XmlBuilder builder, {
         required String number,
         required String description,
@@ -92,7 +92,7 @@ void main() {
 
       test('Bad request', () {
         final builder = XmlBuilder();
-        final payload = _buildError(
+        final payload = buildError(
           builder,
           number: '1',
           description: 'Test',
@@ -119,7 +119,7 @@ void main() {
 
       test('Authorization error', () {
         final builder = XmlBuilder();
-        final payload = _buildError(
+        final payload = buildError(
           builder,
           number: '80040B1A',
           description:
@@ -165,7 +165,7 @@ void main() {
 
       test('Invalid tracking number', () {
         final builder = XmlBuilder();
-        final payload = _buildTrackResponseError(
+        final payload = buildTrackResponseError(
           builder,
           number: '1',
           description:
@@ -187,7 +187,7 @@ void main() {
     });
 
     group('Result |', () {
-      String _buildTrackResponse(
+      String buildTrackResponse(
         XmlBuilder builder, {
         String? trackNumber,
         VoidCallback? trackInfoContent,
@@ -206,7 +206,7 @@ void main() {
 
       test('No info', () {
         final builder = XmlBuilder();
-        final payload = _buildTrackResponseError(
+        final payload = buildTrackResponseError(
           builder,
           number: '1',
           description:
@@ -224,7 +224,7 @@ void main() {
 
       test('No tracking number', () {
         final builder = XmlBuilder();
-        final payload = _buildTrackResponse(builder);
+        final payload = buildTrackResponse(builder);
         final response = ServiceResponse(
           transactionId: const TransactionId('1'),
           statusCode: 200,
@@ -242,7 +242,7 @@ void main() {
       group('Parse date and time |', () {
         test('[January 1, 2021] [10:00 am]', () {
           final builder = XmlBuilder();
-          final payload = _buildTrackResponse(builder, trackNumber: '1',
+          final payload = buildTrackResponse(builder, trackNumber: '1',
               trackInfoContent: () {
             builder.element('GuaranteedDeliveryDate', nest: 'January 1, 2021');
             builder.element('GuaranteedDeliveryTime', nest: '10:00 am');
@@ -265,7 +265,7 @@ void main() {
 
         test('[January 1, 2021]', () {
           final builder = XmlBuilder();
-          final payload = _buildTrackResponse(builder, trackNumber: '1',
+          final payload = buildTrackResponse(builder, trackNumber: '1',
               trackInfoContent: () {
             builder.element('GuaranteedDeliveryDate', nest: 'January 1, 2021');
           });
@@ -287,7 +287,7 @@ void main() {
 
         test('[January 1, 2021] [10:00 PM]', () {
           final builder = XmlBuilder();
-          final payload = _buildTrackResponse(builder, trackNumber: '1',
+          final payload = buildTrackResponse(builder, trackNumber: '1',
               trackInfoContent: () {
             builder.element('GuaranteedDeliveryDate', nest: 'January 1, 2021');
             builder.element('GuaranteedDeliveryTime', nest: '10:00 PM');
@@ -310,7 +310,7 @@ void main() {
 
         test('[10:00 AM]', () {
           final builder = XmlBuilder();
-          final payload = _buildTrackResponse(builder, trackNumber: '1',
+          final payload = buildTrackResponse(builder, trackNumber: '1',
               trackInfoContent: () {
             builder.element('GuaranteedDeliveryTime', nest: '10:00 AM');
           });
@@ -337,7 +337,7 @@ void main() {
 
         test('[10:00]', () {
           final builder = XmlBuilder();
-          final payload = _buildTrackResponse(builder, trackNumber: '1',
+          final payload = buildTrackResponse(builder, trackNumber: '1',
               trackInfoContent: () {
             builder.element('GuaranteedDeliveryTime', nest: '10:00');
           });
@@ -364,7 +364,7 @@ void main() {
 
         test('[January 1]', () {
           final builder = XmlBuilder();
-          final payload = _buildTrackResponse(builder, trackNumber: '1',
+          final payload = buildTrackResponse(builder, trackNumber: '1',
               trackInfoContent: () {
             builder.element('GuaranteedDeliveryDate', nest: 'January 1');
           });
@@ -391,7 +391,7 @@ void main() {
 
         test('[January]', () {
           final builder = XmlBuilder();
-          final payload = _buildTrackResponse(builder, trackNumber: '1',
+          final payload = buildTrackResponse(builder, trackNumber: '1',
               trackInfoContent: () {
             builder.element('GuaranteedDeliveryDate', nest: 'January');
           });
@@ -417,7 +417,7 @@ void main() {
 
       test('Guaranteed delivery date', () {
         final builder = XmlBuilder();
-        final payload = _buildTrackResponse(
+        final payload = buildTrackResponse(
           builder,
           trackNumber: '1',
           trackInfoContent: () {
@@ -448,7 +448,7 @@ void main() {
 
       test('Expected delivery date', () {
         final builder = XmlBuilder();
-        final payload = _buildTrackResponse(
+        final payload = buildTrackResponse(
           builder,
           trackNumber: '1',
           trackInfoContent: () {
@@ -479,7 +479,7 @@ void main() {
 
       test('Predicted delivery date', () {
         final builder = XmlBuilder();
-        final payload = _buildTrackResponse(
+        final payload = buildTrackResponse(
           builder,
           trackNumber: '1',
           trackInfoContent: () {
@@ -510,7 +510,7 @@ void main() {
 
       test('Activity', () {
         final builder = XmlBuilder();
-        final payload = _buildTrackResponse(
+        final payload = buildTrackResponse(
           builder,
           trackNumber: '1',
           trackInfoContent: () {
@@ -652,7 +652,7 @@ void main() {
 
       test('Shipment description', () {
         final builder = XmlBuilder();
-        final payload = _buildTrackResponse(
+        final payload = buildTrackResponse(
           builder,
           trackNumber: '1',
           trackInfoContent: () {
@@ -688,7 +688,7 @@ void main() {
 
       test('Service description', () {
         final builder = XmlBuilder();
-        final payload = _buildTrackResponse(
+        final payload = buildTrackResponse(
           builder,
           trackNumber: '1',
           trackInfoContent: () {
@@ -725,7 +725,7 @@ void main() {
 
       test('Shipper and receiver address', () {
         final builder = XmlBuilder();
-        final payload = _buildTrackResponse(
+        final payload = buildTrackResponse(
           builder,
           trackNumber: '1',
           trackInfoContent: () {

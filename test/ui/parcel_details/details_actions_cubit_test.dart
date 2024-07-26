@@ -37,7 +37,7 @@ void main() {
     late TrackingScheduler mockTrackingScheduler;
 
     setUpAll(() {
-      registerFallbackValue<TrackingInfo>(FakeTrackingInfo());
+      registerFallbackValue(FakeTrackingInfo());
       mockTrackNumberRepo = MockTrackNumberRepository();
       mockTrackingRepo = MockTrackingRepository();
       mockTrackingScheduler = MockTrackingScheduler();

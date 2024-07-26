@@ -1,6 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'worker.dart';
 
@@ -11,23 +12,7 @@ part of 'worker.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$WorkResultTearOff {
-  const _$WorkResultTearOff();
-
-  WorkResultSuccess success() {
-    return const WorkResultSuccess();
-  }
-
-  WorkResultFailure failure() {
-    return const WorkResultFailure();
-  }
-}
-
-/// @nodoc
-const $WorkResult = _$WorkResultTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$WorkResult {
@@ -39,8 +24,8 @@ mixin _$WorkResult {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? success,
-    TResult Function()? failure,
+    TResult? Function()? success,
+    TResult? Function()? failure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -58,8 +43,8 @@ mixin _$WorkResult {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(WorkResultSuccess value)? success,
-    TResult Function(WorkResultFailure value)? failure,
+    TResult? Function(WorkResultSuccess value)? success,
+    TResult? Function(WorkResultFailure value)? failure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -75,43 +60,42 @@ mixin _$WorkResult {
 abstract class $WorkResultCopyWith<$Res> {
   factory $WorkResultCopyWith(
           WorkResult value, $Res Function(WorkResult) then) =
-      _$WorkResultCopyWithImpl<$Res>;
+      _$WorkResultCopyWithImpl<$Res, WorkResult>;
 }
 
 /// @nodoc
-class _$WorkResultCopyWithImpl<$Res> implements $WorkResultCopyWith<$Res> {
+class _$WorkResultCopyWithImpl<$Res, $Val extends WorkResult>
+    implements $WorkResultCopyWith<$Res> {
   _$WorkResultCopyWithImpl(this._value, this._then);
 
-  final WorkResult _value;
   // ignore: unused_field
-  final $Res Function(WorkResult) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 }
 
 /// @nodoc
-abstract class $WorkResultSuccessCopyWith<$Res> {
-  factory $WorkResultSuccessCopyWith(
-          WorkResultSuccess value, $Res Function(WorkResultSuccess) then) =
-      _$WorkResultSuccessCopyWithImpl<$Res>;
+abstract class _$$WorkResultSuccessImplCopyWith<$Res> {
+  factory _$$WorkResultSuccessImplCopyWith(_$WorkResultSuccessImpl value,
+          $Res Function(_$WorkResultSuccessImpl) then) =
+      __$$WorkResultSuccessImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$WorkResultSuccessCopyWithImpl<$Res>
-    extends _$WorkResultCopyWithImpl<$Res>
-    implements $WorkResultSuccessCopyWith<$Res> {
-  _$WorkResultSuccessCopyWithImpl(
-      WorkResultSuccess _value, $Res Function(WorkResultSuccess) _then)
-      : super(_value, (v) => _then(v as WorkResultSuccess));
-
-  @override
-  WorkResultSuccess get _value => super._value as WorkResultSuccess;
+class __$$WorkResultSuccessImplCopyWithImpl<$Res>
+    extends _$WorkResultCopyWithImpl<$Res, _$WorkResultSuccessImpl>
+    implements _$$WorkResultSuccessImplCopyWith<$Res> {
+  __$$WorkResultSuccessImplCopyWithImpl(_$WorkResultSuccessImpl _value,
+      $Res Function(_$WorkResultSuccessImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$WorkResultSuccess
+class _$WorkResultSuccessImpl
     with DiagnosticableTreeMixin
     implements WorkResultSuccess {
-  const _$WorkResultSuccess();
+  const _$WorkResultSuccessImpl();
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
@@ -121,12 +105,13 @@ class _$WorkResultSuccess
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
-    properties..add(DiagnosticsProperty('type', 'WorkResult.success'));
+    properties.add(DiagnosticsProperty('type', 'WorkResult.success'));
   }
 
   @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) || (other is WorkResultSuccess);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$WorkResultSuccessImpl);
   }
 
   @override
@@ -144,8 +129,8 @@ class _$WorkResultSuccess
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? success,
-    TResult Function()? failure,
+    TResult? Function()? success,
+    TResult? Function()? failure,
   }) {
     return success?.call();
   }
@@ -175,8 +160,8 @@ class _$WorkResultSuccess
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(WorkResultSuccess value)? success,
-    TResult Function(WorkResultFailure value)? failure,
+    TResult? Function(WorkResultSuccess value)? success,
+    TResult? Function(WorkResultFailure value)? failure,
   }) {
     return success?.call(this);
   }
@@ -196,34 +181,31 @@ class _$WorkResultSuccess
 }
 
 abstract class WorkResultSuccess implements WorkResult {
-  const factory WorkResultSuccess() = _$WorkResultSuccess;
+  const factory WorkResultSuccess() = _$WorkResultSuccessImpl;
 }
 
 /// @nodoc
-abstract class $WorkResultFailureCopyWith<$Res> {
-  factory $WorkResultFailureCopyWith(
-          WorkResultFailure value, $Res Function(WorkResultFailure) then) =
-      _$WorkResultFailureCopyWithImpl<$Res>;
+abstract class _$$WorkResultFailureImplCopyWith<$Res> {
+  factory _$$WorkResultFailureImplCopyWith(_$WorkResultFailureImpl value,
+          $Res Function(_$WorkResultFailureImpl) then) =
+      __$$WorkResultFailureImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$WorkResultFailureCopyWithImpl<$Res>
-    extends _$WorkResultCopyWithImpl<$Res>
-    implements $WorkResultFailureCopyWith<$Res> {
-  _$WorkResultFailureCopyWithImpl(
-      WorkResultFailure _value, $Res Function(WorkResultFailure) _then)
-      : super(_value, (v) => _then(v as WorkResultFailure));
-
-  @override
-  WorkResultFailure get _value => super._value as WorkResultFailure;
+class __$$WorkResultFailureImplCopyWithImpl<$Res>
+    extends _$WorkResultCopyWithImpl<$Res, _$WorkResultFailureImpl>
+    implements _$$WorkResultFailureImplCopyWith<$Res> {
+  __$$WorkResultFailureImplCopyWithImpl(_$WorkResultFailureImpl _value,
+      $Res Function(_$WorkResultFailureImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$WorkResultFailure
+class _$WorkResultFailureImpl
     with DiagnosticableTreeMixin
     implements WorkResultFailure {
-  const _$WorkResultFailure();
+  const _$WorkResultFailureImpl();
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
@@ -233,12 +215,13 @@ class _$WorkResultFailure
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
-    properties..add(DiagnosticsProperty('type', 'WorkResult.failure'));
+    properties.add(DiagnosticsProperty('type', 'WorkResult.failure'));
   }
 
   @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) || (other is WorkResultFailure);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$WorkResultFailureImpl);
   }
 
   @override
@@ -256,8 +239,8 @@ class _$WorkResultFailure
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? success,
-    TResult Function()? failure,
+    TResult? Function()? success,
+    TResult? Function()? failure,
   }) {
     return failure?.call();
   }
@@ -287,8 +270,8 @@ class _$WorkResultFailure
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(WorkResultSuccess value)? success,
-    TResult Function(WorkResultFailure value)? failure,
+    TResult? Function(WorkResultSuccess value)? success,
+    TResult? Function(WorkResultFailure value)? failure,
   }) {
     return failure?.call(this);
   }
@@ -308,27 +291,8 @@ class _$WorkResultFailure
 }
 
 abstract class WorkResultFailure implements WorkResult {
-  const factory WorkResultFailure() = _$WorkResultFailure;
+  const factory WorkResultFailure() = _$WorkResultFailureImpl;
 }
-
-/// @nodoc
-class _$WorkParamsTearOff {
-  const _$WorkParamsTearOff();
-
-  _WorkParams call(
-      {WorkConstraints? constraints,
-      WorkData? inputData,
-      ExistingWorkPolicy existingWorkPolicy = ExistingWorkPolicy.replace}) {
-    return _WorkParams(
-      constraints: constraints,
-      inputData: inputData,
-      existingWorkPolicy: existingWorkPolicy,
-    );
-  }
-}
-
-/// @nodoc
-const $WorkParams = _$WorkParamsTearOff();
 
 /// @nodoc
 mixin _$WorkParams {
@@ -346,7 +310,8 @@ mixin _$WorkParams {
 abstract class $WorkParamsCopyWith<$Res> {
   factory $WorkParamsCopyWith(
           WorkParams value, $Res Function(WorkParams) then) =
-      _$WorkParamsCopyWithImpl<$Res>;
+      _$WorkParamsCopyWithImpl<$Res, WorkParams>;
+  @useResult
   $Res call(
       {WorkConstraints? constraints,
       WorkData? inputData,
@@ -356,53 +321,59 @@ abstract class $WorkParamsCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$WorkParamsCopyWithImpl<$Res> implements $WorkParamsCopyWith<$Res> {
+class _$WorkParamsCopyWithImpl<$Res, $Val extends WorkParams>
+    implements $WorkParamsCopyWith<$Res> {
   _$WorkParamsCopyWithImpl(this._value, this._then);
 
-  final WorkParams _value;
   // ignore: unused_field
-  final $Res Function(WorkParams) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? constraints = freezed,
     Object? inputData = freezed,
-    Object? existingWorkPolicy = freezed,
+    Object? existingWorkPolicy = null,
   }) {
     return _then(_value.copyWith(
-      constraints: constraints == freezed
+      constraints: freezed == constraints
           ? _value.constraints
           : constraints // ignore: cast_nullable_to_non_nullable
               as WorkConstraints?,
-      inputData: inputData == freezed
+      inputData: freezed == inputData
           ? _value.inputData
           : inputData // ignore: cast_nullable_to_non_nullable
               as WorkData?,
-      existingWorkPolicy: existingWorkPolicy == freezed
+      existingWorkPolicy: null == existingWorkPolicy
           ? _value.existingWorkPolicy
           : existingWorkPolicy // ignore: cast_nullable_to_non_nullable
               as ExistingWorkPolicy,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $WorkConstraintsCopyWith<$Res>? get constraints {
     if (_value.constraints == null) {
       return null;
     }
 
     return $WorkConstraintsCopyWith<$Res>(_value.constraints!, (value) {
-      return _then(_value.copyWith(constraints: value));
+      return _then(_value.copyWith(constraints: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$WorkParamsCopyWith<$Res> implements $WorkParamsCopyWith<$Res> {
-  factory _$WorkParamsCopyWith(
-          _WorkParams value, $Res Function(_WorkParams) then) =
-      __$WorkParamsCopyWithImpl<$Res>;
+abstract class _$$WorkParamsImplCopyWith<$Res>
+    implements $WorkParamsCopyWith<$Res> {
+  factory _$$WorkParamsImplCopyWith(
+          _$WorkParamsImpl value, $Res Function(_$WorkParamsImpl) then) =
+      __$$WorkParamsImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {WorkConstraints? constraints,
       WorkData? inputData,
@@ -413,31 +384,30 @@ abstract class _$WorkParamsCopyWith<$Res> implements $WorkParamsCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$WorkParamsCopyWithImpl<$Res> extends _$WorkParamsCopyWithImpl<$Res>
-    implements _$WorkParamsCopyWith<$Res> {
-  __$WorkParamsCopyWithImpl(
-      _WorkParams _value, $Res Function(_WorkParams) _then)
-      : super(_value, (v) => _then(v as _WorkParams));
+class __$$WorkParamsImplCopyWithImpl<$Res>
+    extends _$WorkParamsCopyWithImpl<$Res, _$WorkParamsImpl>
+    implements _$$WorkParamsImplCopyWith<$Res> {
+  __$$WorkParamsImplCopyWithImpl(
+      _$WorkParamsImpl _value, $Res Function(_$WorkParamsImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _WorkParams get _value => super._value as _WorkParams;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? constraints = freezed,
     Object? inputData = freezed,
-    Object? existingWorkPolicy = freezed,
+    Object? existingWorkPolicy = null,
   }) {
-    return _then(_WorkParams(
-      constraints: constraints == freezed
+    return _then(_$WorkParamsImpl(
+      constraints: freezed == constraints
           ? _value.constraints
           : constraints // ignore: cast_nullable_to_non_nullable
               as WorkConstraints?,
-      inputData: inputData == freezed
+      inputData: freezed == inputData
           ? _value.inputData
           : inputData // ignore: cast_nullable_to_non_nullable
               as WorkData?,
-      existingWorkPolicy: existingWorkPolicy == freezed
+      existingWorkPolicy: null == existingWorkPolicy
           ? _value.existingWorkPolicy
           : existingWorkPolicy // ignore: cast_nullable_to_non_nullable
               as ExistingWorkPolicy,
@@ -447,8 +417,8 @@ class __$WorkParamsCopyWithImpl<$Res> extends _$WorkParamsCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_WorkParams with DiagnosticableTreeMixin implements _WorkParams {
-  const _$_WorkParams(
+class _$WorkParamsImpl with DiagnosticableTreeMixin implements _WorkParams {
+  const _$WorkParamsImpl(
       {this.constraints,
       this.inputData,
       this.existingWorkPolicy = ExistingWorkPolicy.replace});
@@ -457,8 +427,8 @@ class _$_WorkParams with DiagnosticableTreeMixin implements _WorkParams {
   final WorkConstraints? constraints;
   @override
   final WorkData? inputData;
-  @JsonKey(defaultValue: ExistingWorkPolicy.replace)
   @override
+  @JsonKey()
   final ExistingWorkPolicy existingWorkPolicy;
 
   @override
@@ -477,65 +447,46 @@ class _$_WorkParams with DiagnosticableTreeMixin implements _WorkParams {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is _WorkParams &&
+        (other.runtimeType == runtimeType &&
+            other is _$WorkParamsImpl &&
             (identical(other.constraints, constraints) ||
-                const DeepCollectionEquality()
-                    .equals(other.constraints, constraints)) &&
+                other.constraints == constraints) &&
             (identical(other.inputData, inputData) ||
-                const DeepCollectionEquality()
-                    .equals(other.inputData, inputData)) &&
+                other.inputData == inputData) &&
             (identical(other.existingWorkPolicy, existingWorkPolicy) ||
-                const DeepCollectionEquality()
-                    .equals(other.existingWorkPolicy, existingWorkPolicy)));
+                other.existingWorkPolicy == existingWorkPolicy));
   }
 
   @override
   int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(constraints) ^
-      const DeepCollectionEquality().hash(inputData) ^
-      const DeepCollectionEquality().hash(existingWorkPolicy);
+      Object.hash(runtimeType, constraints, inputData, existingWorkPolicy);
 
   @JsonKey(ignore: true)
   @override
-  _$WorkParamsCopyWith<_WorkParams> get copyWith =>
-      __$WorkParamsCopyWithImpl<_WorkParams>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$WorkParamsImplCopyWith<_$WorkParamsImpl> get copyWith =>
+      __$$WorkParamsImplCopyWithImpl<_$WorkParamsImpl>(this, _$identity);
 }
 
 abstract class _WorkParams implements WorkParams {
   const factory _WorkParams(
-      {WorkConstraints? constraints,
-      WorkData? inputData,
-      ExistingWorkPolicy existingWorkPolicy}) = _$_WorkParams;
+      {final WorkConstraints? constraints,
+      final WorkData? inputData,
+      final ExistingWorkPolicy existingWorkPolicy}) = _$WorkParamsImpl;
 
   @override
-  WorkConstraints? get constraints => throw _privateConstructorUsedError;
+  WorkConstraints? get constraints;
   @override
-  WorkData? get inputData => throw _privateConstructorUsedError;
+  WorkData? get inputData;
   @override
-  ExistingWorkPolicy get existingWorkPolicy =>
-      throw _privateConstructorUsedError;
+  ExistingWorkPolicy get existingWorkPolicy;
   @override
   @JsonKey(ignore: true)
-  _$WorkParamsCopyWith<_WorkParams> get copyWith =>
+  _$$WorkParamsImplCopyWith<_$WorkParamsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
-
-/// @nodoc
-class _$WorkConstraintsTearOff {
-  const _$WorkConstraintsTearOff();
-
-  _WorkConstraints call({NetworkType? networkType}) {
-    return _WorkConstraints(
-      networkType: networkType,
-    );
-  }
-}
-
-/// @nodoc
-const $WorkConstraints = _$WorkConstraintsTearOff();
 
 /// @nodoc
 mixin _$WorkConstraints {
@@ -550,59 +501,61 @@ mixin _$WorkConstraints {
 abstract class $WorkConstraintsCopyWith<$Res> {
   factory $WorkConstraintsCopyWith(
           WorkConstraints value, $Res Function(WorkConstraints) then) =
-      _$WorkConstraintsCopyWithImpl<$Res>;
+      _$WorkConstraintsCopyWithImpl<$Res, WorkConstraints>;
+  @useResult
   $Res call({NetworkType? networkType});
 }
 
 /// @nodoc
-class _$WorkConstraintsCopyWithImpl<$Res>
+class _$WorkConstraintsCopyWithImpl<$Res, $Val extends WorkConstraints>
     implements $WorkConstraintsCopyWith<$Res> {
   _$WorkConstraintsCopyWithImpl(this._value, this._then);
 
-  final WorkConstraints _value;
   // ignore: unused_field
-  final $Res Function(WorkConstraints) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? networkType = freezed,
   }) {
     return _then(_value.copyWith(
-      networkType: networkType == freezed
+      networkType: freezed == networkType
           ? _value.networkType
           : networkType // ignore: cast_nullable_to_non_nullable
               as NetworkType?,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$WorkConstraintsCopyWith<$Res>
+abstract class _$$WorkConstraintsImplCopyWith<$Res>
     implements $WorkConstraintsCopyWith<$Res> {
-  factory _$WorkConstraintsCopyWith(
-          _WorkConstraints value, $Res Function(_WorkConstraints) then) =
-      __$WorkConstraintsCopyWithImpl<$Res>;
+  factory _$$WorkConstraintsImplCopyWith(_$WorkConstraintsImpl value,
+          $Res Function(_$WorkConstraintsImpl) then) =
+      __$$WorkConstraintsImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({NetworkType? networkType});
 }
 
 /// @nodoc
-class __$WorkConstraintsCopyWithImpl<$Res>
-    extends _$WorkConstraintsCopyWithImpl<$Res>
-    implements _$WorkConstraintsCopyWith<$Res> {
-  __$WorkConstraintsCopyWithImpl(
-      _WorkConstraints _value, $Res Function(_WorkConstraints) _then)
-      : super(_value, (v) => _then(v as _WorkConstraints));
+class __$$WorkConstraintsImplCopyWithImpl<$Res>
+    extends _$WorkConstraintsCopyWithImpl<$Res, _$WorkConstraintsImpl>
+    implements _$$WorkConstraintsImplCopyWith<$Res> {
+  __$$WorkConstraintsImplCopyWithImpl(
+      _$WorkConstraintsImpl _value, $Res Function(_$WorkConstraintsImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _WorkConstraints get _value => super._value as _WorkConstraints;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? networkType = freezed,
   }) {
-    return _then(_WorkConstraints(
-      networkType: networkType == freezed
+    return _then(_$WorkConstraintsImpl(
+      networkType: freezed == networkType
           ? _value.networkType
           : networkType // ignore: cast_nullable_to_non_nullable
               as NetworkType?,
@@ -612,10 +565,10 @@ class __$WorkConstraintsCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_WorkConstraints
+class _$WorkConstraintsImpl
     with DiagnosticableTreeMixin
     implements _WorkConstraints {
-  const _$_WorkConstraints({this.networkType});
+  const _$WorkConstraintsImpl({this.networkType});
 
   @override
   final NetworkType? networkType;
@@ -634,32 +587,33 @@ class _$_WorkConstraints
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is _WorkConstraints &&
+        (other.runtimeType == runtimeType &&
+            other is _$WorkConstraintsImpl &&
             (identical(other.networkType, networkType) ||
-                const DeepCollectionEquality()
-                    .equals(other.networkType, networkType)));
+                other.networkType == networkType));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(networkType);
+  int get hashCode => Object.hash(runtimeType, networkType);
 
   @JsonKey(ignore: true)
   @override
-  _$WorkConstraintsCopyWith<_WorkConstraints> get copyWith =>
-      __$WorkConstraintsCopyWithImpl<_WorkConstraints>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$WorkConstraintsImplCopyWith<_$WorkConstraintsImpl> get copyWith =>
+      __$$WorkConstraintsImplCopyWithImpl<_$WorkConstraintsImpl>(
+          this, _$identity);
 }
 
 abstract class _WorkConstraints implements WorkConstraints {
-  const factory _WorkConstraints({NetworkType? networkType}) =
-      _$_WorkConstraints;
+  const factory _WorkConstraints({final NetworkType? networkType}) =
+      _$WorkConstraintsImpl;
 
   @override
-  NetworkType? get networkType => throw _privateConstructorUsedError;
+  NetworkType? get networkType;
   @override
   @JsonKey(ignore: true)
-  _$WorkConstraintsCopyWith<_WorkConstraints> get copyWith =>
+  _$$WorkConstraintsImplCopyWith<_$WorkConstraintsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

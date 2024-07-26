@@ -152,38 +152,38 @@ class ParcelDetailsCubit extends Cubit<ParcelDetailsState> {
     List<TrackingInfo>? trackingList,
   }) async {
     try {
-      final TrackNumberInfo? _trackInfo = trackInfo ??
+      final TrackNumberInfo? trackInfo0 = trackInfo ??
           await _trackRepo.getTrackByTrackNumber(trackNumber).then(
                 (res) => res.when(
                   (value) => value,
                   error: (e) => throw e,
                 ),
               );
-      if (_trackInfo == null) {
+      if (trackInfo0 == null) {
         return const _BuildResult.notFound();
       }
-      final List<TrackNumberService> _trackServices = trackServices ??
+      final List<TrackNumberService> trackServices0 = trackServices ??
           await _trackRepo.getTrackNumberServices(trackNumber).then(
                 (res) => res.when(
                   (value) => value,
                   error: (e) => throw e,
                 ),
               );
-      final List<ShipmentInfo> _shipmentInfoList = shipmentInfoList ??
+      final List<ShipmentInfo> shipmentInfoList0 = shipmentInfoList ??
           await _shipmentRepo.getShipmentInfoByTrack(trackNumber).then(
                 (res) => res.when(
                   (value) => value,
                   error: (e) => throw e,
                 ),
               );
-      final List<ShipmentActivityInfo> _activities = activities ??
+      final List<ShipmentActivityInfo> activities0 = activities ??
           await _shipmentRepo.getActivitiesByTrack(trackNumber).then(
                 (res) => res.when(
                   (value) => value,
                   error: (e) => throw e,
                 ),
               );
-      final List<TrackingInfo> _trackingList = trackingList ??
+      final List<TrackingInfo> trackingList0 = trackingList ??
           await _trackingRepo.getTrackingInfoByTrack(trackNumber).then(
                 (res) => res.when(
                   (value) => value,
@@ -191,7 +191,7 @@ class ParcelDetailsCubit extends Cubit<ParcelDetailsState> {
                 ),
               );
       final trackingHistory = await Future.wait(
-        _trackingList.map((info) async {
+        trackingList0.map((info) async {
           final res = await _trackingRepo.getResponseByTrackingId(info.id);
           final List<TrackingResponseInfo> responseList = res.when(
             (value) => value,
@@ -204,7 +204,7 @@ class ParcelDetailsCubit extends Cubit<ParcelDetailsState> {
         }),
       );
       final shipmentInfoEntries = await Future.wait(
-        _shipmentInfoList.map((info) async {
+        shipmentInfoList0.map((info) async {
           final res = await _shipmentRepo.getAlternateTracksById(info.id!);
           final List<AlternateTrackNumber> alternateTrackNumbers = res.when(
             (value) => value,
@@ -219,10 +219,10 @@ class ParcelDetailsCubit extends Cubit<ParcelDetailsState> {
 
       return _BuildResult(
         info: ParcelInfo(
-          trackInfo: _trackInfo,
-          trackServices: _trackServices,
+          trackInfo: trackInfo0,
+          trackServices: trackServices0,
           shipmentInfoList: shipmentInfoEntries,
-          activities: _activities,
+          activities: activities0,
           trackingHistory: trackingHistory,
         ),
       );
@@ -233,7 +233,7 @@ class ParcelDetailsCubit extends Cubit<ParcelDetailsState> {
 }
 
 @freezed
-class _BuildResult with _$_BuildResult {
+class _BuildResult with _$BuildResult {
   const factory _BuildResult({
     required ParcelInfo info,
   }) = _BuildResultData;

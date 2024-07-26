@@ -1,6 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'behavior_cubit.dart';
 
@@ -11,52 +12,11 @@ part of 'behavior_cubit.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$BehaviorStateTearOff {
-  const _$BehaviorStateTearOff();
-
-  BehaviorStateInitial initial(BehaviorInfo info) {
-    return BehaviorStateInitial(
-      info,
-    );
-  }
-
-  BehaviorStateTrackingLimitChanged trackingLimitChanged(BehaviorInfo info) {
-    return BehaviorStateTrackingLimitChanged(
-      info,
-    );
-  }
-
-  BehaviorStateAutoTrackingChanged autoTrackingChanged(BehaviorInfo info) {
-    return BehaviorStateAutoTrackingChanged(
-      info,
-    );
-  }
-
-  BehaviorStateAutoTrackingFreqChanged autoTrackingFreqChanged(
-      BehaviorInfo info) {
-    return BehaviorStateAutoTrackingFreqChanged(
-      info,
-    );
-  }
-
-  BehaviorStateTrackingHistorySizeChanged trackingHistorySizeChanged(
-      BehaviorInfo info) {
-    return BehaviorStateTrackingHistorySizeChanged(
-      info,
-    );
-  }
-}
-
-/// @nodoc
-const $BehaviorState = _$BehaviorStateTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$BehaviorState {
   BehaviorInfo get info => throw _privateConstructorUsedError;
-
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(BehaviorInfo info) initial,
@@ -68,11 +28,11 @@ mixin _$BehaviorState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(BehaviorInfo info)? initial,
-    TResult Function(BehaviorInfo info)? trackingLimitChanged,
-    TResult Function(BehaviorInfo info)? autoTrackingChanged,
-    TResult Function(BehaviorInfo info)? autoTrackingFreqChanged,
-    TResult Function(BehaviorInfo info)? trackingHistorySizeChanged,
+    TResult? Function(BehaviorInfo info)? initial,
+    TResult? Function(BehaviorInfo info)? trackingLimitChanged,
+    TResult? Function(BehaviorInfo info)? autoTrackingChanged,
+    TResult? Function(BehaviorInfo info)? autoTrackingFreqChanged,
+    TResult? Function(BehaviorInfo info)? trackingHistorySizeChanged,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -100,14 +60,14 @@ mixin _$BehaviorState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(BehaviorStateInitial value)? initial,
-    TResult Function(BehaviorStateTrackingLimitChanged value)?
+    TResult? Function(BehaviorStateInitial value)? initial,
+    TResult? Function(BehaviorStateTrackingLimitChanged value)?
         trackingLimitChanged,
-    TResult Function(BehaviorStateAutoTrackingChanged value)?
+    TResult? Function(BehaviorStateAutoTrackingChanged value)?
         autoTrackingChanged,
-    TResult Function(BehaviorStateAutoTrackingFreqChanged value)?
+    TResult? Function(BehaviorStateAutoTrackingFreqChanged value)?
         autoTrackingFreqChanged,
-    TResult Function(BehaviorStateTrackingHistorySizeChanged value)?
+    TResult? Function(BehaviorStateTrackingHistorySizeChanged value)?
         trackingHistorySizeChanged,
   }) =>
       throw _privateConstructorUsedError;
@@ -135,48 +95,53 @@ mixin _$BehaviorState {
 abstract class $BehaviorStateCopyWith<$Res> {
   factory $BehaviorStateCopyWith(
           BehaviorState value, $Res Function(BehaviorState) then) =
-      _$BehaviorStateCopyWithImpl<$Res>;
+      _$BehaviorStateCopyWithImpl<$Res, BehaviorState>;
+  @useResult
   $Res call({BehaviorInfo info});
 
   $BehaviorInfoCopyWith<$Res> get info;
 }
 
 /// @nodoc
-class _$BehaviorStateCopyWithImpl<$Res>
+class _$BehaviorStateCopyWithImpl<$Res, $Val extends BehaviorState>
     implements $BehaviorStateCopyWith<$Res> {
   _$BehaviorStateCopyWithImpl(this._value, this._then);
 
-  final BehaviorState _value;
   // ignore: unused_field
-  final $Res Function(BehaviorState) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? info = freezed,
+    Object? info = null,
   }) {
     return _then(_value.copyWith(
-      info: info == freezed
+      info: null == info
           ? _value.info
           : info // ignore: cast_nullable_to_non_nullable
               as BehaviorInfo,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $BehaviorInfoCopyWith<$Res> get info {
     return $BehaviorInfoCopyWith<$Res>(_value.info, (value) {
-      return _then(_value.copyWith(info: value));
+      return _then(_value.copyWith(info: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class $BehaviorStateInitialCopyWith<$Res>
+abstract class _$$BehaviorStateInitialImplCopyWith<$Res>
     implements $BehaviorStateCopyWith<$Res> {
-  factory $BehaviorStateInitialCopyWith(BehaviorStateInitial value,
-          $Res Function(BehaviorStateInitial) then) =
-      _$BehaviorStateInitialCopyWithImpl<$Res>;
+  factory _$$BehaviorStateInitialImplCopyWith(_$BehaviorStateInitialImpl value,
+          $Res Function(_$BehaviorStateInitialImpl) then) =
+      __$$BehaviorStateInitialImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({BehaviorInfo info});
 
   @override
@@ -184,22 +149,20 @@ abstract class $BehaviorStateInitialCopyWith<$Res>
 }
 
 /// @nodoc
-class _$BehaviorStateInitialCopyWithImpl<$Res>
-    extends _$BehaviorStateCopyWithImpl<$Res>
-    implements $BehaviorStateInitialCopyWith<$Res> {
-  _$BehaviorStateInitialCopyWithImpl(
-      BehaviorStateInitial _value, $Res Function(BehaviorStateInitial) _then)
-      : super(_value, (v) => _then(v as BehaviorStateInitial));
+class __$$BehaviorStateInitialImplCopyWithImpl<$Res>
+    extends _$BehaviorStateCopyWithImpl<$Res, _$BehaviorStateInitialImpl>
+    implements _$$BehaviorStateInitialImplCopyWith<$Res> {
+  __$$BehaviorStateInitialImplCopyWithImpl(_$BehaviorStateInitialImpl _value,
+      $Res Function(_$BehaviorStateInitialImpl) _then)
+      : super(_value, _then);
 
-  @override
-  BehaviorStateInitial get _value => super._value as BehaviorStateInitial;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? info = freezed,
+    Object? info = null,
   }) {
-    return _then(BehaviorStateInitial(
-      info == freezed
+    return _then(_$BehaviorStateInitialImpl(
+      null == info
           ? _value.info
           : info // ignore: cast_nullable_to_non_nullable
               as BehaviorInfo,
@@ -209,8 +172,8 @@ class _$BehaviorStateInitialCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$BehaviorStateInitial implements BehaviorStateInitial {
-  const _$BehaviorStateInitial(this.info);
+class _$BehaviorStateInitialImpl implements BehaviorStateInitial {
+  const _$BehaviorStateInitialImpl(this.info);
 
   @override
   final BehaviorInfo info;
@@ -221,22 +184,23 @@ class _$BehaviorStateInitial implements BehaviorStateInitial {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is BehaviorStateInitial &&
-            (identical(other.info, info) ||
-                const DeepCollectionEquality().equals(other.info, info)));
+        (other.runtimeType == runtimeType &&
+            other is _$BehaviorStateInitialImpl &&
+            (identical(other.info, info) || other.info == info));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(info);
+  int get hashCode => Object.hash(runtimeType, info);
 
   @JsonKey(ignore: true)
   @override
-  $BehaviorStateInitialCopyWith<BehaviorStateInitial> get copyWith =>
-      _$BehaviorStateInitialCopyWithImpl<BehaviorStateInitial>(
-          this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$BehaviorStateInitialImplCopyWith<_$BehaviorStateInitialImpl>
+      get copyWith =>
+          __$$BehaviorStateInitialImplCopyWithImpl<_$BehaviorStateInitialImpl>(
+              this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -253,11 +217,11 @@ class _$BehaviorStateInitial implements BehaviorStateInitial {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(BehaviorInfo info)? initial,
-    TResult Function(BehaviorInfo info)? trackingLimitChanged,
-    TResult Function(BehaviorInfo info)? autoTrackingChanged,
-    TResult Function(BehaviorInfo info)? autoTrackingFreqChanged,
-    TResult Function(BehaviorInfo info)? trackingHistorySizeChanged,
+    TResult? Function(BehaviorInfo info)? initial,
+    TResult? Function(BehaviorInfo info)? trackingLimitChanged,
+    TResult? Function(BehaviorInfo info)? autoTrackingChanged,
+    TResult? Function(BehaviorInfo info)? autoTrackingFreqChanged,
+    TResult? Function(BehaviorInfo info)? trackingHistorySizeChanged,
   }) {
     return initial?.call(info);
   }
@@ -297,14 +261,14 @@ class _$BehaviorStateInitial implements BehaviorStateInitial {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(BehaviorStateInitial value)? initial,
-    TResult Function(BehaviorStateTrackingLimitChanged value)?
+    TResult? Function(BehaviorStateInitial value)? initial,
+    TResult? Function(BehaviorStateTrackingLimitChanged value)?
         trackingLimitChanged,
-    TResult Function(BehaviorStateAutoTrackingChanged value)?
+    TResult? Function(BehaviorStateAutoTrackingChanged value)?
         autoTrackingChanged,
-    TResult Function(BehaviorStateAutoTrackingFreqChanged value)?
+    TResult? Function(BehaviorStateAutoTrackingFreqChanged value)?
         autoTrackingFreqChanged,
-    TResult Function(BehaviorStateTrackingHistorySizeChanged value)?
+    TResult? Function(BehaviorStateTrackingHistorySizeChanged value)?
         trackingHistorySizeChanged,
   }) {
     return initial?.call(this);
@@ -332,25 +296,26 @@ class _$BehaviorStateInitial implements BehaviorStateInitial {
 }
 
 abstract class BehaviorStateInitial implements BehaviorState {
-  const factory BehaviorStateInitial(BehaviorInfo info) =
-      _$BehaviorStateInitial;
+  const factory BehaviorStateInitial(final BehaviorInfo info) =
+      _$BehaviorStateInitialImpl;
 
   @override
-  BehaviorInfo get info => throw _privateConstructorUsedError;
+  BehaviorInfo get info;
   @override
   @JsonKey(ignore: true)
-  $BehaviorStateInitialCopyWith<BehaviorStateInitial> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$BehaviorStateInitialImplCopyWith<_$BehaviorStateInitialImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $BehaviorStateTrackingLimitChangedCopyWith<$Res>
+abstract class _$$BehaviorStateTrackingLimitChangedImplCopyWith<$Res>
     implements $BehaviorStateCopyWith<$Res> {
-  factory $BehaviorStateTrackingLimitChangedCopyWith(
-          BehaviorStateTrackingLimitChanged value,
-          $Res Function(BehaviorStateTrackingLimitChanged) then) =
-      _$BehaviorStateTrackingLimitChangedCopyWithImpl<$Res>;
+  factory _$$BehaviorStateTrackingLimitChangedImplCopyWith(
+          _$BehaviorStateTrackingLimitChangedImpl value,
+          $Res Function(_$BehaviorStateTrackingLimitChangedImpl) then) =
+      __$$BehaviorStateTrackingLimitChangedImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({BehaviorInfo info});
 
   @override
@@ -358,24 +323,22 @@ abstract class $BehaviorStateTrackingLimitChangedCopyWith<$Res>
 }
 
 /// @nodoc
-class _$BehaviorStateTrackingLimitChangedCopyWithImpl<$Res>
-    extends _$BehaviorStateCopyWithImpl<$Res>
-    implements $BehaviorStateTrackingLimitChangedCopyWith<$Res> {
-  _$BehaviorStateTrackingLimitChangedCopyWithImpl(
-      BehaviorStateTrackingLimitChanged _value,
-      $Res Function(BehaviorStateTrackingLimitChanged) _then)
-      : super(_value, (v) => _then(v as BehaviorStateTrackingLimitChanged));
+class __$$BehaviorStateTrackingLimitChangedImplCopyWithImpl<$Res>
+    extends _$BehaviorStateCopyWithImpl<$Res,
+        _$BehaviorStateTrackingLimitChangedImpl>
+    implements _$$BehaviorStateTrackingLimitChangedImplCopyWith<$Res> {
+  __$$BehaviorStateTrackingLimitChangedImplCopyWithImpl(
+      _$BehaviorStateTrackingLimitChangedImpl _value,
+      $Res Function(_$BehaviorStateTrackingLimitChangedImpl) _then)
+      : super(_value, _then);
 
-  @override
-  BehaviorStateTrackingLimitChanged get _value =>
-      super._value as BehaviorStateTrackingLimitChanged;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? info = freezed,
+    Object? info = null,
   }) {
-    return _then(BehaviorStateTrackingLimitChanged(
-      info == freezed
+    return _then(_$BehaviorStateTrackingLimitChangedImpl(
+      null == info
           ? _value.info
           : info // ignore: cast_nullable_to_non_nullable
               as BehaviorInfo,
@@ -385,9 +348,9 @@ class _$BehaviorStateTrackingLimitChangedCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$BehaviorStateTrackingLimitChanged
+class _$BehaviorStateTrackingLimitChangedImpl
     implements BehaviorStateTrackingLimitChanged {
-  const _$BehaviorStateTrackingLimitChanged(this.info);
+  const _$BehaviorStateTrackingLimitChangedImpl(this.info);
 
   @override
   final BehaviorInfo info;
@@ -398,22 +361,23 @@ class _$BehaviorStateTrackingLimitChanged
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is BehaviorStateTrackingLimitChanged &&
-            (identical(other.info, info) ||
-                const DeepCollectionEquality().equals(other.info, info)));
+        (other.runtimeType == runtimeType &&
+            other is _$BehaviorStateTrackingLimitChangedImpl &&
+            (identical(other.info, info) || other.info == info));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(info);
+  int get hashCode => Object.hash(runtimeType, info);
 
   @JsonKey(ignore: true)
   @override
-  $BehaviorStateTrackingLimitChangedCopyWith<BehaviorStateTrackingLimitChanged>
-      get copyWith => _$BehaviorStateTrackingLimitChangedCopyWithImpl<
-          BehaviorStateTrackingLimitChanged>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$BehaviorStateTrackingLimitChangedImplCopyWith<
+          _$BehaviorStateTrackingLimitChangedImpl>
+      get copyWith => __$$BehaviorStateTrackingLimitChangedImplCopyWithImpl<
+          _$BehaviorStateTrackingLimitChangedImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -430,11 +394,11 @@ class _$BehaviorStateTrackingLimitChanged
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(BehaviorInfo info)? initial,
-    TResult Function(BehaviorInfo info)? trackingLimitChanged,
-    TResult Function(BehaviorInfo info)? autoTrackingChanged,
-    TResult Function(BehaviorInfo info)? autoTrackingFreqChanged,
-    TResult Function(BehaviorInfo info)? trackingHistorySizeChanged,
+    TResult? Function(BehaviorInfo info)? initial,
+    TResult? Function(BehaviorInfo info)? trackingLimitChanged,
+    TResult? Function(BehaviorInfo info)? autoTrackingChanged,
+    TResult? Function(BehaviorInfo info)? autoTrackingFreqChanged,
+    TResult? Function(BehaviorInfo info)? trackingHistorySizeChanged,
   }) {
     return trackingLimitChanged?.call(info);
   }
@@ -474,14 +438,14 @@ class _$BehaviorStateTrackingLimitChanged
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(BehaviorStateInitial value)? initial,
-    TResult Function(BehaviorStateTrackingLimitChanged value)?
+    TResult? Function(BehaviorStateInitial value)? initial,
+    TResult? Function(BehaviorStateTrackingLimitChanged value)?
         trackingLimitChanged,
-    TResult Function(BehaviorStateAutoTrackingChanged value)?
+    TResult? Function(BehaviorStateAutoTrackingChanged value)?
         autoTrackingChanged,
-    TResult Function(BehaviorStateAutoTrackingFreqChanged value)?
+    TResult? Function(BehaviorStateAutoTrackingFreqChanged value)?
         autoTrackingFreqChanged,
-    TResult Function(BehaviorStateTrackingHistorySizeChanged value)?
+    TResult? Function(BehaviorStateTrackingHistorySizeChanged value)?
         trackingHistorySizeChanged,
   }) {
     return trackingLimitChanged?.call(this);
@@ -509,25 +473,27 @@ class _$BehaviorStateTrackingLimitChanged
 }
 
 abstract class BehaviorStateTrackingLimitChanged implements BehaviorState {
-  const factory BehaviorStateTrackingLimitChanged(BehaviorInfo info) =
-      _$BehaviorStateTrackingLimitChanged;
+  const factory BehaviorStateTrackingLimitChanged(final BehaviorInfo info) =
+      _$BehaviorStateTrackingLimitChangedImpl;
 
   @override
-  BehaviorInfo get info => throw _privateConstructorUsedError;
+  BehaviorInfo get info;
   @override
   @JsonKey(ignore: true)
-  $BehaviorStateTrackingLimitChangedCopyWith<BehaviorStateTrackingLimitChanged>
+  _$$BehaviorStateTrackingLimitChangedImplCopyWith<
+          _$BehaviorStateTrackingLimitChangedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $BehaviorStateAutoTrackingChangedCopyWith<$Res>
+abstract class _$$BehaviorStateAutoTrackingChangedImplCopyWith<$Res>
     implements $BehaviorStateCopyWith<$Res> {
-  factory $BehaviorStateAutoTrackingChangedCopyWith(
-          BehaviorStateAutoTrackingChanged value,
-          $Res Function(BehaviorStateAutoTrackingChanged) then) =
-      _$BehaviorStateAutoTrackingChangedCopyWithImpl<$Res>;
+  factory _$$BehaviorStateAutoTrackingChangedImplCopyWith(
+          _$BehaviorStateAutoTrackingChangedImpl value,
+          $Res Function(_$BehaviorStateAutoTrackingChangedImpl) then) =
+      __$$BehaviorStateAutoTrackingChangedImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({BehaviorInfo info});
 
   @override
@@ -535,24 +501,22 @@ abstract class $BehaviorStateAutoTrackingChangedCopyWith<$Res>
 }
 
 /// @nodoc
-class _$BehaviorStateAutoTrackingChangedCopyWithImpl<$Res>
-    extends _$BehaviorStateCopyWithImpl<$Res>
-    implements $BehaviorStateAutoTrackingChangedCopyWith<$Res> {
-  _$BehaviorStateAutoTrackingChangedCopyWithImpl(
-      BehaviorStateAutoTrackingChanged _value,
-      $Res Function(BehaviorStateAutoTrackingChanged) _then)
-      : super(_value, (v) => _then(v as BehaviorStateAutoTrackingChanged));
+class __$$BehaviorStateAutoTrackingChangedImplCopyWithImpl<$Res>
+    extends _$BehaviorStateCopyWithImpl<$Res,
+        _$BehaviorStateAutoTrackingChangedImpl>
+    implements _$$BehaviorStateAutoTrackingChangedImplCopyWith<$Res> {
+  __$$BehaviorStateAutoTrackingChangedImplCopyWithImpl(
+      _$BehaviorStateAutoTrackingChangedImpl _value,
+      $Res Function(_$BehaviorStateAutoTrackingChangedImpl) _then)
+      : super(_value, _then);
 
-  @override
-  BehaviorStateAutoTrackingChanged get _value =>
-      super._value as BehaviorStateAutoTrackingChanged;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? info = freezed,
+    Object? info = null,
   }) {
-    return _then(BehaviorStateAutoTrackingChanged(
-      info == freezed
+    return _then(_$BehaviorStateAutoTrackingChangedImpl(
+      null == info
           ? _value.info
           : info // ignore: cast_nullable_to_non_nullable
               as BehaviorInfo,
@@ -562,9 +526,9 @@ class _$BehaviorStateAutoTrackingChangedCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$BehaviorStateAutoTrackingChanged
+class _$BehaviorStateAutoTrackingChangedImpl
     implements BehaviorStateAutoTrackingChanged {
-  const _$BehaviorStateAutoTrackingChanged(this.info);
+  const _$BehaviorStateAutoTrackingChangedImpl(this.info);
 
   @override
   final BehaviorInfo info;
@@ -575,22 +539,23 @@ class _$BehaviorStateAutoTrackingChanged
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is BehaviorStateAutoTrackingChanged &&
-            (identical(other.info, info) ||
-                const DeepCollectionEquality().equals(other.info, info)));
+        (other.runtimeType == runtimeType &&
+            other is _$BehaviorStateAutoTrackingChangedImpl &&
+            (identical(other.info, info) || other.info == info));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(info);
+  int get hashCode => Object.hash(runtimeType, info);
 
   @JsonKey(ignore: true)
   @override
-  $BehaviorStateAutoTrackingChangedCopyWith<BehaviorStateAutoTrackingChanged>
-      get copyWith => _$BehaviorStateAutoTrackingChangedCopyWithImpl<
-          BehaviorStateAutoTrackingChanged>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$BehaviorStateAutoTrackingChangedImplCopyWith<
+          _$BehaviorStateAutoTrackingChangedImpl>
+      get copyWith => __$$BehaviorStateAutoTrackingChangedImplCopyWithImpl<
+          _$BehaviorStateAutoTrackingChangedImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -607,11 +572,11 @@ class _$BehaviorStateAutoTrackingChanged
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(BehaviorInfo info)? initial,
-    TResult Function(BehaviorInfo info)? trackingLimitChanged,
-    TResult Function(BehaviorInfo info)? autoTrackingChanged,
-    TResult Function(BehaviorInfo info)? autoTrackingFreqChanged,
-    TResult Function(BehaviorInfo info)? trackingHistorySizeChanged,
+    TResult? Function(BehaviorInfo info)? initial,
+    TResult? Function(BehaviorInfo info)? trackingLimitChanged,
+    TResult? Function(BehaviorInfo info)? autoTrackingChanged,
+    TResult? Function(BehaviorInfo info)? autoTrackingFreqChanged,
+    TResult? Function(BehaviorInfo info)? trackingHistorySizeChanged,
   }) {
     return autoTrackingChanged?.call(info);
   }
@@ -651,14 +616,14 @@ class _$BehaviorStateAutoTrackingChanged
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(BehaviorStateInitial value)? initial,
-    TResult Function(BehaviorStateTrackingLimitChanged value)?
+    TResult? Function(BehaviorStateInitial value)? initial,
+    TResult? Function(BehaviorStateTrackingLimitChanged value)?
         trackingLimitChanged,
-    TResult Function(BehaviorStateAutoTrackingChanged value)?
+    TResult? Function(BehaviorStateAutoTrackingChanged value)?
         autoTrackingChanged,
-    TResult Function(BehaviorStateAutoTrackingFreqChanged value)?
+    TResult? Function(BehaviorStateAutoTrackingFreqChanged value)?
         autoTrackingFreqChanged,
-    TResult Function(BehaviorStateTrackingHistorySizeChanged value)?
+    TResult? Function(BehaviorStateTrackingHistorySizeChanged value)?
         trackingHistorySizeChanged,
   }) {
     return autoTrackingChanged?.call(this);
@@ -686,25 +651,27 @@ class _$BehaviorStateAutoTrackingChanged
 }
 
 abstract class BehaviorStateAutoTrackingChanged implements BehaviorState {
-  const factory BehaviorStateAutoTrackingChanged(BehaviorInfo info) =
-      _$BehaviorStateAutoTrackingChanged;
+  const factory BehaviorStateAutoTrackingChanged(final BehaviorInfo info) =
+      _$BehaviorStateAutoTrackingChangedImpl;
 
   @override
-  BehaviorInfo get info => throw _privateConstructorUsedError;
+  BehaviorInfo get info;
   @override
   @JsonKey(ignore: true)
-  $BehaviorStateAutoTrackingChangedCopyWith<BehaviorStateAutoTrackingChanged>
+  _$$BehaviorStateAutoTrackingChangedImplCopyWith<
+          _$BehaviorStateAutoTrackingChangedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $BehaviorStateAutoTrackingFreqChangedCopyWith<$Res>
+abstract class _$$BehaviorStateAutoTrackingFreqChangedImplCopyWith<$Res>
     implements $BehaviorStateCopyWith<$Res> {
-  factory $BehaviorStateAutoTrackingFreqChangedCopyWith(
-          BehaviorStateAutoTrackingFreqChanged value,
-          $Res Function(BehaviorStateAutoTrackingFreqChanged) then) =
-      _$BehaviorStateAutoTrackingFreqChangedCopyWithImpl<$Res>;
+  factory _$$BehaviorStateAutoTrackingFreqChangedImplCopyWith(
+          _$BehaviorStateAutoTrackingFreqChangedImpl value,
+          $Res Function(_$BehaviorStateAutoTrackingFreqChangedImpl) then) =
+      __$$BehaviorStateAutoTrackingFreqChangedImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({BehaviorInfo info});
 
   @override
@@ -712,24 +679,22 @@ abstract class $BehaviorStateAutoTrackingFreqChangedCopyWith<$Res>
 }
 
 /// @nodoc
-class _$BehaviorStateAutoTrackingFreqChangedCopyWithImpl<$Res>
-    extends _$BehaviorStateCopyWithImpl<$Res>
-    implements $BehaviorStateAutoTrackingFreqChangedCopyWith<$Res> {
-  _$BehaviorStateAutoTrackingFreqChangedCopyWithImpl(
-      BehaviorStateAutoTrackingFreqChanged _value,
-      $Res Function(BehaviorStateAutoTrackingFreqChanged) _then)
-      : super(_value, (v) => _then(v as BehaviorStateAutoTrackingFreqChanged));
+class __$$BehaviorStateAutoTrackingFreqChangedImplCopyWithImpl<$Res>
+    extends _$BehaviorStateCopyWithImpl<$Res,
+        _$BehaviorStateAutoTrackingFreqChangedImpl>
+    implements _$$BehaviorStateAutoTrackingFreqChangedImplCopyWith<$Res> {
+  __$$BehaviorStateAutoTrackingFreqChangedImplCopyWithImpl(
+      _$BehaviorStateAutoTrackingFreqChangedImpl _value,
+      $Res Function(_$BehaviorStateAutoTrackingFreqChangedImpl) _then)
+      : super(_value, _then);
 
-  @override
-  BehaviorStateAutoTrackingFreqChanged get _value =>
-      super._value as BehaviorStateAutoTrackingFreqChanged;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? info = freezed,
+    Object? info = null,
   }) {
-    return _then(BehaviorStateAutoTrackingFreqChanged(
-      info == freezed
+    return _then(_$BehaviorStateAutoTrackingFreqChangedImpl(
+      null == info
           ? _value.info
           : info // ignore: cast_nullable_to_non_nullable
               as BehaviorInfo,
@@ -739,9 +704,9 @@ class _$BehaviorStateAutoTrackingFreqChangedCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$BehaviorStateAutoTrackingFreqChanged
+class _$BehaviorStateAutoTrackingFreqChangedImpl
     implements BehaviorStateAutoTrackingFreqChanged {
-  const _$BehaviorStateAutoTrackingFreqChanged(this.info);
+  const _$BehaviorStateAutoTrackingFreqChangedImpl(this.info);
 
   @override
   final BehaviorInfo info;
@@ -752,23 +717,23 @@ class _$BehaviorStateAutoTrackingFreqChanged
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is BehaviorStateAutoTrackingFreqChanged &&
-            (identical(other.info, info) ||
-                const DeepCollectionEquality().equals(other.info, info)));
+        (other.runtimeType == runtimeType &&
+            other is _$BehaviorStateAutoTrackingFreqChangedImpl &&
+            (identical(other.info, info) || other.info == info));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(info);
+  int get hashCode => Object.hash(runtimeType, info);
 
   @JsonKey(ignore: true)
   @override
-  $BehaviorStateAutoTrackingFreqChangedCopyWith<
-          BehaviorStateAutoTrackingFreqChanged>
-      get copyWith => _$BehaviorStateAutoTrackingFreqChangedCopyWithImpl<
-          BehaviorStateAutoTrackingFreqChanged>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$BehaviorStateAutoTrackingFreqChangedImplCopyWith<
+          _$BehaviorStateAutoTrackingFreqChangedImpl>
+      get copyWith => __$$BehaviorStateAutoTrackingFreqChangedImplCopyWithImpl<
+          _$BehaviorStateAutoTrackingFreqChangedImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -785,11 +750,11 @@ class _$BehaviorStateAutoTrackingFreqChanged
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(BehaviorInfo info)? initial,
-    TResult Function(BehaviorInfo info)? trackingLimitChanged,
-    TResult Function(BehaviorInfo info)? autoTrackingChanged,
-    TResult Function(BehaviorInfo info)? autoTrackingFreqChanged,
-    TResult Function(BehaviorInfo info)? trackingHistorySizeChanged,
+    TResult? Function(BehaviorInfo info)? initial,
+    TResult? Function(BehaviorInfo info)? trackingLimitChanged,
+    TResult? Function(BehaviorInfo info)? autoTrackingChanged,
+    TResult? Function(BehaviorInfo info)? autoTrackingFreqChanged,
+    TResult? Function(BehaviorInfo info)? trackingHistorySizeChanged,
   }) {
     return autoTrackingFreqChanged?.call(info);
   }
@@ -829,14 +794,14 @@ class _$BehaviorStateAutoTrackingFreqChanged
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(BehaviorStateInitial value)? initial,
-    TResult Function(BehaviorStateTrackingLimitChanged value)?
+    TResult? Function(BehaviorStateInitial value)? initial,
+    TResult? Function(BehaviorStateTrackingLimitChanged value)?
         trackingLimitChanged,
-    TResult Function(BehaviorStateAutoTrackingChanged value)?
+    TResult? Function(BehaviorStateAutoTrackingChanged value)?
         autoTrackingChanged,
-    TResult Function(BehaviorStateAutoTrackingFreqChanged value)?
+    TResult? Function(BehaviorStateAutoTrackingFreqChanged value)?
         autoTrackingFreqChanged,
-    TResult Function(BehaviorStateTrackingHistorySizeChanged value)?
+    TResult? Function(BehaviorStateTrackingHistorySizeChanged value)?
         trackingHistorySizeChanged,
   }) {
     return autoTrackingFreqChanged?.call(this);
@@ -864,26 +829,27 @@ class _$BehaviorStateAutoTrackingFreqChanged
 }
 
 abstract class BehaviorStateAutoTrackingFreqChanged implements BehaviorState {
-  const factory BehaviorStateAutoTrackingFreqChanged(BehaviorInfo info) =
-      _$BehaviorStateAutoTrackingFreqChanged;
+  const factory BehaviorStateAutoTrackingFreqChanged(final BehaviorInfo info) =
+      _$BehaviorStateAutoTrackingFreqChangedImpl;
 
   @override
-  BehaviorInfo get info => throw _privateConstructorUsedError;
+  BehaviorInfo get info;
   @override
   @JsonKey(ignore: true)
-  $BehaviorStateAutoTrackingFreqChangedCopyWith<
-          BehaviorStateAutoTrackingFreqChanged>
+  _$$BehaviorStateAutoTrackingFreqChangedImplCopyWith<
+          _$BehaviorStateAutoTrackingFreqChangedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $BehaviorStateTrackingHistorySizeChangedCopyWith<$Res>
+abstract class _$$BehaviorStateTrackingHistorySizeChangedImplCopyWith<$Res>
     implements $BehaviorStateCopyWith<$Res> {
-  factory $BehaviorStateTrackingHistorySizeChangedCopyWith(
-          BehaviorStateTrackingHistorySizeChanged value,
-          $Res Function(BehaviorStateTrackingHistorySizeChanged) then) =
-      _$BehaviorStateTrackingHistorySizeChangedCopyWithImpl<$Res>;
+  factory _$$BehaviorStateTrackingHistorySizeChangedImplCopyWith(
+          _$BehaviorStateTrackingHistorySizeChangedImpl value,
+          $Res Function(_$BehaviorStateTrackingHistorySizeChangedImpl) then) =
+      __$$BehaviorStateTrackingHistorySizeChangedImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({BehaviorInfo info});
 
   @override
@@ -891,25 +857,22 @@ abstract class $BehaviorStateTrackingHistorySizeChangedCopyWith<$Res>
 }
 
 /// @nodoc
-class _$BehaviorStateTrackingHistorySizeChangedCopyWithImpl<$Res>
-    extends _$BehaviorStateCopyWithImpl<$Res>
-    implements $BehaviorStateTrackingHistorySizeChangedCopyWith<$Res> {
-  _$BehaviorStateTrackingHistorySizeChangedCopyWithImpl(
-      BehaviorStateTrackingHistorySizeChanged _value,
-      $Res Function(BehaviorStateTrackingHistorySizeChanged) _then)
-      : super(
-            _value, (v) => _then(v as BehaviorStateTrackingHistorySizeChanged));
+class __$$BehaviorStateTrackingHistorySizeChangedImplCopyWithImpl<$Res>
+    extends _$BehaviorStateCopyWithImpl<$Res,
+        _$BehaviorStateTrackingHistorySizeChangedImpl>
+    implements _$$BehaviorStateTrackingHistorySizeChangedImplCopyWith<$Res> {
+  __$$BehaviorStateTrackingHistorySizeChangedImplCopyWithImpl(
+      _$BehaviorStateTrackingHistorySizeChangedImpl _value,
+      $Res Function(_$BehaviorStateTrackingHistorySizeChangedImpl) _then)
+      : super(_value, _then);
 
-  @override
-  BehaviorStateTrackingHistorySizeChanged get _value =>
-      super._value as BehaviorStateTrackingHistorySizeChanged;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? info = freezed,
+    Object? info = null,
   }) {
-    return _then(BehaviorStateTrackingHistorySizeChanged(
-      info == freezed
+    return _then(_$BehaviorStateTrackingHistorySizeChangedImpl(
+      null == info
           ? _value.info
           : info // ignore: cast_nullable_to_non_nullable
               as BehaviorInfo,
@@ -919,9 +882,9 @@ class _$BehaviorStateTrackingHistorySizeChangedCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$BehaviorStateTrackingHistorySizeChanged
+class _$BehaviorStateTrackingHistorySizeChangedImpl
     implements BehaviorStateTrackingHistorySizeChanged {
-  const _$BehaviorStateTrackingHistorySizeChanged(this.info);
+  const _$BehaviorStateTrackingHistorySizeChangedImpl(this.info);
 
   @override
   final BehaviorInfo info;
@@ -932,23 +895,24 @@ class _$BehaviorStateTrackingHistorySizeChanged
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is BehaviorStateTrackingHistorySizeChanged &&
-            (identical(other.info, info) ||
-                const DeepCollectionEquality().equals(other.info, info)));
+        (other.runtimeType == runtimeType &&
+            other is _$BehaviorStateTrackingHistorySizeChangedImpl &&
+            (identical(other.info, info) || other.info == info));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(info);
+  int get hashCode => Object.hash(runtimeType, info);
 
   @JsonKey(ignore: true)
   @override
-  $BehaviorStateTrackingHistorySizeChangedCopyWith<
-          BehaviorStateTrackingHistorySizeChanged>
-      get copyWith => _$BehaviorStateTrackingHistorySizeChangedCopyWithImpl<
-          BehaviorStateTrackingHistorySizeChanged>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$BehaviorStateTrackingHistorySizeChangedImplCopyWith<
+          _$BehaviorStateTrackingHistorySizeChangedImpl>
+      get copyWith =>
+          __$$BehaviorStateTrackingHistorySizeChangedImplCopyWithImpl<
+              _$BehaviorStateTrackingHistorySizeChangedImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -965,11 +929,11 @@ class _$BehaviorStateTrackingHistorySizeChanged
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(BehaviorInfo info)? initial,
-    TResult Function(BehaviorInfo info)? trackingLimitChanged,
-    TResult Function(BehaviorInfo info)? autoTrackingChanged,
-    TResult Function(BehaviorInfo info)? autoTrackingFreqChanged,
-    TResult Function(BehaviorInfo info)? trackingHistorySizeChanged,
+    TResult? Function(BehaviorInfo info)? initial,
+    TResult? Function(BehaviorInfo info)? trackingLimitChanged,
+    TResult? Function(BehaviorInfo info)? autoTrackingChanged,
+    TResult? Function(BehaviorInfo info)? autoTrackingFreqChanged,
+    TResult? Function(BehaviorInfo info)? trackingHistorySizeChanged,
   }) {
     return trackingHistorySizeChanged?.call(info);
   }
@@ -1009,14 +973,14 @@ class _$BehaviorStateTrackingHistorySizeChanged
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(BehaviorStateInitial value)? initial,
-    TResult Function(BehaviorStateTrackingLimitChanged value)?
+    TResult? Function(BehaviorStateInitial value)? initial,
+    TResult? Function(BehaviorStateTrackingLimitChanged value)?
         trackingLimitChanged,
-    TResult Function(BehaviorStateAutoTrackingChanged value)?
+    TResult? Function(BehaviorStateAutoTrackingChanged value)?
         autoTrackingChanged,
-    TResult Function(BehaviorStateAutoTrackingFreqChanged value)?
+    TResult? Function(BehaviorStateAutoTrackingFreqChanged value)?
         autoTrackingFreqChanged,
-    TResult Function(BehaviorStateTrackingHistorySizeChanged value)?
+    TResult? Function(BehaviorStateTrackingHistorySizeChanged value)?
         trackingHistorySizeChanged,
   }) {
     return trackingHistorySizeChanged?.call(this);
@@ -1045,38 +1009,17 @@ class _$BehaviorStateTrackingHistorySizeChanged
 
 abstract class BehaviorStateTrackingHistorySizeChanged
     implements BehaviorState {
-  const factory BehaviorStateTrackingHistorySizeChanged(BehaviorInfo info) =
-      _$BehaviorStateTrackingHistorySizeChanged;
+  const factory BehaviorStateTrackingHistorySizeChanged(
+      final BehaviorInfo info) = _$BehaviorStateTrackingHistorySizeChangedImpl;
 
   @override
-  BehaviorInfo get info => throw _privateConstructorUsedError;
+  BehaviorInfo get info;
   @override
   @JsonKey(ignore: true)
-  $BehaviorStateTrackingHistorySizeChangedCopyWith<
-          BehaviorStateTrackingHistorySizeChanged>
+  _$$BehaviorStateTrackingHistorySizeChangedImplCopyWith<
+          _$BehaviorStateTrackingHistorySizeChangedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
-
-/// @nodoc
-class _$BehaviorInfoTearOff {
-  const _$BehaviorInfoTearOff();
-
-  _BehaviorInfo call(
-      {required TrackingFreqLimit trackingLimit,
-      required bool autoTracking,
-      required AutoTrackingFreq autoTrackingFreq,
-      required int trackingHistorySize}) {
-    return _BehaviorInfo(
-      trackingLimit: trackingLimit,
-      autoTracking: autoTracking,
-      autoTrackingFreq: autoTrackingFreq,
-      trackingHistorySize: trackingHistorySize,
-    );
-  }
-}
-
-/// @nodoc
-const $BehaviorInfo = _$BehaviorInfoTearOff();
 
 /// @nodoc
 mixin _$BehaviorInfo {
@@ -1094,7 +1037,8 @@ mixin _$BehaviorInfo {
 abstract class $BehaviorInfoCopyWith<$Res> {
   factory $BehaviorInfoCopyWith(
           BehaviorInfo value, $Res Function(BehaviorInfo) then) =
-      _$BehaviorInfoCopyWithImpl<$Res>;
+      _$BehaviorInfoCopyWithImpl<$Res, BehaviorInfo>;
+  @useResult
   $Res call(
       {TrackingFreqLimit trackingLimit,
       bool autoTracking,
@@ -1106,62 +1050,68 @@ abstract class $BehaviorInfoCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$BehaviorInfoCopyWithImpl<$Res> implements $BehaviorInfoCopyWith<$Res> {
+class _$BehaviorInfoCopyWithImpl<$Res, $Val extends BehaviorInfo>
+    implements $BehaviorInfoCopyWith<$Res> {
   _$BehaviorInfoCopyWithImpl(this._value, this._then);
 
-  final BehaviorInfo _value;
   // ignore: unused_field
-  final $Res Function(BehaviorInfo) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? trackingLimit = freezed,
-    Object? autoTracking = freezed,
-    Object? autoTrackingFreq = freezed,
-    Object? trackingHistorySize = freezed,
+    Object? trackingLimit = null,
+    Object? autoTracking = null,
+    Object? autoTrackingFreq = null,
+    Object? trackingHistorySize = null,
   }) {
     return _then(_value.copyWith(
-      trackingLimit: trackingLimit == freezed
+      trackingLimit: null == trackingLimit
           ? _value.trackingLimit
           : trackingLimit // ignore: cast_nullable_to_non_nullable
               as TrackingFreqLimit,
-      autoTracking: autoTracking == freezed
+      autoTracking: null == autoTracking
           ? _value.autoTracking
           : autoTracking // ignore: cast_nullable_to_non_nullable
               as bool,
-      autoTrackingFreq: autoTrackingFreq == freezed
+      autoTrackingFreq: null == autoTrackingFreq
           ? _value.autoTrackingFreq
           : autoTrackingFreq // ignore: cast_nullable_to_non_nullable
               as AutoTrackingFreq,
-      trackingHistorySize: trackingHistorySize == freezed
+      trackingHistorySize: null == trackingHistorySize
           ? _value.trackingHistorySize
           : trackingHistorySize // ignore: cast_nullable_to_non_nullable
               as int,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $TrackingFreqLimitCopyWith<$Res> get trackingLimit {
     return $TrackingFreqLimitCopyWith<$Res>(_value.trackingLimit, (value) {
-      return _then(_value.copyWith(trackingLimit: value));
+      return _then(_value.copyWith(trackingLimit: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $AutoTrackingFreqCopyWith<$Res> get autoTrackingFreq {
     return $AutoTrackingFreqCopyWith<$Res>(_value.autoTrackingFreq, (value) {
-      return _then(_value.copyWith(autoTrackingFreq: value));
+      return _then(_value.copyWith(autoTrackingFreq: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$BehaviorInfoCopyWith<$Res>
+abstract class _$$BehaviorInfoImplCopyWith<$Res>
     implements $BehaviorInfoCopyWith<$Res> {
-  factory _$BehaviorInfoCopyWith(
-          _BehaviorInfo value, $Res Function(_BehaviorInfo) then) =
-      __$BehaviorInfoCopyWithImpl<$Res>;
+  factory _$$BehaviorInfoImplCopyWith(
+          _$BehaviorInfoImpl value, $Res Function(_$BehaviorInfoImpl) then) =
+      __$$BehaviorInfoImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {TrackingFreqLimit trackingLimit,
       bool autoTracking,
@@ -1175,36 +1125,35 @@ abstract class _$BehaviorInfoCopyWith<$Res>
 }
 
 /// @nodoc
-class __$BehaviorInfoCopyWithImpl<$Res> extends _$BehaviorInfoCopyWithImpl<$Res>
-    implements _$BehaviorInfoCopyWith<$Res> {
-  __$BehaviorInfoCopyWithImpl(
-      _BehaviorInfo _value, $Res Function(_BehaviorInfo) _then)
-      : super(_value, (v) => _then(v as _BehaviorInfo));
+class __$$BehaviorInfoImplCopyWithImpl<$Res>
+    extends _$BehaviorInfoCopyWithImpl<$Res, _$BehaviorInfoImpl>
+    implements _$$BehaviorInfoImplCopyWith<$Res> {
+  __$$BehaviorInfoImplCopyWithImpl(
+      _$BehaviorInfoImpl _value, $Res Function(_$BehaviorInfoImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _BehaviorInfo get _value => super._value as _BehaviorInfo;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? trackingLimit = freezed,
-    Object? autoTracking = freezed,
-    Object? autoTrackingFreq = freezed,
-    Object? trackingHistorySize = freezed,
+    Object? trackingLimit = null,
+    Object? autoTracking = null,
+    Object? autoTrackingFreq = null,
+    Object? trackingHistorySize = null,
   }) {
-    return _then(_BehaviorInfo(
-      trackingLimit: trackingLimit == freezed
+    return _then(_$BehaviorInfoImpl(
+      trackingLimit: null == trackingLimit
           ? _value.trackingLimit
           : trackingLimit // ignore: cast_nullable_to_non_nullable
               as TrackingFreqLimit,
-      autoTracking: autoTracking == freezed
+      autoTracking: null == autoTracking
           ? _value.autoTracking
           : autoTracking // ignore: cast_nullable_to_non_nullable
               as bool,
-      autoTrackingFreq: autoTrackingFreq == freezed
+      autoTrackingFreq: null == autoTrackingFreq
           ? _value.autoTrackingFreq
           : autoTrackingFreq // ignore: cast_nullable_to_non_nullable
               as AutoTrackingFreq,
-      trackingHistorySize: trackingHistorySize == freezed
+      trackingHistorySize: null == trackingHistorySize
           ? _value.trackingHistorySize
           : trackingHistorySize // ignore: cast_nullable_to_non_nullable
               as int,
@@ -1214,8 +1163,8 @@ class __$BehaviorInfoCopyWithImpl<$Res> extends _$BehaviorInfoCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_BehaviorInfo implements _BehaviorInfo {
-  const _$_BehaviorInfo(
+class _$BehaviorInfoImpl implements _BehaviorInfo {
+  const _$BehaviorInfoImpl(
       {required this.trackingLimit,
       required this.autoTracking,
       required this.autoTrackingFreq,
@@ -1236,54 +1185,48 @@ class _$_BehaviorInfo implements _BehaviorInfo {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is _BehaviorInfo &&
+        (other.runtimeType == runtimeType &&
+            other is _$BehaviorInfoImpl &&
             (identical(other.trackingLimit, trackingLimit) ||
-                const DeepCollectionEquality()
-                    .equals(other.trackingLimit, trackingLimit)) &&
+                other.trackingLimit == trackingLimit) &&
             (identical(other.autoTracking, autoTracking) ||
-                const DeepCollectionEquality()
-                    .equals(other.autoTracking, autoTracking)) &&
+                other.autoTracking == autoTracking) &&
             (identical(other.autoTrackingFreq, autoTrackingFreq) ||
-                const DeepCollectionEquality()
-                    .equals(other.autoTrackingFreq, autoTrackingFreq)) &&
+                other.autoTrackingFreq == autoTrackingFreq) &&
             (identical(other.trackingHistorySize, trackingHistorySize) ||
-                const DeepCollectionEquality()
-                    .equals(other.trackingHistorySize, trackingHistorySize)));
+                other.trackingHistorySize == trackingHistorySize));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(trackingLimit) ^
-      const DeepCollectionEquality().hash(autoTracking) ^
-      const DeepCollectionEquality().hash(autoTrackingFreq) ^
-      const DeepCollectionEquality().hash(trackingHistorySize);
+  int get hashCode => Object.hash(runtimeType, trackingLimit, autoTracking,
+      autoTrackingFreq, trackingHistorySize);
 
   @JsonKey(ignore: true)
   @override
-  _$BehaviorInfoCopyWith<_BehaviorInfo> get copyWith =>
-      __$BehaviorInfoCopyWithImpl<_BehaviorInfo>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$BehaviorInfoImplCopyWith<_$BehaviorInfoImpl> get copyWith =>
+      __$$BehaviorInfoImplCopyWithImpl<_$BehaviorInfoImpl>(this, _$identity);
 }
 
 abstract class _BehaviorInfo implements BehaviorInfo {
   const factory _BehaviorInfo(
-      {required TrackingFreqLimit trackingLimit,
-      required bool autoTracking,
-      required AutoTrackingFreq autoTrackingFreq,
-      required int trackingHistorySize}) = _$_BehaviorInfo;
+      {required final TrackingFreqLimit trackingLimit,
+      required final bool autoTracking,
+      required final AutoTrackingFreq autoTrackingFreq,
+      required final int trackingHistorySize}) = _$BehaviorInfoImpl;
 
   @override
-  TrackingFreqLimit get trackingLimit => throw _privateConstructorUsedError;
+  TrackingFreqLimit get trackingLimit;
   @override
-  bool get autoTracking => throw _privateConstructorUsedError;
+  bool get autoTracking;
   @override
-  AutoTrackingFreq get autoTrackingFreq => throw _privateConstructorUsedError;
+  AutoTrackingFreq get autoTrackingFreq;
   @override
-  int get trackingHistorySize => throw _privateConstructorUsedError;
+  int get trackingHistorySize;
   @override
   @JsonKey(ignore: true)
-  _$BehaviorInfoCopyWith<_BehaviorInfo> get copyWith =>
+  _$$BehaviorInfoImplCopyWith<_$BehaviorInfoImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

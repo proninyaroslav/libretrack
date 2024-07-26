@@ -31,9 +31,9 @@ class PostalServiceList extends StatefulWidget {
   final ParcelInfo info;
 
   const PostalServiceList({
-    Key? key,
+    super.key,
     required this.info,
-  }) : super(key: key);
+  });
 
   @override
   _PostalServiceListState createState() => _PostalServiceListState();
@@ -132,9 +132,8 @@ class _PostalServicePageView extends StatelessWidget {
   final List<Widget> children;
 
   const _PostalServicePageView({
-    Key? key,
     required this.children,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -166,9 +165,8 @@ class _PostalServiceListItem extends StatelessWidget {
   final TrackNumberService trackService;
 
   const _PostalServiceListItem({
-    Key? key,
     required this.trackService,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

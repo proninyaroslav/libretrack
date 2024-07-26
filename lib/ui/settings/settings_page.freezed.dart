@@ -1,6 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'settings_page.dart';
 
@@ -11,30 +12,10 @@ part of 'settings_page.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
-class _$_SettingsRouterStateTearOff {
-  const _$_SettingsRouterStateTearOff();
-
-  _SettingsRouterStateHome home() {
-    return const _SettingsRouterStateHome();
-  }
-
-  _SettingsRouterStateAppearance appearance() {
-    return const _SettingsRouterStateAppearance();
-  }
-
-  _SettingsRouterStateBehavior behavior() {
-    return const _SettingsRouterStateBehavior();
-  }
-}
-
-/// @nodoc
-const _$SettingsRouterState = _$_SettingsRouterStateTearOff();
-
-/// @nodoc
-mixin _$_SettingsRouterState {
+mixin _$SettingsRouterState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() home,
@@ -44,9 +25,9 @@ mixin _$_SettingsRouterState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? home,
-    TResult Function()? appearance,
-    TResult Function()? behavior,
+    TResult? Function()? home,
+    TResult? Function()? appearance,
+    TResult? Function()? behavior,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -66,9 +47,9 @@ mixin _$_SettingsRouterState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_SettingsRouterStateHome value)? home,
-    TResult Function(_SettingsRouterStateAppearance value)? appearance,
-    TResult Function(_SettingsRouterStateBehavior value)? behavior,
+    TResult? Function(_SettingsRouterStateHome value)? home,
+    TResult? Function(_SettingsRouterStateAppearance value)? appearance,
+    TResult? Function(_SettingsRouterStateBehavior value)? behavior,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -85,45 +66,46 @@ mixin _$_SettingsRouterState {
 abstract class _$SettingsRouterStateCopyWith<$Res> {
   factory _$SettingsRouterStateCopyWith(_SettingsRouterState value,
           $Res Function(_SettingsRouterState) then) =
-      __$SettingsRouterStateCopyWithImpl<$Res>;
+      __$SettingsRouterStateCopyWithImpl<$Res, _SettingsRouterState>;
 }
 
 /// @nodoc
-class __$SettingsRouterStateCopyWithImpl<$Res>
+class __$SettingsRouterStateCopyWithImpl<$Res,
+        $Val extends _SettingsRouterState>
     implements _$SettingsRouterStateCopyWith<$Res> {
   __$SettingsRouterStateCopyWithImpl(this._value, this._then);
 
-  final _SettingsRouterState _value;
   // ignore: unused_field
-  final $Res Function(_SettingsRouterState) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 }
 
 /// @nodoc
-abstract class _$SettingsRouterStateHomeCopyWith<$Res> {
-  factory _$SettingsRouterStateHomeCopyWith(_SettingsRouterStateHome value,
-          $Res Function(_SettingsRouterStateHome) then) =
-      __$SettingsRouterStateHomeCopyWithImpl<$Res>;
+abstract class _$$SettingsRouterStateHomeImplCopyWith<$Res> {
+  factory _$$SettingsRouterStateHomeImplCopyWith(
+          _$SettingsRouterStateHomeImpl value,
+          $Res Function(_$SettingsRouterStateHomeImpl) then) =
+      __$$SettingsRouterStateHomeImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$SettingsRouterStateHomeCopyWithImpl<$Res>
-    extends __$SettingsRouterStateCopyWithImpl<$Res>
-    implements _$SettingsRouterStateHomeCopyWith<$Res> {
-  __$SettingsRouterStateHomeCopyWithImpl(_SettingsRouterStateHome _value,
-      $Res Function(_SettingsRouterStateHome) _then)
-      : super(_value, (v) => _then(v as _SettingsRouterStateHome));
-
-  @override
-  _SettingsRouterStateHome get _value =>
-      super._value as _SettingsRouterStateHome;
+class __$$SettingsRouterStateHomeImplCopyWithImpl<$Res>
+    extends __$SettingsRouterStateCopyWithImpl<$Res,
+        _$SettingsRouterStateHomeImpl>
+    implements _$$SettingsRouterStateHomeImplCopyWith<$Res> {
+  __$$SettingsRouterStateHomeImplCopyWithImpl(
+      _$SettingsRouterStateHomeImpl _value,
+      $Res Function(_$SettingsRouterStateHomeImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_SettingsRouterStateHome
+class _$SettingsRouterStateHomeImpl
     with DiagnosticableTreeMixin
     implements _SettingsRouterStateHome {
-  const _$_SettingsRouterStateHome();
+  const _$SettingsRouterStateHomeImpl();
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
@@ -133,12 +115,14 @@ class _$_SettingsRouterStateHome
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
-    properties..add(DiagnosticsProperty('type', '_SettingsRouterState.home'));
+    properties.add(DiagnosticsProperty('type', '_SettingsRouterState.home'));
   }
 
   @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) || (other is _SettingsRouterStateHome);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$SettingsRouterStateHomeImpl);
   }
 
   @override
@@ -157,9 +141,9 @@ class _$_SettingsRouterStateHome
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? home,
-    TResult Function()? appearance,
-    TResult Function()? behavior,
+    TResult? Function()? home,
+    TResult? Function()? appearance,
+    TResult? Function()? behavior,
   }) {
     return home?.call();
   }
@@ -191,9 +175,9 @@ class _$_SettingsRouterStateHome
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_SettingsRouterStateHome value)? home,
-    TResult Function(_SettingsRouterStateAppearance value)? appearance,
-    TResult Function(_SettingsRouterStateBehavior value)? behavior,
+    TResult? Function(_SettingsRouterStateHome value)? home,
+    TResult? Function(_SettingsRouterStateAppearance value)? appearance,
+    TResult? Function(_SettingsRouterStateBehavior value)? behavior,
   }) {
     return home?.call(this);
   }
@@ -214,37 +198,34 @@ class _$_SettingsRouterStateHome
 }
 
 abstract class _SettingsRouterStateHome implements _SettingsRouterState {
-  const factory _SettingsRouterStateHome() = _$_SettingsRouterStateHome;
+  const factory _SettingsRouterStateHome() = _$SettingsRouterStateHomeImpl;
 }
 
 /// @nodoc
-abstract class _$SettingsRouterStateAppearanceCopyWith<$Res> {
-  factory _$SettingsRouterStateAppearanceCopyWith(
-          _SettingsRouterStateAppearance value,
-          $Res Function(_SettingsRouterStateAppearance) then) =
-      __$SettingsRouterStateAppearanceCopyWithImpl<$Res>;
+abstract class _$$SettingsRouterStateAppearanceImplCopyWith<$Res> {
+  factory _$$SettingsRouterStateAppearanceImplCopyWith(
+          _$SettingsRouterStateAppearanceImpl value,
+          $Res Function(_$SettingsRouterStateAppearanceImpl) then) =
+      __$$SettingsRouterStateAppearanceImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$SettingsRouterStateAppearanceCopyWithImpl<$Res>
-    extends __$SettingsRouterStateCopyWithImpl<$Res>
-    implements _$SettingsRouterStateAppearanceCopyWith<$Res> {
-  __$SettingsRouterStateAppearanceCopyWithImpl(
-      _SettingsRouterStateAppearance _value,
-      $Res Function(_SettingsRouterStateAppearance) _then)
-      : super(_value, (v) => _then(v as _SettingsRouterStateAppearance));
-
-  @override
-  _SettingsRouterStateAppearance get _value =>
-      super._value as _SettingsRouterStateAppearance;
+class __$$SettingsRouterStateAppearanceImplCopyWithImpl<$Res>
+    extends __$SettingsRouterStateCopyWithImpl<$Res,
+        _$SettingsRouterStateAppearanceImpl>
+    implements _$$SettingsRouterStateAppearanceImplCopyWith<$Res> {
+  __$$SettingsRouterStateAppearanceImplCopyWithImpl(
+      _$SettingsRouterStateAppearanceImpl _value,
+      $Res Function(_$SettingsRouterStateAppearanceImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_SettingsRouterStateAppearance
+class _$SettingsRouterStateAppearanceImpl
     with DiagnosticableTreeMixin
     implements _SettingsRouterStateAppearance {
-  const _$_SettingsRouterStateAppearance();
+  const _$SettingsRouterStateAppearanceImpl();
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
@@ -255,12 +236,14 @@ class _$_SettingsRouterStateAppearance
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
     properties
-      ..add(DiagnosticsProperty('type', '_SettingsRouterState.appearance'));
+        .add(DiagnosticsProperty('type', '_SettingsRouterState.appearance'));
   }
 
   @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) || (other is _SettingsRouterStateAppearance);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$SettingsRouterStateAppearanceImpl);
   }
 
   @override
@@ -279,9 +262,9 @@ class _$_SettingsRouterStateAppearance
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? home,
-    TResult Function()? appearance,
-    TResult Function()? behavior,
+    TResult? Function()? home,
+    TResult? Function()? appearance,
+    TResult? Function()? behavior,
   }) {
     return appearance?.call();
   }
@@ -313,9 +296,9 @@ class _$_SettingsRouterStateAppearance
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_SettingsRouterStateHome value)? home,
-    TResult Function(_SettingsRouterStateAppearance value)? appearance,
-    TResult Function(_SettingsRouterStateBehavior value)? behavior,
+    TResult? Function(_SettingsRouterStateHome value)? home,
+    TResult? Function(_SettingsRouterStateAppearance value)? appearance,
+    TResult? Function(_SettingsRouterStateBehavior value)? behavior,
   }) {
     return appearance?.call(this);
   }
@@ -337,37 +320,34 @@ class _$_SettingsRouterStateAppearance
 
 abstract class _SettingsRouterStateAppearance implements _SettingsRouterState {
   const factory _SettingsRouterStateAppearance() =
-      _$_SettingsRouterStateAppearance;
+      _$SettingsRouterStateAppearanceImpl;
 }
 
 /// @nodoc
-abstract class _$SettingsRouterStateBehaviorCopyWith<$Res> {
-  factory _$SettingsRouterStateBehaviorCopyWith(
-          _SettingsRouterStateBehavior value,
-          $Res Function(_SettingsRouterStateBehavior) then) =
-      __$SettingsRouterStateBehaviorCopyWithImpl<$Res>;
+abstract class _$$SettingsRouterStateBehaviorImplCopyWith<$Res> {
+  factory _$$SettingsRouterStateBehaviorImplCopyWith(
+          _$SettingsRouterStateBehaviorImpl value,
+          $Res Function(_$SettingsRouterStateBehaviorImpl) then) =
+      __$$SettingsRouterStateBehaviorImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$SettingsRouterStateBehaviorCopyWithImpl<$Res>
-    extends __$SettingsRouterStateCopyWithImpl<$Res>
-    implements _$SettingsRouterStateBehaviorCopyWith<$Res> {
-  __$SettingsRouterStateBehaviorCopyWithImpl(
-      _SettingsRouterStateBehavior _value,
-      $Res Function(_SettingsRouterStateBehavior) _then)
-      : super(_value, (v) => _then(v as _SettingsRouterStateBehavior));
-
-  @override
-  _SettingsRouterStateBehavior get _value =>
-      super._value as _SettingsRouterStateBehavior;
+class __$$SettingsRouterStateBehaviorImplCopyWithImpl<$Res>
+    extends __$SettingsRouterStateCopyWithImpl<$Res,
+        _$SettingsRouterStateBehaviorImpl>
+    implements _$$SettingsRouterStateBehaviorImplCopyWith<$Res> {
+  __$$SettingsRouterStateBehaviorImplCopyWithImpl(
+      _$SettingsRouterStateBehaviorImpl _value,
+      $Res Function(_$SettingsRouterStateBehaviorImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_SettingsRouterStateBehavior
+class _$SettingsRouterStateBehaviorImpl
     with DiagnosticableTreeMixin
     implements _SettingsRouterStateBehavior {
-  const _$_SettingsRouterStateBehavior();
+  const _$SettingsRouterStateBehaviorImpl();
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
@@ -378,12 +358,14 @@ class _$_SettingsRouterStateBehavior
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
     properties
-      ..add(DiagnosticsProperty('type', '_SettingsRouterState.behavior'));
+        .add(DiagnosticsProperty('type', '_SettingsRouterState.behavior'));
   }
 
   @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) || (other is _SettingsRouterStateBehavior);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$SettingsRouterStateBehaviorImpl);
   }
 
   @override
@@ -402,9 +384,9 @@ class _$_SettingsRouterStateBehavior
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? home,
-    TResult Function()? appearance,
-    TResult Function()? behavior,
+    TResult? Function()? home,
+    TResult? Function()? appearance,
+    TResult? Function()? behavior,
   }) {
     return behavior?.call();
   }
@@ -436,9 +418,9 @@ class _$_SettingsRouterStateBehavior
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_SettingsRouterStateHome value)? home,
-    TResult Function(_SettingsRouterStateAppearance value)? appearance,
-    TResult Function(_SettingsRouterStateBehavior value)? behavior,
+    TResult? Function(_SettingsRouterStateHome value)? home,
+    TResult? Function(_SettingsRouterStateAppearance value)? appearance,
+    TResult? Function(_SettingsRouterStateBehavior value)? behavior,
   }) {
     return behavior?.call(this);
   }
@@ -459,5 +441,6 @@ class _$_SettingsRouterStateBehavior
 }
 
 abstract class _SettingsRouterStateBehavior implements _SettingsRouterState {
-  const factory _SettingsRouterStateBehavior() = _$_SettingsRouterStateBehavior;
+  const factory _SettingsRouterStateBehavior() =
+      _$SettingsRouterStateBehaviorImpl;
 }

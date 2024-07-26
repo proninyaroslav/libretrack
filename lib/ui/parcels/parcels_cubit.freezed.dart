@@ -1,6 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'parcels_cubit.dart';
 
@@ -11,61 +12,13 @@ part of 'parcels_cubit.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$ParcelsStateTearOff {
-  const _$ParcelsStateTearOff();
-
-  ParcelsStateInitial initial(
-      {required ParcelsFilterBatch filters,
-      ParcelsFilter? search,
-      ParcelsSort? sort}) {
-    return ParcelsStateInitial(
-      filters: filters,
-      search: search,
-      sort: sort,
-    );
-  }
-
-  ParcelsStateLoaded loaded(
-      {required List<ParcelInfo> active,
-      required List<ParcelInfo> archive,
-      required ParcelsFilterBatch filters,
-      ParcelsFilter? search,
-      ParcelsSort? sort}) {
-    return ParcelsStateLoaded(
-      active: active,
-      archive: archive,
-      filters: filters,
-      search: search,
-      sort: sort,
-    );
-  }
-
-  ParcelsStateLoadingFailed loadingFailed(
-      {StorageError? error,
-      required ParcelsFilterBatch filters,
-      ParcelsFilter? search,
-      ParcelsSort? sort}) {
-    return ParcelsStateLoadingFailed(
-      error: error,
-      filters: filters,
-      search: search,
-      sort: sort,
-    );
-  }
-}
-
-/// @nodoc
-const $ParcelsState = _$ParcelsStateTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$ParcelsState {
   ParcelsFilterBatch get filters => throw _privateConstructorUsedError;
   ParcelsFilter? get search => throw _privateConstructorUsedError;
   ParcelsSort? get sort => throw _privateConstructorUsedError;
-
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(ParcelsFilterBatch filters, ParcelsFilter? search,
@@ -85,17 +38,17 @@ mixin _$ParcelsState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(ParcelsFilterBatch filters, ParcelsFilter? search,
+    TResult? Function(ParcelsFilterBatch filters, ParcelsFilter? search,
             ParcelsSort? sort)?
         initial,
-    TResult Function(
+    TResult? Function(
             List<ParcelInfo> active,
             List<ParcelInfo> archive,
             ParcelsFilterBatch filters,
             ParcelsFilter? search,
             ParcelsSort? sort)?
         loaded,
-    TResult Function(StorageError? error, ParcelsFilterBatch filters,
+    TResult? Function(StorageError? error, ParcelsFilterBatch filters,
             ParcelsFilter? search, ParcelsSort? sort)?
         loadingFailed,
   }) =>
@@ -127,9 +80,9 @@ mixin _$ParcelsState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(ParcelsStateInitial value)? initial,
-    TResult Function(ParcelsStateLoaded value)? loaded,
-    TResult Function(ParcelsStateLoadingFailed value)? loadingFailed,
+    TResult? Function(ParcelsStateInitial value)? initial,
+    TResult? Function(ParcelsStateLoaded value)? loaded,
+    TResult? Function(ParcelsStateLoadingFailed value)? loadingFailed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -150,7 +103,8 @@ mixin _$ParcelsState {
 abstract class $ParcelsStateCopyWith<$Res> {
   factory $ParcelsStateCopyWith(
           ParcelsState value, $Res Function(ParcelsState) then) =
-      _$ParcelsStateCopyWithImpl<$Res>;
+      _$ParcelsStateCopyWithImpl<$Res, ParcelsState>;
+  @useResult
   $Res call(
       {ParcelsFilterBatch filters, ParcelsFilter? search, ParcelsSort? sort});
 
@@ -159,65 +113,71 @@ abstract class $ParcelsStateCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ParcelsStateCopyWithImpl<$Res> implements $ParcelsStateCopyWith<$Res> {
+class _$ParcelsStateCopyWithImpl<$Res, $Val extends ParcelsState>
+    implements $ParcelsStateCopyWith<$Res> {
   _$ParcelsStateCopyWithImpl(this._value, this._then);
 
-  final ParcelsState _value;
   // ignore: unused_field
-  final $Res Function(ParcelsState) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? filters = freezed,
+    Object? filters = null,
     Object? search = freezed,
     Object? sort = freezed,
   }) {
     return _then(_value.copyWith(
-      filters: filters == freezed
+      filters: null == filters
           ? _value.filters
           : filters // ignore: cast_nullable_to_non_nullable
               as ParcelsFilterBatch,
-      search: search == freezed
+      search: freezed == search
           ? _value.search
           : search // ignore: cast_nullable_to_non_nullable
               as ParcelsFilter?,
-      sort: sort == freezed
+      sort: freezed == sort
           ? _value.sort
           : sort // ignore: cast_nullable_to_non_nullable
               as ParcelsSort?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ParcelsFilterCopyWith<$Res>? get search {
     if (_value.search == null) {
       return null;
     }
 
     return $ParcelsFilterCopyWith<$Res>(_value.search!, (value) {
-      return _then(_value.copyWith(search: value));
+      return _then(_value.copyWith(search: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ParcelsSortCopyWith<$Res>? get sort {
     if (_value.sort == null) {
       return null;
     }
 
     return $ParcelsSortCopyWith<$Res>(_value.sort!, (value) {
-      return _then(_value.copyWith(sort: value));
+      return _then(_value.copyWith(sort: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class $ParcelsStateInitialCopyWith<$Res>
+abstract class _$$ParcelsStateInitialImplCopyWith<$Res>
     implements $ParcelsStateCopyWith<$Res> {
-  factory $ParcelsStateInitialCopyWith(
-          ParcelsStateInitial value, $Res Function(ParcelsStateInitial) then) =
-      _$ParcelsStateInitialCopyWithImpl<$Res>;
+  factory _$$ParcelsStateInitialImplCopyWith(_$ParcelsStateInitialImpl value,
+          $Res Function(_$ParcelsStateInitialImpl) then) =
+      __$$ParcelsStateInitialImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {ParcelsFilterBatch filters, ParcelsFilter? search, ParcelsSort? sort});
 
@@ -228,32 +188,30 @@ abstract class $ParcelsStateInitialCopyWith<$Res>
 }
 
 /// @nodoc
-class _$ParcelsStateInitialCopyWithImpl<$Res>
-    extends _$ParcelsStateCopyWithImpl<$Res>
-    implements $ParcelsStateInitialCopyWith<$Res> {
-  _$ParcelsStateInitialCopyWithImpl(
-      ParcelsStateInitial _value, $Res Function(ParcelsStateInitial) _then)
-      : super(_value, (v) => _then(v as ParcelsStateInitial));
+class __$$ParcelsStateInitialImplCopyWithImpl<$Res>
+    extends _$ParcelsStateCopyWithImpl<$Res, _$ParcelsStateInitialImpl>
+    implements _$$ParcelsStateInitialImplCopyWith<$Res> {
+  __$$ParcelsStateInitialImplCopyWithImpl(_$ParcelsStateInitialImpl _value,
+      $Res Function(_$ParcelsStateInitialImpl) _then)
+      : super(_value, _then);
 
-  @override
-  ParcelsStateInitial get _value => super._value as ParcelsStateInitial;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? filters = freezed,
+    Object? filters = null,
     Object? search = freezed,
     Object? sort = freezed,
   }) {
-    return _then(ParcelsStateInitial(
-      filters: filters == freezed
+    return _then(_$ParcelsStateInitialImpl(
+      filters: null == filters
           ? _value.filters
           : filters // ignore: cast_nullable_to_non_nullable
               as ParcelsFilterBatch,
-      search: search == freezed
+      search: freezed == search
           ? _value.search
           : search // ignore: cast_nullable_to_non_nullable
               as ParcelsFilter?,
-      sort: sort == freezed
+      sort: freezed == sort
           ? _value.sort
           : sort // ignore: cast_nullable_to_non_nullable
               as ParcelsSort?,
@@ -263,10 +221,11 @@ class _$ParcelsStateInitialCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$ParcelsStateInitial
+class _$ParcelsStateInitialImpl
     with DiagnosticableTreeMixin
     implements ParcelsStateInitial {
-  const _$ParcelsStateInitial({required this.filters, this.search, this.sort});
+  const _$ParcelsStateInitialImpl(
+      {required this.filters, this.search, this.sort});
 
   @override
   final ParcelsFilterBatch filters;
@@ -291,29 +250,25 @@ class _$ParcelsStateInitial
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is ParcelsStateInitial &&
-            (identical(other.filters, filters) ||
-                const DeepCollectionEquality()
-                    .equals(other.filters, filters)) &&
-            (identical(other.search, search) ||
-                const DeepCollectionEquality().equals(other.search, search)) &&
-            (identical(other.sort, sort) ||
-                const DeepCollectionEquality().equals(other.sort, sort)));
+        (other.runtimeType == runtimeType &&
+            other is _$ParcelsStateInitialImpl &&
+            const DeepCollectionEquality().equals(other.filters, filters) &&
+            (identical(other.search, search) || other.search == search) &&
+            (identical(other.sort, sort) || other.sort == sort));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(filters) ^
-      const DeepCollectionEquality().hash(search) ^
-      const DeepCollectionEquality().hash(sort);
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(filters), search, sort);
 
   @JsonKey(ignore: true)
   @override
-  $ParcelsStateInitialCopyWith<ParcelsStateInitial> get copyWith =>
-      _$ParcelsStateInitialCopyWithImpl<ParcelsStateInitial>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$ParcelsStateInitialImplCopyWith<_$ParcelsStateInitialImpl> get copyWith =>
+      __$$ParcelsStateInitialImplCopyWithImpl<_$ParcelsStateInitialImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -338,17 +293,17 @@ class _$ParcelsStateInitial
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(ParcelsFilterBatch filters, ParcelsFilter? search,
+    TResult? Function(ParcelsFilterBatch filters, ParcelsFilter? search,
             ParcelsSort? sort)?
         initial,
-    TResult Function(
+    TResult? Function(
             List<ParcelInfo> active,
             List<ParcelInfo> archive,
             ParcelsFilterBatch filters,
             ParcelsFilter? search,
             ParcelsSort? sort)?
         loaded,
-    TResult Function(StorageError? error, ParcelsFilterBatch filters,
+    TResult? Function(StorageError? error, ParcelsFilterBatch filters,
             ParcelsFilter? search, ParcelsSort? sort)?
         loadingFailed,
   }) {
@@ -392,9 +347,9 @@ class _$ParcelsStateInitial
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(ParcelsStateInitial value)? initial,
-    TResult Function(ParcelsStateLoaded value)? loaded,
-    TResult Function(ParcelsStateLoadingFailed value)? loadingFailed,
+    TResult? Function(ParcelsStateInitial value)? initial,
+    TResult? Function(ParcelsStateLoaded value)? loaded,
+    TResult? Function(ParcelsStateLoadingFailed value)? loadingFailed,
   }) {
     return initial?.call(this);
   }
@@ -416,29 +371,30 @@ class _$ParcelsStateInitial
 
 abstract class ParcelsStateInitial implements ParcelsState {
   const factory ParcelsStateInitial(
-      {required ParcelsFilterBatch filters,
-      ParcelsFilter? search,
-      ParcelsSort? sort}) = _$ParcelsStateInitial;
+      {required final ParcelsFilterBatch filters,
+      final ParcelsFilter? search,
+      final ParcelsSort? sort}) = _$ParcelsStateInitialImpl;
 
   @override
-  ParcelsFilterBatch get filters => throw _privateConstructorUsedError;
+  ParcelsFilterBatch get filters;
   @override
-  ParcelsFilter? get search => throw _privateConstructorUsedError;
+  ParcelsFilter? get search;
   @override
-  ParcelsSort? get sort => throw _privateConstructorUsedError;
+  ParcelsSort? get sort;
   @override
   @JsonKey(ignore: true)
-  $ParcelsStateInitialCopyWith<ParcelsStateInitial> get copyWith =>
+  _$$ParcelsStateInitialImplCopyWith<_$ParcelsStateInitialImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $ParcelsStateLoadedCopyWith<$Res>
+abstract class _$$ParcelsStateLoadedImplCopyWith<$Res>
     implements $ParcelsStateCopyWith<$Res> {
-  factory $ParcelsStateLoadedCopyWith(
-          ParcelsStateLoaded value, $Res Function(ParcelsStateLoaded) then) =
-      _$ParcelsStateLoadedCopyWithImpl<$Res>;
+  factory _$$ParcelsStateLoadedImplCopyWith(_$ParcelsStateLoadedImpl value,
+          $Res Function(_$ParcelsStateLoadedImpl) then) =
+      __$$ParcelsStateLoadedImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {List<ParcelInfo> active,
       List<ParcelInfo> archive,
@@ -453,42 +409,40 @@ abstract class $ParcelsStateLoadedCopyWith<$Res>
 }
 
 /// @nodoc
-class _$ParcelsStateLoadedCopyWithImpl<$Res>
-    extends _$ParcelsStateCopyWithImpl<$Res>
-    implements $ParcelsStateLoadedCopyWith<$Res> {
-  _$ParcelsStateLoadedCopyWithImpl(
-      ParcelsStateLoaded _value, $Res Function(ParcelsStateLoaded) _then)
-      : super(_value, (v) => _then(v as ParcelsStateLoaded));
+class __$$ParcelsStateLoadedImplCopyWithImpl<$Res>
+    extends _$ParcelsStateCopyWithImpl<$Res, _$ParcelsStateLoadedImpl>
+    implements _$$ParcelsStateLoadedImplCopyWith<$Res> {
+  __$$ParcelsStateLoadedImplCopyWithImpl(_$ParcelsStateLoadedImpl _value,
+      $Res Function(_$ParcelsStateLoadedImpl) _then)
+      : super(_value, _then);
 
-  @override
-  ParcelsStateLoaded get _value => super._value as ParcelsStateLoaded;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? active = freezed,
-    Object? archive = freezed,
-    Object? filters = freezed,
+    Object? active = null,
+    Object? archive = null,
+    Object? filters = null,
     Object? search = freezed,
     Object? sort = freezed,
   }) {
-    return _then(ParcelsStateLoaded(
-      active: active == freezed
-          ? _value.active
+    return _then(_$ParcelsStateLoadedImpl(
+      active: null == active
+          ? _value._active
           : active // ignore: cast_nullable_to_non_nullable
               as List<ParcelInfo>,
-      archive: archive == freezed
-          ? _value.archive
+      archive: null == archive
+          ? _value._archive
           : archive // ignore: cast_nullable_to_non_nullable
               as List<ParcelInfo>,
-      filters: filters == freezed
+      filters: null == filters
           ? _value.filters
           : filters // ignore: cast_nullable_to_non_nullable
               as ParcelsFilterBatch,
-      search: search == freezed
+      search: freezed == search
           ? _value.search
           : search // ignore: cast_nullable_to_non_nullable
               as ParcelsFilter?,
-      sort: sort == freezed
+      sort: freezed == sort
           ? _value.sort
           : sort // ignore: cast_nullable_to_non_nullable
               as ParcelsSort?,
@@ -498,20 +452,34 @@ class _$ParcelsStateLoadedCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$ParcelsStateLoaded
+class _$ParcelsStateLoadedImpl
     with DiagnosticableTreeMixin
     implements ParcelsStateLoaded {
-  const _$ParcelsStateLoaded(
-      {required this.active,
-      required this.archive,
+  const _$ParcelsStateLoadedImpl(
+      {required final List<ParcelInfo> active,
+      required final List<ParcelInfo> archive,
       required this.filters,
       this.search,
-      this.sort});
+      this.sort})
+      : _active = active,
+        _archive = archive;
 
+  final List<ParcelInfo> _active;
   @override
-  final List<ParcelInfo> active;
+  List<ParcelInfo> get active {
+    if (_active is EqualUnmodifiableListView) return _active;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_active);
+  }
+
+  final List<ParcelInfo> _archive;
   @override
-  final List<ParcelInfo> archive;
+  List<ParcelInfo> get archive {
+    if (_archive is EqualUnmodifiableListView) return _archive;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_archive);
+  }
+
   @override
   final ParcelsFilterBatch filters;
   @override
@@ -537,36 +505,32 @@ class _$ParcelsStateLoaded
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is ParcelsStateLoaded &&
-            (identical(other.active, active) ||
-                const DeepCollectionEquality().equals(other.active, active)) &&
-            (identical(other.archive, archive) ||
-                const DeepCollectionEquality()
-                    .equals(other.archive, archive)) &&
-            (identical(other.filters, filters) ||
-                const DeepCollectionEquality()
-                    .equals(other.filters, filters)) &&
-            (identical(other.search, search) ||
-                const DeepCollectionEquality().equals(other.search, search)) &&
-            (identical(other.sort, sort) ||
-                const DeepCollectionEquality().equals(other.sort, sort)));
+        (other.runtimeType == runtimeType &&
+            other is _$ParcelsStateLoadedImpl &&
+            const DeepCollectionEquality().equals(other._active, _active) &&
+            const DeepCollectionEquality().equals(other._archive, _archive) &&
+            const DeepCollectionEquality().equals(other.filters, filters) &&
+            (identical(other.search, search) || other.search == search) &&
+            (identical(other.sort, sort) || other.sort == sort));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(active) ^
-      const DeepCollectionEquality().hash(archive) ^
-      const DeepCollectionEquality().hash(filters) ^
-      const DeepCollectionEquality().hash(search) ^
-      const DeepCollectionEquality().hash(sort);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(_active),
+      const DeepCollectionEquality().hash(_archive),
+      const DeepCollectionEquality().hash(filters),
+      search,
+      sort);
 
   @JsonKey(ignore: true)
   @override
-  $ParcelsStateLoadedCopyWith<ParcelsStateLoaded> get copyWith =>
-      _$ParcelsStateLoadedCopyWithImpl<ParcelsStateLoaded>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$ParcelsStateLoadedImplCopyWith<_$ParcelsStateLoadedImpl> get copyWith =>
+      __$$ParcelsStateLoadedImplCopyWithImpl<_$ParcelsStateLoadedImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -591,17 +555,17 @@ class _$ParcelsStateLoaded
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(ParcelsFilterBatch filters, ParcelsFilter? search,
+    TResult? Function(ParcelsFilterBatch filters, ParcelsFilter? search,
             ParcelsSort? sort)?
         initial,
-    TResult Function(
+    TResult? Function(
             List<ParcelInfo> active,
             List<ParcelInfo> archive,
             ParcelsFilterBatch filters,
             ParcelsFilter? search,
             ParcelsSort? sort)?
         loaded,
-    TResult Function(StorageError? error, ParcelsFilterBatch filters,
+    TResult? Function(StorageError? error, ParcelsFilterBatch filters,
             ParcelsFilter? search, ParcelsSort? sort)?
         loadingFailed,
   }) {
@@ -645,9 +609,9 @@ class _$ParcelsStateLoaded
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(ParcelsStateInitial value)? initial,
-    TResult Function(ParcelsStateLoaded value)? loaded,
-    TResult Function(ParcelsStateLoadingFailed value)? loadingFailed,
+    TResult? Function(ParcelsStateInitial value)? initial,
+    TResult? Function(ParcelsStateLoaded value)? loaded,
+    TResult? Function(ParcelsStateLoadingFailed value)? loadingFailed,
   }) {
     return loaded?.call(this);
   }
@@ -669,33 +633,35 @@ class _$ParcelsStateLoaded
 
 abstract class ParcelsStateLoaded implements ParcelsState {
   const factory ParcelsStateLoaded(
-      {required List<ParcelInfo> active,
-      required List<ParcelInfo> archive,
-      required ParcelsFilterBatch filters,
-      ParcelsFilter? search,
-      ParcelsSort? sort}) = _$ParcelsStateLoaded;
+      {required final List<ParcelInfo> active,
+      required final List<ParcelInfo> archive,
+      required final ParcelsFilterBatch filters,
+      final ParcelsFilter? search,
+      final ParcelsSort? sort}) = _$ParcelsStateLoadedImpl;
 
-  List<ParcelInfo> get active => throw _privateConstructorUsedError;
-  List<ParcelInfo> get archive => throw _privateConstructorUsedError;
+  List<ParcelInfo> get active;
+  List<ParcelInfo> get archive;
   @override
-  ParcelsFilterBatch get filters => throw _privateConstructorUsedError;
+  ParcelsFilterBatch get filters;
   @override
-  ParcelsFilter? get search => throw _privateConstructorUsedError;
+  ParcelsFilter? get search;
   @override
-  ParcelsSort? get sort => throw _privateConstructorUsedError;
+  ParcelsSort? get sort;
   @override
   @JsonKey(ignore: true)
-  $ParcelsStateLoadedCopyWith<ParcelsStateLoaded> get copyWith =>
+  _$$ParcelsStateLoadedImplCopyWith<_$ParcelsStateLoadedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $ParcelsStateLoadingFailedCopyWith<$Res>
+abstract class _$$ParcelsStateLoadingFailedImplCopyWith<$Res>
     implements $ParcelsStateCopyWith<$Res> {
-  factory $ParcelsStateLoadingFailedCopyWith(ParcelsStateLoadingFailed value,
-          $Res Function(ParcelsStateLoadingFailed) then) =
-      _$ParcelsStateLoadingFailedCopyWithImpl<$Res>;
+  factory _$$ParcelsStateLoadingFailedImplCopyWith(
+          _$ParcelsStateLoadingFailedImpl value,
+          $Res Function(_$ParcelsStateLoadingFailedImpl) then) =
+      __$$ParcelsStateLoadingFailedImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {StorageError? error,
       ParcelsFilterBatch filters,
@@ -710,38 +676,36 @@ abstract class $ParcelsStateLoadingFailedCopyWith<$Res>
 }
 
 /// @nodoc
-class _$ParcelsStateLoadingFailedCopyWithImpl<$Res>
-    extends _$ParcelsStateCopyWithImpl<$Res>
-    implements $ParcelsStateLoadingFailedCopyWith<$Res> {
-  _$ParcelsStateLoadingFailedCopyWithImpl(ParcelsStateLoadingFailed _value,
-      $Res Function(ParcelsStateLoadingFailed) _then)
-      : super(_value, (v) => _then(v as ParcelsStateLoadingFailed));
+class __$$ParcelsStateLoadingFailedImplCopyWithImpl<$Res>
+    extends _$ParcelsStateCopyWithImpl<$Res, _$ParcelsStateLoadingFailedImpl>
+    implements _$$ParcelsStateLoadingFailedImplCopyWith<$Res> {
+  __$$ParcelsStateLoadingFailedImplCopyWithImpl(
+      _$ParcelsStateLoadingFailedImpl _value,
+      $Res Function(_$ParcelsStateLoadingFailedImpl) _then)
+      : super(_value, _then);
 
-  @override
-  ParcelsStateLoadingFailed get _value =>
-      super._value as ParcelsStateLoadingFailed;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? error = freezed,
-    Object? filters = freezed,
+    Object? filters = null,
     Object? search = freezed,
     Object? sort = freezed,
   }) {
-    return _then(ParcelsStateLoadingFailed(
-      error: error == freezed
+    return _then(_$ParcelsStateLoadingFailedImpl(
+      error: freezed == error
           ? _value.error
           : error // ignore: cast_nullable_to_non_nullable
               as StorageError?,
-      filters: filters == freezed
+      filters: null == filters
           ? _value.filters
           : filters // ignore: cast_nullable_to_non_nullable
               as ParcelsFilterBatch,
-      search: search == freezed
+      search: freezed == search
           ? _value.search
           : search // ignore: cast_nullable_to_non_nullable
               as ParcelsFilter?,
-      sort: sort == freezed
+      sort: freezed == sort
           ? _value.sort
           : sort // ignore: cast_nullable_to_non_nullable
               as ParcelsSort?,
@@ -749,6 +713,7 @@ class _$ParcelsStateLoadingFailedCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $StorageErrorCopyWith<$Res>? get error {
     if (_value.error == null) {
       return null;
@@ -762,10 +727,10 @@ class _$ParcelsStateLoadingFailedCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$ParcelsStateLoadingFailed
+class _$ParcelsStateLoadingFailedImpl
     with DiagnosticableTreeMixin
     implements ParcelsStateLoadingFailed {
-  const _$ParcelsStateLoadingFailed(
+  const _$ParcelsStateLoadingFailedImpl(
       {this.error, required this.filters, this.search, this.sort});
 
   @override
@@ -794,33 +759,26 @@ class _$ParcelsStateLoadingFailed
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is ParcelsStateLoadingFailed &&
-            (identical(other.error, error) ||
-                const DeepCollectionEquality().equals(other.error, error)) &&
-            (identical(other.filters, filters) ||
-                const DeepCollectionEquality()
-                    .equals(other.filters, filters)) &&
-            (identical(other.search, search) ||
-                const DeepCollectionEquality().equals(other.search, search)) &&
-            (identical(other.sort, sort) ||
-                const DeepCollectionEquality().equals(other.sort, sort)));
+        (other.runtimeType == runtimeType &&
+            other is _$ParcelsStateLoadingFailedImpl &&
+            (identical(other.error, error) || other.error == error) &&
+            const DeepCollectionEquality().equals(other.filters, filters) &&
+            (identical(other.search, search) || other.search == search) &&
+            (identical(other.sort, sort) || other.sort == sort));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(error) ^
-      const DeepCollectionEquality().hash(filters) ^
-      const DeepCollectionEquality().hash(search) ^
-      const DeepCollectionEquality().hash(sort);
+  int get hashCode => Object.hash(runtimeType, error,
+      const DeepCollectionEquality().hash(filters), search, sort);
 
   @JsonKey(ignore: true)
   @override
-  $ParcelsStateLoadingFailedCopyWith<ParcelsStateLoadingFailed> get copyWith =>
-      _$ParcelsStateLoadingFailedCopyWithImpl<ParcelsStateLoadingFailed>(
-          this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$ParcelsStateLoadingFailedImplCopyWith<_$ParcelsStateLoadingFailedImpl>
+      get copyWith => __$$ParcelsStateLoadingFailedImplCopyWithImpl<
+          _$ParcelsStateLoadingFailedImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -845,17 +803,17 @@ class _$ParcelsStateLoadingFailed
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(ParcelsFilterBatch filters, ParcelsFilter? search,
+    TResult? Function(ParcelsFilterBatch filters, ParcelsFilter? search,
             ParcelsSort? sort)?
         initial,
-    TResult Function(
+    TResult? Function(
             List<ParcelInfo> active,
             List<ParcelInfo> archive,
             ParcelsFilterBatch filters,
             ParcelsFilter? search,
             ParcelsSort? sort)?
         loaded,
-    TResult Function(StorageError? error, ParcelsFilterBatch filters,
+    TResult? Function(StorageError? error, ParcelsFilterBatch filters,
             ParcelsFilter? search, ParcelsSort? sort)?
         loadingFailed,
   }) {
@@ -899,9 +857,9 @@ class _$ParcelsStateLoadingFailed
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(ParcelsStateInitial value)? initial,
-    TResult Function(ParcelsStateLoaded value)? loaded,
-    TResult Function(ParcelsStateLoadingFailed value)? loadingFailed,
+    TResult? Function(ParcelsStateInitial value)? initial,
+    TResult? Function(ParcelsStateLoaded value)? loaded,
+    TResult? Function(ParcelsStateLoadingFailed value)? loadingFailed,
   }) {
     return loadingFailed?.call(this);
   }
@@ -923,46 +881,26 @@ class _$ParcelsStateLoadingFailed
 
 abstract class ParcelsStateLoadingFailed implements ParcelsState {
   const factory ParcelsStateLoadingFailed(
-      {StorageError? error,
-      required ParcelsFilterBatch filters,
-      ParcelsFilter? search,
-      ParcelsSort? sort}) = _$ParcelsStateLoadingFailed;
+      {final StorageError? error,
+      required final ParcelsFilterBatch filters,
+      final ParcelsFilter? search,
+      final ParcelsSort? sort}) = _$ParcelsStateLoadingFailedImpl;
 
-  StorageError? get error => throw _privateConstructorUsedError;
+  StorageError? get error;
   @override
-  ParcelsFilterBatch get filters => throw _privateConstructorUsedError;
+  ParcelsFilterBatch get filters;
   @override
-  ParcelsFilter? get search => throw _privateConstructorUsedError;
+  ParcelsFilter? get search;
   @override
-  ParcelsSort? get sort => throw _privateConstructorUsedError;
+  ParcelsSort? get sort;
   @override
   @JsonKey(ignore: true)
-  $ParcelsStateLoadingFailedCopyWith<ParcelsStateLoadingFailed> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$ParcelsStateLoadingFailedImplCopyWith<_$ParcelsStateLoadingFailedImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-class _$_BuildResultTearOff {
-  const _$_BuildResultTearOff();
-
-  _BuildResultData call({required List<ParcelInfo> infoList}) {
-    return _BuildResultData(
-      infoList: infoList,
-    );
-  }
-
-  _BuildResultFailed failed({required StorageError error}) {
-    return _BuildResultFailed(
-      error: error,
-    );
-  }
-}
-
-/// @nodoc
-const _$BuildResult = _$_BuildResultTearOff();
-
-/// @nodoc
-mixin _$_BuildResult {
+mixin _$BuildResult {
   @optionalTypeArgs
   TResult when<TResult extends Object?>(
     TResult Function(List<ParcelInfo> infoList) $default, {
@@ -971,8 +909,8 @@ mixin _$_BuildResult {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>(
-    TResult Function(List<ParcelInfo> infoList)? $default, {
-    TResult Function(StorageError error)? failed,
+    TResult? Function(List<ParcelInfo> infoList)? $default, {
+    TResult? Function(StorageError error)? failed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -990,8 +928,8 @@ mixin _$_BuildResult {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>(
-    TResult Function(_BuildResultData value)? $default, {
-    TResult Function(_BuildResultFailed value)? failed,
+    TResult? Function(_BuildResultData value)? $default, {
+    TResult? Function(_BuildResultFailed value)? failed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -1007,44 +945,45 @@ mixin _$_BuildResult {
 abstract class _$BuildResultCopyWith<$Res> {
   factory _$BuildResultCopyWith(
           _BuildResult value, $Res Function(_BuildResult) then) =
-      __$BuildResultCopyWithImpl<$Res>;
+      __$BuildResultCopyWithImpl<$Res, _BuildResult>;
 }
 
 /// @nodoc
-class __$BuildResultCopyWithImpl<$Res> implements _$BuildResultCopyWith<$Res> {
+class __$BuildResultCopyWithImpl<$Res, $Val extends _BuildResult>
+    implements _$BuildResultCopyWith<$Res> {
   __$BuildResultCopyWithImpl(this._value, this._then);
 
-  final _BuildResult _value;
   // ignore: unused_field
-  final $Res Function(_BuildResult) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 }
 
 /// @nodoc
-abstract class _$BuildResultDataCopyWith<$Res> {
-  factory _$BuildResultDataCopyWith(
-          _BuildResultData value, $Res Function(_BuildResultData) then) =
-      __$BuildResultDataCopyWithImpl<$Res>;
+abstract class _$$BuildResultDataImplCopyWith<$Res> {
+  factory _$$BuildResultDataImplCopyWith(_$BuildResultDataImpl value,
+          $Res Function(_$BuildResultDataImpl) then) =
+      __$$BuildResultDataImplCopyWithImpl<$Res>;
+  @useResult
   $Res call({List<ParcelInfo> infoList});
 }
 
 /// @nodoc
-class __$BuildResultDataCopyWithImpl<$Res>
-    extends __$BuildResultCopyWithImpl<$Res>
-    implements _$BuildResultDataCopyWith<$Res> {
-  __$BuildResultDataCopyWithImpl(
-      _BuildResultData _value, $Res Function(_BuildResultData) _then)
-      : super(_value, (v) => _then(v as _BuildResultData));
+class __$$BuildResultDataImplCopyWithImpl<$Res>
+    extends __$BuildResultCopyWithImpl<$Res, _$BuildResultDataImpl>
+    implements _$$BuildResultDataImplCopyWith<$Res> {
+  __$$BuildResultDataImplCopyWithImpl(
+      _$BuildResultDataImpl _value, $Res Function(_$BuildResultDataImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _BuildResultData get _value => super._value as _BuildResultData;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? infoList = freezed,
+    Object? infoList = null,
   }) {
-    return _then(_BuildResultData(
-      infoList: infoList == freezed
-          ? _value.infoList
+    return _then(_$BuildResultDataImpl(
+      infoList: null == infoList
+          ? _value._infoList
           : infoList // ignore: cast_nullable_to_non_nullable
               as List<ParcelInfo>,
     ));
@@ -1053,13 +992,19 @@ class __$BuildResultDataCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_BuildResultData
+class _$BuildResultDataImpl
     with DiagnosticableTreeMixin
     implements _BuildResultData {
-  const _$_BuildResultData({required this.infoList});
+  const _$BuildResultDataImpl({required final List<ParcelInfo> infoList})
+      : _infoList = infoList;
 
+  final List<ParcelInfo> _infoList;
   @override
-  final List<ParcelInfo> infoList;
+  List<ParcelInfo> get infoList {
+    if (_infoList is EqualUnmodifiableListView) return _infoList;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_infoList);
+  }
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
@@ -1075,22 +1020,23 @@ class _$_BuildResultData
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is _BuildResultData &&
-            (identical(other.infoList, infoList) ||
-                const DeepCollectionEquality()
-                    .equals(other.infoList, infoList)));
+        (other.runtimeType == runtimeType &&
+            other is _$BuildResultDataImpl &&
+            const DeepCollectionEquality().equals(other._infoList, _infoList));
   }
 
   @override
   int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(infoList);
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_infoList));
 
   @JsonKey(ignore: true)
   @override
-  _$BuildResultDataCopyWith<_BuildResultData> get copyWith =>
-      __$BuildResultDataCopyWithImpl<_BuildResultData>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$BuildResultDataImplCopyWith<_$BuildResultDataImpl> get copyWith =>
+      __$$BuildResultDataImplCopyWithImpl<_$BuildResultDataImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1104,8 +1050,8 @@ class _$_BuildResultData
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>(
-    TResult Function(List<ParcelInfo> infoList)? $default, {
-    TResult Function(StorageError error)? failed,
+    TResult? Function(List<ParcelInfo> infoList)? $default, {
+    TResult? Function(StorageError error)? failed,
   }) {
     return $default?.call(infoList);
   }
@@ -1135,8 +1081,8 @@ class _$_BuildResultData
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>(
-    TResult Function(_BuildResultData value)? $default, {
-    TResult Function(_BuildResultFailed value)? failed,
+    TResult? Function(_BuildResultData value)? $default, {
+    TResult? Function(_BuildResultFailed value)? failed,
   }) {
     return $default?.call(this);
   }
@@ -1156,42 +1102,41 @@ class _$_BuildResultData
 }
 
 abstract class _BuildResultData implements _BuildResult {
-  const factory _BuildResultData({required List<ParcelInfo> infoList}) =
-      _$_BuildResultData;
+  const factory _BuildResultData({required final List<ParcelInfo> infoList}) =
+      _$BuildResultDataImpl;
 
-  List<ParcelInfo> get infoList => throw _privateConstructorUsedError;
+  List<ParcelInfo> get infoList;
   @JsonKey(ignore: true)
-  _$BuildResultDataCopyWith<_BuildResultData> get copyWith =>
+  _$$BuildResultDataImplCopyWith<_$BuildResultDataImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$BuildResultFailedCopyWith<$Res> {
-  factory _$BuildResultFailedCopyWith(
-          _BuildResultFailed value, $Res Function(_BuildResultFailed) then) =
-      __$BuildResultFailedCopyWithImpl<$Res>;
+abstract class _$$BuildResultFailedImplCopyWith<$Res> {
+  factory _$$BuildResultFailedImplCopyWith(_$BuildResultFailedImpl value,
+          $Res Function(_$BuildResultFailedImpl) then) =
+      __$$BuildResultFailedImplCopyWithImpl<$Res>;
+  @useResult
   $Res call({StorageError error});
 
   $StorageErrorCopyWith<$Res> get error;
 }
 
 /// @nodoc
-class __$BuildResultFailedCopyWithImpl<$Res>
-    extends __$BuildResultCopyWithImpl<$Res>
-    implements _$BuildResultFailedCopyWith<$Res> {
-  __$BuildResultFailedCopyWithImpl(
-      _BuildResultFailed _value, $Res Function(_BuildResultFailed) _then)
-      : super(_value, (v) => _then(v as _BuildResultFailed));
+class __$$BuildResultFailedImplCopyWithImpl<$Res>
+    extends __$BuildResultCopyWithImpl<$Res, _$BuildResultFailedImpl>
+    implements _$$BuildResultFailedImplCopyWith<$Res> {
+  __$$BuildResultFailedImplCopyWithImpl(_$BuildResultFailedImpl _value,
+      $Res Function(_$BuildResultFailedImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _BuildResultFailed get _value => super._value as _BuildResultFailed;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? error = freezed,
+    Object? error = null,
   }) {
-    return _then(_BuildResultFailed(
-      error: error == freezed
+    return _then(_$BuildResultFailedImpl(
+      error: null == error
           ? _value.error
           : error // ignore: cast_nullable_to_non_nullable
               as StorageError,
@@ -1199,6 +1144,7 @@ class __$BuildResultFailedCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $StorageErrorCopyWith<$Res> get error {
     return $StorageErrorCopyWith<$Res>(_value.error, (value) {
       return _then(_value.copyWith(error: value));
@@ -1208,10 +1154,10 @@ class __$BuildResultFailedCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_BuildResultFailed
+class _$BuildResultFailedImpl
     with DiagnosticableTreeMixin
     implements _BuildResultFailed {
-  const _$_BuildResultFailed({required this.error});
+  const _$BuildResultFailedImpl({required this.error});
 
   @override
   final StorageError error;
@@ -1230,21 +1176,22 @@ class _$_BuildResultFailed
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is _BuildResultFailed &&
-            (identical(other.error, error) ||
-                const DeepCollectionEquality().equals(other.error, error)));
+        (other.runtimeType == runtimeType &&
+            other is _$BuildResultFailedImpl &&
+            (identical(other.error, error) || other.error == error));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(error);
+  int get hashCode => Object.hash(runtimeType, error);
 
   @JsonKey(ignore: true)
   @override
-  _$BuildResultFailedCopyWith<_BuildResultFailed> get copyWith =>
-      __$BuildResultFailedCopyWithImpl<_BuildResultFailed>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$BuildResultFailedImplCopyWith<_$BuildResultFailedImpl> get copyWith =>
+      __$$BuildResultFailedImplCopyWithImpl<_$BuildResultFailedImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1258,8 +1205,8 @@ class _$_BuildResultFailed
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>(
-    TResult Function(List<ParcelInfo> infoList)? $default, {
-    TResult Function(StorageError error)? failed,
+    TResult? Function(List<ParcelInfo> infoList)? $default, {
+    TResult? Function(StorageError error)? failed,
   }) {
     return failed?.call(error);
   }
@@ -1289,8 +1236,8 @@ class _$_BuildResultFailed
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>(
-    TResult Function(_BuildResultData value)? $default, {
-    TResult Function(_BuildResultFailed value)? failed,
+    TResult? Function(_BuildResultData value)? $default, {
+    TResult? Function(_BuildResultFailed value)? failed,
   }) {
     return failed?.call(this);
   }
@@ -1310,11 +1257,11 @@ class _$_BuildResultFailed
 }
 
 abstract class _BuildResultFailed implements _BuildResult {
-  const factory _BuildResultFailed({required StorageError error}) =
-      _$_BuildResultFailed;
+  const factory _BuildResultFailed({required final StorageError error}) =
+      _$BuildResultFailedImpl;
 
-  StorageError get error => throw _privateConstructorUsedError;
+  StorageError get error;
   @JsonKey(ignore: true)
-  _$BuildResultFailedCopyWith<_BuildResultFailed> get copyWith =>
+  _$$BuildResultFailedImplCopyWith<_$BuildResultFailedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

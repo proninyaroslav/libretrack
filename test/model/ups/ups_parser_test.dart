@@ -121,7 +121,7 @@ void main() {
     });
 
     group('Fault |', () {
-      Map<String, dynamic> _makePayload({
+      Map<String, dynamic> makePayload({
         String? code,
         String? description,
         String? severity,
@@ -147,7 +147,7 @@ void main() {
       }
 
       test('No tracking info', () {
-        final payload = _makePayload(
+        final payload = makePayload(
           code: '151044',
           description: 'No tracking information available',
           severity: 'Hard',
@@ -165,7 +165,7 @@ void main() {
       });
 
       test('Auth error', () {
-        final payload = _makePayload(
+        final payload = makePayload(
           code: '250002',
           description: 'Invalid Authentication Information.',
           severity: 'Authentication',
@@ -191,7 +191,7 @@ void main() {
       });
 
       test('Hard error', () {
-        final payload = _makePayload(
+        final payload = makePayload(
           code: '151050',
           description: 'Too many records to display',
           severity: 'Hard',
@@ -217,7 +217,7 @@ void main() {
       });
 
       test('Bad request', () {
-        final payload = _makePayload(
+        final payload = makePayload(
           code: '10001',
           description: 'JSON syntax error',
           severity: 'Hard',
@@ -243,7 +243,7 @@ void main() {
       });
 
       test('Temporary error', () {
-        final payload = _makePayload(
+        final payload = makePayload(
           code: '150000',
           description: 'Tracking service unavailable',
           severity: 'Transient',
@@ -269,7 +269,7 @@ void main() {
       });
 
       test('Invalid tracking number', () {
-        final payload = _makePayload(
+        final payload = makePayload(
           code: '151018',
           description: 'Invalid tracking number',
           severity: 'Hard',
@@ -294,10 +294,10 @@ void main() {
     });
 
     group('Result |', () {
-      const _defaultId = TransactionId('1');
-      const _defaultTrack = '123';
+      const defaultId = TransactionId('1');
+      const defaultTrack = '123';
 
-      String _makePayload({
+      String makePayload({
         required TransactionId id,
         required String trackNumber,
         Map<String, dynamic>? shipment,
@@ -348,7 +348,7 @@ void main() {
         final response = ServiceResponse(
           transactionId: expectedId,
           statusCode: 200,
-          payload: _makePayload(id: actualId, trackNumber: _defaultTrack),
+          payload: makePayload(id: actualId, trackNumber: defaultTrack),
         );
 
         final result = parser.parse(response);
@@ -369,9 +369,9 @@ void main() {
 
       test('No tracking number in response', () {
         final response = ServiceResponse(
-          transactionId: _defaultId,
+          transactionId: defaultId,
           statusCode: 200,
-          payload: _makePayload(id: _defaultId, trackNumber: ''),
+          payload: makePayload(id: defaultId, trackNumber: ''),
         );
 
         final result = parser.parse(response);
@@ -387,14 +387,14 @@ void main() {
 
       test('Multi-package', () {
         final response = ServiceResponse(
-          transactionId: _defaultId,
+          transactionId: defaultId,
           statusCode: 200,
-          payload: _makePayload(
-            id: _defaultId,
-            trackNumber: _defaultTrack,
+          payload: makePayload(
+            id: defaultId,
+            trackNumber: defaultTrack,
             shipment: {
               'Package': [
-                {'TrackingNumber': _defaultTrack, 'DeliveryDate': '20200101'},
+                {'TrackingNumber': defaultTrack, 'DeliveryDate': '20200101'},
                 {'TrackingNumber': '2', 'DeliveryDate': '20200102'},
               ],
             },
@@ -404,7 +404,7 @@ void main() {
         final result = parser.parse(response);
         result.maybeWhen(
           (info, activity, alternateTracks) {
-            expect(info.trackNumber, _defaultTrack);
+            expect(info.trackNumber, defaultTrack);
             expect(info.deliveryDate, DateTime(2020));
           },
           orElse: () => throw result,
@@ -414,15 +414,15 @@ void main() {
       group('ShipmentInfo |', () {
         test('Base fields', () {
           final response = ServiceResponse(
-            transactionId: _defaultId,
+            transactionId: defaultId,
             statusCode: 200,
-            payload: _makePayload(id: _defaultId, trackNumber: _defaultTrack),
+            payload: makePayload(id: defaultId, trackNumber: defaultTrack),
           );
 
           final result = parser.parse(response);
           result.maybeWhen(
             (info, activity, alternateTracks) {
-              expect(info.trackNumber, _defaultTrack);
+              expect(info.trackNumber, defaultTrack);
               expect(info.serviceType, PostalServiceType.ups);
             },
             orElse: () => throw result,
@@ -431,11 +431,11 @@ void main() {
 
         test('Service description', () {
           final response = ServiceResponse(
-            transactionId: _defaultId,
+            transactionId: defaultId,
             statusCode: 200,
-            payload: _makePayload(
-              id: _defaultId,
-              trackNumber: _defaultTrack,
+            payload: makePayload(
+              id: defaultId,
+              trackNumber: defaultTrack,
               shipment: {
                 'Service': {'Description': 'UPS Standard'}
               },
@@ -453,11 +453,11 @@ void main() {
 
         test('Shipment description', () {
           final response = ServiceResponse(
-            transactionId: _defaultId,
+            transactionId: defaultId,
             statusCode: 200,
-            payload: _makePayload(
-              id: _defaultId,
-              trackNumber: _defaultTrack,
+            payload: makePayload(
+              id: defaultId,
+              trackNumber: defaultTrack,
               shipment: {
                 'ShipmentType': {'Description': 'Small Package'}
               },
@@ -478,7 +478,7 @@ void main() {
             ServiceResponse(
               transactionId: const TransactionId('1'),
               statusCode: 200,
-              payload: _makePayload(
+              payload: makePayload(
                 id: const TransactionId('1'),
                 trackNumber: '1',
                 shipment: {'SignedForByName': 'Foo Bar'},
@@ -487,7 +487,7 @@ void main() {
             ServiceResponse(
               transactionId: const TransactionId('2'),
               statusCode: 200,
-              payload: _makePayload(
+              payload: makePayload(
                 id: const TransactionId('2'),
                 trackNumber: '2',
                 package: {
@@ -520,7 +520,7 @@ void main() {
             ServiceResponse(
               transactionId: const TransactionId('1'),
               statusCode: 200,
-              payload: _makePayload(
+              payload: makePayload(
                 id: const TransactionId('1'),
                 trackNumber: '1',
                 shipment: {
@@ -534,7 +534,7 @@ void main() {
             ServiceResponse(
               transactionId: const TransactionId('2'),
               statusCode: 200,
-              payload: _makePayload(
+              payload: makePayload(
                 id: const TransactionId('2'),
                 trackNumber: '2',
                 package: {
@@ -568,11 +568,11 @@ void main() {
 
         test('Volume', () {
           final response = ServiceResponse(
-            transactionId: _defaultId,
+            transactionId: defaultId,
             statusCode: 200,
-            payload: _makePayload(
-              id: _defaultId,
-              trackNumber: _defaultTrack,
+            payload: makePayload(
+              id: defaultId,
+              trackNumber: defaultTrack,
               shipment: {
                 'Volume': {
                   'Value': '10',
@@ -602,7 +602,7 @@ void main() {
             ServiceResponse(
               transactionId: const TransactionId('1'),
               statusCode: 200,
-              payload: _makePayload(
+              payload: makePayload(
                 id: const TransactionId('1'),
                 trackNumber: '1',
                 shipment: {'PickupDate': '20200101'},
@@ -611,7 +611,7 @@ void main() {
             ServiceResponse(
               transactionId: const TransactionId('2'),
               statusCode: 200,
-              payload: _makePayload(
+              payload: makePayload(
                 id: const TransactionId('2'),
                 trackNumber: '2',
                 package: {
@@ -646,7 +646,7 @@ void main() {
             ServiceResponse(
               transactionId: const TransactionId('1'),
               statusCode: 200,
-              payload: _makePayload(
+              payload: makePayload(
                 id: const TransactionId('1'),
                 trackNumber: '1',
                 shipment: {
@@ -664,7 +664,7 @@ void main() {
             ServiceResponse(
               transactionId: const TransactionId('2'),
               statusCode: 200,
-              payload: _makePayload(
+              payload: makePayload(
                 id: const TransactionId('2'),
                 trackNumber: '2',
                 package: {'DeliveryDate': '20200101'},
@@ -673,7 +673,7 @@ void main() {
             ServiceResponse(
               transactionId: const TransactionId('3'),
               statusCode: 200,
-              payload: _makePayload(
+              payload: makePayload(
                 id: const TransactionId('3'),
                 trackNumber: '3',
                 package: {
@@ -705,11 +705,11 @@ void main() {
 
         test('Estimated and scheduled delivery date', () {
           final response = ServiceResponse(
-            transactionId: _defaultId,
+            transactionId: defaultId,
             statusCode: 200,
-            payload: _makePayload(
-              id: _defaultId,
-              trackNumber: _defaultTrack,
+            payload: makePayload(
+              id: defaultId,
+              trackNumber: defaultTrack,
               shipment: {
                 'DeliveryDetail': [
                   {
@@ -754,7 +754,7 @@ void main() {
             ServiceResponse(
               transactionId: const TransactionId('1'),
               statusCode: 200,
-              payload: _makePayload(
+              payload: makePayload(
                 id: const TransactionId('1'),
                 trackNumber: '1',
                 shipment: {
@@ -770,7 +770,7 @@ void main() {
             ServiceResponse(
               transactionId: const TransactionId('2'),
               statusCode: 200,
-              payload: _makePayload(
+              payload: makePayload(
                 id: const TransactionId('2'),
                 trackNumber: '2',
                 package: {
@@ -799,11 +799,11 @@ void main() {
 
         test('Shipper and receiver address', () {
           final response = ServiceResponse(
-            transactionId: _defaultId,
+            transactionId: defaultId,
             statusCode: 200,
-            payload: _makePayload(
-              id: _defaultId,
-              trackNumber: _defaultTrack,
+            payload: makePayload(
+              id: defaultId,
+              trackNumber: defaultTrack,
               shipmentAddress: [
                 {
                   'Type': {
@@ -861,11 +861,11 @@ void main() {
 
         test('Service message', () {
           final response = ServiceResponse(
-            transactionId: _defaultId,
+            transactionId: defaultId,
             statusCode: 200,
-            payload: _makePayload(
-                id: _defaultId,
-                trackNumber: _defaultTrack,
+            payload: makePayload(
+                id: defaultId,
+                trackNumber: defaultTrack,
                 shipment: {
                   'DeliveryDateUnavailable': {
                     'Type': 'Scheduled Delivery',
@@ -899,11 +899,11 @@ void main() {
       group('ShipmentActivityInfo |', () {
         test('No activity', () {
           final response = ServiceResponse(
-            transactionId: _defaultId,
+            transactionId: defaultId,
             statusCode: 200,
-            payload: _makePayload(
-              id: _defaultId,
-              trackNumber: _defaultTrack,
+            payload: makePayload(
+              id: defaultId,
+              trackNumber: defaultTrack,
             ),
           );
 
@@ -917,11 +917,11 @@ void main() {
 
         test('Multiple activity', () {
           final response = ServiceResponse(
-            transactionId: _defaultId,
+            transactionId: defaultId,
             statusCode: 200,
-            payload: _makePayload(
-              id: _defaultId,
-              trackNumber: _defaultTrack,
+            payload: makePayload(
+              id: defaultId,
+              trackNumber: defaultTrack,
               package: {
                 'Activity': [
                   {
@@ -994,7 +994,7 @@ void main() {
           );
           final expectedActivity = [
             ShipmentActivityInfo.from(
-              trackNumber: _defaultTrack,
+              trackNumber: defaultTrack,
               serviceType: PostalServiceType.ups,
               statusType: ShipmentStatusType.delivered,
               statusDescription: 'Delivered',
@@ -1006,7 +1006,7 @@ void main() {
               dateTime: DateTime(2020, 01, 03, 12),
             ),
             ShipmentActivityInfo.from(
-              trackNumber: _defaultTrack,
+              trackNumber: defaultTrack,
               statusType: ShipmentStatusType.inTransitArrivedWaypoint,
               serviceType: PostalServiceType.ups,
               statusDescription: 'Arrived at Facility',
@@ -1017,7 +1017,7 @@ void main() {
               dateTime: DateTime(2020, 01, 02, 12),
             ),
             ShipmentActivityInfo.from(
-              trackNumber: _defaultTrack,
+              trackNumber: defaultTrack,
               statusType: ShipmentStatusType.pickup,
               serviceType: PostalServiceType.ups,
               statusDescription: 'Origin Scan',
@@ -1025,7 +1025,7 @@ void main() {
               dateTime: DateTime(2020, 01, 02, 11),
             ),
             ShipmentActivityInfo.from(
-              trackNumber: _defaultTrack,
+              trackNumber: defaultTrack,
               serviceType: PostalServiceType.ups,
               statusType: ShipmentStatusType.infoReceived,
               statusDescription: 'Order Processed: Ready for UPS',
@@ -1047,11 +1047,11 @@ void main() {
 
         test('Activity in Shipment block', () {
           final response = ServiceResponse(
-            transactionId: _defaultId,
+            transactionId: defaultId,
             statusCode: 200,
-            payload: _makePayload(
-              id: _defaultId,
-              trackNumber: _defaultTrack,
+            payload: makePayload(
+              id: defaultId,
+              trackNumber: defaultTrack,
               shipment: {
                 'Activity': [
                   {
@@ -1072,7 +1072,7 @@ void main() {
           );
           final expectedActivity = [
             ShipmentActivityInfo.from(
-              trackNumber: _defaultTrack,
+              trackNumber: defaultTrack,
               serviceType: PostalServiceType.ups,
               statusType: ShipmentStatusType.other,
               statusDescription: 'Delivered',
@@ -1095,11 +1095,11 @@ void main() {
 
         test('Activity in Shipment and Package block', () {
           final response = ServiceResponse(
-            transactionId: _defaultId,
+            transactionId: defaultId,
             statusCode: 200,
-            payload: _makePayload(
-              id: _defaultId,
-              trackNumber: _defaultTrack,
+            payload: makePayload(
+              id: defaultId,
+              trackNumber: defaultTrack,
               shipment: {
                 'Activity': [
                   {
@@ -1141,7 +1141,7 @@ void main() {
           );
           final expectedActivity = [
             ShipmentActivityInfo.from(
-              trackNumber: _defaultTrack,
+              trackNumber: defaultTrack,
               statusType: ShipmentStatusType.inTransitArrivedWaypoint,
               serviceType: PostalServiceType.ups,
               statusDescription: 'Arrived at Facility',
@@ -1152,7 +1152,7 @@ void main() {
               dateTime: DateTime(2020, 01, 02, 11),
             ),
             ShipmentActivityInfo.from(
-              trackNumber: _defaultTrack,
+              trackNumber: defaultTrack,
               serviceType: PostalServiceType.ups,
               statusType: ShipmentStatusType.other,
               statusDescription: 'Delivered',
@@ -1175,11 +1175,11 @@ void main() {
 
         test('Invalid date and time', () {
           final response = ServiceResponse(
-            transactionId: _defaultId,
+            transactionId: defaultId,
             statusCode: 200,
-            payload: _makePayload(
-              id: _defaultId,
-              trackNumber: _defaultTrack,
+            payload: makePayload(
+              id: defaultId,
+              trackNumber: defaultTrack,
               package: {
                 'Activity': [
                   {
@@ -1240,7 +1240,7 @@ void main() {
           );
           final expectedActivity = [
             ShipmentActivityInfo.from(
-              trackNumber: _defaultTrack,
+              trackNumber: defaultTrack,
               serviceType: PostalServiceType.ups,
               statusType: ShipmentStatusType.delivered,
               statusDescription: 'Delivered',
@@ -1252,7 +1252,7 @@ void main() {
               dateTime: DateTime(2020, 01, 03),
             ),
             ShipmentActivityInfo.from(
-              trackNumber: _defaultTrack,
+              trackNumber: defaultTrack,
               statusType: ShipmentStatusType.inTransitArrivedWaypoint,
               serviceType: PostalServiceType.ups,
               statusDescription: 'Arrived at Facility',
@@ -1263,7 +1263,7 @@ void main() {
               dateTime: DateTime.fromMillisecondsSinceEpoch(0),
             ),
             ShipmentActivityInfo.from(
-              trackNumber: _defaultTrack,
+              trackNumber: defaultTrack,
               serviceType: PostalServiceType.ups,
               statusType: ShipmentStatusType.infoReceived,
               statusDescription: 'Order Processed: Ready for UPS',

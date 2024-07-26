@@ -178,7 +178,7 @@ void main() {
       expect(await trackRepo.deleteTrack(trackInfo), StorageResult.empty);
       expect(
         await trackingRepo.getTrackingInfoByTrack(trackInfo.trackNumber),
-        const StorageResult([]),
+        const StorageResult(<TrackingInfo>[]),
       );
     });
 
@@ -243,7 +243,7 @@ void main() {
         await trackingRepo.getLatestTrackingInfoByList(
           trackNumbersList: trackNumbers,
         ),
-        const StorageResult([]),
+        const StorageResult(<TrackingInfo>[]),
       );
 
       await trackRepo.addTrackList([trackInfo1, trackInfo2]);

@@ -1,6 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'http_client.dart';
 
@@ -11,35 +12,7 @@ part of 'http_client.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$HttpResponseTearOff {
-  const _$HttpResponseTearOff();
-
-  HttpResponseSuccess success({required String body}) {
-    return HttpResponseSuccess(
-      body: body,
-    );
-  }
-
-  HttpResponseError httpError({required int statusCode, required String body}) {
-    return HttpResponseError(
-      statusCode: statusCode,
-      body: body,
-    );
-  }
-
-  HttpResponseException exception(Exception e, {StackTrace? stackTrace}) {
-    return HttpResponseException(
-      e,
-      stackTrace: stackTrace,
-    );
-  }
-}
-
-/// @nodoc
-const $HttpResponse = _$HttpResponseTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$HttpResponse {
@@ -52,9 +25,9 @@ mixin _$HttpResponse {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(String body)? success,
-    TResult Function(int statusCode, String body)? httpError,
-    TResult Function(Exception e, StackTrace? stackTrace)? exception,
+    TResult? Function(String body)? success,
+    TResult? Function(int statusCode, String body)? httpError,
+    TResult? Function(Exception e, StackTrace? stackTrace)? exception,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -74,9 +47,9 @@ mixin _$HttpResponse {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(HttpResponseSuccess value)? success,
-    TResult Function(HttpResponseError value)? httpError,
-    TResult Function(HttpResponseException value)? exception,
+    TResult? Function(HttpResponseSuccess value)? success,
+    TResult? Function(HttpResponseError value)? httpError,
+    TResult? Function(HttpResponseException value)? exception,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -93,43 +66,44 @@ mixin _$HttpResponse {
 abstract class $HttpResponseCopyWith<$Res> {
   factory $HttpResponseCopyWith(
           HttpResponse value, $Res Function(HttpResponse) then) =
-      _$HttpResponseCopyWithImpl<$Res>;
+      _$HttpResponseCopyWithImpl<$Res, HttpResponse>;
 }
 
 /// @nodoc
-class _$HttpResponseCopyWithImpl<$Res> implements $HttpResponseCopyWith<$Res> {
+class _$HttpResponseCopyWithImpl<$Res, $Val extends HttpResponse>
+    implements $HttpResponseCopyWith<$Res> {
   _$HttpResponseCopyWithImpl(this._value, this._then);
 
-  final HttpResponse _value;
   // ignore: unused_field
-  final $Res Function(HttpResponse) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 }
 
 /// @nodoc
-abstract class $HttpResponseSuccessCopyWith<$Res> {
-  factory $HttpResponseSuccessCopyWith(
-          HttpResponseSuccess value, $Res Function(HttpResponseSuccess) then) =
-      _$HttpResponseSuccessCopyWithImpl<$Res>;
+abstract class _$$HttpResponseSuccessImplCopyWith<$Res> {
+  factory _$$HttpResponseSuccessImplCopyWith(_$HttpResponseSuccessImpl value,
+          $Res Function(_$HttpResponseSuccessImpl) then) =
+      __$$HttpResponseSuccessImplCopyWithImpl<$Res>;
+  @useResult
   $Res call({String body});
 }
 
 /// @nodoc
-class _$HttpResponseSuccessCopyWithImpl<$Res>
-    extends _$HttpResponseCopyWithImpl<$Res>
-    implements $HttpResponseSuccessCopyWith<$Res> {
-  _$HttpResponseSuccessCopyWithImpl(
-      HttpResponseSuccess _value, $Res Function(HttpResponseSuccess) _then)
-      : super(_value, (v) => _then(v as HttpResponseSuccess));
+class __$$HttpResponseSuccessImplCopyWithImpl<$Res>
+    extends _$HttpResponseCopyWithImpl<$Res, _$HttpResponseSuccessImpl>
+    implements _$$HttpResponseSuccessImplCopyWith<$Res> {
+  __$$HttpResponseSuccessImplCopyWithImpl(_$HttpResponseSuccessImpl _value,
+      $Res Function(_$HttpResponseSuccessImpl) _then)
+      : super(_value, _then);
 
-  @override
-  HttpResponseSuccess get _value => super._value as HttpResponseSuccess;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? body = freezed,
+    Object? body = null,
   }) {
-    return _then(HttpResponseSuccess(
-      body: body == freezed
+    return _then(_$HttpResponseSuccessImpl(
+      body: null == body
           ? _value.body
           : body // ignore: cast_nullable_to_non_nullable
               as String,
@@ -139,10 +113,10 @@ class _$HttpResponseSuccessCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$HttpResponseSuccess
+class _$HttpResponseSuccessImpl
     with DiagnosticableTreeMixin
     implements HttpResponseSuccess {
-  const _$HttpResponseSuccess({required this.body});
+  const _$HttpResponseSuccessImpl({required this.body});
 
   @override
   final String body;
@@ -161,21 +135,22 @@ class _$HttpResponseSuccess
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is HttpResponseSuccess &&
-            (identical(other.body, body) ||
-                const DeepCollectionEquality().equals(other.body, body)));
+        (other.runtimeType == runtimeType &&
+            other is _$HttpResponseSuccessImpl &&
+            (identical(other.body, body) || other.body == body));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(body);
+  int get hashCode => Object.hash(runtimeType, body);
 
   @JsonKey(ignore: true)
   @override
-  $HttpResponseSuccessCopyWith<HttpResponseSuccess> get copyWith =>
-      _$HttpResponseSuccessCopyWithImpl<HttpResponseSuccess>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$HttpResponseSuccessImplCopyWith<_$HttpResponseSuccessImpl> get copyWith =>
+      __$$HttpResponseSuccessImplCopyWithImpl<_$HttpResponseSuccessImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -190,9 +165,9 @@ class _$HttpResponseSuccess
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(String body)? success,
-    TResult Function(int statusCode, String body)? httpError,
-    TResult Function(Exception e, StackTrace? stackTrace)? exception,
+    TResult? Function(String body)? success,
+    TResult? Function(int statusCode, String body)? httpError,
+    TResult? Function(Exception e, StackTrace? stackTrace)? exception,
   }) {
     return success?.call(body);
   }
@@ -224,9 +199,9 @@ class _$HttpResponseSuccess
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(HttpResponseSuccess value)? success,
-    TResult Function(HttpResponseError value)? httpError,
-    TResult Function(HttpResponseException value)? exception,
+    TResult? Function(HttpResponseSuccess value)? success,
+    TResult? Function(HttpResponseError value)? httpError,
+    TResult? Function(HttpResponseException value)? exception,
   }) {
     return success?.call(this);
   }
@@ -247,45 +222,44 @@ class _$HttpResponseSuccess
 }
 
 abstract class HttpResponseSuccess implements HttpResponse {
-  const factory HttpResponseSuccess({required String body}) =
-      _$HttpResponseSuccess;
+  const factory HttpResponseSuccess({required final String body}) =
+      _$HttpResponseSuccessImpl;
 
-  String get body => throw _privateConstructorUsedError;
+  String get body;
   @JsonKey(ignore: true)
-  $HttpResponseSuccessCopyWith<HttpResponseSuccess> get copyWith =>
+  _$$HttpResponseSuccessImplCopyWith<_$HttpResponseSuccessImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $HttpResponseErrorCopyWith<$Res> {
-  factory $HttpResponseErrorCopyWith(
-          HttpResponseError value, $Res Function(HttpResponseError) then) =
-      _$HttpResponseErrorCopyWithImpl<$Res>;
+abstract class _$$HttpResponseErrorImplCopyWith<$Res> {
+  factory _$$HttpResponseErrorImplCopyWith(_$HttpResponseErrorImpl value,
+          $Res Function(_$HttpResponseErrorImpl) then) =
+      __$$HttpResponseErrorImplCopyWithImpl<$Res>;
+  @useResult
   $Res call({int statusCode, String body});
 }
 
 /// @nodoc
-class _$HttpResponseErrorCopyWithImpl<$Res>
-    extends _$HttpResponseCopyWithImpl<$Res>
-    implements $HttpResponseErrorCopyWith<$Res> {
-  _$HttpResponseErrorCopyWithImpl(
-      HttpResponseError _value, $Res Function(HttpResponseError) _then)
-      : super(_value, (v) => _then(v as HttpResponseError));
+class __$$HttpResponseErrorImplCopyWithImpl<$Res>
+    extends _$HttpResponseCopyWithImpl<$Res, _$HttpResponseErrorImpl>
+    implements _$$HttpResponseErrorImplCopyWith<$Res> {
+  __$$HttpResponseErrorImplCopyWithImpl(_$HttpResponseErrorImpl _value,
+      $Res Function(_$HttpResponseErrorImpl) _then)
+      : super(_value, _then);
 
-  @override
-  HttpResponseError get _value => super._value as HttpResponseError;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? statusCode = freezed,
-    Object? body = freezed,
+    Object? statusCode = null,
+    Object? body = null,
   }) {
-    return _then(HttpResponseError(
-      statusCode: statusCode == freezed
+    return _then(_$HttpResponseErrorImpl(
+      statusCode: null == statusCode
           ? _value.statusCode
           : statusCode // ignore: cast_nullable_to_non_nullable
               as int,
-      body: body == freezed
+      body: null == body
           ? _value.body
           : body // ignore: cast_nullable_to_non_nullable
               as String,
@@ -295,10 +269,10 @@ class _$HttpResponseErrorCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$HttpResponseError
+class _$HttpResponseErrorImpl
     with DiagnosticableTreeMixin
     implements HttpResponseError {
-  const _$HttpResponseError({required this.statusCode, required this.body});
+  const _$HttpResponseErrorImpl({required this.statusCode, required this.body});
 
   @override
   final int statusCode;
@@ -320,26 +294,24 @@ class _$HttpResponseError
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is HttpResponseError &&
+        (other.runtimeType == runtimeType &&
+            other is _$HttpResponseErrorImpl &&
             (identical(other.statusCode, statusCode) ||
-                const DeepCollectionEquality()
-                    .equals(other.statusCode, statusCode)) &&
-            (identical(other.body, body) ||
-                const DeepCollectionEquality().equals(other.body, body)));
+                other.statusCode == statusCode) &&
+            (identical(other.body, body) || other.body == body));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(statusCode) ^
-      const DeepCollectionEquality().hash(body);
+  int get hashCode => Object.hash(runtimeType, statusCode, body);
 
   @JsonKey(ignore: true)
   @override
-  $HttpResponseErrorCopyWith<HttpResponseError> get copyWith =>
-      _$HttpResponseErrorCopyWithImpl<HttpResponseError>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$HttpResponseErrorImplCopyWith<_$HttpResponseErrorImpl> get copyWith =>
+      __$$HttpResponseErrorImplCopyWithImpl<_$HttpResponseErrorImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -354,9 +326,9 @@ class _$HttpResponseError
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(String body)? success,
-    TResult Function(int statusCode, String body)? httpError,
-    TResult Function(Exception e, StackTrace? stackTrace)? exception,
+    TResult? Function(String body)? success,
+    TResult? Function(int statusCode, String body)? httpError,
+    TResult? Function(Exception e, StackTrace? stackTrace)? exception,
   }) {
     return httpError?.call(statusCode, body);
   }
@@ -388,9 +360,9 @@ class _$HttpResponseError
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(HttpResponseSuccess value)? success,
-    TResult Function(HttpResponseError value)? httpError,
-    TResult Function(HttpResponseException value)? exception,
+    TResult? Function(HttpResponseSuccess value)? success,
+    TResult? Function(HttpResponseError value)? httpError,
+    TResult? Function(HttpResponseException value)? exception,
   }) {
     return httpError?.call(this);
   }
@@ -412,45 +384,46 @@ class _$HttpResponseError
 
 abstract class HttpResponseError implements HttpResponse {
   const factory HttpResponseError(
-      {required int statusCode, required String body}) = _$HttpResponseError;
+      {required final int statusCode,
+      required final String body}) = _$HttpResponseErrorImpl;
 
-  int get statusCode => throw _privateConstructorUsedError;
-  String get body => throw _privateConstructorUsedError;
+  int get statusCode;
+  String get body;
   @JsonKey(ignore: true)
-  $HttpResponseErrorCopyWith<HttpResponseError> get copyWith =>
+  _$$HttpResponseErrorImplCopyWith<_$HttpResponseErrorImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $HttpResponseExceptionCopyWith<$Res> {
-  factory $HttpResponseExceptionCopyWith(HttpResponseException value,
-          $Res Function(HttpResponseException) then) =
-      _$HttpResponseExceptionCopyWithImpl<$Res>;
+abstract class _$$HttpResponseExceptionImplCopyWith<$Res> {
+  factory _$$HttpResponseExceptionImplCopyWith(
+          _$HttpResponseExceptionImpl value,
+          $Res Function(_$HttpResponseExceptionImpl) then) =
+      __$$HttpResponseExceptionImplCopyWithImpl<$Res>;
+  @useResult
   $Res call({Exception e, StackTrace? stackTrace});
 }
 
 /// @nodoc
-class _$HttpResponseExceptionCopyWithImpl<$Res>
-    extends _$HttpResponseCopyWithImpl<$Res>
-    implements $HttpResponseExceptionCopyWith<$Res> {
-  _$HttpResponseExceptionCopyWithImpl(
-      HttpResponseException _value, $Res Function(HttpResponseException) _then)
-      : super(_value, (v) => _then(v as HttpResponseException));
+class __$$HttpResponseExceptionImplCopyWithImpl<$Res>
+    extends _$HttpResponseCopyWithImpl<$Res, _$HttpResponseExceptionImpl>
+    implements _$$HttpResponseExceptionImplCopyWith<$Res> {
+  __$$HttpResponseExceptionImplCopyWithImpl(_$HttpResponseExceptionImpl _value,
+      $Res Function(_$HttpResponseExceptionImpl) _then)
+      : super(_value, _then);
 
-  @override
-  HttpResponseException get _value => super._value as HttpResponseException;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? e = freezed,
+    Object? e = null,
     Object? stackTrace = freezed,
   }) {
-    return _then(HttpResponseException(
-      e == freezed
+    return _then(_$HttpResponseExceptionImpl(
+      null == e
           ? _value.e
           : e // ignore: cast_nullable_to_non_nullable
               as Exception,
-      stackTrace: stackTrace == freezed
+      stackTrace: freezed == stackTrace
           ? _value.stackTrace
           : stackTrace // ignore: cast_nullable_to_non_nullable
               as StackTrace?,
@@ -460,10 +433,10 @@ class _$HttpResponseExceptionCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$HttpResponseException
+class _$HttpResponseExceptionImpl
     with DiagnosticableTreeMixin
     implements HttpResponseException {
-  const _$HttpResponseException(this.e, {this.stackTrace});
+  const _$HttpResponseExceptionImpl(this.e, {this.stackTrace});
 
   @override
   final Exception e;
@@ -485,27 +458,24 @@ class _$HttpResponseException
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is HttpResponseException &&
-            (identical(other.e, e) ||
-                const DeepCollectionEquality().equals(other.e, e)) &&
+        (other.runtimeType == runtimeType &&
+            other is _$HttpResponseExceptionImpl &&
+            (identical(other.e, e) || other.e == e) &&
             (identical(other.stackTrace, stackTrace) ||
-                const DeepCollectionEquality()
-                    .equals(other.stackTrace, stackTrace)));
+                other.stackTrace == stackTrace));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(e) ^
-      const DeepCollectionEquality().hash(stackTrace);
+  int get hashCode => Object.hash(runtimeType, e, stackTrace);
 
   @JsonKey(ignore: true)
   @override
-  $HttpResponseExceptionCopyWith<HttpResponseException> get copyWith =>
-      _$HttpResponseExceptionCopyWithImpl<HttpResponseException>(
-          this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$HttpResponseExceptionImplCopyWith<_$HttpResponseExceptionImpl>
+      get copyWith => __$$HttpResponseExceptionImplCopyWithImpl<
+          _$HttpResponseExceptionImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -520,9 +490,9 @@ class _$HttpResponseException
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(String body)? success,
-    TResult Function(int statusCode, String body)? httpError,
-    TResult Function(Exception e, StackTrace? stackTrace)? exception,
+    TResult? Function(String body)? success,
+    TResult? Function(int statusCode, String body)? httpError,
+    TResult? Function(Exception e, StackTrace? stackTrace)? exception,
   }) {
     return exception?.call(e, stackTrace);
   }
@@ -554,9 +524,9 @@ class _$HttpResponseException
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(HttpResponseSuccess value)? success,
-    TResult Function(HttpResponseError value)? httpError,
-    TResult Function(HttpResponseException value)? exception,
+    TResult? Function(HttpResponseSuccess value)? success,
+    TResult? Function(HttpResponseError value)? httpError,
+    TResult? Function(HttpResponseException value)? exception,
   }) {
     return exception?.call(this);
   }
@@ -577,12 +547,12 @@ class _$HttpResponseException
 }
 
 abstract class HttpResponseException implements HttpResponse {
-  const factory HttpResponseException(Exception e, {StackTrace? stackTrace}) =
-      _$HttpResponseException;
+  const factory HttpResponseException(final Exception e,
+      {final StackTrace? stackTrace}) = _$HttpResponseExceptionImpl;
 
-  Exception get e => throw _privateConstructorUsedError;
-  StackTrace? get stackTrace => throw _privateConstructorUsedError;
+  Exception get e;
+  StackTrace? get stackTrace;
   @JsonKey(ignore: true)
-  $HttpResponseExceptionCopyWith<HttpResponseException> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$HttpResponseExceptionImplCopyWith<_$HttpResponseExceptionImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

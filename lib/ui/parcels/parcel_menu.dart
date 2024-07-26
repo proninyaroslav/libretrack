@@ -24,7 +24,6 @@ import 'package:material_design_icons_flutter/material_design_icons_flutter.dart
 
 import '../../locale.dart';
 import 'parcels.dart';
-import 'parcels_page_type.dart';
 
 enum ParcelMenuType {
   delete,
@@ -38,7 +37,7 @@ enum ParcelMenuType {
 }
 
 class ParcelContextualActions extends StatelessWidget {
-  const ParcelContextualActions({Key? key}) : super(key: key);
+  const ParcelContextualActions({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -180,7 +179,7 @@ class ParcelContextualActions extends StatelessWidget {
       ),
       CustomAction(
         visibleWidget: IconButton(
-          icon: const Icon(MdiIcons.packageVariantClosed),
+          icon: Icon(MdiIcons.packageVariantClosed),
           tooltip: S.of(context).moveToActive,
           onPressed: () => onMenuSelected?.call(ParcelMenuType.moveToActive),
         ),
@@ -228,11 +227,11 @@ class ParcelPopupMenuButton extends StatelessWidget {
   final bool enabled;
 
   const ParcelPopupMenuButton({
-    Key? key,
+    super.key,
     required this.parcelInfo,
     required this.pageType,
     this.enabled = true,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

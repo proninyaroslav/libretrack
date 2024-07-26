@@ -26,11 +26,11 @@ class PageIndicator extends StatelessWidget {
   final EdgeInsets padding;
 
   const PageIndicator({
-    Key? key,
+    super.key,
     required this.controller,
     required this.pageCount,
     this.padding = const EdgeInsets.all(8.0),
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -60,7 +60,7 @@ class SwiperIndicatorPaginationBuilder extends SwiperPlugin {
   @override
   Widget build(BuildContext context, SwiperPluginConfig? config) {
     return PageIndicator(
-      pageCount: config!.itemCount!,
+      pageCount: config!.itemCount,
       controller: config.pageController!,
     );
   }

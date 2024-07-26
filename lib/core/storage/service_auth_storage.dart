@@ -16,6 +16,7 @@
 // You should have received a copy of the GNU General Public License
 // along with LibreTrack.  If not, see <http://www.gnu.org/licenses/>.
 
+import 'package:collection/collection.dart';
 import 'package:enum_to_string/enum_to_string.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
@@ -213,65 +214,133 @@ Future<AuthData?> _secureStorageGet(
 
 class TestFlutterSecureStorage implements FlutterSecureStorage {
   final Map<String?, String?> _keyValueMap = {};
+  final Map<String, List<ValueChanged<String?>>> _listeners = {};
 
   TestFlutterSecureStorage();
 
   @override
-  Future<bool> containsKey({
-    required String key,
-    IOSOptions? iOptions = IOSOptions.defaultOptions,
-    AndroidOptions? aOptions,
-    LinuxOptions? lOptions,
-  }) async {
+  AndroidOptions get aOptions => AndroidOptions.defaultOptions;
+
+  @override
+  Future<bool> containsKey(
+      {required String key,
+      IOSOptions? iOptions,
+      AndroidOptions? aOptions,
+      LinuxOptions? lOptions,
+      WebOptions? webOptions,
+      MacOsOptions? mOptions,
+      WindowsOptions? wOptions}) async {
     return _keyValueMap.containsKey(key);
   }
 
   @override
-  Future<void> delete({
-    required String key,
-    IOSOptions? iOptions = IOSOptions.defaultOptions,
-    AndroidOptions? aOptions,
-    LinuxOptions? lOptions,
-  }) async {
+  Future<void> delete(
+      {required String key,
+      IOSOptions? iOptions,
+      AndroidOptions? aOptions,
+      LinuxOptions? lOptions,
+      WebOptions? webOptions,
+      MacOsOptions? mOptions,
+      WindowsOptions? wOptions}) async {
     _keyValueMap.remove(key);
   }
 
   @override
-  Future<void> deleteAll({
-    IOSOptions? iOptions = IOSOptions.defaultOptions,
-    AndroidOptions? aOptions,
-    LinuxOptions? lOptions,
-  }) async {
+  Future<void> deleteAll(
+      {IOSOptions? iOptions,
+      AndroidOptions? aOptions,
+      LinuxOptions? lOptions,
+      WebOptions? webOptions,
+      MacOsOptions? mOptions,
+      WindowsOptions? wOptions}) async {
     _keyValueMap.clear();
   }
 
   @override
-  Future<String?> read({
-    required String key,
-    IOSOptions? iOptions = IOSOptions.defaultOptions,
-    AndroidOptions? aOptions,
-    LinuxOptions? lOptions,
-  }) async {
+  IOSOptions get iOptions => throw UnimplementedError();
+
+  @override
+  Future<bool?> isCupertinoProtectedDataAvailable() async {
+    return false;
+  }
+
+  @override
+  LinuxOptions get lOptions => LinuxOptions.defaultOptions;
+
+  @override
+  MacOsOptions get mOptions => MacOsOptions.defaultOptions;
+
+  @override
+  Stream<bool>? get onCupertinoProtectedDataAvailabilityChanged =>
+      Stream.value(false);
+
+  @override
+  Future<String?> read(
+      {required String key,
+      IOSOptions? iOptions,
+      AndroidOptions? aOptions,
+      LinuxOptions? lOptions,
+      WebOptions? webOptions,
+      MacOsOptions? mOptions,
+      WindowsOptions? wOptions}) async {
     return _keyValueMap[key];
   }
 
   @override
-  Future<Map<String, String>> readAll({
-    IOSOptions? iOptions = IOSOptions.defaultOptions,
-    AndroidOptions? aOptions,
-    LinuxOptions? lOptions,
-  }) async {
+  Future<Map<String, String>> readAll(
+      {IOSOptions? iOptions,
+      AndroidOptions? aOptions,
+      LinuxOptions? lOptions,
+      WebOptions? webOptions,
+      MacOsOptions? mOptions,
+      WindowsOptions? wOptions}) async {
     return Map.from(_keyValueMap);
   }
 
   @override
-  Future<void> write({
-    required String key,
-    required String? value,
-    IOSOptions? iOptions = IOSOptions.defaultOptions,
-    AndroidOptions? aOptions,
-    LinuxOptions? lOptions,
-  }) async {
+  void registerListener(
+      {required String key, required ValueChanged<String?> listener}) {
+    var list = _listeners.putIfAbsent(key, () => []);
+    list.add(listener);
+    _listeners[key] = list;
+  }
+
+  @override
+  void unregisterAllListeners() {
+    _listeners.clear();
+  }
+
+  @override
+  void unregisterAllListenersForKey({required String key}) {
+    _listeners.remove(key);
+  }
+
+  @override
+  void unregisterListener(
+      {required String key, required ValueChanged<String?> listener}) {
+    var list = _listeners[key];
+    var newList = list?.whereNot((value) => value == listener).toList();
+    if (newList != null) {
+      _listeners[key] = newList;
+    }
+  }
+
+  @override
+  WindowsOptions get wOptions => WindowsOptions.defaultOptions;
+
+  @override
+  WebOptions get webOptions => WebOptions.defaultOptions;
+
+  @override
+  Future<void> write(
+      {required String key,
+      required String? value,
+      IOSOptions? iOptions,
+      AndroidOptions? aOptions,
+      LinuxOptions? lOptions,
+      WebOptions? webOptions,
+      MacOsOptions? mOptions,
+      WindowsOptions? wOptions}) async {
     _keyValueMap[key] = value;
   }
 }

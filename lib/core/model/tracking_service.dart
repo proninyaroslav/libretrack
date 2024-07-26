@@ -196,7 +196,7 @@ class TrackingServiceImpl extends TrackingService {
 }
 
 class _RequestMap extends MapView<TransactionId?, TrackingRequest> {
-  _RequestMap(Map<TransactionId?, TrackingRequest> map) : super(map);
+  _RequestMap(super.map);
 
   @override
   TrackingRequest operator [](Object? transactionId) => super[transactionId]!;

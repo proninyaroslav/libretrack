@@ -1,6 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'selectable_cubit.dart';
 
@@ -11,29 +12,7 @@ part of 'selectable_cubit.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$SelectableStateTearOff {
-  const _$SelectableStateTearOff();
-
-  SelectableStateInitial<T> initial<T>() {
-    return SelectableStateInitial<T>();
-  }
-
-  SelectableStateNoSelection<T> noSelection<T>() {
-    return SelectableStateNoSelection<T>();
-  }
-
-  SelectableStateSelected<T> selected<T>(Set<T> items) {
-    return SelectableStateSelected<T>(
-      items,
-    );
-  }
-}
-
-/// @nodoc
-const $SelectableState = _$SelectableStateTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$SelectableState<T> {
@@ -46,9 +25,9 @@ mixin _$SelectableState<T> {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? noSelection,
-    TResult Function(Set<T> items)? selected,
+    TResult? Function()? initial,
+    TResult? Function()? noSelection,
+    TResult? Function(Set<T> items)? selected,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -68,9 +47,9 @@ mixin _$SelectableState<T> {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(SelectableStateInitial<T> value)? initial,
-    TResult Function(SelectableStateNoSelection<T> value)? noSelection,
-    TResult Function(SelectableStateSelected<T> value)? selected,
+    TResult? Function(SelectableStateInitial<T> value)? initial,
+    TResult? Function(SelectableStateNoSelection<T> value)? noSelection,
+    TResult? Function(SelectableStateSelected<T> value)? selected,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -87,43 +66,43 @@ mixin _$SelectableState<T> {
 abstract class $SelectableStateCopyWith<T, $Res> {
   factory $SelectableStateCopyWith(
           SelectableState<T> value, $Res Function(SelectableState<T>) then) =
-      _$SelectableStateCopyWithImpl<T, $Res>;
+      _$SelectableStateCopyWithImpl<T, $Res, SelectableState<T>>;
 }
 
 /// @nodoc
-class _$SelectableStateCopyWithImpl<T, $Res>
+class _$SelectableStateCopyWithImpl<T, $Res, $Val extends SelectableState<T>>
     implements $SelectableStateCopyWith<T, $Res> {
   _$SelectableStateCopyWithImpl(this._value, this._then);
 
-  final SelectableState<T> _value;
   // ignore: unused_field
-  final $Res Function(SelectableState<T>) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 }
 
 /// @nodoc
-abstract class $SelectableStateInitialCopyWith<T, $Res> {
-  factory $SelectableStateInitialCopyWith(SelectableStateInitial<T> value,
-          $Res Function(SelectableStateInitial<T>) then) =
-      _$SelectableStateInitialCopyWithImpl<T, $Res>;
+abstract class _$$SelectableStateInitialImplCopyWith<T, $Res> {
+  factory _$$SelectableStateInitialImplCopyWith(
+          _$SelectableStateInitialImpl<T> value,
+          $Res Function(_$SelectableStateInitialImpl<T>) then) =
+      __$$SelectableStateInitialImplCopyWithImpl<T, $Res>;
 }
 
 /// @nodoc
-class _$SelectableStateInitialCopyWithImpl<T, $Res>
-    extends _$SelectableStateCopyWithImpl<T, $Res>
-    implements $SelectableStateInitialCopyWith<T, $Res> {
-  _$SelectableStateInitialCopyWithImpl(SelectableStateInitial<T> _value,
-      $Res Function(SelectableStateInitial<T>) _then)
-      : super(_value, (v) => _then(v as SelectableStateInitial<T>));
-
-  @override
-  SelectableStateInitial<T> get _value =>
-      super._value as SelectableStateInitial<T>;
+class __$$SelectableStateInitialImplCopyWithImpl<T, $Res>
+    extends _$SelectableStateCopyWithImpl<T, $Res,
+        _$SelectableStateInitialImpl<T>>
+    implements _$$SelectableStateInitialImplCopyWith<T, $Res> {
+  __$$SelectableStateInitialImplCopyWithImpl(
+      _$SelectableStateInitialImpl<T> _value,
+      $Res Function(_$SelectableStateInitialImpl<T>) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$SelectableStateInitial<T> implements SelectableStateInitial<T> {
-  const _$SelectableStateInitial();
+class _$SelectableStateInitialImpl<T> implements SelectableStateInitial<T> {
+  const _$SelectableStateInitialImpl();
 
   @override
   String toString() {
@@ -131,8 +110,10 @@ class _$SelectableStateInitial<T> implements SelectableStateInitial<T> {
   }
 
   @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) || (other is SelectableStateInitial<T>);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$SelectableStateInitialImpl<T>);
   }
 
   @override
@@ -151,9 +132,9 @@ class _$SelectableStateInitial<T> implements SelectableStateInitial<T> {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? noSelection,
-    TResult Function(Set<T> items)? selected,
+    TResult? Function()? initial,
+    TResult? Function()? noSelection,
+    TResult? Function(Set<T> items)? selected,
   }) {
     return initial?.call();
   }
@@ -185,9 +166,9 @@ class _$SelectableStateInitial<T> implements SelectableStateInitial<T> {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(SelectableStateInitial<T> value)? initial,
-    TResult Function(SelectableStateNoSelection<T> value)? noSelection,
-    TResult Function(SelectableStateSelected<T> value)? selected,
+    TResult? Function(SelectableStateInitial<T> value)? initial,
+    TResult? Function(SelectableStateNoSelection<T> value)? noSelection,
+    TResult? Function(SelectableStateSelected<T> value)? selected,
   }) {
     return initial?.call(this);
   }
@@ -208,34 +189,33 @@ class _$SelectableStateInitial<T> implements SelectableStateInitial<T> {
 }
 
 abstract class SelectableStateInitial<T> implements SelectableState<T> {
-  const factory SelectableStateInitial() = _$SelectableStateInitial<T>;
+  const factory SelectableStateInitial() = _$SelectableStateInitialImpl<T>;
 }
 
 /// @nodoc
-abstract class $SelectableStateNoSelectionCopyWith<T, $Res> {
-  factory $SelectableStateNoSelectionCopyWith(
-          SelectableStateNoSelection<T> value,
-          $Res Function(SelectableStateNoSelection<T>) then) =
-      _$SelectableStateNoSelectionCopyWithImpl<T, $Res>;
+abstract class _$$SelectableStateNoSelectionImplCopyWith<T, $Res> {
+  factory _$$SelectableStateNoSelectionImplCopyWith(
+          _$SelectableStateNoSelectionImpl<T> value,
+          $Res Function(_$SelectableStateNoSelectionImpl<T>) then) =
+      __$$SelectableStateNoSelectionImplCopyWithImpl<T, $Res>;
 }
 
 /// @nodoc
-class _$SelectableStateNoSelectionCopyWithImpl<T, $Res>
-    extends _$SelectableStateCopyWithImpl<T, $Res>
-    implements $SelectableStateNoSelectionCopyWith<T, $Res> {
-  _$SelectableStateNoSelectionCopyWithImpl(SelectableStateNoSelection<T> _value,
-      $Res Function(SelectableStateNoSelection<T>) _then)
-      : super(_value, (v) => _then(v as SelectableStateNoSelection<T>));
-
-  @override
-  SelectableStateNoSelection<T> get _value =>
-      super._value as SelectableStateNoSelection<T>;
+class __$$SelectableStateNoSelectionImplCopyWithImpl<T, $Res>
+    extends _$SelectableStateCopyWithImpl<T, $Res,
+        _$SelectableStateNoSelectionImpl<T>>
+    implements _$$SelectableStateNoSelectionImplCopyWith<T, $Res> {
+  __$$SelectableStateNoSelectionImplCopyWithImpl(
+      _$SelectableStateNoSelectionImpl<T> _value,
+      $Res Function(_$SelectableStateNoSelectionImpl<T>) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$SelectableStateNoSelection<T> implements SelectableStateNoSelection<T> {
-  const _$SelectableStateNoSelection();
+class _$SelectableStateNoSelectionImpl<T>
+    implements SelectableStateNoSelection<T> {
+  const _$SelectableStateNoSelectionImpl();
 
   @override
   String toString() {
@@ -243,8 +223,10 @@ class _$SelectableStateNoSelection<T> implements SelectableStateNoSelection<T> {
   }
 
   @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) || (other is SelectableStateNoSelection<T>);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$SelectableStateNoSelectionImpl<T>);
   }
 
   @override
@@ -263,9 +245,9 @@ class _$SelectableStateNoSelection<T> implements SelectableStateNoSelection<T> {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? noSelection,
-    TResult Function(Set<T> items)? selected,
+    TResult? Function()? initial,
+    TResult? Function()? noSelection,
+    TResult? Function(Set<T> items)? selected,
   }) {
     return noSelection?.call();
   }
@@ -297,9 +279,9 @@ class _$SelectableStateNoSelection<T> implements SelectableStateNoSelection<T> {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(SelectableStateInitial<T> value)? initial,
-    TResult Function(SelectableStateNoSelection<T> value)? noSelection,
-    TResult Function(SelectableStateSelected<T> value)? selected,
+    TResult? Function(SelectableStateInitial<T> value)? initial,
+    TResult? Function(SelectableStateNoSelection<T> value)? noSelection,
+    TResult? Function(SelectableStateSelected<T> value)? selected,
   }) {
     return noSelection?.call(this);
   }
@@ -320,36 +302,38 @@ class _$SelectableStateNoSelection<T> implements SelectableStateNoSelection<T> {
 }
 
 abstract class SelectableStateNoSelection<T> implements SelectableState<T> {
-  const factory SelectableStateNoSelection() = _$SelectableStateNoSelection<T>;
+  const factory SelectableStateNoSelection() =
+      _$SelectableStateNoSelectionImpl<T>;
 }
 
 /// @nodoc
-abstract class $SelectableStateSelectedCopyWith<T, $Res> {
-  factory $SelectableStateSelectedCopyWith(SelectableStateSelected<T> value,
-          $Res Function(SelectableStateSelected<T>) then) =
-      _$SelectableStateSelectedCopyWithImpl<T, $Res>;
+abstract class _$$SelectableStateSelectedImplCopyWith<T, $Res> {
+  factory _$$SelectableStateSelectedImplCopyWith(
+          _$SelectableStateSelectedImpl<T> value,
+          $Res Function(_$SelectableStateSelectedImpl<T>) then) =
+      __$$SelectableStateSelectedImplCopyWithImpl<T, $Res>;
+  @useResult
   $Res call({Set<T> items});
 }
 
 /// @nodoc
-class _$SelectableStateSelectedCopyWithImpl<T, $Res>
-    extends _$SelectableStateCopyWithImpl<T, $Res>
-    implements $SelectableStateSelectedCopyWith<T, $Res> {
-  _$SelectableStateSelectedCopyWithImpl(SelectableStateSelected<T> _value,
-      $Res Function(SelectableStateSelected<T>) _then)
-      : super(_value, (v) => _then(v as SelectableStateSelected<T>));
+class __$$SelectableStateSelectedImplCopyWithImpl<T, $Res>
+    extends _$SelectableStateCopyWithImpl<T, $Res,
+        _$SelectableStateSelectedImpl<T>>
+    implements _$$SelectableStateSelectedImplCopyWith<T, $Res> {
+  __$$SelectableStateSelectedImplCopyWithImpl(
+      _$SelectableStateSelectedImpl<T> _value,
+      $Res Function(_$SelectableStateSelectedImpl<T>) _then)
+      : super(_value, _then);
 
-  @override
-  SelectableStateSelected<T> get _value =>
-      super._value as SelectableStateSelected<T>;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? items = freezed,
+    Object? items = null,
   }) {
-    return _then(SelectableStateSelected<T>(
-      items == freezed
-          ? _value.items
+    return _then(_$SelectableStateSelectedImpl<T>(
+      null == items
+          ? _value._items
           : items // ignore: cast_nullable_to_non_nullable
               as Set<T>,
     ));
@@ -358,11 +342,16 @@ class _$SelectableStateSelectedCopyWithImpl<T, $Res>
 
 /// @nodoc
 
-class _$SelectableStateSelected<T> implements SelectableStateSelected<T> {
-  const _$SelectableStateSelected(this.items);
+class _$SelectableStateSelectedImpl<T> implements SelectableStateSelected<T> {
+  const _$SelectableStateSelectedImpl(final Set<T> items) : _items = items;
 
+  final Set<T> _items;
   @override
-  final Set<T> items;
+  Set<T> get items {
+    if (_items is EqualUnmodifiableSetView) return _items;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableSetView(_items);
+  }
 
   @override
   String toString() {
@@ -370,23 +359,23 @@ class _$SelectableStateSelected<T> implements SelectableStateSelected<T> {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is SelectableStateSelected<T> &&
-            (identical(other.items, items) ||
-                const DeepCollectionEquality().equals(other.items, items)));
+        (other.runtimeType == runtimeType &&
+            other is _$SelectableStateSelectedImpl<T> &&
+            const DeepCollectionEquality().equals(other._items, _items));
   }
 
   @override
   int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(items);
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_items));
 
   @JsonKey(ignore: true)
   @override
-  $SelectableStateSelectedCopyWith<T, SelectableStateSelected<T>>
-      get copyWith =>
-          _$SelectableStateSelectedCopyWithImpl<T, SelectableStateSelected<T>>(
-              this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$SelectableStateSelectedImplCopyWith<T, _$SelectableStateSelectedImpl<T>>
+      get copyWith => __$$SelectableStateSelectedImplCopyWithImpl<T,
+          _$SelectableStateSelectedImpl<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -401,9 +390,9 @@ class _$SelectableStateSelected<T> implements SelectableStateSelected<T> {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? noSelection,
-    TResult Function(Set<T> items)? selected,
+    TResult? Function()? initial,
+    TResult? Function()? noSelection,
+    TResult? Function(Set<T> items)? selected,
   }) {
     return selected?.call(items);
   }
@@ -435,9 +424,9 @@ class _$SelectableStateSelected<T> implements SelectableStateSelected<T> {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(SelectableStateInitial<T> value)? initial,
-    TResult Function(SelectableStateNoSelection<T> value)? noSelection,
-    TResult Function(SelectableStateSelected<T> value)? selected,
+    TResult? Function(SelectableStateInitial<T> value)? initial,
+    TResult? Function(SelectableStateNoSelection<T> value)? noSelection,
+    TResult? Function(SelectableStateSelected<T> value)? selected,
   }) {
     return selected?.call(this);
   }
@@ -458,11 +447,11 @@ class _$SelectableStateSelected<T> implements SelectableStateSelected<T> {
 }
 
 abstract class SelectableStateSelected<T> implements SelectableState<T> {
-  const factory SelectableStateSelected(Set<T> items) =
-      _$SelectableStateSelected<T>;
+  const factory SelectableStateSelected(final Set<T> items) =
+      _$SelectableStateSelectedImpl<T>;
 
-  Set<T> get items => throw _privateConstructorUsedError;
+  Set<T> get items;
   @JsonKey(ignore: true)
-  $SelectableStateSelectedCopyWith<T, SelectableStateSelected<T>>
+  _$$SelectableStateSelectedImplCopyWith<T, _$SelectableStateSelectedImpl<T>>
       get copyWith => throw _privateConstructorUsedError;
 }

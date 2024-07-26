@@ -1,6 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'accounts_cubit.dart';
 
@@ -11,31 +12,7 @@ part of 'accounts_cubit.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$AccountsStateTearOff {
-  const _$AccountsStateTearOff();
-
-  AccountsStateInitial initial() {
-    return const AccountsStateInitial();
-  }
-
-  AccountsStateLoaded loaded(List<TrackingServiceInfo> serviceList) {
-    return AccountsStateLoaded(
-      serviceList,
-    );
-  }
-
-  AccountsStateLoadingFailed loadingFailed({required StorageError error}) {
-    return AccountsStateLoadingFailed(
-      error: error,
-    );
-  }
-}
-
-/// @nodoc
-const $AccountsState = _$AccountsStateTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$AccountsState {
@@ -48,9 +25,9 @@ mixin _$AccountsState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function(List<TrackingServiceInfo> serviceList)? loaded,
-    TResult Function(StorageError error)? loadingFailed,
+    TResult? Function()? initial,
+    TResult? Function(List<TrackingServiceInfo> serviceList)? loaded,
+    TResult? Function(StorageError error)? loadingFailed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -70,9 +47,9 @@ mixin _$AccountsState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(AccountsStateInitial value)? initial,
-    TResult Function(AccountsStateLoaded value)? loaded,
-    TResult Function(AccountsStateLoadingFailed value)? loadingFailed,
+    TResult? Function(AccountsStateInitial value)? initial,
+    TResult? Function(AccountsStateLoaded value)? loaded,
+    TResult? Function(AccountsStateLoadingFailed value)? loadingFailed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -89,44 +66,42 @@ mixin _$AccountsState {
 abstract class $AccountsStateCopyWith<$Res> {
   factory $AccountsStateCopyWith(
           AccountsState value, $Res Function(AccountsState) then) =
-      _$AccountsStateCopyWithImpl<$Res>;
+      _$AccountsStateCopyWithImpl<$Res, AccountsState>;
 }
 
 /// @nodoc
-class _$AccountsStateCopyWithImpl<$Res>
+class _$AccountsStateCopyWithImpl<$Res, $Val extends AccountsState>
     implements $AccountsStateCopyWith<$Res> {
   _$AccountsStateCopyWithImpl(this._value, this._then);
 
-  final AccountsState _value;
   // ignore: unused_field
-  final $Res Function(AccountsState) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 }
 
 /// @nodoc
-abstract class $AccountsStateInitialCopyWith<$Res> {
-  factory $AccountsStateInitialCopyWith(AccountsStateInitial value,
-          $Res Function(AccountsStateInitial) then) =
-      _$AccountsStateInitialCopyWithImpl<$Res>;
+abstract class _$$AccountsStateInitialImplCopyWith<$Res> {
+  factory _$$AccountsStateInitialImplCopyWith(_$AccountsStateInitialImpl value,
+          $Res Function(_$AccountsStateInitialImpl) then) =
+      __$$AccountsStateInitialImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$AccountsStateInitialCopyWithImpl<$Res>
-    extends _$AccountsStateCopyWithImpl<$Res>
-    implements $AccountsStateInitialCopyWith<$Res> {
-  _$AccountsStateInitialCopyWithImpl(
-      AccountsStateInitial _value, $Res Function(AccountsStateInitial) _then)
-      : super(_value, (v) => _then(v as AccountsStateInitial));
-
-  @override
-  AccountsStateInitial get _value => super._value as AccountsStateInitial;
+class __$$AccountsStateInitialImplCopyWithImpl<$Res>
+    extends _$AccountsStateCopyWithImpl<$Res, _$AccountsStateInitialImpl>
+    implements _$$AccountsStateInitialImplCopyWith<$Res> {
+  __$$AccountsStateInitialImplCopyWithImpl(_$AccountsStateInitialImpl _value,
+      $Res Function(_$AccountsStateInitialImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$AccountsStateInitial
+class _$AccountsStateInitialImpl
     with DiagnosticableTreeMixin
     implements AccountsStateInitial {
-  const _$AccountsStateInitial();
+  const _$AccountsStateInitialImpl();
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
@@ -136,12 +111,14 @@ class _$AccountsStateInitial
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
-    properties..add(DiagnosticsProperty('type', 'AccountsState.initial'));
+    properties.add(DiagnosticsProperty('type', 'AccountsState.initial'));
   }
 
   @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) || (other is AccountsStateInitial);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AccountsStateInitialImpl);
   }
 
   @override
@@ -160,9 +137,9 @@ class _$AccountsStateInitial
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function(List<TrackingServiceInfo> serviceList)? loaded,
-    TResult Function(StorageError error)? loadingFailed,
+    TResult? Function()? initial,
+    TResult? Function(List<TrackingServiceInfo> serviceList)? loaded,
+    TResult? Function(StorageError error)? loadingFailed,
   }) {
     return initial?.call();
   }
@@ -194,9 +171,9 @@ class _$AccountsStateInitial
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(AccountsStateInitial value)? initial,
-    TResult Function(AccountsStateLoaded value)? loaded,
-    TResult Function(AccountsStateLoadingFailed value)? loadingFailed,
+    TResult? Function(AccountsStateInitial value)? initial,
+    TResult? Function(AccountsStateLoaded value)? loaded,
+    TResult? Function(AccountsStateLoadingFailed value)? loadingFailed,
   }) {
     return initial?.call(this);
   }
@@ -217,35 +194,34 @@ class _$AccountsStateInitial
 }
 
 abstract class AccountsStateInitial implements AccountsState {
-  const factory AccountsStateInitial() = _$AccountsStateInitial;
+  const factory AccountsStateInitial() = _$AccountsStateInitialImpl;
 }
 
 /// @nodoc
-abstract class $AccountsStateLoadedCopyWith<$Res> {
-  factory $AccountsStateLoadedCopyWith(
-          AccountsStateLoaded value, $Res Function(AccountsStateLoaded) then) =
-      _$AccountsStateLoadedCopyWithImpl<$Res>;
+abstract class _$$AccountsStateLoadedImplCopyWith<$Res> {
+  factory _$$AccountsStateLoadedImplCopyWith(_$AccountsStateLoadedImpl value,
+          $Res Function(_$AccountsStateLoadedImpl) then) =
+      __$$AccountsStateLoadedImplCopyWithImpl<$Res>;
+  @useResult
   $Res call({List<TrackingServiceInfo> serviceList});
 }
 
 /// @nodoc
-class _$AccountsStateLoadedCopyWithImpl<$Res>
-    extends _$AccountsStateCopyWithImpl<$Res>
-    implements $AccountsStateLoadedCopyWith<$Res> {
-  _$AccountsStateLoadedCopyWithImpl(
-      AccountsStateLoaded _value, $Res Function(AccountsStateLoaded) _then)
-      : super(_value, (v) => _then(v as AccountsStateLoaded));
+class __$$AccountsStateLoadedImplCopyWithImpl<$Res>
+    extends _$AccountsStateCopyWithImpl<$Res, _$AccountsStateLoadedImpl>
+    implements _$$AccountsStateLoadedImplCopyWith<$Res> {
+  __$$AccountsStateLoadedImplCopyWithImpl(_$AccountsStateLoadedImpl _value,
+      $Res Function(_$AccountsStateLoadedImpl) _then)
+      : super(_value, _then);
 
-  @override
-  AccountsStateLoaded get _value => super._value as AccountsStateLoaded;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? serviceList = freezed,
+    Object? serviceList = null,
   }) {
-    return _then(AccountsStateLoaded(
-      serviceList == freezed
-          ? _value.serviceList
+    return _then(_$AccountsStateLoadedImpl(
+      null == serviceList
+          ? _value._serviceList
           : serviceList // ignore: cast_nullable_to_non_nullable
               as List<TrackingServiceInfo>,
     ));
@@ -254,13 +230,19 @@ class _$AccountsStateLoadedCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$AccountsStateLoaded
+class _$AccountsStateLoadedImpl
     with DiagnosticableTreeMixin
     implements AccountsStateLoaded {
-  const _$AccountsStateLoaded(this.serviceList);
+  const _$AccountsStateLoadedImpl(final List<TrackingServiceInfo> serviceList)
+      : _serviceList = serviceList;
 
+  final List<TrackingServiceInfo> _serviceList;
   @override
-  final List<TrackingServiceInfo> serviceList;
+  List<TrackingServiceInfo> get serviceList {
+    if (_serviceList is EqualUnmodifiableListView) return _serviceList;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_serviceList);
+  }
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
@@ -276,22 +258,24 @@ class _$AccountsStateLoaded
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is AccountsStateLoaded &&
-            (identical(other.serviceList, serviceList) ||
-                const DeepCollectionEquality()
-                    .equals(other.serviceList, serviceList)));
+        (other.runtimeType == runtimeType &&
+            other is _$AccountsStateLoadedImpl &&
+            const DeepCollectionEquality()
+                .equals(other._serviceList, _serviceList));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(serviceList);
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(_serviceList));
 
   @JsonKey(ignore: true)
   @override
-  $AccountsStateLoadedCopyWith<AccountsStateLoaded> get copyWith =>
-      _$AccountsStateLoadedCopyWithImpl<AccountsStateLoaded>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$AccountsStateLoadedImplCopyWith<_$AccountsStateLoadedImpl> get copyWith =>
+      __$$AccountsStateLoadedImplCopyWithImpl<_$AccountsStateLoadedImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -306,9 +290,9 @@ class _$AccountsStateLoaded
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function(List<TrackingServiceInfo> serviceList)? loaded,
-    TResult Function(StorageError error)? loadingFailed,
+    TResult? Function()? initial,
+    TResult? Function(List<TrackingServiceInfo> serviceList)? loaded,
+    TResult? Function(StorageError error)? loadingFailed,
   }) {
     return loaded?.call(serviceList);
   }
@@ -340,9 +324,9 @@ class _$AccountsStateLoaded
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(AccountsStateInitial value)? initial,
-    TResult Function(AccountsStateLoaded value)? loaded,
-    TResult Function(AccountsStateLoadingFailed value)? loadingFailed,
+    TResult? Function(AccountsStateInitial value)? initial,
+    TResult? Function(AccountsStateLoaded value)? loaded,
+    TResult? Function(AccountsStateLoadingFailed value)? loadingFailed,
   }) {
     return loaded?.call(this);
   }
@@ -363,44 +347,43 @@ class _$AccountsStateLoaded
 }
 
 abstract class AccountsStateLoaded implements AccountsState {
-  const factory AccountsStateLoaded(List<TrackingServiceInfo> serviceList) =
-      _$AccountsStateLoaded;
+  const factory AccountsStateLoaded(
+      final List<TrackingServiceInfo> serviceList) = _$AccountsStateLoadedImpl;
 
-  List<TrackingServiceInfo> get serviceList =>
-      throw _privateConstructorUsedError;
+  List<TrackingServiceInfo> get serviceList;
   @JsonKey(ignore: true)
-  $AccountsStateLoadedCopyWith<AccountsStateLoaded> get copyWith =>
+  _$$AccountsStateLoadedImplCopyWith<_$AccountsStateLoadedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $AccountsStateLoadingFailedCopyWith<$Res> {
-  factory $AccountsStateLoadingFailedCopyWith(AccountsStateLoadingFailed value,
-          $Res Function(AccountsStateLoadingFailed) then) =
-      _$AccountsStateLoadingFailedCopyWithImpl<$Res>;
+abstract class _$$AccountsStateLoadingFailedImplCopyWith<$Res> {
+  factory _$$AccountsStateLoadingFailedImplCopyWith(
+          _$AccountsStateLoadingFailedImpl value,
+          $Res Function(_$AccountsStateLoadingFailedImpl) then) =
+      __$$AccountsStateLoadingFailedImplCopyWithImpl<$Res>;
+  @useResult
   $Res call({StorageError error});
 
   $StorageErrorCopyWith<$Res> get error;
 }
 
 /// @nodoc
-class _$AccountsStateLoadingFailedCopyWithImpl<$Res>
-    extends _$AccountsStateCopyWithImpl<$Res>
-    implements $AccountsStateLoadingFailedCopyWith<$Res> {
-  _$AccountsStateLoadingFailedCopyWithImpl(AccountsStateLoadingFailed _value,
-      $Res Function(AccountsStateLoadingFailed) _then)
-      : super(_value, (v) => _then(v as AccountsStateLoadingFailed));
+class __$$AccountsStateLoadingFailedImplCopyWithImpl<$Res>
+    extends _$AccountsStateCopyWithImpl<$Res, _$AccountsStateLoadingFailedImpl>
+    implements _$$AccountsStateLoadingFailedImplCopyWith<$Res> {
+  __$$AccountsStateLoadingFailedImplCopyWithImpl(
+      _$AccountsStateLoadingFailedImpl _value,
+      $Res Function(_$AccountsStateLoadingFailedImpl) _then)
+      : super(_value, _then);
 
-  @override
-  AccountsStateLoadingFailed get _value =>
-      super._value as AccountsStateLoadingFailed;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? error = freezed,
+    Object? error = null,
   }) {
-    return _then(AccountsStateLoadingFailed(
-      error: error == freezed
+    return _then(_$AccountsStateLoadingFailedImpl(
+      error: null == error
           ? _value.error
           : error // ignore: cast_nullable_to_non_nullable
               as StorageError,
@@ -408,6 +391,7 @@ class _$AccountsStateLoadingFailedCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $StorageErrorCopyWith<$Res> get error {
     return $StorageErrorCopyWith<$Res>(_value.error, (value) {
       return _then(_value.copyWith(error: value));
@@ -417,10 +401,10 @@ class _$AccountsStateLoadingFailedCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$AccountsStateLoadingFailed
+class _$AccountsStateLoadingFailedImpl
     with DiagnosticableTreeMixin
     implements AccountsStateLoadingFailed {
-  const _$AccountsStateLoadingFailed({required this.error});
+  const _$AccountsStateLoadingFailedImpl({required this.error});
 
   @override
   final StorageError error;
@@ -439,23 +423,22 @@ class _$AccountsStateLoadingFailed
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is AccountsStateLoadingFailed &&
-            (identical(other.error, error) ||
-                const DeepCollectionEquality().equals(other.error, error)));
+        (other.runtimeType == runtimeType &&
+            other is _$AccountsStateLoadingFailedImpl &&
+            (identical(other.error, error) || other.error == error));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(error);
+  int get hashCode => Object.hash(runtimeType, error);
 
   @JsonKey(ignore: true)
   @override
-  $AccountsStateLoadingFailedCopyWith<AccountsStateLoadingFailed>
-      get copyWith =>
-          _$AccountsStateLoadingFailedCopyWithImpl<AccountsStateLoadingFailed>(
-              this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$AccountsStateLoadingFailedImplCopyWith<_$AccountsStateLoadingFailedImpl>
+      get copyWith => __$$AccountsStateLoadingFailedImplCopyWithImpl<
+          _$AccountsStateLoadingFailedImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -470,9 +453,9 @@ class _$AccountsStateLoadingFailed
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function(List<TrackingServiceInfo> serviceList)? loaded,
-    TResult Function(StorageError error)? loadingFailed,
+    TResult? Function()? initial,
+    TResult? Function(List<TrackingServiceInfo> serviceList)? loaded,
+    TResult? Function(StorageError error)? loadingFailed,
   }) {
     return loadingFailed?.call(error);
   }
@@ -504,9 +487,9 @@ class _$AccountsStateLoadingFailed
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(AccountsStateInitial value)? initial,
-    TResult Function(AccountsStateLoaded value)? loaded,
-    TResult Function(AccountsStateLoadingFailed value)? loadingFailed,
+    TResult? Function(AccountsStateInitial value)? initial,
+    TResult? Function(AccountsStateLoaded value)? loaded,
+    TResult? Function(AccountsStateLoadingFailed value)? loadingFailed,
   }) {
     return loadingFailed?.call(this);
   }
@@ -527,11 +510,11 @@ class _$AccountsStateLoadingFailed
 }
 
 abstract class AccountsStateLoadingFailed implements AccountsState {
-  const factory AccountsStateLoadingFailed({required StorageError error}) =
-      _$AccountsStateLoadingFailed;
+  const factory AccountsStateLoadingFailed(
+      {required final StorageError error}) = _$AccountsStateLoadingFailedImpl;
 
-  StorageError get error => throw _privateConstructorUsedError;
+  StorageError get error;
   @JsonKey(ignore: true)
-  $AccountsStateLoadingFailedCopyWith<AccountsStateLoadingFailed>
+  _$$AccountsStateLoadingFailedImplCopyWith<_$AccountsStateLoadingFailedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

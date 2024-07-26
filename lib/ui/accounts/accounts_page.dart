@@ -16,14 +16,11 @@
 // You should have received a copy of the GNU General Public License
 // along with LibreTrack.  If not, see <http://www.gnu.org/licenses/>.
 
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:libretrack/core/entity/entity.dart';
 import 'package:libretrack/logger.dart';
 import 'package:libretrack/ui/accounts/accounts.dart';
-import 'package:libretrack/ui/accounts/accounts_cubit.dart';
 import 'package:libretrack/ui/widget/widget.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:quiver/collection.dart';
@@ -37,10 +34,10 @@ class AccountsPage extends StatefulWidget {
   final void Function(TrackingServiceType)? onEditAccount;
 
   const AccountsPage({
-    Key? key,
+    super.key,
     this.onAddAccount,
     this.onEditAccount,
-  }) : super(key: key);
+  });
 
   @override
   _AccountsPageState createState() => _AccountsPageState();
@@ -80,7 +77,7 @@ class _AccountsPageState extends State<AccountsPage> {
 class _Body extends StatelessWidget {
   final void Function(TrackingServiceType)? onEditAccount;
 
-  const _Body({Key? key, this.onEditAccount}) : super(key: key);
+  const _Body({this.onEditAccount});
 
   @override
   Widget build(BuildContext context) {
@@ -90,7 +87,8 @@ class _Body extends StatelessWidget {
           deleteFailed: (error) {
             error.when(
               database: (e, stackTrace) {
-                log().e('Unable to delete account', e, stackTrace);
+                log().e('Unable to delete account',
+                    error: e, stackTrace: stackTrace);
               },
             );
             ScaffoldMessenger.of(context).showSnackBar(
@@ -110,7 +108,8 @@ class _Body extends StatelessWidget {
             loadingFailed: (error) {
               error.when(
                 database: (e, stackTrace) {
-                  log().e('Unable to load accounts list', e, stackTrace);
+                  log().e('Unable to load accounts list',
+                      error: e, stackTrace: stackTrace);
                 },
               );
             },
@@ -172,11 +171,10 @@ class _AccountsList extends StatefulWidget {
   final AccountItemMenuCallback? onMenuSelected;
 
   const _AccountsList({
-    Key? key,
     required this.servicesList,
     this.onTap,
     this.onMenuSelected,
-  }) : super(key: key);
+  });
 
   @override
   _AccountsListState createState() => _AccountsListState();
@@ -218,7 +216,7 @@ class _AccountsListState extends State<_AccountsList> {
         icon: MdiIcons.accountSearchOutline,
         text: Text(
           S.of(context).noAccounts,
-          style: Theme.of(context).textTheme.headline5,
+          style: Theme.of(context).textTheme.headlineSmall,
         ),
       );
     } else {
@@ -323,12 +321,12 @@ class _AccountsListItem extends StatelessWidget {
   final void Function(AccountItemMenu)? onMenuSelected;
 
   const _AccountsListItem({
-    Key? key,
+    super.key,
     required this.iconData,
     required this.name,
     this.onTap,
     this.onMenuSelected,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -368,9 +366,8 @@ class _DeleteAccountDialog extends StatelessWidget {
   final VoidCallback onDelete;
 
   const _DeleteAccountDialog({
-    Key? key,
     required this.onDelete,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

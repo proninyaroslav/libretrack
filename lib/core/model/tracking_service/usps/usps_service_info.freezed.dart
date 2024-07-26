@@ -1,6 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'usps_service_info.dart';
 
@@ -11,22 +12,7 @@ part of 'usps_service_info.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$USPSAuthDataTearOff {
-  const _$USPSAuthDataTearOff();
-
-  _USPSAuthData call({required String username, required String companyName}) {
-    return _USPSAuthData(
-      username: username,
-      companyName: companyName,
-    );
-  }
-}
-
-/// @nodoc
-const $USPSAuthData = _$USPSAuthDataTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$USPSAuthData {
@@ -42,67 +28,71 @@ mixin _$USPSAuthData {
 abstract class $USPSAuthDataCopyWith<$Res> {
   factory $USPSAuthDataCopyWith(
           USPSAuthData value, $Res Function(USPSAuthData) then) =
-      _$USPSAuthDataCopyWithImpl<$Res>;
+      _$USPSAuthDataCopyWithImpl<$Res, USPSAuthData>;
+  @useResult
   $Res call({String username, String companyName});
 }
 
 /// @nodoc
-class _$USPSAuthDataCopyWithImpl<$Res> implements $USPSAuthDataCopyWith<$Res> {
+class _$USPSAuthDataCopyWithImpl<$Res, $Val extends USPSAuthData>
+    implements $USPSAuthDataCopyWith<$Res> {
   _$USPSAuthDataCopyWithImpl(this._value, this._then);
 
-  final USPSAuthData _value;
   // ignore: unused_field
-  final $Res Function(USPSAuthData) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? username = freezed,
-    Object? companyName = freezed,
+    Object? username = null,
+    Object? companyName = null,
   }) {
     return _then(_value.copyWith(
-      username: username == freezed
+      username: null == username
           ? _value.username
           : username // ignore: cast_nullable_to_non_nullable
               as String,
-      companyName: companyName == freezed
+      companyName: null == companyName
           ? _value.companyName
           : companyName // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$USPSAuthDataCopyWith<$Res>
+abstract class _$$USPSAuthDataImplCopyWith<$Res>
     implements $USPSAuthDataCopyWith<$Res> {
-  factory _$USPSAuthDataCopyWith(
-          _USPSAuthData value, $Res Function(_USPSAuthData) then) =
-      __$USPSAuthDataCopyWithImpl<$Res>;
+  factory _$$USPSAuthDataImplCopyWith(
+          _$USPSAuthDataImpl value, $Res Function(_$USPSAuthDataImpl) then) =
+      __$$USPSAuthDataImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({String username, String companyName});
 }
 
 /// @nodoc
-class __$USPSAuthDataCopyWithImpl<$Res> extends _$USPSAuthDataCopyWithImpl<$Res>
-    implements _$USPSAuthDataCopyWith<$Res> {
-  __$USPSAuthDataCopyWithImpl(
-      _USPSAuthData _value, $Res Function(_USPSAuthData) _then)
-      : super(_value, (v) => _then(v as _USPSAuthData));
+class __$$USPSAuthDataImplCopyWithImpl<$Res>
+    extends _$USPSAuthDataCopyWithImpl<$Res, _$USPSAuthDataImpl>
+    implements _$$USPSAuthDataImplCopyWith<$Res> {
+  __$$USPSAuthDataImplCopyWithImpl(
+      _$USPSAuthDataImpl _value, $Res Function(_$USPSAuthDataImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _USPSAuthData get _value => super._value as _USPSAuthData;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? username = freezed,
-    Object? companyName = freezed,
+    Object? username = null,
+    Object? companyName = null,
   }) {
-    return _then(_USPSAuthData(
-      username: username == freezed
+    return _then(_$USPSAuthDataImpl(
+      username: null == username
           ? _value.username
           : username // ignore: cast_nullable_to_non_nullable
               as String,
-      companyName: companyName == freezed
+      companyName: null == companyName
           ? _value.companyName
           : companyName // ignore: cast_nullable_to_non_nullable
               as String,
@@ -112,8 +102,8 @@ class __$USPSAuthDataCopyWithImpl<$Res> extends _$USPSAuthDataCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_USPSAuthData extends _USPSAuthData with DiagnosticableTreeMixin {
-  const _$_USPSAuthData({required this.username, required this.companyName})
+class _$USPSAuthDataImpl extends _USPSAuthData with DiagnosticableTreeMixin {
+  const _$USPSAuthDataImpl({required this.username, required this.companyName})
       : super._();
 
   @override
@@ -136,41 +126,38 @@ class _$_USPSAuthData extends _USPSAuthData with DiagnosticableTreeMixin {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is _USPSAuthData &&
+        (other.runtimeType == runtimeType &&
+            other is _$USPSAuthDataImpl &&
             (identical(other.username, username) ||
-                const DeepCollectionEquality()
-                    .equals(other.username, username)) &&
+                other.username == username) &&
             (identical(other.companyName, companyName) ||
-                const DeepCollectionEquality()
-                    .equals(other.companyName, companyName)));
+                other.companyName == companyName));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(username) ^
-      const DeepCollectionEquality().hash(companyName);
+  int get hashCode => Object.hash(runtimeType, username, companyName);
 
   @JsonKey(ignore: true)
   @override
-  _$USPSAuthDataCopyWith<_USPSAuthData> get copyWith =>
-      __$USPSAuthDataCopyWithImpl<_USPSAuthData>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$USPSAuthDataImplCopyWith<_$USPSAuthDataImpl> get copyWith =>
+      __$$USPSAuthDataImplCopyWithImpl<_$USPSAuthDataImpl>(this, _$identity);
 }
 
 abstract class _USPSAuthData extends USPSAuthData {
   const factory _USPSAuthData(
-      {required String username,
-      required String companyName}) = _$_USPSAuthData;
+      {required final String username,
+      required final String companyName}) = _$USPSAuthDataImpl;
   const _USPSAuthData._() : super._();
 
   @override
-  String get username => throw _privateConstructorUsedError;
+  String get username;
   @override
-  String get companyName => throw _privateConstructorUsedError;
+  String get companyName;
   @override
   @JsonKey(ignore: true)
-  _$USPSAuthDataCopyWith<_USPSAuthData> get copyWith =>
+  _$$USPSAuthDataImplCopyWith<_$USPSAuthDataImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

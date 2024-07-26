@@ -109,14 +109,14 @@ abstract class BaseUPSRequestBuilder implements RequestBuilder {
 class _InvalidLanguageCodeException {}
 
 class UPSRequestBuilder extends BaseUPSRequestBuilder {
-  UPSRequestBuilder(UPSAuthData authData) : super(authData);
+  UPSRequestBuilder(super.authData);
 
   @override
   Uri get _requestUrl => Uri.https('onlinetools.ups.com', '/json/Track');
 }
 
 class DevUPSRequestBuilder extends BaseUPSRequestBuilder {
-  DevUPSRequestBuilder(UPSAuthData authData) : super(authData);
+  DevUPSRequestBuilder(super.authData);
 
   @override
   Uri get _requestUrl => Uri.https('wwwcie.ups.com', '/json/Track');

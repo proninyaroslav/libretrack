@@ -7,7 +7,7 @@
 // ignore_for_file:unnecessary_brace_in_string_interps, unnecessary_new
 // ignore_for_file:prefer_single_quotes,comment_references, directives_ordering
 // ignore_for_file:annotate_overrides,prefer_generic_function_type_aliases
-// ignore_for_file:unused_import, file_names, avoid_escaping_inner_quotes
+// ignore_for_file:unused_import, file_names
 
 import 'package:intl/intl.dart';
 import 'package:intl/message_lookup_by_library.dart';
@@ -19,74 +19,74 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'ru_RU';
 
-  static String m0(value) => "${value} bbl";
+  static m0(value) => "${value} bbl";
 
-  static String m1(email, pageUrl) =>
+  static m1(email, pageUrl) =>
       "Приложение для отправки email не найдено. Вы можете вручную скопировать ошибку и и отправить её по адресу ${email}, или отправить на странице проекта ${pageUrl}";
 
-  static String m2(howMany) =>
+  static m2(howMany) =>
       "${Intl.plural(howMany, one: 'Вы действительно хотите удалить выбранную посылку?', other: 'Вы действительно хотите удалить выбранные посылки?')}";
 
-  static String m3(howMany) =>
+  static m3(howMany) =>
       "${Intl.plural(howMany, one: 'Не удалось удалить посылку', other: 'Не удалось удалить посылки')}";
 
-  static String m4(value) => "${value} gal";
+  static m4(value) => "${value} gal";
 
-  static String m5(error) => "Не удалось сгенерировать штрих-код: ${error}";
+  static m5(error) => "Не удалось сгенерировать штрих-код: ${error}";
 
-  static String m6(value) => "${value} ч.";
+  static m6(value) => "${value} ч.";
 
-  static String m7(value) => "${value} кг";
+  static m7(value) => "${value} кг";
 
-  static String m8(date) => "Последнее отслеживание: ${date}";
+  static m8(date) => "Последнее отслеживание: ${date}";
 
-  static String m9(value) => "${value} л";
+  static m9(value) => "${value} л";
 
-  static String m10(howMany) =>
+  static m10(howMany) =>
       "${Intl.plural(howMany, one: 'Не удалось отметить посылку как прочитанную', other: 'Не удалось отметить посылки как прочитанные')}";
 
-  static String m11(value) => "${value} мин.";
+  static m11(value) => "${value} мин.";
 
-  static String m12(howMany) =>
+  static m12(howMany) =>
       "${Intl.plural(howMany, one: 'Не удалось переместить посылку', other: 'Не удалось переместить посылки')}";
 
-  static String m13(value) => "${value} oz";
+  static m13(value) => "${value} oz";
 
-  static String m14(date) => "Посылка доставлена ${date}";
+  static m14(date) => "Посылка доставлена ${date}";
 
-  static String m15(days) =>
+  static m15(days) =>
       "${Intl.plural(days, zero: 'Посылка в пути ${days} дней', one: 'Посылка в пути ${days} день', few: 'Посылка в пути ${days} дня', many: 'Посылка в пути ${days} дней', other: 'Посылка в пути ${days} дней')}";
 
-  static String m16(name) => "Подписано: ${name}";
+  static m16(name) => "Подписано: ${name}";
 
-  static String m17(time) =>
+  static m17(time) =>
       "Отслеживание недоступно, так как с момента последнего отслеживания прошло мало времени. Пожалуйста, повторите попытку через ${time}";
 
-  static String m18(parcelName) => "• ${parcelName}";
+  static m18(parcelName) => "• ${parcelName}";
 
-  static String m19(title, body) => "${title}: ${body}";
+  static m19(title, body) => "${title}: ${body}";
 
-  static String m20(value) => "${value} lb";
+  static m20(value) => "${value} lb";
 
-  static String m21(howMany) =>
+  static m21(howMany) =>
       "${Intl.plural(howMany, one: 'Не удалось обновить посылку', other: 'Не удалось обновить посылки')}";
 
-  static String m22(value) => "${value} сек.";
+  static m22(value) => "${value} сек.";
 
-  static String m23(count) => "Выбрано: ${count}";
+  static m23(count) => "Выбрано: ${count}";
 
-  static String m24(time) => "Не более одного раза в ${time}";
+  static m24(time) => "Не более одного раза в ${time}";
 
-  static String m25(value) => "${value} ft²";
+  static m25(value) => "${value} ft²";
 
-  static String m26(value) => "${value} м²";
+  static m26(value) => "${value} м²";
 
-  static String m27(value) => "${value} yd²";
+  static m27(value) => "${value} yd²";
 
-  static String m28(date) => "Отслеживание начато: ${date}";
+  static m28(date) => "Отслеживание начато: ${date}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
-  static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+  static _notInlinedMessages(_) => <String, Function>{
         "aboutApp": MessageLookupByLibrary.simpleMessage("О программе"),
         "accessKey": MessageLookupByLibrary.simpleMessage("Ключ доступа"),
         "accounts": MessageLookupByLibrary.simpleMessage("Аккаунты"),

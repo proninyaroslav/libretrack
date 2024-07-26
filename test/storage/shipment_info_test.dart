@@ -126,7 +126,7 @@ void main() {
       );
       expect(
         await shipmentRepo.getShipmentInfoByTrack(trackInfo.trackNumber),
-        const StorageResult([]),
+        const StorageResult(<ShipmentInfo>[]),
       );
     });
 
@@ -151,7 +151,7 @@ void main() {
       expect(await trackRepo.deleteTrack(trackInfo), StorageResult.empty);
       expect(
         await shipmentRepo.getShipmentInfoByTrack(trackInfo.trackNumber),
-        const StorageResult([]),
+        const StorageResult(<ShipmentInfo>[]),
       );
     });
 

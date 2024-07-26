@@ -30,11 +30,11 @@ class LinkText extends StatelessWidget {
   final TextStyle? style;
 
   const LinkText({
-    Key? key,
+    super.key,
     required this.text,
     this.selectable = false,
     this.style,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -45,7 +45,7 @@ class LinkText extends StatelessWidget {
       try {
         await launch(link.url);
       } on PlatformException catch (e, stackTrace) {
-        log().w('Unable to open $link', e, stackTrace);
+        log().w('Unable to open $link', error: e, stackTrace: stackTrace);
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
             content: Text(S.of(context).openLinkFailed),

@@ -26,9 +26,9 @@ class SettingsList extends StatelessWidget {
   final List<SettingsListGroup> groups;
 
   const SettingsList({
-    Key? key,
+    super.key,
     required this.groups,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -64,10 +64,10 @@ class SettingsListGroup extends StatelessWidget {
   final List<Widget> items;
 
   const SettingsListGroup({
-    Key? key,
+    super.key,
     this.title,
     required this.items,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -79,7 +79,7 @@ class SettingsListGroup extends StatelessWidget {
             padding: const EdgeInsets.all(16.0),
             child: Text(
               title!.toUpperCase(),
-              style: Theme.of(context).textTheme.overline!.copyWith(
+              style: Theme.of(context).textTheme.labelSmall!.copyWith(
                     fontSize: 12.0,
                     fontWeight: FontWeight.w500,
                     color: AppTheme.textPrimaryColorLight(context),

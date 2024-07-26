@@ -59,7 +59,7 @@ class TrackingPeriodicWorker implements Worker {
       (list) => list.map((info) => info.trackNumber).toList(),
       error: (e) {
         e.when(database: (e, stackTrace) {
-          log().e('Unable to get track list', e, stackTrace);
+          log().e('Unable to get track list', error: e, stackTrace: stackTrace);
         });
         return null;
       },
@@ -78,7 +78,8 @@ class TrackingPeriodicWorker implements Worker {
       (list) => list,
       error: (e) {
         e.when(database: (e, stackTrace) {
-          log().e('Unable to get latest tracking info list', e, stackTrace);
+          log().e('Unable to get latest tracking info list',
+              error: e, stackTrace: stackTrace);
         });
         return null;
       },
@@ -171,11 +172,8 @@ class TrackingPeriodicWorker implements Worker {
             (list) => list,
             error: (e) {
               e.when(database: (e, stackTrace) {
-                log().e(
-                  'Unable to get track service list',
-                  e,
-                  stackTrace,
-                );
+                log().e('Unable to get track service list',
+                    error: e, stackTrace: stackTrace);
               });
               return null;
             },

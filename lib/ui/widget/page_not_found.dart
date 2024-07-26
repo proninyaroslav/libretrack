@@ -20,7 +20,7 @@ import 'package:flutter/material.dart';
 import 'package:libretrack/locale.dart';
 
 class PageNotFound extends StatelessWidget {
-  const PageNotFound({Key? key}) : super(key: key);
+  const PageNotFound({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +31,7 @@ class PageNotFound extends StatelessWidget {
           S.of(context).pageNotFound,
           style: Theme.of(context)
               .textTheme
-              .headline6!
+              .titleLarge!
               .copyWith(color: Colors.blueGrey),
         ),
       ),

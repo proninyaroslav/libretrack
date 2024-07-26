@@ -18,7 +18,6 @@
 
 import 'package:animate_icons/animate_icons.dart';
 import 'package:backdrop/backdrop.dart';
-import 'package:backdrop/scaffold.dart';
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:libretrack/ui/utils/utils.dart';
@@ -85,25 +84,25 @@ class NavigationPage extends StatefulWidget {
   final double frontLayerVisibleSize;
 
   const NavigationPage({
-    Key? key,
+    super.key,
     this.items = const [],
     this.frontLayerVisibleSize = defaultFrontLayerVisibleSize,
     this.initPageId,
-  }) : super(key: key);
+  });
 
   @override
   NavigationPageState createState() => NavigationPageState();
 }
 
 @freezed
-class _BackdropContentType with _$_BackdropContentType {
+class _BackdropContentType with _$BackdropContentType {
   const factory _BackdropContentType.drawer() = _BackdropContentTypeDrawer;
   const factory _BackdropContentType.sheet() = _BackdropContentTypeSheet;
   const factory _BackdropContentType.none() = _BackdropContentTypeNone;
 }
 
 @freezed
-class _BackLayerType with _$_BackLayerType {
+class _BackLayerType with _$BackLayerType {
   const factory _BackLayerType.top() = _BackLayerTypeTop;
   const factory _BackLayerType.start() = _BackLayerTypeStart;
   const factory _BackLayerType.end() = _BackLayerTypeEnd;
@@ -111,7 +110,7 @@ class _BackLayerType with _$_BackLayerType {
 }
 
 @freezed
-class _AppBarState with _$_AppBarState {
+class _AppBarState with _$AppBarState {
   const factory _AppBarState.normal() = _AppBarStateNormal;
   const factory _AppBarState.contextual(int itemsCount) =
       _AppBarStateContextual;
@@ -733,10 +732,9 @@ class _SheetPage extends StatelessWidget {
   final bool showTitle;
 
   const _SheetPage({
-    Key? key,
     required this.sheetInfo,
     this.showTitle = false,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -762,7 +760,7 @@ class _SheetPage extends StatelessWidget {
                 child: DefaultTextStyle(
                   style: Theme.of(context)
                       .textTheme
-                      .headline6!
+                      .titleLarge!
                       .copyWith(color: _foregroundColor(context)),
                   child: sheetInfo.appBarTitle!,
                 ),
@@ -793,9 +791,8 @@ class _AnimatedTopBackLayer extends StatefulWidget {
   final Widget child;
 
   const _AnimatedTopBackLayer({
-    Key? key,
     required this.child,
-  }) : super(key: key);
+  });
 
   @override
   _AnimatedTopBackLayerState createState() => _AnimatedTopBackLayerState();
@@ -820,10 +817,9 @@ class _AnimatedFrontLayer extends StatelessWidget {
   final Duration duration;
 
   const _AnimatedFrontLayer({
-    Key? key,
     required this.child,
     required this.duration,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -841,11 +837,10 @@ class _BackdropListener extends StatefulWidget {
   final Function(bool revealed) onFling;
 
   const _BackdropListener({
-    Key? key,
     required this.onFling,
     required this.backLayerType,
     required this.child,
-  }) : super(key: key);
+  });
 
   @override
   _BackdropListenerState createState() => _BackdropListenerState();
@@ -864,7 +859,7 @@ class _BackdropListenerState extends State<_BackdropListener> {
       }
     }
 
-    WidgetsBinding.instance!.addPostFrameCallback((_) {
+    WidgetsBinding.instance.addPostFrameCallback((_) {
       widget.backLayerType.when(
         top: () => Backdrop.of(context)
             .animationController
@@ -889,10 +884,9 @@ class _BackdropToggleButton extends StatelessWidget {
   final Function(bool revealed) onToggled;
 
   const _BackdropToggleButton({
-    Key? key,
     required this.backLayerType,
     required this.onToggled,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -946,12 +940,11 @@ class _ToggleSheetButton extends StatefulWidget {
   final Function(bool revealed)? onToggled;
 
   const _ToggleSheetButton({
-    Key? key,
     required this.icon,
     required this.text,
     required this.backLayerType,
     this.onToggled,
-  }) : super(key: key);
+  });
 
   @override
   _ToggleSheetButtonState createState() => _ToggleSheetButtonState();
@@ -972,7 +965,7 @@ class _ToggleSheetButtonState extends State<_ToggleSheetButton> {
   void initState() {
     super.initState();
 
-    WidgetsBinding.instance!.addPostFrameCallback((_) {
+    WidgetsBinding.instance.addPostFrameCallback((_) {
       _listenBackdrop(widget.backLayerType);
     });
   }
@@ -1058,14 +1051,13 @@ class _NavigationDrawer extends StatelessWidget {
   final bool isNavigationRail;
 
   const _NavigationDrawer({
-    Key? key,
     required this.items,
     required this.selectedItemPos,
     required this.autoFlingBackdrop,
     required this.backLayerType,
     required this.isNavigationRail,
     this.onTap,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -1164,14 +1156,13 @@ class _NavigationDrawerItem extends StatelessWidget {
   final Function(int)? onTap;
 
   const _NavigationDrawerItem({
-    Key? key,
     required this.position,
     required this.name,
     required this.icon,
     required this.minimized,
     this.isSelected = false,
     this.onTap,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -1219,7 +1210,7 @@ class _NavigationDrawerItem extends StatelessWidget {
 
   Widget _buildText(BuildContext context) {
     final textStyle = TextStyle(
-      fontSize: Theme.of(context).textTheme.bodyText2!.fontSize,
+      fontSize: Theme.of(context).textTheme.bodyMedium!.fontSize,
       color: _getItemTintColor(context),
       fontWeight: FontWeight.w600,
     );
@@ -1275,11 +1266,10 @@ class _BackdropAutoFling extends StatefulWidget {
   final bool autoFling;
 
   const _BackdropAutoFling({
-    Key? key,
     required this.autoFling,
     required this.backLayerType,
     required this.child,
-  }) : super(key: key);
+  });
 
   @override
   _BackdropAutoFlingState createState() => _BackdropAutoFlingState();
@@ -1290,7 +1280,7 @@ class _BackdropAutoFlingState extends State<_BackdropAutoFling> {
   void initState() {
     super.initState();
 
-    WidgetsBinding.instance!.addPostFrameCallback((_) {
+    WidgetsBinding.instance.addPostFrameCallback((_) {
       if (!widget.autoFling) {
         return;
       }
@@ -1314,11 +1304,10 @@ class _AnimatedTitle extends StatelessWidget {
   final Duration duration;
 
   const _AnimatedTitle({
-    Key? key,
     required this.backdropContent,
     this.pageInfo,
     required this.duration,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -1357,11 +1346,11 @@ class _AppBarSwitcher extends StatefulWidget implements PreferredSizeWidget {
   final Duration duration;
 
   const _AppBarSwitcher({
-    Key? key,
+    super.key,
     required this.normalAppBar,
     required this.contextualAppBarBuilder,
     required this.duration,
-  }) : super(key: key);
+  });
 
   @override
   _AppBarSwitcherState createState() => _AppBarSwitcherState();
@@ -1411,11 +1400,10 @@ class _ContextualAppBar extends StatelessWidget {
   final VoidCallback? onBackPressed;
 
   const _ContextualAppBar({
-    Key? key,
     required this.itemsCount,
     this.contextualActions,
     this.onBackPressed,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

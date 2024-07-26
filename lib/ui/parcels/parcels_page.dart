@@ -30,10 +30,7 @@ import 'package:share_plus/share_plus.dart';
 
 import '../../logger.dart';
 import '../theme.dart';
-import 'callback.dart';
 import 'parcels.dart';
-import 'parcels_page_type.dart';
-import 'sliver_parcels_page.dart';
 
 class ParcelsPage extends StatelessWidget {
   final VoidCallback? onAddAccount;
@@ -42,12 +39,12 @@ class ParcelsPage extends StatelessWidget {
   final OnParcelDetailsCallback? onParcelDetails;
 
   const ParcelsPage({
-    Key? key,
+    super.key,
     this.onAddAccount,
     this.onAddParcels,
     this.onSelectionChanged,
     this.onParcelDetails,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -80,11 +77,10 @@ class _Body extends StatefulWidget {
   final OnParcelDetailsCallback? onParcelDetails;
 
   const _Body({
-    Key? key,
     this.onAddAccount,
     this.onSelectionChanged,
     this.onParcelDetails,
-  }) : super(key: key);
+  });
 
   @override
   _BodyState createState() => _BodyState();
@@ -96,13 +92,13 @@ class _BodyState extends State<_Body> with SingleTickerProviderStateMixin {
   late TabController _tabController;
 
   int get _currentTabPos =>
-      PageStorage.of(context)!.readState(
+      PageStorage.of(context).readState(
         context,
         identifier: _keyCurrentTabPos,
       ) as int? ??
       0;
 
-  set _currentTabPos(int value) => PageStorage.of(context)!.writeState(
+  set _currentTabPos(int value) => PageStorage.of(context).writeState(
         context,
         value,
         identifier: _keyCurrentTabPos,
@@ -180,7 +176,7 @@ class _BodyState extends State<_Body> with SingleTickerProviderStateMixin {
           tabController: _tabController,
           tabs: [
             _Tab(
-              icon: const Icon(MdiIcons.packageVariantClosed),
+              icon: Icon(MdiIcons.packageVariantClosed),
               label: Text(S.of(context).activeParcels),
               trailing: BlocBuilder<ParcelsCubit, ParcelsState>(
                 builder: _buildUnreadCounter,
@@ -260,10 +256,11 @@ class _BodyState extends State<_Body> with SingleTickerProviderStateMixin {
   }
 
   void _stateListener(BuildContext context, ParcelsActionsState state) {
-    void _moveParcelFailed(StorageError error, int parcelsCount) {
+    void moveParcelFailed(StorageError error, int parcelsCount) {
       error.when(
         database: (e, stackTrace) {
-          log().e("Unable to move selected parcels", e, stackTrace);
+          log().e("Unable to move selected parcels",
+              error: e, stackTrace: stackTrace);
           ScaffoldMessenger.of(context).showSnackBar(
             SnackBar(
               content: Text(
@@ -279,7 +276,8 @@ class _BodyState extends State<_Body> with SingleTickerProviderStateMixin {
       deleteFailed: (error, parcelsCount) {
         error.when(
           database: (e, stackTrace) {
-            log().e("Unable to delete selected parcels", e, stackTrace);
+            log().e("Unable to delete selected parcels",
+                error: e, stackTrace: stackTrace);
             ScaffoldMessenger.of(context).showSnackBar(
               SnackBar(
                 content: Text(
@@ -293,7 +291,8 @@ class _BodyState extends State<_Body> with SingleTickerProviderStateMixin {
       markAsReadFailed: (error, parcelsCount) {
         error.when(
           database: (e, stackTrace) {
-            log().e("Unable to mark selected parcels as read", e, stackTrace);
+            log().e("Unable to mark selected parcels as read",
+                error: e, stackTrace: stackTrace);
             ScaffoldMessenger.of(context).showSnackBar(
               SnackBar(
                 content: Text(
@@ -313,7 +312,7 @@ class _BodyState extends State<_Body> with SingleTickerProviderStateMixin {
           ),
         );
       },
-      moveToActiveFailed: _moveParcelFailed,
+      moveToActiveFailed: moveParcelFailed,
       moveToArchiveSuccess: () {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
@@ -323,7 +322,7 @@ class _BodyState extends State<_Body> with SingleTickerProviderStateMixin {
           ),
         );
       },
-      moveToArchiveFailed: _moveParcelFailed,
+      moveToArchiveFailed: moveParcelFailed,
       refreshFailed: (errors) {
         for (final entry in errors.entries) {
           final trackNumber = entry.key;
@@ -331,13 +330,15 @@ class _BodyState extends State<_Body> with SingleTickerProviderStateMixin {
           error.when(
             storage: (e) => e.when(
               database: (e, stackTrace) {
-                log().e("Unable to refresh $trackNumber", e, stackTrace);
+                log().e("Unable to refresh $trackNumber",
+                    error: e, stackTrace: stackTrace);
               },
             ),
             limiter: (e) => e.when(
               storage: (e) => e.when(
                 database: (e, stackTrace) {
-                  log().e("Unable to refresh $trackNumber", e, stackTrace);
+                  log().e("Unable to refresh $trackNumber",
+                      error: e, stackTrace: stackTrace);
                 },
               ),
             ),
@@ -355,7 +356,7 @@ class _BodyState extends State<_Body> with SingleTickerProviderStateMixin {
         try {
           await Share.share(text);
         } on Exception catch (e, stackTrace) {
-          log().e("Unable to share", e, stackTrace);
+          log().e("Unable to share", error: e, stackTrace: stackTrace);
           ScaffoldMessenger.of(context).showSnackBar(
             SnackBar(
               content: Text(S.of(context).shareFailed),
@@ -395,10 +396,9 @@ class _SliverTopBar extends StatelessWidget {
   final TabController tabController;
 
   const _SliverTopBar({
-    Key? key,
     required this.tabController,
     required this.tabs,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -435,11 +435,10 @@ class _Tab extends StatelessWidget {
   final Widget? trailing;
 
   const _Tab({
-    Key? key,
     required this.icon,
     required this.label,
     this.trailing,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -465,10 +464,9 @@ class _TabBar extends StatelessWidget {
   final TabController tabController;
 
   const _TabBar({
-    Key? key,
     required this.tabs,
     required this.tabController,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -501,14 +499,11 @@ class _TabBar extends StatelessWidget {
 
 class _UnreadCounter extends StatelessWidget {
   final int count;
-  final int maxCount;
+  final int maxCount = 0;
 
   const _UnreadCounter({
-    Key? key,
     required this.count,
-    this.maxCount = 9999,
-  })  : assert(count >= 0),
-        super(key: key);
+  }) : assert(count >= 0);
 
   @override
   Widget build(BuildContext context) {
@@ -526,7 +521,7 @@ class _UnreadCounter extends StatelessWidget {
         widthFactor: 1.0,
         child: Text(
           count > maxCount ? '$maxCount+' : '$count',
-          style: Theme.of(context).textTheme.caption!.copyWith(
+          style: Theme.of(context).textTheme.bodySmall!.copyWith(
                 color: Colors.white,
               ),
           maxLines: 1,
@@ -543,11 +538,10 @@ class _AddAccountBanner extends StatelessWidget {
   final VoidCallback? onClose;
 
   const _AddAccountBanner({
-    Key? key,
     required this.expanded,
     this.onAddAccount,
     this.onClose,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -574,7 +568,7 @@ class _AddAccountBanner extends StatelessWidget {
           leading: CircleAvatar(
             backgroundColor: Theme.of(context).primaryColor,
             foregroundColor: Theme.of(context).primaryIconTheme.color,
-            child: const Icon(
+            child: Icon(
               MdiIcons.lightbulbOnOutline,
             ),
           ),

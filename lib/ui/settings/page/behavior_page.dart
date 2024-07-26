@@ -27,10 +27,9 @@ import 'package:libretrack/ui/widget/widget.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 import '../settings_list.dart';
-import '../settings_scaffold.dart';
 
 class BehaviorPage extends StatelessWidget {
-  const BehaviorPage({Key? key}) : super(key: key);
+  const BehaviorPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -73,7 +72,7 @@ class BehaviorPage extends StatelessWidget {
           );
         },
       ),
-      leading: const Icon(MdiIcons.clockOutline),
+      leading: Icon(MdiIcons.clockOutline),
       onTap: () => _showTrackingLimitDialog(context),
     );
   }
@@ -148,7 +147,7 @@ class BehaviorPage extends StatelessWidget {
           subtitle: Text(
             '$freq\n\n${S.of(context).settingsAutoTrackingFreqDescr}',
           ),
-          leading: const Icon(MdiIcons.clockOutline),
+          leading: Icon(MdiIcons.clockOutline),
           onTap: () => _showAutoTrackingFreqDialog(context),
         );
       },
@@ -238,10 +237,9 @@ class _TrackingLimitList extends StatefulWidget {
   final ValueChanged<TrackingFreqLimit>? onSelected;
 
   const _TrackingLimitList({
-    Key? key,
     required this.initialValue,
     this.onSelected,
-  }) : super(key: key);
+  });
 
   @override
   _TrackingLimitListState createState() => _TrackingLimitListState();
@@ -290,10 +288,9 @@ class _AutoTrackingFreqList extends StatefulWidget {
   final ValueChanged<AutoTrackingFreq>? onSelected;
 
   const _AutoTrackingFreqList({
-    Key? key,
     required this.initialValue,
     this.onSelected,
-  }) : super(key: key);
+  });
 
   @override
   _AutoTrackingFreqListState createState() => _AutoTrackingFreqListState();
@@ -343,10 +340,9 @@ class _TrackingHistoryDialog extends StatefulWidget {
   final ValueChanged<int>? onChanged;
 
   const _TrackingHistoryDialog({
-    Key? key,
     required this.initialValue,
     this.onChanged,
-  }) : super(key: key);
+  });
 
   @override
   _TrackingHistoryDialogState createState() => _TrackingHistoryDialogState();

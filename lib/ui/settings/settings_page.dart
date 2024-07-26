@@ -31,9 +31,9 @@ class SettingsPage extends StatefulWidget {
   final SettingsRoutePath? initRoute;
 
   const SettingsPage({
-    Key? key,
+    super.key,
     this.initRoute,
-  }) : super(key: key);
+  });
 
   @override
   SettingsPageState createState() => SettingsPageState();
@@ -134,7 +134,7 @@ class SettingsPageState extends State<SettingsPage> {
 class _Body extends StatelessWidget {
   final ValueChanged<SettingsRoutePath>? onLoadRoute;
 
-  const _Body({Key? key, this.onLoadRoute}) : super(key: key);
+  const _Body({this.onLoadRoute});
 
   @override
   Widget build(BuildContext context) {
@@ -161,10 +161,9 @@ class _TwoPaneBody extends StatefulWidget {
   final ValueChanged<SettingsRoutePath>? onRouteLoaded;
 
   const _TwoPaneBody({
-    Key? key,
     this.initRoute,
     this.onRouteLoaded,
-  }) : super(key: key);
+  });
 
   @override
   _TwoPaneBodyState createState() => _TwoPaneBodyState();
@@ -252,7 +251,7 @@ class _TwoPaneBodyState extends State<_TwoPaneBody> {
 }
 
 @freezed
-class _SettingsRouterState with _$_SettingsRouterState {
+class _SettingsRouterState with _$SettingsRouterState {
   const factory _SettingsRouterState.home() = _SettingsRouterStateHome;
 
   const factory _SettingsRouterState.appearance() =

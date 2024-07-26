@@ -18,7 +18,6 @@
 
 import 'package:injectable/injectable.dart';
 import 'package:libretrack/core/entity/entity.dart';
-import 'package:libretrack/core/model/tracking_service/usps/usps_request_builder.dart';
 import 'package:libretrack/env.dart';
 
 import 'request_builder.dart';

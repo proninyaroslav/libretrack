@@ -66,15 +66,11 @@ abstract class WorkManager {
 @Singleton(as: WorkManager, env: [Env.prod])
 class WorkManagerImpl extends _WorkManagerImpl {
   WorkManagerImpl(
-    WorkManagerRepository repo,
-    PlatformInfo platform,
-    WorkersProvider workersProvider,
-    DateTimeProvider dateTimeProvider,
+    super.repo,
+    super.platform,
+    super.workersProvider,
+    super.dateTimeProvider,
   ) : super(
-          repo,
-          platform,
-          workersProvider,
-          dateTimeProvider,
           isDebug: false,
         );
 }
@@ -203,7 +199,7 @@ final _debugCrashHandlers = [
 Future<void> callbackDispatcher() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  Future<void> _dispatcher() async {
+  Future<void> dispatcher() async {
     await initInjector(kDebugMode ? Env.dev : Env.prod);
     getIt<AppDatabaseIsolateBinder>().emitChanges();
     await getIt<NotificationManager>().init();
@@ -223,11 +219,11 @@ Future<void> callbackDispatcher() async {
   }
 
   if (kDebugMode) {
-    return _dispatcher();
+    return dispatcher();
   } else {
     return crashCatcher(
       hooks: [
-        ZonedCrashHook(mainEntry: _dispatcher),
+        ZonedCrashHook(mainEntry: dispatcher),
         IsolateCrashHook(),
         FlutterCrashHook(),
       ],
@@ -564,9 +560,9 @@ class _DesktopWorkManager implements _PlatformWorkManager {
 }
 
 class _WorkFailedException implements Exception {
-  final String? message;
+  final String? message = null;
 
-  _WorkFailedException([this.message]);
+  _WorkFailedException();
 
   @override
   String toString() =>

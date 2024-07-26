@@ -6,20 +6,32 @@ part of 'database.dart';
 // FloorGenerator
 // **************************************************************************
 
+abstract class $AppDatabaseBuilderContract {
+  /// Adds migrations to the builder.
+  $AppDatabaseBuilderContract addMigrations(List<Migration> migrations);
+
+  /// Adds a database [Callback] to the builder.
+  $AppDatabaseBuilderContract addCallback(Callback callback);
+
+  /// Creates the database and initializes it.
+  Future<AppDatabase> build();
+}
+
+// ignore: avoid_classes_with_only_static_members
 class $FloorAppDatabase {
   /// Creates a database builder for a persistent database.
   /// Once a database is built, you should keep a reference to it and re-use it.
-  static _$AppDatabaseBuilder databaseBuilder(String name) =>
+  static $AppDatabaseBuilderContract databaseBuilder(String name) =>
       _$AppDatabaseBuilder(name);
 
   /// Creates a database builder for an in memory database.
   /// Information stored in an in memory database disappears when the process is killed.
   /// Once a database is built, you should keep a reference to it and re-use it.
-  static _$AppDatabaseBuilder inMemoryDatabaseBuilder() =>
+  static $AppDatabaseBuilderContract inMemoryDatabaseBuilder() =>
       _$AppDatabaseBuilder(null);
 }
 
-class _$AppDatabaseBuilder {
+class _$AppDatabaseBuilder implements $AppDatabaseBuilderContract {
   _$AppDatabaseBuilder(this.name);
 
   final String? name;
@@ -28,19 +40,19 @@ class _$AppDatabaseBuilder {
 
   Callback? _callback;
 
-  /// Adds migrations to the builder.
-  _$AppDatabaseBuilder addMigrations(List<Migration> migrations) {
+  @override
+  $AppDatabaseBuilderContract addMigrations(List<Migration> migrations) {
     _migrations.addAll(migrations);
     return this;
   }
 
-  /// Adds a database [Callback] to the builder.
-  _$AppDatabaseBuilder addCallback(Callback callback) {
+  @override
+  $AppDatabaseBuilderContract addCallback(Callback callback) {
     _callback = callback;
     return this;
   }
 
-  /// Creates the database and initializes it.
+  @override
   Future<AppDatabase> build() async {
     final path = name != null
         ? await sqfliteDatabaseFactory.getDatabasePath(name!)
@@ -76,8 +88,11 @@ class _$AppDatabase extends AppDatabase {
 
   TrackNumberServiceDao? _trackNumberServiceDaoInstance;
 
-  Future<sqflite.Database> open(String path, List<Migration> migrations,
-      [Callback? callback]) async {
+  Future<sqflite.Database> open(
+    String path,
+    List<Migration> migrations, [
+    Callback? callback,
+  ]) async {
     final databaseOptions = sqflite.OpenDatabaseOptions(
       version: 2,
       onConfigure: (database) async {
@@ -171,8 +186,10 @@ class _$AppDatabase extends AppDatabase {
 }
 
 class _$TrackingServiceDao extends TrackingServiceDao {
-  _$TrackingServiceDao(this.database, this.changeListener)
-      : _queryAdapter = QueryAdapter(database, changeListener),
+  _$TrackingServiceDao(
+    this.database,
+    this.changeListener,
+  )   : _queryAdapter = QueryAdapter(database, changeListener),
         _trackingServiceInfoInsertionAdapter = InsertionAdapter(
             database,
             'TrackingServiceInfo',
@@ -268,8 +285,10 @@ class _$TrackingServiceDao extends TrackingServiceDao {
 }
 
 class _$ServiceAuthDao extends ServiceAuthDao {
-  _$ServiceAuthDao(this.database, this.changeListener)
-      : _queryAdapter = QueryAdapter(database),
+  _$ServiceAuthDao(
+    this.database,
+    this.changeListener,
+  )   : _queryAdapter = QueryAdapter(database),
         _authDataFieldInsertionAdapter = InsertionAdapter(
             database,
             'AuthDataField',
@@ -316,8 +335,10 @@ class _$ServiceAuthDao extends ServiceAuthDao {
 }
 
 class _$PostalServiceDao extends PostalServiceDao {
-  _$PostalServiceDao(this.database, this.changeListener)
-      : _queryAdapter = QueryAdapter(database),
+  _$PostalServiceDao(
+    this.database,
+    this.changeListener,
+  )   : _queryAdapter = QueryAdapter(database),
         _postalServiceInfoInsertionAdapter = InsertionAdapter(
             database,
             'PostalServiceInfo',
@@ -355,8 +376,10 @@ class _$PostalServiceDao extends PostalServiceDao {
 }
 
 class _$TrackNumberInfoDao extends TrackNumberInfoDao {
-  _$TrackNumberInfoDao(this.database, this.changeListener)
-      : _queryAdapter = QueryAdapter(database, changeListener),
+  _$TrackNumberInfoDao(
+    this.database,
+    this.changeListener,
+  )   : _queryAdapter = QueryAdapter(database, changeListener),
         _trackNumberInfoInsertionAdapter = InsertionAdapter(
             database,
             'TrackNumberInfo',
@@ -501,8 +524,10 @@ class _$TrackNumberInfoDao extends TrackNumberInfoDao {
 }
 
 class _$ShipmentDao extends ShipmentDao {
-  _$ShipmentDao(this.database, this.changeListener)
-      : _queryAdapter = QueryAdapter(database, changeListener),
+  _$ShipmentDao(
+    this.database,
+    this.changeListener,
+  )   : _queryAdapter = QueryAdapter(database, changeListener),
         _shipmentActivityInfoInsertionAdapter = InsertionAdapter(
             database,
             'ShipmentActivityInfo',
@@ -849,7 +874,9 @@ class _$ShipmentDao extends ShipmentDao {
 
   @override
   Future<void> replaceActivitiesByTrack(
-      String trackNumber, List<ShipmentActivityInfo> activities) async {
+    String trackNumber,
+    List<ShipmentActivityInfo> activities,
+  ) async {
     if (database is sqflite.Transaction) {
       await super.replaceActivitiesByTrack(trackNumber, activities);
     } else {
@@ -879,8 +906,10 @@ class _$ShipmentDao extends ShipmentDao {
 }
 
 class _$WorkManagerDao extends WorkManagerDao {
-  _$WorkManagerDao(this.database, this.changeListener)
-      : _queryAdapter = QueryAdapter(database),
+  _$WorkManagerDao(
+    this.database,
+    this.changeListener,
+  )   : _queryAdapter = QueryAdapter(database),
         _workInfoInsertionAdapter = InsertionAdapter(
             database,
             'WorkInfo',
@@ -1012,8 +1041,10 @@ class _$WorkManagerDao extends WorkManagerDao {
 }
 
 class _$TrackingDao extends TrackingDao {
-  _$TrackingDao(this.database, this.changeListener)
-      : _queryAdapter = QueryAdapter(database, changeListener),
+  _$TrackingDao(
+    this.database,
+    this.changeListener,
+  )   : _queryAdapter = QueryAdapter(database, changeListener),
         _trackingInfoInsertionAdapter = InsertionAdapter(
             database,
             'TrackingInfo',
@@ -1311,8 +1342,10 @@ class _$TrackingDao extends TrackingDao {
 }
 
 class _$TrackNumberServiceDao extends TrackNumberServiceDao {
-  _$TrackNumberServiceDao(this.database, this.changeListener)
-      : _queryAdapter = QueryAdapter(database, changeListener),
+  _$TrackNumberServiceDao(
+    this.database,
+    this.changeListener,
+  )   : _queryAdapter = QueryAdapter(database, changeListener),
         _trackNumberServiceInsertionAdapter = InsertionAdapter(
             database,
             'TrackNumberService',

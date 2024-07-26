@@ -20,7 +20,6 @@ import 'package:equatable/equatable.dart';
 import 'package:floor/floor.dart';
 import 'package:libretrack/core/entity/entity.dart';
 
-import 'address.dart';
 import 'converter/converter.dart';
 
 @TypeConverters([

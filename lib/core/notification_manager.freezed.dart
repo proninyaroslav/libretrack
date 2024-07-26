@@ -1,6 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'notification_manager.dart';
 
@@ -11,10 +12,10 @@ part of 'notification_manager.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 NotificationAction _$NotificationActionFromJson(Map<String, dynamic> json) {
-  switch (json['runtimeType'] as String?) {
+  switch (json['runtimeType']) {
     case 'openParcelDetails':
       return NotificationActionOpenParcelDetails.fromJson(json);
     case 'reportCrash':
@@ -29,35 +30,6 @@ NotificationAction _$NotificationActionFromJson(Map<String, dynamic> json) {
 }
 
 /// @nodoc
-class _$NotificationActionTearOff {
-  const _$NotificationActionTearOff();
-
-  NotificationActionOpenParcelDetails openParcelDetails(
-      {required String trackNumber}) {
-    return NotificationActionOpenParcelDetails(
-      trackNumber: trackNumber,
-    );
-  }
-
-  NotificationActionReportCrash reportCrash({required CrashInfo info}) {
-    return NotificationActionReportCrash(
-      info: info,
-    );
-  }
-
-  NotificationActionOpenParcelsList openParcelsList() {
-    return const NotificationActionOpenParcelsList();
-  }
-
-  NotificationAction fromJson(Map<String, Object> json) {
-    return NotificationAction.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $NotificationAction = _$NotificationActionTearOff();
-
-/// @nodoc
 mixin _$NotificationAction {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
@@ -68,9 +40,9 @@ mixin _$NotificationAction {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(String trackNumber)? openParcelDetails,
-    TResult Function(CrashInfo info)? reportCrash,
-    TResult Function()? openParcelsList,
+    TResult? Function(String trackNumber)? openParcelDetails,
+    TResult? Function(CrashInfo info)? reportCrash,
+    TResult? Function()? openParcelsList,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -92,10 +64,10 @@ mixin _$NotificationAction {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(NotificationActionOpenParcelDetails value)?
+    TResult? Function(NotificationActionOpenParcelDetails value)?
         openParcelDetails,
-    TResult Function(NotificationActionReportCrash value)? reportCrash,
-    TResult Function(NotificationActionOpenParcelsList value)? openParcelsList,
+    TResult? Function(NotificationActionReportCrash value)? reportCrash,
+    TResult? Function(NotificationActionOpenParcelsList value)? openParcelsList,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -114,47 +86,47 @@ mixin _$NotificationAction {
 abstract class $NotificationActionCopyWith<$Res> {
   factory $NotificationActionCopyWith(
           NotificationAction value, $Res Function(NotificationAction) then) =
-      _$NotificationActionCopyWithImpl<$Res>;
+      _$NotificationActionCopyWithImpl<$Res, NotificationAction>;
 }
 
 /// @nodoc
-class _$NotificationActionCopyWithImpl<$Res>
+class _$NotificationActionCopyWithImpl<$Res, $Val extends NotificationAction>
     implements $NotificationActionCopyWith<$Res> {
   _$NotificationActionCopyWithImpl(this._value, this._then);
 
-  final NotificationAction _value;
   // ignore: unused_field
-  final $Res Function(NotificationAction) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 }
 
 /// @nodoc
-abstract class $NotificationActionOpenParcelDetailsCopyWith<$Res> {
-  factory $NotificationActionOpenParcelDetailsCopyWith(
-          NotificationActionOpenParcelDetails value,
-          $Res Function(NotificationActionOpenParcelDetails) then) =
-      _$NotificationActionOpenParcelDetailsCopyWithImpl<$Res>;
+abstract class _$$NotificationActionOpenParcelDetailsImplCopyWith<$Res> {
+  factory _$$NotificationActionOpenParcelDetailsImplCopyWith(
+          _$NotificationActionOpenParcelDetailsImpl value,
+          $Res Function(_$NotificationActionOpenParcelDetailsImpl) then) =
+      __$$NotificationActionOpenParcelDetailsImplCopyWithImpl<$Res>;
+  @useResult
   $Res call({String trackNumber});
 }
 
 /// @nodoc
-class _$NotificationActionOpenParcelDetailsCopyWithImpl<$Res>
-    extends _$NotificationActionCopyWithImpl<$Res>
-    implements $NotificationActionOpenParcelDetailsCopyWith<$Res> {
-  _$NotificationActionOpenParcelDetailsCopyWithImpl(
-      NotificationActionOpenParcelDetails _value,
-      $Res Function(NotificationActionOpenParcelDetails) _then)
-      : super(_value, (v) => _then(v as NotificationActionOpenParcelDetails));
+class __$$NotificationActionOpenParcelDetailsImplCopyWithImpl<$Res>
+    extends _$NotificationActionCopyWithImpl<$Res,
+        _$NotificationActionOpenParcelDetailsImpl>
+    implements _$$NotificationActionOpenParcelDetailsImplCopyWith<$Res> {
+  __$$NotificationActionOpenParcelDetailsImplCopyWithImpl(
+      _$NotificationActionOpenParcelDetailsImpl _value,
+      $Res Function(_$NotificationActionOpenParcelDetailsImpl) _then)
+      : super(_value, _then);
 
-  @override
-  NotificationActionOpenParcelDetails get _value =>
-      super._value as NotificationActionOpenParcelDetails;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? trackNumber = freezed,
+    Object? trackNumber = null,
   }) {
-    return _then(NotificationActionOpenParcelDetails(
-      trackNumber: trackNumber == freezed
+    return _then(_$NotificationActionOpenParcelDetailsImpl(
+      trackNumber: null == trackNumber
           ? _value.trackNumber
           : trackNumber // ignore: cast_nullable_to_non_nullable
               as String,
@@ -164,16 +136,21 @@ class _$NotificationActionOpenParcelDetailsCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$NotificationActionOpenParcelDetails
+class _$NotificationActionOpenParcelDetailsImpl
     implements NotificationActionOpenParcelDetails {
-  const _$NotificationActionOpenParcelDetails({required this.trackNumber});
+  const _$NotificationActionOpenParcelDetailsImpl(
+      {required this.trackNumber, final String? $type})
+      : $type = $type ?? 'openParcelDetails';
 
-  factory _$NotificationActionOpenParcelDetails.fromJson(
+  factory _$NotificationActionOpenParcelDetailsImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$NotificationActionOpenParcelDetailsFromJson(json);
+      _$$NotificationActionOpenParcelDetailsImplFromJson(json);
 
   @override
   final String trackNumber;
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
 
   @override
   String toString() {
@@ -181,24 +158,25 @@ class _$NotificationActionOpenParcelDetails
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is NotificationActionOpenParcelDetails &&
+        (other.runtimeType == runtimeType &&
+            other is _$NotificationActionOpenParcelDetailsImpl &&
             (identical(other.trackNumber, trackNumber) ||
-                const DeepCollectionEquality()
-                    .equals(other.trackNumber, trackNumber)));
+                other.trackNumber == trackNumber));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(trackNumber);
 
   @JsonKey(ignore: true)
   @override
-  $NotificationActionOpenParcelDetailsCopyWith<
-          NotificationActionOpenParcelDetails>
-      get copyWith => _$NotificationActionOpenParcelDetailsCopyWithImpl<
-          NotificationActionOpenParcelDetails>(this, _$identity);
+  int get hashCode => Object.hash(runtimeType, trackNumber);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$NotificationActionOpenParcelDetailsImplCopyWith<
+          _$NotificationActionOpenParcelDetailsImpl>
+      get copyWith => __$$NotificationActionOpenParcelDetailsImplCopyWithImpl<
+          _$NotificationActionOpenParcelDetailsImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -213,9 +191,9 @@ class _$NotificationActionOpenParcelDetails
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(String trackNumber)? openParcelDetails,
-    TResult Function(CrashInfo info)? reportCrash,
-    TResult Function()? openParcelsList,
+    TResult? Function(String trackNumber)? openParcelDetails,
+    TResult? Function(CrashInfo info)? reportCrash,
+    TResult? Function()? openParcelsList,
   }) {
     return openParcelDetails?.call(trackNumber);
   }
@@ -249,10 +227,10 @@ class _$NotificationActionOpenParcelDetails
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(NotificationActionOpenParcelDetails value)?
+    TResult? Function(NotificationActionOpenParcelDetails value)?
         openParcelDetails,
-    TResult Function(NotificationActionReportCrash value)? reportCrash,
-    TResult Function(NotificationActionOpenParcelsList value)? openParcelsList,
+    TResult? Function(NotificationActionReportCrash value)? reportCrash,
+    TResult? Function(NotificationActionOpenParcelsList value)? openParcelsList,
   }) {
     return openParcelDetails?.call(this);
   }
@@ -274,57 +252,58 @@ class _$NotificationActionOpenParcelDetails
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$NotificationActionOpenParcelDetailsToJson(this)
-      ..['runtimeType'] = 'openParcelDetails';
+    return _$$NotificationActionOpenParcelDetailsImplToJson(
+      this,
+    );
   }
 }
 
 abstract class NotificationActionOpenParcelDetails
     implements NotificationAction {
   const factory NotificationActionOpenParcelDetails(
-      {required String trackNumber}) = _$NotificationActionOpenParcelDetails;
+          {required final String trackNumber}) =
+      _$NotificationActionOpenParcelDetailsImpl;
 
   factory NotificationActionOpenParcelDetails.fromJson(
           Map<String, dynamic> json) =
-      _$NotificationActionOpenParcelDetails.fromJson;
+      _$NotificationActionOpenParcelDetailsImpl.fromJson;
 
-  String get trackNumber => throw _privateConstructorUsedError;
+  String get trackNumber;
   @JsonKey(ignore: true)
-  $NotificationActionOpenParcelDetailsCopyWith<
-          NotificationActionOpenParcelDetails>
+  _$$NotificationActionOpenParcelDetailsImplCopyWith<
+          _$NotificationActionOpenParcelDetailsImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $NotificationActionReportCrashCopyWith<$Res> {
-  factory $NotificationActionReportCrashCopyWith(
-          NotificationActionReportCrash value,
-          $Res Function(NotificationActionReportCrash) then) =
-      _$NotificationActionReportCrashCopyWithImpl<$Res>;
+abstract class _$$NotificationActionReportCrashImplCopyWith<$Res> {
+  factory _$$NotificationActionReportCrashImplCopyWith(
+          _$NotificationActionReportCrashImpl value,
+          $Res Function(_$NotificationActionReportCrashImpl) then) =
+      __$$NotificationActionReportCrashImplCopyWithImpl<$Res>;
+  @useResult
   $Res call({CrashInfo info});
 
   $CrashInfoCopyWith<$Res> get info;
 }
 
 /// @nodoc
-class _$NotificationActionReportCrashCopyWithImpl<$Res>
-    extends _$NotificationActionCopyWithImpl<$Res>
-    implements $NotificationActionReportCrashCopyWith<$Res> {
-  _$NotificationActionReportCrashCopyWithImpl(
-      NotificationActionReportCrash _value,
-      $Res Function(NotificationActionReportCrash) _then)
-      : super(_value, (v) => _then(v as NotificationActionReportCrash));
+class __$$NotificationActionReportCrashImplCopyWithImpl<$Res>
+    extends _$NotificationActionCopyWithImpl<$Res,
+        _$NotificationActionReportCrashImpl>
+    implements _$$NotificationActionReportCrashImplCopyWith<$Res> {
+  __$$NotificationActionReportCrashImplCopyWithImpl(
+      _$NotificationActionReportCrashImpl _value,
+      $Res Function(_$NotificationActionReportCrashImpl) _then)
+      : super(_value, _then);
 
-  @override
-  NotificationActionReportCrash get _value =>
-      super._value as NotificationActionReportCrash;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? info = freezed,
+    Object? info = null,
   }) {
-    return _then(NotificationActionReportCrash(
-      info: info == freezed
+    return _then(_$NotificationActionReportCrashImpl(
+      info: null == info
           ? _value.info
           : info // ignore: cast_nullable_to_non_nullable
               as CrashInfo,
@@ -332,6 +311,7 @@ class _$NotificationActionReportCrashCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $CrashInfoCopyWith<$Res> get info {
     return $CrashInfoCopyWith<$Res>(_value.info, (value) {
       return _then(_value.copyWith(info: value));
@@ -341,14 +321,21 @@ class _$NotificationActionReportCrashCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$NotificationActionReportCrash implements NotificationActionReportCrash {
-  const _$NotificationActionReportCrash({required this.info});
+class _$NotificationActionReportCrashImpl
+    implements NotificationActionReportCrash {
+  const _$NotificationActionReportCrashImpl(
+      {required this.info, final String? $type})
+      : $type = $type ?? 'reportCrash';
 
-  factory _$NotificationActionReportCrash.fromJson(Map<String, dynamic> json) =>
-      _$$NotificationActionReportCrashFromJson(json);
+  factory _$NotificationActionReportCrashImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$NotificationActionReportCrashImplFromJson(json);
 
   @override
   final CrashInfo info;
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
 
   @override
   String toString() {
@@ -356,22 +343,24 @@ class _$NotificationActionReportCrash implements NotificationActionReportCrash {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is NotificationActionReportCrash &&
-            (identical(other.info, info) ||
-                const DeepCollectionEquality().equals(other.info, info)));
+        (other.runtimeType == runtimeType &&
+            other is _$NotificationActionReportCrashImpl &&
+            (identical(other.info, info) || other.info == info));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(info);
 
   @JsonKey(ignore: true)
   @override
-  $NotificationActionReportCrashCopyWith<NotificationActionReportCrash>
-      get copyWith => _$NotificationActionReportCrashCopyWithImpl<
-          NotificationActionReportCrash>(this, _$identity);
+  int get hashCode => Object.hash(runtimeType, info);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$NotificationActionReportCrashImplCopyWith<
+          _$NotificationActionReportCrashImpl>
+      get copyWith => __$$NotificationActionReportCrashImplCopyWithImpl<
+          _$NotificationActionReportCrashImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -386,9 +375,9 @@ class _$NotificationActionReportCrash implements NotificationActionReportCrash {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(String trackNumber)? openParcelDetails,
-    TResult Function(CrashInfo info)? reportCrash,
-    TResult Function()? openParcelsList,
+    TResult? Function(String trackNumber)? openParcelDetails,
+    TResult? Function(CrashInfo info)? reportCrash,
+    TResult? Function()? openParcelsList,
   }) {
     return reportCrash?.call(info);
   }
@@ -422,10 +411,10 @@ class _$NotificationActionReportCrash implements NotificationActionReportCrash {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(NotificationActionOpenParcelDetails value)?
+    TResult? Function(NotificationActionOpenParcelDetails value)?
         openParcelDetails,
-    TResult Function(NotificationActionReportCrash value)? reportCrash,
-    TResult Function(NotificationActionOpenParcelsList value)? openParcelsList,
+    TResult? Function(NotificationActionReportCrash value)? reportCrash,
+    TResult? Function(NotificationActionOpenParcelsList value)? openParcelsList,
   }) {
     return reportCrash?.call(this);
   }
@@ -447,55 +436,58 @@ class _$NotificationActionReportCrash implements NotificationActionReportCrash {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$NotificationActionReportCrashToJson(this)
-      ..['runtimeType'] = 'reportCrash';
+    return _$$NotificationActionReportCrashImplToJson(
+      this,
+    );
   }
 }
 
 abstract class NotificationActionReportCrash implements NotificationAction {
-  const factory NotificationActionReportCrash({required CrashInfo info}) =
-      _$NotificationActionReportCrash;
+  const factory NotificationActionReportCrash({required final CrashInfo info}) =
+      _$NotificationActionReportCrashImpl;
 
   factory NotificationActionReportCrash.fromJson(Map<String, dynamic> json) =
-      _$NotificationActionReportCrash.fromJson;
+      _$NotificationActionReportCrashImpl.fromJson;
 
-  CrashInfo get info => throw _privateConstructorUsedError;
+  CrashInfo get info;
   @JsonKey(ignore: true)
-  $NotificationActionReportCrashCopyWith<NotificationActionReportCrash>
+  _$$NotificationActionReportCrashImplCopyWith<
+          _$NotificationActionReportCrashImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $NotificationActionOpenParcelsListCopyWith<$Res> {
-  factory $NotificationActionOpenParcelsListCopyWith(
-          NotificationActionOpenParcelsList value,
-          $Res Function(NotificationActionOpenParcelsList) then) =
-      _$NotificationActionOpenParcelsListCopyWithImpl<$Res>;
+abstract class _$$NotificationActionOpenParcelsListImplCopyWith<$Res> {
+  factory _$$NotificationActionOpenParcelsListImplCopyWith(
+          _$NotificationActionOpenParcelsListImpl value,
+          $Res Function(_$NotificationActionOpenParcelsListImpl) then) =
+      __$$NotificationActionOpenParcelsListImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$NotificationActionOpenParcelsListCopyWithImpl<$Res>
-    extends _$NotificationActionCopyWithImpl<$Res>
-    implements $NotificationActionOpenParcelsListCopyWith<$Res> {
-  _$NotificationActionOpenParcelsListCopyWithImpl(
-      NotificationActionOpenParcelsList _value,
-      $Res Function(NotificationActionOpenParcelsList) _then)
-      : super(_value, (v) => _then(v as NotificationActionOpenParcelsList));
-
-  @override
-  NotificationActionOpenParcelsList get _value =>
-      super._value as NotificationActionOpenParcelsList;
+class __$$NotificationActionOpenParcelsListImplCopyWithImpl<$Res>
+    extends _$NotificationActionCopyWithImpl<$Res,
+        _$NotificationActionOpenParcelsListImpl>
+    implements _$$NotificationActionOpenParcelsListImplCopyWith<$Res> {
+  __$$NotificationActionOpenParcelsListImplCopyWithImpl(
+      _$NotificationActionOpenParcelsListImpl _value,
+      $Res Function(_$NotificationActionOpenParcelsListImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$NotificationActionOpenParcelsList
+class _$NotificationActionOpenParcelsListImpl
     implements NotificationActionOpenParcelsList {
-  const _$NotificationActionOpenParcelsList();
+  const _$NotificationActionOpenParcelsListImpl({final String? $type})
+      : $type = $type ?? 'openParcelsList';
 
-  factory _$NotificationActionOpenParcelsList.fromJson(
+  factory _$NotificationActionOpenParcelsListImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$NotificationActionOpenParcelsListFromJson(json);
+      _$$NotificationActionOpenParcelsListImplFromJson(json);
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
 
   @override
   String toString() {
@@ -503,11 +495,13 @@ class _$NotificationActionOpenParcelsList
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is NotificationActionOpenParcelsList);
+        (other.runtimeType == runtimeType &&
+            other is _$NotificationActionOpenParcelsListImpl);
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -524,9 +518,9 @@ class _$NotificationActionOpenParcelsList
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(String trackNumber)? openParcelDetails,
-    TResult Function(CrashInfo info)? reportCrash,
-    TResult Function()? openParcelsList,
+    TResult? Function(String trackNumber)? openParcelDetails,
+    TResult? Function(CrashInfo info)? reportCrash,
+    TResult? Function()? openParcelsList,
   }) {
     return openParcelsList?.call();
   }
@@ -560,10 +554,10 @@ class _$NotificationActionOpenParcelsList
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(NotificationActionOpenParcelDetails value)?
+    TResult? Function(NotificationActionOpenParcelDetails value)?
         openParcelDetails,
-    TResult Function(NotificationActionReportCrash value)? reportCrash,
-    TResult Function(NotificationActionOpenParcelsList value)? openParcelsList,
+    TResult? Function(NotificationActionReportCrash value)? reportCrash,
+    TResult? Function(NotificationActionOpenParcelsList value)? openParcelsList,
   }) {
     return openParcelsList?.call(this);
   }
@@ -585,15 +579,17 @@ class _$NotificationActionOpenParcelsList
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$NotificationActionOpenParcelsListToJson(this)
-      ..['runtimeType'] = 'openParcelsList';
+    return _$$NotificationActionOpenParcelsListImplToJson(
+      this,
+    );
   }
 }
 
 abstract class NotificationActionOpenParcelsList implements NotificationAction {
   const factory NotificationActionOpenParcelsList() =
-      _$NotificationActionOpenParcelsList;
+      _$NotificationActionOpenParcelsListImpl;
 
   factory NotificationActionOpenParcelsList.fromJson(
-      Map<String, dynamic> json) = _$NotificationActionOpenParcelsList.fromJson;
+          Map<String, dynamic> json) =
+      _$NotificationActionOpenParcelsListImpl.fromJson;
 }

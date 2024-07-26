@@ -1,6 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'shipment_metadata.dart';
 
@@ -11,28 +12,7 @@ part of 'shipment_metadata.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$ShipmentStatusMetadataTearOff {
-  const _$ShipmentStatusMetadataTearOff();
-
-  _ShipmentStatusMetadata call(
-      {required ShipmentStatusType type,
-      required RRectIconData iconData,
-      required String emoji,
-      String? localizedName}) {
-    return _ShipmentStatusMetadata(
-      type: type,
-      iconData: iconData,
-      emoji: emoji,
-      localizedName: localizedName,
-    );
-  }
-}
-
-/// @nodoc
-const $ShipmentStatusMetadata = _$ShipmentStatusMetadataTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$ShipmentStatusMetadata {
@@ -50,7 +30,8 @@ mixin _$ShipmentStatusMetadata {
 abstract class $ShipmentStatusMetadataCopyWith<$Res> {
   factory $ShipmentStatusMetadataCopyWith(ShipmentStatusMetadata value,
           $Res Function(ShipmentStatusMetadata) then) =
-      _$ShipmentStatusMetadataCopyWithImpl<$Res>;
+      _$ShipmentStatusMetadataCopyWithImpl<$Res, ShipmentStatusMetadata>;
+  @useResult
   $Res call(
       {ShipmentStatusType type,
       RRectIconData iconData,
@@ -61,56 +42,62 @@ abstract class $ShipmentStatusMetadataCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ShipmentStatusMetadataCopyWithImpl<$Res>
+class _$ShipmentStatusMetadataCopyWithImpl<$Res,
+        $Val extends ShipmentStatusMetadata>
     implements $ShipmentStatusMetadataCopyWith<$Res> {
   _$ShipmentStatusMetadataCopyWithImpl(this._value, this._then);
 
-  final ShipmentStatusMetadata _value;
   // ignore: unused_field
-  final $Res Function(ShipmentStatusMetadata) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? type = freezed,
-    Object? iconData = freezed,
-    Object? emoji = freezed,
+    Object? type = null,
+    Object? iconData = null,
+    Object? emoji = null,
     Object? localizedName = freezed,
   }) {
     return _then(_value.copyWith(
-      type: type == freezed
+      type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as ShipmentStatusType,
-      iconData: iconData == freezed
+      iconData: null == iconData
           ? _value.iconData
           : iconData // ignore: cast_nullable_to_non_nullable
               as RRectIconData,
-      emoji: emoji == freezed
+      emoji: null == emoji
           ? _value.emoji
           : emoji // ignore: cast_nullable_to_non_nullable
               as String,
-      localizedName: localizedName == freezed
+      localizedName: freezed == localizedName
           ? _value.localizedName
           : localizedName // ignore: cast_nullable_to_non_nullable
               as String?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $RRectIconDataCopyWith<$Res> get iconData {
     return $RRectIconDataCopyWith<$Res>(_value.iconData, (value) {
-      return _then(_value.copyWith(iconData: value));
+      return _then(_value.copyWith(iconData: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$ShipmentStatusMetadataCopyWith<$Res>
+abstract class _$$ShipmentStatusMetadataImplCopyWith<$Res>
     implements $ShipmentStatusMetadataCopyWith<$Res> {
-  factory _$ShipmentStatusMetadataCopyWith(_ShipmentStatusMetadata value,
-          $Res Function(_ShipmentStatusMetadata) then) =
-      __$ShipmentStatusMetadataCopyWithImpl<$Res>;
+  factory _$$ShipmentStatusMetadataImplCopyWith(
+          _$ShipmentStatusMetadataImpl value,
+          $Res Function(_$ShipmentStatusMetadataImpl) then) =
+      __$$ShipmentStatusMetadataImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {ShipmentStatusType type,
       RRectIconData iconData,
@@ -122,37 +109,37 @@ abstract class _$ShipmentStatusMetadataCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ShipmentStatusMetadataCopyWithImpl<$Res>
-    extends _$ShipmentStatusMetadataCopyWithImpl<$Res>
-    implements _$ShipmentStatusMetadataCopyWith<$Res> {
-  __$ShipmentStatusMetadataCopyWithImpl(_ShipmentStatusMetadata _value,
-      $Res Function(_ShipmentStatusMetadata) _then)
-      : super(_value, (v) => _then(v as _ShipmentStatusMetadata));
+class __$$ShipmentStatusMetadataImplCopyWithImpl<$Res>
+    extends _$ShipmentStatusMetadataCopyWithImpl<$Res,
+        _$ShipmentStatusMetadataImpl>
+    implements _$$ShipmentStatusMetadataImplCopyWith<$Res> {
+  __$$ShipmentStatusMetadataImplCopyWithImpl(
+      _$ShipmentStatusMetadataImpl _value,
+      $Res Function(_$ShipmentStatusMetadataImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _ShipmentStatusMetadata get _value => super._value as _ShipmentStatusMetadata;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? type = freezed,
-    Object? iconData = freezed,
-    Object? emoji = freezed,
+    Object? type = null,
+    Object? iconData = null,
+    Object? emoji = null,
     Object? localizedName = freezed,
   }) {
-    return _then(_ShipmentStatusMetadata(
-      type: type == freezed
+    return _then(_$ShipmentStatusMetadataImpl(
+      type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as ShipmentStatusType,
-      iconData: iconData == freezed
+      iconData: null == iconData
           ? _value.iconData
           : iconData // ignore: cast_nullable_to_non_nullable
               as RRectIconData,
-      emoji: emoji == freezed
+      emoji: null == emoji
           ? _value.emoji
           : emoji // ignore: cast_nullable_to_non_nullable
               as String,
-      localizedName: localizedName == freezed
+      localizedName: freezed == localizedName
           ? _value.localizedName
           : localizedName // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -162,8 +149,8 @@ class __$ShipmentStatusMetadataCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_ShipmentStatusMetadata implements _ShipmentStatusMetadata {
-  const _$_ShipmentStatusMetadata(
+class _$ShipmentStatusMetadataImpl implements _ShipmentStatusMetadata {
+  const _$ShipmentStatusMetadataImpl(
       {required this.type,
       required this.iconData,
       required this.emoji,
@@ -184,53 +171,47 @@ class _$_ShipmentStatusMetadata implements _ShipmentStatusMetadata {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is _ShipmentStatusMetadata &&
-            (identical(other.type, type) ||
-                const DeepCollectionEquality().equals(other.type, type)) &&
+        (other.runtimeType == runtimeType &&
+            other is _$ShipmentStatusMetadataImpl &&
+            (identical(other.type, type) || other.type == type) &&
             (identical(other.iconData, iconData) ||
-                const DeepCollectionEquality()
-                    .equals(other.iconData, iconData)) &&
-            (identical(other.emoji, emoji) ||
-                const DeepCollectionEquality().equals(other.emoji, emoji)) &&
+                other.iconData == iconData) &&
+            (identical(other.emoji, emoji) || other.emoji == emoji) &&
             (identical(other.localizedName, localizedName) ||
-                const DeepCollectionEquality()
-                    .equals(other.localizedName, localizedName)));
+                other.localizedName == localizedName));
   }
 
   @override
   int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(type) ^
-      const DeepCollectionEquality().hash(iconData) ^
-      const DeepCollectionEquality().hash(emoji) ^
-      const DeepCollectionEquality().hash(localizedName);
+      Object.hash(runtimeType, type, iconData, emoji, localizedName);
 
   @JsonKey(ignore: true)
   @override
-  _$ShipmentStatusMetadataCopyWith<_ShipmentStatusMetadata> get copyWith =>
-      __$ShipmentStatusMetadataCopyWithImpl<_ShipmentStatusMetadata>(
-          this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$ShipmentStatusMetadataImplCopyWith<_$ShipmentStatusMetadataImpl>
+      get copyWith => __$$ShipmentStatusMetadataImplCopyWithImpl<
+          _$ShipmentStatusMetadataImpl>(this, _$identity);
 }
 
 abstract class _ShipmentStatusMetadata implements ShipmentStatusMetadata {
   const factory _ShipmentStatusMetadata(
-      {required ShipmentStatusType type,
-      required RRectIconData iconData,
-      required String emoji,
-      String? localizedName}) = _$_ShipmentStatusMetadata;
+      {required final ShipmentStatusType type,
+      required final RRectIconData iconData,
+      required final String emoji,
+      final String? localizedName}) = _$ShipmentStatusMetadataImpl;
 
   @override
-  ShipmentStatusType get type => throw _privateConstructorUsedError;
+  ShipmentStatusType get type;
   @override
-  RRectIconData get iconData => throw _privateConstructorUsedError;
+  RRectIconData get iconData;
   @override
-  String get emoji => throw _privateConstructorUsedError;
+  String get emoji;
   @override
-  String? get localizedName => throw _privateConstructorUsedError;
+  String? get localizedName;
   @override
   @JsonKey(ignore: true)
-  _$ShipmentStatusMetadataCopyWith<_ShipmentStatusMetadata> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$ShipmentStatusMetadataImplCopyWith<_$ShipmentStatusMetadataImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

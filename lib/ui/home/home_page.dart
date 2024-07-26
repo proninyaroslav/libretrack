@@ -33,10 +33,10 @@ class HomePage extends StatefulWidget {
   final HomeRoutePath initRoute;
 
   const HomePage({
-    Key? key,
+    super.key,
     this.onLoadRoute,
     required this.initRoute,
-  }) : super(key: key);
+  });
 
   @override
   _HomePageState createState() => _HomePageState();
@@ -66,7 +66,7 @@ class _HomePageState extends State<HomePage> {
       items: [
         NavItem.page(
           name: S.of(context).parcels,
-          icon: const Icon(MdiIcons.packageVariantClosed),
+          icon: Icon(MdiIcons.packageVariantClosed),
           pageInfo: PageInfo(
             id: _pageIdMap[const HomeRoutePath.parcels()]!,
             page: Unfocus(
@@ -122,7 +122,7 @@ class _HomePageState extends State<HomePage> {
         ),
         NavItem.page(
           name: S.of(context).accounts,
-          icon: const Icon(MdiIcons.accountBoxMultiple),
+          icon: Icon(MdiIcons.accountBoxMultiple),
           pageInfo: PageInfo(
             id: _pageIdMap[const HomeRoutePath.accounts()]!,
             appBarTitle: Text(S.of(context).accounts),

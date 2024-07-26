@@ -7,7 +7,7 @@
 // ignore_for_file:unnecessary_brace_in_string_interps, unnecessary_new
 // ignore_for_file:prefer_single_quotes,comment_references, directives_ordering
 // ignore_for_file:annotate_overrides,prefer_generic_function_type_aliases
-// ignore_for_file:unused_import, file_names, avoid_escaping_inner_quotes
+// ignore_for_file:unused_import, file_names
 
 import 'package:intl/intl.dart';
 import 'package:intl/message_lookup_by_library.dart';
@@ -19,74 +19,74 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'sk_SK';
 
-  static String m0(value) => "${value} bbl";
+  static m0(value) => "${value} bbl";
 
-  static String m1(email, pageUrl) =>
+  static m1(email, pageUrl) =>
       "Nenašiel sa email. Môžete chybu manuálne skopírovať a poslať na ${email}\nalebo na stránku projektu ${pageUrl}";
 
-  static String m2(howMany) =>
+  static m2(howMany) =>
       "${Intl.plural(howMany, one: 'Naozaj chcete zmazať tento balík?', other: 'Naozaj chcete zmazať tieto balíky?')}";
 
-  static String m3(howMany) =>
+  static m3(howMany) =>
       "${Intl.plural(howMany, one: 'Nepodarilo sa zmazať balík', other: 'FNepodarilo sa zmazať balík')}";
 
-  static String m4(value) => "${value} gal";
+  static m4(value) => "${value} gal";
 
-  static String m5(error) => "Neporarilo sa vygenerovať čiarový kód: ${error}";
+  static m5(error) => "Neporarilo sa vygenerovať čiarový kód: ${error}";
 
-  static String m6(value) => "${value} h.";
+  static m6(value) => "${value} h.";
 
-  static String m7(value) => "${value} kg";
+  static m7(value) => "${value} kg";
 
-  static String m8(date) => "Posledné sledovanie: ${date}";
+  static m8(date) => "Posledné sledovanie: ${date}";
 
-  static String m9(value) => "${value} L";
+  static m9(value) => "${value} L";
 
-  static String m10(howMany) =>
+  static m10(howMany) =>
       "${Intl.plural(howMany, one: 'Nepodarilo sa označiť ako prečítané', other: 'Nepodarilo sa označiť ako prečítané')}";
 
-  static String m11(value) => "${value} min.";
+  static m11(value) => "${value} min.";
 
-  static String m12(howMany) =>
+  static m12(howMany) =>
       "${Intl.plural(howMany, one: 'Nepodarilo sa presunúť balík', other: 'Nepodarilo sa presunúť balík')}";
 
-  static String m13(value) => "${value} oz";
+  static m13(value) => "${value} oz";
 
-  static String m14(date) => "Balík doručený ${date}";
+  static m14(date) => "Balík doručený ${date}";
 
-  static String m15(days) =>
+  static m15(days) =>
       "${Intl.plural(days, zero: 'Balík v preprave ${days} dní', one: 'Balík v preprave ${days} deň', few: 'Balík v preprave ${days} dni', many: 'Balík v preprave ${days} dní', other: 'Balík v preprave ${days} dní')}";
 
-  static String m16(name) => "Podpísal: ${name}";
+  static m16(name) => "Podpísal: ${name}";
 
-  static String m17(time) =>
+  static m17(time) =>
       "Sledovanie nie je dostupné, lebo od posledného sledovania neuplynulo dosť času. Skúste znova po ${time}";
 
-  static String m18(parcelName) => "• ${parcelName}";
+  static m18(parcelName) => "• ${parcelName}";
 
-  static String m19(title, body) => "${title}: ${body}";
+  static m19(title, body) => "${title}: ${body}";
 
-  static String m20(value) => "${value} lb";
+  static m20(value) => "${value} lb";
 
-  static String m21(howMany) =>
+  static m21(howMany) =>
       "${Intl.plural(howMany, one: 'Nepodarilo sa obnoviť balík', other: 'Nepodarilo sa obnoviť balíky')}";
 
-  static String m22(value) => "${value} sek.";
+  static m22(value) => "${value} sek.";
 
-  static String m23(count) => "Vybraté: ${count}";
+  static m23(count) => "Vybraté: ${count}";
 
-  static String m24(time) => "Nie častejšie ako ${time}";
+  static m24(time) => "Nie častejšie ako ${time}";
 
-  static String m25(value) => "${value} ft²";
+  static m25(value) => "${value} ft²";
 
-  static String m26(value) => "${value} m²";
+  static m26(value) => "${value} m²";
 
-  static String m27(value) => "${value} yd²";
+  static m27(value) => "${value} yd²";
 
-  static String m28(date) => "Sledovanie začalo: ${date}";
+  static m28(date) => "Sledovanie začalo: ${date}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
-  static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+  static _notInlinedMessages(_) => <String, Function>{
         "aboutApp": MessageLookupByLibrary.simpleMessage("O aplikácii"),
         "accessKey": MessageLookupByLibrary.simpleMessage("Prístupový kľúč"),
         "accounts": MessageLookupByLibrary.simpleMessage("Účty"),

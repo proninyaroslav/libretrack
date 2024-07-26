@@ -29,9 +29,9 @@ class EditParcelPage extends StatefulWidget {
   final TrackNumberInfo trackInfo;
 
   const EditParcelPage({
-    Key? key,
+    super.key,
     required this.trackInfo,
-  }) : super(key: key);
+  });
 
   @override
   _EditParcelPageState createState() => _EditParcelPageState();
@@ -86,9 +86,8 @@ class _ApplyButton extends StatelessWidget {
   final TrackNumberInfo trackInfo;
 
   const _ApplyButton({
-    Key? key,
     required this.trackInfo,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -97,7 +96,7 @@ class _ApplyButton extends StatelessWidget {
         state.maybeWhen(
           edited: (name) => Navigator.of(context).pop(),
           editFailed: (name, e, stackTrace) {
-            log().e("Unable to edit parcel", e, stackTrace);
+            log().e("Unable to edit parcel", error: e, stackTrace: stackTrace);
             Toast.of(context).show(
               text: S.of(context).editParcelFailed,
             );

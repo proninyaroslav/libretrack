@@ -20,7 +20,6 @@ import 'package:equatable/equatable.dart';
 import 'package:floor/floor.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-import 'address.dart';
 import 'converter/converter.dart';
 import 'entity.dart';
 

@@ -208,28 +208,28 @@ class ParcelsCubit extends Cubit<ParcelsState> {
     List<ShipmentActivityInfo>? activityList,
   }) async {
     try {
-      final List<TrackNumberInfo> _trackList = trackList ??
+      final List<TrackNumberInfo> trackList0 = trackList ??
           await _trackRepo.getAllTracks().then(
                 (res) => res.when(
                   (value) => value,
                   error: (e) => throw e,
                 ),
               );
-      final List<TrackNumberService> _trackServiceList = trackServiceList ??
+      final List<TrackNumberService> trackServiceList0 = trackServiceList ??
           await _trackRepo.getAllTrackNumberServices().then(
                 (res) => res.when(
                   (value) => value,
                   error: (e) => throw e,
                 ),
               );
-      final List<TrackingInfo> _trackingList = trackingList ??
+      final List<TrackingInfo> trackingList0 = trackingList ??
           await _trackingRepo.getAllTrackingInfo().then(
                 (res) => res.when(
                   (value) => value,
                   error: (e) => throw e,
                 ),
               );
-      final List<ShipmentActivityInfo> _activityList = activityList ??
+      final List<ShipmentActivityInfo> activityList0 = activityList ??
           await _shipmentRepo.getAllActivities().then(
                 (res) => res.when(
                   (value) => value,
@@ -237,13 +237,13 @@ class ParcelsCubit extends Cubit<ParcelsState> {
                 ),
               );
 
-      final trackServiceMap = _mapTrackToTrackServiceList(_trackServiceList);
-      final lastTrackingInfoMap = _mapTrackToLastTrackingInfo(_trackingList);
-      final lastActivityMap = _mapTrackToLastActivity(_activityList);
+      final trackServiceMap = _mapTrackToTrackServiceList(trackServiceList0);
+      final lastTrackingInfoMap = _mapTrackToLastTrackingInfo(trackingList0);
+      final lastActivityMap = _mapTrackToLastActivity(activityList0);
       final lastTrackingResponseMap = await _mapTrackToLastTrackingResponse(
         lastTrackingInfoMap,
       );
-      final infoList = _trackList.map((trackInfo) {
+      final infoList = trackList0.map((trackInfo) {
         return ParcelInfo(
           trackInfo: trackInfo,
           trackServices: trackServiceMap[trackInfo.trackNumber] ?? [],
@@ -319,7 +319,7 @@ class ParcelsCubit extends Cubit<ParcelsState> {
 }
 
 @freezed
-class _BuildResult with _$_BuildResult {
+class _BuildResult with _$BuildResult {
   const factory _BuildResult({
     required List<ParcelInfo> infoList,
   }) = _BuildResultData;

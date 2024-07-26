@@ -25,7 +25,6 @@ import 'package:libretrack/ui/add_parcels/add_parcels_cubit.dart';
 import 'package:libretrack/ui/crash_report_dialog/send_report_error_dialog.dart';
 import 'package:libretrack/ui/cubit/error_report_cubit.dart';
 import 'package:libretrack/ui/utils/utils.dart';
-import 'package:libretrack/ui/widget/adaptive_scaffold.dart';
 import 'package:libretrack/ui/widget/widget.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
@@ -37,10 +36,10 @@ class AddParcelsPage extends StatelessWidget {
   final VoidCallback? onAdd;
 
   const AddParcelsPage({
-    Key? key,
+    super.key,
     this.initialTrackNumbers,
     this.onAdd,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -125,7 +124,7 @@ class AddParcelsPage extends StatelessWidget {
     StackTrace? stackTrace,
   ) {
     const msg = 'Failed to add parcels';
-    log().e(msg, e, stackTrace);
+    log().e(msg, error: e, stackTrace: stackTrace);
 
     final reportCubit = context.read<ErrorReportCubit>();
     showDialog(
@@ -182,7 +181,7 @@ class _Form extends StatefulWidget {
     UiUtils.fabBottomMargin,
   );
 
-  const _Form({Key? key, this.trackNumbers}) : super(key: key);
+  const _Form({this.trackNumbers});
 
   @override
   _FormState createState() => _FormState();
@@ -332,7 +331,6 @@ class _MultilineFormField extends StatelessWidget {
   final bool autocorrect;
 
   const _MultilineFormField({
-    Key? key,
     this.labelText,
     this.hintText,
     this.errorText,
@@ -341,11 +339,11 @@ class _MultilineFormField extends StatelessWidget {
     this.textCapitalization = TextCapitalization.none,
     this.enableSuggestions = true,
     this.autocorrect = true,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
-    final style = Theme.of(context).textTheme.subtitle1!;
+    final style = Theme.of(context).textTheme.titleMedium!;
     return NumberedTextField(
       controller: controller,
       decoration: InputDecoration(
@@ -367,10 +365,9 @@ class _BarcodeScanButton extends StatelessWidget {
   final VoidCallback? onScanned;
 
   const _BarcodeScanButton({
-    Key? key,
     required this.controller,
     this.onScanned,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -380,13 +377,13 @@ class _BarcodeScanButton extends StatelessWidget {
           try {
             await _scan();
           } on BarcodeScannerException catch (e, stackTrace) {
-            log().e('Failed to scan barcode', e, stackTrace);
+            log().e('Failed to scan barcode', error: e, stackTrace: stackTrace);
             AdaptiveScaffold.of(context).showAdaptiveToast(
               text: S.of(context).barcodeScanFailed,
             );
           }
         },
-        icon: const Icon(MdiIcons.barcodeScan),
+        icon: Icon(MdiIcons.barcodeScan),
         label: Text(S.of(context).barcodeScanner),
       ),
     );

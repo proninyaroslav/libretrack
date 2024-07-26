@@ -36,11 +36,12 @@ final navigatorKey = GlobalKey<NavigatorState>();
 
 Future<void> _main() async {
   await initInjector(kDebugMode ? Env.dev : Env.prod);
-  GestureBinding.instance!.resamplingEnabled = true;
+  GestureBinding.instance.resamplingEnabled = true;
 
   await getIt<SystemTray>().init();
   getIt<AppDatabaseIsolateBinder>().listenChanges();
   await getIt<NotificationManager>().init();
+  getIt<NotificationManager>().requestPermissions();
   await getIt<WorkManager>().init();
   await getIt<TrackingScheduler>().init();
 

@@ -23,10 +23,10 @@ class SectionHeader extends StatelessWidget {
   final String title;
 
   const SectionHeader({
-    Key? key,
+    super.key,
     required this.icon,
     required this.title,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +39,7 @@ class SectionHeader extends StatelessWidget {
             title.toUpperCase(),
             style: Theme.of(context)
                 .textTheme
-                .overline!
+                .labelSmall!
                 .copyWith(fontSize: 14.0, fontWeight: FontWeight.w500),
           ),
         ),

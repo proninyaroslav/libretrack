@@ -1,6 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'accounts_actions_cubit.dart';
 
@@ -11,33 +12,7 @@ part of 'accounts_actions_cubit.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$AccountsActionsStateTearOff {
-  const _$AccountsActionsStateTearOff();
-
-  AccountsActionsStateInitial initial() {
-    return const AccountsActionsStateInitial();
-  }
-
-  AccountsActionsStateDeleting deleting() {
-    return const AccountsActionsStateDeleting();
-  }
-
-  AccountsActionsStateDeleteSuccess deleteSuccess() {
-    return const AccountsActionsStateDeleteSuccess();
-  }
-
-  AccountsActionsStateDeleteFailed deleteFailed({required StorageError error}) {
-    return AccountsActionsStateDeleteFailed(
-      error: error,
-    );
-  }
-}
-
-/// @nodoc
-const $AccountsActionsState = _$AccountsActionsStateTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$AccountsActionsState {
@@ -51,10 +26,10 @@ mixin _$AccountsActionsState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? deleting,
-    TResult Function()? deleteSuccess,
-    TResult Function(StorageError error)? deleteFailed,
+    TResult? Function()? initial,
+    TResult? Function()? deleting,
+    TResult? Function()? deleteSuccess,
+    TResult? Function(StorageError error)? deleteFailed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -78,10 +53,10 @@ mixin _$AccountsActionsState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(AccountsActionsStateInitial value)? initial,
-    TResult Function(AccountsActionsStateDeleting value)? deleting,
-    TResult Function(AccountsActionsStateDeleteSuccess value)? deleteSuccess,
-    TResult Function(AccountsActionsStateDeleteFailed value)? deleteFailed,
+    TResult? Function(AccountsActionsStateInitial value)? initial,
+    TResult? Function(AccountsActionsStateDeleting value)? deleting,
+    TResult? Function(AccountsActionsStateDeleteSuccess value)? deleteSuccess,
+    TResult? Function(AccountsActionsStateDeleteFailed value)? deleteFailed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -99,46 +74,46 @@ mixin _$AccountsActionsState {
 abstract class $AccountsActionsStateCopyWith<$Res> {
   factory $AccountsActionsStateCopyWith(AccountsActionsState value,
           $Res Function(AccountsActionsState) then) =
-      _$AccountsActionsStateCopyWithImpl<$Res>;
+      _$AccountsActionsStateCopyWithImpl<$Res, AccountsActionsState>;
 }
 
 /// @nodoc
-class _$AccountsActionsStateCopyWithImpl<$Res>
+class _$AccountsActionsStateCopyWithImpl<$Res,
+        $Val extends AccountsActionsState>
     implements $AccountsActionsStateCopyWith<$Res> {
   _$AccountsActionsStateCopyWithImpl(this._value, this._then);
 
-  final AccountsActionsState _value;
   // ignore: unused_field
-  final $Res Function(AccountsActionsState) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 }
 
 /// @nodoc
-abstract class $AccountsActionsStateInitialCopyWith<$Res> {
-  factory $AccountsActionsStateInitialCopyWith(
-          AccountsActionsStateInitial value,
-          $Res Function(AccountsActionsStateInitial) then) =
-      _$AccountsActionsStateInitialCopyWithImpl<$Res>;
+abstract class _$$AccountsActionsStateInitialImplCopyWith<$Res> {
+  factory _$$AccountsActionsStateInitialImplCopyWith(
+          _$AccountsActionsStateInitialImpl value,
+          $Res Function(_$AccountsActionsStateInitialImpl) then) =
+      __$$AccountsActionsStateInitialImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$AccountsActionsStateInitialCopyWithImpl<$Res>
-    extends _$AccountsActionsStateCopyWithImpl<$Res>
-    implements $AccountsActionsStateInitialCopyWith<$Res> {
-  _$AccountsActionsStateInitialCopyWithImpl(AccountsActionsStateInitial _value,
-      $Res Function(AccountsActionsStateInitial) _then)
-      : super(_value, (v) => _then(v as AccountsActionsStateInitial));
-
-  @override
-  AccountsActionsStateInitial get _value =>
-      super._value as AccountsActionsStateInitial;
+class __$$AccountsActionsStateInitialImplCopyWithImpl<$Res>
+    extends _$AccountsActionsStateCopyWithImpl<$Res,
+        _$AccountsActionsStateInitialImpl>
+    implements _$$AccountsActionsStateInitialImplCopyWith<$Res> {
+  __$$AccountsActionsStateInitialImplCopyWithImpl(
+      _$AccountsActionsStateInitialImpl _value,
+      $Res Function(_$AccountsActionsStateInitialImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$AccountsActionsStateInitial
+class _$AccountsActionsStateInitialImpl
     with DiagnosticableTreeMixin
     implements AccountsActionsStateInitial {
-  const _$AccountsActionsStateInitial();
+  const _$AccountsActionsStateInitialImpl();
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
@@ -148,13 +123,14 @@ class _$AccountsActionsStateInitial
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'AccountsActionsState.initial'));
+    properties.add(DiagnosticsProperty('type', 'AccountsActionsState.initial'));
   }
 
   @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) || (other is AccountsActionsStateInitial);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AccountsActionsStateInitialImpl);
   }
 
   @override
@@ -174,10 +150,10 @@ class _$AccountsActionsStateInitial
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? deleting,
-    TResult Function()? deleteSuccess,
-    TResult Function(StorageError error)? deleteFailed,
+    TResult? Function()? initial,
+    TResult? Function()? deleting,
+    TResult? Function()? deleteSuccess,
+    TResult? Function(StorageError error)? deleteFailed,
   }) {
     return initial?.call();
   }
@@ -213,10 +189,10 @@ class _$AccountsActionsStateInitial
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(AccountsActionsStateInitial value)? initial,
-    TResult Function(AccountsActionsStateDeleting value)? deleting,
-    TResult Function(AccountsActionsStateDeleteSuccess value)? deleteSuccess,
-    TResult Function(AccountsActionsStateDeleteFailed value)? deleteFailed,
+    TResult? Function(AccountsActionsStateInitial value)? initial,
+    TResult? Function(AccountsActionsStateDeleting value)? deleting,
+    TResult? Function(AccountsActionsStateDeleteSuccess value)? deleteSuccess,
+    TResult? Function(AccountsActionsStateDeleteFailed value)? deleteFailed,
   }) {
     return initial?.call(this);
   }
@@ -238,37 +214,35 @@ class _$AccountsActionsStateInitial
 }
 
 abstract class AccountsActionsStateInitial implements AccountsActionsState {
-  const factory AccountsActionsStateInitial() = _$AccountsActionsStateInitial;
+  const factory AccountsActionsStateInitial() =
+      _$AccountsActionsStateInitialImpl;
 }
 
 /// @nodoc
-abstract class $AccountsActionsStateDeletingCopyWith<$Res> {
-  factory $AccountsActionsStateDeletingCopyWith(
-          AccountsActionsStateDeleting value,
-          $Res Function(AccountsActionsStateDeleting) then) =
-      _$AccountsActionsStateDeletingCopyWithImpl<$Res>;
+abstract class _$$AccountsActionsStateDeletingImplCopyWith<$Res> {
+  factory _$$AccountsActionsStateDeletingImplCopyWith(
+          _$AccountsActionsStateDeletingImpl value,
+          $Res Function(_$AccountsActionsStateDeletingImpl) then) =
+      __$$AccountsActionsStateDeletingImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$AccountsActionsStateDeletingCopyWithImpl<$Res>
-    extends _$AccountsActionsStateCopyWithImpl<$Res>
-    implements $AccountsActionsStateDeletingCopyWith<$Res> {
-  _$AccountsActionsStateDeletingCopyWithImpl(
-      AccountsActionsStateDeleting _value,
-      $Res Function(AccountsActionsStateDeleting) _then)
-      : super(_value, (v) => _then(v as AccountsActionsStateDeleting));
-
-  @override
-  AccountsActionsStateDeleting get _value =>
-      super._value as AccountsActionsStateDeleting;
+class __$$AccountsActionsStateDeletingImplCopyWithImpl<$Res>
+    extends _$AccountsActionsStateCopyWithImpl<$Res,
+        _$AccountsActionsStateDeletingImpl>
+    implements _$$AccountsActionsStateDeletingImplCopyWith<$Res> {
+  __$$AccountsActionsStateDeletingImplCopyWithImpl(
+      _$AccountsActionsStateDeletingImpl _value,
+      $Res Function(_$AccountsActionsStateDeletingImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$AccountsActionsStateDeleting
+class _$AccountsActionsStateDeletingImpl
     with DiagnosticableTreeMixin
     implements AccountsActionsStateDeleting {
-  const _$AccountsActionsStateDeleting();
+  const _$AccountsActionsStateDeletingImpl();
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
@@ -279,12 +253,14 @@ class _$AccountsActionsStateDeleting
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
     properties
-      ..add(DiagnosticsProperty('type', 'AccountsActionsState.deleting'));
+        .add(DiagnosticsProperty('type', 'AccountsActionsState.deleting'));
   }
 
   @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) || (other is AccountsActionsStateDeleting);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AccountsActionsStateDeletingImpl);
   }
 
   @override
@@ -304,10 +280,10 @@ class _$AccountsActionsStateDeleting
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? deleting,
-    TResult Function()? deleteSuccess,
-    TResult Function(StorageError error)? deleteFailed,
+    TResult? Function()? initial,
+    TResult? Function()? deleting,
+    TResult? Function()? deleteSuccess,
+    TResult? Function(StorageError error)? deleteFailed,
   }) {
     return deleting?.call();
   }
@@ -343,10 +319,10 @@ class _$AccountsActionsStateDeleting
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(AccountsActionsStateInitial value)? initial,
-    TResult Function(AccountsActionsStateDeleting value)? deleting,
-    TResult Function(AccountsActionsStateDeleteSuccess value)? deleteSuccess,
-    TResult Function(AccountsActionsStateDeleteFailed value)? deleteFailed,
+    TResult? Function(AccountsActionsStateInitial value)? initial,
+    TResult? Function(AccountsActionsStateDeleting value)? deleting,
+    TResult? Function(AccountsActionsStateDeleteSuccess value)? deleteSuccess,
+    TResult? Function(AccountsActionsStateDeleteFailed value)? deleteFailed,
   }) {
     return deleting?.call(this);
   }
@@ -368,37 +344,35 @@ class _$AccountsActionsStateDeleting
 }
 
 abstract class AccountsActionsStateDeleting implements AccountsActionsState {
-  const factory AccountsActionsStateDeleting() = _$AccountsActionsStateDeleting;
+  const factory AccountsActionsStateDeleting() =
+      _$AccountsActionsStateDeletingImpl;
 }
 
 /// @nodoc
-abstract class $AccountsActionsStateDeleteSuccessCopyWith<$Res> {
-  factory $AccountsActionsStateDeleteSuccessCopyWith(
-          AccountsActionsStateDeleteSuccess value,
-          $Res Function(AccountsActionsStateDeleteSuccess) then) =
-      _$AccountsActionsStateDeleteSuccessCopyWithImpl<$Res>;
+abstract class _$$AccountsActionsStateDeleteSuccessImplCopyWith<$Res> {
+  factory _$$AccountsActionsStateDeleteSuccessImplCopyWith(
+          _$AccountsActionsStateDeleteSuccessImpl value,
+          $Res Function(_$AccountsActionsStateDeleteSuccessImpl) then) =
+      __$$AccountsActionsStateDeleteSuccessImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$AccountsActionsStateDeleteSuccessCopyWithImpl<$Res>
-    extends _$AccountsActionsStateCopyWithImpl<$Res>
-    implements $AccountsActionsStateDeleteSuccessCopyWith<$Res> {
-  _$AccountsActionsStateDeleteSuccessCopyWithImpl(
-      AccountsActionsStateDeleteSuccess _value,
-      $Res Function(AccountsActionsStateDeleteSuccess) _then)
-      : super(_value, (v) => _then(v as AccountsActionsStateDeleteSuccess));
-
-  @override
-  AccountsActionsStateDeleteSuccess get _value =>
-      super._value as AccountsActionsStateDeleteSuccess;
+class __$$AccountsActionsStateDeleteSuccessImplCopyWithImpl<$Res>
+    extends _$AccountsActionsStateCopyWithImpl<$Res,
+        _$AccountsActionsStateDeleteSuccessImpl>
+    implements _$$AccountsActionsStateDeleteSuccessImplCopyWith<$Res> {
+  __$$AccountsActionsStateDeleteSuccessImplCopyWithImpl(
+      _$AccountsActionsStateDeleteSuccessImpl _value,
+      $Res Function(_$AccountsActionsStateDeleteSuccessImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$AccountsActionsStateDeleteSuccess
+class _$AccountsActionsStateDeleteSuccessImpl
     with DiagnosticableTreeMixin
     implements AccountsActionsStateDeleteSuccess {
-  const _$AccountsActionsStateDeleteSuccess();
+  const _$AccountsActionsStateDeleteSuccessImpl();
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
@@ -409,13 +383,14 @@ class _$AccountsActionsStateDeleteSuccess
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
     properties
-      ..add(DiagnosticsProperty('type', 'AccountsActionsState.deleteSuccess'));
+        .add(DiagnosticsProperty('type', 'AccountsActionsState.deleteSuccess'));
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is AccountsActionsStateDeleteSuccess);
+        (other.runtimeType == runtimeType &&
+            other is _$AccountsActionsStateDeleteSuccessImpl);
   }
 
   @override
@@ -435,10 +410,10 @@ class _$AccountsActionsStateDeleteSuccess
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? deleting,
-    TResult Function()? deleteSuccess,
-    TResult Function(StorageError error)? deleteFailed,
+    TResult? Function()? initial,
+    TResult? Function()? deleting,
+    TResult? Function()? deleteSuccess,
+    TResult? Function(StorageError error)? deleteFailed,
   }) {
     return deleteSuccess?.call();
   }
@@ -474,10 +449,10 @@ class _$AccountsActionsStateDeleteSuccess
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(AccountsActionsStateInitial value)? initial,
-    TResult Function(AccountsActionsStateDeleting value)? deleting,
-    TResult Function(AccountsActionsStateDeleteSuccess value)? deleteSuccess,
-    TResult Function(AccountsActionsStateDeleteFailed value)? deleteFailed,
+    TResult? Function(AccountsActionsStateInitial value)? initial,
+    TResult? Function(AccountsActionsStateDeleting value)? deleting,
+    TResult? Function(AccountsActionsStateDeleteSuccess value)? deleteSuccess,
+    TResult? Function(AccountsActionsStateDeleteFailed value)? deleteFailed,
   }) {
     return deleteSuccess?.call(this);
   }
@@ -501,39 +476,38 @@ class _$AccountsActionsStateDeleteSuccess
 abstract class AccountsActionsStateDeleteSuccess
     implements AccountsActionsState {
   const factory AccountsActionsStateDeleteSuccess() =
-      _$AccountsActionsStateDeleteSuccess;
+      _$AccountsActionsStateDeleteSuccessImpl;
 }
 
 /// @nodoc
-abstract class $AccountsActionsStateDeleteFailedCopyWith<$Res> {
-  factory $AccountsActionsStateDeleteFailedCopyWith(
-          AccountsActionsStateDeleteFailed value,
-          $Res Function(AccountsActionsStateDeleteFailed) then) =
-      _$AccountsActionsStateDeleteFailedCopyWithImpl<$Res>;
+abstract class _$$AccountsActionsStateDeleteFailedImplCopyWith<$Res> {
+  factory _$$AccountsActionsStateDeleteFailedImplCopyWith(
+          _$AccountsActionsStateDeleteFailedImpl value,
+          $Res Function(_$AccountsActionsStateDeleteFailedImpl) then) =
+      __$$AccountsActionsStateDeleteFailedImplCopyWithImpl<$Res>;
+  @useResult
   $Res call({StorageError error});
 
   $StorageErrorCopyWith<$Res> get error;
 }
 
 /// @nodoc
-class _$AccountsActionsStateDeleteFailedCopyWithImpl<$Res>
-    extends _$AccountsActionsStateCopyWithImpl<$Res>
-    implements $AccountsActionsStateDeleteFailedCopyWith<$Res> {
-  _$AccountsActionsStateDeleteFailedCopyWithImpl(
-      AccountsActionsStateDeleteFailed _value,
-      $Res Function(AccountsActionsStateDeleteFailed) _then)
-      : super(_value, (v) => _then(v as AccountsActionsStateDeleteFailed));
+class __$$AccountsActionsStateDeleteFailedImplCopyWithImpl<$Res>
+    extends _$AccountsActionsStateCopyWithImpl<$Res,
+        _$AccountsActionsStateDeleteFailedImpl>
+    implements _$$AccountsActionsStateDeleteFailedImplCopyWith<$Res> {
+  __$$AccountsActionsStateDeleteFailedImplCopyWithImpl(
+      _$AccountsActionsStateDeleteFailedImpl _value,
+      $Res Function(_$AccountsActionsStateDeleteFailedImpl) _then)
+      : super(_value, _then);
 
-  @override
-  AccountsActionsStateDeleteFailed get _value =>
-      super._value as AccountsActionsStateDeleteFailed;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? error = freezed,
+    Object? error = null,
   }) {
-    return _then(AccountsActionsStateDeleteFailed(
-      error: error == freezed
+    return _then(_$AccountsActionsStateDeleteFailedImpl(
+      error: null == error
           ? _value.error
           : error // ignore: cast_nullable_to_non_nullable
               as StorageError,
@@ -541,6 +515,7 @@ class _$AccountsActionsStateDeleteFailedCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $StorageErrorCopyWith<$Res> get error {
     return $StorageErrorCopyWith<$Res>(_value.error, (value) {
       return _then(_value.copyWith(error: value));
@@ -550,10 +525,10 @@ class _$AccountsActionsStateDeleteFailedCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$AccountsActionsStateDeleteFailed
+class _$AccountsActionsStateDeleteFailedImpl
     with DiagnosticableTreeMixin
     implements AccountsActionsStateDeleteFailed {
-  const _$AccountsActionsStateDeleteFailed({required this.error});
+  const _$AccountsActionsStateDeleteFailedImpl({required this.error});
 
   @override
   final StorageError error;
@@ -572,22 +547,23 @@ class _$AccountsActionsStateDeleteFailed
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is AccountsActionsStateDeleteFailed &&
-            (identical(other.error, error) ||
-                const DeepCollectionEquality().equals(other.error, error)));
+        (other.runtimeType == runtimeType &&
+            other is _$AccountsActionsStateDeleteFailedImpl &&
+            (identical(other.error, error) || other.error == error));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(error);
+  int get hashCode => Object.hash(runtimeType, error);
 
   @JsonKey(ignore: true)
   @override
-  $AccountsActionsStateDeleteFailedCopyWith<AccountsActionsStateDeleteFailed>
-      get copyWith => _$AccountsActionsStateDeleteFailedCopyWithImpl<
-          AccountsActionsStateDeleteFailed>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$AccountsActionsStateDeleteFailedImplCopyWith<
+          _$AccountsActionsStateDeleteFailedImpl>
+      get copyWith => __$$AccountsActionsStateDeleteFailedImplCopyWithImpl<
+          _$AccountsActionsStateDeleteFailedImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -603,10 +579,10 @@ class _$AccountsActionsStateDeleteFailed
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? deleting,
-    TResult Function()? deleteSuccess,
-    TResult Function(StorageError error)? deleteFailed,
+    TResult? Function()? initial,
+    TResult? Function()? deleting,
+    TResult? Function()? deleteSuccess,
+    TResult? Function(StorageError error)? deleteFailed,
   }) {
     return deleteFailed?.call(error);
   }
@@ -642,10 +618,10 @@ class _$AccountsActionsStateDeleteFailed
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(AccountsActionsStateInitial value)? initial,
-    TResult Function(AccountsActionsStateDeleting value)? deleting,
-    TResult Function(AccountsActionsStateDeleteSuccess value)? deleteSuccess,
-    TResult Function(AccountsActionsStateDeleteFailed value)? deleteFailed,
+    TResult? Function(AccountsActionsStateInitial value)? initial,
+    TResult? Function(AccountsActionsStateDeleting value)? deleting,
+    TResult? Function(AccountsActionsStateDeleteSuccess value)? deleteSuccess,
+    TResult? Function(AccountsActionsStateDeleteFailed value)? deleteFailed,
   }) {
     return deleteFailed?.call(this);
   }
@@ -669,10 +645,12 @@ class _$AccountsActionsStateDeleteFailed
 abstract class AccountsActionsStateDeleteFailed
     implements AccountsActionsState {
   const factory AccountsActionsStateDeleteFailed(
-      {required StorageError error}) = _$AccountsActionsStateDeleteFailed;
+          {required final StorageError error}) =
+      _$AccountsActionsStateDeleteFailedImpl;
 
-  StorageError get error => throw _privateConstructorUsedError;
+  StorageError get error;
   @JsonKey(ignore: true)
-  $AccountsActionsStateDeleteFailedCopyWith<AccountsActionsStateDeleteFailed>
+  _$$AccountsActionsStateDeleteFailedImplCopyWith<
+          _$AccountsActionsStateDeleteFailedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

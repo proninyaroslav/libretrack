@@ -59,9 +59,7 @@ void main() {
     late TrackingTask task;
 
     setUpAll(() {
-      registerFallbackValue<Iterable<TrackingRequest>>(
-        FakeIterable<TrackingRequest>(),
-      );
+      registerFallbackValue(FakeIterable<TrackingRequest>());
       mockServiceRepo = MockServiceRepository();
       mockShipmentRepo = MockShipmentRepository();
       mockTransactionIdGenerator = MockTransactionIdGenerator();
@@ -709,9 +707,7 @@ void main() {
             ),
           ],
           responseInfoList: [
-            ...expectedRequestList
-                .getRange(0, 2)
-                .map(
+            ...expectedRequestList.getRange(0, 2).map(
                   (request) => TrackingResponseInfo.from(
                     trackingId: const TrackingId('1'),
                     trackNumber: request.trackService.trackNumber,
@@ -723,8 +719,7 @@ void main() {
                       isRetryable: false,
                     ),
                   ),
-                )
-                .toList(),
+                ),
             TrackingResponseInfo.from(
               trackingId: const TrackingId('2'),
               trackNumber: expectedRequestList[2].trackService.trackNumber,

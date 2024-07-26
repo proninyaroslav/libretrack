@@ -1,6 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'edit_account_cubit.dart';
 
@@ -11,35 +12,7 @@ part of 'edit_account_cubit.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$EditAccountStateTearOff {
-  const _$EditAccountStateTearOff();
-
-  EditAccountStateInitial initial() {
-    return const EditAccountStateInitial();
-  }
-
-  EditAccountStateApplying applying() {
-    return const EditAccountStateApplying();
-  }
-
-  EditAccountStateApplied applied() {
-    return const EditAccountStateApplied();
-  }
-
-  EditAccountStateApplyFailed applyFailed(
-      {Exception? exception, StackTrace? stackTrace}) {
-    return EditAccountStateApplyFailed(
-      exception: exception,
-      stackTrace: stackTrace,
-    );
-  }
-}
-
-/// @nodoc
-const $EditAccountState = _$EditAccountStateTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$EditAccountState {
@@ -54,10 +27,11 @@ mixin _$EditAccountState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? applying,
-    TResult Function()? applied,
-    TResult Function(Exception? exception, StackTrace? stackTrace)? applyFailed,
+    TResult? Function()? initial,
+    TResult? Function()? applying,
+    TResult? Function()? applied,
+    TResult? Function(Exception? exception, StackTrace? stackTrace)?
+        applyFailed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -79,10 +53,10 @@ mixin _$EditAccountState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(EditAccountStateInitial value)? initial,
-    TResult Function(EditAccountStateApplying value)? applying,
-    TResult Function(EditAccountStateApplied value)? applied,
-    TResult Function(EditAccountStateApplyFailed value)? applyFailed,
+    TResult? Function(EditAccountStateInitial value)? initial,
+    TResult? Function(EditAccountStateApplying value)? applying,
+    TResult? Function(EditAccountStateApplied value)? applied,
+    TResult? Function(EditAccountStateApplyFailed value)? applyFailed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -100,44 +74,44 @@ mixin _$EditAccountState {
 abstract class $EditAccountStateCopyWith<$Res> {
   factory $EditAccountStateCopyWith(
           EditAccountState value, $Res Function(EditAccountState) then) =
-      _$EditAccountStateCopyWithImpl<$Res>;
+      _$EditAccountStateCopyWithImpl<$Res, EditAccountState>;
 }
 
 /// @nodoc
-class _$EditAccountStateCopyWithImpl<$Res>
+class _$EditAccountStateCopyWithImpl<$Res, $Val extends EditAccountState>
     implements $EditAccountStateCopyWith<$Res> {
   _$EditAccountStateCopyWithImpl(this._value, this._then);
 
-  final EditAccountState _value;
   // ignore: unused_field
-  final $Res Function(EditAccountState) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 }
 
 /// @nodoc
-abstract class $EditAccountStateInitialCopyWith<$Res> {
-  factory $EditAccountStateInitialCopyWith(EditAccountStateInitial value,
-          $Res Function(EditAccountStateInitial) then) =
-      _$EditAccountStateInitialCopyWithImpl<$Res>;
+abstract class _$$EditAccountStateInitialImplCopyWith<$Res> {
+  factory _$$EditAccountStateInitialImplCopyWith(
+          _$EditAccountStateInitialImpl value,
+          $Res Function(_$EditAccountStateInitialImpl) then) =
+      __$$EditAccountStateInitialImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$EditAccountStateInitialCopyWithImpl<$Res>
-    extends _$EditAccountStateCopyWithImpl<$Res>
-    implements $EditAccountStateInitialCopyWith<$Res> {
-  _$EditAccountStateInitialCopyWithImpl(EditAccountStateInitial _value,
-      $Res Function(EditAccountStateInitial) _then)
-      : super(_value, (v) => _then(v as EditAccountStateInitial));
-
-  @override
-  EditAccountStateInitial get _value => super._value as EditAccountStateInitial;
+class __$$EditAccountStateInitialImplCopyWithImpl<$Res>
+    extends _$EditAccountStateCopyWithImpl<$Res, _$EditAccountStateInitialImpl>
+    implements _$$EditAccountStateInitialImplCopyWith<$Res> {
+  __$$EditAccountStateInitialImplCopyWithImpl(
+      _$EditAccountStateInitialImpl _value,
+      $Res Function(_$EditAccountStateInitialImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$EditAccountStateInitial
+class _$EditAccountStateInitialImpl
     with DiagnosticableTreeMixin
     implements EditAccountStateInitial {
-  const _$EditAccountStateInitial();
+  const _$EditAccountStateInitialImpl();
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
@@ -147,12 +121,14 @@ class _$EditAccountStateInitial
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
-    properties..add(DiagnosticsProperty('type', 'EditAccountState.initial'));
+    properties.add(DiagnosticsProperty('type', 'EditAccountState.initial'));
   }
 
   @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) || (other is EditAccountStateInitial);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$EditAccountStateInitialImpl);
   }
 
   @override
@@ -173,10 +149,11 @@ class _$EditAccountStateInitial
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? applying,
-    TResult Function()? applied,
-    TResult Function(Exception? exception, StackTrace? stackTrace)? applyFailed,
+    TResult? Function()? initial,
+    TResult? Function()? applying,
+    TResult? Function()? applied,
+    TResult? Function(Exception? exception, StackTrace? stackTrace)?
+        applyFailed,
   }) {
     return initial?.call();
   }
@@ -210,10 +187,10 @@ class _$EditAccountStateInitial
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(EditAccountStateInitial value)? initial,
-    TResult Function(EditAccountStateApplying value)? applying,
-    TResult Function(EditAccountStateApplied value)? applied,
-    TResult Function(EditAccountStateApplyFailed value)? applyFailed,
+    TResult? Function(EditAccountStateInitial value)? initial,
+    TResult? Function(EditAccountStateApplying value)? applying,
+    TResult? Function(EditAccountStateApplied value)? applied,
+    TResult? Function(EditAccountStateApplyFailed value)? applyFailed,
   }) {
     return initial?.call(this);
   }
@@ -235,35 +212,33 @@ class _$EditAccountStateInitial
 }
 
 abstract class EditAccountStateInitial implements EditAccountState {
-  const factory EditAccountStateInitial() = _$EditAccountStateInitial;
+  const factory EditAccountStateInitial() = _$EditAccountStateInitialImpl;
 }
 
 /// @nodoc
-abstract class $EditAccountStateApplyingCopyWith<$Res> {
-  factory $EditAccountStateApplyingCopyWith(EditAccountStateApplying value,
-          $Res Function(EditAccountStateApplying) then) =
-      _$EditAccountStateApplyingCopyWithImpl<$Res>;
+abstract class _$$EditAccountStateApplyingImplCopyWith<$Res> {
+  factory _$$EditAccountStateApplyingImplCopyWith(
+          _$EditAccountStateApplyingImpl value,
+          $Res Function(_$EditAccountStateApplyingImpl) then) =
+      __$$EditAccountStateApplyingImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$EditAccountStateApplyingCopyWithImpl<$Res>
-    extends _$EditAccountStateCopyWithImpl<$Res>
-    implements $EditAccountStateApplyingCopyWith<$Res> {
-  _$EditAccountStateApplyingCopyWithImpl(EditAccountStateApplying _value,
-      $Res Function(EditAccountStateApplying) _then)
-      : super(_value, (v) => _then(v as EditAccountStateApplying));
-
-  @override
-  EditAccountStateApplying get _value =>
-      super._value as EditAccountStateApplying;
+class __$$EditAccountStateApplyingImplCopyWithImpl<$Res>
+    extends _$EditAccountStateCopyWithImpl<$Res, _$EditAccountStateApplyingImpl>
+    implements _$$EditAccountStateApplyingImplCopyWith<$Res> {
+  __$$EditAccountStateApplyingImplCopyWithImpl(
+      _$EditAccountStateApplyingImpl _value,
+      $Res Function(_$EditAccountStateApplyingImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$EditAccountStateApplying
+class _$EditAccountStateApplyingImpl
     with DiagnosticableTreeMixin
     implements EditAccountStateApplying {
-  const _$EditAccountStateApplying();
+  const _$EditAccountStateApplyingImpl();
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
@@ -273,12 +248,14 @@ class _$EditAccountStateApplying
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
-    properties..add(DiagnosticsProperty('type', 'EditAccountState.applying'));
+    properties.add(DiagnosticsProperty('type', 'EditAccountState.applying'));
   }
 
   @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) || (other is EditAccountStateApplying);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$EditAccountStateApplyingImpl);
   }
 
   @override
@@ -299,10 +276,11 @@ class _$EditAccountStateApplying
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? applying,
-    TResult Function()? applied,
-    TResult Function(Exception? exception, StackTrace? stackTrace)? applyFailed,
+    TResult? Function()? initial,
+    TResult? Function()? applying,
+    TResult? Function()? applied,
+    TResult? Function(Exception? exception, StackTrace? stackTrace)?
+        applyFailed,
   }) {
     return applying?.call();
   }
@@ -336,10 +314,10 @@ class _$EditAccountStateApplying
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(EditAccountStateInitial value)? initial,
-    TResult Function(EditAccountStateApplying value)? applying,
-    TResult Function(EditAccountStateApplied value)? applied,
-    TResult Function(EditAccountStateApplyFailed value)? applyFailed,
+    TResult? Function(EditAccountStateInitial value)? initial,
+    TResult? Function(EditAccountStateApplying value)? applying,
+    TResult? Function(EditAccountStateApplied value)? applied,
+    TResult? Function(EditAccountStateApplyFailed value)? applyFailed,
   }) {
     return applying?.call(this);
   }
@@ -361,34 +339,33 @@ class _$EditAccountStateApplying
 }
 
 abstract class EditAccountStateApplying implements EditAccountState {
-  const factory EditAccountStateApplying() = _$EditAccountStateApplying;
+  const factory EditAccountStateApplying() = _$EditAccountStateApplyingImpl;
 }
 
 /// @nodoc
-abstract class $EditAccountStateAppliedCopyWith<$Res> {
-  factory $EditAccountStateAppliedCopyWith(EditAccountStateApplied value,
-          $Res Function(EditAccountStateApplied) then) =
-      _$EditAccountStateAppliedCopyWithImpl<$Res>;
+abstract class _$$EditAccountStateAppliedImplCopyWith<$Res> {
+  factory _$$EditAccountStateAppliedImplCopyWith(
+          _$EditAccountStateAppliedImpl value,
+          $Res Function(_$EditAccountStateAppliedImpl) then) =
+      __$$EditAccountStateAppliedImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$EditAccountStateAppliedCopyWithImpl<$Res>
-    extends _$EditAccountStateCopyWithImpl<$Res>
-    implements $EditAccountStateAppliedCopyWith<$Res> {
-  _$EditAccountStateAppliedCopyWithImpl(EditAccountStateApplied _value,
-      $Res Function(EditAccountStateApplied) _then)
-      : super(_value, (v) => _then(v as EditAccountStateApplied));
-
-  @override
-  EditAccountStateApplied get _value => super._value as EditAccountStateApplied;
+class __$$EditAccountStateAppliedImplCopyWithImpl<$Res>
+    extends _$EditAccountStateCopyWithImpl<$Res, _$EditAccountStateAppliedImpl>
+    implements _$$EditAccountStateAppliedImplCopyWith<$Res> {
+  __$$EditAccountStateAppliedImplCopyWithImpl(
+      _$EditAccountStateAppliedImpl _value,
+      $Res Function(_$EditAccountStateAppliedImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$EditAccountStateApplied
+class _$EditAccountStateAppliedImpl
     with DiagnosticableTreeMixin
     implements EditAccountStateApplied {
-  const _$EditAccountStateApplied();
+  const _$EditAccountStateAppliedImpl();
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
@@ -398,12 +375,14 @@ class _$EditAccountStateApplied
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
-    properties..add(DiagnosticsProperty('type', 'EditAccountState.applied'));
+    properties.add(DiagnosticsProperty('type', 'EditAccountState.applied'));
   }
 
   @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) || (other is EditAccountStateApplied);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$EditAccountStateAppliedImpl);
   }
 
   @override
@@ -424,10 +403,11 @@ class _$EditAccountStateApplied
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? applying,
-    TResult Function()? applied,
-    TResult Function(Exception? exception, StackTrace? stackTrace)? applyFailed,
+    TResult? Function()? initial,
+    TResult? Function()? applying,
+    TResult? Function()? applied,
+    TResult? Function(Exception? exception, StackTrace? stackTrace)?
+        applyFailed,
   }) {
     return applied?.call();
   }
@@ -461,10 +441,10 @@ class _$EditAccountStateApplied
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(EditAccountStateInitial value)? initial,
-    TResult Function(EditAccountStateApplying value)? applying,
-    TResult Function(EditAccountStateApplied value)? applied,
-    TResult Function(EditAccountStateApplyFailed value)? applyFailed,
+    TResult? Function(EditAccountStateInitial value)? initial,
+    TResult? Function(EditAccountStateApplying value)? applying,
+    TResult? Function(EditAccountStateApplied value)? applied,
+    TResult? Function(EditAccountStateApplyFailed value)? applyFailed,
   }) {
     return applied?.call(this);
   }
@@ -486,41 +466,41 @@ class _$EditAccountStateApplied
 }
 
 abstract class EditAccountStateApplied implements EditAccountState {
-  const factory EditAccountStateApplied() = _$EditAccountStateApplied;
+  const factory EditAccountStateApplied() = _$EditAccountStateAppliedImpl;
 }
 
 /// @nodoc
-abstract class $EditAccountStateApplyFailedCopyWith<$Res> {
-  factory $EditAccountStateApplyFailedCopyWith(
-          EditAccountStateApplyFailed value,
-          $Res Function(EditAccountStateApplyFailed) then) =
-      _$EditAccountStateApplyFailedCopyWithImpl<$Res>;
+abstract class _$$EditAccountStateApplyFailedImplCopyWith<$Res> {
+  factory _$$EditAccountStateApplyFailedImplCopyWith(
+          _$EditAccountStateApplyFailedImpl value,
+          $Res Function(_$EditAccountStateApplyFailedImpl) then) =
+      __$$EditAccountStateApplyFailedImplCopyWithImpl<$Res>;
+  @useResult
   $Res call({Exception? exception, StackTrace? stackTrace});
 }
 
 /// @nodoc
-class _$EditAccountStateApplyFailedCopyWithImpl<$Res>
-    extends _$EditAccountStateCopyWithImpl<$Res>
-    implements $EditAccountStateApplyFailedCopyWith<$Res> {
-  _$EditAccountStateApplyFailedCopyWithImpl(EditAccountStateApplyFailed _value,
-      $Res Function(EditAccountStateApplyFailed) _then)
-      : super(_value, (v) => _then(v as EditAccountStateApplyFailed));
+class __$$EditAccountStateApplyFailedImplCopyWithImpl<$Res>
+    extends _$EditAccountStateCopyWithImpl<$Res,
+        _$EditAccountStateApplyFailedImpl>
+    implements _$$EditAccountStateApplyFailedImplCopyWith<$Res> {
+  __$$EditAccountStateApplyFailedImplCopyWithImpl(
+      _$EditAccountStateApplyFailedImpl _value,
+      $Res Function(_$EditAccountStateApplyFailedImpl) _then)
+      : super(_value, _then);
 
-  @override
-  EditAccountStateApplyFailed get _value =>
-      super._value as EditAccountStateApplyFailed;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? exception = freezed,
     Object? stackTrace = freezed,
   }) {
-    return _then(EditAccountStateApplyFailed(
-      exception: exception == freezed
+    return _then(_$EditAccountStateApplyFailedImpl(
+      exception: freezed == exception
           ? _value.exception
           : exception // ignore: cast_nullable_to_non_nullable
               as Exception?,
-      stackTrace: stackTrace == freezed
+      stackTrace: freezed == stackTrace
           ? _value.stackTrace
           : stackTrace // ignore: cast_nullable_to_non_nullable
               as StackTrace?,
@@ -530,10 +510,10 @@ class _$EditAccountStateApplyFailedCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$EditAccountStateApplyFailed
+class _$EditAccountStateApplyFailedImpl
     with DiagnosticableTreeMixin
     implements EditAccountStateApplyFailed {
-  const _$EditAccountStateApplyFailed({this.exception, this.stackTrace});
+  const _$EditAccountStateApplyFailedImpl({this.exception, this.stackTrace});
 
   @override
   final Exception? exception;
@@ -555,28 +535,25 @@ class _$EditAccountStateApplyFailed
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is EditAccountStateApplyFailed &&
+        (other.runtimeType == runtimeType &&
+            other is _$EditAccountStateApplyFailedImpl &&
             (identical(other.exception, exception) ||
-                const DeepCollectionEquality()
-                    .equals(other.exception, exception)) &&
+                other.exception == exception) &&
             (identical(other.stackTrace, stackTrace) ||
-                const DeepCollectionEquality()
-                    .equals(other.stackTrace, stackTrace)));
+                other.stackTrace == stackTrace));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(exception) ^
-      const DeepCollectionEquality().hash(stackTrace);
+  int get hashCode => Object.hash(runtimeType, exception, stackTrace);
 
   @JsonKey(ignore: true)
   @override
-  $EditAccountStateApplyFailedCopyWith<EditAccountStateApplyFailed>
-      get copyWith => _$EditAccountStateApplyFailedCopyWithImpl<
-          EditAccountStateApplyFailed>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$EditAccountStateApplyFailedImplCopyWith<_$EditAccountStateApplyFailedImpl>
+      get copyWith => __$$EditAccountStateApplyFailedImplCopyWithImpl<
+          _$EditAccountStateApplyFailedImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -593,10 +570,11 @@ class _$EditAccountStateApplyFailed
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? applying,
-    TResult Function()? applied,
-    TResult Function(Exception? exception, StackTrace? stackTrace)? applyFailed,
+    TResult? Function()? initial,
+    TResult? Function()? applying,
+    TResult? Function()? applied,
+    TResult? Function(Exception? exception, StackTrace? stackTrace)?
+        applyFailed,
   }) {
     return applyFailed?.call(exception, stackTrace);
   }
@@ -630,10 +608,10 @@ class _$EditAccountStateApplyFailed
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(EditAccountStateInitial value)? initial,
-    TResult Function(EditAccountStateApplying value)? applying,
-    TResult Function(EditAccountStateApplied value)? applied,
-    TResult Function(EditAccountStateApplyFailed value)? applyFailed,
+    TResult? Function(EditAccountStateInitial value)? initial,
+    TResult? Function(EditAccountStateApplying value)? applying,
+    TResult? Function(EditAccountStateApplied value)? applied,
+    TResult? Function(EditAccountStateApplyFailed value)? applyFailed,
   }) {
     return applyFailed?.call(this);
   }
@@ -656,12 +634,12 @@ class _$EditAccountStateApplyFailed
 
 abstract class EditAccountStateApplyFailed implements EditAccountState {
   const factory EditAccountStateApplyFailed(
-      {Exception? exception,
-      StackTrace? stackTrace}) = _$EditAccountStateApplyFailed;
+      {final Exception? exception,
+      final StackTrace? stackTrace}) = _$EditAccountStateApplyFailedImpl;
 
-  Exception? get exception => throw _privateConstructorUsedError;
-  StackTrace? get stackTrace => throw _privateConstructorUsedError;
+  Exception? get exception;
+  StackTrace? get stackTrace;
   @JsonKey(ignore: true)
-  $EditAccountStateApplyFailedCopyWith<EditAccountStateApplyFailed>
+  _$$EditAccountStateApplyFailedImplCopyWith<_$EditAccountStateApplyFailedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

@@ -23,6 +23,6 @@ import '../../../logger.dart';
 class DefaultCrashHandler implements CrashHandler {
   @override
   Future<void> handle(Object error, StackTrace? stackTrace) async {
-    log().wtf('Unexpected error occurred', error, stackTrace);
+    log().f('Unexpected error occurred', error: error, stackTrace: stackTrace);
   }
 }
