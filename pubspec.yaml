@@ -23,6 +23,7 @@ environment:
 
 dependencies:
   animate_icons: ^2.0.0
+  async: ^2.11.0
   backdrop: ^0.9.1
   barcode_widget: ^2.0.0
   bloc: ^8.0.3
@@ -31,6 +32,7 @@ dependencies:
   connectivity_plus: ^6.0.3
   cupertino_icons: ^1.0.2
   device_info_plus: ^10.1.0
+  device_preview: ^1.2.0
   devicelocale: ^0.7.1
   diffutil_sliverlist: ^0.5.0
   enum_to_string: ^2.0.1
@@ -53,6 +55,7 @@ dependencies:
   http: ^1.2.2
   image: ^4.2.0
   injectable: ^2.4.4
+  intl: ^0.19.0
   jiffy: ^6.3.1
   json_annotation: ^4.4.0
   json_serializable: ^6.0.0
@@ -65,6 +68,7 @@ dependencies:
   share_plus: ^9.0.0
   shared_preferences: ^2.0.4
   smooth_page_indicator: ^1.0.0+2
+  sqflite: ^2.3.3+1
   superellipse_shape: ^0.2.0-nullsafety.0
   url_launcher: ^6.0.2
   uuid: ^4.4.2
@@ -82,7 +86,6 @@ dev_dependencies:
   analyzer: ^6.4.1
   bloc_test: ^9.0.3
   build_runner: ^2.0.1
-  device_preview: ^1.2.0
   floor_generator: ^1.1.0
   flutter_lints: ^4.0.0
   flutter_test:
