@@ -139,7 +139,7 @@ class CustomExpansionTile extends StatefulWidget {
   final bool bottomPosition;
 
   @override
-  _CustomExpansionTileState createState() => _CustomExpansionTileState();
+  State<CustomExpansionTile> createState() => _CustomExpansionTileState();
 }
 
 class _CustomExpansionTileState extends State<CustomExpansionTile>

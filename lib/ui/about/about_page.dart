@@ -32,7 +32,7 @@ class AboutPage extends StatefulWidget {
   const AboutPage({super.key});
 
   @override
-  _AboutPageState createState() => _AboutPageState();
+  State<AboutPage> createState() => _AboutPageState();
 }
 
 class _AboutPageState extends State<AboutPage> {
@@ -173,13 +173,15 @@ class _ChangelogButton extends StatelessWidget {
       onPressed: () async {
         final url = S.of(context).appChangelogUrl;
         try {
-          await launch(url);
+          await launchUrl(Uri.parse(url));
         } on PlatformException catch (e, stackTrace) {
           log().w('Unable to open cnagelog URL',
               error: e, stackTrace: stackTrace);
-          Toast.of(context).show(
-            text: S.of(context).openLinkFailed,
-          );
+          if (context.mounted) {
+            Toast.of(context).show(
+              text: S.of(context).openLinkFailed,
+            );
+          }
         }
       },
     );

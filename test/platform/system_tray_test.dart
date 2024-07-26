@@ -45,8 +45,10 @@ void main() {
 
     setUp(() {
       systemTray = SystemTray(mockPlatformInfo, mockPref);
-      channel.setMockMethodCallHandler((methodCall) async {
+      TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
+          .setMockMethodCallHandler(channel, (methodCall) async {
         log.add(methodCall);
+        return null;
       });
     });
 

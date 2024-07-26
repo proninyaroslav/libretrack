@@ -48,7 +48,7 @@ class App extends StatefulWidget {
   });
 
   @override
-  _AppState createState() => _AppState();
+  State<App> createState() => _AppState();
 }
 
 class _AppState extends State<App> {

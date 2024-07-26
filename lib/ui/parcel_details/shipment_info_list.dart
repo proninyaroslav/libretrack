@@ -40,7 +40,7 @@ class ShipmentInfoList extends StatefulWidget {
   });
 
   @override
-  _ShipmentInfoListState createState() => _ShipmentInfoListState();
+  State<ShipmentInfoList> createState() => _ShipmentInfoListState();
 }
 
 class _ShipmentInfoListState extends State<ShipmentInfoList>

@@ -51,9 +51,9 @@ class ParcelsFilterDrawer extends StatelessWidget {
           ),
         ),
       ),
-      child: ScreenTypeLayout(
+      child: ScreenTypeLayout.builder(
         key: const PageStorageKey('parcels_filter_drawer'),
-        mobile: OrientationLayoutBuilder(
+        mobile: (context) => OrientationLayoutBuilder(
           portrait: (context) => _buildContent(
             context,
             frontLayerVisibleSize: frontLayerVisibleSize,
@@ -63,7 +63,7 @@ class ParcelsFilterDrawer extends StatelessWidget {
             child: _buildContent(context),
           ),
         ),
-        tablet: OrientationLayoutBuilder(
+        tablet: (context) => OrientationLayoutBuilder(
           portrait: (context) => SizedBox(
             width: 300,
             child: _buildContent(context),

@@ -42,7 +42,7 @@ class ParcelDetailsPage extends StatefulWidget {
   });
 
   @override
-  _ParcelDetailsPageState createState() => _ParcelDetailsPageState();
+  State<ParcelDetailsPage> createState() => _ParcelDetailsPageState();
 }
 
 enum _PageType {
@@ -261,9 +261,11 @@ class _BodyState extends State<_Body> {
           await Share.share(text);
         } on Exception catch (e, stackTrace) {
           log().e("Unable to share", error: e, stackTrace: stackTrace);
-          AdaptiveScaffold.of(context).showAdaptiveToast(
-            text: S.of(context).shareFailed,
-          );
+          if (context.mounted) {
+            AdaptiveScaffold.of(context).showAdaptiveToast(
+              text: S.of(context).shareFailed,
+            );
+          }
         }
       },
       copyTrackSuccess: (trackNumber) {

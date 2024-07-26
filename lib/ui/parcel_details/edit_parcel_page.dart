@@ -34,7 +34,7 @@ class EditParcelPage extends StatefulWidget {
   });
 
   @override
-  _EditParcelPageState createState() => _EditParcelPageState();
+  State<EditParcelPage> createState() => _EditParcelPageState();
 }
 
 class _EditParcelPageState extends State<EditParcelPage> {

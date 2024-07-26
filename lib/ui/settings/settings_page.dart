@@ -87,14 +87,14 @@ class SettingsPageState extends State<SettingsPage> {
       _backButtonDispatcher?.takePriority();
     }
 
-    return ScreenTypeLayout(
-      mobile: Router(
+    return ScreenTypeLayout.builder(
+      mobile: (context) => Router(
         routerDelegate: _routerDelegate,
         backButtonDispatcher: _backButtonDispatcher,
         routeInformationProvider: _routeInfoProvider,
         routeInformationParser: _routeInfoParser,
       ),
-      tablet: _TwoPaneBody(
+      tablet: (context) => _TwoPaneBody(
         initRoute: _routerDelegate.currentConfiguration.subRoute,
         onRouteLoaded: (route) {
           // Synchronize routes

@@ -36,7 +36,7 @@ class PostalServiceList extends StatefulWidget {
   });
 
   @override
-  _PostalServiceListState createState() => _PostalServiceListState();
+  State<PostalServiceList> createState() => _PostalServiceListState();
 }
 
 class _PostalServiceListState extends State<PostalServiceList>

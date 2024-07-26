@@ -37,7 +37,7 @@ class CrashReportDialog extends StatefulWidget {
   });
 
   @override
-  _CrashReportDialogState createState() => _CrashReportDialogState();
+  State<CrashReportDialog> createState() => _CrashReportDialogState();
 }
 
 class _CrashReportDialogState extends State<CrashReportDialog> {
@@ -83,7 +83,9 @@ class _CrashReportDialogState extends State<CrashReportDialog> {
         TextButton(
           onPressed: () async {
             if (await widget.onReport?.call(_getComment()) ?? true) {
-              Navigator.of(context).pop();
+              if (context.mounted) {
+                Navigator.of(context).pop();
+              }
             }
           },
           child: Text(

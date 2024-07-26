@@ -29,7 +29,7 @@ class ParcelsAppBarTitle extends StatefulWidget {
   const ParcelsAppBarTitle({super.key});
 
   @override
-  _ParcelsAppBarTitleState createState() => _ParcelsAppBarTitleState();
+  State<ParcelsAppBarTitle> createState() => _ParcelsAppBarTitleState();
 }
 
 class _ParcelsAppBarTitleState extends State<ParcelsAppBarTitle> {

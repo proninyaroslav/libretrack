@@ -33,7 +33,7 @@ class AddAccountPage extends StatefulWidget {
   const AddAccountPage({super.key});
 
   @override
-  _AddAccountPageState createState() => _AddAccountPageState();
+  State<AddAccountPage> createState() => _AddAccountPageState();
 }
 
 class _AddAccountPageState extends State<AddAccountPage> {

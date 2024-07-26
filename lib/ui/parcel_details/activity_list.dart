@@ -35,7 +35,7 @@ class ActivityList extends StatefulWidget {
   });
 
   @override
-  _ActivityListState createState() => _ActivityListState();
+  State<ActivityList> createState() => _ActivityListState();
 }
 
 class _ActivityListState extends State<ActivityList>

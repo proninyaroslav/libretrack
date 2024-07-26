@@ -199,12 +199,12 @@ class NavigationPageState extends State<NavigationPage>
       action: (value) => null,
     );
 
-    return ScreenTypeLayout(
-      mobile: OrientationLayoutBuilder(
+    return ScreenTypeLayout.builder(
+      mobile: (context) => OrientationLayoutBuilder(
         portrait: (context) => _buildPortraitMobilePage(currentPage),
         landscape: (context) => _buildLandscapeMobilePage(currentPage),
       ),
-      tablet: OrientationLayoutBuilder(
+      tablet: (context) => OrientationLayoutBuilder(
         landscape: (context) => _buildLandscapeTabletPage(currentPage),
         portrait: (context) => _buildPortraitTabletPage(currentPage),
       ),
@@ -1407,10 +1407,10 @@ class _ContextualAppBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return WillPopScope(
-      onWillPop: () async {
+    return PopScope(
+      canPop: false,
+      onPopInvoked: (didPop) async {
         onBackPressed?.call();
-        return false;
       },
       child: AppBar(
         title: Text(

@@ -32,7 +32,8 @@ void main() {
 
     setUp(() {
       barcodeScanner = BarcodeScanner();
-      channel.setMockMethodCallHandler((methodCall) async {
+      TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
+          .setMockMethodCallHandler(channel, (methodCall) async {
         log.add(methodCall);
         return 'test';
       });

@@ -378,9 +378,11 @@ class _BarcodeScanButton extends StatelessWidget {
             await _scan();
           } on BarcodeScannerException catch (e, stackTrace) {
             log().e('Failed to scan barcode', error: e, stackTrace: stackTrace);
-            AdaptiveScaffold.of(context).showAdaptiveToast(
-              text: S.of(context).barcodeScanFailed,
-            );
+            if (context.mounted) {
+              AdaptiveScaffold.of(context).showAdaptiveToast(
+                text: S.of(context).barcodeScanFailed,
+              );
+            }
           }
         },
         icon: Icon(MdiIcons.barcodeScan),

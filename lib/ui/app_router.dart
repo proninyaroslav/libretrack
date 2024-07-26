@@ -475,7 +475,7 @@ class AppRouteInfoParser extends RouteInformationParser<AppRoutePath> {
   Future<AppRoutePath> parseRouteInformation(
     RouteInformation routeInformation,
   ) async {
-    final uri = Uri.parse(routeInformation.location);
+    final uri = routeInformation.uri;
     final pathSegments = uri.pathSegments;
     final first = pathSegments.getOrNull(0);
 
@@ -571,7 +571,7 @@ class AppRouteInfoParser extends RouteInformationParser<AppRoutePath> {
     AppRoutePath configuration,
   ) {
     return RouteInformation(
-      location: configuration.when(
+      uri: Uri.parse(configuration.when(
         unknown: () => '/page-not-found',
         home: (subRoute) {
           final subRouteStr = subRoute.when(
@@ -595,7 +595,7 @@ class AppRouteInfoParser extends RouteInformationParser<AppRoutePath> {
           return subRouteStr == null ? '/settings' : '/settings/$subRouteStr';
         },
         about: () => '/about',
-      ),
+      )),
       state: configuration.maybeWhen(
         addParcels: (initialTrackNumbers) => initialTrackNumbers,
         orElse: () => null,

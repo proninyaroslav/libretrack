@@ -16,8 +16,8 @@ class BorderTabIndicator extends Decoration {
   final Color indicatorColor;
 
   @override
-  _BorderPainter createBoxPainter([VoidCallback? onChanged]) {
-    return _BorderPainter(
+  BorderPainter createBoxPainter([VoidCallback? onChanged]) {
+    return BorderPainter(
       this,
       indicatorHeight,
       textScaleFactor,
@@ -27,8 +27,8 @@ class BorderTabIndicator extends Decoration {
   }
 }
 
-class _BorderPainter extends BoxPainter {
-  _BorderPainter(
+class BorderPainter extends BoxPainter {
+  BorderPainter(
     this.decoration,
     this.indicatorHeight,
     this.textScaleFactor,

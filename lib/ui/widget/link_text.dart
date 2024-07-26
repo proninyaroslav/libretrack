@@ -43,14 +43,16 @@ class LinkText extends StatelessWidget {
     );
     Future<void> onOpen(LinkableElement link) async {
       try {
-        await launch(link.url);
+        await launchUrl(Uri.parse(link.url));
       } on PlatformException catch (e, stackTrace) {
         log().w('Unable to open $link', error: e, stackTrace: stackTrace);
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(
-            content: Text(S.of(context).openLinkFailed),
-          ),
-        );
+        if (context.mounted) {
+          ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(
+              content: Text(S.of(context).openLinkFailed),
+            ),
+          );
+        }
       }
     }
 

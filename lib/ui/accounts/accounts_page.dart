@@ -40,7 +40,7 @@ class AccountsPage extends StatefulWidget {
   });
 
   @override
-  _AccountsPageState createState() => _AccountsPageState();
+  State<AccountsPage> createState() => _AccountsPageState();
 }
 
 class _AccountsPageState extends State<AccountsPage> {

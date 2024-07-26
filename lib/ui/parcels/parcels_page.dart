@@ -357,11 +357,13 @@ class _BodyState extends State<_Body> with SingleTickerProviderStateMixin {
           await Share.share(text);
         } on Exception catch (e, stackTrace) {
           log().e("Unable to share", error: e, stackTrace: stackTrace);
-          ScaffoldMessenger.of(context).showSnackBar(
-            SnackBar(
-              content: Text(S.of(context).shareFailed),
-            ),
-          );
+          if (context.mounted) {
+            ScaffoldMessenger.of(context).showSnackBar(
+              SnackBar(
+                content: Text(S.of(context).shareFailed),
+              ),
+            );
+          }
         }
       },
       copyTrackSuccess: (trackNumbers) {
@@ -481,15 +483,15 @@ class _TabBar extends StatelessWidget {
       ),
     );
 
-    return ScreenTypeLayout(
-      mobile: OrientationLayoutBuilder(
+    return ScreenTypeLayout.builder(
+      mobile: (context) => OrientationLayoutBuilder(
         portrait: (context) => tabBar,
         landscape: (context) => FractionallySizedBox(
           widthFactor: 0.7,
           child: tabBar,
         ),
       ),
-      tablet: FractionallySizedBox(
+      tablet: (context) => FractionallySizedBox(
         widthFactor: 0.7,
         child: tabBar,
       ),

@@ -34,9 +34,9 @@ class SettingsScaffold extends StatelessWidget {
     return Scaffold(
       appBar: PreferredSize(
         preferredSize: appBar.preferredSize,
-        child: ScreenTypeLayout(
-          mobile: appBar,
-          tablet: const SizedBox.shrink(),
+        child: ScreenTypeLayout.builder(
+          mobile: (context) => appBar,
+          tablet: (context) => const SizedBox.shrink(),
         ),
       ),
       body: body,

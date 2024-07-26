@@ -30,70 +30,70 @@ void main() {
     });
 
     test('Home page, default route', () async {
-      const routeInfo = RouteInformation(location: '/');
+      final routeInfo = RouteInformation(uri: Uri.parse('/'));
       final path = await parser.parseRouteInformation(routeInfo);
       final actualRouteInfo = parser.restoreRouteInformation(
         const AppRoutePath.home(HomeRoutePath.parcels()),
       );
       expect(path, const AppRoutePath.home(HomeRoutePath.parcels()));
-      expect(actualRouteInfo.location, '/parcels');
+      expect(actualRouteInfo.uri, Uri.parse('/parcels'));
     });
 
     test('Home page, parcels page', () async {
-      const routeInfo = RouteInformation(location: '/parcels');
+      final routeInfo = RouteInformation(uri: Uri.parse('/parcels'));
       final path = await parser.parseRouteInformation(routeInfo);
       final actualRouteInfo = parser.restoreRouteInformation(
         const AppRoutePath.home(HomeRoutePath.parcels()),
       );
       expect(path, const AppRoutePath.home(HomeRoutePath.parcels()));
-      expect(actualRouteInfo.location, '/parcels');
+      expect(actualRouteInfo.uri, Uri.parse('/parcels'));
     });
 
     test('Home page, accounts page', () async {
-      const routeInfo = RouteInformation(location: '/accounts');
+      final routeInfo = RouteInformation(uri: Uri.parse('/accounts'));
       final path = await parser.parseRouteInformation(routeInfo);
       final actualRouteInfo = parser.restoreRouteInformation(
         const AppRoutePath.home(HomeRoutePath.accounts()),
       );
       expect(path, const AppRoutePath.home(HomeRoutePath.accounts()));
-      expect(actualRouteInfo.location, '/accounts');
+      expect(actualRouteInfo.uri, Uri.parse('/accounts'));
     });
 
     test('Unknown page', () async {
       final path = await parser.parseRouteInformation(
-        const RouteInformation(location: '/some-unknown-page/'),
+        RouteInformation(uri: Uri.parse('/some-unknown-page/')),
       );
       final actualRouteInfo = parser.restoreRouteInformation(
         const AppRoutePath.unknown(),
       );
       expect(path, const AppRoutePath.unknown());
-      expect(actualRouteInfo.location, '/page-not-found');
+      expect(actualRouteInfo.uri, Uri.parse('/page-not-found'));
     });
 
     test('Add account page', () async {
-      const routeInfo = RouteInformation(location: '/accounts/add/');
+      final routeInfo = RouteInformation(uri: Uri.parse('/accounts/add/'));
       final path = await parser.parseRouteInformation(routeInfo);
       final actualRouteInfo = parser.restoreRouteInformation(
         const AppRoutePath.addAccount(),
       );
       expect(path, const AppRoutePath.addAccount());
-      expect(actualRouteInfo.location, '/accounts/add');
+      expect(actualRouteInfo.uri, Uri.parse('/accounts/add'));
     });
 
     test('Edit account page', () async {
-      const routeInfo = RouteInformation(
-        location: '/accounts/edit/ups/',
+      final routeInfo = RouteInformation(
+        uri: Uri.parse('/accounts/edit/ups/'),
       );
       const path = AppRoutePath.editAccount(TrackingServiceType.ups);
       final actualPath = await parser.parseRouteInformation(routeInfo);
       final actualRouteInfo = parser.restoreRouteInformation(path);
       expect(actualPath, path);
-      expect(actualRouteInfo.location, '/accounts/edit/ups');
+      expect(actualRouteInfo.uri, Uri.parse('/accounts/edit/ups'));
     });
 
     test('Edit account page, missing service type', () async {
-      const routeInfo = RouteInformation(
-        location: '/accounts/edit',
+      final routeInfo = RouteInformation(
+        uri: Uri.parse('/accounts/edit'),
       );
       expect(
         await parser.parseRouteInformation(routeInfo),
@@ -102,8 +102,8 @@ void main() {
     });
 
     test('Edit account page, invalid service type', () async {
-      const routeInfo = RouteInformation(
-        location: '/accounts/edit/invalid/',
+      final routeInfo = RouteInformation(
+        uri: Uri.parse('/accounts/edit/invalid/'),
       );
       expect(
         await parser.parseRouteInformation(routeInfo),
@@ -112,18 +112,18 @@ void main() {
     });
 
     test('Add parcels page', () async {
-      const routeInfo = RouteInformation(location: '/parcels/add/');
+      final routeInfo = RouteInformation(uri: Uri.parse('/parcels/add/'));
       final path = await parser.parseRouteInformation(routeInfo);
       final actualRouteInfo = parser.restoreRouteInformation(
         const AppRoutePath.addParcels(),
       );
       expect(path, const AppRoutePath.addParcels());
-      expect(actualRouteInfo.location, '/parcels/add');
+      expect(actualRouteInfo.uri, Uri.parse('/parcels/add'));
     });
 
     test('Add parcels page with initial tracking number', () async {
-      const routeInfo = RouteInformation(
-        location: '/parcels/add/',
+      final routeInfo = RouteInformation(
+        uri: Uri.parse('/parcels/add/'),
         state: '123',
       );
       final path = await parser.parseRouteInformation(routeInfo);
@@ -131,23 +131,23 @@ void main() {
         const AppRoutePath.addParcels(initialTrackNumbers: '123'),
       );
       expect(path, const AppRoutePath.addParcels(initialTrackNumbers: '123'));
-      expect(actualRouteInfo.location, '/parcels/add');
+      expect(actualRouteInfo.uri, Uri.parse('/parcels/add'));
     });
 
     test('Parcel details page', () async {
-      const routeInfo = RouteInformation(
-        location: '/parcels/details/123/',
+      final routeInfo = RouteInformation(
+        uri: Uri.parse('/parcels/details/123/'),
       );
       const path = AppRoutePath.parcelDetails('123');
       final actualPath = await parser.parseRouteInformation(routeInfo);
       final actualRouteInfo = parser.restoreRouteInformation(path);
       expect(actualPath, path);
-      expect(actualRouteInfo.location, '/parcels/details/123');
+      expect(actualRouteInfo.uri, Uri.parse('/parcels/details/123'));
     });
 
     test('Parcel details page, missing tracking number', () async {
-      const routeInfo = RouteInformation(
-        location: '/parcels/details',
+      final routeInfo = RouteInformation(
+        uri: Uri.parse('/parcels/details'),
       );
       expect(
         await parser.parseRouteInformation(routeInfo),
@@ -156,8 +156,8 @@ void main() {
     });
 
     test('Settings page, missing sub-route', () async {
-      const routeInfo = RouteInformation(
-        location: '/settings',
+      final routeInfo = RouteInformation(
+        uri: Uri.parse('/settings'),
       );
       expect(
         await parser.parseRouteInformation(routeInfo),
@@ -166,7 +166,8 @@ void main() {
     });
 
     test('Settings page, appearance page', () async {
-      const routeInfo = RouteInformation(location: '/settings/appearance');
+      final routeInfo =
+          RouteInformation(uri: Uri.parse('/settings/appearance'));
       final path = await parser.parseRouteInformation(routeInfo);
       final actualRouteInfo = parser.restoreRouteInformation(
         const AppRoutePath.settings(subRoute: SettingsRoutePath.appearance()),
@@ -175,11 +176,11 @@ void main() {
         path,
         const AppRoutePath.settings(subRoute: SettingsRoutePath.appearance()),
       );
-      expect(actualRouteInfo.location, '/settings/appearance');
+      expect(actualRouteInfo.uri, Uri.parse('/settings/appearance'));
     });
 
     test('Settings page, behavior page', () async {
-      const routeInfo = RouteInformation(location: '/settings/behavior');
+      final routeInfo = RouteInformation(uri: Uri.parse('/settings/behavior'));
       final path = await parser.parseRouteInformation(routeInfo);
       final actualRouteInfo = parser.restoreRouteInformation(
         const AppRoutePath.settings(subRoute: SettingsRoutePath.behavior()),
@@ -188,18 +189,18 @@ void main() {
         path,
         const AppRoutePath.settings(subRoute: SettingsRoutePath.behavior()),
       );
-      expect(actualRouteInfo.location, '/settings/behavior');
+      expect(actualRouteInfo.uri, Uri.parse('/settings/behavior'));
     });
 
     test('About page', () async {
-      const routeInfo = RouteInformation(
-        location: '/about',
+      final routeInfo = RouteInformation(
+        uri: Uri.parse('/about'),
       );
       const path = AppRoutePath.about();
       final actualPath = await parser.parseRouteInformation(routeInfo);
       final actualRouteInfo = parser.restoreRouteInformation(path);
       expect(actualPath, path);
-      expect(actualRouteInfo.location, '/about');
+      expect(actualRouteInfo.uri, Uri.parse('/about'));
     });
   });
 }

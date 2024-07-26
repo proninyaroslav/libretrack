@@ -326,7 +326,9 @@ class _ActivateAndRefreshButton extends StatelessWidget {
     return OutlinedButton.icon(
       onPressed: () async {
         await context.read<DetailsActionsCubit>().activateTracking(info);
-        context.read<DetailsActionsCubit>().refresh(info);
+        if (context.mounted) {
+          context.read<DetailsActionsCubit>().refresh(info);
+        }
       },
       icon: const Icon(Icons.refresh),
       label: Text(S.of(context).activateAndRefresh),

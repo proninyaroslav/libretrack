@@ -470,6 +470,7 @@ class SideBackdropScaffoldState extends State<SideBackdropScaffold>
   }
 
   Widget _buildBody(BuildContext context) {
+    // ignore: deprecated_member_use
     return WillPopScope(
       onWillPop: () => _willPopCallback(context),
       child: Scaffold(
