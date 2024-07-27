@@ -1,3 +1,7 @@
+### Version 1.4.1 (2024-07-27)
+
+* Disable Android TV support
+
 ### Version 1.4.0 (2024-07-26)
 
 * Android 14 support
