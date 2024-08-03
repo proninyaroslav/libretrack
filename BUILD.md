@@ -1,81 +1,92 @@
-# ⚙️ Building
+`# ⚙️ Building
 
 To build, you need to install [Flutter](https://flutter.dev/docs/get-started/install).
 
 Enter the following command in the terminal to build the project:
- - **Android APK**
-    ```
-    flutter build apk --flavor main
-    ```
-    You can also split APK into different architectures:
-    ```
-    flutter build apk --flavor main --split-per-abi
-    ```
-    or
-    ```
-    flutter build apk --flavor main --target-platform [android-arm|android-arm64|android-x64]
-    ```
-    The built APK will be located in the `build/app/outputs/flutter-apk/` directory.
 
- - **Linux binary**
+- **Android APK**
 
-    Note: for support system tray in GNOME, please install [gnome-shell-extension-appindicator](https://extensions.gnome.org/extension/615/appindicator-support/) or similar extension.
+  ```
+  flutter build apk --flavor main
+  ```
 
-    Before building, make sure that the following dependencies are installed on the system:
-    - **gtk3**
-    - **libsecret**
-    - **libjsoncpp**
-    - **libappindicator** (GTK3)
-    - **libsqlite3** (and development version)
-    - **gettext** (for build only)
+  You can also split APK into different architectures:
 
-    Development versions for these packages are also required for building.
-    
-    To enable Linux support, enter the following command (runs once):
-    
-    ```
-    flutter config --enable-linux-desktop
-    ```
+  ```
+  flutter build apk --flavor main --split-per-abi
+  ```
 
-    Then run the following command:
+  or
 
-    ```
-    flutter build linux
-    ```
+  ```
+  flutter build apk --flavor main --target-platform [android-arm|android-arm64|android-x64]
+  ```
 
-    The built binary will be located in the `build/linux/x64/debug/bundle/` directory (or `build/linux/arm64/` for arm64 builds). The contents of the `bundle` directory must be fully copied.
+  The built APK will be located in the `build/app/outputs/flutter-apk/` directory.
 
- - **Linux Snap package**
+- **Linux binary**
 
-    Note: for support system tray in GNOME, please install [gnome-shell-extension-appindicator](https://extensions.gnome.org/extension/615/appindicator-support/) or similar extension.
+  Note: for support system tray in GNOME, please install [gnome-shell-extension-appindicator](https://extensions.gnome.org/extension/615/appindicator-support/) or similar extension.
 
-    Before building, make sure that the `snapcraft` dependency is installed on the system.
+  Before building, make sure that the following dependencies are installed on the system:
 
-    Then run the following command:
+  - **gtk3**
+  - **libsecret**
+  - **libjsoncpp**
+  - **libappindicator** (GTK3)
+  - **libsqlite3** (and development version)
+  - **gettext** (for build only)
 
-    ```
-    snapcraft
-    ```
+  Development versions for these packages are also required for building.
 
-    The resulting `.snap` file can be installed as follows:
+  To enable Linux support, enter the following command (runs once):
 
-    ```
-    sudo snap install output_file_name.snap --dangerous
-    ```
- - **Linux Flatpak package**
+  ```
+  flutter config --enable-linux-desktop
+  ```
 
-    Note: for support system tray in GNOME, please install [gnome-shell-extension-appindicator](https://extensions.gnome.org/extension/615/appindicator-support/) or similar extension.
+  Then run the following command:
 
-    Before building, make sure that the `flatpak` and `flatpak-builder` dependencies are installed on the system.
+  ```
+  flutter build linux
+  ```
 
-    Then run the following commands:
+  The built binary will be located in the `build/linux/x64/debug/bundle/` directory (or `build/linux/arm64/` for arm64 builds). The contents of the `bundle` directory must be fully copied.
 
-    ```
-    flatpak install org.freedesktop.Sdk
-    ```
-    ```
-    cd flatpak
-    ```
-    ```
-    flatpak-builder --user --install builddir ru.proninyaroslav.libretrack.yaml --force-clean
-    ```
+- **Linux Snap package**
+
+  Note: for support system tray in GNOME, please install [gnome-shell-extension-appindicator](https://extensions.gnome.org/extension/615/appindicator-support/) or similar extension.
+
+  Before building, make sure that the `snapcraft` dependency is installed on the system.
+
+  Then run the following command:
+
+  ```
+  snapcraft
+  ```
+
+  The resulting `.snap` file can be installed as follows:
+
+  ```
+  sudo snap install output_file_name.snap --dangerous
+  ```
+
+- **Linux Flatpak package**
+
+  Note: for support system tray in GNOME, please install [gnome-shell-extension-appindicator](https://extensions.gnome.org/extension/615/appindicator-support/) or similar extension.
+
+  Before building, make sure that the `flatpak` and `flatpak-builder` dependencies are installed on the system.
+
+  Then run the following commands:
+
+  ```
+  flatpak install org.freedesktop.Sdk
+  ```
+
+  ```
+  cd flatpak
+  ```
+
+  ```
+  flatpak-builder --user --install builddir ru.proninyaroslav.libretrack.yaml --force-clean
+  ```
