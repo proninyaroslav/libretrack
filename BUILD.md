@@ -1,4 +1,4 @@
-`# ⚙️ Building
+# ⚙️ Building
 
 To build, you need to install [Flutter](https://flutter.dev/docs/get-started/install).
 
