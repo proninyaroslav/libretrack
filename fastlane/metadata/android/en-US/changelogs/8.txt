@@ -1,0 +1,2 @@
+* Fix launching on Android
+* F-Droid split APK support

@@ -1,1 +1,0 @@
-Disable Android TV support

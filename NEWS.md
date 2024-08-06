@@ -1,3 +1,8 @@
+### Version 1.4.2 (2024-08-06)
+
+* Fix launching on Android
+* F-Droid split APK support
+
 ### Version 1.4.1 (2024-07-27)
 
 * Disable Android TV support
