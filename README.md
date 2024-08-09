@@ -4,8 +4,7 @@
 [![Matrix Room](https://img.shields.io/matrix/libretrack:matrix.org?label=Matrix%20Room)](https://matrix.to/#libretrack:matrix.org)
 [![Chat - Telegram](https://img.shields.io/badge/chat-Telegram-blue.svg)](https://t.me/LibreTrack)
 
-LibreTrack
-=====================
+# LibreTrack
 
 ![LibreTrack](fastlane/metadata/android/en-US/images/featureGraphic.png)
 
@@ -26,59 +25,60 @@ Track postal items directly on your device using accounts of postal services. Th
 
 ## 📋 Features
 
- - Free and Open Source software (FOSS)
- - Support for various platfroms and devices
- - Support accounts of different carriers
- - Detailed information about the postal items, carriers, tracking history
- - Local push notifications
- - Automatic tracking in the background, and also manual refreshing
- - Ability to add a list of track numbers
- - Filter and sort numbers by activity date, package status, carrier, etc
- - Barcode and QR code scanner for tracking numbers
- - Barcode generator
- - Archiving tracking numbers
- - Material Design 2.0
- - Night theme
- - Responsive UI for different devices form factors
- - [Linux]: System tray support. Note: for support in GNOME, please install [gnome-shell-extension-appindicator](https://extensions.gnome.org/extension/615/appindicator-support/) or similar extension.
+- Free and Open Source software (FOSS)
+- Support for various platfroms and devices
+- Support accounts of different carriers
+- Detailed information about the postal items, carriers, tracking history
+- Local push notifications
+- Automatic tracking in the background, and also manual refreshing
+- Ability to add a list of track numbers
+- Filter and sort numbers by activity date, package status, carrier, etc
+- Barcode and QR code scanner for tracking numbers
+- Barcode generator
+- Archiving tracking numbers
+- Material Design 2.0
+- Night theme
+- Responsive UI for different devices form factors
+- [Linux]: System tray support. Note: for support in GNOME, please install [gnome-shell-extension-appindicator](https://extensions.gnome.org/extension/615/appindicator-support/) or similar extension.
 
 ## 🖥️💻📱 Available platforms
 
- - Android
- - Linux
- - ~~iOS~~ (planned)
- - ~~macOS~~ (planned)
- - ~~Web~~ (planned)
- - ~~Windows~~ (planned)
+- Android
+- Linux
+- ~~iOS~~ (planned)
+- ~~macOS~~ (planned)
+- ~~Web~~ (planned)
+- ~~Windows~~ (planned)
 
 ## 📦 Supported postal services
 
 [![UPS](assets/service_logo/ups.png)](https://www.ups.com)
 [![Russian Post](assets/service_logo/russian_post.png)](https://www.pochta.ru/)
 [![USPS](assets/service_logo/usps.png)](https://www.usps.com/)
+[![PostNord](art/postnord.png)](https://www.postnord.se/en/)
 
 ## 🌍 Translations
 
- - **English**
- - **Itialian** *(thanks albanobattistella)*
- - **Russian**
- - **Spanish** *(thanks sguinetti)*
- - **French** *(thanks BNouailhac)*
+- **English**
+- **Itialian** _(thanks albanobattistella)_
+- **Russian**
+- **Spanish** _(thanks sguinetti)_
+- **French** _(thanks BNouailhac)_
 
 ## 💰 Donation
 
 If you like LibreTrack you can support developer with these methods. If you have problems with payment or you want to donate in another way, contact me: `proninyaroslav@mail.ru`. Thank you!
 
- - **Bitcoin**: `12isaLkH8nZ4DkFguVFeYrGHqQi7EEgUrM `
- - **USDT TRC20**: `TK79fzUYwRtmANuLjk1Zzhz3hjTaFQbxfg`
- - **Monero**: `48j4Mo7J7t51EeBf35Lpdmehmi9chUwzSXxHrnjpRJ6fPQafPWvSCdFafw3rA5ZRWievfYEDToNso8VppbJf2RVH9cdZmHa`
- - **Yandex Money (YooMoney)**: `410011738561939`
- - **WebMoney**:
-     - **WMZ**: `Z335461926163`
-     - **WMR**: `R151579576467`
- - **Amazon.com eGift Cards**: just choose your amount and type e-mail `proninyaroslav@mail.ru`
-in the gift card details https://smile.amazon.com/gp/product/B004LLIKVU/
- - **Liberapay**: [![liberapay](https://liberapay.com/assets/widgets/donate.svg)](https://liberapay.com/proninyaroslav/donate)
+- **Bitcoin**: `12isaLkH8nZ4DkFguVFeYrGHqQi7EEgUrM `
+- **USDT TRC20**: `TK79fzUYwRtmANuLjk1Zzhz3hjTaFQbxfg`
+- **Monero**: `48j4Mo7J7t51EeBf35Lpdmehmi9chUwzSXxHrnjpRJ6fPQafPWvSCdFafw3rA5ZRWievfYEDToNso8VppbJf2RVH9cdZmHa`
+- **Yandex Money (YooMoney)**: `410011738561939`
+- **WebMoney**:
+  - **WMZ**: `Z335461926163`
+  - **WMR**: `R151579576467`
+- **Amazon.com eGift Cards**: just choose your amount and type e-mail `proninyaroslav@mail.ru`
+  in the gift card details https://smile.amazon.com/gp/product/B004LLIKVU/
+- **Liberapay**: [![liberapay](https://liberapay.com/assets/widgets/donate.svg)](https://liberapay.com/proninyaroslav/donate)
 
 ## ⚙️ Building
 
@@ -90,11 +90,11 @@ Please see [CONTRIBUTING.md](CONTRIBUTING.md)
 
 #### Developers
 
-* [Yaroslav Pronin](https://github.com/proninyaroslav)
+- [Yaroslav Pronin](https://github.com/proninyaroslav)
 
 #### Logo
 
-* [Ramy (@rshirwan)](https://t.me/rshirwan)
+- [Ramy (@rshirwan)](https://t.me/rshirwan)
 
 ## Screenshots
 
