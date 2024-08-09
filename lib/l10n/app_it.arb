@@ -1,5 +1,5 @@
 {
-  "@@locale": "it_IT",
+  "@@locale": "it",
   "projectIssuesPage": "https://github.com/proninyaroslav/libretrack/issues",
   "appChangelogUrl": "https://github.com/proninyaroslav/libretrack/blob/HEAD/NEWS.md",
   "appDescription": "App privata multipiattaforma per il monitoraggio dei pacchi.\nUlteriori informazioni e anche per aiutare il progetto: https://github.com/proninyaroslav/libretrack",

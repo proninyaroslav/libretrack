@@ -1,5 +1,5 @@
 {
-  "@@locale": "en_US",
+  "@@locale": "en",
   "projectIssuesPage": "https://github.com/proninyaroslav/libretrack/issues",
   "appChangelogUrl": "https://github.com/proninyaroslav/libretrack/blob/HEAD/NEWS.md",
   "appDescription": "Private, cross-platform package tracking app.\nMore information and also to help the project: https://github.com/proninyaroslav/libretrack",

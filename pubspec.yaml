@@ -55,7 +55,7 @@ dependencies:
   http: ^1.2.2
   image: ^4.2.0
   injectable: ^2.4.4
-  intl: ^0.19.0
+  intl: any
   jiffy: ^6.3.1
   json_annotation: ^4.4.0
   json_serializable: ^6.0.0
@@ -100,6 +100,7 @@ dev_dependencies:
 
 # The following section is specific to Flutter.
 flutter:
+  generate: true
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.

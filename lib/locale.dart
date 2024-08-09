@@ -1,4 +1,4 @@
-// Copyright (C) 2021 Yaroslav Pronin <proninyaroslav@mail.ru>
+// Copyright (C) 2021-2024 Yaroslav Pronin <proninyaroslav@mail.ru>
 // Copyright (C) 2021 Insurgo Inc. <insurgo@riseup.net>
 //
 // This file is part of LibreTrack.
@@ -17,34 +17,39 @@
 // along with LibreTrack.  If not, see <http://www.gnu.org/licenses/>.
 
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:intl/locale.dart' as intl;
 
-import 'generated/l10n.dart';
+export 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-export 'generated/l10n.dart';
+class S {
+  static AppLocalizations of(BuildContext context) {
+    return Localizations.of<AppLocalizations>(context, AppLocalizations)!;
+  }
+}
 
 class AppLocale {
   static const supportedLocales = [
-    Locale('en', 'US'),
-    Locale('es', 'ES'),
-    Locale('it', 'IT'),
-    Locale('ru', 'RU'),
-    Locale('sk', 'SK'),
+    Locale('en'),
+    Locale('es'),
+    Locale('it'),
+    Locale('ru'),
+    Locale('sk'),
     Locale('fr'),
   ];
 
   static const Iterable<LocalizationsDelegate<dynamic>> localizationsDelegates =
       [
-    S.delegate,
+    AppLocalizations.delegate,
     GlobalMaterialLocalizations.delegate,
     GlobalWidgetsLocalizations.delegate,
     GlobalCupertinoLocalizations.delegate,
   ];
 
-  static Future<S> loadLocale(String localeStr) {
+  static Future<AppLocalizations> loadLocale(String localeStr) {
     final locale = intl.Locale.parse(localeStr);
-    return S.load(
+    return AppLocalizations.delegate.load(
       Locale(
         locale.languageCode,
         locale.countryCode,

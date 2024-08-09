@@ -44,7 +44,7 @@ class ShipmentStatusMetadataMapper {
   }
 
   static ShipmentStatusMetadata ofLocale(
-    S locale,
+    AppLocalizations locale,
     ShipmentStatusType type,
   ) {
     switch (type) {

@@ -112,7 +112,7 @@
   "lastTrackingDate": "Dernier suivi: {date}",
   "parcelTrackingStatus": "Votre colis est actuellement suivi. Veuillez patienter quelques minutes",
   "invalidTrackingNumberStatus": "Numéro de suivi non valide ou service postal non pris en charge",
-  "parcelInTransitStatus": "{jours, plural, zéro {Paquet en transit {days} jours} one {Paquet en transit {days} jour} quelques {Paquet en transit {days} jours} beaucoup de {Package in transit {days} days} other {Paquet en transit {days} jours}}",
+  "parcelInTransitStatus": "{days, plural, zero {Paquet en transit {days} jours} one {Paquet en transit {days} jour} few {Paquet en transit {days} jours} many {Package in transit {days} days} other {Paquet en transit {days} jours}}",
   "parcelDeliveredStatus": "Paquet livré le {date}",
   "parcelInfoNotAvailableStatus": "Il n''y a pas encore d''informations sur le colis. Après l''envoi d''one paquet, il peut s''écouler plusieurs jours avant que l''on puisse le suivre.",
   "trackingStoppedStatus": "Suivi arrêté. Le suivi s''arrête s''il y a eu onee erreur matérielle, ou si le service postal a signalé que les others statuts ne sont pas fournis.",

@@ -46,3 +46,6 @@ app.*.map.json
 # Envinronment
 .env
 .env_test
+
+# Flutter localizations
+app_untranslated.txt

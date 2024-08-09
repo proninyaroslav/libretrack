@@ -98,7 +98,7 @@ class NotificationManagerImpl implements NotificationManager {
   final AppSettings _pref;
 
   String? _currentLocale;
-  S? _currentAppLocale;
+  AppLocalizations? _currentAppLocale;
 
   final _notifyPlugin = FlutterLocalNotificationsPlugin();
   final _onNotifySelected = StreamController<NotificationAction>.broadcast();
@@ -275,7 +275,7 @@ class NotificationManagerImpl implements NotificationManager {
   List<_NotificationData> _buildActivityNotifications(
     String groupKey,
     Map<TrackNumberInfo, ShipmentActivityInfo> lastActivities,
-    S locale,
+    AppLocalizations locale,
   ) {
     final contentList = <_NotificationData>[];
     for (final e in lastActivities.entries) {
@@ -318,7 +318,7 @@ class NotificationManagerImpl implements NotificationManager {
     return contentList;
   }
 
-  Future<S> _getAppLocale() async {
+  Future<AppLocalizations> _getAppLocale() async {
     final oldLocale = _currentLocale;
     _currentLocale = await _pref.locale.when(
       system: () => _platformInfo.currentLocale,
@@ -422,7 +422,7 @@ class NotificationManagerImpl implements NotificationManager {
   List<_NotificationData> _buildHardErrorNotifications(
     String groupKey,
     List<TrackNumberInfo> trackInfoList,
-    S locale,
+    AppLocalizations locale,
   ) {
     final contentList = <_NotificationData>[];
     for (final trackInfo in trackInfoList) {
@@ -561,19 +561,19 @@ class _AndroidChannel {
     required this.description,
   });
 
-  _AndroidChannel.parcelsTracking(S locale)
+  _AndroidChannel.parcelsTracking(AppLocalizations locale)
       : this._(
           id: 'org.proninyaroslav.libtretrack.PARCELS_TRACKING_CHANNEL',
           name: locale.parcelsTrackingNotifyChannelTitle,
           description: locale.parcelsTrackingNotifyChannelDescription,
         );
-  _AndroidChannel.trackingError(S locale)
+  _AndroidChannel.trackingError(AppLocalizations locale)
       : this._(
           id: 'org.proninyaroslav.libtretrack.TRACKING_ERROR_CHANNEL',
           name: locale.trackingErrorNotifyChannelTitle,
           description: locale.trackingErrorNotifyChannelDescription,
         );
-  _AndroidChannel.defaultChan(S locale)
+  _AndroidChannel.defaultChan(AppLocalizations locale)
       : this._(
           id: 'org.proninyaroslav.libtretrack.DEFAULT_CHANNEL',
           name: locale.defaultNotifyChannelTitle,
