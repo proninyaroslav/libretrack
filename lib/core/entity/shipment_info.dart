@@ -27,7 +27,7 @@ import 'converter/converter.dart';
   PostalServiceTypeConverter,
   NullableDateTimeConverter,
   NullableMeasurementConverter,
-  ShipmentStatusTypeConverter,
+  NullableShipmentStatusTypeConverter,
 ])
 @Entity(
   foreignKeys: [
