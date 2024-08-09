@@ -39,7 +39,7 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static m13(value) => "${value} L";
 
-  static m14(howMany) => "{howMany, plural, one {{Error al marcar el paquete como leído} other {Error al marcar los paquetes como leídos}}";
+  static m14(howMany) => "${Intl.plural(howMany, one: 'Error al marcar el paquete como leído', other: 'Error al marcar los paquetes como leídos')}";
 
   static m16(value) => "${value} min.";
 

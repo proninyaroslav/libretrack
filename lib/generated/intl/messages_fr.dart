@@ -19,91 +19,67 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'fr';
 
-  static m0(value) => "${value} bbl";
+  static m2(email, pageUrl) => "Auconee application de messagerie trouvée. Vous pouvez copier manuellement l\'\'erreur et l\'\'envoyer à ${email}\nou envoyer sur la page du projet ${pageUrl}";
 
-  static m2(email, pageUrl) => "Aucune application de messagerie trouvée. Vous pouvez copier manuellement l\'erreur et l\'envoyer à ${email}\nou envoyer sur la page du projet ${pageUrl}";
+  static m5(howMany) => "${Intl.plural(howMany, one: 'Etes-vous sûr de vouloir supprimer le paquet sélectionné?', other: 'Etes-vous sûr de vouloir supprimer le paquet sélectionné?')}";
 
-  static m5(howMany) => "{combien, pluriel, un {Etes-vous sûr de vouloir supprimer le paquet sélectionné?} autre {Etes-vous sûr de vouloir supprimer le paquet sélectionné?}}";
+  static m6(howMany) => "${Intl.plural(howMany, one: 'Échec de la suppression du paquet', other: 'Échec de la suppression du paquet')}";
 
-  static m6(howMany) => "{combien, pluriel, un {Échec de la suppression du paquet} autre {Échec de la suppression du paquet}}";
-
-  static m8(value) => "${value} gal";
-
-  static m9(error) => "Impossible de générer un code-barres: ${error}";
+  static m9(error) => "Impossible de générer one code-barres: ${error}";
 
   static m10(value) => "${value} h.";
 
-  static m11(value) => "${value} kg";
-
   static m12(date) => "Dernier suivi: ${date}";
 
-  static m13(value) => "${value} L";
-
-  static m14(howMany) => "{combien, pluriel, un {Impossible de marquer le paquet comme lu} autre {Impossible de marquer le paquet comme lu}}";
+  static m14(howMany) => "${Intl.plural(howMany, one: 'Impossible de marquer le paquet comme lu', other: 'Impossible de marquer le paquet comme lu')}";
 
   static m16(value) => "${value} min.";
 
-  static m17(howMany) => "{combien, pluriel, un {Échec du déplacement du paquet} autre {Échec du déplacement du paquet}}";
-
-  static m18(value) => "${value} oz";
+  static m17(howMany) => "${Intl.plural(howMany, one: 'Échec du déplacement du paquet', other: 'Échec du déplacement du paquet')}";
 
   static m19(date) => "Paquet livré le ${date}";
 
-  static m20(days) => "{jours, pluriel, zéro {Paquet en transit ${days} jours} un {Paquet en transit ${days} jour} quelques {Paquet en transit ${days} jours} beaucoup de {Package in transit ${days} days} other {Paquet en transit ${days} jours}}";
+  static m20(days) => "{jours, plural, zéro {Paquet en transit ${days} jours} one {Paquet en transit ${days} jour} quelques {Paquet en transit ${days} jours} beaucoup de {Package in transit ${days} days} other {Paquet en transit ${days} jours}}";
 
   static m22(name) => "Signé par: ${name}";
 
-  static m23(time) => "Le suivi n\'est pas disponible, car un peu de temps s\'est écoulé depuis le dernier suivi. Veuillez réessayer après ${time}";
+  static m23(time) => "Le suivi n\'\'est pas disponible, car one peu de temps s\'\'est écoulé depuis le dernier suivi. Veuillez réessayer après ${time}";
 
   static m24(parcelName) => "• ${parcelName}";
 
   static m25(title, body) => "${title}: ${body}";
 
-  static m26(value) => "${value} lb";
-
-  static m27(howMany) => "{combien, pluriel, un {Échec du rafraîchissement du paquet} autre {Échec du rafraîchissement du paquet}}";
+  static m27(howMany) => "${Intl.plural(howMany, one: 'Échec du rafraîchissement du paquet', other: 'Échec du rafraîchissement du paquet')}";
 
   static m28(value) => "${value} sec.";
 
   static m29(count) => "Sélectionné: ${count}";
 
-  static m30(time) => "Pas plus d\'une fois tous les ${time}";
-
-  static m31(value) => "${value} ft²";
-
-  static m32(value) => "${value} m²";
-
-  static m33(value) => "${value} yd²";
+  static m30(time) => "Pas plus d\'\'onee fois tous les ${time}";
 
   static m34(date) => "Début du suivi: ${date}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function> {
     "aboutApp" : MessageLookupByLibrary.simpleMessage("À propos"),
-    "accessKey" : MessageLookupByLibrary.simpleMessage("Clé d\'accès"),
-    "accounts" : MessageLookupByLibrary.simpleMessage("Comptes"),
+    "accessKey" : MessageLookupByLibrary.simpleMessage("Clé d\'\'accès"),
     "activateAndRefresh" : MessageLookupByLibrary.simpleMessage("Activer et rafraîchir"),
     "activateTracking" : MessageLookupByLibrary.simpleMessage("Activer le suivi"),
-    "activateTrackingFailed" : MessageLookupByLibrary.simpleMessage("Échec de l\'activation du suivi"),
+    "activateTrackingFailed" : MessageLookupByLibrary.simpleMessage("Échec de l\'\'activation du suivi"),
     "activeParcels" : MessageLookupByLibrary.simpleMessage("Actif"),
     "activityHistory" : MessageLookupByLibrary.simpleMessage("Historique des activités"),
     "add" : MessageLookupByLibrary.simpleMessage("Ajouter"),
-    "addAccount" : MessageLookupByLibrary.simpleMessage("Ajouter un compte"),
-    "addAccountFailed" : MessageLookupByLibrary.simpleMessage("Échec de l\'ajout d\'un compte"),
-    "addAccountTip" : MessageLookupByLibrary.simpleMessage("Avant de tracer les paquets, vous devez ajouter un compte"),
     "addParcels" : MessageLookupByLibrary.simpleMessage("Ajouter des paquets"),
-    "addParcelsFailed" : MessageLookupByLibrary.simpleMessage("Échec de l\'ajout de paquets"),
+    "addParcelsFailed" : MessageLookupByLibrary.simpleMessage("Échec de l\'\'ajout de paquets"),
     "addToMyParcels" : MessageLookupByLibrary.simpleMessage("Ajouter à mes forfaits"),
     "all" : MessageLookupByLibrary.simpleMessage("Tout"),
-    "allAccountsAlreadyAdded" : MessageLookupByLibrary.simpleMessage("Tous les comptes ont déjà été ajoutés"),
     "appChangelogUrl" : MessageLookupByLibrary.simpleMessage("https://github.com/proninyaroslav/libretrack/blob/HEAD/NEWS.md"),
-    "appDescription" : MessageLookupByLibrary.simpleMessage("Simplifie la comparaison de photos de scellés inviolables et de motifs à l\'aide de vos yeux.\nPlus d\'informations et aussi pour aider le projet: https://github.com/proninyaroslav/libretrack"),
-    "appLicense" : MessageLookupByLibrary.simpleMessage("LibreTrack est un logiciel libre et gratuit (FOSS), publié selon les termes de la GNU General Public License v3 (GPLv3) https://www.gnu.org/licenses/gpl-3.0.html"),
+    "appDescription" : MessageLookupByLibrary.simpleMessage("Simplifie la comparaison de photos de scellés inviolables et de motifs à l\'\'aide de vos yeux.\nPlus d\'\'informations et aussi pour aider le projet: https://github.com/proninyaroslav/libretrack"),
+    "appLicense" : MessageLookupByLibrary.simpleMessage("LibreTrack est one logiciel libre et gratuit (FOSS), publié selon les termes de la GNU General Public License v3 (GPLv3) https://www.gnu.org/licenses/gpl-3.0.html"),
     "apply" : MessageLookupByLibrary.simpleMessage("Appliquer"),
     "archiveParcels" : MessageLookupByLibrary.simpleMessage("Archives"),
     "barcodeScanFailed" : MessageLookupByLibrary.simpleMessage("Impossible de scanner le code-barres"),
     "barcodeScanner" : MessageLookupByLibrary.simpleMessage("Scanner de code-barres"),
-    "barrelUnitShort" : m0,
     "cancel" : MessageLookupByLibrary.simpleMessage("Annuler"),
     "changelog" : MessageLookupByLibrary.simpleMessage("Historique des modifications"),
     "close" : MessageLookupByLibrary.simpleMessage("Fermer"),
@@ -114,36 +90,29 @@ class MessageLookup extends MessageLookupByLibrary {
     "crashDialogMoreDetails" : MessageLookupByLibrary.simpleMessage("Plus de détails"),
     "crashDialogNoEmailApp" : m2,
     "crashDialogReport" : MessageLookupByLibrary.simpleMessage("Report"),
-    "crashDialogSummary" : MessageLookupByLibrary.simpleMessage("Une erreur d\'application s\'est produite. Vous pouvez le signaler aux développeurs"),
+    "crashDialogSummary" : MessageLookupByLibrary.simpleMessage("onee erreur d\'\'application s\'\'est produite. Vous pouvez le signaler aux développeurs"),
     "dataIsSecured" : MessageLookupByLibrary.simpleMessage("Les données sont stockées en toute sécurité"),
-    "defaultNotifyChannelDescription" : MessageLookupByLibrary.simpleMessage("Toutes les notifications qui ne conviennent pas aux autres catégories"),
+    "defaultNotifyChannelDescription" : MessageLookupByLibrary.simpleMessage("Toutes les notifications qui ne conviennent pas aux others catégories"),
     "defaultNotifyChannelTitle" : MessageLookupByLibrary.simpleMessage("Défaut"),
     "delete" : MessageLookupByLibrary.simpleMessage("Supprimer"),
-    "deleteAccountDialogMsg" : MessageLookupByLibrary.simpleMessage("Etes-vous sûr de vouloir supprimer le compte sélectionné?"),
-    "deleteAccountFailed" : MessageLookupByLibrary.simpleMessage("Échec de la suppression du compte"),
     "deleteParcelDialogMsg" : m5,
     "deleteParcelsFailed" : m6,
     "details" : MessageLookupByLibrary.simpleMessage("Détails"),
     "edit" : MessageLookupByLibrary.simpleMessage("Modifier"),
-    "editAccount" : MessageLookupByLibrary.simpleMessage("Modifier le compte"),
-    "editAccountFailed" : MessageLookupByLibrary.simpleMessage("Échec de la modification du compte"),
-    "editParcelFailed" : MessageLookupByLibrary.simpleMessage("Échec de l\'édition du paquet"),
-    "enterAuthData" : MessageLookupByLibrary.simpleMessage("Entrez vos données d\'autorisation"),
+    "editParcelFailed" : MessageLookupByLibrary.simpleMessage("Échec de l\'\'édition du paquet"),
+    "enterAuthData" : MessageLookupByLibrary.simpleMessage("Entrez vos données d\'\'autorisation"),
     "error" : MessageLookupByLibrary.simpleMessage("Erreur"),
     "errors" : MessageLookupByLibrary.simpleMessage("Erreurs"),
     "fieldRequiredError" : MessageLookupByLibrary.simpleMessage("Ce champ est obligatoire"),
     "filters" : MessageLookupByLibrary.simpleMessage("Filtres"),
     "filtersAndSorting" : MessageLookupByLibrary.simpleMessage("Filtres et tri"),
-    "gallonUnitShort" : m8,
     "generateBarcodFailed" : m9,
-    "generateBarcode" : MessageLookupByLibrary.simpleMessage("Générer un code-barres"),
+    "generateBarcode" : MessageLookupByLibrary.simpleMessage("Générer one code-barres"),
     "hide" : MessageLookupByLibrary.simpleMessage("Cacher"),
     "hoursShortFormat" : m10,
     "invalidTrackingNumberStatus" : MessageLookupByLibrary.simpleMessage("Numéro de suivi non valide ou service postal non pris en charge"),
-    "kilogramUnitShort" : m11,
     "lastTrackingDate" : m12,
-    "linuxTrayIconWarning" : MessageLookupByLibrary.simpleMessage("Certains environnements peuvent ne pas prendre en charge la barre d\'état système par défaut. Par exemple, pour travailler dans GNOME, installez cette extension (ou similaire): https://extensions.gnome.org/extension/615/appindicator-support/"),
-    "literUnitShort" : m13,
+    "linuxTrayIconWarning" : MessageLookupByLibrary.simpleMessage("Certains environnements peuvent ne pas prendre en charge la barre d\'\'état système par défaut. Par exemple, pour travailler dans GNOME, installez cette extension (ou similaire): https://extensions.gnome.org/extension/615/appindicator-support/"),
     "loadPageFailed" : MessageLookupByLibrary.simpleMessage("Impossible de charger la page"),
     "login" : MessageLookupByLibrary.simpleMessage("Connexion"),
     "markAllAsRead" : MessageLookupByLibrary.simpleMessage("Marquer tout comme lu"),
@@ -151,63 +120,56 @@ class MessageLookup extends MessageLookupByLibrary {
     "markAsReadParcelFailed" : m14,
     "minutesShortFormat" : m16,
     "moveParcelFailed" : m17,
-    "moveToActive" : MessageLookupByLibrary.simpleMessage("Passer à l\'actif"),
+    "moveToActive" : MessageLookupByLibrary.simpleMessage("Passer à l\'\'actif"),
     "moveToArchive" : MessageLookupByLibrary.simpleMessage("Déplacer vers les archives"),
     "name" : MessageLookupByLibrary.simpleMessage("Nom"),
     "nextPage" : MessageLookupByLibrary.simpleMessage("Page suivante"),
     "no" : MessageLookupByLibrary.simpleMessage("Non"),
-    "noAccounts" : MessageLookupByLibrary.simpleMessage("Aucun compte"),
-    "noParcels" : MessageLookupByLibrary.simpleMessage("Aucun paquet"),
-    "noTrackingHistory" : MessageLookupByLibrary.simpleMessage("Pas d\'historique de suivi"),
+    "noParcels" : MessageLookupByLibrary.simpleMessage("Aucone paquet"),
+    "noTrackingHistory" : MessageLookupByLibrary.simpleMessage("Pas d\'\'historique de suivi"),
     "open" : MessageLookupByLibrary.simpleMessage("Ouvrir"),
     "openDetails" : MessageLookupByLibrary.simpleMessage("Ouvrir les détails"),
-    "openLinkFailed" : MessageLookupByLibrary.simpleMessage("Impossible d\'ouvrir le lien"),
+    "openLinkFailed" : MessageLookupByLibrary.simpleMessage("Impossible d\'\'ouvrir le lien"),
     "optionalField" : MessageLookupByLibrary.simpleMessage("Optionnel"),
-    "ounceUnitShort" : m18,
-    "pageNotFound" : MessageLookupByLibrary.simpleMessage("Page non trouvée"),
     "parcelDeliveredStatus" : m19,
-    "parcelDetailsHardErrorOccurred" : MessageLookupByLibrary.simpleMessage("Une erreur matérielle s\'est produite, le suivi de certains services s\'est arrêté. Vérifiez les erreurs avant d\'activer le suivi"),
+    "parcelDetailsHardErrorOccurred" : MessageLookupByLibrary.simpleMessage("onee erreur matérielle s\'\'est produite, le suivi de certains services s\'\'est arrêté. Vérifiez les erreurs avant d\'\'activer le suivi"),
     "parcelInTransitStatus" : m20,
     "parcelInfo" : MessageLookupByLibrary.simpleMessage("Informations sur le paquet"),
-    "parcelInfoNotAvailableStatus" : MessageLookupByLibrary.simpleMessage("Il n\'y a pas encore d\'informations sur le colis. Après l\'envoi d\'un paquet, il peut s\'écouler plusieurs jours avant que l\'on puisse le suivre."),
-    "parcelMovedToActiveSuccess" : MessageLookupByLibrary.simpleMessage("Passé à l\'état actif avec succès"),
+    "parcelInfoNotAvailableStatus" : MessageLookupByLibrary.simpleMessage("Il n\'\'y a pas encore d\'\'informations sur le colis. Après l\'\'envoi d\'\'one paquet, il peut s\'\'écouler plusieurs jours avant que l\'\'on puisse le suivre."),
+    "parcelMovedToActiveSuccess" : MessageLookupByLibrary.simpleMessage("Passé à l\'\'état actif avec succès"),
     "parcelMovedToArchiveSuccess" : MessageLookupByLibrary.simpleMessage("Déplacé vers les archives avec succès"),
     "parcelNames" : MessageLookupByLibrary.simpleMessage("Noms des paquets"),
-    "parcelNamesFieldHint" : MessageLookupByLibrary.simpleMessage("Optionnel. Un par ligne"),
-    "parcelNotFound" : MessageLookupByLibrary.simpleMessage("Paquet non trouvé"),
+    "parcelNamesFieldHint" : MessageLookupByLibrary.simpleMessage("Optionnel. one par ligne"),
     "parcelSignedBy" : m22,
     "parcelTrackingLimitedError" : m23,
     "parcelTrackingStatus" : MessageLookupByLibrary.simpleMessage("Votre colis est actuellement suivi. Veuillez patienter quelques minutes"),
     "parcels" : MessageLookupByLibrary.simpleMessage("Packages"),
-    "parcelsListHardErrorOccurred" : MessageLookupByLibrary.simpleMessage("Une erreur matérielle s\'est produite, le suivi s\'est arrêté. Veuillez vérifier les détails à l\'intérieur"),
+    "parcelsListHardErrorOccurred" : MessageLookupByLibrary.simpleMessage("onee erreur matérielle s\'\'est produite, le suivi s\'\'est arrêté. Veuillez vérifier les détails à l\'\'intérieur"),
     "parcelsTrackingFailedInboxStyleLine" : m24,
-    "parcelsTrackingNotifyChannelDescription" : MessageLookupByLibrary.simpleMessage("Notifications de l\'activité des paquets"),
+    "parcelsTrackingNotifyChannelDescription" : MessageLookupByLibrary.simpleMessage("Notifications de l\'\'activité des paquets"),
     "parcelsTrackingNotifyChannelTitle" : MessageLookupByLibrary.simpleMessage("Suivi des paquets"),
-    "parcelsTrackingNotifyInboxStyleDescription" : MessageLookupByLibrary.simpleMessage("L\'état des paquets est mis à jour"),
+    "parcelsTrackingNotifyInboxStyleDescription" : MessageLookupByLibrary.simpleMessage("L\'\'état des paquets est mis à jour"),
     "parcelsTrackingNotifyInboxStyleLine" : m25,
     "parcelsTrackingNotifyInboxStyleTitle" : MessageLookupByLibrary.simpleMessage("Suivi des colis"),
     "password" : MessageLookupByLibrary.simpleMessage("Mot de passe"),
     "postalService" : MessageLookupByLibrary.simpleMessage("Service postal"),
-    "poundUnitShort" : m26,
     "previousPage" : MessageLookupByLibrary.simpleMessage("Page précédente"),
     "projectIssuesPage" : MessageLookupByLibrary.simpleMessage("https://github.com/proninyaroslav/libretrack/issues"),
     "refresh" : MessageLookupByLibrary.simpleMessage("Rafraîchir"),
     "refreshAll" : MessageLookupByLibrary.simpleMessage("Rafraîchir tout"),
     "refreshParcelsFailed" : m27,
     "russianPost" : MessageLookupByLibrary.simpleMessage("Russian Post"),
-    "russianPostAddAccountDescription" : MessageLookupByLibrary.simpleMessage("1. Inscrivez-vous sur le site web de Russian Post: https://www.pochta.ru/\n2. Allez dans les paramètres d\'accès, activez l\'API de suivi et acceptez les conditions de service.: https://tracking.pochta.ru/access-settings\n3. Dans les paramètres d\'accès, copiez le login (généré automatiquement). Le mot de passe sera envoyé à l\'adresse électronique fournie lors de l\'inscription."),
     "secondsShortFormat" : m28,
-    "secureStorageIsNotSupported" : MessageLookupByLibrary.simpleMessage("Le stockage sécurisé n\'est pas pris en charge. Les données sont stockées sans protection"),
-    "selectAccountType" : MessageLookupByLibrary.simpleMessage("Veuillez sélectionner le type de compte"),
+    "secureStorageIsNotSupported" : MessageLookupByLibrary.simpleMessage("Le stockage sécurisé n\'\'est pas pris en charge. Les données sont stockées sans protection"),
     "selectAll" : MessageLookupByLibrary.simpleMessage("Sélectionner tout"),
     "selectedCounter" : m29,
     "settings" : MessageLookupByLibrary.simpleMessage("Paramètres"),
     "settingsAppearance" : MessageLookupByLibrary.simpleMessage("Apparition"),
     "settingsAutoTracking" : MessageLookupByLibrary.simpleMessage("Suivi automatique"),
     "settingsAutoTrackingFreq" : MessageLookupByLibrary.simpleMessage("Fréquence de suivi"),
-    "settingsAutoTrackingFreqDescr" : MessageLookupByLibrary.simpleMessage("Spécifie l\'intervalle minimum de suivi. Cet intervalle n\'est pas précis et peut être augmenté en raison des limitations du système (pas de connexion Internet, mode économie d\'énergie, etc.)."),
-    "settingsAutoTrackingFreqOneDay" : MessageLookupByLibrary.simpleMessage("Une fois par jour"),
-    "settingsAutoTrackingFreqOneWeek" : MessageLookupByLibrary.simpleMessage("Une fois par semaine"),
+    "settingsAutoTrackingFreqDescr" : MessageLookupByLibrary.simpleMessage("Spécifie l\'\'intervalle minimum de suivi. Cet intervalle n\'\'est pas précis et peut être augmenté en raison des limitations du système (pas de connexion Internet, mode économie d\'\'énergie, etc.)."),
+    "settingsAutoTrackingFreqOneDay" : MessageLookupByLibrary.simpleMessage("onee fois par jour"),
+    "settingsAutoTrackingFreqOneWeek" : MessageLookupByLibrary.simpleMessage("onee fois par semaine"),
     "settingsAutoTrackingFreqSixHours" : MessageLookupByLibrary.simpleMessage("Toutes les 6 heures"),
     "settingsAutoTrackingFreqThreeDays" : MessageLookupByLibrary.simpleMessage("Tous les 3 jours"),
     "settingsAutoTrackingFreqTwelveHours" : MessageLookupByLibrary.simpleMessage("Toutes les 12 heures"),
@@ -221,100 +183,90 @@ class MessageLookup extends MessageLookupByLibrary {
     "settingsThemeDark" : MessageLookupByLibrary.simpleMessage("Sombre"),
     "settingsThemeLight" : MessageLookupByLibrary.simpleMessage("Lumineux"),
     "settingsThemeSystem" : MessageLookupByLibrary.simpleMessage("Système"),
-    "settingsTrackingErrorNotifications" : MessageLookupByLibrary.simpleMessage("Notifications d\'erreurs de suivi"),
+    "settingsTrackingErrorNotifications" : MessageLookupByLibrary.simpleMessage("Notifications d\'\'erreurs de suivi"),
     "settingsTrackingFreqFifteenMin" : MessageLookupByLibrary.simpleMessage("15 minutes"),
     "settingsTrackingFreqFortyFiveMin" : MessageLookupByLibrary.simpleMessage("45 minutes"),
     "settingsTrackingFreqLimit" : MessageLookupByLibrary.simpleMessage("Limite de la fréquence de poursuite"),
     "settingsTrackingFreqLimitSummary" : m30,
     "settingsTrackingFreqOneHour" : MessageLookupByLibrary.simpleMessage("1 hour"),
     "settingsTrackingFreqThirtyMin" : MessageLookupByLibrary.simpleMessage("30 minutes"),
-    "settingsTrackingHistorySize" : MessageLookupByLibrary.simpleMessage("Taille de l\'historique de suivi"),
-    "settingsTrackingHistorySizeDescr" : MessageLookupByLibrary.simpleMessage("Spécifie le nombre maximum d\'entrées à conserver dans l\'historique de suivi des colis."),
+    "settingsTrackingHistorySize" : MessageLookupByLibrary.simpleMessage("Taille de l\'\'historique de suivi"),
+    "settingsTrackingHistorySizeDescr" : MessageLookupByLibrary.simpleMessage("Spécifie le nombre maximum d\'\'entrées à conserver dans l\'\'historique de suivi des colis."),
     "settingsTrackingNotifications" : MessageLookupByLibrary.simpleMessage("Notifications de suivi des coliss"),
     "settingsTrackingSection" : MessageLookupByLibrary.simpleMessage("Paramètres de suivi"),
     "share" : MessageLookupByLibrary.simpleMessage("Partager"),
     "shareFailed" : MessageLookupByLibrary.simpleMessage("Impossible de partager"),
     "shipmentAdditionalRateFee" : MessageLookupByLibrary.simpleMessage("Tarif supplémentaire"),
-    "shipmentAlternateTrackingNumber" : MessageLookupByLibrary.simpleMessage("Autre numéro de suivi"),
+    "shipmentAlternateTrackingNumber" : MessageLookupByLibrary.simpleMessage("other numéro de suivi"),
     "shipmentCashOnDelivery" : MessageLookupByLibrary.simpleMessage("Paiement à la livraison"),
     "shipmentCustomDuty" : MessageLookupByLibrary.simpleMessage("Droit de douane"),
     "shipmentDeclaredValue" : MessageLookupByLibrary.simpleMessage("Valeur déclarée"),
     "shipmentDeliveryDate" : MessageLookupByLibrary.simpleMessage("Date de livraison"),
     "shipmentEstimatedDeliveryDate" : MessageLookupByLibrary.simpleMessage("Date de livraison estimée"),
-    "shipmentInsuranceRateFee" : MessageLookupByLibrary.simpleMessage("Frais de taux d\'assurance"),
-    "shipmentPickupDate" : MessageLookupByLibrary.simpleMessage("Date d\'enlèvement"),
+    "shipmentInsuranceRateFee" : MessageLookupByLibrary.simpleMessage("Frais de taux d\'\'assurance"),
+    "shipmentPickupDate" : MessageLookupByLibrary.simpleMessage("Date d\'\'enlèvement"),
     "shipmentReceiver" : MessageLookupByLibrary.simpleMessage("Récepteur"),
     "shipmentReceiverAddress" : MessageLookupByLibrary.simpleMessage("Adresse du destinataire"),
     "shipmentScheduledDeliveryDate" : MessageLookupByLibrary.simpleMessage("Date de livraison prévue"),
     "shipmentServiceDescription" : MessageLookupByLibrary.simpleMessage("Service"),
     "shipmentShipper" : MessageLookupByLibrary.simpleMessage("Expéditeur"),
-    "shipmentShipperAddress" : MessageLookupByLibrary.simpleMessage("Adresse de l\'expéditeur"),
-    "shipmentShippingRateFee" : MessageLookupByLibrary.simpleMessage("Frais d\'expédition"),
+    "shipmentShipperAddress" : MessageLookupByLibrary.simpleMessage("Adresse de l\'\'expéditeur"),
+    "shipmentShippingRateFee" : MessageLookupByLibrary.simpleMessage("Frais d\'\'expédition"),
     "shipmentSignedBy" : MessageLookupByLibrary.simpleMessage("Signé par"),
-    "shipmentTypeDescription" : MessageLookupByLibrary.simpleMessage("Type d\'expédition"),
+    "shipmentTypeDescription" : MessageLookupByLibrary.simpleMessage("Type d\'\'expédition"),
     "shipmentVolume" : MessageLookupByLibrary.simpleMessage("Volume"),
     "shipmentWeight" : MessageLookupByLibrary.simpleMessage("Poids"),
     "show" : MessageLookupByLibrary.simpleMessage("Afficher"),
-    "showError" : MessageLookupByLibrary.simpleMessage("Afficher l\'erreur"),
+    "showError" : MessageLookupByLibrary.simpleMessage("Afficher l\'\'erreur"),
     "showErrors" : MessageLookupByLibrary.simpleMessage("Afficher les erreurs"),
     "showMore" : MessageLookupByLibrary.simpleMessage("Afficher plus"),
-    "sortActivityDateAsc" : MessageLookupByLibrary.simpleMessage("Date d\'activité (la plus récente en premier)"),
-    "sortActivityDateDesc" : MessageLookupByLibrary.simpleMessage("Date d\'activité (la plus ancienne en premier)"),
+    "sortActivityDateAsc" : MessageLookupByLibrary.simpleMessage("Date d\'\'activité (la plus récente en premier)"),
+    "sortActivityDateDesc" : MessageLookupByLibrary.simpleMessage("Date d\'\'activité (la plus ancienne en premier)"),
     "sortAlphabeticallyAsc" : MessageLookupByLibrary.simpleMessage("A - Z"),
     "sortAlphabeticallyDesc" : MessageLookupByLibrary.simpleMessage("Z - A"),
-    "sortDateAddedAsc" : MessageLookupByLibrary.simpleMessage("Date d\'ajout (la plus récente en premier)"),
-    "sortDateAddedDesc" : MessageLookupByLibrary.simpleMessage("Date d\'ajout (la plus ancienne en premier)"),
+    "sortDateAddedAsc" : MessageLookupByLibrary.simpleMessage("Date d\'\'ajout (la plus récente en premier)"),
+    "sortDateAddedDesc" : MessageLookupByLibrary.simpleMessage("Date d\'\'ajout (la plus ancienne en premier)"),
     "sorting" : MessageLookupByLibrary.simpleMessage("Triage"),
-    "squareFeetUnitShort" : m31,
-    "squareMeterUnitShort" : m32,
-    "squareYardUnitShort" : m33,
     "status" : MessageLookupByLibrary.simpleMessage("Statut"),
     "statusArrivedAtCustoms" : MessageLookupByLibrary.simpleMessage("Arrivée aux douanes"),
     "statusCustomsClearanceComplete" : MessageLookupByLibrary.simpleMessage("Dédouanement terminé"),
     "statusDelivered" : MessageLookupByLibrary.simpleMessage("Livré"),
-    "statusExportedFromDepartureCountry" : MessageLookupByLibrary.simpleMessage("Exporté du pays de départ"),
-    "statusImportedToDestinationCountry" : MessageLookupByLibrary.simpleMessage("Importé dans le pays de destination"),
     "statusInStorage" : MessageLookupByLibrary.simpleMessage("En stock"),
     "statusInTransit" : MessageLookupByLibrary.simpleMessage("En transit"),
     "statusInTransitArrivedWaypoint" : MessageLookupByLibrary.simpleMessage("Arrivé au point de passage"),
     "statusInTransitDepartedWaypoint" : MessageLookupByLibrary.simpleMessage("Départ du point de passage"),
     "statusInfoReceived" : MessageLookupByLibrary.simpleMessage("Infos reçues"),
-    "statusNotAvailable" : MessageLookupByLibrary.simpleMessage("Pas encore d\'informations sur le suivi"),
+    "statusNotAvailable" : MessageLookupByLibrary.simpleMessage("Pas encore d\'\'informations sur le suivi"),
     "statusNotDelivered" : MessageLookupByLibrary.simpleMessage("Non livré"),
     "statusOutForDelivery" : MessageLookupByLibrary.simpleMessage("En attente de livraison"),
     "statusPickup" : MessageLookupByLibrary.simpleMessage("Pickup"),
-    "statusReturnedToShipper" : MessageLookupByLibrary.simpleMessage("Renvoyé à l\'expéditeur"),
+    "statusReturnedToShipper" : MessageLookupByLibrary.simpleMessage("Renvoyé à l\'\'expéditeur"),
     "track" : MessageLookupByLibrary.simpleMessage("Trace"),
     "trackingError" : MessageLookupByLibrary.simpleMessage("Erreur de suivi"),
-    "trackingErrorAuth" : MessageLookupByLibrary.simpleMessage("Erreur d\'autorisation. Veuillez vérifier les données de votre compte"),
+    "trackingErrorAuth" : MessageLookupByLibrary.simpleMessage("Erreur d\'\'autorisation. Veuillez vérifier les données de votre compte"),
     "trackingErrorCode" : MessageLookupByLibrary.simpleMessage("Code"),
     "trackingErrorInvalidTrackNumber" : MessageLookupByLibrary.simpleMessage("Numéro de suivi non valide"),
-    "trackingErrorMissingAccount" : MessageLookupByLibrary.simpleMessage("Le compte est absent. Vérifiez si le compte a été ajouté et s\'il prend en charge le service postal sélectionné."),
-    "trackingErrorMissingAuthData" : MessageLookupByLibrary.simpleMessage("Données d\'autorisation manquantes. Vérifiez si vous avez un compte et si les données sont correctes."),
+    "trackingErrorMissingAuthData" : MessageLookupByLibrary.simpleMessage("Données d\'\'autorisation manquantes. Vérifiez si vous avez one compte et si les données sont correctes."),
     "trackingErrorNetwork" : MessageLookupByLibrary.simpleMessage("Erreur de réseau"),
-    "trackingErrorNoInfo" : MessageLookupByLibrary.simpleMessage("Aucune information de suivi disponible"),
-    "trackingErrorNotifyChannelDescription" : MessageLookupByLibrary.simpleMessage("Notifications d\'erreur de suivi des colis"),
+    "trackingErrorNoInfo" : MessageLookupByLibrary.simpleMessage("Auconee information de suivi disponible"),
+    "trackingErrorNotifyChannelDescription" : MessageLookupByLibrary.simpleMessage("Notifications d\'\'erreur de suivi des colis"),
     "trackingErrorNotifyChannelTitle" : MessageLookupByLibrary.simpleMessage("Erreur de suivi"),
-    "trackingErrorOccured" : MessageLookupByLibrary.simpleMessage("Une erreur s\'est produite lors du suivi des paquets suivants:"),
+    "trackingErrorOccured" : MessageLookupByLibrary.simpleMessage("onee erreur s\'\'est produite lors du suivi des paquets suivants:"),
     "trackingErrorReason" : MessageLookupByLibrary.simpleMessage("Raison"),
-    "trackingErrorService" : MessageLookupByLibrary.simpleMessage("Le service a renvoyé une erreur"),
+    "trackingErrorService" : MessageLookupByLibrary.simpleMessage("Le service a renvoyé onee erreur"),
     "trackingErrorStackTrace" : MessageLookupByLibrary.simpleMessage("Trace de pile"),
-    "trackingErrorUnknown" : MessageLookupByLibrary.simpleMessage("Erreur inconnue"),
     "trackingFailed" : MessageLookupByLibrary.simpleMessage("Le suivi a échoué"),
     "trackingHistory" : MessageLookupByLibrary.simpleMessage("Historique de suivi"),
     "trackingNumbers" : MessageLookupByLibrary.simpleMessage("tracage des nombres"),
-    "trackingNumbersFieldHint" : MessageLookupByLibrary.simpleMessage("Un par ligne"),
+    "trackingNumbersFieldHint" : MessageLookupByLibrary.simpleMessage("one par ligne"),
     "trackingResponseError" : MessageLookupByLibrary.simpleMessage("Erreur"),
-    "trackingResponseNoInfo" : MessageLookupByLibrary.simpleMessage("Aucune information"),
+    "trackingResponseNoInfo" : MessageLookupByLibrary.simpleMessage("Auconee information"),
     "trackingResponseSuccess" : MessageLookupByLibrary.simpleMessage("Avec succès"),
     "trackingStartedDate" : m34,
-    "trackingStoppedStatus" : MessageLookupByLibrary.simpleMessage("Suivi arrêté. Le suivi s\'arrête s\'il y a eu une erreur matérielle, ou si le service postal a signalé que les autres statuts ne sont pas fournis."),
-    "unreadParcels" : MessageLookupByLibrary.simpleMessage("Non lu"),
+    "trackingStoppedStatus" : MessageLookupByLibrary.simpleMessage("Suivi arrêté. Le suivi s\'\'arrête s\'\'il y a eu onee erreur matérielle, ou si le service postal a signalé que les others statuts ne sont pas fournis."),
     "ups" : MessageLookupByLibrary.simpleMessage("UPS"),
-    "upsAddAccountDescription" : MessageLookupByLibrary.simpleMessage("Vous devez saisir les informations d\'autorisation de votre compte UPS. Vous pouvez l\'enregistrer ici: https://www.ups.com/doapp/signup?loc=en_US\nTo obtain an Access Key, go the link and follow the instructions: https://www.ups.com/upsdeveloperkit/manageaccesskeys?loc=en_US"),
-    "username" : MessageLookupByLibrary.simpleMessage("Nom d\'utilisateur"),
+    "username" : MessageLookupByLibrary.simpleMessage("Nom d\'\'utilisateur"),
     "usps" : MessageLookupByLibrary.simpleMessage("USPS"),
-    "uspsAddAccountDescription" : MessageLookupByLibrary.simpleMessage("1. Inscrivez-vous sur le site web de USPS Web Tools API Portal: https://www.usps.com/business/web-tools-apis/web-tools-registration.htm\n2. Lors de l\'inscription, à la question \"Comment utiliserez-vous les outils Web d\'USPS ?\", veuillez répondre \"Exclusivement sur mon site Web\".\n3. Après l\'inscription, les données d\'autorisation seront envoyées à l\'e-mail spécifié. Copier \"Username\" et \"Company\" (qui a été spécifié pendant les chaînes d\'enregistrement)."),
     "whoDeliveresParcel" : MessageLookupByLibrary.simpleMessage("Qui livre le colis"),
     "yes" : MessageLookupByLibrary.simpleMessage("Oui")
   };
