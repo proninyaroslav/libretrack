@@ -18,7 +18,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:intl/locale.dart' as intl;
 
 export 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -30,22 +29,9 @@ class S {
 }
 
 class AppLocale {
-  static const supportedLocales = [
-    Locale('en'),
-    Locale('es'),
-    Locale('it'),
-    Locale('ru'),
-    Locale('sk'),
-    Locale('fr'),
-  ];
+  static const supportedLocales = AppLocalizations.supportedLocales;
 
-  static const Iterable<LocalizationsDelegate<dynamic>> localizationsDelegates =
-      [
-    AppLocalizations.delegate,
-    GlobalMaterialLocalizations.delegate,
-    GlobalWidgetsLocalizations.delegate,
-    GlobalCupertinoLocalizations.delegate,
-  ];
+  static const localizationsDelegates = AppLocalizations.localizationsDelegates;
 
   static Future<AppLocalizations> loadLocale(String localeStr) {
     final locale = intl.Locale.parse(localeStr);

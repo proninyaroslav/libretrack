@@ -1,4 +1,4 @@
-// Copyright (C) 2021 Yaroslav Pronin <proninyaroslav@mail.ru>
+// Copyright (C) 2021-2024 Yaroslav Pronin <proninyaroslav@mail.ru>
 // Copyright (C) 2021 Insurgo Inc. <insurgo@riseup.net>
 //
 // This file is part of LibreTrack.
@@ -30,6 +30,7 @@ import 'package:libretrack/core/settings/settings.dart';
 import 'package:libretrack/locale.dart';
 import 'package:libretrack/logger.dart';
 import 'package:libretrack/platform/system_tray.dart';
+import 'package:libretrack/ui/intl_locale_bridge.dart';
 import 'package:receive_sharing_intent/receive_sharing_intent.dart';
 
 import '../injector.dart';
@@ -220,7 +221,11 @@ class _AppState extends State<App> {
             localizationsDelegates: AppLocale.localizationsDelegates,
             supportedLocales: AppLocale.supportedLocales,
             locale: locale ?? _mapLocale(state.locale),
-            builder: builder,
+            builder: (context, child) {
+              return InltLocaleBridge(
+                child: builder == null ? child : builder(context, child),
+              );
+            },
             routerDelegate: _routerDelegate,
             routeInformationParser: _routeInfoParser,
           );

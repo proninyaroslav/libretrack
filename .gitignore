@@ -48,4 +48,4 @@ app.*.map.json
 .env_test
 
 # Flutter localizations
-app_untranslated.txt
+lib/l10n/app_untranslated.txt

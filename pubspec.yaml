@@ -146,8 +146,3 @@ flutter:
     - family: RobotoMono
       fonts:
         - asset: fonts/RobotoMono-Regular.ttf
-
-flutter_intl:
-  enabled: true
-  class_name: S
-  main_locale: en
