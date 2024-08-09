@@ -1,4 +1,4 @@
-// Copyright (C) 2021 Yaroslav Pronin <proninyaroslav@mail.ru>
+// Copyright (C) 2021-2024 Yaroslav Pronin <proninyaroslav@mail.ru>
 // Copyright (C) 2021 Insurgo Inc. <insurgo@riseup.net>
 //
 // This file is part of LibreTrack.
@@ -20,6 +20,7 @@ import 'dart:ui' as ui;
 
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:libretrack/core/entity/dimensions.dart';
 import 'package:libretrack/core/entity/entity.dart';
 import 'package:libretrack/core/model/type/locale.dart';
 import 'package:libretrack/core/settings/settings.dart';
@@ -138,7 +139,25 @@ extension UnitOfMeasurementExtension on UnitOfMeasurement {
         return S.of(context).squareFeetUnitShort(valueStr);
       case Measurement.squareYard:
         return S.of(context).squareYardUnitShort(valueStr);
+      case Measurement.meter:
+        return S.of(context).meterUnitShort(valueStr);
+      case Measurement.centimeter:
+        return S.of(context).centimeterUnitShort(valueStr);
+      case Measurement.cubicMeter:
+        return S.of(context).cubicMeterUnitShort(valueStr);
+      case Measurement.cubicCentimeter:
+        return S.of(context).cubicCentimeterUnitShort(valueStr);
     }
+  }
+}
+
+extension DimensionsExtension on Dimensions {
+  String format(BuildContext context) {
+    return S.of(context).dimensionsUnit(
+          length.format(context),
+          width.format(context),
+          height.format(context),
+        );
   }
 }
 

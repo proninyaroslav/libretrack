@@ -1,4 +1,4 @@
-// Copyright (C) 2021 Yaroslav Pronin <proninyaroslav@mail.ru>
+// Copyright (C) 2021-2024 Yaroslav Pronin <proninyaroslav@mail.ru>
 // Copyright (C) 2021 Insurgo Inc. <insurgo@riseup.net>
 //
 // This file is part of LibreTrack.
@@ -29,7 +29,7 @@ import 'dao/dao.dart';
 
 part 'database.g.dart';
 
-@Database(version: 2, entities: [
+@Database(version: 3, entities: [
   TrackingServiceInfo,
   AuthDataField,
   PostalServiceInfo,
@@ -133,6 +133,31 @@ final migrations = [
       // Change the new TrackNumberService table name
       await txn.execute(
         'ALTER TABLE `TrackNumberService_new` RENAME TO `TrackNumberService`',
+      );
+    });
+  }),
+  Migration(2, 3, (db) async {
+    await db.transaction((txn) async {
+      await txn.execute(
+        'ALTER TABLE `ShipmentInfo` ADD `dimensions_widthValue` REAL',
+      );
+      await txn.execute(
+        'ALTER TABLE `ShipmentInfo` ADD `dimensions_widthMeasurement` TEXT',
+      );
+      await txn.execute(
+        'ALTER TABLE `ShipmentInfo` ADD `dimensions_heightValue` REAL',
+      );
+      await txn.execute(
+        'ALTER TABLE `ShipmentInfo` ADD `dimensions_heightMeasurement` TEXT',
+      );
+      await txn.execute(
+        'ALTER TABLE `ShipmentInfo` ADD `dimensions_lenghtValue` REAL',
+      );
+      await txn.execute(
+        'ALTER TABLE `ShipmentInfo` ADD `dimensions_lenghtMeasurement` TEXT',
+      );
+      await txn.execute(
+        'ALTER TABLE `ShipmentInfo` ADD `currentStatus` TEXT',
       );
     });
   }),

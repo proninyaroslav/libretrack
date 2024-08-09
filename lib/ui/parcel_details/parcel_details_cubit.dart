@@ -119,6 +119,9 @@ class ParcelDetailsCubit extends Cubit<ParcelDetailsState> {
     ]);
 
     await for (final result in group) {
+      if (isClosed) {
+        continue;
+      }
       result.when(
         (info) => emit(
           ParcelDetailsState.loaded(

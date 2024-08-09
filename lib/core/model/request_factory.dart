@@ -18,6 +18,8 @@
 
 import 'package:injectable/injectable.dart';
 import 'package:libretrack/core/entity/entity.dart';
+import 'package:libretrack/core/model/tracking_service/postnord/postnord_request_builder.dart';
+import 'package:libretrack/core/model/tracking_service/postnord/postnord_service_info.dart';
 import 'package:libretrack/env.dart';
 
 import 'request_builder.dart';
@@ -71,5 +73,8 @@ RequestBuilder _mapServiceToBuilder({
     case TrackingServiceType.usps:
       final uspsAuthData = USPSAuthData.from(authData);
       return USPSRequestBuilder(uspsAuthData);
+    case TrackingServiceType.postNord:
+      final postNordAuthData = PostNordAuthData.from(authData);
+      return PostNordRequestBuilder(postNordAuthData);
   }
 }

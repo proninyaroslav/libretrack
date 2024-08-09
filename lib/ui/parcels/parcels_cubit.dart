@@ -18,7 +18,7 @@
 
 import 'package:async/async.dart';
 import 'package:bloc/bloc.dart';
-import 'package:flutter/foundation.dart';
+import 'package:collection/collection.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
 import 'package:libretrack/core/entity/entity.dart';
@@ -206,6 +206,7 @@ class ParcelsCubit extends Cubit<ParcelsState> {
     List<TrackNumberService>? trackServiceList,
     List<TrackingInfo>? trackingList,
     List<ShipmentActivityInfo>? activityList,
+    List<ShipmentInfo>? shipmentInfoList,
   }) async {
     try {
       final List<TrackNumberInfo> trackList0 = trackList ??
@@ -236,6 +237,13 @@ class ParcelsCubit extends Cubit<ParcelsState> {
                   error: (e) => throw e,
                 ),
               );
+      final List<ShipmentInfo> shipmentInfoList0 = shipmentInfoList ??
+          await _shipmentRepo.getAllShipmentInfo().then(
+                (res) => res.when(
+                  (value) => value,
+                  error: (e) => throw e,
+                ),
+              );
 
       final trackServiceMap = _mapTrackToTrackServiceList(trackServiceList0);
       final lastTrackingInfoMap = _mapTrackToLastTrackingInfo(trackingList0);
@@ -243,9 +251,19 @@ class ParcelsCubit extends Cubit<ParcelsState> {
       final lastTrackingResponseMap = await _mapTrackToLastTrackingResponse(
         lastTrackingInfoMap,
       );
+      final shipmentInfoMap = _mapTrackToShipmentInfoList(shipmentInfoList0);
       final infoList = trackList0.map((trackInfo) {
+        final lastActivity = lastActivityMap[trackInfo.trackNumber];
+        final lastShipmentInfo = lastActivity == null
+            ? null
+            : shipmentInfoMap[trackInfo.trackNumber]?.firstWhereOrNull(
+                (i) => i.serviceType == lastActivity.serviceType);
+
         return ParcelInfo(
           trackInfo: trackInfo,
+          currentStatus: lastShipmentInfo?.currentStatus ??
+              lastActivity?.statusType ??
+              ShipmentStatusType.notAvailable,
           trackServices: trackServiceMap[trackInfo.trackNumber] ?? [],
           lastTrackingInfo: lastTrackingInfoMap[trackInfo.trackNumber],
           lastActivity: lastActivityMap[trackInfo.trackNumber],
@@ -316,6 +334,18 @@ class ParcelsCubit extends Cubit<ParcelsState> {
 
     return map;
   }
+}
+
+Map<String, List<ShipmentInfo>> _mapTrackToShipmentInfoList(
+  List<ShipmentInfo> shipmentInfoList,
+) {
+  final map = <String, List<ShipmentInfo>>{};
+  for (final shipmentInfo in shipmentInfoList) {
+    final list = map.putIfAbsent(shipmentInfo.trackNumber, () => []);
+    list.add(shipmentInfo);
+  }
+
+  return map;
 }
 
 @freezed

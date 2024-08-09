@@ -229,7 +229,15 @@ class _Status extends StatelessWidget {
     final lastTrackingInfo = info.trackingHistory.isEmpty
         ? null
         : info.trackingHistory.first.trackingInfo;
+    final firstActivity = info.activities.last;
     final lastActivity = info.activities.isEmpty ? null : info.activities.first;
+    final lastShipmentInfo = lastActivity == null
+        ? null
+        : info.shipmentInfoList
+            .firstWhereOrNull(
+              (i) => i.shipmentInfo.serviceType == lastActivity.serviceType,
+            )
+            ?.shipmentInfo;
     final trackServices = info.trackServices;
     final deliveryShipmentInfo = info.shipmentInfoList
         .firstWhereOrNull(
@@ -238,6 +246,12 @@ class _Status extends StatelessWidget {
         ?.shipmentInfo;
     final deliveryDate = deliveryShipmentInfo?.deliveryDate;
     final signedForByName = deliveryShipmentInfo?.signedForByName;
+    final currentStatus = lastShipmentInfo?.currentStatus ??
+        lastActivity?.statusType ??
+        ShipmentStatusType.notAvailable;
+    final currentStatusDateTime = lastActivity?.dateTime ??
+        lastShipmentInfo?.deliveryDate ??
+        firstActivity.dateTime;
 
     if (lastTrackingInfo?.status == TrackingStatus.inProgress) {
       statusIcon = const RRectIconData.widget(
@@ -258,18 +272,22 @@ class _Status extends StatelessWidget {
       statusIcon = StatusIconsData.trackingStopped;
       statusText = S.of(context).trackingStoppedStatus;
       showActivateButton = true;
-    } else if (lastActivity == null) {
+    } else if (currentStatus == ShipmentStatusType.notAvailable) {
       statusIcon = StatusIconsData.notAvailable;
       statusText = S.of(context).parcelInfoNotAvailableStatus;
-    } else if (lastActivity.statusType == ShipmentStatusType.delivered) {
+    } else if (currentStatus == ShipmentStatusType.delivered) {
       statusIcon = StatusIconsData.delivered;
       statusText = S.of(context).parcelDeliveredStatus(
-            Jiffy.parseFromDateTime(lastActivity.dateTime).yMMMMd,
+            Jiffy.parseFromDateTime(currentStatusDateTime).yMMMMd,
+          );
+    } else if (currentStatus == ShipmentStatusType.outForDelivery) {
+      statusIcon = StatusIconsData.outForDelivery;
+      statusText = S.of(context).parcelOutForDeliveryStatus(
+            Jiffy.parseFromDateTime(currentStatusDateTime).yMMMMd,
           );
     } else {
       statusIcon = StatusIconsData.inTransit;
-      final firstActivity = info.activities.last;
-      final duration = DateTime.now().difference(firstActivity.dateTime);
+      final duration = DateTime.now().difference(currentStatusDateTime);
       statusText = S.of(context).parcelInTransitStatus(duration.inDays);
     }
 

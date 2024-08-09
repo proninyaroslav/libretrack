@@ -19,6 +19,7 @@
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:libretrack/core/entity/entity.dart';
+import 'package:libretrack/core/model/tracking_service/postnord/postnord_service_info.dart';
 import 'package:libretrack/core/model/tracking_service/tracking_service.dart';
 
 import '../../../locale.dart';
@@ -39,6 +40,10 @@ abstract class RussianPostFormFieldId {
 abstract class USPSFormFieldId {
   static const username = FormFieldId('username');
   static const companyName = FormFieldId('companyName');
+}
+
+abstract class PostNordFormFieldId {
+  static const apiKey = FormFieldId('apiKey');
 }
 
 @freezed
@@ -77,6 +82,10 @@ AuthData buildModelAuthData(
         username: controllers[USPSFormFieldId.username]!.text,
         companyName: controllers[USPSFormFieldId.companyName]!.text,
       ).toAuthData();
+    case TrackingServiceType.postNord:
+      return PostNordAuthData(
+              apiKey: controllers[PostNordFormFieldId.apiKey]!.text)
+          .toAuthData();
   }
 }
 
@@ -142,6 +151,17 @@ List<AuthFormField> buildFormField({
           secured: false,
         ),
       ];
+    case TrackingServiceType.postNord:
+      final postNordAuthData =
+          authData == null ? null : PostNordAuthData.from(authData);
+      return [
+        AuthFormField(
+          id: PostNordFormFieldId.apiKey,
+          name: S.of(context).apiKey,
+          value: postNordAuthData?.apiKey,
+          secured: false,
+        ),
+      ];
   }
 }
 
@@ -156,5 +176,7 @@ String buildHelperDescriptionText(
       return S.of(context).russianPostAddAccountDescription;
     case TrackingServiceType.usps:
       return S.of(context).uspsAddAccountDescription;
+    case TrackingServiceType.postNord:
+      return S.of(context).postNordAddAccountDescription;
   }
 }

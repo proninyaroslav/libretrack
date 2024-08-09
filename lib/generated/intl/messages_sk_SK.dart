@@ -21,61 +21,61 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static m0(value) => "${value} bbl";
 
-  static m1(email, pageUrl) => "Nenašiel sa email. Môžete chybu manuálne skopírovať a poslať na ${email}\nalebo na stránku projektu ${pageUrl}";
+  static m2(email, pageUrl) => "Nenašiel sa email. Môžete chybu manuálne skopírovať a poslať na ${email}\nalebo na stránku projektu ${pageUrl}";
 
-  static m2(howMany) => "${Intl.plural(howMany, one: 'Naozaj chcete zmazať tento balík?', other: 'Naozaj chcete zmazať tieto balíky?')}";
+  static m5(howMany) => "${Intl.plural(howMany, one: 'Naozaj chcete zmazať tento balík?', other: 'Naozaj chcete zmazať tieto balíky?')}";
 
-  static m3(howMany) => "${Intl.plural(howMany, one: 'Nepodarilo sa zmazať balík', other: 'FNepodarilo sa zmazať balík')}";
+  static m6(howMany) => "${Intl.plural(howMany, one: 'Nepodarilo sa zmazať balík', other: 'FNepodarilo sa zmazať balík')}";
 
-  static m4(value) => "${value} gal";
+  static m8(value) => "${value} gal";
 
-  static m5(error) => "Neporarilo sa vygenerovať čiarový kód: ${error}";
+  static m9(error) => "Neporarilo sa vygenerovať čiarový kód: ${error}";
 
-  static m6(value) => "${value} h.";
+  static m10(value) => "${value} h.";
 
-  static m7(value) => "${value} kg";
+  static m11(value) => "${value} kg";
 
-  static m8(date) => "Posledné sledovanie: ${date}";
+  static m12(date) => "Posledné sledovanie: ${date}";
 
-  static m9(value) => "${value} L";
+  static m13(value) => "${value} L";
 
-  static m10(howMany) => "${Intl.plural(howMany, one: 'Nepodarilo sa označiť ako prečítané', other: 'Nepodarilo sa označiť ako prečítané')}";
+  static m14(howMany) => "${Intl.plural(howMany, one: 'Nepodarilo sa označiť ako prečítané', other: 'Nepodarilo sa označiť ako prečítané')}";
 
-  static m11(value) => "${value} min.";
+  static m16(value) => "${value} min.";
 
-  static m12(howMany) => "${Intl.plural(howMany, one: 'Nepodarilo sa presunúť balík', other: 'Nepodarilo sa presunúť balík')}";
+  static m17(howMany) => "${Intl.plural(howMany, one: 'Nepodarilo sa presunúť balík', other: 'Nepodarilo sa presunúť balík')}";
 
-  static m13(value) => "${value} oz";
+  static m18(value) => "${value} oz";
 
-  static m14(date) => "Balík doručený ${date}";
+  static m19(date) => "Balík doručený ${date}";
 
-  static m15(days) => "${Intl.plural(days, zero: 'Balík v preprave ${days} dní', one: 'Balík v preprave ${days} deň', few: 'Balík v preprave ${days} dni', many: 'Balík v preprave ${days} dní', other: 'Balík v preprave ${days} dní')}";
+  static m20(days) => "${Intl.plural(days, zero: 'Balík v preprave ${days} dní', one: 'Balík v preprave ${days} deň', few: 'Balík v preprave ${days} dni', many: 'Balík v preprave ${days} dní', other: 'Balík v preprave ${days} dní')}";
 
-  static m16(name) => "Podpísal: ${name}";
+  static m22(name) => "Podpísal: ${name}";
 
-  static m17(time) => "Sledovanie nie je dostupné, lebo od posledného sledovania neuplynulo dosť času. Skúste znova po ${time}";
+  static m23(time) => "Sledovanie nie je dostupné, lebo od posledného sledovania neuplynulo dosť času. Skúste znova po ${time}";
 
-  static m18(parcelName) => "• ${parcelName}";
+  static m24(parcelName) => "• ${parcelName}";
 
-  static m19(title, body) => "${title}: ${body}";
+  static m25(title, body) => "${title}: ${body}";
 
-  static m20(value) => "${value} lb";
+  static m26(value) => "${value} lb";
 
-  static m21(howMany) => "${Intl.plural(howMany, one: 'Nepodarilo sa obnoviť balík', other: 'Nepodarilo sa obnoviť balíky')}";
+  static m27(howMany) => "${Intl.plural(howMany, one: 'Nepodarilo sa obnoviť balík', other: 'Nepodarilo sa obnoviť balíky')}";
 
-  static m22(value) => "${value} sek.";
+  static m28(value) => "${value} sek.";
 
-  static m23(count) => "Vybraté: ${count}";
+  static m29(count) => "Vybraté: ${count}";
 
-  static m24(time) => "Nie častejšie ako ${time}";
+  static m30(time) => "Nie častejšie ako ${time}";
 
-  static m25(value) => "${value} ft²";
+  static m31(value) => "${value} ft²";
 
-  static m26(value) => "${value} m²";
+  static m32(value) => "${value} m²";
 
-  static m27(value) => "${value} yd²";
+  static m33(value) => "${value} yd²";
 
-  static m28(date) => "Sledovanie začalo: ${date}";
+  static m34(date) => "Sledovanie začalo: ${date}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function> {
@@ -112,7 +112,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "copyTrackNumber" : MessageLookupByLibrary.simpleMessage("Kopírovať sledovacie číslo"),
     "crashDialogExtraInfo" : MessageLookupByLibrary.simpleMessage("Pridajte dalšie informácie a komentáre tu:"),
     "crashDialogMoreDetails" : MessageLookupByLibrary.simpleMessage("Viac detailov"),
-    "crashDialogNoEmailApp" : m1,
+    "crashDialogNoEmailApp" : m2,
     "crashDialogReport" : MessageLookupByLibrary.simpleMessage("Nahlásiť"),
     "crashDialogSummary" : MessageLookupByLibrary.simpleMessage("Chyba aplikácie. Nahláste ju vývojárom"),
     "dataIsSecured" : MessageLookupByLibrary.simpleMessage("Údaje sú bezpečne uložené"),
@@ -121,8 +121,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "delete" : MessageLookupByLibrary.simpleMessage("Zmazať"),
     "deleteAccountDialogMsg" : MessageLookupByLibrary.simpleMessage("Ste si istí, že chcete zmazať tento účet?"),
     "deleteAccountFailed" : MessageLookupByLibrary.simpleMessage("Nepodarilo sa zmazať účet"),
-    "deleteParcelDialogMsg" : m2,
-    "deleteParcelsFailed" : m3,
+    "deleteParcelDialogMsg" : m5,
+    "deleteParcelsFailed" : m6,
     "details" : MessageLookupByLibrary.simpleMessage("Detaily"),
     "edit" : MessageLookupByLibrary.simpleMessage("Upraviť"),
     "editAccount" : MessageLookupByLibrary.simpleMessage("Upraviť účet"),
@@ -134,22 +134,22 @@ class MessageLookup extends MessageLookupByLibrary {
     "fieldRequiredError" : MessageLookupByLibrary.simpleMessage("Toto pole je povinné"),
     "filters" : MessageLookupByLibrary.simpleMessage("Filtre"),
     "filtersAndSorting" : MessageLookupByLibrary.simpleMessage("Filtre a triedenie"),
-    "gallonUnitShort" : m4,
-    "generateBarcodFailed" : m5,
+    "gallonUnitShort" : m8,
+    "generateBarcodFailed" : m9,
     "generateBarcode" : MessageLookupByLibrary.simpleMessage("Vygenerovať čiarový kód"),
     "hide" : MessageLookupByLibrary.simpleMessage("Schovať"),
-    "hoursShortFormat" : m6,
+    "hoursShortFormat" : m10,
     "invalidTrackingNumberStatus" : MessageLookupByLibrary.simpleMessage("Neplatné alebo nepodporované sledovacie číslo"),
-    "kilogramUnitShort" : m7,
-    "lastTrackingDate" : m8,
-    "literUnitShort" : m9,
+    "kilogramUnitShort" : m11,
+    "lastTrackingDate" : m12,
+    "literUnitShort" : m13,
     "loadPageFailed" : MessageLookupByLibrary.simpleMessage("Nepodarilo sa načítať stránku"),
     "login" : MessageLookupByLibrary.simpleMessage("Login"),
     "markAllAsRead" : MessageLookupByLibrary.simpleMessage("Označiť všetko ako prečítané"),
     "markAsRead" : MessageLookupByLibrary.simpleMessage("Označiť ako prečítané"),
-    "markAsReadParcelFailed" : m10,
-    "minutesShortFormat" : m11,
-    "moveParcelFailed" : m12,
+    "markAsReadParcelFailed" : m14,
+    "minutesShortFormat" : m16,
+    "moveParcelFailed" : m17,
     "moveToActive" : MessageLookupByLibrary.simpleMessage("Presnunúť do aktívnych"),
     "moveToArchive" : MessageLookupByLibrary.simpleMessage("Presunúť do archívu"),
     "name" : MessageLookupByLibrary.simpleMessage("Meno"),
@@ -161,11 +161,11 @@ class MessageLookup extends MessageLookupByLibrary {
     "openDetails" : MessageLookupByLibrary.simpleMessage("Otvoriť detaily"),
     "openLinkFailed" : MessageLookupByLibrary.simpleMessage("Nie je možné otvoriť odkaz"),
     "optionalField" : MessageLookupByLibrary.simpleMessage("Voliteľné"),
-    "ounceUnitShort" : m13,
+    "ounceUnitShort" : m18,
     "pageNotFound" : MessageLookupByLibrary.simpleMessage("Stránka nenájdená"),
-    "parcelDeliveredStatus" : m14,
+    "parcelDeliveredStatus" : m19,
     "parcelDetailsHardErrorOccurred" : MessageLookupByLibrary.simpleMessage("Nastala chyba, sledovanie niektorých služieb bolo zastavené. Skontrolujte chyby pred aktiváciou sledovania"),
-    "parcelInTransitStatus" : m15,
+    "parcelInTransitStatus" : m20,
     "parcelInfo" : MessageLookupByLibrary.simpleMessage("Info o balíku"),
     "parcelInfoNotAvailableStatus" : MessageLookupByLibrary.simpleMessage("O balíku nie sú informácie. Po odoslaní balíka možno treba počkať kým ho bude možné sledovať"),
     "parcelMovedToActiveSuccess" : MessageLookupByLibrary.simpleMessage("Úspešne presunuté do aktívnych"),
@@ -173,31 +173,31 @@ class MessageLookup extends MessageLookupByLibrary {
     "parcelNames" : MessageLookupByLibrary.simpleMessage("Mená balíkov"),
     "parcelNamesFieldHint" : MessageLookupByLibrary.simpleMessage("Voliteľné. Jeden na riadok."),
     "parcelNotFound" : MessageLookupByLibrary.simpleMessage("Balík sa nenašiel"),
-    "parcelSignedBy" : m16,
-    "parcelTrackingLimitedError" : m17,
+    "parcelSignedBy" : m22,
+    "parcelTrackingLimitedError" : m23,
     "parcelTrackingStatus" : MessageLookupByLibrary.simpleMessage("Prebieha sledovanie balíka. Prosím počkajte pár minút"),
     "parcels" : MessageLookupByLibrary.simpleMessage("Balíky"),
     "parcelsListHardErrorOccurred" : MessageLookupByLibrary.simpleMessage("Vyskytla sa chyba, sledovanie zastavené. Detaily nájdete vnútri"),
-    "parcelsTrackingFailedInboxStyleLine" : m18,
+    "parcelsTrackingFailedInboxStyleLine" : m24,
     "parcelsTrackingNotifyChannelDescription" : MessageLookupByLibrary.simpleMessage("Upozornenie na aktivitu balíka"),
     "parcelsTrackingNotifyChannelTitle" : MessageLookupByLibrary.simpleMessage("Sledovanie balíkov"),
     "parcelsTrackingNotifyInboxStyleDescription" : MessageLookupByLibrary.simpleMessage("Stav balíka bol aktualizovaný"),
-    "parcelsTrackingNotifyInboxStyleLine" : m19,
+    "parcelsTrackingNotifyInboxStyleLine" : m25,
     "parcelsTrackingNotifyInboxStyleTitle" : MessageLookupByLibrary.simpleMessage("Sledovanie balíka"),
     "password" : MessageLookupByLibrary.simpleMessage("Heslo"),
     "postalService" : MessageLookupByLibrary.simpleMessage("Poštová služba"),
-    "poundUnitShort" : m20,
+    "poundUnitShort" : m26,
     "projectIssuesPage" : MessageLookupByLibrary.simpleMessage("https://github.com/proninyaroslav/libretrack/issues"),
     "refresh" : MessageLookupByLibrary.simpleMessage("Obnoviť"),
     "refreshAll" : MessageLookupByLibrary.simpleMessage("Obnoviť všetko"),
-    "refreshParcelsFailed" : m21,
+    "refreshParcelsFailed" : m27,
     "russianPost" : MessageLookupByLibrary.simpleMessage("Ruská pošta"),
     "russianPostAddAccountDescription" : MessageLookupByLibrary.simpleMessage("1. Registrujte sa na stránke Ruskej pošty: https://www.pochta.ru/\n2. Choďte do nastavení prístupu, povoľte sledovacie API a odsúhlaste podmienky: https://tracking.pochta.ru/access-settings\n3. Skopírujte login z nastavení prístupu (generovaný automaticky). Heslo dostanete na e-mail zadaný pri registrácii."),
-    "secondsShortFormat" : m22,
+    "secondsShortFormat" : m28,
     "secureStorageIsNotSupported" : MessageLookupByLibrary.simpleMessage("Šifrovanie nie je podporované. Údaje nie sú bezpečne uložené"),
     "selectAccountType" : MessageLookupByLibrary.simpleMessage("Prosím vyberte typ účtu"),
     "selectAll" : MessageLookupByLibrary.simpleMessage("Vybrať všetko"),
-    "selectedCounter" : m23,
+    "selectedCounter" : m29,
     "settings" : MessageLookupByLibrary.simpleMessage("Nastavenia"),
     "settingsAppearance" : MessageLookupByLibrary.simpleMessage("Vzhľad"),
     "settingsAutoTracking" : MessageLookupByLibrary.simpleMessage("Automatické sledovanie"),
@@ -222,7 +222,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "settingsTrackingFreqFifteenMin" : MessageLookupByLibrary.simpleMessage("15 minút"),
     "settingsTrackingFreqFortyFiveMin" : MessageLookupByLibrary.simpleMessage("45 minút"),
     "settingsTrackingFreqLimit" : MessageLookupByLibrary.simpleMessage("Limit frekvencie sledovania"),
-    "settingsTrackingFreqLimitSummary" : m24,
+    "settingsTrackingFreqLimitSummary" : m30,
     "settingsTrackingFreqOneHour" : MessageLookupByLibrary.simpleMessage("1 hodina"),
     "settingsTrackingFreqThirtyMin" : MessageLookupByLibrary.simpleMessage("30 minút"),
     "settingsTrackingHistorySize" : MessageLookupByLibrary.simpleMessage("Dĺžka histórie sledovania"),
@@ -262,9 +262,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "sortDateAddedAsc" : MessageLookupByLibrary.simpleMessage("Dátum pridania (nod najnovších)"),
     "sortDateAddedDesc" : MessageLookupByLibrary.simpleMessage("Dátum pridania (od najnovších)"),
     "sorting" : MessageLookupByLibrary.simpleMessage("Triedenie"),
-    "squareFeetUnitShort" : m25,
-    "squareMeterUnitShort" : m26,
-    "squareYardUnitShort" : m27,
+    "squareFeetUnitShort" : m31,
+    "squareMeterUnitShort" : m32,
+    "squareYardUnitShort" : m33,
     "status" : MessageLookupByLibrary.simpleMessage("Stav"),
     "statusArrivedAtCustoms" : MessageLookupByLibrary.simpleMessage("Príchod na colnicu"),
     "statusCustomsClearanceComplete" : MessageLookupByLibrary.simpleMessage("Colný proces dokončený"),
@@ -304,7 +304,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "trackingResponseError" : MessageLookupByLibrary.simpleMessage("Chyba"),
     "trackingResponseNoInfo" : MessageLookupByLibrary.simpleMessage("Žiadne informácie"),
     "trackingResponseSuccess" : MessageLookupByLibrary.simpleMessage("Úspešne"),
-    "trackingStartedDate" : m28,
+    "trackingStartedDate" : m34,
     "trackingStoppedStatus" : MessageLookupByLibrary.simpleMessage("Sledovanie zastavené. Toto sa stáva ked je problém s balíkom alebo keď poštová služba nahlási koniec sledovania"),
     "unreadParcels" : MessageLookupByLibrary.simpleMessage("Neprečítané"),
     "ups" : MessageLookupByLibrary.simpleMessage("UPS"),

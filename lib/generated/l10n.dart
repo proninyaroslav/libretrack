@@ -1202,6 +1202,16 @@ class S {
     );
   }
 
+  /// `Package was out for delivery on {date}`
+  String parcelOutForDeliveryStatus(Object date) {
+    return Intl.message(
+      'Package was out for delivery on $date',
+      name: 'parcelOutForDeliveryStatus',
+      desc: '',
+      args: [date],
+    );
+  }
+
   /// `There is no information about the package yet. After a package has been sent, it may take several days before it can be tracked`
   String get parcelInfoNotAvailableStatus {
     return Intl.message(
@@ -1542,6 +1552,26 @@ class S {
     );
   }
 
+  /// `Dimensions [(L) x (W) x (H)]`
+  String get shipmentDimensions {
+    return Intl.message(
+      'Dimensions [(L) x (W) x (H)]',
+      name: 'shipmentDimensions',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `{length} x {width} x {height}`
+  String dimensionsUnit(Object length, Object width, Object height) {
+    return Intl.message(
+      '$length x $width x $height',
+      name: 'dimensionsUnit',
+      desc: '',
+      args: [length, width, height],
+    );
+  }
+
   /// `Volume`
   String get shipmentVolume {
     return Intl.message(
@@ -1747,6 +1777,46 @@ class S {
     return Intl.message(
       '$value yd²',
       name: 'squareYardUnitShort',
+      desc: '',
+      args: [value],
+    );
+  }
+
+  /// `{value} m`
+  String meterUnitShort(Object value) {
+    return Intl.message(
+      '$value m',
+      name: 'meterUnitShort',
+      desc: '',
+      args: [value],
+    );
+  }
+
+  /// `{value} cm`
+  String centimeterUnitShort(Object value) {
+    return Intl.message(
+      '$value cm',
+      name: 'centimeterUnitShort',
+      desc: '',
+      args: [value],
+    );
+  }
+
+  /// `{value} m³`
+  String cubicMeterUnitShort(Object value) {
+    return Intl.message(
+      '$value m³',
+      name: 'cubicMeterUnitShort',
+      desc: '',
+      args: [value],
+    );
+  }
+
+  /// `{value} cm³`
+  String cubicCentimeterUnitShort(Object value) {
+    return Intl.message(
+      '$value cm³',
+      name: 'cubicCentimeterUnitShort',
       desc: '',
       args: [value],
     );
@@ -2282,10 +2352,10 @@ class S {
     );
   }
 
-  /// `All notifications that don't suitable for the other categories`
+  /// `All notifications that don''t suitable for the other categories`
   String get defaultNotifyChannelDescription {
     return Intl.message(
-      'All notifications that don\'t suitable for the other categories',
+      'All notifications that don\'\'t suitable for the other categories',
       name: 'defaultNotifyChannelDescription',
       desc: '',
       args: [],
@@ -2437,6 +2507,36 @@ class S {
     return Intl.message(
       '1. Register on the USPS Web Tools API Portal website: https://www.usps.com/business/web-tools-apis/web-tools-registration.htm\n2. During registration, to the question "How will you be using the USPS Web Tools?" please answer "Exclusively on my Web site".\n3. After registration, the authorization data will be sent to the specified e-mail. Copy "Username" and "Company" (which was specified during registration strings.',
       name: 'uspsAddAccountDescription',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `PostNord`
+  String get postNord {
+    return Intl.message(
+      'PostNord',
+      name: 'postNord',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `API key`
+  String get apiKey {
+    return Intl.message(
+      'API key',
+      name: 'apiKey',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `stub`
+  String get postNordAddAccountDescription {
+    return Intl.message(
+      'stub',
+      name: 'postNordAddAccountDescription',
       desc: '',
       args: [],
     );

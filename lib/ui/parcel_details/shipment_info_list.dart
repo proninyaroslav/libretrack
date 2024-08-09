@@ -1,4 +1,4 @@
-// Copyright (C) 2021 Yaroslav Pronin <proninyaroslav@mail.ru>
+// Copyright (C) 2021-2024 Yaroslav Pronin <proninyaroslav@mail.ru>
 // Copyright (C) 2021 Insurgo Inc. <insurgo@riseup.net>
 //
 // This file is part of LibreTrack.
@@ -185,6 +185,12 @@ class _ShipmentInfoItem extends StatelessWidget {
           iconData: MdiIcons.weight,
           title: S.of(context).shipmentWeight,
           content: info.weight!.format(context),
+        ),
+      if (info.dimensions != null)
+        _InfoString(
+          iconData: MdiIcons.axisArrow,
+          title: S.of(context).shipmentDimensions,
+          content: info.dimensions!.format(context),
         ),
       if (info.volume != null && info.volume!.value != 0)
         _InfoString(

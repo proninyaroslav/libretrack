@@ -1,4 +1,4 @@
-// Copyright (C) 2021 Yaroslav Pronin <proninyaroslav@mail.ru>
+// Copyright (C) 2021-2024 Yaroslav Pronin <proninyaroslav@mail.ru>
 // Copyright (C) 2021 Insurgo Inc. <insurgo@riseup.net>
 //
 // This file is part of LibreTrack.
@@ -63,7 +63,10 @@ void main() {
       build: () => cubit,
       act: (ParcelsActionsCubit cubit) async {
         const trackInfo = TrackNumberInfo('123');
-        const parcelInfo = ParcelInfo(trackInfo: trackInfo);
+        const parcelInfo = ParcelInfo(
+          trackInfo: trackInfo,
+          currentStatus: ShipmentStatusType.delivered,
+        );
         when(() => mockTrackNumberRepo.deleteTrackList([trackInfo])).thenAnswer(
           (_) async => StorageResult.empty,
         );
@@ -81,8 +84,13 @@ void main() {
       'Move to archive',
       build: () => cubit,
       act: (ParcelsActionsCubit cubit) async {
-        const trackInfo = TrackNumberInfo('123');
-        const parcelInfo = ParcelInfo(trackInfo: trackInfo);
+        const trackInfo = TrackNumberInfo(
+          '123',
+        );
+        const parcelInfo = ParcelInfo(
+          trackInfo: trackInfo,
+          currentStatus: ShipmentStatusType.delivered,
+        );
         when(
           () => mockTrackNumberRepo.updateTrackList([
             trackInfo.copyWith(isArchived: true),
@@ -115,7 +123,10 @@ void main() {
       build: () => cubit,
       act: (ParcelsActionsCubit cubit) async {
         const trackInfo = TrackNumberInfo('123', isArchived: true);
-        const parcelInfo = ParcelInfo(trackInfo: trackInfo);
+        const parcelInfo = ParcelInfo(
+          trackInfo: trackInfo,
+          currentStatus: ShipmentStatusType.delivered,
+        );
         when(
           () => mockTrackNumberRepo.updateTrackList([
             trackInfo.copyWith(isArchived: false),
@@ -153,6 +164,7 @@ void main() {
         final parcelInfo = ParcelInfo(
           trackInfo: trackInfo,
           lastTrackingInfo: trackingInfo,
+          currentStatus: ShipmentStatusType.delivered,
         );
         when(
           () => mockTrackingRepo.updateTrackingInfoList(
@@ -183,6 +195,7 @@ void main() {
             .map(
               (trackNumber) => ParcelInfo(
                 trackInfo: TrackNumberInfo(trackNumber),
+                currentStatus: ShipmentStatusType.delivered,
               ),
             )
             .toList();
@@ -245,9 +258,18 @@ void main() {
       build: () => cubit,
       act: (ParcelsActionsCubit cubit) {
         cubit.copyTrackNumbers(const [
-          ParcelInfo(trackInfo: TrackNumberInfo('1')),
-          ParcelInfo(trackInfo: TrackNumberInfo('2')),
-          ParcelInfo(trackInfo: TrackNumberInfo('3')),
+          ParcelInfo(
+            trackInfo: TrackNumberInfo('1'),
+            currentStatus: ShipmentStatusType.delivered,
+          ),
+          ParcelInfo(
+            trackInfo: TrackNumberInfo('2'),
+            currentStatus: ShipmentStatusType.delivered,
+          ),
+          ParcelInfo(
+            trackInfo: TrackNumberInfo('3'),
+            currentStatus: ShipmentStatusType.delivered,
+          ),
         ]);
       },
       expect: () => [
@@ -261,9 +283,18 @@ void main() {
       build: () => cubit,
       act: (ParcelsActionsCubit cubit) {
         cubit.buildShareString(const [
-          ParcelInfo(trackInfo: TrackNumberInfo('1', description: 'Test1')),
-          ParcelInfo(trackInfo: TrackNumberInfo('2')),
-          ParcelInfo(trackInfo: TrackNumberInfo('3', description: 'Test3')),
+          ParcelInfo(
+            trackInfo: TrackNumberInfo('1', description: 'Test1'),
+            currentStatus: ShipmentStatusType.delivered,
+          ),
+          ParcelInfo(
+            trackInfo: TrackNumberInfo('2'),
+            currentStatus: ShipmentStatusType.delivered,
+          ),
+          ParcelInfo(
+            trackInfo: TrackNumberInfo('3', description: 'Test3'),
+            currentStatus: ShipmentStatusType.delivered,
+          ),
         ]);
       },
       expect: () => [
@@ -281,6 +312,7 @@ void main() {
         const trackNumber = '1';
         const parcelInfo = ParcelInfo(
           trackInfo: TrackNumberInfo(trackNumber),
+          currentStatus: ShipmentStatusType.delivered,
         );
         const trackNumberServiceList = [
           TrackNumberService(

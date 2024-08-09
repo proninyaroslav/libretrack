@@ -30,6 +30,8 @@ enum PostalServiceType {
   russianPost,
   @JsonValue('usps')
   usps,
+  @JsonValue('postNord')
+  postNord,
 }
 
 @TypeConverters([

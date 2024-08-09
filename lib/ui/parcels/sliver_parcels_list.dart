@@ -209,6 +209,7 @@ class _ParcelListItem extends StatelessWidget {
                   _AnimatedStatus(
                     child: _buildLeading(
                       context,
+                      parcelInfo.currentStatus,
                       lastTrackingInfo,
                       lastActivity,
                       trackServices,
@@ -256,6 +257,7 @@ class _ParcelListItem extends StatelessWidget {
 
   Widget _buildLeading(
     BuildContext context,
+    ShipmentStatusType currentStatus,
     TrackingInfo? lastTrackingInfo,
     ShipmentActivityInfo? lastActivity,
     List<TrackNumberService> trackServices,
@@ -270,15 +272,15 @@ class _ParcelListItem extends StatelessWidget {
     RRectIconData statusIcon;
     if (lastTrackingInfo != null && lastTrackingInfo.invalidTrackNumber) {
       statusIcon = StatusIconsData.invalidTrackNumber;
-    } else if (lastActivity?.statusType != ShipmentStatusType.delivered &&
+    } else if (currentStatus != ShipmentStatusType.delivered &&
         trackServices.every((trackService) => !trackService.isActive)) {
       statusIcon = StatusIconsData.trackingStopped;
     } else {
-      statusIcon = lastActivity == null
+      statusIcon = currentStatus == ShipmentStatusType.notAvailable
           ? StatusIconsData.notAvailable
           : ShipmentStatusMetadataMapper.of(
               context,
-              lastActivity.statusType,
+              currentStatus,
             ).iconData;
     }
     return Stack(

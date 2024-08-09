@@ -21,61 +21,61 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static m0(value) => "${value} bbl";
 
-  static m1(email, pageUrl) => "Приложение для отправки email не найдено. Вы можете вручную скопировать ошибку и и отправить её по адресу ${email}, или отправить на странице проекта ${pageUrl}";
+  static m2(email, pageUrl) => "Приложение для отправки email не найдено. Вы можете вручную скопировать ошибку и и отправить её по адресу ${email}, или отправить на странице проекта ${pageUrl}";
 
-  static m2(howMany) => "${Intl.plural(howMany, one: 'Вы действительно хотите удалить выбранную посылку?', other: 'Вы действительно хотите удалить выбранные посылки?')}";
+  static m5(howMany) => "${Intl.plural(howMany, one: 'Вы действительно хотите удалить выбранную посылку?', other: 'Вы действительно хотите удалить выбранные посылки?')}";
 
-  static m3(howMany) => "${Intl.plural(howMany, one: 'Не удалось удалить посылку', other: 'Не удалось удалить посылки')}";
+  static m6(howMany) => "${Intl.plural(howMany, one: 'Не удалось удалить посылку', other: 'Не удалось удалить посылки')}";
 
-  static m4(value) => "${value} gal";
+  static m8(value) => "${value} gal";
 
-  static m5(error) => "Не удалось сгенерировать штрих-код: ${error}";
+  static m9(error) => "Не удалось сгенерировать штрих-код: ${error}";
 
-  static m6(value) => "${value} ч.";
+  static m10(value) => "${value} ч.";
 
-  static m7(value) => "${value} кг";
+  static m11(value) => "${value} кг";
 
-  static m8(date) => "Последнее отслеживание: ${date}";
+  static m12(date) => "Последнее отслеживание: ${date}";
 
-  static m9(value) => "${value} л";
+  static m13(value) => "${value} л";
 
-  static m10(howMany) => "${Intl.plural(howMany, one: 'Не удалось отметить посылку как прочитанную', other: 'Не удалось отметить посылки как прочитанные')}";
+  static m14(howMany) => "${Intl.plural(howMany, one: 'Не удалось отметить посылку как прочитанную', other: 'Не удалось отметить посылки как прочитанные')}";
 
-  static m11(value) => "${value} мин.";
+  static m16(value) => "${value} мин.";
 
-  static m12(howMany) => "${Intl.plural(howMany, one: 'Не удалось переместить посылку', other: 'Не удалось переместить посылки')}";
+  static m17(howMany) => "${Intl.plural(howMany, one: 'Не удалось переместить посылку', other: 'Не удалось переместить посылки')}";
 
-  static m13(value) => "${value} oz";
+  static m18(value) => "${value} oz";
 
-  static m14(date) => "Посылка доставлена ${date}";
+  static m19(date) => "Посылка доставлена ${date}";
 
-  static m15(days) => "${Intl.plural(days, zero: 'Посылка в пути ${days} дней', one: 'Посылка в пути ${days} день', few: 'Посылка в пути ${days} дня', many: 'Посылка в пути ${days} дней', other: 'Посылка в пути ${days} дней')}";
+  static m20(days) => "${Intl.plural(days, zero: 'Посылка в пути ${days} дней', one: 'Посылка в пути ${days} день', few: 'Посылка в пути ${days} дня', many: 'Посылка в пути ${days} дней', other: 'Посылка в пути ${days} дней')}";
 
-  static m16(name) => "Подписано: ${name}";
+  static m22(name) => "Подписано: ${name}";
 
-  static m17(time) => "Отслеживание недоступно, так как с момента последнего отслеживания прошло мало времени. Пожалуйста, повторите попытку через ${time}";
+  static m23(time) => "Отслеживание недоступно, так как с момента последнего отслеживания прошло мало времени. Пожалуйста, повторите попытку через ${time}";
 
-  static m18(parcelName) => "• ${parcelName}";
+  static m24(parcelName) => "• ${parcelName}";
 
-  static m19(title, body) => "${title}: ${body}";
+  static m25(title, body) => "${title}: ${body}";
 
-  static m20(value) => "${value} lb";
+  static m26(value) => "${value} lb";
 
-  static m21(howMany) => "${Intl.plural(howMany, one: 'Не удалось обновить посылку', other: 'Не удалось обновить посылки')}";
+  static m27(howMany) => "${Intl.plural(howMany, one: 'Не удалось обновить посылку', other: 'Не удалось обновить посылки')}";
 
-  static m22(value) => "${value} сек.";
+  static m28(value) => "${value} сек.";
 
-  static m23(count) => "Выбрано: ${count}";
+  static m29(count) => "Выбрано: ${count}";
 
-  static m24(time) => "Не более одного раза в ${time}";
+  static m30(time) => "Не более одного раза в ${time}";
 
-  static m25(value) => "${value} ft²";
+  static m31(value) => "${value} ft²";
 
-  static m26(value) => "${value} м²";
+  static m32(value) => "${value} м²";
 
-  static m27(value) => "${value} yd²";
+  static m33(value) => "${value} yd²";
 
-  static m28(date) => "Отслеживание начато: ${date}";
+  static m34(date) => "Отслеживание начато: ${date}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function> {
@@ -112,7 +112,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "copyTrackNumber" : MessageLookupByLibrary.simpleMessage("Скопировать трек номер"),
     "crashDialogExtraInfo" : MessageLookupByLibrary.simpleMessage("Добавьте дополнительную информацию и комментарии сюда:"),
     "crashDialogMoreDetails" : MessageLookupByLibrary.simpleMessage("Подробнее"),
-    "crashDialogNoEmailApp" : m1,
+    "crashDialogNoEmailApp" : m2,
     "crashDialogReport" : MessageLookupByLibrary.simpleMessage("Сообщить"),
     "crashDialogSummary" : MessageLookupByLibrary.simpleMessage("В приложении произошла ошибка. Вы можете сообщить об этом разработчикам"),
     "dataIsSecured" : MessageLookupByLibrary.simpleMessage("Данные хранятся в защищённом виде"),
@@ -121,8 +121,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "delete" : MessageLookupByLibrary.simpleMessage("Удалить"),
     "deleteAccountDialogMsg" : MessageLookupByLibrary.simpleMessage("Вы действительно хотите удалить выбранный аккаунт?"),
     "deleteAccountFailed" : MessageLookupByLibrary.simpleMessage("Не удалось удалить аккаунт"),
-    "deleteParcelDialogMsg" : m2,
-    "deleteParcelsFailed" : m3,
+    "deleteParcelDialogMsg" : m5,
+    "deleteParcelsFailed" : m6,
     "details" : MessageLookupByLibrary.simpleMessage("Детали"),
     "edit" : MessageLookupByLibrary.simpleMessage("Редактировать"),
     "editAccount" : MessageLookupByLibrary.simpleMessage("Редактировать аккаунт"),
@@ -134,23 +134,23 @@ class MessageLookup extends MessageLookupByLibrary {
     "fieldRequiredError" : MessageLookupByLibrary.simpleMessage("Это поле обязательно"),
     "filters" : MessageLookupByLibrary.simpleMessage("Фильтры"),
     "filtersAndSorting" : MessageLookupByLibrary.simpleMessage("Фильтры и сортировка"),
-    "gallonUnitShort" : m4,
-    "generateBarcodFailed" : m5,
+    "gallonUnitShort" : m8,
+    "generateBarcodFailed" : m9,
     "generateBarcode" : MessageLookupByLibrary.simpleMessage("Сгенерировать штрих-код"),
     "hide" : MessageLookupByLibrary.simpleMessage("Скрыть"),
-    "hoursShortFormat" : m6,
+    "hoursShortFormat" : m10,
     "invalidTrackingNumberStatus" : MessageLookupByLibrary.simpleMessage("Неверный трек номер или почтовая служба не поддерживается"),
-    "kilogramUnitShort" : m7,
-    "lastTrackingDate" : m8,
+    "kilogramUnitShort" : m11,
+    "lastTrackingDate" : m12,
     "linuxTrayIconWarning" : MessageLookupByLibrary.simpleMessage("В некоторых средах системный трей может не поддерживаться по умолчанию. Например, для работы в GNOME установите это расширение (или аналогичное): https://extensions.gnome.org/extension/615/appindicator-support/"),
-    "literUnitShort" : m9,
+    "literUnitShort" : m13,
     "loadPageFailed" : MessageLookupByLibrary.simpleMessage("Не удалось загрузить страницу"),
     "login" : MessageLookupByLibrary.simpleMessage("Логин"),
     "markAllAsRead" : MessageLookupByLibrary.simpleMessage("Отметить все как прочитанное"),
     "markAsRead" : MessageLookupByLibrary.simpleMessage("Отметить как прочитанное"),
-    "markAsReadParcelFailed" : m10,
-    "minutesShortFormat" : m11,
-    "moveParcelFailed" : m12,
+    "markAsReadParcelFailed" : m14,
+    "minutesShortFormat" : m16,
+    "moveParcelFailed" : m17,
     "moveToActive" : MessageLookupByLibrary.simpleMessage("Переместить в активные"),
     "moveToArchive" : MessageLookupByLibrary.simpleMessage("Переместить в архив"),
     "name" : MessageLookupByLibrary.simpleMessage("Имя"),
@@ -163,11 +163,11 @@ class MessageLookup extends MessageLookupByLibrary {
     "openDetails" : MessageLookupByLibrary.simpleMessage("Открыть подробности"),
     "openLinkFailed" : MessageLookupByLibrary.simpleMessage("Невозможно открыть ссылку"),
     "optionalField" : MessageLookupByLibrary.simpleMessage("Опционально"),
-    "ounceUnitShort" : m13,
+    "ounceUnitShort" : m18,
     "pageNotFound" : MessageLookupByLibrary.simpleMessage("Страница не найдена"),
-    "parcelDeliveredStatus" : m14,
+    "parcelDeliveredStatus" : m19,
     "parcelDetailsHardErrorOccurred" : MessageLookupByLibrary.simpleMessage("Произошла серьёзная ошибка, прекращено отслеживание некоторых сервисов. Проверьте ошибки перед активацией отслеживания"),
-    "parcelInTransitStatus" : m15,
+    "parcelInTransitStatus" : m20,
     "parcelInfo" : MessageLookupByLibrary.simpleMessage("Информация о посылке"),
     "parcelInfoNotAvailableStatus" : MessageLookupByLibrary.simpleMessage("Информации о посылки пока нет. После отправки посылки может пройти несколько дней, прежде чем она начнет отслеживаться"),
     "parcelMovedToActiveSuccess" : MessageLookupByLibrary.simpleMessage("Успешно перемещено в активные"),
@@ -175,32 +175,32 @@ class MessageLookup extends MessageLookupByLibrary {
     "parcelNames" : MessageLookupByLibrary.simpleMessage("Названия посылок"),
     "parcelNamesFieldHint" : MessageLookupByLibrary.simpleMessage("Опционально. По одному на строку"),
     "parcelNotFound" : MessageLookupByLibrary.simpleMessage("Посылка не найдена"),
-    "parcelSignedBy" : m16,
-    "parcelTrackingLimitedError" : m17,
+    "parcelSignedBy" : m22,
+    "parcelTrackingLimitedError" : m23,
     "parcelTrackingStatus" : MessageLookupByLibrary.simpleMessage("Ваша посылка отслеживается. Пожалуйста, подождите несколько минут"),
     "parcels" : MessageLookupByLibrary.simpleMessage("Посылки"),
     "parcelsListHardErrorOccurred" : MessageLookupByLibrary.simpleMessage("Произошла серьёзная ошибка, отслеживание остановлено. Пожалуйста, проверьте подробности внутри"),
-    "parcelsTrackingFailedInboxStyleLine" : m18,
+    "parcelsTrackingFailedInboxStyleLine" : m24,
     "parcelsTrackingNotifyChannelDescription" : MessageLookupByLibrary.simpleMessage("Уведомления активности посылок"),
     "parcelsTrackingNotifyChannelTitle" : MessageLookupByLibrary.simpleMessage("Отслеживание посылок"),
     "parcelsTrackingNotifyInboxStyleDescription" : MessageLookupByLibrary.simpleMessage("Статус посылок обновлён"),
-    "parcelsTrackingNotifyInboxStyleLine" : m19,
+    "parcelsTrackingNotifyInboxStyleLine" : m25,
     "parcelsTrackingNotifyInboxStyleTitle" : MessageLookupByLibrary.simpleMessage("Отслеживание посылок"),
     "password" : MessageLookupByLibrary.simpleMessage("Пароль"),
     "postalService" : MessageLookupByLibrary.simpleMessage("Почтовый сервис"),
-    "poundUnitShort" : m20,
+    "poundUnitShort" : m26,
     "previousPage" : MessageLookupByLibrary.simpleMessage("Предыдущая страница"),
     "projectIssuesPage" : MessageLookupByLibrary.simpleMessage("https://github.com/proninyaroslav/libretrack/issues"),
     "refresh" : MessageLookupByLibrary.simpleMessage("Обновить"),
     "refreshAll" : MessageLookupByLibrary.simpleMessage("Обновить все"),
-    "refreshParcelsFailed" : m21,
+    "refreshParcelsFailed" : m27,
     "russianPost" : MessageLookupByLibrary.simpleMessage("Почта России"),
     "russianPostAddAccountDescription" : MessageLookupByLibrary.simpleMessage("1) Зарегистрируйтесь на сайте Почты России: https://www.pochta.ru/\n2) Перейдите в Настройки доступа, включите API отслеживания и согласитесь с условиями сервиса: https://tracking.pochta.ru/access-settings\n3) Скопируйте в Настройках доступа логин (сгенерирован автоматически). Пароль будет отправлен на e-mail, указанный при регистрации."),
-    "secondsShortFormat" : m22,
+    "secondsShortFormat" : m28,
     "secureStorageIsNotSupported" : MessageLookupByLibrary.simpleMessage("Защищённое хранилище не поддерживается. Данные хранятся в незащищённом виде"),
     "selectAccountType" : MessageLookupByLibrary.simpleMessage("Выберите тип аккаунта"),
     "selectAll" : MessageLookupByLibrary.simpleMessage("Выбрать все"),
-    "selectedCounter" : m23,
+    "selectedCounter" : m29,
     "settings" : MessageLookupByLibrary.simpleMessage("Настройки"),
     "settingsAppearance" : MessageLookupByLibrary.simpleMessage("Внешний вид"),
     "settingsAutoTracking" : MessageLookupByLibrary.simpleMessage("Автоматическое отслеживание"),
@@ -225,7 +225,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "settingsTrackingFreqFifteenMin" : MessageLookupByLibrary.simpleMessage("15 минут"),
     "settingsTrackingFreqFortyFiveMin" : MessageLookupByLibrary.simpleMessage("45 минут"),
     "settingsTrackingFreqLimit" : MessageLookupByLibrary.simpleMessage("Ограничение частоты отслеживания"),
-    "settingsTrackingFreqLimitSummary" : m24,
+    "settingsTrackingFreqLimitSummary" : m30,
     "settingsTrackingFreqOneHour" : MessageLookupByLibrary.simpleMessage("1 час"),
     "settingsTrackingFreqThirtyMin" : MessageLookupByLibrary.simpleMessage("30 минут"),
     "settingsTrackingHistorySize" : MessageLookupByLibrary.simpleMessage("Размер истории отслеживания"),
@@ -265,9 +265,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "sortDateAddedAsc" : MessageLookupByLibrary.simpleMessage("Дата добавления (сначала новые)"),
     "sortDateAddedDesc" : MessageLookupByLibrary.simpleMessage("Дата добавления (сначала старые)"),
     "sorting" : MessageLookupByLibrary.simpleMessage("Сортировка"),
-    "squareFeetUnitShort" : m25,
-    "squareMeterUnitShort" : m26,
-    "squareYardUnitShort" : m27,
+    "squareFeetUnitShort" : m31,
+    "squareMeterUnitShort" : m32,
+    "squareYardUnitShort" : m33,
     "status" : MessageLookupByLibrary.simpleMessage("Статус"),
     "statusArrivedAtCustoms" : MessageLookupByLibrary.simpleMessage("Прибыло на таможню"),
     "statusCustomsClearanceComplete" : MessageLookupByLibrary.simpleMessage("Покинуло таможню"),
@@ -307,7 +307,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "trackingResponseError" : MessageLookupByLibrary.simpleMessage("Ошибка"),
     "trackingResponseNoInfo" : MessageLookupByLibrary.simpleMessage("Нет информации"),
     "trackingResponseSuccess" : MessageLookupByLibrary.simpleMessage("Успешно"),
-    "trackingStartedDate" : m28,
+    "trackingStartedDate" : m34,
     "trackingStoppedStatus" : MessageLookupByLibrary.simpleMessage("Отслеживание остановлено. Остлеживание останавливается, если произошла серьёзная ошибка, либо почтовая служба сообщила, что дальнейшие статусы не предоставляются"),
     "unreadParcels" : MessageLookupByLibrary.simpleMessage("Непрочитанные"),
     "ups" : MessageLookupByLibrary.simpleMessage("UPS"),

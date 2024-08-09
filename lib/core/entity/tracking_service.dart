@@ -1,4 +1,4 @@
-// Copyright (C) 2021 Yaroslav Pronin <proninyaroslav@mail.ru>
+// Copyright (C) 2021-2024 Yaroslav Pronin <proninyaroslav@mail.ru>
 // Copyright (C) 2021 Insurgo Inc. <insurgo@riseup.net>
 //
 // This file is part of LibreTrack.
@@ -30,6 +30,8 @@ enum TrackingServiceType {
   russianPost,
   @JsonValue('usps')
   usps,
+  @JsonValue('postNord')
+  postNord,
 }
 
 extension PostalServiceTypeMapper on TrackingServiceType {
@@ -41,6 +43,8 @@ extension PostalServiceTypeMapper on TrackingServiceType {
         return {PostalServiceType.russianPost};
       case TrackingServiceType.usps:
         return {PostalServiceType.usps};
+      case TrackingServiceType.postNord:
+        return {PostalServiceType.postNord};
     }
   }
 }

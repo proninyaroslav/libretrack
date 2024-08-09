@@ -21,61 +21,61 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static m0(value) => "${value} bbl";
 
-  static m1(email, pageUrl) => "Nessuna app di posta elettronica trovata. Puoi copiare manualmente l\'errore e inviarlo a ${email}\non inviare nella pagina del progetto ${pageUrl}";
+  static m2(email, pageUrl) => "Nessuna app di posta elettronica trovata. Puoi copiare manualmente l\'errore e inviarlo a ${email}\non inviare nella pagina del progetto ${pageUrl}";
 
-  static m2(howMany) => "${Intl.plural(howMany, one: 'Sei sicuro di eliminare il pacco selezionato??', other: 'Sei sicuro di eliminare i pacchi selezionati??')}";
+  static m5(howMany) => "${Intl.plural(howMany, one: 'Sei sicuro di eliminare il pacco selezionato??', other: 'Sei sicuro di eliminare i pacchi selezionati??')}";
 
-  static m3(howMany) => "${Intl.plural(howMany, one: 'Impossibile eliminare il pacco', other: 'Impossibile eliminare i pacchi')}";
+  static m6(howMany) => "${Intl.plural(howMany, one: 'Impossibile eliminare il pacco', other: 'Impossibile eliminare i pacchi')}";
 
-  static m4(value) => "${value} gal";
+  static m8(value) => "${value} gal";
 
-  static m5(error) => "Impossibile generare il codice a barre: ${error}";
+  static m9(error) => "Impossibile generare il codice a barre: ${error}";
 
-  static m6(value) => "${value} h.";
+  static m10(value) => "${value} h.";
 
-  static m7(value) => "${value} kg";
+  static m11(value) => "${value} kg";
 
-  static m8(date) => "Ultimo monitoraggio: ${date}";
+  static m12(date) => "Ultimo monitoraggio: ${date}";
 
-  static m9(value) => "${value} L";
+  static m13(value) => "${value} L";
 
-  static m10(howMany) => "${Intl.plural(howMany, one: 'Impossibile contrassegnare il pacco come letto', other: 'Impossibile contrassegnare i pacchi come letti')}";
+  static m14(howMany) => "${Intl.plural(howMany, one: 'Impossibile contrassegnare il pacco come letto', other: 'Impossibile contrassegnare i pacchi come letti')}";
 
-  static m11(value) => "${value} min.";
+  static m16(value) => "${value} min.";
 
-  static m12(howMany) => "${Intl.plural(howMany, one: 'Impossibile spostare il pacco', other: 'Impossibile spostare i pacchi')}";
+  static m17(howMany) => "${Intl.plural(howMany, one: 'Impossibile spostare il pacco', other: 'Impossibile spostare i pacchi')}";
 
-  static m13(value) => "${value} oz";
+  static m18(value) => "${value} oz";
 
-  static m14(date) => "Pacco consegnato il ${date}";
+  static m19(date) => "Pacco consegnato il ${date}";
 
-  static m15(days) => "${Intl.plural(days, zero: 'Pacco in transito ${days} days', one: 'Pacco in transito ${days} day', few: 'Pacco in transito ${days} days', many: 'Pacco in transito ${days} days', other: 'Pacco in transito ${days} days')}";
+  static m20(days) => "${Intl.plural(days, zero: 'Pacco in transito ${days} days', one: 'Pacco in transito ${days} day', few: 'Pacco in transito ${days} days', many: 'Pacco in transito ${days} days', other: 'Pacco in transito ${days} days')}";
 
-  static m16(name) => "Firmato da: ${name}";
+  static m22(name) => "Firmato da: ${name}";
 
-  static m17(time) => "Il monitoraggio non è disponibile perché è trascorso un po\' di tempo dall\'ultimo monitoraggio. Riprova dopo ${time}";
+  static m23(time) => "Il monitoraggio non è disponibile perché è trascorso un po\' di tempo dall\'ultimo monitoraggio. Riprova dopo ${time}";
 
-  static m18(parcelName) => "• ${parcelName}";
+  static m24(parcelName) => "• ${parcelName}";
 
-  static m19(title, body) => "${title}: ${body}";
+  static m25(title, body) => "${title}: ${body}";
 
-  static m20(value) => "${value} lb";
+  static m26(value) => "${value} lb";
 
-  static m21(howMany) => "${Intl.plural(howMany, one: 'Impossibile aggiornare il pacco', other: 'Impossibile aggiornare i pacchi')}";
+  static m27(howMany) => "${Intl.plural(howMany, one: 'Impossibile aggiornare il pacco', other: 'Impossibile aggiornare i pacchi')}";
 
-  static m22(value) => "${value} sec.";
+  static m28(value) => "${value} sec.";
 
-  static m23(count) => "Selezionato: ${count}";
+  static m29(count) => "Selezionato: ${count}";
 
-  static m24(time) => "Non più di una volta ogni ${time}";
+  static m30(time) => "Non più di una volta ogni ${time}";
 
-  static m25(value) => "${value} ft²";
+  static m31(value) => "${value} ft²";
 
-  static m26(value) => "${value} m²";
+  static m32(value) => "${value} m²";
 
-  static m27(value) => "${value} yd²";
+  static m33(value) => "${value} yd²";
 
-  static m28(date) => "Monitoraggio iniziato: ${date}";
+  static m34(date) => "Monitoraggio iniziato: ${date}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function> {
@@ -111,7 +111,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "copyTrackNumber" : MessageLookupByLibrary.simpleMessage("Copia numero di tracciamento"),
     "crashDialogExtraInfo" : MessageLookupByLibrary.simpleMessage("Aggiungi ulteriori informazioni e commenti qui:"),
     "crashDialogMoreDetails" : MessageLookupByLibrary.simpleMessage("Maggiori dettagli"),
-    "crashDialogNoEmailApp" : m1,
+    "crashDialogNoEmailApp" : m2,
     "crashDialogReport" : MessageLookupByLibrary.simpleMessage("Report"),
     "crashDialogSummary" : MessageLookupByLibrary.simpleMessage("Si è verificato un errore dell\'app. Puoi segnalarlo agli sviluppatori"),
     "dataIsSecured" : MessageLookupByLibrary.simpleMessage("I dati sono archiviati in modo sicuro "),
@@ -120,8 +120,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "delete" : MessageLookupByLibrary.simpleMessage("Cancella"),
     "deleteAccountDialogMsg" : MessageLookupByLibrary.simpleMessage("Sei sicuro di eliminare l\'account selezionato??"),
     "deleteAccountFailed" : MessageLookupByLibrary.simpleMessage("Impossibile eliminare l\'account"),
-    "deleteParcelDialogMsg" : m2,
-    "deleteParcelsFailed" : m3,
+    "deleteParcelDialogMsg" : m5,
+    "deleteParcelsFailed" : m6,
     "details" : MessageLookupByLibrary.simpleMessage("Dettagli"),
     "edit" : MessageLookupByLibrary.simpleMessage("Modifica"),
     "editAccount" : MessageLookupByLibrary.simpleMessage("Modifica account"),
@@ -133,22 +133,22 @@ class MessageLookup extends MessageLookupByLibrary {
     "fieldRequiredError" : MessageLookupByLibrary.simpleMessage("Questo campo è obbligatorio"),
     "filters" : MessageLookupByLibrary.simpleMessage("Filtri"),
     "filtersAndSorting" : MessageLookupByLibrary.simpleMessage("Filtri e ordinamento"),
-    "gallonUnitShort" : m4,
-    "generateBarcodFailed" : m5,
+    "gallonUnitShort" : m8,
+    "generateBarcodFailed" : m9,
     "generateBarcode" : MessageLookupByLibrary.simpleMessage("Genera codice a barre"),
     "hide" : MessageLookupByLibrary.simpleMessage("Nascondi"),
-    "hoursShortFormat" : m6,
+    "hoursShortFormat" : m10,
     "invalidTrackingNumberStatus" : MessageLookupByLibrary.simpleMessage("Numero di tracciamento non valido o servizio postale non supportato"),
-    "kilogramUnitShort" : m7,
-    "lastTrackingDate" : m8,
-    "literUnitShort" : m9,
+    "kilogramUnitShort" : m11,
+    "lastTrackingDate" : m12,
+    "literUnitShort" : m13,
     "loadPageFailed" : MessageLookupByLibrary.simpleMessage("Impossibile caricare la pagina"),
     "login" : MessageLookupByLibrary.simpleMessage("Login"),
     "markAllAsRead" : MessageLookupByLibrary.simpleMessage("Segna tutti come letti"),
     "markAsRead" : MessageLookupByLibrary.simpleMessage("Segna come letto"),
-    "markAsReadParcelFailed" : m10,
-    "minutesShortFormat" : m11,
-    "moveParcelFailed" : m12,
+    "markAsReadParcelFailed" : m14,
+    "minutesShortFormat" : m16,
+    "moveParcelFailed" : m17,
     "moveToActive" : MessageLookupByLibrary.simpleMessage("Sposta in attivo"),
     "moveToArchive" : MessageLookupByLibrary.simpleMessage("Sposta in archivio"),
     "name" : MessageLookupByLibrary.simpleMessage("Nome"),
@@ -160,11 +160,11 @@ class MessageLookup extends MessageLookupByLibrary {
     "openDetails" : MessageLookupByLibrary.simpleMessage("Apri dettagli"),
     "openLinkFailed" : MessageLookupByLibrary.simpleMessage("Impossibile aprire il collegamento"),
     "optionalField" : MessageLookupByLibrary.simpleMessage("Opzionale"),
-    "ounceUnitShort" : m13,
+    "ounceUnitShort" : m18,
     "pageNotFound" : MessageLookupByLibrary.simpleMessage("Pagina non trovata"),
-    "parcelDeliveredStatus" : m14,
+    "parcelDeliveredStatus" : m19,
     "parcelDetailsHardErrorOccurred" : MessageLookupByLibrary.simpleMessage("Si è verificato un errore hardware, il monitoraggio di alcuni servizi è stato interrotto. Controlla gli errori prima di attivare il monitoraggio"),
-    "parcelInTransitStatus" : m15,
+    "parcelInTransitStatus" : m20,
     "parcelInfo" : MessageLookupByLibrary.simpleMessage("Informazioni sul pacco"),
     "parcelInfoNotAvailableStatus" : MessageLookupByLibrary.simpleMessage("Non ci sono ancora informazioni sul pacco. Dopo che un pacco è stato inviato, potrebbero essere necessari diversi giorni prima che possa essere rintracciato"),
     "parcelMovedToActiveSuccess" : MessageLookupByLibrary.simpleMessage("Spostato in attivo con successo"),
@@ -172,31 +172,31 @@ class MessageLookup extends MessageLookupByLibrary {
     "parcelNames" : MessageLookupByLibrary.simpleMessage("Nomi dei pacchetti"),
     "parcelNamesFieldHint" : MessageLookupByLibrary.simpleMessage("Opzionale. Uno per riga"),
     "parcelNotFound" : MessageLookupByLibrary.simpleMessage("Pacco non trovato"),
-    "parcelSignedBy" : m16,
-    "parcelTrackingLimitedError" : m17,
+    "parcelSignedBy" : m22,
+    "parcelTrackingLimitedError" : m23,
     "parcelTrackingStatus" : MessageLookupByLibrary.simpleMessage("Il tuo pacco è attualmente tracciato. Si prega di attendere qualche minuto"),
     "parcels" : MessageLookupByLibrary.simpleMessage("Pacchi"),
     "parcelsListHardErrorOccurred" : MessageLookupByLibrary.simpleMessage("Si è verificato un errore hardware, il monitoraggio è stato interrotto. Si prega di controllare i dettagli all\'interno"),
-    "parcelsTrackingFailedInboxStyleLine" : m18,
+    "parcelsTrackingFailedInboxStyleLine" : m24,
     "parcelsTrackingNotifyChannelDescription" : MessageLookupByLibrary.simpleMessage("Notifiche dell\'attività dei pacchi"),
     "parcelsTrackingNotifyChannelTitle" : MessageLookupByLibrary.simpleMessage("Tracciamento dei pacchi"),
     "parcelsTrackingNotifyInboxStyleDescription" : MessageLookupByLibrary.simpleMessage("Lo stato dei pacchi è aggiornato"),
-    "parcelsTrackingNotifyInboxStyleLine" : m19,
+    "parcelsTrackingNotifyInboxStyleLine" : m25,
     "parcelsTrackingNotifyInboxStyleTitle" : MessageLookupByLibrary.simpleMessage("Tracciamento del pacco"),
     "password" : MessageLookupByLibrary.simpleMessage("Password"),
     "postalService" : MessageLookupByLibrary.simpleMessage("Servizio postale"),
-    "poundUnitShort" : m20,
+    "poundUnitShort" : m26,
     "projectIssuesPage" : MessageLookupByLibrary.simpleMessage("https://github.com/proninyaroslav/libretrack/issues"),
     "refresh" : MessageLookupByLibrary.simpleMessage("Aggiorna"),
     "refreshAll" : MessageLookupByLibrary.simpleMessage("Aggiorna tutto"),
-    "refreshParcelsFailed" : m21,
+    "refreshParcelsFailed" : m27,
     "russianPost" : MessageLookupByLibrary.simpleMessage("Posta russa"),
     "russianPostAddAccountDescription" : MessageLookupByLibrary.simpleMessage("1. Registrati sul sito web delle Poste Russe: https://www.pochta.ru/\n2. Vai su Impostazioni di accesso, abilita l\'API di tracciamento e accetta i termini di servizio: https://tracking.pochta.ru/access-settings\n3. Nelle Impostazioni di accesso, copia il login (generato automaticamente). La password verrà inviata all\'e-mail, fornita durante la registrazione."),
-    "secondsShortFormat" : m22,
+    "secondsShortFormat" : m28,
     "secureStorageIsNotSupported" : MessageLookupByLibrary.simpleMessage("La archiviazione sicura non è supportata. I dati vengono archiviati non protetti"),
     "selectAccountType" : MessageLookupByLibrary.simpleMessage("Seleziona il tipo di account"),
     "selectAll" : MessageLookupByLibrary.simpleMessage("Seleziona tutto"),
-    "selectedCounter" : m23,
+    "selectedCounter" : m29,
     "settings" : MessageLookupByLibrary.simpleMessage("Impostazioni"),
     "settingsAppearance" : MessageLookupByLibrary.simpleMessage("Aspetto"),
     "settingsAutoTracking" : MessageLookupByLibrary.simpleMessage("Tracciamento automatico"),
@@ -221,7 +221,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "settingsTrackingFreqFifteenMin" : MessageLookupByLibrary.simpleMessage("15 minuti"),
     "settingsTrackingFreqFortyFiveMin" : MessageLookupByLibrary.simpleMessage("45 minuti"),
     "settingsTrackingFreqLimit" : MessageLookupByLibrary.simpleMessage("Limite di frequenza di monitoraggio"),
-    "settingsTrackingFreqLimitSummary" : m24,
+    "settingsTrackingFreqLimitSummary" : m30,
     "settingsTrackingFreqOneHour" : MessageLookupByLibrary.simpleMessage("1 ora"),
     "settingsTrackingFreqThirtyMin" : MessageLookupByLibrary.simpleMessage("30 minuti"),
     "settingsTrackingHistorySize" : MessageLookupByLibrary.simpleMessage("Monitoraggio delle dimensioni della cronologia"),
@@ -261,9 +261,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "sortDateAddedAsc" : MessageLookupByLibrary.simpleMessage("Data aggiunta (prima la più recente)"),
     "sortDateAddedDesc" : MessageLookupByLibrary.simpleMessage("Data aggiunta (prima la più vecchia)"),
     "sorting" : MessageLookupByLibrary.simpleMessage("Ordinamento"),
-    "squareFeetUnitShort" : m25,
-    "squareMeterUnitShort" : m26,
-    "squareYardUnitShort" : m27,
+    "squareFeetUnitShort" : m31,
+    "squareMeterUnitShort" : m32,
+    "squareYardUnitShort" : m33,
     "status" : MessageLookupByLibrary.simpleMessage("Stato"),
     "statusArrivedAtCustoms" : MessageLookupByLibrary.simpleMessage("Arrivato in dogana"),
     "statusCustomsClearanceComplete" : MessageLookupByLibrary.simpleMessage("Sdoganamento completato"),
@@ -303,7 +303,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "trackingResponseError" : MessageLookupByLibrary.simpleMessage("Errore"),
     "trackingResponseNoInfo" : MessageLookupByLibrary.simpleMessage("Nessuna informazione"),
     "trackingResponseSuccess" : MessageLookupByLibrary.simpleMessage("Con successo"),
-    "trackingStartedDate" : m28,
+    "trackingStartedDate" : m34,
     "trackingStoppedStatus" : MessageLookupByLibrary.simpleMessage("Monitoraggio interrotto. Il monitoraggio si interrompe se si è verificato un errore hardware o se il servizio postale ha segnalato che non vengono forniti ulteriori stati"),
     "unreadParcels" : MessageLookupByLibrary.simpleMessage("Non letto"),
     "ups" : MessageLookupByLibrary.simpleMessage("UPS"),

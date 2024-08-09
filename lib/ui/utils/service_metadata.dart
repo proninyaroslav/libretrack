@@ -89,6 +89,19 @@ class TrackingServiceMetadataMapper {
             )
           },
         );
+      case TrackingServiceType.postNord:
+        return TrackingServiceMetadata(
+          type: TrackingServiceType.postNord,
+          localizedName: S.of(context).postNord,
+          iconData: ServiceLogoIconsData.postNord,
+          postalServices: {
+            PostalServiceMetadata(
+              type: PostalServiceType.postNord,
+              localizedName: S.of(context).postNord,
+              iconData: ServiceLogoIconsData.postNord,
+            )
+          },
+        );
     }
   }
 }
@@ -116,6 +129,12 @@ class PostalServiceMetadataMapper {
           type: PostalServiceType.usps,
           localizedName: S.of(context).usps,
           iconData: ServiceLogoIconsData.usps,
+        );
+      case PostalServiceType.postNord:
+        return PostalServiceMetadata(
+          type: PostalServiceType.postNord,
+          localizedName: S.of(context).postNord,
+          iconData: ServiceLogoIconsData.postNord,
         );
     }
   }

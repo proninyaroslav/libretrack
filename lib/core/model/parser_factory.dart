@@ -18,6 +18,7 @@
 
 import 'package:injectable/injectable.dart';
 import 'package:libretrack/core/entity/entity.dart';
+import 'package:libretrack/core/model/tracking_service/postnord/postnord_parser.dart';
 
 import '../date_time_provider.dart';
 import 'parser.dart';
@@ -42,6 +43,8 @@ class ParserFactoryImpl implements ParserFactory {
         return RussianPostParser();
       case TrackingServiceType.usps:
         return USPSParser(_dateTimeProvider);
+      case TrackingServiceType.postNord:
+        return PostNordParser();
     }
   }
 }

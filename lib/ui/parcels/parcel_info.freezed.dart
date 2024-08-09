@@ -17,6 +17,7 @@ final _privateConstructorUsedError = UnsupportedError(
 /// @nodoc
 mixin _$ParcelInfo {
   TrackNumberInfo get trackInfo => throw _privateConstructorUsedError;
+  ShipmentStatusType get currentStatus => throw _privateConstructorUsedError;
   List<TrackNumberService> get trackServices =>
       throw _privateConstructorUsedError;
   TrackingInfo? get lastTrackingInfo => throw _privateConstructorUsedError;
@@ -37,6 +38,7 @@ abstract class $ParcelInfoCopyWith<$Res> {
   @useResult
   $Res call(
       {TrackNumberInfo trackInfo,
+      ShipmentStatusType currentStatus,
       List<TrackNumberService> trackServices,
       TrackingInfo? lastTrackingInfo,
       ShipmentActivityInfo? lastActivity,
@@ -57,6 +59,7 @@ class _$ParcelInfoCopyWithImpl<$Res, $Val extends ParcelInfo>
   @override
   $Res call({
     Object? trackInfo = null,
+    Object? currentStatus = null,
     Object? trackServices = null,
     Object? lastTrackingInfo = freezed,
     Object? lastActivity = freezed,
@@ -67,6 +70,10 @@ class _$ParcelInfoCopyWithImpl<$Res, $Val extends ParcelInfo>
           ? _value.trackInfo
           : trackInfo // ignore: cast_nullable_to_non_nullable
               as TrackNumberInfo,
+      currentStatus: null == currentStatus
+          ? _value.currentStatus
+          : currentStatus // ignore: cast_nullable_to_non_nullable
+              as ShipmentStatusType,
       trackServices: null == trackServices
           ? _value.trackServices
           : trackServices // ignore: cast_nullable_to_non_nullable
@@ -97,6 +104,7 @@ abstract class _$$ParcelInfoImplCopyWith<$Res>
   @useResult
   $Res call(
       {TrackNumberInfo trackInfo,
+      ShipmentStatusType currentStatus,
       List<TrackNumberService> trackServices,
       TrackingInfo? lastTrackingInfo,
       ShipmentActivityInfo? lastActivity,
@@ -115,6 +123,7 @@ class __$$ParcelInfoImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? trackInfo = null,
+    Object? currentStatus = null,
     Object? trackServices = null,
     Object? lastTrackingInfo = freezed,
     Object? lastActivity = freezed,
@@ -125,6 +134,10 @@ class __$$ParcelInfoImplCopyWithImpl<$Res>
           ? _value.trackInfo
           : trackInfo // ignore: cast_nullable_to_non_nullable
               as TrackNumberInfo,
+      currentStatus: null == currentStatus
+          ? _value.currentStatus
+          : currentStatus // ignore: cast_nullable_to_non_nullable
+              as ShipmentStatusType,
       trackServices: null == trackServices
           ? _value._trackServices
           : trackServices // ignore: cast_nullable_to_non_nullable
@@ -150,6 +163,7 @@ class __$$ParcelInfoImplCopyWithImpl<$Res>
 class _$ParcelInfoImpl with DiagnosticableTreeMixin implements _ParcelInfo {
   const _$ParcelInfoImpl(
       {required this.trackInfo,
+      required this.currentStatus,
       final List<TrackNumberService> trackServices = const [],
       this.lastTrackingInfo,
       this.lastActivity,
@@ -159,6 +173,8 @@ class _$ParcelInfoImpl with DiagnosticableTreeMixin implements _ParcelInfo {
 
   @override
   final TrackNumberInfo trackInfo;
+  @override
+  final ShipmentStatusType currentStatus;
   final List<TrackNumberService> _trackServices;
   @override
   @JsonKey()
@@ -185,7 +201,7 @@ class _$ParcelInfoImpl with DiagnosticableTreeMixin implements _ParcelInfo {
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'ParcelInfo(trackInfo: $trackInfo, trackServices: $trackServices, lastTrackingInfo: $lastTrackingInfo, lastActivity: $lastActivity, lastTrackingResponse: $lastTrackingResponse)';
+    return 'ParcelInfo(trackInfo: $trackInfo, currentStatus: $currentStatus, trackServices: $trackServices, lastTrackingInfo: $lastTrackingInfo, lastActivity: $lastActivity, lastTrackingResponse: $lastTrackingResponse)';
   }
 
   @override
@@ -194,6 +210,7 @@ class _$ParcelInfoImpl with DiagnosticableTreeMixin implements _ParcelInfo {
     properties
       ..add(DiagnosticsProperty('type', 'ParcelInfo'))
       ..add(DiagnosticsProperty('trackInfo', trackInfo))
+      ..add(DiagnosticsProperty('currentStatus', currentStatus))
       ..add(DiagnosticsProperty('trackServices', trackServices))
       ..add(DiagnosticsProperty('lastTrackingInfo', lastTrackingInfo))
       ..add(DiagnosticsProperty('lastActivity', lastActivity))
@@ -207,6 +224,8 @@ class _$ParcelInfoImpl with DiagnosticableTreeMixin implements _ParcelInfo {
             other is _$ParcelInfoImpl &&
             (identical(other.trackInfo, trackInfo) ||
                 other.trackInfo == trackInfo) &&
+            (identical(other.currentStatus, currentStatus) ||
+                other.currentStatus == currentStatus) &&
             const DeepCollectionEquality()
                 .equals(other._trackServices, _trackServices) &&
             (identical(other.lastTrackingInfo, lastTrackingInfo) ||
@@ -221,6 +240,7 @@ class _$ParcelInfoImpl with DiagnosticableTreeMixin implements _ParcelInfo {
   int get hashCode => Object.hash(
       runtimeType,
       trackInfo,
+      currentStatus,
       const DeepCollectionEquality().hash(_trackServices),
       lastTrackingInfo,
       lastActivity,
@@ -236,6 +256,7 @@ class _$ParcelInfoImpl with DiagnosticableTreeMixin implements _ParcelInfo {
 abstract class _ParcelInfo implements ParcelInfo {
   const factory _ParcelInfo(
           {required final TrackNumberInfo trackInfo,
+          required final ShipmentStatusType currentStatus,
           final List<TrackNumberService> trackServices,
           final TrackingInfo? lastTrackingInfo,
           final ShipmentActivityInfo? lastActivity,
@@ -244,6 +265,8 @@ abstract class _ParcelInfo implements ParcelInfo {
 
   @override
   TrackNumberInfo get trackInfo;
+  @override
+  ShipmentStatusType get currentStatus;
   @override
   List<TrackNumberService> get trackServices;
   @override

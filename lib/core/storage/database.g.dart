@@ -94,7 +94,7 @@ class _$AppDatabase extends AppDatabase {
     Callback? callback,
   ]) async {
     final databaseOptions = sqflite.OpenDatabaseOptions(
-      version: 2,
+      version: 3,
       onConfigure: (database) async {
         await database.execute('PRAGMA foreign_keys = ON');
         await callback?.onConfigure?.call(database);
@@ -122,7 +122,7 @@ class _$AppDatabase extends AppDatabase {
         await database.execute(
             'CREATE TABLE IF NOT EXISTS `ShipmentActivityInfo` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `trackNumber` TEXT NOT NULL, `serviceType` TEXT NOT NULL, `statusType` TEXT NOT NULL, `statusDescription` TEXT, `dateTime` INTEGER NOT NULL, `activityLocation_location` TEXT, `activityLocation_postalCode` TEXT, `activityLocation_countryCode` TEXT, FOREIGN KEY (`trackNumber`) REFERENCES `TrackNumberInfo` (`trackNumber`) ON UPDATE NO ACTION ON DELETE CASCADE)');
         await database.execute(
-            'CREATE TABLE IF NOT EXISTS `ShipmentInfo` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `trackNumber` TEXT NOT NULL, `serviceType` TEXT NOT NULL, `serviceDescription` TEXT, `shipmentDescription` TEXT, `signedForByName` TEXT, `pickupDate` INTEGER, `deliveryDate` INTEGER, `estimatedDeliveryDate` INTEGER, `scheduledDeliveryDate` INTEGER, `serviceMessage` TEXT, `shipperName` TEXT, `receiverName` TEXT, `cashOnDelivery_value` REAL, `cashOnDelivery_currencyCode` TEXT, `shipper_location` TEXT, `shipper_postalCode` TEXT, `shipper_countryCode` TEXT, `receiver_location` TEXT, `receiver_postalCode` TEXT, `receiver_countryCode` TEXT, `weight_Value` REAL, `weight_Measurement` TEXT, `volume_Value` REAL, `volume_Measurement` TEXT, `declaredValue_value` REAL, `declaredValue_currencyCode` TEXT, `customDuty_value` REAL, `customDuty_currencyCode` TEXT, `additionalRateFee_value` REAL, `additionalRateFee_currencyCode` TEXT, `shippingRateFee_value` REAL, `shippingRateFee_currencyCode` TEXT, `insuranceRateFee_value` REAL, `insuranceRateFee_currencyCode` TEXT, FOREIGN KEY (`trackNumber`) REFERENCES `TrackNumberInfo` (`trackNumber`) ON UPDATE NO ACTION ON DELETE CASCADE)');
+            'CREATE TABLE IF NOT EXISTS `ShipmentInfo` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `trackNumber` TEXT NOT NULL, `serviceType` TEXT NOT NULL, `serviceDescription` TEXT, `shipmentDescription` TEXT, `signedForByName` TEXT, `pickupDate` INTEGER, `deliveryDate` INTEGER, `estimatedDeliveryDate` INTEGER, `scheduledDeliveryDate` INTEGER, `serviceMessage` TEXT, `shipperName` TEXT, `receiverName` TEXT, `currentStatus` INTEGER, `cashOnDelivery_value` REAL, `cashOnDelivery_currencyCode` TEXT, `shipper_location` TEXT, `shipper_postalCode` TEXT, `shipper_countryCode` TEXT, `receiver_location` TEXT, `receiver_postalCode` TEXT, `receiver_countryCode` TEXT, `weight_Value` REAL, `weight_Measurement` TEXT, `volume_Value` REAL, `volume_Measurement` TEXT, `declaredValue_value` REAL, `declaredValue_currencyCode` TEXT, `customDuty_value` REAL, `customDuty_currencyCode` TEXT, `additionalRateFee_value` REAL, `additionalRateFee_currencyCode` TEXT, `shippingRateFee_value` REAL, `shippingRateFee_currencyCode` TEXT, `insuranceRateFee_value` REAL, `insuranceRateFee_currencyCode` TEXT, `dimensions_widthValue` REAL, `dimensions_widthMeasurement` TEXT, `dimensions_heightValue` REAL, `dimensions_heightMeasurement` TEXT, `dimensions_lenghtValue` REAL, `dimensions_lenghtMeasurement` TEXT, FOREIGN KEY (`trackNumber`) REFERENCES `TrackNumberInfo` (`trackNumber`) ON UPDATE NO ACTION ON DELETE CASCADE)');
         await database.execute(
             'CREATE TABLE IF NOT EXISTS `AlternateTrackNumber` (`trackNumber` TEXT NOT NULL, `shipmentId` INTEGER NOT NULL, FOREIGN KEY (`shipmentId`) REFERENCES `ShipmentInfo` (`id`) ON UPDATE NO ACTION ON DELETE CASCADE, PRIMARY KEY (`trackNumber`))');
         await database.execute(
@@ -567,6 +567,7 @@ class _$ShipmentDao extends ShipmentDao {
                   'serviceMessage': item.serviceMessage,
                   'shipperName': item.shipperName,
                   'receiverName': item.receiverName,
+                  'currentStatus': item.currentStatus?.index,
                   'cashOnDelivery_value': item.cashOnDeliveryValue_,
                   'cashOnDelivery_currencyCode':
                       item.cashOnDeliveryCurrencyCode_,
@@ -594,7 +595,16 @@ class _$ShipmentDao extends ShipmentDao {
                       item.shippingRateFeeCurrencyCode_,
                   'insuranceRateFee_value': item.insuranceRateFeeValue_,
                   'insuranceRateFee_currencyCode':
-                      item.insuranceRateFeeCurrencyCode_
+                      item.insuranceRateFeeCurrencyCode_,
+                  'dimensions_widthValue': item.dimensionsWidthValue_,
+                  'dimensions_widthMeasurement': _nullableMeasurementConverter
+                      .encode(item.dimensionsWidthMeasurement_),
+                  'dimensions_heightValue': item.dimensionsHeightValue_,
+                  'dimensions_heightMeasurement': _nullableMeasurementConverter
+                      .encode(item.dimensionsHeightMeasurement_),
+                  'dimensions_lenghtValue': item.dimensionsLengthValue_,
+                  'dimensions_lenghtMeasurement': _nullableMeasurementConverter
+                      .encode(item.dimensionsLengthMeasurement_)
                 },
             changeListener),
         _alternateTrackNumberInsertionAdapter = InsertionAdapter(
@@ -754,6 +764,9 @@ class _$ShipmentDao extends ShipmentDao {
                 .decode(row['scheduledDeliveryDate'] as int?),
             shipperName: row['shipperName'] as String?,
             receiverName: row['receiverName'] as String?,
+            currentStatus: row['currentStatus'] == null
+                ? null
+                : ShipmentStatusType.values[row['currentStatus'] as int],
             weightValue_: row['weight_Value'] as double?,
             weightMeasurement_: _nullableMeasurementConverter
                 .decode(row['weight_Measurement'] as String?),
@@ -782,7 +795,15 @@ class _$ShipmentDao extends ShipmentDao {
                 row['shippingRateFee_currencyCode'] as String?,
             insuranceRateFeeValue_: row['insuranceRateFee_value'] as double?,
             insuranceRateFeeCurrencyCode_:
-                row['insuranceRateFee_currencyCode'] as String?),
+                row['insuranceRateFee_currencyCode'] as String?,
+            dimensionsWidthValue_: row['dimensions_widthValue'] as double?,
+            dimensionsWidthMeasurement_: _nullableMeasurementConverter
+                .decode(row['dimensions_widthMeasurement'] as String?),
+            dimensionsHeightValue_: row['dimensions_heightValue'] as double?,
+            dimensionsHeightMeasurement_:
+                _nullableMeasurementConverter.decode(row['dimensions_heightMeasurement'] as String?),
+            dimensionsLengthValue_: row['dimensions_lenghtValue'] as double?,
+            dimensionsLengthMeasurement_: _nullableMeasurementConverter.decode(row['dimensions_lenghtMeasurement'] as String?)),
         arguments: [trackNumber]);
   }
 
@@ -809,6 +830,82 @@ class _$ShipmentDao extends ShipmentDao {
                 .decode(row['scheduledDeliveryDate'] as int?),
             shipperName: row['shipperName'] as String?,
             receiverName: row['receiverName'] as String?,
+            currentStatus: row['currentStatus'] == null
+                ? null
+                : ShipmentStatusType.values[row['currentStatus'] as int],
+            weightValue_: row['weight_Value'] as double?,
+            weightMeasurement_: _nullableMeasurementConverter
+                .decode(row['weight_Measurement'] as String?),
+            volumeValue_: row['volume_Value'] as double?,
+            volumeMeasurement_: _nullableMeasurementConverter
+                .decode(row['volume_Measurement'] as String?),
+            cashOnDeliveryValue_: row['cashOnDelivery_value'] as double?,
+            cashOnDeliveryCurrencyCode_:
+                row['cashOnDelivery_currencyCode'] as String?,
+            shipperLocation_: row['shipper_location'] as String?,
+            shipperPostalCode_: row['shipper_postalCode'] as String?,
+            shipperCountryCode_: row['shipper_countryCode'] as String?,
+            receiverLocation_: row['receiver_location'] as String?,
+            receiverPostalCode_: row['receiver_postalCode'] as String?,
+            receiverCountryCode_: row['receiver_countryCode'] as String?,
+            declaredValueValue_: row['declaredValue_value'] as double?,
+            declaredValueCurrencyCode_:
+                row['declaredValue_currencyCode'] as String?,
+            customDutyValue_: row['customDuty_value'] as double?,
+            customDutyCurrencyCode_: row['customDuty_currencyCode'] as String?,
+            additionalRateFeeValue_: row['additionalRateFee_value'] as double?,
+            additionalRateFeeCurrencyCode_: row['additionalRateFee_currencyCode'] as String?,
+            shippingRateFeeValue_: row['shippingRateFee_value'] as double?,
+            shippingRateFeeCurrencyCode_: row['shippingRateFee_currencyCode'] as String?,
+            insuranceRateFeeValue_: row['insuranceRateFee_value'] as double?,
+            insuranceRateFeeCurrencyCode_: row['insuranceRateFee_currencyCode'] as String?,
+            dimensionsWidthValue_: row['dimensions_widthValue'] as double?,
+            dimensionsWidthMeasurement_: _nullableMeasurementConverter.decode(row['dimensions_widthMeasurement'] as String?),
+            dimensionsHeightValue_: row['dimensions_heightValue'] as double?,
+            dimensionsHeightMeasurement_: _nullableMeasurementConverter.decode(row['dimensions_heightMeasurement'] as String?),
+            dimensionsLengthValue_: row['dimensions_lenghtValue'] as double?,
+            dimensionsLengthMeasurement_: _nullableMeasurementConverter.decode(row['dimensions_lenghtMeasurement'] as String?)),
+        arguments: [trackNumber],
+        queryableName: 'ShipmentInfo',
+        isView: false);
+  }
+
+  @override
+  Future<List<AlternateTrackNumber>> getAlternateTracksById(
+      int shipmentId) async {
+    return _queryAdapter.queryList(
+        'SELECT * FROM AlternateTrackNumber WHERE shipmentId = ?1',
+        mapper: (Map<String, Object?> row) => AlternateTrackNumber(
+            trackNumber: row['trackNumber'] as String,
+            shipmentId: row['shipmentId'] as int),
+        arguments: [shipmentId]);
+  }
+
+  @override
+  Future<List<ShipmentInfo>> getAllShipmentInfo() async {
+    return _queryAdapter.queryList('SELECT * FROM ShipmentInfo',
+        mapper: (Map<String, Object?> row) => ShipmentInfo(
+            id: row['id'] as int?,
+            trackNumber: row['trackNumber'] as String,
+            serviceType: _postalServiceTypeConverter
+                .decode(row['serviceType'] as String),
+            serviceDescription: row['serviceDescription'] as String?,
+            shipmentDescription: row['shipmentDescription'] as String?,
+            signedForByName: row['signedForByName'] as String?,
+            serviceMessage: row['serviceMessage'] as String?,
+            pickupDate:
+                _nullableDateTimeConverter.decode(row['pickupDate'] as int?),
+            deliveryDate:
+                _nullableDateTimeConverter.decode(row['deliveryDate'] as int?),
+            estimatedDeliveryDate: _nullableDateTimeConverter
+                .decode(row['estimatedDeliveryDate'] as int?),
+            scheduledDeliveryDate: _nullableDateTimeConverter
+                .decode(row['scheduledDeliveryDate'] as int?),
+            shipperName: row['shipperName'] as String?,
+            receiverName: row['receiverName'] as String?,
+            currentStatus: row['currentStatus'] == null
+                ? null
+                : ShipmentStatusType.values[row['currentStatus'] as int],
             weightValue_: row['weight_Value'] as double?,
             weightMeasurement_: _nullableMeasurementConverter
                 .decode(row['weight_Measurement'] as String?),
@@ -836,21 +933,13 @@ class _$ShipmentDao extends ShipmentDao {
             shippingRateFeeCurrencyCode_:
                 row['shippingRateFee_currencyCode'] as String?,
             insuranceRateFeeValue_: row['insuranceRateFee_value'] as double?,
-            insuranceRateFeeCurrencyCode_: row['insuranceRateFee_currencyCode'] as String?),
-        arguments: [trackNumber],
-        queryableName: 'ShipmentInfo',
-        isView: false);
-  }
-
-  @override
-  Future<List<AlternateTrackNumber>> getAlternateTracksById(
-      int shipmentId) async {
-    return _queryAdapter.queryList(
-        'SELECT * FROM AlternateTrackNumber WHERE shipmentId = ?1',
-        mapper: (Map<String, Object?> row) => AlternateTrackNumber(
-            trackNumber: row['trackNumber'] as String,
-            shipmentId: row['shipmentId'] as int),
-        arguments: [shipmentId]);
+            insuranceRateFeeCurrencyCode_: row['insuranceRateFee_currencyCode'] as String?,
+            dimensionsWidthValue_: row['dimensions_widthValue'] as double?,
+            dimensionsWidthMeasurement_: _nullableMeasurementConverter.decode(row['dimensions_widthMeasurement'] as String?),
+            dimensionsHeightValue_: row['dimensions_heightValue'] as double?,
+            dimensionsHeightMeasurement_: _nullableMeasurementConverter.decode(row['dimensions_heightMeasurement'] as String?),
+            dimensionsLengthValue_: row['dimensions_lenghtValue'] as double?,
+            dimensionsLengthMeasurement_: _nullableMeasurementConverter.decode(row['dimensions_lenghtMeasurement'] as String?)));
   }
 
   @override

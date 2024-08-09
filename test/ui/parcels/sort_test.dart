@@ -1,4 +1,4 @@
-// Copyright (C) 2021 Yaroslav Pronin <proninyaroslav@mail.ru>
+// Copyright (C) 2021-2024 Yaroslav Pronin <proninyaroslav@mail.ru>
 // Copyright (C) 2021 Insurgo Inc. <insurgo@riseup.net>
 //
 // This file is part of LibreTrack.
@@ -25,14 +25,32 @@ void main() {
   group('Parcels sort |', () {
     test('Alphabetically', () {
       final list = [
-        const ParcelInfo(trackInfo: TrackNumberInfo('2', description: 'b')),
-        const ParcelInfo(trackInfo: TrackNumberInfo('1')),
-        const ParcelInfo(trackInfo: TrackNumberInfo('2', description: 'a')),
+        const ParcelInfo(
+          trackInfo: TrackNumberInfo('2', description: 'b'),
+          currentStatus: ShipmentStatusType.notAvailable,
+        ),
+        const ParcelInfo(
+          trackInfo: TrackNumberInfo('1'),
+          currentStatus: ShipmentStatusType.notAvailable,
+        ),
+        const ParcelInfo(
+          trackInfo: TrackNumberInfo('2', description: 'a'),
+          currentStatus: ShipmentStatusType.notAvailable,
+        ),
       ];
       final expectedList = [
-        const ParcelInfo(trackInfo: TrackNumberInfo('1')),
-        const ParcelInfo(trackInfo: TrackNumberInfo('2', description: 'a')),
-        const ParcelInfo(trackInfo: TrackNumberInfo('2', description: 'b')),
+        const ParcelInfo(
+          trackInfo: TrackNumberInfo('1'),
+          currentStatus: ShipmentStatusType.notAvailable,
+        ),
+        const ParcelInfo(
+          trackInfo: TrackNumberInfo('2', description: 'a'),
+          currentStatus: ShipmentStatusType.notAvailable,
+        ),
+        const ParcelInfo(
+          trackInfo: TrackNumberInfo('2', description: 'b'),
+          currentStatus: ShipmentStatusType.notAvailable,
+        ),
       ];
 
       list.sort(const ParcelsSort.alphabetically().compare);
@@ -46,6 +64,7 @@ void main() {
       final list = [
         ParcelInfo(
           trackInfo: TrackNumberInfo('0', dateAdded: DateTime(2020)),
+          currentStatus: ShipmentStatusType.infoReceived,
           lastActivity: ShipmentActivityInfo.from(
             trackNumber: '0',
             serviceType: PostalServiceType.ups,
@@ -55,6 +74,7 @@ void main() {
         ),
         ParcelInfo(
           trackInfo: TrackNumberInfo('1', dateAdded: DateTime(2020, 1, 2)),
+          currentStatus: ShipmentStatusType.delivered,
           lastActivity: ShipmentActivityInfo.from(
             trackNumber: '1',
             serviceType: PostalServiceType.ups,
@@ -64,6 +84,7 @@ void main() {
         ),
         ParcelInfo(
           trackInfo: TrackNumberInfo('2', dateAdded: DateTime(2020, 1, 3)),
+          currentStatus: ShipmentStatusType.delivered,
           lastActivity: ShipmentActivityInfo.from(
             trackNumber: '2',
             serviceType: PostalServiceType.russianPost,
@@ -76,6 +97,7 @@ void main() {
             '3',
             dateAdded: DateTime(2020, 1, 5),
           ),
+          currentStatus: ShipmentStatusType.notAvailable,
         ),
       ];
       final expectedList = [
@@ -84,6 +106,7 @@ void main() {
             '3',
             dateAdded: DateTime(2020, 1, 5),
           ),
+          currentStatus: ShipmentStatusType.notAvailable,
         ),
         ParcelInfo(
           trackInfo: TrackNumberInfo('2', dateAdded: DateTime(2020, 1, 3)),
@@ -93,6 +116,7 @@ void main() {
             statusType: ShipmentStatusType.delivered,
             dateTime: DateTime(2020, 1, 3),
           ),
+          currentStatus: ShipmentStatusType.delivered,
         ),
         ParcelInfo(
           trackInfo: TrackNumberInfo('1', dateAdded: DateTime(2020, 1, 2)),
@@ -102,6 +126,7 @@ void main() {
             statusType: ShipmentStatusType.delivered,
             dateTime: DateTime(2020),
           ),
+          currentStatus: ShipmentStatusType.delivered,
         ),
         ParcelInfo(
           trackInfo: TrackNumberInfo('0', dateAdded: DateTime(2020)),
@@ -111,6 +136,7 @@ void main() {
             statusType: ShipmentStatusType.infoReceived,
             dateTime: DateTime(2020),
           ),
+          currentStatus: ShipmentStatusType.infoReceived,
         ),
       ];
 
@@ -125,23 +151,29 @@ void main() {
       final list = [
         ParcelInfo(
           trackInfo: TrackNumberInfo('2', dateAdded: DateTime(2020, 1, 3)),
+          currentStatus: ShipmentStatusType.notAvailable,
         ),
         ParcelInfo(
           trackInfo: TrackNumberInfo('1', dateAdded: DateTime(2020)),
+          currentStatus: ShipmentStatusType.notAvailable,
         ),
         ParcelInfo(
           trackInfo: TrackNumberInfo('3', dateAdded: DateTime(2020, 1, 2)),
+          currentStatus: ShipmentStatusType.notAvailable,
         ),
       ];
       final expectedList = [
         ParcelInfo(
           trackInfo: TrackNumberInfo('2', dateAdded: DateTime(2020, 1, 3)),
+          currentStatus: ShipmentStatusType.notAvailable,
         ),
         ParcelInfo(
           trackInfo: TrackNumberInfo('3', dateAdded: DateTime(2020, 1, 2)),
+          currentStatus: ShipmentStatusType.notAvailable,
         ),
         ParcelInfo(
           trackInfo: TrackNumberInfo('1', dateAdded: DateTime(2020)),
+          currentStatus: ShipmentStatusType.notAvailable,
         ),
       ];
 

@@ -1,5 +1,4 @@
-// Copyright (C) 2021-2024 Yaroslav Pronin <proninyaroslav@mail.ru>
-// Copyright (C) 2021 Insurgo Inc. <insurgo@riseup.net>
+// Copyright (C) 2024 Yaroslav Pronin <proninyaroslav@mail.ru>
 //
 // This file is part of LibreTrack.
 //
@@ -18,18 +17,15 @@
 
 import 'package:flutter/foundation.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:libretrack/core/entity/entity.dart';
+import 'package:libretrack/core/entity/unit_of_measurement.dart';
 
-part 'parcel_info.freezed.dart';
+part 'dimensions.freezed.dart';
 
 @freezed
-class ParcelInfo with _$ParcelInfo {
-  const factory ParcelInfo({
-    required TrackNumberInfo trackInfo,
-    required ShipmentStatusType currentStatus,
-    @Default([]) List<TrackNumberService> trackServices,
-    TrackingInfo? lastTrackingInfo,
-    ShipmentActivityInfo? lastActivity,
-    List<TrackingResponseInfo>? lastTrackingResponse,
-  }) = _ParcelInfo;
+class Dimensions with _$Dimensions {
+  const factory Dimensions({
+    required UnitOfMeasurement width,
+    required UnitOfMeasurement height,
+    required UnitOfMeasurement length,
+  }) = _Dimensions;
 }

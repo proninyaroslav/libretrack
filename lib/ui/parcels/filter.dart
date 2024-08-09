@@ -80,10 +80,8 @@ class _FiltersCollection {
       return true;
     } else if (info == null) {
       return false;
-    } else if (info.lastActivity == null) {
-      return statusType == ShipmentStatusType.notAvailable;
     } else {
-      return info.lastActivity!.statusType == statusType;
+      return info.currentStatus == statusType;
     }
   }
 

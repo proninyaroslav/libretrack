@@ -221,9 +221,7 @@ class __$$ParcelsStateInitialImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$ParcelsStateInitialImpl
-    with DiagnosticableTreeMixin
-    implements ParcelsStateInitial {
+class _$ParcelsStateInitialImpl implements ParcelsStateInitial {
   const _$ParcelsStateInitialImpl(
       {required this.filters, this.search, this.sort});
 
@@ -235,18 +233,8 @@ class _$ParcelsStateInitialImpl
   final ParcelsSort? sort;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'ParcelsState.initial(filters: $filters, search: $search, sort: $sort)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'ParcelsState.initial'))
-      ..add(DiagnosticsProperty('filters', filters))
-      ..add(DiagnosticsProperty('search', search))
-      ..add(DiagnosticsProperty('sort', sort));
   }
 
   @override
@@ -452,9 +440,7 @@ class __$$ParcelsStateLoadedImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$ParcelsStateLoadedImpl
-    with DiagnosticableTreeMixin
-    implements ParcelsStateLoaded {
+class _$ParcelsStateLoadedImpl implements ParcelsStateLoaded {
   const _$ParcelsStateLoadedImpl(
       {required final List<ParcelInfo> active,
       required final List<ParcelInfo> archive,
@@ -488,20 +474,8 @@ class _$ParcelsStateLoadedImpl
   final ParcelsSort? sort;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'ParcelsState.loaded(active: $active, archive: $archive, filters: $filters, search: $search, sort: $sort)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'ParcelsState.loaded'))
-      ..add(DiagnosticsProperty('active', active))
-      ..add(DiagnosticsProperty('archive', archive))
-      ..add(DiagnosticsProperty('filters', filters))
-      ..add(DiagnosticsProperty('search', search))
-      ..add(DiagnosticsProperty('sort', sort));
   }
 
   @override
@@ -727,9 +701,7 @@ class __$$ParcelsStateLoadingFailedImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$ParcelsStateLoadingFailedImpl
-    with DiagnosticableTreeMixin
-    implements ParcelsStateLoadingFailed {
+class _$ParcelsStateLoadingFailedImpl implements ParcelsStateLoadingFailed {
   const _$ParcelsStateLoadingFailedImpl(
       {this.error, required this.filters, this.search, this.sort});
 
@@ -743,19 +715,8 @@ class _$ParcelsStateLoadingFailedImpl
   final ParcelsSort? sort;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'ParcelsState.loadingFailed(error: $error, filters: $filters, search: $search, sort: $sort)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'ParcelsState.loadingFailed'))
-      ..add(DiagnosticsProperty('error', error))
-      ..add(DiagnosticsProperty('filters', filters))
-      ..add(DiagnosticsProperty('search', search))
-      ..add(DiagnosticsProperty('sort', sort));
   }
 
   @override
@@ -992,9 +953,7 @@ class __$$BuildResultDataImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$BuildResultDataImpl
-    with DiagnosticableTreeMixin
-    implements _BuildResultData {
+class _$BuildResultDataImpl implements _BuildResultData {
   const _$BuildResultDataImpl({required final List<ParcelInfo> infoList})
       : _infoList = infoList;
 
@@ -1007,16 +966,8 @@ class _$BuildResultDataImpl
   }
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return '_BuildResult(infoList: $infoList)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', '_BuildResult'))
-      ..add(DiagnosticsProperty('infoList', infoList));
   }
 
   @override
@@ -1154,25 +1105,15 @@ class __$$BuildResultFailedImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$BuildResultFailedImpl
-    with DiagnosticableTreeMixin
-    implements _BuildResultFailed {
+class _$BuildResultFailedImpl implements _BuildResultFailed {
   const _$BuildResultFailedImpl({required this.error});
 
   @override
   final StorageError error;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return '_BuildResult.failed(error: $error)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', '_BuildResult.failed'))
-      ..add(DiagnosticsProperty('error', error));
   }
 
   @override

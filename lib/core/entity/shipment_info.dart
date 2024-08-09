@@ -1,4 +1,4 @@
-// Copyright (C) 2021 Yaroslav Pronin <proninyaroslav@mail.ru>
+// Copyright (C) 2021-2024 Yaroslav Pronin <proninyaroslav@mail.ru>
 // Copyright (C) 2021 Insurgo Inc. <insurgo@riseup.net>
 //
 // This file is part of LibreTrack.
@@ -18,6 +18,7 @@
 
 import 'package:equatable/equatable.dart';
 import 'package:floor/floor.dart';
+import 'package:libretrack/core/entity/dimensions.dart';
 import 'package:libretrack/core/entity/entity.dart';
 
 import 'converter/converter.dart';
@@ -26,6 +27,7 @@ import 'converter/converter.dart';
   PostalServiceTypeConverter,
   NullableDateTimeConverter,
   NullableMeasurementConverter,
+  ShipmentStatusTypeConverter,
 ])
 @Entity(
   foreignKeys: [
@@ -99,6 +101,13 @@ class ShipmentInfo extends Equatable {
 
   final String? receiverName;
 
+  @ignore
+  final Dimensions? dimensions;
+
+  // Optional, if the service provides this status separately
+  // from the activity (ShipmentActivityInfo)
+  final ShipmentStatusType? currentStatus;
+
   // TODO: remove it; wait for @Embedded
   ShipmentInfo({
     this.id,
@@ -114,50 +123,35 @@ class ShipmentInfo extends Equatable {
     this.scheduledDeliveryDate,
     this.shipperName,
     this.receiverName,
-    // ignore: non_constant_identifier_names
+    this.currentStatus,
     this.weightValue_,
-    // ignore: non_constant_identifier_names
     this.weightMeasurement_,
-    // ignore: non_constant_identifier_names
     this.volumeValue_,
-    // ignore: non_constant_identifier_names
     this.volumeMeasurement_,
-    // ignore: non_constant_identifier_names
     this.cashOnDeliveryValue_,
-    // ignore: non_constant_identifier_names
     this.cashOnDeliveryCurrencyCode_,
-    // ignore: non_constant_identifier_names
     this.shipperLocation_,
-    // ignore: non_constant_identifier_names
     this.shipperPostalCode_,
-    // ignore: non_constant_identifier_names
     this.shipperCountryCode_,
-    // ignore: non_constant_identifier_names
     this.receiverLocation_,
-    // ignore: non_constant_identifier_names
     this.receiverPostalCode_,
-    // ignore: non_constant_identifier_names
     this.receiverCountryCode_,
-    // ignore: non_constant_identifier_names
     this.declaredValueValue_,
-    // ignore: non_constant_identifier_names
     this.declaredValueCurrencyCode_,
-    // ignore: non_constant_identifier_names
     this.customDutyValue_,
-    // ignore: non_constant_identifier_names
     this.customDutyCurrencyCode_,
-    // ignore: non_constant_identifier_names
     this.additionalRateFeeValue_,
-    // ignore: non_constant_identifier_names
     this.additionalRateFeeCurrencyCode_,
-    // ignore: non_constant_identifier_names
     this.shippingRateFeeValue_,
-    // ignore: non_constant_identifier_names
     this.shippingRateFeeCurrencyCode_,
-    // ignore: non_constant_identifier_names
     this.insuranceRateFeeValue_,
-    // ignore: non_constant_identifier_names
     this.insuranceRateFeeCurrencyCode_,
+    this.dimensionsWidthValue_,
+    this.dimensionsWidthMeasurement_,
+    this.dimensionsHeightValue_,
+    this.dimensionsHeightMeasurement_,
+    this.dimensionsLengthValue_,
+    this.dimensionsLengthMeasurement_,
   })  : cashOnDelivery =
             cashOnDeliveryValue_ == null || cashOnDeliveryCurrencyCode_ == null
                 ? null
@@ -210,7 +204,28 @@ class ShipmentInfo extends Equatable {
         insuranceRateFee = insuranceRateFeeValue_ == null ||
                 insuranceRateFeeCurrencyCode_ == null
             ? null
-            : Currency(insuranceRateFeeValue_, insuranceRateFeeCurrencyCode_);
+            : Currency(insuranceRateFeeValue_, insuranceRateFeeCurrencyCode_),
+        dimensions = dimensionsWidthValue_ == null ||
+                dimensionsHeightValue_ == null ||
+                dimensionsLengthValue_ == null ||
+                dimensionsWidthMeasurement_ == null ||
+                dimensionsHeightMeasurement_ == null ||
+                dimensionsLengthMeasurement_ == null
+            ? null
+            : Dimensions(
+                width: UnitOfMeasurement(
+                  value: dimensionsWidthValue_,
+                  measurement: dimensionsWidthMeasurement_,
+                ),
+                height: UnitOfMeasurement(
+                  value: dimensionsHeightValue_,
+                  measurement: dimensionsHeightMeasurement_,
+                ),
+                length: UnitOfMeasurement(
+                  value: dimensionsLengthValue_,
+                  measurement: dimensionsLengthMeasurement_,
+                ),
+              );
 
   ShipmentInfo.from({
     this.id,
@@ -236,6 +251,8 @@ class ShipmentInfo extends Equatable {
     this.insuranceRateFee,
     this.shipperName,
     this.receiverName,
+    this.dimensions,
+    this.currentStatus,
   })  : cashOnDeliveryValue_ = cashOnDelivery?.value,
         cashOnDeliveryCurrencyCode_ = cashOnDelivery?.currencyCode,
         shipperLocation_ = shipperAddress?.location,
@@ -257,7 +274,13 @@ class ShipmentInfo extends Equatable {
         shippingRateFeeValue_ = shippingRateFee?.value,
         shippingRateFeeCurrencyCode_ = shippingRateFee?.currencyCode,
         insuranceRateFeeValue_ = insuranceRateFee?.value,
-        insuranceRateFeeCurrencyCode_ = insuranceRateFee?.currencyCode;
+        insuranceRateFeeCurrencyCode_ = insuranceRateFee?.currencyCode,
+        dimensionsHeightMeasurement_ = dimensions?.height.measurement,
+        dimensionsHeightValue_ = dimensions?.height.value,
+        dimensionsWidthMeasurement_ = dimensions?.width.measurement,
+        dimensionsWidthValue_ = dimensions?.width.value,
+        dimensionsLengthMeasurement_ = dimensions?.length.measurement,
+        dimensionsLengthValue_ = dimensions?.length.value;
 
   @override
   List<Object?> get props => [
@@ -284,6 +307,8 @@ class ShipmentInfo extends Equatable {
         insuranceRateFee,
         shipperName,
         receiverName,
+        dimensions,
+        currentStatus,
       ];
 
   @override
@@ -292,90 +317,86 @@ class ShipmentInfo extends Equatable {
   // TODO: remove it; wait for @Embedded
   //===================================================
   @ColumnInfo(name: 'cashOnDelivery_value')
-  // ignore: non_constant_identifier_names
   final double? cashOnDeliveryValue_;
 
   @ColumnInfo(name: 'cashOnDelivery_currencyCode')
-  // ignore: non_constant_identifier_names
   final String? cashOnDeliveryCurrencyCode_;
 
   @ColumnInfo(name: 'shipper_location')
-  // ignore: non_constant_identifier_names
   final String? shipperLocation_;
 
   @ColumnInfo(name: 'shipper_postalCode')
-  // ignore: non_constant_identifier_names
   final String? shipperPostalCode_;
 
   @ColumnInfo(name: 'shipper_countryCode')
-  // ignore: non_constant_identifier_names
   final String? shipperCountryCode_;
 
   @ColumnInfo(name: 'receiver_location')
-  // ignore: non_constant_identifier_names
   final String? receiverLocation_;
 
   @ColumnInfo(name: 'receiver_postalCode')
-  // ignore: non_constant_identifier_names
   final String? receiverPostalCode_;
 
   @ColumnInfo(name: 'receiver_countryCode')
-  // ignore: non_constant_identifier_names
   final String? receiverCountryCode_;
 
   @ColumnInfo(name: 'weight_Value')
-  // ignore: non_constant_identifier_names
   final double? weightValue_;
 
   @ColumnInfo(name: 'weight_Measurement')
-  // ignore: non_constant_identifier_names
   final Measurement? weightMeasurement_;
 
   @ColumnInfo(name: 'volume_Value')
-  // ignore: non_constant_identifier_names
   final double? volumeValue_;
 
   @ColumnInfo(name: 'volume_Measurement')
-  // ignore: non_constant_identifier_names
   final Measurement? volumeMeasurement_;
 
   @ColumnInfo(name: 'declaredValue_value')
-  // ignore: non_constant_identifier_names
   final double? declaredValueValue_;
 
   @ColumnInfo(name: 'declaredValue_currencyCode')
-  // ignore: non_constant_identifier_names
   final String? declaredValueCurrencyCode_;
 
   @ColumnInfo(name: 'customDuty_value')
-  // ignore: non_constant_identifier_names
   final double? customDutyValue_;
 
   @ColumnInfo(name: 'customDuty_currencyCode')
-  // ignore: non_constant_identifier_names
   final String? customDutyCurrencyCode_;
 
   @ColumnInfo(name: 'additionalRateFee_value')
-  // ignore: non_constant_identifier_names
   final double? additionalRateFeeValue_;
 
   @ColumnInfo(name: 'additionalRateFee_currencyCode')
-  // ignore: non_constant_identifier_names
   final String? additionalRateFeeCurrencyCode_;
 
   @ColumnInfo(name: 'shippingRateFee_value')
-  // ignore: non_constant_identifier_names
   final double? shippingRateFeeValue_;
 
   @ColumnInfo(name: 'shippingRateFee_currencyCode')
-  // ignore: non_constant_identifier_names
   final String? shippingRateFeeCurrencyCode_;
 
   @ColumnInfo(name: 'insuranceRateFee_value')
-  // ignore: non_constant_identifier_names
   final double? insuranceRateFeeValue_;
 
   @ColumnInfo(name: 'insuranceRateFee_currencyCode')
-  // ignore: non_constant_identifier_names
   final String? insuranceRateFeeCurrencyCode_;
+
+  @ColumnInfo(name: 'dimensions_widthValue')
+  final double? dimensionsWidthValue_;
+
+  @ColumnInfo(name: 'dimensions_widthMeasurement')
+  final Measurement? dimensionsWidthMeasurement_;
+
+  @ColumnInfo(name: 'dimensions_heightValue')
+  final double? dimensionsHeightValue_;
+
+  @ColumnInfo(name: 'dimensions_heightMeasurement')
+  final Measurement? dimensionsHeightMeasurement_;
+
+  @ColumnInfo(name: 'dimensions_lenghtValue')
+  final double? dimensionsLengthValue_;
+
+  @ColumnInfo(name: 'dimensions_lenghtMeasurement')
+  final Measurement? dimensionsLengthMeasurement_;
 }

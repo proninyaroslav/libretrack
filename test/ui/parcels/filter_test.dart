@@ -1,4 +1,4 @@
-// Copyright (C) 2021 Yaroslav Pronin <proninyaroslav@mail.ru>
+// Copyright (C) 2021-2024 Yaroslav Pronin <proninyaroslav@mail.ru>
 // Copyright (C) 2021 Insurgo Inc. <insurgo@riseup.net>
 //
 // This file is part of LibreTrack.
@@ -84,6 +84,7 @@ void main() {
             const ParcelInfo(
               trackInfo: TrackNumberInfo('test1'),
               trackServices: [],
+              currentStatus: ShipmentStatusType.delivered,
             ),
           ),
           isFalse,
@@ -98,6 +99,7 @@ void main() {
             const ParcelInfo(
               trackInfo: TrackNumberInfo('test1'),
               trackServices: [],
+              currentStatus: ShipmentStatusType.delivered,
             ),
           ),
           isTrue,
@@ -111,6 +113,7 @@ void main() {
           const ParcelInfo(
             trackInfo: TrackNumberInfo('1'),
             trackServices: [],
+            currentStatus: ShipmentStatusType.delivered,
           ),
         ),
         isTrue,
@@ -120,6 +123,7 @@ void main() {
           const ParcelInfo(
             trackInfo: TrackNumberInfo('1', isArchived: true),
             trackServices: [],
+            currentStatus: ShipmentStatusType.delivered,
           ),
         ),
         isFalse,
@@ -132,6 +136,7 @@ void main() {
           const ParcelInfo(
             trackInfo: TrackNumberInfo('1', isArchived: true),
             trackServices: [],
+            currentStatus: ShipmentStatusType.delivered,
           ),
         ),
         isTrue,
@@ -141,6 +146,7 @@ void main() {
           const ParcelInfo(
             trackInfo: TrackNumberInfo('1'),
             trackServices: [],
+            currentStatus: ShipmentStatusType.delivered,
           ),
         ),
         isFalse,
@@ -153,6 +159,7 @@ void main() {
           const ParcelInfo(
             trackInfo: TrackNumberInfo('abc'),
             trackServices: [],
+            currentStatus: ShipmentStatusType.delivered,
           ),
         ),
         isTrue,
@@ -162,6 +169,7 @@ void main() {
           const ParcelInfo(
             trackInfo: TrackNumberInfo('123', description: 'Abc'),
             trackServices: [],
+            currentStatus: ShipmentStatusType.delivered,
           ),
         ),
         isTrue,
@@ -171,6 +179,7 @@ void main() {
           const ParcelInfo(
             trackInfo: TrackNumberInfo('123'),
             trackServices: [],
+            currentStatus: ShipmentStatusType.delivered,
           ),
         ),
         isFalse,
@@ -180,6 +189,7 @@ void main() {
           const ParcelInfo(
             trackInfo: TrackNumberInfo('123', description: 'abc'),
             trackServices: [],
+            currentStatus: ShipmentStatusType.delivered,
           ),
         ),
         isFalse,
@@ -189,6 +199,7 @@ void main() {
           const ParcelInfo(
             trackInfo: TrackNumberInfo('123'),
             trackServices: [],
+            currentStatus: ShipmentStatusType.delivered,
           ),
         ),
         isTrue,
@@ -198,6 +209,7 @@ void main() {
           const ParcelInfo(
             trackInfo: TrackNumberInfo('123'),
             trackServices: [],
+            currentStatus: ShipmentStatusType.delivered,
           ),
         ),
         isTrue,
@@ -211,6 +223,7 @@ void main() {
           const ParcelInfo(
             trackInfo: TrackNumberInfo('test123'),
             trackServices: [],
+            currentStatus: ShipmentStatusType.delivered,
           ),
         ),
         isTrue,
@@ -224,6 +237,7 @@ void main() {
         ).apply(
           ParcelInfo(
             trackInfo: const TrackNumberInfo('1'),
+            currentStatus: ShipmentStatusType.delivered,
             lastActivity: ShipmentActivityInfo.from(
               trackNumber: '1',
               serviceType: PostalServiceType.ups,
@@ -242,6 +256,7 @@ void main() {
           const ParcelInfo(
             trackInfo: TrackNumberInfo('1'),
             trackServices: [],
+            currentStatus: ShipmentStatusType.notAvailable,
           ),
         ),
         isFalse,
@@ -253,6 +268,7 @@ void main() {
         ).apply(
           ParcelInfo(
             trackInfo: const TrackNumberInfo('1'),
+            currentStatus: ShipmentStatusType.delivered,
             lastActivity: ShipmentActivityInfo.from(
               trackNumber: '1',
               serviceType: PostalServiceType.ups,
@@ -268,6 +284,7 @@ void main() {
         const ParcelsFilter.status().apply(
           ParcelInfo(
             trackInfo: const TrackNumberInfo('1'),
+            currentStatus: ShipmentStatusType.delivered,
             lastActivity: ShipmentActivityInfo.from(
               trackNumber: '1',
               serviceType: PostalServiceType.ups,
@@ -284,6 +301,7 @@ void main() {
           const ParcelInfo(
             trackInfo: TrackNumberInfo('1'),
             trackServices: [],
+            currentStatus: ShipmentStatusType.delivered,
           ),
         ),
         isTrue,
@@ -296,6 +314,7 @@ void main() {
           const ParcelInfo(
             trackInfo: TrackNumberInfo('1'),
             trackServices: [],
+            currentStatus: ShipmentStatusType.notAvailable,
           ),
         ),
         isTrue,
@@ -307,6 +326,7 @@ void main() {
         const ParcelsFilter.newInfo().apply(
           ParcelInfo(
             trackInfo: const TrackNumberInfo('1'),
+            currentStatus: ShipmentStatusType.delivered,
             lastTrackingInfo: TrackingInfo(
               id: const TrackingId('1'),
               trackNumber: '1',
@@ -327,6 +347,7 @@ void main() {
           const ParcelInfo(
             trackInfo: TrackNumberInfo('1'),
             trackServices: [],
+            currentStatus: ShipmentStatusType.delivered,
           ),
         ),
         isFalse,
@@ -338,6 +359,7 @@ void main() {
         const ParcelsFilter.error().apply(
           ParcelInfo(
             trackInfo: const TrackNumberInfo('1'),
+            currentStatus: ShipmentStatusType.delivered,
             lastTrackingInfo: TrackingInfo(
               id: const TrackingId('1'),
               trackNumber: '1',
@@ -357,6 +379,7 @@ void main() {
         const ParcelsFilter.error().apply(
           ParcelInfo(
             trackInfo: const TrackNumberInfo('1'),
+            currentStatus: ShipmentStatusType.delivered,
             lastTrackingInfo: TrackingInfo(
               id: const TrackingId('1'),
               trackNumber: '1',
@@ -376,6 +399,7 @@ void main() {
         const ParcelsFilter.error().apply(
           ParcelInfo(
             trackInfo: const TrackNumberInfo('1'),
+            currentStatus: ShipmentStatusType.delivered,
             lastTrackingInfo: TrackingInfo(
               id: const TrackingId('1'),
               trackNumber: '1',
@@ -395,6 +419,7 @@ void main() {
         const ParcelsFilter.error().apply(
           const ParcelInfo(
             trackInfo: TrackNumberInfo('1'),
+            currentStatus: ShipmentStatusType.delivered,
             trackServices: [],
           ),
         ),
@@ -409,6 +434,7 @@ void main() {
         ).apply(
           const ParcelInfo(
             trackInfo: TrackNumberInfo('1'),
+            currentStatus: ShipmentStatusType.delivered,
             trackServices: [
               TrackNumberService(
                 trackNumber: '1',
@@ -426,6 +452,7 @@ void main() {
         ).apply(
           const ParcelInfo(
             trackInfo: TrackNumberInfo('1'),
+            currentStatus: ShipmentStatusType.delivered,
             trackServices: [
               TrackNumberService(
                 trackNumber: '1',
@@ -441,6 +468,7 @@ void main() {
         const ParcelsFilter.postalService().apply(
           const ParcelInfo(
             trackInfo: TrackNumberInfo('1'),
+            currentStatus: ShipmentStatusType.delivered,
             trackServices: [
               TrackNumberService(
                 trackNumber: '1',
@@ -459,6 +487,7 @@ void main() {
           const ParcelInfo(
             trackInfo: TrackNumberInfo('1'),
             trackServices: [],
+            currentStatus: ShipmentStatusType.delivered,
           ),
         ),
         isFalse,
@@ -469,6 +498,7 @@ void main() {
           const ParcelInfo(
             trackInfo: TrackNumberInfo('1'),
             trackServices: [],
+            currentStatus: ShipmentStatusType.delivered,
           ),
         ),
         isTrue,
