@@ -207,7 +207,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "parcelsTrackingNotifyInboxStyleTitle" : MessageLookupByLibrary.simpleMessage("Package tracking"),
     "password" : MessageLookupByLibrary.simpleMessage("Password"),
     "postNord" : MessageLookupByLibrary.simpleMessage("PostNord"),
-    "postNordAddAccountDescription" : MessageLookupByLibrary.simpleMessage("stub"),
+    "postNordAddAccountDescription" : MessageLookupByLibrary.simpleMessage("API key is required for authorization. It can be obtained in several ways. Take an existing one (for example, find the package named «postnord» on https://www.npmjs.com/ and search in the source code), or register it (as a legal person):\n\n1. Register as a customer or partner on https://developer.postnord.com/\n2. Copy API key from this page: https://atdeveloper.postnord.com/admin/applications. If there is no key, click the «Create new application» button."),
     "postalService" : MessageLookupByLibrary.simpleMessage("Postal service"),
     "poundUnitShort" : m26,
     "previousPage" : MessageLookupByLibrary.simpleMessage("Previous page"),
