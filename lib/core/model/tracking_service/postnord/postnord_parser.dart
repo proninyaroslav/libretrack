@@ -201,9 +201,20 @@ class PostNordParser extends Parser {
   }
 
   Address? _parseDeliveryPointAddress(Map<String, dynamic> shipment) {
-    final address = shipment['deliveryPoint']?['address'];
+    final deliveryPoint = shipment['deliveryPoint'];
+    final addressDto = deliveryPoint?['address'];
+    final displayName = deliveryPoint?['displayName'];
 
-    return address == null ? null : _parseAddress(address);
+    if (addressDto == null) {
+      return displayName;
+    } else {
+      final address = _parseAddress(addressDto);
+      if (displayName != null) {
+        return address.copyWith(location: '$displayName, ${address.location}');
+      } else {
+        return address;
+      }
+    }
   }
 
   _ConsignorAddress _parseConsignor(Map<String, dynamic> shipment) {

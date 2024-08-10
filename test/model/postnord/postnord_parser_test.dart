@@ -708,7 +708,7 @@ void main() {
                   'The shipment item has been delivered to a service point.',
               dateTime: DateTime.parse('2024-08-07T10:16:00'),
               activityLocation: const Address(
-                location: 'Postgången 40, SOLNA, Sweden',
+                location: 'HEMKÖP SOLNA C, Postgången 40, SOLNA, Sweden',
                 postalCode: '17145',
                 countryCode: 'SWE',
               ),
@@ -737,7 +737,7 @@ void main() {
               postalCode: '7017',
             ),
             receiverAddress: const Address(
-              location: 'Postgången 40, SOLNA, Sweden',
+              location: 'HEMKÖP SOLNA C, Postgången 40, SOLNA, Sweden',
               postalCode: '17145',
               countryCode: 'SWE',
             ),
