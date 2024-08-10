@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2021 Yaroslav Pronin <proninyaroslav@mail.ru>
+ * Copyright (C) 2021-2024 Yaroslav Pronin <proninyaroslav@mail.ru>
  * Copyright (C) 2021 Insurgo Inc. <insurgo@riseup.net>
  *
  * This file is part of LibreTrack.
@@ -45,6 +45,7 @@ const unsigned int WINDOW_WINDTH = 1280;
 const unsigned int WINDOW_HEIGHT = 720;
 
 GtkWindow *window = nullptr;
+FlView *view = nullptr;
 AppIndicator *indicator = nullptr;
 gulong delete_event_id = 0;
 
@@ -56,6 +57,16 @@ static void show_hide_window()
         gtk_window_deiconify(window);
         gtk_widget_show(GTK_WIDGET(window));
     }
+}
+
+static gboolean on_window_close(
+    GtkWidget *window,
+    GdkEvent *event,
+    gpointer user_data)
+{
+    show_hide_window();
+
+    return TRUE;
 }
 
 static void quit(GtkMenuItem *item, gpointer application)
@@ -125,11 +136,24 @@ static void enable_tray_icon()
     if (!indicator) {
         return;
     }
+
+    // See
+    // https://github.com/leanflutter/window_manager/blob/main/linux/window_manager_plugin.cc
+    //
+    // Disconnect all delete-event handlers first in Flutter 3.10.1 and above, which
+    // causes delete_event not working. Issues from flutter/engine:
+    // https://github.com/flutter/engine/pull/40033
+    guint handler_id = g_signal_handler_find(window, G_SIGNAL_MATCH_DATA, 0, 0, NULL, NULL, view);
+    if (handler_id > 0) {
+        g_signal_handler_disconnect(window, handler_id);
+    }
+
     delete_event_id = g_signal_connect(
         window,
-        "delete-event",
-        G_CALLBACK(show_hide_window),
+        "delete_event",
+        G_CALLBACK(on_window_close),
         nullptr);
+
     app_indicator_set_status(indicator, APP_INDICATOR_STATUS_ACTIVE);
 }
 
@@ -238,7 +262,7 @@ static void my_application_activate(GApplication *application)
         project,
         self->dart_entrypoint_arguments);
 
-    auto view = fl_view_new(project);
+    view = fl_view_new(project);
     gtk_widget_show(GTK_WIDGET(view));
     gtk_container_add(GTK_CONTAINER(window), GTK_WIDGET(view));
 
@@ -277,21 +301,23 @@ static gboolean my_application_local_command_line(
 }
 
 // Implements GApplication::startup.
-static void my_application_startup(GApplication* application) {
-  //MyApplication* self = MY_APPLICATION(object);
+static void my_application_startup(GApplication *application)
+{
+    // MyApplication* self = MY_APPLICATION(object);
 
-  // Perform any actions required at application startup.
+    // Perform any actions required at application startup.
 
-  G_APPLICATION_CLASS(my_application_parent_class)->startup(application);
+    G_APPLICATION_CLASS(my_application_parent_class)->startup(application);
 }
 
 // Implements GApplication::shutdown.
-static void my_application_shutdown(GApplication* application) {
-  //MyApplication* self = MY_APPLICATION(object);
+static void my_application_shutdown(GApplication *application)
+{
+    // MyApplication* self = MY_APPLICATION(object);
 
-  // Perform any actions required at application shutdown.
+    // Perform any actions required at application shutdown.
 
-  G_APPLICATION_CLASS(my_application_parent_class)->shutdown(application);
+    G_APPLICATION_CLASS(my_application_parent_class)->shutdown(application);
 }
 
 // Implements GObject::dispose.
@@ -305,10 +331,10 @@ static void my_application_dispose(GObject *object)
 static void my_application_class_init(MyApplicationClass *klass)
 {
     G_APPLICATION_CLASS(klass)->activate = my_application_activate;
-  G_APPLICATION_CLASS(klass)->local_command_line = my_application_local_command_line;
-  G_APPLICATION_CLASS(klass)->startup = my_application_startup;
-  G_APPLICATION_CLASS(klass)->shutdown = my_application_shutdown;
-  G_OBJECT_CLASS(klass)->dispose = my_application_dispose;
+    G_APPLICATION_CLASS(klass)->local_command_line = my_application_local_command_line;
+    G_APPLICATION_CLASS(klass)->startup = my_application_startup;
+    G_APPLICATION_CLASS(klass)->shutdown = my_application_shutdown;
+    G_OBJECT_CLASS(klass)->dispose = my_application_dispose;
 }
 
 static void my_application_init(MyApplication *self) { }
