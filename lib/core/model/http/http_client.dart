@@ -16,6 +16,8 @@
 // You should have received a copy of the GNU General Public License
 // along with LibreTrack.  If not, see <http://www.gnu.org/licenses/>.
 
+import 'dart:convert';
+
 import 'package:flutter/foundation.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:http/http.dart' as http;
@@ -50,6 +52,7 @@ class HttpResponse with _$HttpResponse {
 @Injectable(as: HttpClient)
 class HttpClientImpl implements HttpClient {
   final http.Client _client;
+  final decoder = const Utf8Decoder();
 
   HttpClientImpl(this._client);
 
@@ -57,13 +60,20 @@ class HttpClientImpl implements HttpClient {
   Future<HttpResponse> send(ServiceRequest request) async {
     try {
       final response = await _send(request);
+      late final String body;
+      try {
+        body = decoder.convert(response.body.codeUnits);
+      } on FormatException {
+        body = response.body;
+      }
+
       if (response.statusCode >= 400) {
         return HttpResponse.httpError(
           statusCode: response.statusCode,
-          body: response.body,
+          body: body,
         );
       } else {
-        return HttpResponse.success(body: response.body);
+        return HttpResponse.success(body: body);
       }
     } on Exception catch (e, stackTrace) {
       return HttpResponse.exception(e, stackTrace: stackTrace);
