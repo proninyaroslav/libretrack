@@ -65,7 +65,7 @@ dependencies:
   quiver: ^3.0.0
   receive_sharing_intent: ^1.8.0
   responsive_builder: ^0.7.1
-  share_plus: ^9.0.0
+  share_plus: ^10.0.0
   shared_preferences: ^2.0.4
   smooth_page_indicator: ^1.0.0+2
   sqflite: ^2.3.3+1
