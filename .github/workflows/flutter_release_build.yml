@@ -3,6 +3,7 @@ name: Flutter Release Build CI
 on:
   release:
     types: [prereleased]
+  workflow_dispatch:
 
 env:
   FLUTTER_VERSION: "3.24.0"
