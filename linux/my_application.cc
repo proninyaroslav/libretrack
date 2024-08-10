@@ -133,7 +133,7 @@ static gchar *get_app_icon(gchar *icons_path)
 
 static void enable_tray_icon()
 {
-    if (!indicator) {
+    if (!indicator || !view) {
         return;
     }
 
