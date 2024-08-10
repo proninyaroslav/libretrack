@@ -28,14 +28,12 @@ class S {
   }
 }
 
-extension AppLocalizationsExtensions on AppLocalizations {
-  static Future<AppLocalizations> loadLocale(String localeStr) {
-    final locale = intl.Locale.parse(localeStr);
-    return AppLocalizations.delegate.load(
-      Locale(
-        locale.languageCode,
-        locale.countryCode,
-      ),
-    );
-  }
+Future<AppLocalizations> loadLocale(String localeStr) {
+  final locale = intl.Locale.parse(localeStr);
+  return AppLocalizations.delegate.load(
+    Locale(
+      locale.languageCode,
+      locale.countryCode,
+    ),
+  );
 }

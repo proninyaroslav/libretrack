@@ -325,7 +325,7 @@ class NotificationManagerImpl implements NotificationManager {
       inner: (locale) async => locale.toLocaleString(),
     );
     if (_currentAppLocale == null || _currentLocale != oldLocale) {
-      return _currentAppLocale = await AppLocale.loadLocale(_currentLocale!);
+      return _currentAppLocale = await loadLocale(_currentLocale!);
     } else {
       return _currentAppLocale!;
     }
