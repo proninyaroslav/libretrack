@@ -1,4 +1,4 @@
-// Copyright (C) 2021 Yaroslav Pronin <proninyaroslav@mail.ru>
+// Copyright (C) 2021-2024 Yaroslav Pronin <proninyaroslav@mail.ru>
 // Copyright (C) 2021 Insurgo Inc. <insurgo@riseup.net>
 //
 // This file is part of LibreTrack.
@@ -100,8 +100,8 @@ class ShipmentStatusMetadataMapper {
       case ShipmentStatusType.other:
         return ShipmentStatusMetadata(
           type: type,
-          emoji: '✈️',
-          iconData: StatusIconsData.inTransit,
+          emoji: '✉️',
+          iconData: StatusIconsData.other,
         );
       case ShipmentStatusType.notDelivered:
         return ShipmentStatusMetadata(

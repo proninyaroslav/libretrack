@@ -1,4 +1,4 @@
-// Copyright (C) 2021 Yaroslav Pronin <proninyaroslav@mail.ru>
+// Copyright (C) 2021-2024 Yaroslav Pronin <proninyaroslav@mail.ru>
 // Copyright (C) 2021 Insurgo Inc. <insurgo@riseup.net>
 //
 // This file is part of LibreTrack.
@@ -54,13 +54,13 @@ class StatusIconsData {
   );
 
   static RRectIconData outForDelivery = RRectIconData(
-    iconData: MdiIcons.package,
+    iconData: MdiIcons.packageVariantClosed,
     iconColor: Colors.white,
     backgroundColor: Colors.orange,
   );
 
   static RRectIconData delivered = RRectIconData(
-    iconData: MdiIcons.packageVariant,
+    iconData: MdiIcons.packageVariantClosedCheck,
     iconColor: Colors.white,
     backgroundColor: Colors.green,
   );
@@ -87,5 +87,11 @@ class StatusIconsData {
     iconData: Icons.inbox,
     iconColor: Colors.white,
     backgroundColor: Colors.yellow.shade600,
+  );
+
+  static RRectIconData other = RRectIconData(
+    iconData: MdiIcons.emailOutline,
+    iconColor: Colors.white,
+    backgroundColor: Colors.blue,
   );
 }
