@@ -20,19 +20,28 @@ import 'dart:math';
 
 import 'package:barcode_widget/barcode_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:libretrack/core/settings/settings.dart';
+import 'package:libretrack/injector.dart';
 import 'package:libretrack/logger.dart';
 import 'package:libretrack/ui/theme.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 import '../../locale.dart';
 
-class GenerateBarcodeDialog extends StatelessWidget {
+class GenerateBarcodeDialog extends StatefulWidget {
   final String trackNumber;
 
   const GenerateBarcodeDialog({
     super.key,
     required this.trackNumber,
   });
+
+  @override
+  State<GenerateBarcodeDialog> createState() => _GenerateBarcodeDialogState();
+}
+
+class _GenerateBarcodeDialogState extends State<GenerateBarcodeDialog> {
+  final pref = getIt<AppSettings>();
 
   @override
   Widget build(BuildContext context) {
@@ -48,11 +57,11 @@ class GenerateBarcodeDialog extends StatelessWidget {
         content: BarcodeWidget(
           width: deviceType == DeviceScreenType.mobile ? minSize : 300,
           height: deviceType == DeviceScreenType.mobile ? minSize / 3 : 150,
-          barcode: Barcode.code128(),
-          data: trackNumber,
+          barcode: _getBarcodeByType(pref.barcodeGeneratorType),
+          data: widget.trackNumber,
           errorBuilder: (context, error) {
             log().e(
-              'Unable to generate barcode for tracking number $trackNumber',
+              'Unable to generate barcode for tracking number ${widget.trackNumber}',
               error: error,
             );
             return _GenerateBarcodeError(
@@ -61,6 +70,29 @@ class GenerateBarcodeDialog extends StatelessWidget {
           },
         ),
         actions: [
+          TextButton(
+            onPressed: () {
+              setState(() {
+                pref.barcodeGeneratorType.when(
+                  code128: () {
+                    pref.barcodeGeneratorType =
+                        const BarcodeGeneratorType.qrCode();
+                  },
+                  qrCode: () {
+                    pref.barcodeGeneratorType =
+                        const BarcodeGeneratorType.code128();
+                  },
+                );
+              });
+            },
+            child: Text(
+              pref.barcodeGeneratorType.when(
+                code128: () => S.of(context).barcodeGeneratorShowQrCode,
+                qrCode: () => S.of(context).barcodeGeneratorShowBarcodeCode,
+              ),
+              textAlign: TextAlign.end,
+            ),
+          ),
           TextButton(
             onPressed: () {
               Navigator.of(context).pop();
@@ -74,6 +106,13 @@ class GenerateBarcodeDialog extends StatelessWidget {
       ),
     );
   }
+}
+
+Barcode _getBarcodeByType(BarcodeGeneratorType type) {
+  return type.when(
+    code128: () => Barcode.code128(),
+    qrCode: () => Barcode.qrCode(),
+  );
 }
 
 class _GenerateBarcodeError extends StatelessWidget {

@@ -337,3 +337,27 @@ Map<String, dynamic> _$$AutoTrackingFreqOneWeekImplToJson(
     <String, dynamic>{
       'runtimeType': instance.$type,
     };
+
+_$BarcodeGeneratorTypeCode128Impl _$$BarcodeGeneratorTypeCode128ImplFromJson(
+        Map<String, dynamic> json) =>
+    _$BarcodeGeneratorTypeCode128Impl(
+      $type: json['runtimeType'] as String?,
+    );
+
+Map<String, dynamic> _$$BarcodeGeneratorTypeCode128ImplToJson(
+        _$BarcodeGeneratorTypeCode128Impl instance) =>
+    <String, dynamic>{
+      'runtimeType': instance.$type,
+    };
+
+_$BarcodeGeneratorTypeQrCodeImpl _$$BarcodeGeneratorTypeQrCodeImplFromJson(
+        Map<String, dynamic> json) =>
+    _$BarcodeGeneratorTypeQrCodeImpl(
+      $type: json['runtimeType'] as String?,
+    );
+
+Map<String, dynamic> _$$BarcodeGeneratorTypeQrCodeImplToJson(
+        _$BarcodeGeneratorTypeQrCodeImpl instance) =>
+    <String, dynamic>{
+      'runtimeType': instance.$type,
+    };

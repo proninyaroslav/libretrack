@@ -150,3 +150,13 @@ extension AutoTrackingFreqExtension on AutoTrackingFreq {
         oneWeek: () => const Duration(days: 7),
       );
 }
+
+@freezed
+class BarcodeGeneratorType with _$BarcodeGeneratorType {
+  const factory BarcodeGeneratorType.code128() = BarcodeGeneratorTypeCode128;
+
+  const factory BarcodeGeneratorType.qrCode() = BarcodeGeneratorTypeQrCode;
+
+  factory BarcodeGeneratorType.fromJson(Map<String, dynamic> json) =>
+      _$BarcodeGeneratorTypeFromJson(json);
+}

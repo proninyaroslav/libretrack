@@ -4122,3 +4122,332 @@ abstract class AutoTrackingFreqOneWeek implements AutoTrackingFreq {
   factory AutoTrackingFreqOneWeek.fromJson(Map<String, dynamic> json) =
       _$AutoTrackingFreqOneWeekImpl.fromJson;
 }
+
+BarcodeGeneratorType _$BarcodeGeneratorTypeFromJson(Map<String, dynamic> json) {
+  switch (json['runtimeType']) {
+    case 'code128':
+      return BarcodeGeneratorTypeCode128.fromJson(json);
+    case 'qrCode':
+      return BarcodeGeneratorTypeQrCode.fromJson(json);
+
+    default:
+      throw CheckedFromJsonException(
+          json,
+          'runtimeType',
+          'BarcodeGeneratorType',
+          'Invalid union type "${json['runtimeType']}"!');
+  }
+}
+
+/// @nodoc
+mixin _$BarcodeGeneratorType {
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() code128,
+    required TResult Function() qrCode,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? code128,
+    TResult? Function()? qrCode,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? code128,
+    TResult Function()? qrCode,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(BarcodeGeneratorTypeCode128 value) code128,
+    required TResult Function(BarcodeGeneratorTypeQrCode value) qrCode,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(BarcodeGeneratorTypeCode128 value)? code128,
+    TResult? Function(BarcodeGeneratorTypeQrCode value)? qrCode,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(BarcodeGeneratorTypeCode128 value)? code128,
+    TResult Function(BarcodeGeneratorTypeQrCode value)? qrCode,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $BarcodeGeneratorTypeCopyWith<$Res> {
+  factory $BarcodeGeneratorTypeCopyWith(BarcodeGeneratorType value,
+          $Res Function(BarcodeGeneratorType) then) =
+      _$BarcodeGeneratorTypeCopyWithImpl<$Res, BarcodeGeneratorType>;
+}
+
+/// @nodoc
+class _$BarcodeGeneratorTypeCopyWithImpl<$Res,
+        $Val extends BarcodeGeneratorType>
+    implements $BarcodeGeneratorTypeCopyWith<$Res> {
+  _$BarcodeGeneratorTypeCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+}
+
+/// @nodoc
+abstract class _$$BarcodeGeneratorTypeCode128ImplCopyWith<$Res> {
+  factory _$$BarcodeGeneratorTypeCode128ImplCopyWith(
+          _$BarcodeGeneratorTypeCode128Impl value,
+          $Res Function(_$BarcodeGeneratorTypeCode128Impl) then) =
+      __$$BarcodeGeneratorTypeCode128ImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$BarcodeGeneratorTypeCode128ImplCopyWithImpl<$Res>
+    extends _$BarcodeGeneratorTypeCopyWithImpl<$Res,
+        _$BarcodeGeneratorTypeCode128Impl>
+    implements _$$BarcodeGeneratorTypeCode128ImplCopyWith<$Res> {
+  __$$BarcodeGeneratorTypeCode128ImplCopyWithImpl(
+      _$BarcodeGeneratorTypeCode128Impl _value,
+      $Res Function(_$BarcodeGeneratorTypeCode128Impl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$BarcodeGeneratorTypeCode128Impl implements BarcodeGeneratorTypeCode128 {
+  const _$BarcodeGeneratorTypeCode128Impl({final String? $type})
+      : $type = $type ?? 'code128';
+
+  factory _$BarcodeGeneratorTypeCode128Impl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$BarcodeGeneratorTypeCode128ImplFromJson(json);
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
+
+  @override
+  String toString() {
+    return 'BarcodeGeneratorType.code128()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$BarcodeGeneratorTypeCode128Impl);
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() code128,
+    required TResult Function() qrCode,
+  }) {
+    return code128();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? code128,
+    TResult? Function()? qrCode,
+  }) {
+    return code128?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? code128,
+    TResult Function()? qrCode,
+    required TResult orElse(),
+  }) {
+    if (code128 != null) {
+      return code128();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(BarcodeGeneratorTypeCode128 value) code128,
+    required TResult Function(BarcodeGeneratorTypeQrCode value) qrCode,
+  }) {
+    return code128(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(BarcodeGeneratorTypeCode128 value)? code128,
+    TResult? Function(BarcodeGeneratorTypeQrCode value)? qrCode,
+  }) {
+    return code128?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(BarcodeGeneratorTypeCode128 value)? code128,
+    TResult Function(BarcodeGeneratorTypeQrCode value)? qrCode,
+    required TResult orElse(),
+  }) {
+    if (code128 != null) {
+      return code128(this);
+    }
+    return orElse();
+  }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$BarcodeGeneratorTypeCode128ImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class BarcodeGeneratorTypeCode128 implements BarcodeGeneratorType {
+  const factory BarcodeGeneratorTypeCode128() =
+      _$BarcodeGeneratorTypeCode128Impl;
+
+  factory BarcodeGeneratorTypeCode128.fromJson(Map<String, dynamic> json) =
+      _$BarcodeGeneratorTypeCode128Impl.fromJson;
+}
+
+/// @nodoc
+abstract class _$$BarcodeGeneratorTypeQrCodeImplCopyWith<$Res> {
+  factory _$$BarcodeGeneratorTypeQrCodeImplCopyWith(
+          _$BarcodeGeneratorTypeQrCodeImpl value,
+          $Res Function(_$BarcodeGeneratorTypeQrCodeImpl) then) =
+      __$$BarcodeGeneratorTypeQrCodeImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$BarcodeGeneratorTypeQrCodeImplCopyWithImpl<$Res>
+    extends _$BarcodeGeneratorTypeCopyWithImpl<$Res,
+        _$BarcodeGeneratorTypeQrCodeImpl>
+    implements _$$BarcodeGeneratorTypeQrCodeImplCopyWith<$Res> {
+  __$$BarcodeGeneratorTypeQrCodeImplCopyWithImpl(
+      _$BarcodeGeneratorTypeQrCodeImpl _value,
+      $Res Function(_$BarcodeGeneratorTypeQrCodeImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$BarcodeGeneratorTypeQrCodeImpl implements BarcodeGeneratorTypeQrCode {
+  const _$BarcodeGeneratorTypeQrCodeImpl({final String? $type})
+      : $type = $type ?? 'qrCode';
+
+  factory _$BarcodeGeneratorTypeQrCodeImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$BarcodeGeneratorTypeQrCodeImplFromJson(json);
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
+
+  @override
+  String toString() {
+    return 'BarcodeGeneratorType.qrCode()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$BarcodeGeneratorTypeQrCodeImpl);
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() code128,
+    required TResult Function() qrCode,
+  }) {
+    return qrCode();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? code128,
+    TResult? Function()? qrCode,
+  }) {
+    return qrCode?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? code128,
+    TResult Function()? qrCode,
+    required TResult orElse(),
+  }) {
+    if (qrCode != null) {
+      return qrCode();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(BarcodeGeneratorTypeCode128 value) code128,
+    required TResult Function(BarcodeGeneratorTypeQrCode value) qrCode,
+  }) {
+    return qrCode(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(BarcodeGeneratorTypeCode128 value)? code128,
+    TResult? Function(BarcodeGeneratorTypeQrCode value)? qrCode,
+  }) {
+    return qrCode?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(BarcodeGeneratorTypeCode128 value)? code128,
+    TResult Function(BarcodeGeneratorTypeQrCode value)? qrCode,
+    required TResult orElse(),
+  }) {
+    if (qrCode != null) {
+      return qrCode(this);
+    }
+    return orElse();
+  }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$BarcodeGeneratorTypeQrCodeImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class BarcodeGeneratorTypeQrCode implements BarcodeGeneratorType {
+  const factory BarcodeGeneratorTypeQrCode() = _$BarcodeGeneratorTypeQrCodeImpl;
+
+  factory BarcodeGeneratorTypeQrCode.fromJson(Map<String, dynamic> json) =
+      _$BarcodeGeneratorTypeQrCodeImpl.fromJson;
+}

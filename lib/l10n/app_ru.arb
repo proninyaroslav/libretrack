@@ -251,5 +251,7 @@
   "cubicCentimeterUnitShort": "{value} см³",
   "postNord": "PostNord",
   "apiKey": "Ключ API",
-  "postNordAddAccountDescription": "Для авторизации необходим API-ключ. Его можно получить несколькими способами. Возьмите существующий (например, найдите пакет с именем «postnord» на https://www.npmjs.com/ и поищите в исходном коде), или зарегистрируйте его (как юридическое лицо):\n\n1. Зарегистрируйтесь как клиент или партнер на https://developer.postnord.com/\n2. Скопируйте API-ключ с этой страницы: https://atdeveloper.postnord.com/admin/applications. Если ключа нет, нажмите кнопку «Create new application»."
+  "postNordAddAccountDescription": "Для авторизации необходим API-ключ. Его можно получить несколькими способами. Возьмите существующий (например, найдите пакет с именем «postnord» на https://www.npmjs.com/ и поищите в исходном коде), или зарегистрируйте его (как юридическое лицо):\n\n1. Зарегистрируйтесь как клиент или партнер на https://developer.postnord.com/\n2. Скопируйте API-ключ с этой страницы: https://atdeveloper.postnord.com/admin/applications. Если ключа нет, нажмите кнопку «Create new application».",
+  "barcodeGeneratorShowQrCode": "Показать QR",
+  "barcodeGeneratorShowBarcodeCode": "Показать штрих-код"
 }

@@ -50,6 +50,8 @@ abstract class AppSettings {
   abstract bool trackingErrorNotifications;
 
   abstract bool trayIcon;
+
+  abstract BarcodeGeneratorType barcodeGeneratorType;
 }
 
 abstract class AppSettingsDefault {
@@ -72,6 +74,8 @@ abstract class AppSettingsDefault {
   static const trackingErrorNotifications = true;
 
   static const trayIcon = false;
+
+  static const barcodeGeneratorType = BarcodeGeneratorType.code128();
 }
 
 @Singleton(as: AppSettings)
@@ -232,6 +236,23 @@ class AppSettingsImpl implements AppSettings {
   @override
   bool get trayIcon =>
       pref.getBool(_AppSettingsKey.trayIcon) ?? AppSettingsDefault.trayIcon;
+
+  @override
+  BarcodeGeneratorType get barcodeGeneratorType {
+    final str = pref.getString(_AppSettingsKey.barcodeGeneratorType);
+    final json = str == null ? null : jsonDecode(str);
+    return json == null
+        ? AppSettingsDefault.barcodeGeneratorType
+        : BarcodeGeneratorType.fromJson(json as Map<String, dynamic>);
+  }
+
+  @override
+  set barcodeGeneratorType(BarcodeGeneratorType? value) {
+    final json = value?.toJson();
+    if (json != null) {
+      pref.setString(_AppSettingsKey.barcodeGeneratorType, jsonEncode(json));
+    }
+  }
 }
 
 abstract class _AppSettingsKey {
@@ -259,6 +280,8 @@ abstract class _AppSettingsKey {
       'pref_key_tracking_error_notifications';
 
   static const trayIcon = 'pref_key_tray_icon';
+
+  static const barcodeGeneratorType = 'pref_key_barcode_generator_type';
 }
 
 @module

@@ -131,7 +131,7 @@ class _BarcodeGenButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return IconButton(
-      icon: Icon(MdiIcons.barcode),
+      icon: Icon(MdiIcons.qrcode),
       tooltip: S.of(context).generateBarcode,
       onPressed: () {
         showDialog(
