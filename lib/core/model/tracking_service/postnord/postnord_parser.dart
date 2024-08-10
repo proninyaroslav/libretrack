@@ -206,7 +206,7 @@ class PostNordParser extends Parser {
     final displayName = deliveryPoint?['displayName'];
 
     if (addressDto == null) {
-      return displayName;
+      return Address(location: displayName);
     } else {
       final address = _parseAddress(addressDto);
       if (displayName != null) {
