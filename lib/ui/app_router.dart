@@ -212,17 +212,14 @@ class AppRouterDelegate extends RouterDelegate<AppRoutePath>
 
   @override
   Widget build(BuildContext context) {
+    final pages = _buildPages(context);
+
     return Navigator(
       key: navigatorKey,
       reportsRouteUpdateToEngine: true,
-      pages: _buildPages(context),
-      onPopPage: (route, result) {
-        if (!route.didPop(result)) {
-          return false;
-        }
+      pages: pages,
+      onDidRemovePage: (page) {
         _popState();
-
-        return true;
       },
     );
   }

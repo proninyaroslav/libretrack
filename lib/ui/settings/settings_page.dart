@@ -319,13 +319,8 @@ class _SettingsRouterDelegate extends RouterDelegate<AppRoutePathSettings>
       key: navigatorKey,
       reportsRouteUpdateToEngine: true,
       pages: _buildPages(context),
-      onPopPage: (route, result) {
-        if (!route.didPop(result)) {
-          return false;
-        }
+      onDidRemovePage: (page) {
         _currentState = const _SettingsRouterState.home();
-
-        return true;
       },
     );
   }

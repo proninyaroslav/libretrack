@@ -1409,7 +1409,7 @@ class _ContextualAppBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return PopScope(
       canPop: false,
-      onPopInvoked: (didPop) async {
+      onPopInvokedWithResult: (didPop, result) async {
         onBackPressed?.call();
       },
       child: AppBar(
