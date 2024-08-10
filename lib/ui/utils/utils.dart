@@ -75,7 +75,7 @@ class UiUtils {
           .map((word) => word!)
           .toList();
 
-  static final supportedLocales = AppLocale.supportedLocales
+  static final supportedLocales = AppLocalizations.supportedLocales
       .map(
         (ui.Locale locale) => MapEntry(
           Locale(

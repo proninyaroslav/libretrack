@@ -191,7 +191,7 @@ class _AppState extends State<App> {
 
   Widget _buildDevicePreview() {
     return DevicePreview(
-      availableLocales: AppLocale.supportedLocales,
+      availableLocales: AppLocalizations.supportedLocales,
       builder: (context) => _buildApp(
         context,
         locale: DevicePreview.locale(context),
@@ -218,8 +218,8 @@ class _AppState extends State<App> {
             themeMode: themeMode ?? _mapThemeMode(state.theme),
             theme: AppTheme.getThemeData(),
             darkTheme: AppTheme.getThemeData(dark: true),
-            localizationsDelegates: AppLocale.localizationsDelegates,
-            supportedLocales: AppLocale.supportedLocales,
+            localizationsDelegates: AppLocalizations.localizationsDelegates,
+            supportedLocales: AppLocalizations.supportedLocales,
             locale: locale ?? _mapLocale(state.locale),
             builder: (context, child) {
               return InltLocaleBridge(
