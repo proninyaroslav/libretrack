@@ -196,6 +196,7 @@ final _debugCrashHandlers = [
   DefaultCrashHandler(),
 ];
 
+@pragma('vm:entry-point')
 Future<void> callbackDispatcher() async {
   WidgetsFlutterBinding.ensureInitialized();
 
