@@ -1,6 +1,6 @@
 name: libretrack
-base: core18
-version: 1.4.0
+base: core22
+version: 1.4.2
 license: GPL-3.0-or-later
 summary: Private, cross-platform package tracking app.
 description: |
@@ -26,14 +26,14 @@ grade: stable
 confinement: strict
 
 architectures:
-  - build-on: amd64
-    run-on: amd64
-  - build-on: arm64
-    run-on: arm64
+  - build-on: [amd64]
+    build-for: [amd64]
+  - build-on: [amd64, arm64]
+    build-for: [arm64]
 
 apps:
   libretrack:
-    extensions: [flutter-stable]
+    extensions: [gnome]
     command: libretrack
     plugs:
       - network
@@ -43,7 +43,7 @@ parts:
   libretrack:
     plugin: flutter
     source: https://github.com/proninyaroslav/libretrack.git
-    source-tag: 1.4.0
+    source-tag: 1.4.2
     flutter-target: lib/main.dart
     build-packages:
       - libsecret-1-dev
