@@ -1,4 +1,4 @@
-// Copyright (C) 2021 Yaroslav Pronin <proninyaroslav@mail.ru>
+// Copyright (C) 2021-2024 Yaroslav Pronin <proninyaroslav@mail.ru>
 // Copyright (C) 2021 Insurgo Inc. <insurgo@riseup.net>
 //
 // This file is part of LibreTrack.
@@ -75,11 +75,13 @@ class ParcelsCubit extends Cubit<ParcelsState> {
         ));
 
   Future<void> observeParcels() async {
-    emit(ParcelsState.initial(
-      filters: state.filters,
-      search: state.search,
-      sort: state.sort,
-    ));
+    if (!isClosed) {
+      emit(ParcelsState.initial(
+        filters: state.filters,
+        search: state.search,
+        sort: state.sort,
+      ));
+    }
 
     final group = StreamGroup.mergeBroadcast([
       _trackRepo.observeAllTracks().asyncMap(
@@ -119,15 +121,17 @@ class ParcelsCubit extends Cubit<ParcelsState> {
               archive.add(info);
             }
           }
-          emit(
-            ParcelsState.loaded(
-              active: active,
-              archive: archive,
-              filters: state.filters,
-              search: state.search,
-              sort: state.sort,
-            ),
-          );
+          if (!isClosed) {
+            emit(
+              ParcelsState.loaded(
+                active: active,
+                archive: archive,
+                filters: state.filters,
+                search: state.search,
+                sort: state.sort,
+              ),
+            );
+          }
         },
         failed: (error) {
           emit(
