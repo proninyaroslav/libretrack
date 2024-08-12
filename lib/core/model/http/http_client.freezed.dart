@@ -78,6 +78,9 @@ class _$HttpResponseCopyWithImpl<$Res, $Val extends HttpResponse>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of HttpResponse
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -97,6 +100,8 @@ class __$$HttpResponseSuccessImplCopyWithImpl<$Res>
       $Res Function(_$HttpResponseSuccessImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of HttpResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -145,7 +150,9 @@ class _$HttpResponseSuccessImpl
   @override
   int get hashCode => Object.hash(runtimeType, body);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of HttpResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$HttpResponseSuccessImplCopyWith<_$HttpResponseSuccessImpl> get copyWith =>
@@ -226,7 +233,10 @@ abstract class HttpResponseSuccess implements HttpResponse {
       _$HttpResponseSuccessImpl;
 
   String get body;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of HttpResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$HttpResponseSuccessImplCopyWith<_$HttpResponseSuccessImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -248,6 +258,8 @@ class __$$HttpResponseErrorImplCopyWithImpl<$Res>
       $Res Function(_$HttpResponseErrorImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of HttpResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -306,7 +318,9 @@ class _$HttpResponseErrorImpl
   @override
   int get hashCode => Object.hash(runtimeType, statusCode, body);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of HttpResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$HttpResponseErrorImplCopyWith<_$HttpResponseErrorImpl> get copyWith =>
@@ -389,7 +403,10 @@ abstract class HttpResponseError implements HttpResponse {
 
   int get statusCode;
   String get body;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of HttpResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$HttpResponseErrorImplCopyWith<_$HttpResponseErrorImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -412,6 +429,8 @@ class __$$HttpResponseExceptionImplCopyWithImpl<$Res>
       $Res Function(_$HttpResponseExceptionImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of HttpResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -470,7 +489,9 @@ class _$HttpResponseExceptionImpl
   @override
   int get hashCode => Object.hash(runtimeType, e, stackTrace);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of HttpResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$HttpResponseExceptionImplCopyWith<_$HttpResponseExceptionImpl>
@@ -552,7 +573,10 @@ abstract class HttpResponseException implements HttpResponse {
 
   Exception get e;
   StackTrace? get stackTrace;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of HttpResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$HttpResponseExceptionImplCopyWith<_$HttpResponseExceptionImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

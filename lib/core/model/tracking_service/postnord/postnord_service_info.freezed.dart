@@ -18,7 +18,9 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$PostNordAuthData {
   String get apiKey => throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PostNordAuthData
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PostNordAuthDataCopyWith<PostNordAuthData> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -42,6 +44,8 @@ class _$PostNordAuthDataCopyWithImpl<$Res, $Val extends PostNordAuthData>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of PostNordAuthData
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -75,6 +79,8 @@ class __$$PostNordAuthDataImplCopyWithImpl<$Res>
       $Res Function(_$PostNordAuthDataImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of PostNordAuthData
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -113,7 +119,9 @@ class _$PostNordAuthDataImpl extends _PostNordAuthData {
   @override
   int get hashCode => Object.hash(runtimeType, apiKey);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PostNordAuthData
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PostNordAuthDataImplCopyWith<_$PostNordAuthDataImpl> get copyWith =>
@@ -128,8 +136,11 @@ abstract class _PostNordAuthData extends PostNordAuthData {
 
   @override
   String get apiKey;
+
+  /// Create a copy of PostNordAuthData
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PostNordAuthDataImplCopyWith<_$PostNordAuthDataImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -21,7 +21,9 @@ mixin _$AppInfo {
   String get version => throw _privateConstructorUsedError;
   String get buildNumber => throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AppInfo
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $AppInfoCopyWith<AppInfo> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -44,6 +46,8 @@ class _$AppInfoCopyWithImpl<$Res, $Val extends AppInfo>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of AppInfo
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -92,6 +96,8 @@ class __$$AppInfoImplCopyWithImpl<$Res>
       _$AppInfoImpl _value, $Res Function(_$AppInfoImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AppInfo
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -172,7 +178,9 @@ class _$AppInfoImpl with DiagnosticableTreeMixin implements _AppInfo {
   int get hashCode =>
       Object.hash(runtimeType, packageName, appName, version, buildNumber);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AppInfo
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AppInfoImplCopyWith<_$AppInfoImpl> get copyWith =>
@@ -194,8 +202,11 @@ abstract class _AppInfo implements AppInfo {
   String get version;
   @override
   String get buildNumber;
+
+  /// Create a copy of AppInfo
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AppInfoImplCopyWith<_$AppInfoImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -331,6 +342,9 @@ class _$DeviceInfoCopyWithImpl<$Res, $Val extends DeviceInfo>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of DeviceInfo
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -347,6 +361,9 @@ class __$$UnknownDeviceInfoImplCopyWithImpl<$Res>
   __$$UnknownDeviceInfoImplCopyWithImpl(_$UnknownDeviceInfoImpl _value,
       $Res Function(_$UnknownDeviceInfoImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of DeviceInfo
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -540,6 +557,8 @@ class __$$AndroidDeviceInfoImplCopyWithImpl<$Res>
       $Res Function(_$AndroidDeviceInfoImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of DeviceInfo
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -682,7 +701,9 @@ class _$AndroidDeviceInfoImpl
       hardware,
       product);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of DeviceInfo
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AndroidDeviceInfoImplCopyWith<_$AndroidDeviceInfoImpl> get copyWith =>
@@ -858,7 +879,10 @@ abstract class AndroidDeviceInfo implements DeviceInfo {
 
   /// The name of the overall product.
   String? get product;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of DeviceInfo
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AndroidDeviceInfoImplCopyWith<_$AndroidDeviceInfoImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -884,6 +908,8 @@ class __$$IOSDeviceInfoImplCopyWithImpl<$Res>
       _$IOSDeviceInfoImpl _value, $Res Function(_$IOSDeviceInfoImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of DeviceInfo
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -965,7 +991,9 @@ class _$IOSDeviceInfoImpl
   int get hashCode => Object.hash(
       runtimeType, deviceName, deviceModel, systemName, systemVersion);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of DeviceInfo
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$IOSDeviceInfoImplCopyWith<_$IOSDeviceInfoImpl> get copyWith =>
@@ -1118,7 +1146,10 @@ abstract class IOSDeviceInfo implements DeviceInfo {
   String? get deviceModel;
   String? get systemName;
   String? get systemVersion;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of DeviceInfo
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$IOSDeviceInfoImplCopyWith<_$IOSDeviceInfoImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1140,6 +1171,8 @@ class __$$LinuxDeviceInfoImplCopyWithImpl<$Res>
       _$LinuxDeviceInfoImpl _value, $Res Function(_$LinuxDeviceInfoImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of DeviceInfo
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1210,7 +1243,9 @@ class _$LinuxDeviceInfoImpl
   int get hashCode =>
       Object.hash(runtimeType, osName, kernelVersion, osVersion);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of DeviceInfo
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$LinuxDeviceInfoImplCopyWith<_$LinuxDeviceInfoImpl> get copyWith =>
@@ -1362,7 +1397,10 @@ abstract class LinuxDeviceInfo implements DeviceInfo {
   String get osName;
   String get kernelVersion;
   String? get osVersion;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of DeviceInfo
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$LinuxDeviceInfoImplCopyWith<_$LinuxDeviceInfoImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1384,6 +1422,8 @@ class __$$WindowsDeviceInfoImplCopyWithImpl<$Res>
       $Res Function(_$WindowsDeviceInfoImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of DeviceInfo
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1433,7 +1473,9 @@ class _$WindowsDeviceInfoImpl
   @override
   int get hashCode => Object.hash(runtimeType, osVersion);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of DeviceInfo
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$WindowsDeviceInfoImplCopyWith<_$WindowsDeviceInfoImpl> get copyWith =>
@@ -1581,7 +1623,10 @@ abstract class WindowsDeviceInfo implements DeviceInfo {
       _$WindowsDeviceInfoImpl;
 
   String get osVersion;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of DeviceInfo
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$WindowsDeviceInfoImplCopyWith<_$WindowsDeviceInfoImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1604,6 +1649,8 @@ class __$$MacOSDeviceInfoImplCopyWithImpl<$Res>
       _$MacOSDeviceInfoImpl _value, $Res Function(_$MacOSDeviceInfoImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of DeviceInfo
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1686,7 +1733,9 @@ class _$MacOSDeviceInfoImpl
   int get hashCode =>
       Object.hash(runtimeType, arch, kernelVersion, osVersion, model);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of DeviceInfo
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$MacOSDeviceInfoImplCopyWith<_$MacOSDeviceInfoImpl> get copyWith =>
@@ -1840,7 +1889,10 @@ abstract class MacOSDeviceInfo implements DeviceInfo {
   String get kernelVersion;
   String get osVersion;
   String get model;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of DeviceInfo
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$MacOSDeviceInfoImplCopyWith<_$MacOSDeviceInfoImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1862,6 +1914,8 @@ class __$$WebDeviceInfoImplCopyWithImpl<$Res>
       _$WebDeviceInfoImpl _value, $Res Function(_$WebDeviceInfoImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of DeviceInfo
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1935,7 +1989,9 @@ class _$WebDeviceInfoImpl
   @override
   int get hashCode => Object.hash(runtimeType, browserName, platform, vendor);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of DeviceInfo
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$WebDeviceInfoImplCopyWith<_$WebDeviceInfoImpl> get copyWith =>
@@ -2090,7 +2146,10 @@ abstract class WebDeviceInfo implements DeviceInfo {
 
   /// The vendor name of the current browser
   String? get vendor;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of DeviceInfo
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$WebDeviceInfoImplCopyWith<_$WebDeviceInfoImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

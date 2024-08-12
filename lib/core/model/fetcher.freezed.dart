@@ -72,6 +72,9 @@ class _$FetchResultCopyWithImpl<$Res, $Val extends FetchResult>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of FetchResult
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -93,6 +96,8 @@ class __$$FetchResultResponseImplCopyWithImpl<$Res>
       $Res Function(_$FetchResultResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of FetchResult
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -106,6 +111,8 @@ class __$$FetchResultResponseImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of FetchResult
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ServiceResponseCopyWith<$Res> get response {
@@ -150,7 +157,9 @@ class _$FetchResultResponseImpl
   @override
   int get hashCode => Object.hash(runtimeType, response);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of FetchResult
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FetchResultResponseImplCopyWith<_$FetchResultResponseImpl> get copyWith =>
@@ -225,7 +234,10 @@ abstract class FetchResultResponse implements FetchResult {
       _$FetchResultResponseImpl;
 
   ServiceResponse get response;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of FetchResult
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FetchResultResponseImplCopyWith<_$FetchResultResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -250,6 +262,8 @@ class __$$FetchResultErrorImplCopyWithImpl<$Res>
       $Res Function(_$FetchResultErrorImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of FetchResult
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -268,6 +282,8 @@ class __$$FetchResultErrorImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of FetchResult
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ServiceRequestCopyWith<$Res> get request {
@@ -276,6 +292,8 @@ class __$$FetchResultErrorImplCopyWithImpl<$Res>
     });
   }
 
+  /// Create a copy of FetchResult
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $FetchErrorCopyWith<$Res> get error {
@@ -323,7 +341,9 @@ class _$FetchResultErrorImpl
   @override
   int get hashCode => Object.hash(runtimeType, request, error);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of FetchResult
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FetchResultErrorImplCopyWith<_$FetchResultErrorImpl> get copyWith =>
@@ -400,7 +420,10 @@ abstract class FetchResultError implements FetchResult {
 
   ServiceRequest get request;
   FetchError get error;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of FetchResult
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FetchResultErrorImplCopyWith<_$FetchResultErrorImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -463,6 +486,9 @@ class _$FetchErrorCopyWithImpl<$Res, $Val extends FetchError>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of FetchError
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -482,6 +508,8 @@ class __$$FetchErrorBaseImplCopyWithImpl<$Res>
       _$FetchErrorBaseImpl _value, $Res Function(_$FetchErrorBaseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of FetchError
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -530,7 +558,9 @@ class _$FetchErrorBaseImpl
   @override
   int get hashCode => Object.hash(runtimeType, message);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of FetchError
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FetchErrorBaseImplCopyWith<_$FetchErrorBaseImpl> get copyWith =>
@@ -604,7 +634,10 @@ abstract class FetchErrorBase implements FetchError {
   const factory FetchErrorBase(final String message) = _$FetchErrorBaseImpl;
 
   String get message;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of FetchError
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FetchErrorBaseImplCopyWith<_$FetchErrorBaseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -626,6 +659,8 @@ class __$$FetchErrorExceptionImplCopyWithImpl<$Res>
       $Res Function(_$FetchErrorExceptionImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of FetchError
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -684,7 +719,9 @@ class _$FetchErrorExceptionImpl
   @override
   int get hashCode => Object.hash(runtimeType, e, stackTrace);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of FetchError
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FetchErrorExceptionImplCopyWith<_$FetchErrorExceptionImpl> get copyWith =>
@@ -760,7 +797,10 @@ abstract class FetchErrorException implements FetchError {
 
   Exception get e;
   StackTrace? get stackTrace;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of FetchError
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FetchErrorExceptionImplCopyWith<_$FetchErrorExceptionImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

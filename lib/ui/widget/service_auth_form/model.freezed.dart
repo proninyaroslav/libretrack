@@ -21,7 +21,9 @@ mixin _$AuthFormField {
   bool get secured => throw _privateConstructorUsedError;
   String? get value => throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AuthFormField
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $AuthFormFieldCopyWith<AuthFormField> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -47,6 +49,8 @@ class _$AuthFormFieldCopyWithImpl<$Res, $Val extends AuthFormField>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of AuthFormField
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -75,6 +79,8 @@ class _$AuthFormFieldCopyWithImpl<$Res, $Val extends AuthFormField>
     ) as $Val);
   }
 
+  /// Create a copy of AuthFormField
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $FormFieldIdCopyWith<$Res> get id {
@@ -106,6 +112,8 @@ class __$$AuthFormFieldDataImplCopyWithImpl<$Res>
       $Res Function(_$AuthFormFieldDataImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AuthFormField
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -172,7 +180,9 @@ class _$AuthFormFieldDataImpl implements _AuthFormFieldData {
   @override
   int get hashCode => Object.hash(runtimeType, id, name, secured, value);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AuthFormField
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AuthFormFieldDataImplCopyWith<_$AuthFormFieldDataImpl> get copyWith =>
@@ -195,8 +205,11 @@ abstract class _AuthFormFieldData implements AuthFormField {
   bool get secured;
   @override
   String? get value;
+
+  /// Create a copy of AuthFormField
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AuthFormFieldDataImplCopyWith<_$AuthFormFieldDataImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -205,7 +218,9 @@ abstract class _AuthFormFieldData implements AuthFormField {
 mixin _$FormFieldId {
   String get value => throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of FormFieldId
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $FormFieldIdCopyWith<FormFieldId> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -229,6 +244,8 @@ class _$FormFieldIdCopyWithImpl<$Res, $Val extends FormFieldId>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of FormFieldId
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -262,6 +279,8 @@ class __$$FormFieldIdDataImplCopyWithImpl<$Res>
       _$FormFieldIdDataImpl _value, $Res Function(_$FormFieldIdDataImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of FormFieldId
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -300,7 +319,9 @@ class _$FormFieldIdDataImpl implements _FormFieldIdData {
   @override
   int get hashCode => Object.hash(runtimeType, value);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of FormFieldId
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FormFieldIdDataImplCopyWith<_$FormFieldIdDataImpl> get copyWith =>
@@ -313,8 +334,11 @@ abstract class _FormFieldIdData implements FormFieldId {
 
   @override
   String get value;
+
+  /// Create a copy of FormFieldId
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FormFieldIdDataImplCopyWith<_$FormFieldIdDataImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

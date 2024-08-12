@@ -85,6 +85,9 @@ class _$ErrorReportStateCopyWithImpl<$Res, $Val extends ErrorReportState>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of ErrorReportState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -103,6 +106,9 @@ class __$$ErrorReportStateInitialImplCopyWithImpl<$Res>
       _$ErrorReportStateInitialImpl _value,
       $Res Function(_$ErrorReportStateInitialImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of ErrorReportState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -222,6 +228,9 @@ class __$$ErrorReportStateInProgressImplCopyWithImpl<$Res>
       _$ErrorReportStateInProgressImpl _value,
       $Res Function(_$ErrorReportStateInProgressImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of ErrorReportState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -340,6 +349,9 @@ class __$$ErrorReportStateSuccessImplCopyWithImpl<$Res>
       _$ErrorReportStateSuccessImpl _value,
       $Res Function(_$ErrorReportStateSuccessImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of ErrorReportState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -459,6 +471,9 @@ class __$$ErrorReportStateEmailUnsupportedImplCopyWithImpl<$Res>
       _$ErrorReportStateEmailUnsupportedImpl _value,
       $Res Function(_$ErrorReportStateEmailUnsupportedImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of ErrorReportState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc

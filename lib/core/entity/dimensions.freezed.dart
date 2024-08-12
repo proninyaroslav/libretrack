@@ -20,7 +20,9 @@ mixin _$Dimensions {
   UnitOfMeasurement get height => throw _privateConstructorUsedError;
   UnitOfMeasurement get length => throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Dimensions
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $DimensionsCopyWith<Dimensions> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -51,6 +53,8 @@ class _$DimensionsCopyWithImpl<$Res, $Val extends Dimensions>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Dimensions
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -74,6 +78,8 @@ class _$DimensionsCopyWithImpl<$Res, $Val extends Dimensions>
     ) as $Val);
   }
 
+  /// Create a copy of Dimensions
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $UnitOfMeasurementCopyWith<$Res> get width {
@@ -82,6 +88,8 @@ class _$DimensionsCopyWithImpl<$Res, $Val extends Dimensions>
     });
   }
 
+  /// Create a copy of Dimensions
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $UnitOfMeasurementCopyWith<$Res> get height {
@@ -90,6 +98,8 @@ class _$DimensionsCopyWithImpl<$Res, $Val extends Dimensions>
     });
   }
 
+  /// Create a copy of Dimensions
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $UnitOfMeasurementCopyWith<$Res> get length {
@@ -128,6 +138,8 @@ class __$$DimensionsImplCopyWithImpl<$Res>
       _$DimensionsImpl _value, $Res Function(_$DimensionsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Dimensions
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -193,7 +205,9 @@ class _$DimensionsImpl with DiagnosticableTreeMixin implements _Dimensions {
   @override
   int get hashCode => Object.hash(runtimeType, width, height, length);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Dimensions
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DimensionsImplCopyWith<_$DimensionsImpl> get copyWith =>
@@ -212,8 +226,11 @@ abstract class _Dimensions implements Dimensions {
   UnitOfMeasurement get height;
   @override
   UnitOfMeasurement get length;
+
+  /// Create a copy of Dimensions
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DimensionsImplCopyWith<_$DimensionsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

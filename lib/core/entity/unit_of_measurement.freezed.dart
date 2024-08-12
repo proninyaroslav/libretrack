@@ -19,7 +19,9 @@ mixin _$UnitOfMeasurement {
   double get value => throw _privateConstructorUsedError;
   Measurement get measurement => throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UnitOfMeasurement
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $UnitOfMeasurementCopyWith<UnitOfMeasurement> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -43,6 +45,8 @@ class _$UnitOfMeasurementCopyWithImpl<$Res, $Val extends UnitOfMeasurement>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of UnitOfMeasurement
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -81,6 +85,8 @@ class __$$UnitOfMeasurementImplCopyWithImpl<$Res>
       $Res Function(_$UnitOfMeasurementImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UnitOfMeasurement
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -140,7 +146,9 @@ class _$UnitOfMeasurementImpl
   @override
   int get hashCode => Object.hash(runtimeType, value, measurement);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UnitOfMeasurement
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$UnitOfMeasurementImplCopyWith<_$UnitOfMeasurementImpl> get copyWith =>
@@ -157,8 +165,11 @@ abstract class _UnitOfMeasurement implements UnitOfMeasurement {
   double get value;
   @override
   Measurement get measurement;
+
+  /// Create a copy of UnitOfMeasurement
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UnitOfMeasurementImplCopyWith<_$UnitOfMeasurementImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

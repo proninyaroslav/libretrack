@@ -22,7 +22,9 @@ mixin _$ServiceRequest {
   String? get body => throw _privateConstructorUsedError;
   Map<String, String> get headers => throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ServiceRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ServiceRequestCopyWith<ServiceRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -51,6 +53,8 @@ class _$ServiceRequestCopyWithImpl<$Res, $Val extends ServiceRequest>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ServiceRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -109,6 +113,8 @@ class __$$ServiceRequestImplCopyWithImpl<$Res>
       _$ServiceRequestImpl _value, $Res Function(_$ServiceRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ServiceRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -207,7 +213,9 @@ class _$ServiceRequestImpl
   int get hashCode => Object.hash(runtimeType, transactionId, url, method, body,
       const DeepCollectionEquality().hash(_headers));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ServiceRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ServiceRequestImplCopyWith<_$ServiceRequestImpl> get copyWith =>
@@ -233,8 +241,11 @@ abstract class _ServiceRequest implements ServiceRequest {
   String? get body;
   @override
   Map<String, String> get headers;
+
+  /// Create a copy of ServiceRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ServiceRequestImplCopyWith<_$ServiceRequestImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

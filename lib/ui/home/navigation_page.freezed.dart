@@ -18,7 +18,9 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$PageId {
   String get id => throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PageId
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PageIdCopyWith<PageId> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -40,6 +42,8 @@ class _$PageIdCopyWithImpl<$Res, $Val extends PageId>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of PageId
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -72,6 +76,8 @@ class __$$PageIdImplCopyWithImpl<$Res>
       _$PageIdImpl _value, $Res Function(_$PageIdImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of PageId
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -110,7 +116,9 @@ class _$PageIdImpl implements _PageId {
   @override
   int get hashCode => Object.hash(runtimeType, id);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PageId
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PageIdImplCopyWith<_$PageIdImpl> get copyWith =>
@@ -122,8 +130,11 @@ abstract class _PageId implements PageId {
 
   @override
   String get id;
+
+  /// Create a copy of PageId
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PageIdImplCopyWith<_$PageIdImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -140,7 +151,9 @@ mixin _$PageInfo {
   List<Widget>? get contextualActions => throw _privateConstructorUsedError;
   List<Widget>? get actions => throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PageInfo
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PageInfoCopyWith<PageInfo> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -174,6 +187,8 @@ class _$PageInfoCopyWithImpl<$Res, $Val extends PageInfo>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of PageInfo
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -222,6 +237,8 @@ class _$PageInfoCopyWithImpl<$Res, $Val extends PageInfo>
     ) as $Val);
   }
 
+  /// Create a copy of PageInfo
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PageIdCopyWith<$Res> get id {
@@ -230,6 +247,8 @@ class _$PageInfoCopyWithImpl<$Res, $Val extends PageInfo>
     });
   }
 
+  /// Create a copy of PageInfo
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $SheetInfoCopyWith<$Res>? get sheetInfo {
@@ -275,6 +294,8 @@ class __$$PageInfoImplCopyWithImpl<$Res>
       _$PageInfoImpl _value, $Res Function(_$PageInfoImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of PageInfo
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -410,7 +431,9 @@ class _$PageInfoImpl implements _PageInfo {
       const DeepCollectionEquality().hash(_contextualActions),
       const DeepCollectionEquality().hash(_actions));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PageInfo
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PageInfoImplCopyWith<_$PageInfoImpl> get copyWith =>
@@ -444,8 +467,11 @@ abstract class _PageInfo implements PageInfo {
   List<Widget>? get contextualActions;
   @override
   List<Widget>? get actions;
+
+  /// Create a copy of PageInfo
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PageInfoImplCopyWith<_$PageInfoImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -457,7 +483,9 @@ mixin _$SheetInfo {
   IconData get toggleIcon => throw _privateConstructorUsedError;
   Widget? get appBarTitle => throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SheetInfo
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $SheetInfoCopyWith<SheetInfo> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -481,6 +509,8 @@ class _$SheetInfoCopyWithImpl<$Res, $Val extends SheetInfo>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of SheetInfo
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -530,6 +560,8 @@ class __$$SheetInfoImplCopyWithImpl<$Res>
       _$SheetInfoImpl _value, $Res Function(_$SheetInfoImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SheetInfo
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -599,7 +631,9 @@ class _$SheetInfoImpl implements _SheetInfo {
   int get hashCode =>
       Object.hash(runtimeType, name, sheet, toggleIcon, appBarTitle);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SheetInfo
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SheetInfoImplCopyWith<_$SheetInfoImpl> get copyWith =>
@@ -621,8 +655,11 @@ abstract class _SheetInfo implements SheetInfo {
   IconData get toggleIcon;
   @override
   Widget? get appBarTitle;
+
+  /// Create a copy of SheetInfo
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SheetInfoImplCopyWith<_$SheetInfoImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -671,7 +708,9 @@ mixin _$NavItem {
   }) =>
       throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of NavItem
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $NavItemCopyWith<NavItem> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -693,6 +732,8 @@ class _$NavItemCopyWithImpl<$Res, $Val extends NavItem>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of NavItem
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -732,6 +773,8 @@ class __$$NavItemImplCopyWithImpl<$Res>
       _$NavItemImpl _value, $Res Function(_$NavItemImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of NavItem
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -755,6 +798,8 @@ class __$$NavItemImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of NavItem
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PageInfoCopyWith<$Res> get pageInfo {
@@ -796,7 +841,9 @@ class _$NavItemImpl implements _NavItem {
   @override
   int get hashCode => Object.hash(runtimeType, name, icon, pageInfo);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of NavItem
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$NavItemImplCopyWith<_$NavItemImpl> get copyWith =>
@@ -877,8 +924,11 @@ abstract class _NavItem implements NavItem {
   @override
   Widget get icon;
   PageInfo get pageInfo;
+
+  /// Create a copy of NavItem
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$NavItemImplCopyWith<_$NavItemImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -902,6 +952,8 @@ class __$$NavItemActionImplCopyWithImpl<$Res>
       _$NavItemActionImpl _value, $Res Function(_$NavItemActionImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of NavItem
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -958,7 +1010,9 @@ class _$NavItemActionImpl implements _NavItemAction {
   @override
   int get hashCode => Object.hash(runtimeType, name, icon, onPressed);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of NavItem
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$NavItemActionImplCopyWith<_$NavItemActionImpl> get copyWith =>
@@ -1039,8 +1093,11 @@ abstract class _NavItemAction implements NavItem {
   @override
   Widget get icon;
   VoidCallback get onPressed;
+
+  /// Create a copy of NavItem
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$NavItemActionImplCopyWith<_$NavItemActionImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1110,6 +1167,9 @@ class __$BackdropContentTypeCopyWithImpl<$Res,
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of _BackdropContentType
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -1129,6 +1189,9 @@ class __$$BackdropContentTypeDrawerImplCopyWithImpl<$Res>
       _$BackdropContentTypeDrawerImpl _value,
       $Res Function(_$BackdropContentTypeDrawerImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of _BackdropContentType
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -1241,6 +1304,9 @@ class __$$BackdropContentTypeSheetImplCopyWithImpl<$Res>
       _$BackdropContentTypeSheetImpl _value,
       $Res Function(_$BackdropContentTypeSheetImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of _BackdropContentType
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -1353,6 +1419,9 @@ class __$$BackdropContentTypeNoneImplCopyWithImpl<$Res>
       _$BackdropContentTypeNoneImpl _value,
       $Res Function(_$BackdropContentTypeNoneImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of _BackdropContentType
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -1518,6 +1587,9 @@ class __$BackLayerTypeCopyWithImpl<$Res, $Val extends _BackLayerType>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of _BackLayerType
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -1534,6 +1606,9 @@ class __$$BackLayerTypeTopImplCopyWithImpl<$Res>
   __$$BackLayerTypeTopImplCopyWithImpl(_$BackLayerTypeTopImpl _value,
       $Res Function(_$BackLayerTypeTopImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of _BackLayerType
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -1648,6 +1723,9 @@ class __$$BackLayerTypeStartImplCopyWithImpl<$Res>
   __$$BackLayerTypeStartImplCopyWithImpl(_$BackLayerTypeStartImpl _value,
       $Res Function(_$BackLayerTypeStartImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of _BackLayerType
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -1762,6 +1840,9 @@ class __$$BackLayerTypeEndImplCopyWithImpl<$Res>
   __$$BackLayerTypeEndImplCopyWithImpl(_$BackLayerTypeEndImpl _value,
       $Res Function(_$BackLayerTypeEndImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of _BackLayerType
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -1876,6 +1957,9 @@ class __$$BackLayerTypeNoneImplCopyWithImpl<$Res>
   __$$BackLayerTypeNoneImplCopyWithImpl(_$BackLayerTypeNoneImpl _value,
       $Res Function(_$BackLayerTypeNoneImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of _BackLayerType
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -2034,6 +2118,9 @@ class __$AppBarStateCopyWithImpl<$Res, $Val extends _AppBarState>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of _AppBarState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -2050,6 +2137,9 @@ class __$$AppBarStateNormalImplCopyWithImpl<$Res>
   __$$AppBarStateNormalImplCopyWithImpl(_$AppBarStateNormalImpl _value,
       $Res Function(_$AppBarStateNormalImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of _AppBarState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -2156,6 +2246,8 @@ class __$$AppBarStateContextualImplCopyWithImpl<$Res>
       $Res Function(_$AppBarStateContextualImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of _AppBarState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2195,7 +2287,9 @@ class _$AppBarStateContextualImpl implements _AppBarStateContextual {
   @override
   int get hashCode => Object.hash(runtimeType, itemsCount);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of _AppBarState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AppBarStateContextualImplCopyWith<_$AppBarStateContextualImpl>
@@ -2270,7 +2364,10 @@ abstract class _AppBarStateContextual implements _AppBarState {
       _$AppBarStateContextualImpl;
 
   int get itemsCount;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of _AppBarState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AppBarStateContextualImplCopyWith<_$AppBarStateContextualImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

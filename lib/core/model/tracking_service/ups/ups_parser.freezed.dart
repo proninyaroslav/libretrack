@@ -62,7 +62,9 @@ mixin _$DeliveryDetail {
   }) =>
       throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of _DeliveryDetail
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$DeliveryDetailCopyWith<_DeliveryDetail> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -86,6 +88,8 @@ class __$DeliveryDetailCopyWithImpl<$Res, $Val extends _DeliveryDetail>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of _DeliveryDetail
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -121,6 +125,8 @@ class __$$DeliveryDetailDeliveryImplCopyWithImpl<$Res>
       $Res Function(_$DeliveryDetailDeliveryImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of _DeliveryDetail
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -170,7 +176,9 @@ class _$DeliveryDetailDeliveryImpl
   @override
   int get hashCode => Object.hash(runtimeType, dateTime);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of _DeliveryDetail
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DeliveryDetailDeliveryImplCopyWith<_$DeliveryDetailDeliveryImpl>
@@ -252,8 +260,11 @@ abstract class _DeliveryDetailDelivery implements _DeliveryDetail {
 
   @override
   _DateTime get dateTime;
+
+  /// Create a copy of _DeliveryDetail
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DeliveryDetailDeliveryImplCopyWith<_$DeliveryDetailDeliveryImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -279,6 +290,8 @@ class __$$DetailEstimatedDeliveryImplCopyWithImpl<$Res>
       $Res Function(_$DetailEstimatedDeliveryImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of _DeliveryDetail
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -328,7 +341,9 @@ class _$DetailEstimatedDeliveryImpl
   @override
   int get hashCode => Object.hash(runtimeType, dateTime);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of _DeliveryDetail
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DetailEstimatedDeliveryImplCopyWith<_$DetailEstimatedDeliveryImpl>
@@ -410,8 +425,11 @@ abstract class _DetailEstimatedDelivery implements _DeliveryDetail {
 
   @override
   _DateTime get dateTime;
+
+  /// Create a copy of _DeliveryDetail
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DetailEstimatedDeliveryImplCopyWith<_$DetailEstimatedDeliveryImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -437,6 +455,8 @@ class __$$DetailScheduledDeliveryImplCopyWithImpl<$Res>
       $Res Function(_$DetailScheduledDeliveryImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of _DeliveryDetail
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -486,7 +506,9 @@ class _$DetailScheduledDeliveryImpl
   @override
   int get hashCode => Object.hash(runtimeType, dateTime);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of _DeliveryDetail
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DetailScheduledDeliveryImplCopyWith<_$DetailScheduledDeliveryImpl>
@@ -568,8 +590,11 @@ abstract class _DetailScheduledDelivery implements _DeliveryDetail {
 
   @override
   _DateTime get dateTime;
+
+  /// Create a copy of _DeliveryDetail
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DetailScheduledDeliveryImplCopyWith<_$DetailScheduledDeliveryImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -616,7 +641,9 @@ mixin _$ShipmentAddress {
   }) =>
       throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of _ShipmentAddress
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$ShipmentAddressCopyWith<_ShipmentAddress> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -642,6 +669,8 @@ class __$ShipmentAddressCopyWithImpl<$Res, $Val extends _ShipmentAddress>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of _ShipmentAddress
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -655,6 +684,8 @@ class __$ShipmentAddressCopyWithImpl<$Res, $Val extends _ShipmentAddress>
     ) as $Val);
   }
 
+  /// Create a copy of _ShipmentAddress
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $AddressCopyWith<$Res> get address {
@@ -688,6 +719,8 @@ class __$$ShipmentAddressShipperImplCopyWithImpl<$Res>
       $Res Function(_$ShipmentAddressShipperImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of _ShipmentAddress
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -736,7 +769,9 @@ class _$ShipmentAddressShipperImpl
   @override
   int get hashCode => Object.hash(runtimeType, address);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of _ShipmentAddress
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ShipmentAddressShipperImplCopyWith<_$ShipmentAddressShipperImpl>
@@ -812,8 +847,11 @@ abstract class _ShipmentAddressShipper implements _ShipmentAddress {
 
   @override
   Address get address;
+
+  /// Create a copy of _ShipmentAddress
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ShipmentAddressShipperImplCopyWith<_$ShipmentAddressShipperImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -841,6 +879,8 @@ class __$$ShipmentAddressShipToImplCopyWithImpl<$Res>
       $Res Function(_$ShipmentAddressShipToImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of _ShipmentAddress
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -889,7 +929,9 @@ class _$ShipmentAddressShipToImpl
   @override
   int get hashCode => Object.hash(runtimeType, address);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of _ShipmentAddress
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ShipmentAddressShipToImplCopyWith<_$ShipmentAddressShipToImpl>
@@ -965,8 +1007,11 @@ abstract class _ShipmentAddressShipTo implements _ShipmentAddress {
 
   @override
   Address get address;
+
+  /// Create a copy of _ShipmentAddress
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ShipmentAddressShipToImplCopyWith<_$ShipmentAddressShipToImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

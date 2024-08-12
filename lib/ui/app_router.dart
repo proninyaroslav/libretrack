@@ -81,6 +81,26 @@ class SettingsRoutePath with _$SettingsRoutePath {
 
 @freezed
 class RouterState with _$RouterState {
+  const RouterState._();
+
+  ValueKey<String> get key {
+    return when(
+      unknown: () => const ValueKey('UnknownPage'),
+      home: (_) => const ValueKey('HomePage'),
+      addAccount: () => const ValueKey('AddAccountPage'),
+      editAccount: (serviceType) => ValueKey('EditAccountPage_$serviceType'),
+      addParcels: (_) => const ValueKey('AddParcelsPage'),
+      parcelDetails: (trackNumber) =>
+          ValueKey('ParcelDetailsPage_$trackNumber'),
+      addMissingParcel: (_) => const ValueKey('AddParcelsPage'),
+      addParcelAndShow: (_) => const ValueKey('AddParcelsPage'),
+      showAddedParcel: (trackNumber) =>
+          ValueKey('ParcelDetailsPage_$trackNumber'),
+      settings: (_) => const ValueKey('SettingsPage'),
+      about: () => const ValueKey('AboutPage'),
+    );
+  }
+
   const factory RouterState.unknown() = RouterStateUnknown;
 
   const factory RouterState.home(
@@ -219,7 +239,9 @@ class AppRouterDelegate extends RouterDelegate<AppRoutePath>
       reportsRouteUpdateToEngine: true,
       pages: pages,
       onDidRemovePage: (page) {
-        _stateStack.pop();
+        if (page.key == _stateStack.peek()?.key) {
+          _stateStack.pop();
+        }
       },
     );
   }
@@ -235,28 +257,31 @@ class AppRouterDelegate extends RouterDelegate<AppRoutePath>
         },
         home: (subRoute) {
           pages.popAll();
-          pages.push(_buildHomePage(subRoute));
+          pages.push(_buildHomePage(state.key, subRoute));
         },
         addAccount: () {
-          pages.push(_buildAddAccountPage(context));
+          pages.push(_buildAddAccountPage(state.key, context));
         },
         editAccount: (serviceType) {
-          pages.push(_buildEditAccountPage(context, serviceType));
+          pages.push(_buildEditAccountPage(state.key, context, serviceType));
         },
         addParcels: (initialTrackNumbers) {
-          pages.push(_buildAddParcelsPage(context, initialTrackNumbers));
+          pages.push(
+              _buildAddParcelsPage(state.key, context, initialTrackNumbers));
         },
         parcelDetails: (trackNumber) {
-          pages.push(_buildParcelDetailsPage(context, trackNumber));
+          pages.push(_buildParcelDetailsPage(state.key, context, trackNumber));
         },
         addMissingParcel: (trackNumber) {
           pages.push(
-            _buildAddParcelsPage(context, TrackingNumbers(value: trackNumber)),
+            _buildAddParcelsPage(
+                state.key, context, TrackingNumbers(value: trackNumber)),
           );
         },
         addParcelAndShow: (trackNumber) {
           pages.push(
-            _buildAddParcelsPage(context, TrackingNumbers(value: trackNumber)),
+            _buildAddParcelsPage(
+                state.key, context, TrackingNumbers(value: trackNumber)),
           );
         },
         showAddedParcel: (trackNumber) {
@@ -264,13 +289,13 @@ class AppRouterDelegate extends RouterDelegate<AppRoutePath>
             // Remove current details dialog
             pages.pop();
           }
-          pages.push(_buildParcelDetailsPage(context, trackNumber));
+          pages.push(_buildParcelDetailsPage(state.key, context, trackNumber));
         },
         settings: (subRoute) {
-          pages.push(_buildSettings(context, subRoute: subRoute));
+          pages.push(_buildSettings(state.key, context, subRoute: subRoute));
         },
         about: () {
-          pages.push(_buildAboutPage(context));
+          pages.push(_buildAboutPage(state.key, context));
         },
       );
     }
@@ -278,9 +303,9 @@ class AppRouterDelegate extends RouterDelegate<AppRoutePath>
     return pages.toList();
   }
 
-  Page _buildHomePage(HomeRoutePath subRoute) {
+  Page _buildHomePage(ValueKey key, HomeRoutePath subRoute) {
     return MaterialPage(
-      key: const ValueKey('HomePage'),
+      key: key,
       child: MultiBlocProvider(
         providers: [
           BlocProvider(
@@ -317,9 +342,9 @@ class AppRouterDelegate extends RouterDelegate<AppRoutePath>
     );
   }
 
-  Page _buildAddAccountPage(BuildContext context) {
+  Page _buildAddAccountPage(ValueKey key, BuildContext context) {
     return AdaptiveScaffoldPage(
-      key: const ValueKey('AddAccountPage'),
+      key: key,
       child: MultiBlocProvider(
         providers: [
           BlocProvider(
@@ -338,11 +363,12 @@ class AppRouterDelegate extends RouterDelegate<AppRoutePath>
   }
 
   Page _buildEditAccountPage(
+    ValueKey key,
     BuildContext context,
     TrackingServiceType serviceType,
   ) {
     return DialogPage(
-      key: ValueKey('EditAccountPage_$serviceType'),
+      key: key,
       child: MultiBlocProvider(
         providers: [
           BlocProvider(
@@ -363,11 +389,12 @@ class AppRouterDelegate extends RouterDelegate<AppRoutePath>
   }
 
   Page _buildAddParcelsPage(
+    ValueKey key,
     BuildContext context,
     TrackingNumbers? initialTrackNumbers,
   ) {
     return AdaptiveScaffoldPage(
-      key: const ValueKey('AddParcelsPage'),
+      key: key,
       child: MultiBlocProvider(
         providers: [
           BlocProvider(
@@ -398,11 +425,12 @@ class AppRouterDelegate extends RouterDelegate<AppRoutePath>
   }
 
   Page _buildParcelDetailsPage(
+    ValueKey key,
     BuildContext context,
     String trackNumber,
   ) {
     return AdaptiveScaffoldPage(
-      key: ValueKey('ParcelDetailsPage_$trackNumber'),
+      key: key,
       child: MultiBlocProvider(
         providers: [
           BlocProvider(
@@ -435,11 +463,12 @@ class AppRouterDelegate extends RouterDelegate<AppRoutePath>
   }
 
   Page _buildSettings(
+    ValueKey key,
     BuildContext context, {
     SettingsRoutePath? subRoute,
   }) {
     return MaterialPage(
-      key: const ValueKey('SettingsPage'),
+      key: key,
       child: MultiBlocProvider(
         providers: [
           BlocProvider(
@@ -454,9 +483,9 @@ class AppRouterDelegate extends RouterDelegate<AppRoutePath>
     );
   }
 
-  Page _buildAboutPage(BuildContext context) {
+  Page _buildAboutPage(ValueKey key, BuildContext context) {
     return DialogPage(
-      key: const ValueKey('AboutPage'),
+      key: key,
       child: BlocProvider(
         create: (context) => getIt<AboutCubit>(),
         child: const AboutPage(),

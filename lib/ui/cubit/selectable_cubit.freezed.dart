@@ -78,6 +78,9 @@ class _$SelectableStateCopyWithImpl<T, $Res, $Val extends SelectableState<T>>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of SelectableState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -97,6 +100,9 @@ class __$$SelectableStateInitialImplCopyWithImpl<T, $Res>
       _$SelectableStateInitialImpl<T> _value,
       $Res Function(_$SelectableStateInitialImpl<T>) _then)
       : super(_value, _then);
+
+  /// Create a copy of SelectableState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -209,6 +215,9 @@ class __$$SelectableStateNoSelectionImplCopyWithImpl<T, $Res>
       _$SelectableStateNoSelectionImpl<T> _value,
       $Res Function(_$SelectableStateNoSelectionImpl<T>) _then)
       : super(_value, _then);
+
+  /// Create a copy of SelectableState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -326,6 +335,8 @@ class __$$SelectableStateSelectedImplCopyWithImpl<T, $Res>
       $Res Function(_$SelectableStateSelectedImpl<T>) _then)
       : super(_value, _then);
 
+  /// Create a copy of SelectableState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -370,7 +381,9 @@ class _$SelectableStateSelectedImpl<T> implements SelectableStateSelected<T> {
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(_items));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SelectableState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SelectableStateSelectedImplCopyWith<T, _$SelectableStateSelectedImpl<T>>
@@ -451,7 +464,10 @@ abstract class SelectableStateSelected<T> implements SelectableState<T> {
       _$SelectableStateSelectedImpl<T>;
 
   Set<T> get items;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of SelectableState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SelectableStateSelectedImplCopyWith<T, _$SelectableStateSelectedImpl<T>>
       get copyWith => throw _privateConstructorUsedError;
 }

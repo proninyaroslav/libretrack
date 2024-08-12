@@ -85,6 +85,9 @@ class _$ServiceInfoStateCopyWithImpl<$Res, $Val extends ServiceInfoState>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of ServiceInfoState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -103,6 +106,9 @@ class __$$ServiceInfoStateInitialImplCopyWithImpl<$Res>
       _$ServiceInfoStateInitialImpl _value,
       $Res Function(_$ServiceInfoStateInitialImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of ServiceInfoState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -233,6 +239,8 @@ class __$$ServiceInfoStateLoadedImplCopyWithImpl<$Res>
       $Res Function(_$ServiceInfoStateLoadedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ServiceInfoState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -304,7 +312,9 @@ class _$ServiceInfoStateLoadedImpl
   int get hashCode => Object.hash(runtimeType, info,
       const DeepCollectionEquality().hash(authData), isAuthStorageSecured);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ServiceInfoState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ServiceInfoStateLoadedImplCopyWith<_$ServiceInfoStateLoadedImpl>
@@ -396,7 +406,10 @@ abstract class _ServiceInfoStateLoaded implements ServiceInfoState {
   TrackingServiceInfo get info;
   AuthData get authData;
   bool get isAuthStorageSecured;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ServiceInfoState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ServiceInfoStateLoadedImplCopyWith<_$ServiceInfoStateLoadedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -423,6 +436,8 @@ class __$$ServiceInfoStateLoadingFailedImplCopyWithImpl<$Res>
       $Res Function(_$ServiceInfoStateLoadingFailedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ServiceInfoState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -436,6 +451,8 @@ class __$$ServiceInfoStateLoadingFailedImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of ServiceInfoState
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $StorageErrorCopyWith<$Res>? get error {
@@ -483,7 +500,9 @@ class _$ServiceInfoStateLoadingFailedImpl
   @override
   int get hashCode => Object.hash(runtimeType, error);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ServiceInfoState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ServiceInfoStateLoadingFailedImplCopyWith<
@@ -572,7 +591,10 @@ abstract class ServiceInfoStateLoadingFailed implements ServiceInfoState {
       _$ServiceInfoStateLoadingFailedImpl;
 
   StorageError? get error;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ServiceInfoState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ServiceInfoStateLoadingFailedImplCopyWith<
           _$ServiceInfoStateLoadingFailedImpl>
       get copyWith => throw _privateConstructorUsedError;

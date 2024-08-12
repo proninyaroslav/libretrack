@@ -23,8 +23,12 @@ mixin _$Locale {
   String get languageCode => throw _privateConstructorUsedError;
   String? get countryCode => throw _privateConstructorUsedError;
 
+  /// Serializes this Locale to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Locale
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $LocaleCopyWith<Locale> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -46,6 +50,8 @@ class _$LocaleCopyWithImpl<$Res, $Val extends Locale>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Locale
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -83,6 +89,8 @@ class __$$LocaleImplCopyWithImpl<$Res>
       _$LocaleImpl _value, $Res Function(_$LocaleImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Locale
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -131,11 +139,13 @@ class _$LocaleImpl extends _Locale {
                 other.countryCode == countryCode));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, languageCode, countryCode);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Locale
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$LocaleImplCopyWith<_$LocaleImpl> get copyWith =>
@@ -160,8 +170,11 @@ abstract class _Locale extends Locale {
   String get languageCode;
   @override
   String? get countryCode;
+
+  /// Create a copy of Locale
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$LocaleImplCopyWith<_$LocaleImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

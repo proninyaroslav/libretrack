@@ -78,6 +78,9 @@ class _$AccountsStateCopyWithImpl<$Res, $Val extends AccountsState>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of AccountsState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -94,6 +97,9 @@ class __$$AccountsStateInitialImplCopyWithImpl<$Res>
   __$$AccountsStateInitialImplCopyWithImpl(_$AccountsStateInitialImpl _value,
       $Res Function(_$AccountsStateInitialImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of AccountsState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -214,6 +220,8 @@ class __$$AccountsStateLoadedImplCopyWithImpl<$Res>
       $Res Function(_$AccountsStateLoadedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AccountsState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -270,7 +278,9 @@ class _$AccountsStateLoadedImpl
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(_serviceList));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AccountsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AccountsStateLoadedImplCopyWith<_$AccountsStateLoadedImpl> get copyWith =>
@@ -351,7 +361,10 @@ abstract class AccountsStateLoaded implements AccountsState {
       final List<TrackingServiceInfo> serviceList) = _$AccountsStateLoadedImpl;
 
   List<TrackingServiceInfo> get serviceList;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AccountsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AccountsStateLoadedImplCopyWith<_$AccountsStateLoadedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -377,6 +390,8 @@ class __$$AccountsStateLoadingFailedImplCopyWithImpl<$Res>
       $Res Function(_$AccountsStateLoadingFailedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AccountsState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -390,6 +405,8 @@ class __$$AccountsStateLoadingFailedImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of AccountsState
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $StorageErrorCopyWith<$Res> get error {
@@ -433,7 +450,9 @@ class _$AccountsStateLoadingFailedImpl
   @override
   int get hashCode => Object.hash(runtimeType, error);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AccountsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AccountsStateLoadingFailedImplCopyWith<_$AccountsStateLoadingFailedImpl>
@@ -514,7 +533,10 @@ abstract class AccountsStateLoadingFailed implements AccountsState {
       {required final StorageError error}) = _$AccountsStateLoadingFailedImpl;
 
   StorageError get error;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AccountsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AccountsStateLoadingFailedImplCopyWith<_$AccountsStateLoadingFailedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

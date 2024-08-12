@@ -19,7 +19,9 @@ mixin _$RussianPostAuthData {
   String get login => throw _privateConstructorUsedError;
   String get password => throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of RussianPostAuthData
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $RussianPostAuthDataCopyWith<RussianPostAuthData> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -43,6 +45,8 @@ class _$RussianPostAuthDataCopyWithImpl<$Res, $Val extends RussianPostAuthData>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of RussianPostAuthData
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -81,6 +85,8 @@ class __$$RussianPostAuthDataImplCopyWithImpl<$Res>
       $Res Function(_$RussianPostAuthDataImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of RussianPostAuthData
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -139,7 +145,9 @@ class _$RussianPostAuthDataImpl extends _RussianPostAuthData
   @override
   int get hashCode => Object.hash(runtimeType, login, password);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of RussianPostAuthData
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$RussianPostAuthDataImplCopyWith<_$RussianPostAuthDataImpl> get copyWith =>
@@ -157,8 +165,11 @@ abstract class _RussianPostAuthData extends RussianPostAuthData {
   String get login;
   @override
   String get password;
+
+  /// Create a copy of RussianPostAuthData
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$RussianPostAuthDataImplCopyWith<_$RussianPostAuthDataImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

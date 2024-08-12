@@ -72,6 +72,9 @@ class _$WorkResultCopyWithImpl<$Res, $Val extends WorkResult>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of WorkResult
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -88,6 +91,9 @@ class __$$WorkResultSuccessImplCopyWithImpl<$Res>
   __$$WorkResultSuccessImplCopyWithImpl(_$WorkResultSuccessImpl _value,
       $Res Function(_$WorkResultSuccessImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of WorkResult
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -198,6 +204,9 @@ class __$$WorkResultFailureImplCopyWithImpl<$Res>
   __$$WorkResultFailureImplCopyWithImpl(_$WorkResultFailureImpl _value,
       $Res Function(_$WorkResultFailureImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of WorkResult
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -301,7 +310,9 @@ mixin _$WorkParams {
   ExistingWorkPolicy get existingWorkPolicy =>
       throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of WorkParams
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $WorkParamsCopyWith<WorkParams> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -330,6 +341,8 @@ class _$WorkParamsCopyWithImpl<$Res, $Val extends WorkParams>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of WorkParams
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -353,6 +366,8 @@ class _$WorkParamsCopyWithImpl<$Res, $Val extends WorkParams>
     ) as $Val);
   }
 
+  /// Create a copy of WorkParams
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $WorkConstraintsCopyWith<$Res>? get constraints {
@@ -391,6 +406,8 @@ class __$$WorkParamsImplCopyWithImpl<$Res>
       _$WorkParamsImpl _value, $Res Function(_$WorkParamsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of WorkParams
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -463,7 +480,9 @@ class _$WorkParamsImpl with DiagnosticableTreeMixin implements _WorkParams {
   int get hashCode =>
       Object.hash(runtimeType, constraints, inputData, existingWorkPolicy);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of WorkParams
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$WorkParamsImplCopyWith<_$WorkParamsImpl> get copyWith =>
@@ -482,8 +501,11 @@ abstract class _WorkParams implements WorkParams {
   WorkData? get inputData;
   @override
   ExistingWorkPolicy get existingWorkPolicy;
+
+  /// Create a copy of WorkParams
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$WorkParamsImplCopyWith<_$WorkParamsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -492,7 +514,9 @@ abstract class _WorkParams implements WorkParams {
 mixin _$WorkConstraints {
   NetworkType? get networkType => throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of WorkConstraints
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $WorkConstraintsCopyWith<WorkConstraints> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -516,6 +540,8 @@ class _$WorkConstraintsCopyWithImpl<$Res, $Val extends WorkConstraints>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of WorkConstraints
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -549,6 +575,8 @@ class __$$WorkConstraintsImplCopyWithImpl<$Res>
       _$WorkConstraintsImpl _value, $Res Function(_$WorkConstraintsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of WorkConstraints
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -598,7 +626,9 @@ class _$WorkConstraintsImpl
   @override
   int get hashCode => Object.hash(runtimeType, networkType);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of WorkConstraints
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$WorkConstraintsImplCopyWith<_$WorkConstraintsImpl> get copyWith =>
@@ -612,8 +642,11 @@ abstract class _WorkConstraints implements WorkConstraints {
 
   @override
   NetworkType? get networkType;
+
+  /// Create a copy of WorkConstraints
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$WorkConstraintsImplCopyWith<_$WorkConstraintsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

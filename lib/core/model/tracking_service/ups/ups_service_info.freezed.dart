@@ -20,7 +20,9 @@ mixin _$UPSAuthData {
   String get password => throw _privateConstructorUsedError;
   String get accessLicenseNumber => throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UPSAuthData
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $UPSAuthDataCopyWith<UPSAuthData> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -44,6 +46,8 @@ class _$UPSAuthDataCopyWithImpl<$Res, $Val extends UPSAuthData>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of UPSAuthData
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -87,6 +91,8 @@ class __$$UPSAuthDataImplCopyWithImpl<$Res>
       _$UPSAuthDataImpl _value, $Res Function(_$UPSAuthDataImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UPSAuthData
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -159,7 +165,9 @@ class _$UPSAuthDataImpl extends _UPSAuthData with DiagnosticableTreeMixin {
   int get hashCode =>
       Object.hash(runtimeType, username, password, accessLicenseNumber);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UPSAuthData
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$UPSAuthDataImplCopyWith<_$UPSAuthDataImpl> get copyWith =>
@@ -179,8 +187,11 @@ abstract class _UPSAuthData extends UPSAuthData {
   String get password;
   @override
   String get accessLicenseNumber;
+
+  /// Create a copy of UPSAuthData
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UPSAuthDataImplCopyWith<_$UPSAuthDataImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

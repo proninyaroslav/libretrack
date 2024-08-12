@@ -79,6 +79,9 @@ class __$SettingsRouterStateCopyWithImpl<$Res,
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of _SettingsRouterState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -98,6 +101,9 @@ class __$$SettingsRouterStateHomeImplCopyWithImpl<$Res>
       _$SettingsRouterStateHomeImpl _value,
       $Res Function(_$SettingsRouterStateHomeImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of _SettingsRouterState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -218,6 +224,9 @@ class __$$SettingsRouterStateAppearanceImplCopyWithImpl<$Res>
       _$SettingsRouterStateAppearanceImpl _value,
       $Res Function(_$SettingsRouterStateAppearanceImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of _SettingsRouterState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -340,6 +349,9 @@ class __$$SettingsRouterStateBehaviorImplCopyWithImpl<$Res>
       _$SettingsRouterStateBehaviorImpl _value,
       $Res Function(_$SettingsRouterStateBehaviorImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of _SettingsRouterState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc

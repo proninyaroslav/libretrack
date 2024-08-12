@@ -244,6 +244,9 @@ class _$DetailsActionsStateCopyWithImpl<$Res, $Val extends DetailsActionsState>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of DetailsActionsState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -263,6 +266,9 @@ class __$$DetailsActionsStateInitialImplCopyWithImpl<$Res>
       _$DetailsActionsStateInitialImpl _value,
       $Res Function(_$DetailsActionsStateInitialImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of DetailsActionsState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -541,6 +547,9 @@ class __$$DetailsActionsStateDeletingImplCopyWithImpl<$Res>
       _$DetailsActionsStateDeletingImpl _value,
       $Res Function(_$DetailsActionsStateDeletingImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of DetailsActionsState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -820,6 +829,9 @@ class __$$DetailsActionsStateDeleteSuccessImplCopyWithImpl<$Res>
       _$DetailsActionsStateDeleteSuccessImpl _value,
       $Res Function(_$DetailsActionsStateDeleteSuccessImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of DetailsActionsState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -1105,6 +1117,8 @@ class __$$DetailsActionsStateDeleteFailedImplCopyWithImpl<$Res>
       $Res Function(_$DetailsActionsStateDeleteFailedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of DetailsActionsState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1118,6 +1132,8 @@ class __$$DetailsActionsStateDeleteFailedImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of DetailsActionsState
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $StorageErrorCopyWith<$Res> get error {
@@ -1152,7 +1168,9 @@ class _$DetailsActionsStateDeleteFailedImpl
   @override
   int get hashCode => Object.hash(runtimeType, error);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of DetailsActionsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DetailsActionsStateDeleteFailedImplCopyWith<
@@ -1401,7 +1419,10 @@ abstract class DetailsActionsStateDeleteFailed implements DetailsActionsState {
       _$DetailsActionsStateDeleteFailedImpl;
 
   StorageError get error;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of DetailsActionsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DetailsActionsStateDeleteFailedImplCopyWith<
           _$DetailsActionsStateDeleteFailedImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -1424,6 +1445,9 @@ class __$$DetailsActionsStateMarkingAsReadImplCopyWithImpl<$Res>
       _$DetailsActionsStateMarkingAsReadImpl _value,
       $Res Function(_$DetailsActionsStateMarkingAsReadImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of DetailsActionsState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -1704,6 +1728,9 @@ class __$$DetailsActionsStateMarkAsReadSuccessImplCopyWithImpl<$Res>
       _$DetailsActionsStateMarkAsReadSuccessImpl _value,
       $Res Function(_$DetailsActionsStateMarkAsReadSuccessImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of DetailsActionsState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -1990,6 +2017,8 @@ class __$$DetailsActionsStateMarkAsReadFailedImplCopyWithImpl<$Res>
       $Res Function(_$DetailsActionsStateMarkAsReadFailedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of DetailsActionsState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2003,6 +2032,8 @@ class __$$DetailsActionsStateMarkAsReadFailedImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of DetailsActionsState
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $StorageErrorCopyWith<$Res> get error {
@@ -2037,7 +2068,9 @@ class _$DetailsActionsStateMarkAsReadFailedImpl
   @override
   int get hashCode => Object.hash(runtimeType, error);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of DetailsActionsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DetailsActionsStateMarkAsReadFailedImplCopyWith<
@@ -2287,7 +2320,10 @@ abstract class DetailsActionsStateMarkAsReadFailed
       _$DetailsActionsStateMarkAsReadFailedImpl;
 
   StorageError get error;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of DetailsActionsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DetailsActionsStateMarkAsReadFailedImplCopyWith<
           _$DetailsActionsStateMarkAsReadFailedImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -2310,6 +2346,9 @@ class __$$DetailsActionsStateMovingToActiveImplCopyWithImpl<$Res>
       _$DetailsActionsStateMovingToActiveImpl _value,
       $Res Function(_$DetailsActionsStateMovingToActiveImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of DetailsActionsState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -2591,6 +2630,9 @@ class __$$DetailsActionsStateMoveToActiveSuccessImplCopyWithImpl<$Res>
       _$DetailsActionsStateMoveToActiveSuccessImpl _value,
       $Res Function(_$DetailsActionsStateMoveToActiveSuccessImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of DetailsActionsState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -2877,6 +2919,8 @@ class __$$DetailsActionsStateMoveToActiveFailedImplCopyWithImpl<$Res>
       $Res Function(_$DetailsActionsStateMoveToActiveFailedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of DetailsActionsState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2890,6 +2934,8 @@ class __$$DetailsActionsStateMoveToActiveFailedImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of DetailsActionsState
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $StorageErrorCopyWith<$Res> get error {
@@ -2924,7 +2970,9 @@ class _$DetailsActionsStateMoveToActiveFailedImpl
   @override
   int get hashCode => Object.hash(runtimeType, error);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of DetailsActionsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DetailsActionsStateMoveToActiveFailedImplCopyWith<
@@ -3174,7 +3222,10 @@ abstract class DetailsActionsStateMoveToActiveFailed
       _$DetailsActionsStateMoveToActiveFailedImpl;
 
   StorageError get error;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of DetailsActionsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DetailsActionsStateMoveToActiveFailedImplCopyWith<
           _$DetailsActionsStateMoveToActiveFailedImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -3197,6 +3248,9 @@ class __$$DetailsActionsStateMovingToArchiveImplCopyWithImpl<$Res>
       _$DetailsActionsStateMovingToArchiveImpl _value,
       $Res Function(_$DetailsActionsStateMovingToArchiveImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of DetailsActionsState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -3478,6 +3532,9 @@ class __$$DetailsActionsStateMoveToArchiveSuccessImplCopyWithImpl<$Res>
       _$DetailsActionsStateMoveToArchiveSuccessImpl _value,
       $Res Function(_$DetailsActionsStateMoveToArchiveSuccessImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of DetailsActionsState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -3764,6 +3821,8 @@ class __$$DetailsActionsStateMoveToArchiveFailedImplCopyWithImpl<$Res>
       $Res Function(_$DetailsActionsStateMoveToArchiveFailedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of DetailsActionsState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3777,6 +3836,8 @@ class __$$DetailsActionsStateMoveToArchiveFailedImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of DetailsActionsState
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $StorageErrorCopyWith<$Res> get error {
@@ -3811,7 +3872,9 @@ class _$DetailsActionsStateMoveToArchiveFailedImpl
   @override
   int get hashCode => Object.hash(runtimeType, error);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of DetailsActionsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DetailsActionsStateMoveToArchiveFailedImplCopyWith<
@@ -4062,7 +4125,10 @@ abstract class DetailsActionsStateMoveToArchiveFailed
       _$DetailsActionsStateMoveToArchiveFailedImpl;
 
   StorageError get error;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of DetailsActionsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DetailsActionsStateMoveToArchiveFailedImplCopyWith<
           _$DetailsActionsStateMoveToArchiveFailedImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -4085,6 +4151,9 @@ class __$$DetailsActionsStateRefreshingImplCopyWithImpl<$Res>
       _$DetailsActionsStateRefreshingImpl _value,
       $Res Function(_$DetailsActionsStateRefreshingImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of DetailsActionsState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -4365,6 +4434,9 @@ class __$$DetailsActionsStateRefreshSuccessImplCopyWithImpl<$Res>
       _$DetailsActionsStateRefreshSuccessImpl _value,
       $Res Function(_$DetailsActionsStateRefreshSuccessImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of DetailsActionsState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -4651,6 +4723,8 @@ class __$$DetailsActionsStateRefreshFailedImplCopyWithImpl<$Res>
       $Res Function(_$DetailsActionsStateRefreshFailedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of DetailsActionsState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -4664,6 +4738,8 @@ class __$$DetailsActionsStateRefreshFailedImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of DetailsActionsState
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $StorageErrorCopyWith<$Res> get error {
@@ -4698,7 +4774,9 @@ class _$DetailsActionsStateRefreshFailedImpl
   @override
   int get hashCode => Object.hash(runtimeType, error);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of DetailsActionsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DetailsActionsStateRefreshFailedImplCopyWith<
@@ -4947,7 +5025,10 @@ abstract class DetailsActionsStateRefreshFailed implements DetailsActionsState {
       _$DetailsActionsStateRefreshFailedImpl;
 
   StorageError get error;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of DetailsActionsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DetailsActionsStateRefreshFailedImplCopyWith<
           _$DetailsActionsStateRefreshFailedImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -4973,6 +5054,8 @@ class __$$DetailsActionsStateRefreshFreqLimitedImplCopyWithImpl<$Res>
       $Res Function(_$DetailsActionsStateRefreshFreqLimitedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of DetailsActionsState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -5014,7 +5097,9 @@ class _$DetailsActionsStateRefreshFreqLimitedImpl
   @override
   int get hashCode => Object.hash(runtimeType, remainingTime);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of DetailsActionsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DetailsActionsStateRefreshFreqLimitedImplCopyWith<
@@ -5264,7 +5349,10 @@ abstract class DetailsActionsStateRefreshFreqLimited
       _$DetailsActionsStateRefreshFreqLimitedImpl;
 
   Duration get remainingTime;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of DetailsActionsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DetailsActionsStateRefreshFreqLimitedImplCopyWith<
           _$DetailsActionsStateRefreshFreqLimitedImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -5287,6 +5375,9 @@ class __$$DetailsActionsStateSharingStringImplCopyWithImpl<$Res>
       _$DetailsActionsStateSharingStringImpl _value,
       $Res Function(_$DetailsActionsStateSharingStringImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of DetailsActionsState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -5570,6 +5661,8 @@ class __$$DetailsActionsStateShareStringSuccessImplCopyWithImpl<$Res>
       $Res Function(_$DetailsActionsStateShareStringSuccessImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of DetailsActionsState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -5609,7 +5702,9 @@ class _$DetailsActionsStateShareStringSuccessImpl
   @override
   int get hashCode => Object.hash(runtimeType, text);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of DetailsActionsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DetailsActionsStateShareStringSuccessImplCopyWith<
@@ -5859,7 +5954,10 @@ abstract class DetailsActionsStateShareStringSuccess
       _$DetailsActionsStateShareStringSuccessImpl;
 
   String get text;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of DetailsActionsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DetailsActionsStateShareStringSuccessImplCopyWith<
           _$DetailsActionsStateShareStringSuccessImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -5882,6 +5980,9 @@ class __$$DetailsActionsStateCopyingTrackImplCopyWithImpl<$Res>
       _$DetailsActionsStateCopyingTrackImpl _value,
       $Res Function(_$DetailsActionsStateCopyingTrackImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of DetailsActionsState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -6165,6 +6266,8 @@ class __$$DetailsActionsStateCopyTrackSuccessImplCopyWithImpl<$Res>
       $Res Function(_$DetailsActionsStateCopyTrackSuccessImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of DetailsActionsState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -6205,7 +6308,9 @@ class _$DetailsActionsStateCopyTrackSuccessImpl
   @override
   int get hashCode => Object.hash(runtimeType, trackNumber);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of DetailsActionsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DetailsActionsStateCopyTrackSuccessImplCopyWith<
@@ -6455,7 +6560,10 @@ abstract class DetailsActionsStateCopyTrackSuccess
       _$DetailsActionsStateCopyTrackSuccessImpl;
 
   String get trackNumber;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of DetailsActionsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DetailsActionsStateCopyTrackSuccessImplCopyWith<
           _$DetailsActionsStateCopyTrackSuccessImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -6478,6 +6586,9 @@ class __$$DetailsActionsStateActivatingImplCopyWithImpl<$Res>
       _$DetailsActionsStateActivatingImpl _value,
       $Res Function(_$DetailsActionsStateActivatingImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of DetailsActionsState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -6758,6 +6869,9 @@ class __$$DetailsActionsStateActivateSuccessImplCopyWithImpl<$Res>
       _$DetailsActionsStateActivateSuccessImpl _value,
       $Res Function(_$DetailsActionsStateActivateSuccessImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of DetailsActionsState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -7044,6 +7158,8 @@ class __$$DetailsActionsStateActivateFailedImplCopyWithImpl<$Res>
       $Res Function(_$DetailsActionsStateActivateFailedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of DetailsActionsState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -7057,6 +7173,8 @@ class __$$DetailsActionsStateActivateFailedImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of DetailsActionsState
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $StorageErrorCopyWith<$Res> get error {
@@ -7091,7 +7209,9 @@ class _$DetailsActionsStateActivateFailedImpl
   @override
   int get hashCode => Object.hash(runtimeType, error);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of DetailsActionsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DetailsActionsStateActivateFailedImplCopyWith<
@@ -7341,7 +7461,10 @@ abstract class DetailsActionsStateActivateFailed
       _$DetailsActionsStateActivateFailedImpl;
 
   StorageError get error;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of DetailsActionsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DetailsActionsStateActivateFailedImplCopyWith<
           _$DetailsActionsStateActivateFailedImpl>
       get copyWith => throw _privateConstructorUsedError;

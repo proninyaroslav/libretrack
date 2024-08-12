@@ -21,7 +21,9 @@ mixin _$ShipmentStatusMetadata {
   String get emoji => throw _privateConstructorUsedError;
   String? get localizedName => throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ShipmentStatusMetadata
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ShipmentStatusMetadataCopyWith<ShipmentStatusMetadata> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -52,6 +54,8 @@ class _$ShipmentStatusMetadataCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ShipmentStatusMetadata
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -80,6 +84,8 @@ class _$ShipmentStatusMetadataCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of ShipmentStatusMetadata
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $RRectIconDataCopyWith<$Res> get iconData {
@@ -118,6 +124,8 @@ class __$$ShipmentStatusMetadataImplCopyWithImpl<$Res>
       $Res Function(_$ShipmentStatusMetadataImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ShipmentStatusMetadata
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -187,7 +195,9 @@ class _$ShipmentStatusMetadataImpl implements _ShipmentStatusMetadata {
   int get hashCode =>
       Object.hash(runtimeType, type, iconData, emoji, localizedName);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ShipmentStatusMetadata
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ShipmentStatusMetadataImplCopyWith<_$ShipmentStatusMetadataImpl>
@@ -210,8 +220,11 @@ abstract class _ShipmentStatusMetadata implements ShipmentStatusMetadata {
   String get emoji;
   @override
   String? get localizedName;
+
+  /// Create a copy of ShipmentStatusMetadata
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ShipmentStatusMetadataImplCopyWith<_$ShipmentStatusMetadataImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

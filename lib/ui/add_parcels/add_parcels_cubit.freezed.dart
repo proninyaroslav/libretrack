@@ -118,6 +118,9 @@ class _$AddParcelsStateCopyWithImpl<$Res, $Val extends AddParcelsState>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of AddParcelsState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -142,6 +145,8 @@ class __$$AddParcelsStateInitialImplCopyWithImpl<$Res>
       $Res Function(_$AddParcelsStateInitialImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AddParcelsState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -160,6 +165,8 @@ class __$$AddParcelsStateInitialImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of AddParcelsState
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $TrackingNumbersCopyWith<$Res> get trackingNumbers {
@@ -168,6 +175,8 @@ class __$$AddParcelsStateInitialImplCopyWithImpl<$Res>
     });
   }
 
+  /// Create a copy of AddParcelsState
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ParcelNamesCopyWith<$Res> get parcelNames {
@@ -221,7 +230,9 @@ class _$AddParcelsStateInitialImpl
   @override
   int get hashCode => Object.hash(runtimeType, trackingNumbers, parcelNames);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AddParcelsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AddParcelsStateInitialImplCopyWith<_$AddParcelsStateInitialImpl>
@@ -344,7 +355,10 @@ abstract class AddParcelsStateInitial implements AddParcelsState {
 
   TrackingNumbers get trackingNumbers;
   ParcelNames get parcelNames;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AddParcelsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AddParcelsStateInitialImplCopyWith<_$AddParcelsStateInitialImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -372,6 +386,8 @@ class __$$AddParcelsStateFieldChangedImplCopyWithImpl<$Res>
       $Res Function(_$AddParcelsStateFieldChangedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AddParcelsState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -390,6 +406,8 @@ class __$$AddParcelsStateFieldChangedImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of AddParcelsState
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $TrackingNumbersCopyWith<$Res> get trackingNumbers {
@@ -398,6 +416,8 @@ class __$$AddParcelsStateFieldChangedImplCopyWithImpl<$Res>
     });
   }
 
+  /// Create a copy of AddParcelsState
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ParcelNamesCopyWith<$Res> get parcelNames {
@@ -448,7 +468,9 @@ class _$AddParcelsStateFieldChangedImpl
   @override
   int get hashCode => Object.hash(runtimeType, trackingNumbers, parcelNames);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AddParcelsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AddParcelsStateFieldChangedImplCopyWith<_$AddParcelsStateFieldChangedImpl>
@@ -572,7 +594,10 @@ abstract class AddParcelsStateFieldChanged implements AddParcelsState {
 
   TrackingNumbers get trackingNumbers;
   ParcelNames get parcelNames;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AddParcelsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AddParcelsStateFieldChangedImplCopyWith<_$AddParcelsStateFieldChangedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -592,6 +617,9 @@ class __$$AddParcelsStateAddingImplCopyWithImpl<$Res>
   __$$AddParcelsStateAddingImplCopyWithImpl(_$AddParcelsStateAddingImpl _value,
       $Res Function(_$AddParcelsStateAddingImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of AddParcelsState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -752,6 +780,8 @@ class __$$AddParcelsStateAddedImplCopyWithImpl<$Res>
       $Res Function(_$AddParcelsStateAddedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AddParcelsState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -810,7 +840,9 @@ class _$AddParcelsStateAddedImpl
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(_addedTrackInfoList));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AddParcelsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AddParcelsStateAddedImplCopyWith<_$AddParcelsStateAddedImpl>
@@ -933,7 +965,10 @@ abstract class AddParcelsStateAdded implements AddParcelsState {
       _$AddParcelsStateAddedImpl;
 
   List<TrackNumberInfo> get addedTrackInfoList;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AddParcelsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AddParcelsStateAddedImplCopyWith<_$AddParcelsStateAddedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -961,6 +996,8 @@ class __$$AddParcelsStateValidationFailedImplCopyWithImpl<$Res>
       $Res Function(_$AddParcelsStateValidationFailedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AddParcelsState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -979,6 +1016,8 @@ class __$$AddParcelsStateValidationFailedImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of AddParcelsState
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $TrackingNumbersCopyWith<$Res> get trackingNumbers {
@@ -987,6 +1026,8 @@ class __$$AddParcelsStateValidationFailedImplCopyWithImpl<$Res>
     });
   }
 
+  /// Create a copy of AddParcelsState
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ParcelNamesCopyWith<$Res> get parcelNames {
@@ -1037,7 +1078,9 @@ class _$AddParcelsStateValidationFailedImpl
   @override
   int get hashCode => Object.hash(runtimeType, trackingNumbers, parcelNames);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AddParcelsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AddParcelsStateValidationFailedImplCopyWith<
@@ -1162,7 +1205,10 @@ abstract class AddParcelsStateValidationFailed implements AddParcelsState {
 
   TrackingNumbers get trackingNumbers;
   ParcelNames get parcelNames;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AddParcelsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AddParcelsStateValidationFailedImplCopyWith<
           _$AddParcelsStateValidationFailedImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -1194,6 +1240,8 @@ class __$$AddParcelsStateAddFailedImplCopyWithImpl<$Res>
       $Res Function(_$AddParcelsStateAddFailedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AddParcelsState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1222,6 +1270,8 @@ class __$$AddParcelsStateAddFailedImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of AddParcelsState
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $TrackingNumbersCopyWith<$Res> get trackingNumbers {
@@ -1230,6 +1280,8 @@ class __$$AddParcelsStateAddFailedImplCopyWithImpl<$Res>
     });
   }
 
+  /// Create a copy of AddParcelsState
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ParcelNamesCopyWith<$Res> get parcelNames {
@@ -1294,7 +1346,9 @@ class _$AddParcelsStateAddFailedImpl
   int get hashCode => Object.hash(
       runtimeType, trackingNumbers, parcelNames, exception, stackTrace);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AddParcelsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AddParcelsStateAddFailedImplCopyWith<_$AddParcelsStateAddFailedImpl>
@@ -1421,7 +1475,10 @@ abstract class AddParcelsStateAddFailed implements AddParcelsState {
   ParcelNames get parcelNames;
   Exception? get exception;
   StackTrace? get stackTrace;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AddParcelsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AddParcelsStateAddFailedImplCopyWith<_$AddParcelsStateAddFailedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

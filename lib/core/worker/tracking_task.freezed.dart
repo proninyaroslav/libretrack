@@ -74,7 +74,9 @@ mixin _$TrackingTaskState {
   }) =>
       throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of TrackingTaskState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $TrackingTaskStateCopyWith<TrackingTaskState> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -98,6 +100,8 @@ class _$TrackingTaskStateCopyWithImpl<$Res, $Val extends TrackingTaskState>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of TrackingTaskState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -134,6 +138,8 @@ class __$$TrackingTaskStateLoadingImplCopyWithImpl<$Res>
       $Res Function(_$TrackingTaskStateLoadingImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of TrackingTaskState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -192,7 +198,9 @@ class _$TrackingTaskStateLoadingImpl
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(_trackingInfoList));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of TrackingTaskState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$TrackingTaskStateLoadingImplCopyWith<_$TrackingTaskStateLoadingImpl>
@@ -287,8 +295,11 @@ abstract class TrackingTaskStateLoading implements TrackingTaskState {
 
   @override
   List<TrackingInfo> get trackingInfoList;
+
+  /// Create a copy of TrackingTaskState
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$TrackingTaskStateLoadingImplCopyWith<_$TrackingTaskStateLoadingImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -319,6 +330,8 @@ class __$$TrackingTaskStateLoadedImplCopyWithImpl<$Res>
       $Res Function(_$TrackingTaskStateLoadedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of TrackingTaskState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -470,7 +483,9 @@ class _$TrackingTaskStateLoadedImpl
       const DeepCollectionEquality().hash(_unsupportedServices),
       const DeepCollectionEquality().hash(_disabledServices));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of TrackingTaskState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$TrackingTaskStateLoadedImplCopyWith<_$TrackingTaskStateLoadedImpl>
@@ -582,8 +597,11 @@ abstract class TrackingTaskStateLoaded implements TrackingTaskState {
   /// (for example, the parcel is delivered).
   /// `isActive` fields of items are set to `false`
   List<TrackNumberService>? get disabledServices;
+
+  /// Create a copy of TrackingTaskState
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$TrackingTaskStateLoadedImplCopyWith<_$TrackingTaskStateLoadedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -595,7 +613,9 @@ mixin _$TrackingTaskResult {
   List<ShipmentActivityInfo> get activity => throw _privateConstructorUsedError;
   List<String>? get alternateTracks => throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of TrackingTaskResult
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $TrackingTaskResultCopyWith<TrackingTaskResult> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -623,6 +643,8 @@ class _$TrackingTaskResultCopyWithImpl<$Res, $Val extends TrackingTaskResult>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of TrackingTaskResult
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -675,6 +697,8 @@ class __$$TrackingTaskResultImplCopyWithImpl<$Res>
       $Res Function(_$TrackingTaskResultImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of TrackingTaskResult
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -776,7 +800,9 @@ class _$TrackingTaskResultImpl
       const DeepCollectionEquality().hash(_activity),
       const DeepCollectionEquality().hash(_alternateTracks));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of TrackingTaskResult
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$TrackingTaskResultImplCopyWith<_$TrackingTaskResultImpl> get copyWith =>
@@ -799,8 +825,11 @@ abstract class _TrackingTaskResult implements TrackingTaskResult {
   List<ShipmentActivityInfo> get activity;
   @override
   List<String>? get alternateTracks;
+
+  /// Create a copy of TrackingTaskResult
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$TrackingTaskResultImplCopyWith<_$TrackingTaskResultImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -809,7 +838,9 @@ abstract class _TrackingTaskResult implements TrackingTaskResult {
 mixin _$TrackingTaskParams {
   Locale? get locale => throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of TrackingTaskParams
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $TrackingTaskParamsCopyWith<TrackingTaskParams> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -835,6 +866,8 @@ class _$TrackingTaskParamsCopyWithImpl<$Res, $Val extends TrackingTaskParams>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of TrackingTaskParams
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -848,6 +881,8 @@ class _$TrackingTaskParamsCopyWithImpl<$Res, $Val extends TrackingTaskParams>
     ) as $Val);
   }
 
+  /// Create a copy of TrackingTaskParams
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $LocaleCopyWith<$Res>? get locale {
@@ -883,6 +918,8 @@ class __$$TrackingTaskParamsImplCopyWithImpl<$Res>
       $Res Function(_$TrackingTaskParamsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of TrackingTaskParams
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -931,7 +968,9 @@ class _$TrackingTaskParamsImpl
   @override
   int get hashCode => Object.hash(runtimeType, locale);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of TrackingTaskParams
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$TrackingTaskParamsImplCopyWith<_$TrackingTaskParamsImpl> get copyWith =>
@@ -945,8 +984,11 @@ abstract class _TrackingTaskParams implements TrackingTaskParams {
 
   @override
   Locale? get locale;
+
+  /// Create a copy of TrackingTaskParams
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$TrackingTaskParamsImplCopyWith<_$TrackingTaskParamsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -957,7 +999,9 @@ mixin _$FailedRequest {
   TrackNumberService get trackService => throw _privateConstructorUsedError;
   _FailedRequestReason get reason => throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of _FailedRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$FailedRequestCopyWith<_FailedRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -986,6 +1030,8 @@ class __$FailedRequestCopyWithImpl<$Res, $Val extends _FailedRequest>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of _FailedRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1009,6 +1055,8 @@ class __$FailedRequestCopyWithImpl<$Res, $Val extends _FailedRequest>
     ) as $Val);
   }
 
+  /// Create a copy of _FailedRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   _$FailedRequestReasonCopyWith<$Res> get reason {
@@ -1043,6 +1091,8 @@ class __$$FailedRequestDataImplCopyWithImpl<$Res>
       $Res Function(_$FailedRequestDataImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of _FailedRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1111,7 +1161,9 @@ class _$FailedRequestDataImpl
   @override
   int get hashCode => Object.hash(runtimeType, id, trackService, reason);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of _FailedRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FailedRequestDataImplCopyWith<_$FailedRequestDataImpl> get copyWith =>
@@ -1131,8 +1183,11 @@ abstract class _FailedRequestData implements _FailedRequest {
   TrackNumberService get trackService;
   @override
   _FailedRequestReason get reason;
+
+  /// Create a copy of _FailedRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FailedRequestDataImplCopyWith<_$FailedRequestDataImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1198,6 +1253,9 @@ class __$FailedRequestReasonCopyWithImpl<$Res,
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of _FailedRequestReason
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -1217,6 +1275,9 @@ class __$$FailedRequestMissingServiceImplCopyWithImpl<$Res>
       _$FailedRequestMissingServiceImpl _value,
       $Res Function(_$FailedRequestMissingServiceImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of _FailedRequestReason
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -1335,6 +1396,9 @@ class __$$FailedRequestMissingAuthDataImplCopyWithImpl<$Res>
       _$FailedRequestMissingAuthDataImpl _value,
       $Res Function(_$FailedRequestMissingAuthDataImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of _FailedRequestReason
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc

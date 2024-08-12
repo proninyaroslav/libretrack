@@ -229,6 +229,9 @@ class _$ParcelsActionsStateCopyWithImpl<$Res, $Val extends ParcelsActionsState>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of ParcelsActionsState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -248,6 +251,9 @@ class __$$ParcelsActionsStateInitialImplCopyWithImpl<$Res>
       _$ParcelsActionsStateInitialImpl _value,
       $Res Function(_$ParcelsActionsStateInitialImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of ParcelsActionsState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -511,6 +517,9 @@ class __$$ParcelsActionsStateDeletingImplCopyWithImpl<$Res>
       _$ParcelsActionsStateDeletingImpl _value,
       $Res Function(_$ParcelsActionsStateDeletingImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of ParcelsActionsState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -775,6 +784,9 @@ class __$$ParcelsActionsStateDeleteSuccessImplCopyWithImpl<$Res>
       _$ParcelsActionsStateDeleteSuccessImpl _value,
       $Res Function(_$ParcelsActionsStateDeleteSuccessImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of ParcelsActionsState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -1045,6 +1057,8 @@ class __$$ParcelsActionsStateDeleteFailedImplCopyWithImpl<$Res>
       $Res Function(_$ParcelsActionsStateDeleteFailedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ParcelsActionsState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1063,6 +1077,8 @@ class __$$ParcelsActionsStateDeleteFailedImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of ParcelsActionsState
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $StorageErrorCopyWith<$Res> get error {
@@ -1102,7 +1118,9 @@ class _$ParcelsActionsStateDeleteFailedImpl
   @override
   int get hashCode => Object.hash(runtimeType, error, parcelsCount);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ParcelsActionsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ParcelsActionsStateDeleteFailedImplCopyWith<
@@ -1337,7 +1355,10 @@ abstract class ParcelsActionsStateDeleteFailed implements ParcelsActionsState {
 
   StorageError get error;
   int get parcelsCount;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ParcelsActionsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ParcelsActionsStateDeleteFailedImplCopyWith<
           _$ParcelsActionsStateDeleteFailedImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -1360,6 +1381,9 @@ class __$$ParcelsActionsStateMarkingAsReadImplCopyWithImpl<$Res>
       _$ParcelsActionsStateMarkingAsReadImpl _value,
       $Res Function(_$ParcelsActionsStateMarkingAsReadImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of ParcelsActionsState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -1625,6 +1649,9 @@ class __$$ParcelsActionsStateMarkAsReadSuccessImplCopyWithImpl<$Res>
       _$ParcelsActionsStateMarkAsReadSuccessImpl _value,
       $Res Function(_$ParcelsActionsStateMarkAsReadSuccessImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of ParcelsActionsState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -1896,6 +1923,8 @@ class __$$ParcelsActionsStateMarkAsReadFailedImplCopyWithImpl<$Res>
       $Res Function(_$ParcelsActionsStateMarkAsReadFailedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ParcelsActionsState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1914,6 +1943,8 @@ class __$$ParcelsActionsStateMarkAsReadFailedImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of ParcelsActionsState
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $StorageErrorCopyWith<$Res> get error {
@@ -1953,7 +1984,9 @@ class _$ParcelsActionsStateMarkAsReadFailedImpl
   @override
   int get hashCode => Object.hash(runtimeType, error, parcelsCount);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ParcelsActionsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ParcelsActionsStateMarkAsReadFailedImplCopyWith<
@@ -2190,7 +2223,10 @@ abstract class ParcelsActionsStateMarkAsReadFailed
 
   StorageError get error;
   int get parcelsCount;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ParcelsActionsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ParcelsActionsStateMarkAsReadFailedImplCopyWith<
           _$ParcelsActionsStateMarkAsReadFailedImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -2213,6 +2249,9 @@ class __$$ParcelsActionsStateMovingToActiveImplCopyWithImpl<$Res>
       _$ParcelsActionsStateMovingToActiveImpl _value,
       $Res Function(_$ParcelsActionsStateMovingToActiveImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of ParcelsActionsState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -2479,6 +2518,9 @@ class __$$ParcelsActionsStateMoveToActiveSuccessImplCopyWithImpl<$Res>
       _$ParcelsActionsStateMoveToActiveSuccessImpl _value,
       $Res Function(_$ParcelsActionsStateMoveToActiveSuccessImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of ParcelsActionsState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -2750,6 +2792,8 @@ class __$$ParcelsActionsStateMoveToActiveFailedImplCopyWithImpl<$Res>
       $Res Function(_$ParcelsActionsStateMoveToActiveFailedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ParcelsActionsState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2768,6 +2812,8 @@ class __$$ParcelsActionsStateMoveToActiveFailedImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of ParcelsActionsState
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $StorageErrorCopyWith<$Res> get error {
@@ -2807,7 +2853,9 @@ class _$ParcelsActionsStateMoveToActiveFailedImpl
   @override
   int get hashCode => Object.hash(runtimeType, error, parcelsCount);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ParcelsActionsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ParcelsActionsStateMoveToActiveFailedImplCopyWith<
@@ -3044,7 +3092,10 @@ abstract class ParcelsActionsStateMoveToActiveFailed
 
   StorageError get error;
   int get parcelsCount;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ParcelsActionsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ParcelsActionsStateMoveToActiveFailedImplCopyWith<
           _$ParcelsActionsStateMoveToActiveFailedImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -3067,6 +3118,9 @@ class __$$ParcelsActionsStateMovingToArchiveImplCopyWithImpl<$Res>
       _$ParcelsActionsStateMovingToArchiveImpl _value,
       $Res Function(_$ParcelsActionsStateMovingToArchiveImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of ParcelsActionsState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -3333,6 +3387,9 @@ class __$$ParcelsActionsStateMoveToArchiveSuccessImplCopyWithImpl<$Res>
       _$ParcelsActionsStateMoveToArchiveSuccessImpl _value,
       $Res Function(_$ParcelsActionsStateMoveToArchiveSuccessImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of ParcelsActionsState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -3604,6 +3661,8 @@ class __$$ParcelsActionsStateMoveToArchiveFailedImplCopyWithImpl<$Res>
       $Res Function(_$ParcelsActionsStateMoveToArchiveFailedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ParcelsActionsState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3622,6 +3681,8 @@ class __$$ParcelsActionsStateMoveToArchiveFailedImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of ParcelsActionsState
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $StorageErrorCopyWith<$Res> get error {
@@ -3661,7 +3722,9 @@ class _$ParcelsActionsStateMoveToArchiveFailedImpl
   @override
   int get hashCode => Object.hash(runtimeType, error, parcelsCount);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ParcelsActionsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ParcelsActionsStateMoveToArchiveFailedImplCopyWith<
@@ -3899,7 +3962,10 @@ abstract class ParcelsActionsStateMoveToArchiveFailed
 
   StorageError get error;
   int get parcelsCount;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ParcelsActionsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ParcelsActionsStateMoveToArchiveFailedImplCopyWith<
           _$ParcelsActionsStateMoveToArchiveFailedImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -3922,6 +3988,9 @@ class __$$ParcelsActionsStateRefreshingImplCopyWithImpl<$Res>
       _$ParcelsActionsStateRefreshingImpl _value,
       $Res Function(_$ParcelsActionsStateRefreshingImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of ParcelsActionsState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -4187,6 +4256,9 @@ class __$$ParcelsActionsStateRefreshSuccessImplCopyWithImpl<$Res>
       _$ParcelsActionsStateRefreshSuccessImpl _value,
       $Res Function(_$ParcelsActionsStateRefreshSuccessImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of ParcelsActionsState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -4456,6 +4528,8 @@ class __$$ParcelsActionsStateRefreshFailedImplCopyWithImpl<$Res>
       $Res Function(_$ParcelsActionsStateRefreshFailedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ParcelsActionsState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -4503,7 +4577,9 @@ class _$ParcelsActionsStateRefreshFailedImpl
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(_errors));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ParcelsActionsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ParcelsActionsStateRefreshFailedImplCopyWith<
@@ -4737,7 +4813,10 @@ abstract class ParcelsActionsStateRefreshFailed implements ParcelsActionsState {
       _$ParcelsActionsStateRefreshFailedImpl;
 
   Map<String, EnqueueOneshotError> get errors;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ParcelsActionsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ParcelsActionsStateRefreshFailedImplCopyWith<
           _$ParcelsActionsStateRefreshFailedImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -4763,6 +4842,8 @@ class __$$ParcelsActionsStateRefreshFreqLimitedImplCopyWithImpl<$Res>
       $Res Function(_$ParcelsActionsStateRefreshFreqLimitedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ParcelsActionsState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -4804,7 +4885,9 @@ class _$ParcelsActionsStateRefreshFreqLimitedImpl
   @override
   int get hashCode => Object.hash(runtimeType, remainingTime);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ParcelsActionsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ParcelsActionsStateRefreshFreqLimitedImplCopyWith<
@@ -5039,7 +5122,10 @@ abstract class ParcelsActionsStateRefreshFreqLimited
       _$ParcelsActionsStateRefreshFreqLimitedImpl;
 
   Duration get remainingTime;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ParcelsActionsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ParcelsActionsStateRefreshFreqLimitedImplCopyWith<
           _$ParcelsActionsStateRefreshFreqLimitedImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -5062,6 +5148,9 @@ class __$$ParcelsActionsStateSharingStringImplCopyWithImpl<$Res>
       _$ParcelsActionsStateSharingStringImpl _value,
       $Res Function(_$ParcelsActionsStateSharingStringImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of ParcelsActionsState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -5330,6 +5419,8 @@ class __$$ParcelsActionsStateShareStringSuccessImplCopyWithImpl<$Res>
       $Res Function(_$ParcelsActionsStateShareStringSuccessImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ParcelsActionsState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -5369,7 +5460,9 @@ class _$ParcelsActionsStateShareStringSuccessImpl
   @override
   int get hashCode => Object.hash(runtimeType, text);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ParcelsActionsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ParcelsActionsStateShareStringSuccessImplCopyWith<
@@ -5604,7 +5697,10 @@ abstract class ParcelsActionsStateShareStringSuccess
       _$ParcelsActionsStateShareStringSuccessImpl;
 
   String get text;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ParcelsActionsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ParcelsActionsStateShareStringSuccessImplCopyWith<
           _$ParcelsActionsStateShareStringSuccessImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -5627,6 +5723,9 @@ class __$$ParcelsActionsStateCopyingTrackImplCopyWithImpl<$Res>
       _$ParcelsActionsStateCopyingTrackImpl _value,
       $Res Function(_$ParcelsActionsStateCopyingTrackImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of ParcelsActionsState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -5895,6 +5994,8 @@ class __$$ParcelsActionsStateCopyTrackSuccessImplCopyWithImpl<$Res>
       $Res Function(_$ParcelsActionsStateCopyTrackSuccessImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ParcelsActionsState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -5935,7 +6036,9 @@ class _$ParcelsActionsStateCopyTrackSuccessImpl
   @override
   int get hashCode => Object.hash(runtimeType, trackNumbers);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ParcelsActionsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ParcelsActionsStateCopyTrackSuccessImplCopyWith<
@@ -6170,7 +6273,10 @@ abstract class ParcelsActionsStateCopyTrackSuccess
       _$ParcelsActionsStateCopyTrackSuccessImpl;
 
   String get trackNumbers;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ParcelsActionsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ParcelsActionsStateCopyTrackSuccessImplCopyWith<
           _$ParcelsActionsStateCopyTrackSuccessImpl>
       get copyWith => throw _privateConstructorUsedError;

@@ -108,6 +108,9 @@ class _$AppRoutePathCopyWithImpl<$Res, $Val extends AppRoutePath>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of AppRoutePath
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -124,6 +127,9 @@ class __$$AppRoutePathUnknownImplCopyWithImpl<$Res>
   __$$AppRoutePathUnknownImplCopyWithImpl(_$AppRoutePathUnknownImpl _value,
       $Res Function(_$AppRoutePathUnknownImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of AppRoutePath
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -276,6 +282,8 @@ class __$$AppRoutePathHomeImplCopyWithImpl<$Res>
       $Res Function(_$AppRoutePathHomeImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AppRoutePath
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -289,6 +297,8 @@ class __$$AppRoutePathHomeImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of AppRoutePath
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $HomeRoutePathCopyWith<$Res> get subRoute {
@@ -333,7 +343,9 @@ class _$AppRoutePathHomeImpl
   @override
   int get hashCode => Object.hash(runtimeType, subRoute);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AppRoutePath
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AppRoutePathHomeImplCopyWith<_$AppRoutePathHomeImpl> get copyWith =>
@@ -444,7 +456,10 @@ abstract class AppRoutePathHome implements AppRoutePath {
       _$AppRoutePathHomeImpl;
 
   HomeRoutePath get subRoute;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AppRoutePath
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AppRoutePathHomeImplCopyWith<_$AppRoutePathHomeImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -465,6 +480,9 @@ class __$$AppRoutePathAddAccountImplCopyWithImpl<$Res>
       _$AppRoutePathAddAccountImpl _value,
       $Res Function(_$AppRoutePathAddAccountImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of AppRoutePath
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -617,6 +635,8 @@ class __$$AppRoutePathEditAccountImplCopyWithImpl<$Res>
       $Res Function(_$AppRoutePathEditAccountImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AppRoutePath
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -666,7 +686,9 @@ class _$AppRoutePathEditAccountImpl
   @override
   int get hashCode => Object.hash(runtimeType, serviceType);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AppRoutePath
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AppRoutePathEditAccountImplCopyWith<_$AppRoutePathEditAccountImpl>
@@ -777,7 +799,10 @@ abstract class AppRoutePathEditAccount implements AppRoutePath {
       _$AppRoutePathEditAccountImpl;
 
   TrackingServiceType get serviceType;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AppRoutePath
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AppRoutePathEditAccountImplCopyWith<_$AppRoutePathEditAccountImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -801,6 +826,8 @@ class __$$AppRoutePathAddParcelsImplCopyWithImpl<$Res>
       $Res Function(_$AppRoutePathAddParcelsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AppRoutePath
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -850,7 +877,9 @@ class _$AppRoutePathAddParcelsImpl
   @override
   int get hashCode => Object.hash(runtimeType, initialTrackNumbers);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AppRoutePath
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AppRoutePathAddParcelsImplCopyWith<_$AppRoutePathAddParcelsImpl>
@@ -961,7 +990,10 @@ abstract class AppRoutePathAddParcels implements AppRoutePath {
       _$AppRoutePathAddParcelsImpl;
 
   String? get initialTrackNumbers;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AppRoutePath
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AppRoutePathAddParcelsImplCopyWith<_$AppRoutePathAddParcelsImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -985,6 +1017,8 @@ class __$$AppRoutePathParcelDetailsImplCopyWithImpl<$Res>
       $Res Function(_$AppRoutePathParcelDetailsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AppRoutePath
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1034,7 +1068,9 @@ class _$AppRoutePathParcelDetailsImpl
   @override
   int get hashCode => Object.hash(runtimeType, trackNumber);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AppRoutePath
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AppRoutePathParcelDetailsImplCopyWith<_$AppRoutePathParcelDetailsImpl>
@@ -1145,7 +1181,10 @@ abstract class AppRoutePathParcelDetails implements AppRoutePath {
       _$AppRoutePathParcelDetailsImpl;
 
   String get trackNumber;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AppRoutePath
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AppRoutePathParcelDetailsImplCopyWith<_$AppRoutePathParcelDetailsImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -1169,6 +1208,8 @@ class __$$AppRoutePathSettingsImplCopyWithImpl<$Res>
       $Res Function(_$AppRoutePathSettingsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AppRoutePath
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1182,6 +1223,8 @@ class __$$AppRoutePathSettingsImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of AppRoutePath
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $SettingsRoutePathCopyWith<$Res>? get subRoute {
@@ -1230,7 +1273,9 @@ class _$AppRoutePathSettingsImpl
   @override
   int get hashCode => Object.hash(runtimeType, subRoute);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AppRoutePath
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AppRoutePathSettingsImplCopyWith<_$AppRoutePathSettingsImpl>
@@ -1342,7 +1387,10 @@ abstract class AppRoutePathSettings implements AppRoutePath {
       _$AppRoutePathSettingsImpl;
 
   SettingsRoutePath? get subRoute;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AppRoutePath
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AppRoutePathSettingsImplCopyWith<_$AppRoutePathSettingsImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -1361,6 +1409,9 @@ class __$$AppRoutePathAboutImplCopyWithImpl<$Res>
   __$$AppRoutePathAboutImplCopyWithImpl(_$AppRoutePathAboutImpl _value,
       $Res Function(_$AppRoutePathAboutImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of AppRoutePath
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -1551,6 +1602,9 @@ class _$HomeRoutePathCopyWithImpl<$Res, $Val extends HomeRoutePath>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of HomeRoutePath
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -1567,6 +1621,9 @@ class __$$HomeRoutePathParcelsImplCopyWithImpl<$Res>
   __$$HomeRoutePathParcelsImplCopyWithImpl(_$HomeRoutePathParcelsImpl _value,
       $Res Function(_$HomeRoutePathParcelsImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of HomeRoutePath
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -1679,6 +1736,9 @@ class __$$HomeRoutePathAccountsImplCopyWithImpl<$Res>
   __$$HomeRoutePathAccountsImplCopyWithImpl(_$HomeRoutePathAccountsImpl _value,
       $Res Function(_$HomeRoutePathAccountsImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of HomeRoutePath
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -1834,6 +1894,9 @@ class _$SettingsRoutePathCopyWithImpl<$Res, $Val extends SettingsRoutePath>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of SettingsRoutePath
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -1853,6 +1916,9 @@ class __$$SettingsRoutePathAppearanceImplCopyWithImpl<$Res>
       _$SettingsRoutePathAppearanceImpl _value,
       $Res Function(_$SettingsRoutePathAppearanceImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of SettingsRoutePath
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -1968,6 +2034,9 @@ class __$$SettingsRoutePathBehaviorImplCopyWithImpl<$Res>
       _$SettingsRoutePathBehaviorImpl _value,
       $Res Function(_$SettingsRoutePathBehaviorImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of SettingsRoutePath
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -2179,6 +2248,9 @@ class _$RouterStateCopyWithImpl<$Res, $Val extends RouterState>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of RouterState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -2195,14 +2267,16 @@ class __$$RouterStateUnknownImplCopyWithImpl<$Res>
   __$$RouterStateUnknownImplCopyWithImpl(_$RouterStateUnknownImpl _value,
       $Res Function(_$RouterStateUnknownImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of RouterState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
 
-class _$RouterStateUnknownImpl
-    with DiagnosticableTreeMixin
-    implements RouterStateUnknown {
-  const _$RouterStateUnknownImpl();
+class _$RouterStateUnknownImpl extends RouterStateUnknown
+    with DiagnosticableTreeMixin {
+  const _$RouterStateUnknownImpl() : super._();
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
@@ -2343,8 +2417,9 @@ class _$RouterStateUnknownImpl
   }
 }
 
-abstract class RouterStateUnknown implements RouterState {
+abstract class RouterStateUnknown extends RouterState {
   const factory RouterStateUnknown() = _$RouterStateUnknownImpl;
+  const RouterStateUnknown._() : super._();
 }
 
 /// @nodoc
@@ -2366,6 +2441,8 @@ class __$$RouterStateHomeImplCopyWithImpl<$Res>
       _$RouterStateHomeImpl _value, $Res Function(_$RouterStateHomeImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of RouterState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2379,6 +2456,8 @@ class __$$RouterStateHomeImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of RouterState
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $HomeRoutePathCopyWith<$Res> get subRoute {
@@ -2390,10 +2469,9 @@ class __$$RouterStateHomeImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$RouterStateHomeImpl
-    with DiagnosticableTreeMixin
-    implements RouterStateHome {
-  const _$RouterStateHomeImpl(this.subRoute);
+class _$RouterStateHomeImpl extends RouterStateHome
+    with DiagnosticableTreeMixin {
+  const _$RouterStateHomeImpl(this.subRoute) : super._();
 
   @override
   final HomeRoutePath subRoute;
@@ -2423,7 +2501,9 @@ class _$RouterStateHomeImpl
   @override
   int get hashCode => Object.hash(runtimeType, subRoute);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of RouterState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$RouterStateHomeImplCopyWith<_$RouterStateHomeImpl> get copyWith =>
@@ -2549,12 +2629,16 @@ class _$RouterStateHomeImpl
   }
 }
 
-abstract class RouterStateHome implements RouterState {
+abstract class RouterStateHome extends RouterState {
   const factory RouterStateHome(final HomeRoutePath subRoute) =
       _$RouterStateHomeImpl;
+  const RouterStateHome._() : super._();
 
   HomeRoutePath get subRoute;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of RouterState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$RouterStateHomeImplCopyWith<_$RouterStateHomeImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2574,14 +2658,16 @@ class __$$RouterStateAddAccountImplCopyWithImpl<$Res>
   __$$RouterStateAddAccountImplCopyWithImpl(_$RouterStateAddAccountImpl _value,
       $Res Function(_$RouterStateAddAccountImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of RouterState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
 
-class _$RouterStateAddAccountImpl
-    with DiagnosticableTreeMixin
-    implements RouterStateAddAccount {
-  const _$RouterStateAddAccountImpl();
+class _$RouterStateAddAccountImpl extends RouterStateAddAccount
+    with DiagnosticableTreeMixin {
+  const _$RouterStateAddAccountImpl() : super._();
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
@@ -2723,8 +2809,9 @@ class _$RouterStateAddAccountImpl
   }
 }
 
-abstract class RouterStateAddAccount implements RouterState {
+abstract class RouterStateAddAccount extends RouterState {
   const factory RouterStateAddAccount() = _$RouterStateAddAccountImpl;
+  const RouterStateAddAccount._() : super._();
 }
 
 /// @nodoc
@@ -2746,6 +2833,8 @@ class __$$RouterStateEditAccountImplCopyWithImpl<$Res>
       $Res Function(_$RouterStateEditAccountImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of RouterState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2762,10 +2851,9 @@ class __$$RouterStateEditAccountImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$RouterStateEditAccountImpl
-    with DiagnosticableTreeMixin
-    implements RouterStateEditAccount {
-  const _$RouterStateEditAccountImpl(this.serviceType);
+class _$RouterStateEditAccountImpl extends RouterStateEditAccount
+    with DiagnosticableTreeMixin {
+  const _$RouterStateEditAccountImpl(this.serviceType) : super._();
 
   @override
   final TrackingServiceType serviceType;
@@ -2795,7 +2883,9 @@ class _$RouterStateEditAccountImpl
   @override
   int get hashCode => Object.hash(runtimeType, serviceType);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of RouterState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$RouterStateEditAccountImplCopyWith<_$RouterStateEditAccountImpl>
@@ -2921,12 +3011,16 @@ class _$RouterStateEditAccountImpl
   }
 }
 
-abstract class RouterStateEditAccount implements RouterState {
+abstract class RouterStateEditAccount extends RouterState {
   const factory RouterStateEditAccount(final TrackingServiceType serviceType) =
       _$RouterStateEditAccountImpl;
+  const RouterStateEditAccount._() : super._();
 
   TrackingServiceType get serviceType;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of RouterState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$RouterStateEditAccountImplCopyWith<_$RouterStateEditAccountImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -2951,6 +3045,8 @@ class __$$RouterStateAddParcelsImplCopyWithImpl<$Res>
       $Res Function(_$RouterStateAddParcelsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of RouterState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2964,6 +3060,8 @@ class __$$RouterStateAddParcelsImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of RouterState
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $TrackingNumbersCopyWith<$Res>? get initialTrackNumbers {
@@ -2979,10 +3077,9 @@ class __$$RouterStateAddParcelsImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$RouterStateAddParcelsImpl
-    with DiagnosticableTreeMixin
-    implements RouterStateAddParcels {
-  const _$RouterStateAddParcelsImpl({this.initialTrackNumbers});
+class _$RouterStateAddParcelsImpl extends RouterStateAddParcels
+    with DiagnosticableTreeMixin {
+  const _$RouterStateAddParcelsImpl({this.initialTrackNumbers}) : super._();
 
   @override
   final TrackingNumbers? initialTrackNumbers;
@@ -3012,7 +3109,9 @@ class _$RouterStateAddParcelsImpl
   @override
   int get hashCode => Object.hash(runtimeType, initialTrackNumbers);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of RouterState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$RouterStateAddParcelsImplCopyWith<_$RouterStateAddParcelsImpl>
@@ -3138,13 +3237,17 @@ class _$RouterStateAddParcelsImpl
   }
 }
 
-abstract class RouterStateAddParcels implements RouterState {
+abstract class RouterStateAddParcels extends RouterState {
   const factory RouterStateAddParcels(
           {final TrackingNumbers? initialTrackNumbers}) =
       _$RouterStateAddParcelsImpl;
+  const RouterStateAddParcels._() : super._();
 
   TrackingNumbers? get initialTrackNumbers;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of RouterState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$RouterStateAddParcelsImplCopyWith<_$RouterStateAddParcelsImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -3168,6 +3271,8 @@ class __$$RouterStateParcelDetailsImplCopyWithImpl<$Res>
       $Res Function(_$RouterStateParcelDetailsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of RouterState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3184,10 +3289,9 @@ class __$$RouterStateParcelDetailsImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$RouterStateParcelDetailsImpl
-    with DiagnosticableTreeMixin
-    implements RouterStateParcelDetails {
-  const _$RouterStateParcelDetailsImpl(this.trackNumber);
+class _$RouterStateParcelDetailsImpl extends RouterStateParcelDetails
+    with DiagnosticableTreeMixin {
+  const _$RouterStateParcelDetailsImpl(this.trackNumber) : super._();
 
   @override
   final String trackNumber;
@@ -3217,7 +3321,9 @@ class _$RouterStateParcelDetailsImpl
   @override
   int get hashCode => Object.hash(runtimeType, trackNumber);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of RouterState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$RouterStateParcelDetailsImplCopyWith<_$RouterStateParcelDetailsImpl>
@@ -3343,12 +3449,16 @@ class _$RouterStateParcelDetailsImpl
   }
 }
 
-abstract class RouterStateParcelDetails implements RouterState {
+abstract class RouterStateParcelDetails extends RouterState {
   const factory RouterStateParcelDetails(final String trackNumber) =
       _$RouterStateParcelDetailsImpl;
+  const RouterStateParcelDetails._() : super._();
 
   String get trackNumber;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of RouterState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$RouterStateParcelDetailsImplCopyWith<_$RouterStateParcelDetailsImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -3372,6 +3482,8 @@ class __$$RouterStateAddMissingParcelImplCopyWithImpl<$Res>
       $Res Function(_$RouterStateAddMissingParcelImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of RouterState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3388,10 +3500,9 @@ class __$$RouterStateAddMissingParcelImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$RouterStateAddMissingParcelImpl
-    with DiagnosticableTreeMixin
-    implements RouterStateAddMissingParcel {
-  const _$RouterStateAddMissingParcelImpl(this.trackNumber);
+class _$RouterStateAddMissingParcelImpl extends RouterStateAddMissingParcel
+    with DiagnosticableTreeMixin {
+  const _$RouterStateAddMissingParcelImpl(this.trackNumber) : super._();
 
   @override
   final String trackNumber;
@@ -3421,7 +3532,9 @@ class _$RouterStateAddMissingParcelImpl
   @override
   int get hashCode => Object.hash(runtimeType, trackNumber);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of RouterState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$RouterStateAddMissingParcelImplCopyWith<_$RouterStateAddMissingParcelImpl>
@@ -3547,12 +3660,16 @@ class _$RouterStateAddMissingParcelImpl
   }
 }
 
-abstract class RouterStateAddMissingParcel implements RouterState {
+abstract class RouterStateAddMissingParcel extends RouterState {
   const factory RouterStateAddMissingParcel(final String trackNumber) =
       _$RouterStateAddMissingParcelImpl;
+  const RouterStateAddMissingParcel._() : super._();
 
   String get trackNumber;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of RouterState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$RouterStateAddMissingParcelImplCopyWith<_$RouterStateAddMissingParcelImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -3576,6 +3693,8 @@ class __$$RouterStateAddParcelAndShowImplCopyWithImpl<$Res>
       $Res Function(_$RouterStateAddParcelAndShowImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of RouterState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3592,10 +3711,9 @@ class __$$RouterStateAddParcelAndShowImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$RouterStateAddParcelAndShowImpl
-    with DiagnosticableTreeMixin
-    implements RouterStateAddParcelAndShow {
-  const _$RouterStateAddParcelAndShowImpl(this.trackNumber);
+class _$RouterStateAddParcelAndShowImpl extends RouterStateAddParcelAndShow
+    with DiagnosticableTreeMixin {
+  const _$RouterStateAddParcelAndShowImpl(this.trackNumber) : super._();
 
   @override
   final String trackNumber;
@@ -3625,7 +3743,9 @@ class _$RouterStateAddParcelAndShowImpl
   @override
   int get hashCode => Object.hash(runtimeType, trackNumber);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of RouterState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$RouterStateAddParcelAndShowImplCopyWith<_$RouterStateAddParcelAndShowImpl>
@@ -3751,12 +3871,16 @@ class _$RouterStateAddParcelAndShowImpl
   }
 }
 
-abstract class RouterStateAddParcelAndShow implements RouterState {
+abstract class RouterStateAddParcelAndShow extends RouterState {
   const factory RouterStateAddParcelAndShow(final String trackNumber) =
       _$RouterStateAddParcelAndShowImpl;
+  const RouterStateAddParcelAndShow._() : super._();
 
   String get trackNumber;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of RouterState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$RouterStateAddParcelAndShowImplCopyWith<_$RouterStateAddParcelAndShowImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -3780,6 +3904,8 @@ class __$$RouterStateShowAddedParcelImplCopyWithImpl<$Res>
       $Res Function(_$RouterStateShowAddedParcelImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of RouterState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3796,10 +3922,9 @@ class __$$RouterStateShowAddedParcelImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$RouterStateShowAddedParcelImpl
-    with DiagnosticableTreeMixin
-    implements RouterStateShowAddedParcel {
-  const _$RouterStateShowAddedParcelImpl(this.trackNumber);
+class _$RouterStateShowAddedParcelImpl extends RouterStateShowAddedParcel
+    with DiagnosticableTreeMixin {
+  const _$RouterStateShowAddedParcelImpl(this.trackNumber) : super._();
 
   @override
   final String trackNumber;
@@ -3829,7 +3954,9 @@ class _$RouterStateShowAddedParcelImpl
   @override
   int get hashCode => Object.hash(runtimeType, trackNumber);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of RouterState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$RouterStateShowAddedParcelImplCopyWith<_$RouterStateShowAddedParcelImpl>
@@ -3955,12 +4082,16 @@ class _$RouterStateShowAddedParcelImpl
   }
 }
 
-abstract class RouterStateShowAddedParcel implements RouterState {
+abstract class RouterStateShowAddedParcel extends RouterState {
   const factory RouterStateShowAddedParcel(final String trackNumber) =
       _$RouterStateShowAddedParcelImpl;
+  const RouterStateShowAddedParcel._() : super._();
 
   String get trackNumber;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of RouterState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$RouterStateShowAddedParcelImplCopyWith<_$RouterStateShowAddedParcelImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -3984,6 +4115,8 @@ class __$$RouterStateSettingsImplCopyWithImpl<$Res>
       $Res Function(_$RouterStateSettingsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of RouterState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3997,6 +4130,8 @@ class __$$RouterStateSettingsImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of RouterState
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $SettingsRoutePathCopyWith<$Res>? get subRoute {
@@ -4012,10 +4147,9 @@ class __$$RouterStateSettingsImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$RouterStateSettingsImpl
-    with DiagnosticableTreeMixin
-    implements RouterStateSettings {
-  const _$RouterStateSettingsImpl({this.subRoute});
+class _$RouterStateSettingsImpl extends RouterStateSettings
+    with DiagnosticableTreeMixin {
+  const _$RouterStateSettingsImpl({this.subRoute}) : super._();
 
   @override
   final SettingsRoutePath? subRoute;
@@ -4045,7 +4179,9 @@ class _$RouterStateSettingsImpl
   @override
   int get hashCode => Object.hash(runtimeType, subRoute);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of RouterState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$RouterStateSettingsImplCopyWith<_$RouterStateSettingsImpl> get copyWith =>
@@ -4171,12 +4307,16 @@ class _$RouterStateSettingsImpl
   }
 }
 
-abstract class RouterStateSettings implements RouterState {
+abstract class RouterStateSettings extends RouterState {
   const factory RouterStateSettings({final SettingsRoutePath? subRoute}) =
       _$RouterStateSettingsImpl;
+  const RouterStateSettings._() : super._();
 
   SettingsRoutePath? get subRoute;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of RouterState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$RouterStateSettingsImplCopyWith<_$RouterStateSettingsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -4195,14 +4335,16 @@ class __$$RouterStateAboutImplCopyWithImpl<$Res>
   __$$RouterStateAboutImplCopyWithImpl(_$RouterStateAboutImpl _value,
       $Res Function(_$RouterStateAboutImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of RouterState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
 
-class _$RouterStateAboutImpl
-    with DiagnosticableTreeMixin
-    implements RouterStateAbout {
-  const _$RouterStateAboutImpl();
+class _$RouterStateAboutImpl extends RouterStateAbout
+    with DiagnosticableTreeMixin {
+  const _$RouterStateAboutImpl() : super._();
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
@@ -4343,6 +4485,7 @@ class _$RouterStateAboutImpl
   }
 }
 
-abstract class RouterStateAbout implements RouterState {
+abstract class RouterStateAbout extends RouterState {
   const factory RouterStateAbout() = _$RouterStateAboutImpl;
+  const RouterStateAbout._() : super._();
 }

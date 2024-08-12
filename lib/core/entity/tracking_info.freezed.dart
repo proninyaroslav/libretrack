@@ -26,8 +26,12 @@ mixin _$TrackingError {
   String? get code => throw _privateConstructorUsedError;
   String? get stackTrace => throw _privateConstructorUsedError;
 
+  /// Serializes this TrackingError to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of TrackingError
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $TrackingErrorCopyWith<TrackingError> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -56,6 +60,8 @@ class _$TrackingErrorCopyWithImpl<$Res, $Val extends TrackingError>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of TrackingError
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -114,6 +120,8 @@ class __$$TrackingErrorImplCopyWithImpl<$Res>
       _$TrackingErrorImpl _value, $Res Function(_$TrackingErrorImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of TrackingError
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -205,12 +213,14 @@ class _$TrackingErrorImpl
                 other.stackTrace == stackTrace));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, type, isRetryable, message, code, stackTrace);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of TrackingError
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$TrackingErrorImplCopyWith<_$TrackingErrorImpl> get copyWith =>
@@ -245,8 +255,11 @@ abstract class _TrackingError implements TrackingError {
   String? get code;
   @override
   String? get stackTrace;
+
+  /// Create a copy of TrackingError
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$TrackingErrorImplCopyWith<_$TrackingErrorImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

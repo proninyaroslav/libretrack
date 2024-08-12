@@ -57,7 +57,9 @@ mixin _$AppState {
   }) =>
       throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AppState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $AppStateCopyWith<AppState> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -83,6 +85,8 @@ class _$AppStateCopyWithImpl<$Res, $Val extends AppState>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of AppState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -101,6 +105,8 @@ class _$AppStateCopyWithImpl<$Res, $Val extends AppState>
     ) as $Val);
   }
 
+  /// Create a copy of AppState
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $AppThemeTypeCopyWith<$Res> get theme {
@@ -109,6 +115,8 @@ class _$AppStateCopyWithImpl<$Res, $Val extends AppState>
     });
   }
 
+  /// Create a copy of AppState
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $AppLocaleTypeCopyWith<$Res> get locale {
@@ -142,6 +150,8 @@ class __$$AppStateInitialImplCopyWithImpl<$Res>
       _$AppStateInitialImpl _value, $Res Function(_$AppStateInitialImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AppState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -188,7 +198,9 @@ class _$AppStateInitialImpl implements AppStateInitial {
   @override
   int get hashCode => Object.hash(runtimeType, theme, locale);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AppState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AppStateInitialImplCopyWith<_$AppStateInitialImpl> get copyWith =>
@@ -267,8 +279,11 @@ abstract class AppStateInitial implements AppState {
   AppThemeType get theme;
   @override
   AppLocaleType get locale;
+
+  /// Create a copy of AppState
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AppStateInitialImplCopyWith<_$AppStateInitialImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -297,6 +312,8 @@ class __$$AppStateChangedImplCopyWithImpl<$Res>
       _$AppStateChangedImpl _value, $Res Function(_$AppStateChangedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AppState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -343,7 +360,9 @@ class _$AppStateChangedImpl implements AppStateChanged {
   @override
   int get hashCode => Object.hash(runtimeType, theme, locale);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AppState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AppStateChangedImplCopyWith<_$AppStateChangedImpl> get copyWith =>
@@ -422,8 +441,11 @@ abstract class AppStateChanged implements AppState {
   AppThemeType get theme;
   @override
   AppLocaleType get locale;
+
+  /// Create a copy of AppState
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AppStateChangedImplCopyWith<_$AppStateChangedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

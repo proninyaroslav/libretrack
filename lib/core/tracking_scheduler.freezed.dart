@@ -66,7 +66,9 @@ mixin _$EnqueueOneshotResult {
   }) =>
       throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of EnqueueOneshotResult
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $EnqueueOneshotResultCopyWith<EnqueueOneshotResult> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -91,6 +93,8 @@ class _$EnqueueOneshotResultCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of EnqueueOneshotResult
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -127,6 +131,8 @@ class __$$EnqueueOneshotResultSuccessImplCopyWithImpl<$Res>
       $Res Function(_$EnqueueOneshotResultSuccessImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of EnqueueOneshotResult
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -166,7 +172,9 @@ class _$EnqueueOneshotResultSuccessImpl implements EnqueueOneshotResultSuccess {
   @override
   int get hashCode => Object.hash(runtimeType, trackNumber);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of EnqueueOneshotResult
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$EnqueueOneshotResultSuccessImplCopyWith<_$EnqueueOneshotResultSuccessImpl>
@@ -252,8 +260,11 @@ abstract class EnqueueOneshotResultSuccess implements EnqueueOneshotResult {
 
   @override
   String get trackNumber;
+
+  /// Create a copy of EnqueueOneshotResult
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$EnqueueOneshotResultSuccessImplCopyWith<_$EnqueueOneshotResultSuccessImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -280,6 +291,8 @@ class __$$EnqueueOneshotResultDissalowedImplCopyWithImpl<$Res>
       $Res Function(_$EnqueueOneshotResultDissalowedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of EnqueueOneshotResult
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -330,7 +343,9 @@ class _$EnqueueOneshotResultDissalowedImpl
   @override
   int get hashCode => Object.hash(runtimeType, trackNumber, remainingLimitTime);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of EnqueueOneshotResult
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$EnqueueOneshotResultDissalowedImplCopyWith<
@@ -420,8 +435,11 @@ abstract class EnqueueOneshotResultDissalowed implements EnqueueOneshotResult {
   @override
   String get trackNumber;
   Duration get remainingLimitTime;
+
+  /// Create a copy of EnqueueOneshotResult
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$EnqueueOneshotResultDissalowedImplCopyWith<
           _$EnqueueOneshotResultDissalowedImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -451,6 +469,8 @@ class __$$EnqueueOneshotResultErrorImplCopyWithImpl<$Res>
       $Res Function(_$EnqueueOneshotResultErrorImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of EnqueueOneshotResult
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -469,6 +489,8 @@ class __$$EnqueueOneshotResultErrorImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of EnqueueOneshotResult
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $EnqueueOneshotErrorCopyWith<$Res> get error {
@@ -507,7 +529,9 @@ class _$EnqueueOneshotResultErrorImpl implements EnqueueOneshotResultError {
   @override
   int get hashCode => Object.hash(runtimeType, trackNumber, error);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of EnqueueOneshotResult
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$EnqueueOneshotResultErrorImplCopyWith<_$EnqueueOneshotResultErrorImpl>
@@ -596,8 +620,11 @@ abstract class EnqueueOneshotResultError implements EnqueueOneshotResult {
   @override
   String get trackNumber;
   EnqueueOneshotError get error;
+
+  /// Create a copy of EnqueueOneshotResult
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$EnqueueOneshotResultErrorImplCopyWith<_$EnqueueOneshotResultErrorImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -661,6 +688,9 @@ class _$EnqueueOneshotErrorCopyWithImpl<$Res, $Val extends EnqueueOneshotError>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of EnqueueOneshotError
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -685,6 +715,8 @@ class __$$EnqueueOneshotErrorStorageImplCopyWithImpl<$Res>
       $Res Function(_$EnqueueOneshotErrorStorageImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of EnqueueOneshotError
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -698,6 +730,8 @@ class __$$EnqueueOneshotErrorStorageImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of EnqueueOneshotError
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $StorageErrorCopyWith<$Res> get error {
@@ -731,7 +765,9 @@ class _$EnqueueOneshotErrorStorageImpl implements EnqueueOneshotErrorStorage {
   @override
   int get hashCode => Object.hash(runtimeType, error);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of EnqueueOneshotError
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$EnqueueOneshotErrorStorageImplCopyWith<_$EnqueueOneshotErrorStorageImpl>
@@ -807,7 +843,10 @@ abstract class EnqueueOneshotErrorStorage implements EnqueueOneshotError {
 
   @override
   StorageError get error;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of EnqueueOneshotError
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$EnqueueOneshotErrorStorageImplCopyWith<_$EnqueueOneshotErrorStorageImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -834,6 +873,8 @@ class __$$EnqueueOneshotErrorLimiterImplCopyWithImpl<$Res>
       $Res Function(_$EnqueueOneshotErrorLimiterImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of EnqueueOneshotError
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -847,6 +888,8 @@ class __$$EnqueueOneshotErrorLimiterImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of EnqueueOneshotError
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $TrackingLimiterErrorCopyWith<$Res> get error {
@@ -880,7 +923,9 @@ class _$EnqueueOneshotErrorLimiterImpl implements EnqueueOneshotErrorLimiter {
   @override
   int get hashCode => Object.hash(runtimeType, error);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of EnqueueOneshotError
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$EnqueueOneshotErrorLimiterImplCopyWith<_$EnqueueOneshotErrorLimiterImpl>
@@ -956,7 +1001,10 @@ abstract class EnqueueOneshotErrorLimiter implements EnqueueOneshotError {
 
   @override
   TrackingLimiterError get error;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of EnqueueOneshotError
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$EnqueueOneshotErrorLimiterImplCopyWith<_$EnqueueOneshotErrorLimiterImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

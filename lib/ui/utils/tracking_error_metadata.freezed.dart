@@ -20,7 +20,9 @@ mixin _$TrackingErrorMetadata {
   String get localizedMessage => throw _privateConstructorUsedError;
   bool get isReportable => throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of TrackingErrorMetadata
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $TrackingErrorMetadataCopyWith<TrackingErrorMetadata> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -47,6 +49,8 @@ class _$TrackingErrorMetadataCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of TrackingErrorMetadata
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -70,6 +74,8 @@ class _$TrackingErrorMetadataCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of TrackingErrorMetadata
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $TrackingErrorCopyWith<$Res> get error {
@@ -103,6 +109,8 @@ class __$$TrackingErrorMetadataImplCopyWithImpl<$Res>
       $Res Function(_$TrackingErrorMetadataImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of TrackingErrorMetadata
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -163,7 +171,9 @@ class _$TrackingErrorMetadataImpl implements _TrackingErrorMetadata {
   int get hashCode =>
       Object.hash(runtimeType, error, localizedMessage, isReportable);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of TrackingErrorMetadata
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$TrackingErrorMetadataImplCopyWith<_$TrackingErrorMetadataImpl>
@@ -183,8 +193,11 @@ abstract class _TrackingErrorMetadata implements TrackingErrorMetadata {
   String get localizedMessage;
   @override
   bool get isReportable;
+
+  /// Create a copy of TrackingErrorMetadata
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$TrackingErrorMetadataImplCopyWith<_$TrackingErrorMetadataImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

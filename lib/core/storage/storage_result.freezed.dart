@@ -73,6 +73,9 @@ class _$StorageResultCopyWithImpl<T, $Res, $Val extends StorageResult<T>>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of StorageResult
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -92,6 +95,8 @@ class __$$StorageResultValueImplCopyWithImpl<T, $Res>
       $Res Function(_$StorageResultValueImpl<T>) _then)
       : super(_value, _then);
 
+  /// Create a copy of StorageResult
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -131,7 +136,9 @@ class _$StorageResultValueImpl<T> implements StorageResultValue<T> {
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(value));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of StorageResult
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$StorageResultValueImplCopyWith<T, _$StorageResultValueImpl<T>>
@@ -206,7 +213,10 @@ abstract class StorageResultValue<T> implements StorageResult<T> {
 
   @override
   T get value;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of StorageResult
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$StorageResultValueImplCopyWith<T, _$StorageResultValueImpl<T>>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -230,6 +240,8 @@ class __$$StorageResultErrorImplCopyWithImpl<T, $Res>
       $Res Function(_$StorageResultErrorImpl<T>) _then)
       : super(_value, _then);
 
+  /// Create a copy of StorageResult
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -243,6 +255,8 @@ class __$$StorageResultErrorImplCopyWithImpl<T, $Res>
     ));
   }
 
+  /// Create a copy of StorageResult
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $StorageErrorCopyWith<$Res> get value {
@@ -276,7 +290,9 @@ class _$StorageResultErrorImpl<T> implements StorageResultError<T> {
   @override
   int get hashCode => Object.hash(runtimeType, value);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of StorageResult
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$StorageResultErrorImplCopyWith<T, _$StorageResultErrorImpl<T>>
@@ -352,7 +368,10 @@ abstract class StorageResultError<T> implements StorageResult<T> {
 
   @override
   StorageError get value;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of StorageResult
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$StorageResultErrorImplCopyWith<T, _$StorageResultErrorImpl<T>>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -395,7 +414,9 @@ mixin _$StorageError {
   }) =>
       throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of StorageError
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $StorageErrorCopyWith<StorageError> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -419,6 +440,8 @@ class _$StorageErrorCopyWithImpl<$Res, $Val extends StorageError>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of StorageError
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -457,6 +480,8 @@ class __$$StorageErrorDatabaseImplCopyWithImpl<$Res>
       $Res Function(_$StorageErrorDatabaseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of StorageError
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -505,7 +530,9 @@ class _$StorageErrorDatabaseImpl implements StorageErrorDatabase {
   @override
   int get hashCode => Object.hash(runtimeType, exception, stackTrace);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of StorageError
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$StorageErrorDatabaseImplCopyWith<_$StorageErrorDatabaseImpl>
@@ -580,8 +607,11 @@ abstract class StorageErrorDatabase implements StorageError {
   Exception? get exception;
   @override
   StackTrace? get stackTrace;
+
+  /// Create a copy of StorageError
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$StorageErrorDatabaseImplCopyWith<_$StorageErrorDatabaseImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
