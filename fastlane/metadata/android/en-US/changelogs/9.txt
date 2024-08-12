@@ -1,0 +1,4 @@
+* Added PostNord service
+* Added QR code generation option
+* [Linux] Fixed hiding window in the tray icon
+* Small fixes

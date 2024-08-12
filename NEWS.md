@@ -1,46 +1,54 @@
+### Version 1.5.0 (2024-08-12)
+
+- Added PostNord service
+- Added QR code generation option
+- [Linux] Fixed hiding window in the tray icon
+- Small fixes
+
 ### Version 1.4.2 (2024-08-06)
 
-* Fix launching on Android
-* F-Droid split APK support
+- Fix launching on Android
+- F-Droid split APK support
 
 ### Version 1.4.1 (2024-07-27)
 
-* Disable Android TV support
+- Disable Android TV support
 
 ### Version 1.4.0 (2024-07-26)
 
-* Android 14 support
-* Migrate to Flutter 3
-* New translations: Slovak, French
+- Android 14 support
+- Migrate to Flutter 3
+- New translations: Slovak, French
 
 ### Version 1.3.0 (2021-08-24)
 
-* Added USPS support
-* Added Italian translation
-* [Linux] System tray icon is disabled by default
-* Bugfixes:
-    - [Linux] Sharing and opening links in Flatpak
+- Added USPS support
+- Added Italian translation
+- [Linux] System tray icon is disabled by default
+- Bugfixes:
+  - [Linux] Sharing and opening links in Flatpak
 
 ### Version 1.2.0 (2021-08-12)
 
-* Added:
-    - Linux support
-    - Showing activity location in the notification
-* Improving package status differentiation
-* Bugfixes:
-    - [UPS] Handling empty activity location
-    - Crash report serializing
+- Added:
+  - Linux support
+  - Showing activity location in the notification
+- Improving package status differentiation
+- Bugfixes:
+  - [UPS] Handling empty activity location
+  - Crash report serializing
 
 ### Version 1.1.0 (2021-07-31)
 
-* Added Russian Post support
-* Added Spanish translation
+- Added Russian Post support
+- Added Spanish translation
 
 ### Version 1.0.1 (2021-07-13)
 
 Bugfixes:
- - [UPS] Handling package activity without address
- - Clicking of the notification crash
+
+- [UPS] Handling package activity without address
+- Clicking of the notification crash
 
 ### Version 1.0.0 (2021-06-18)
 
