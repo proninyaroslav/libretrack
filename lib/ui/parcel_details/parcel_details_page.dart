@@ -306,8 +306,9 @@ class _Details extends StatelessWidget {
   final ParcelInfo info;
   final VoidCallback? onShowErrors;
   final OnAddParcelCallback? onAddParcel;
+  final scrollController = ScrollController();
 
-  const _Details({
+  _Details({
     required this.info,
     this.onShowErrors,
     this.onAddParcel,
@@ -317,12 +318,14 @@ class _Details extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scrollbar(
+        controller: scrollController,
         // Remove PageView scrollbar inside ListView
         notificationPredicate: (notification) {
           return notification.metrics.axis == Axis.vertical;
         },
         child: ListView(
           key: const PageStorageKey('details_list'),
+          controller: scrollController,
           padding: const EdgeInsets.all(8.0),
           children: [
             ..._buildErrorBanners(),
