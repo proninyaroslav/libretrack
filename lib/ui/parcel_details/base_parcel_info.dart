@@ -229,7 +229,7 @@ class _Status extends StatelessWidget {
     final lastTrackingInfo = info.trackingHistory.isEmpty
         ? null
         : info.trackingHistory.first.trackingInfo;
-    final firstActivity = info.activities.last;
+    final firstActivity = info.activities.isEmpty ? null : info.activities.last;
     final lastActivity = info.activities.isEmpty ? null : info.activities.first;
     final lastShipmentInfo = lastActivity == null
         ? null
@@ -251,7 +251,7 @@ class _Status extends StatelessWidget {
         ShipmentStatusType.notAvailable;
     final currentStatusDateTime = lastActivity?.dateTime ??
         lastShipmentInfo?.deliveryDate ??
-        firstActivity.dateTime;
+        firstActivity?.dateTime;
 
     if (lastTrackingInfo?.status == TrackingStatus.inProgress) {
       statusIcon = const RRectIconData.widget(
@@ -277,18 +277,26 @@ class _Status extends StatelessWidget {
       statusText = S.of(context).parcelInfoNotAvailableStatus;
     } else if (currentStatus == ShipmentStatusType.delivered) {
       statusIcon = StatusIconsData.delivered;
-      statusText = S.of(context).parcelDeliveredStatus(
-            Jiffy.parseFromDateTime(currentStatusDateTime).yMMMMd,
-          );
+      statusText = currentStatusDateTime == null
+          ? ""
+          : S.of(context).parcelDeliveredStatus(
+                Jiffy.parseFromDateTime(currentStatusDateTime).yMMMMd,
+              );
     } else if (currentStatus == ShipmentStatusType.outForDelivery) {
       statusIcon = StatusIconsData.outForDelivery;
-      statusText = S.of(context).parcelOutForDeliveryStatus(
-            Jiffy.parseFromDateTime(currentStatusDateTime).yMMMMd,
-          );
+      statusText = currentStatusDateTime == null
+          ? ""
+          : S.of(context).parcelOutForDeliveryStatus(
+                Jiffy.parseFromDateTime(currentStatusDateTime).yMMMMd,
+              );
     } else {
       statusIcon = StatusIconsData.inTransit;
-      final duration = DateTime.now().difference(currentStatusDateTime);
-      statusText = S.of(context).parcelInTransitStatus(duration.inDays);
+      if (currentStatusDateTime == null) {
+        statusText = "";
+      } else {
+        final duration = DateTime.now().difference(currentStatusDateTime);
+        statusText = S.of(context).parcelInTransitStatus(duration.inDays);
+      }
     }
 
     return Padding(
