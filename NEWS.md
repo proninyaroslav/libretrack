@@ -1,3 +1,7 @@
+### Version 1.5.1 (2024-08-20)
+
+- Fix crash if there is no information about the parcel's movement
+
 ### Version 1.5.0 (2024-08-12)
 
 - Added PostNord service
