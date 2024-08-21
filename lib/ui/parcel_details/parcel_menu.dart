@@ -184,8 +184,8 @@ class ParcelActions extends StatelessWidget {
         showDialog(
           context: context,
           builder: (_) {
-            return BlocProvider(
-              create: (_) => getIt<EditParcelCubit>(),
+            return BlocProvider.value(
+              value: getIt<EditParcelCubit>(),
               child: EditParcelPage(
                 trackInfo: info.trackInfo,
               ),

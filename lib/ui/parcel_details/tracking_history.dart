@@ -291,8 +291,8 @@ class _ShowResponseErrorButton extends StatelessWidget {
         showDialog(
           context: context,
           builder: (context) {
-            return BlocProvider(
-              create: (_) => getIt<ErrorReportCubit>(),
+            return BlocProvider.value(
+              value: getIt<ErrorReportCubit>(),
               child: TrackingErrorDialog(error: error),
             );
           },
