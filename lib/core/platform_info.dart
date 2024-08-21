@@ -1,4 +1,4 @@
-// Copyright (C) 2021 Yaroslav Pronin <proninyaroslav@mail.ru>
+// Copyright (C) 2021-2024 Yaroslav Pronin <proninyaroslav@mail.ru>
 // Copyright (C) 2021 Insurgo Inc. <insurgo@riseup.net>
 //
 // This file is part of LibreTrack.
@@ -143,9 +143,15 @@ class PlatformInfoImpl implements PlatformInfo {
   @override
   bool get isWeb => kIsWeb;
 
-  // TODO: Windows/macOS support
+  // TODO: Windows support
   @override
-  Future<String?> get currentLocale => Devicelocale.currentLocale;
+  Future<String?> get currentLocale async {
+    final locale = await Devicelocale.currentLocale;
+    // Some returned locales have the sharp (#) character in the subtag,
+    // for example en_US_#u-fw-mon-mu-celsius.
+    // It needs to be removed to bring it to Unicode format.
+    return locale?.replaceAll('#', '');
+  }
 
   @override
   Future<Locale?> get currentAsLocale async {
