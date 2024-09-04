@@ -1,4 +1,4 @@
-// Copyright (C) 2021 Yaroslav Pronin <proninyaroslav@mail.ru>
+// Copyright (C) 2021-2024 Yaroslav Pronin <proninyaroslav@mail.ru>
 // Copyright (C) 2021 Insurgo Inc. <insurgo@riseup.net>
 //
 // This file is part of LibreTrack.
@@ -70,7 +70,7 @@ void main() {
           .toList();
 
       when(
-        () => mockTrackRepo.getActiveTrackNumberServices(trackNumbersList[0]),
+        () => mockTrackRepo.getTrackNumberServices(trackNumbersList[0]),
       ).thenAnswer(
         (_) async => StorageResult([
           TrackNumberService(
@@ -80,7 +80,7 @@ void main() {
         ]),
       );
       when(
-        () => mockTrackRepo.getActiveTrackNumberServices(trackNumbersList[1]),
+        () => mockTrackRepo.getTrackNumberServices(trackNumbersList[1]),
       ).thenAnswer(
         (_) async => StorageResult([
           TrackNumberService(
@@ -90,7 +90,7 @@ void main() {
         ]),
       );
       when(
-        () => mockTrackRepo.getActiveTrackNumberServices(trackNumbersList[2]),
+        () => mockTrackRepo.getTrackNumberServices(trackNumbersList[2]),
       ).thenAnswer(
         (_) async => StorageResult([
           TrackNumberService(
