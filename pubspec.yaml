@@ -57,11 +57,12 @@ dependencies:
   injectable: ^2.4.4
   intl: any
   jiffy: ^6.3.1
-  json_annotation: ^4.4.0
+  json_annotation: ^4.9.0
   json_serializable: ^6.0.0
   logger: ^2.4.0
   material_design_icons_flutter: ^7.0.7296
   package_info_plus: ^8.0.0
+  pretty_http_logger: ^1.0.4
   quiver: ^3.0.0
   receive_sharing_intent: ^1.8.0
   responsive_builder: ^0.7.1

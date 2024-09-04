@@ -23,6 +23,8 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:http/http.dart' as http;
 import 'package:injectable/injectable.dart';
 import 'package:libretrack/core/model/request_builder.dart';
+import 'package:libretrack/env.dart';
+import 'package:pretty_http_logger/pretty_http_logger.dart';
 
 part 'http_client.freezed.dart';
 
@@ -119,6 +121,13 @@ class HttpClientImpl implements HttpClient {
 
 @module
 abstract class ClientModule {
-  @injectable
-  http.Client get client => http.Client();
+  @Injectable(env: [Env.prod])
+  http.Client get clientProd => http.Client();
+
+  @Injectable(env: [Env.dev])
+  http.Client get clientDev => HttpClientWithMiddleware.build(
+        middlewares: [
+          HttpLogger(logLevel: LogLevel.BODY),
+        ],
+      );
 }

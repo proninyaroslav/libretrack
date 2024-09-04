@@ -97,9 +97,6 @@ extension GetItInjectableX on _i174.GetIt {
         () => _i947.ParcelErrorBannerCubit());
     gh.factory<_i980.SelectableParcelsCubit>(
         () => _i980.SelectableParcelsCubit());
-    gh.factory<_i519.Client>(() => clientModule.client);
-    gh.factory<_i131.HttpClientFactory>(
-        () => _i131.HttpClientFactoryImpl(gh<_i519.Client>()));
     gh.factory<_i1024.CrashReportIdGenerator>(
         () => _i1024.CrashReportIdGeneratorImpl());
     gh.factory<_i324.RequestFactory>(
@@ -111,6 +108,10 @@ extension GetItInjectableX on _i174.GetIt {
     );
     gh.factory<_i132.TrackingIdGenerator>(
         () => _i132.TrackingIdGeneratorImpl());
+    gh.factory<_i519.Client>(
+      () => clientModule.clientDev,
+      registerFor: {_dev},
+    );
     gh.factory<_i581.HttpClient>(
         () => _i581.HttpClientImpl(gh<_i519.Client>()));
     gh.factory<_i253.PlatformInfo>(() => _i253.PlatformInfoImpl());
@@ -169,6 +170,10 @@ extension GetItInjectableX on _i174.GetIt {
       ),
       registerFor: {_prod},
     );
+    gh.factory<_i519.Client>(
+      () => clientModule.clientProd,
+      registerFor: {_prod},
+    );
     gh.factory<_i510.AboutCubit>(
         () => _i510.AboutCubit(gh<_i253.PlatformInfo>()));
     gh.factory<_i796.CrashReportSender>(
@@ -182,6 +187,8 @@ extension GetItInjectableX on _i174.GetIt {
       () => _i324.RequestFactoryImpl(),
       registerFor: {_prod},
     );
+    gh.factory<_i131.HttpClientFactory>(
+        () => _i131.HttpClientFactoryImpl(gh<_i519.Client>()));
     gh.factory<_i580.Fetcher>(() => _i580.FetcherImpl(
           gh<_i131.HttpClientFactory>(),
           gh<_i541.DateTimeProvider>(),
