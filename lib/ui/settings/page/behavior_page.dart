@@ -66,9 +66,13 @@ class BehaviorPage extends StatelessWidget {
             current is BehaviorStateTrackingLimitChanged,
         builder: (context, state) {
           return Text(
-            S.of(context).settingsTrackingFreqLimitSummary(
+            state.info.trackingLimit.maybeWhen(
+              unlimited: () =>
                   state.info.trackingLimit.toLocalizedString(context),
-                ),
+              orElse: () => S.of(context).settingsTrackingFreqLimitSummary(
+                    state.info.trackingLimit.toLocalizedString(context),
+                  ),
+            ),
           );
         },
       ),
@@ -247,6 +251,7 @@ class _TrackingLimitList extends StatefulWidget {
 
 class _TrackingLimitListState extends State<_TrackingLimitList> {
   final _values = const [
+    TrackingFreqLimit.unlimited(),
     TrackingFreqLimit.fifteenMin(),
     TrackingFreqLimit.thirtyMin(),
     TrackingFreqLimit.fortyFiveMin(),

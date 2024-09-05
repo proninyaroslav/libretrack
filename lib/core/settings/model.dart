@@ -107,6 +107,9 @@ class TrackingFreqLimit with _$TrackingFreqLimit {
   /// Once every 1 hour
   const factory TrackingFreqLimit.oneHour() = TrackingFreqLimitOneHour;
 
+  /// Unlimited
+  const factory TrackingFreqLimit.unlimited() = TrackingFreqLimitUnlimited;
+
   factory TrackingFreqLimit.fromJson(Map<String, dynamic> json) =>
       _$TrackingFreqLimitFromJson(json);
 }
@@ -138,6 +141,7 @@ extension TrackingFreqLimitExtension on TrackingFreqLimit {
         thirtyMin: () => const Duration(minutes: 30),
         fortyFiveMin: () => const Duration(minutes: 45),
         oneHour: () => const Duration(hours: 1),
+        unlimited: () => const Duration(),
       );
 }
 

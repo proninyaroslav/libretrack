@@ -2781,6 +2781,8 @@ TrackingFreqLimit _$TrackingFreqLimitFromJson(Map<String, dynamic> json) {
       return TrackingFreqLimitFortyFiveMin.fromJson(json);
     case 'oneHour':
       return TrackingFreqLimitOneHour.fromJson(json);
+    case 'unlimited':
+      return TrackingFreqLimitUnlimited.fromJson(json);
 
     default:
       throw CheckedFromJsonException(json, 'runtimeType', 'TrackingFreqLimit',
@@ -2796,6 +2798,7 @@ mixin _$TrackingFreqLimit {
     required TResult Function() thirtyMin,
     required TResult Function() fortyFiveMin,
     required TResult Function() oneHour,
+    required TResult Function() unlimited,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -2804,6 +2807,7 @@ mixin _$TrackingFreqLimit {
     TResult? Function()? thirtyMin,
     TResult? Function()? fortyFiveMin,
     TResult? Function()? oneHour,
+    TResult? Function()? unlimited,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -2812,6 +2816,7 @@ mixin _$TrackingFreqLimit {
     TResult Function()? thirtyMin,
     TResult Function()? fortyFiveMin,
     TResult Function()? oneHour,
+    TResult Function()? unlimited,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -2821,6 +2826,7 @@ mixin _$TrackingFreqLimit {
     required TResult Function(TrackingFreqLimitThirtyMin value) thirtyMin,
     required TResult Function(TrackingFreqLimitFortyFiveMin value) fortyFiveMin,
     required TResult Function(TrackingFreqLimitOneHour value) oneHour,
+    required TResult Function(TrackingFreqLimitUnlimited value) unlimited,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -2829,6 +2835,7 @@ mixin _$TrackingFreqLimit {
     TResult? Function(TrackingFreqLimitThirtyMin value)? thirtyMin,
     TResult? Function(TrackingFreqLimitFortyFiveMin value)? fortyFiveMin,
     TResult? Function(TrackingFreqLimitOneHour value)? oneHour,
+    TResult? Function(TrackingFreqLimitUnlimited value)? unlimited,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -2837,6 +2844,7 @@ mixin _$TrackingFreqLimit {
     TResult Function(TrackingFreqLimitThirtyMin value)? thirtyMin,
     TResult Function(TrackingFreqLimitFortyFiveMin value)? fortyFiveMin,
     TResult Function(TrackingFreqLimitOneHour value)? oneHour,
+    TResult Function(TrackingFreqLimitUnlimited value)? unlimited,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -2924,6 +2932,7 @@ class _$TrackingFreqLimitFifteenMinImpl implements TrackingFreqLimitFifteenMin {
     required TResult Function() thirtyMin,
     required TResult Function() fortyFiveMin,
     required TResult Function() oneHour,
+    required TResult Function() unlimited,
   }) {
     return fifteenMin();
   }
@@ -2935,6 +2944,7 @@ class _$TrackingFreqLimitFifteenMinImpl implements TrackingFreqLimitFifteenMin {
     TResult? Function()? thirtyMin,
     TResult? Function()? fortyFiveMin,
     TResult? Function()? oneHour,
+    TResult? Function()? unlimited,
   }) {
     return fifteenMin?.call();
   }
@@ -2946,6 +2956,7 @@ class _$TrackingFreqLimitFifteenMinImpl implements TrackingFreqLimitFifteenMin {
     TResult Function()? thirtyMin,
     TResult Function()? fortyFiveMin,
     TResult Function()? oneHour,
+    TResult Function()? unlimited,
     required TResult orElse(),
   }) {
     if (fifteenMin != null) {
@@ -2961,6 +2972,7 @@ class _$TrackingFreqLimitFifteenMinImpl implements TrackingFreqLimitFifteenMin {
     required TResult Function(TrackingFreqLimitThirtyMin value) thirtyMin,
     required TResult Function(TrackingFreqLimitFortyFiveMin value) fortyFiveMin,
     required TResult Function(TrackingFreqLimitOneHour value) oneHour,
+    required TResult Function(TrackingFreqLimitUnlimited value) unlimited,
   }) {
     return fifteenMin(this);
   }
@@ -2972,6 +2984,7 @@ class _$TrackingFreqLimitFifteenMinImpl implements TrackingFreqLimitFifteenMin {
     TResult? Function(TrackingFreqLimitThirtyMin value)? thirtyMin,
     TResult? Function(TrackingFreqLimitFortyFiveMin value)? fortyFiveMin,
     TResult? Function(TrackingFreqLimitOneHour value)? oneHour,
+    TResult? Function(TrackingFreqLimitUnlimited value)? unlimited,
   }) {
     return fifteenMin?.call(this);
   }
@@ -2983,6 +2996,7 @@ class _$TrackingFreqLimitFifteenMinImpl implements TrackingFreqLimitFifteenMin {
     TResult Function(TrackingFreqLimitThirtyMin value)? thirtyMin,
     TResult Function(TrackingFreqLimitFortyFiveMin value)? fortyFiveMin,
     TResult Function(TrackingFreqLimitOneHour value)? oneHour,
+    TResult Function(TrackingFreqLimitUnlimited value)? unlimited,
     required TResult orElse(),
   }) {
     if (fifteenMin != null) {
@@ -3065,6 +3079,7 @@ class _$TrackingFreqLimitThirtyMinImpl implements TrackingFreqLimitThirtyMin {
     required TResult Function() thirtyMin,
     required TResult Function() fortyFiveMin,
     required TResult Function() oneHour,
+    required TResult Function() unlimited,
   }) {
     return thirtyMin();
   }
@@ -3076,6 +3091,7 @@ class _$TrackingFreqLimitThirtyMinImpl implements TrackingFreqLimitThirtyMin {
     TResult? Function()? thirtyMin,
     TResult? Function()? fortyFiveMin,
     TResult? Function()? oneHour,
+    TResult? Function()? unlimited,
   }) {
     return thirtyMin?.call();
   }
@@ -3087,6 +3103,7 @@ class _$TrackingFreqLimitThirtyMinImpl implements TrackingFreqLimitThirtyMin {
     TResult Function()? thirtyMin,
     TResult Function()? fortyFiveMin,
     TResult Function()? oneHour,
+    TResult Function()? unlimited,
     required TResult orElse(),
   }) {
     if (thirtyMin != null) {
@@ -3102,6 +3119,7 @@ class _$TrackingFreqLimitThirtyMinImpl implements TrackingFreqLimitThirtyMin {
     required TResult Function(TrackingFreqLimitThirtyMin value) thirtyMin,
     required TResult Function(TrackingFreqLimitFortyFiveMin value) fortyFiveMin,
     required TResult Function(TrackingFreqLimitOneHour value) oneHour,
+    required TResult Function(TrackingFreqLimitUnlimited value) unlimited,
   }) {
     return thirtyMin(this);
   }
@@ -3113,6 +3131,7 @@ class _$TrackingFreqLimitThirtyMinImpl implements TrackingFreqLimitThirtyMin {
     TResult? Function(TrackingFreqLimitThirtyMin value)? thirtyMin,
     TResult? Function(TrackingFreqLimitFortyFiveMin value)? fortyFiveMin,
     TResult? Function(TrackingFreqLimitOneHour value)? oneHour,
+    TResult? Function(TrackingFreqLimitUnlimited value)? unlimited,
   }) {
     return thirtyMin?.call(this);
   }
@@ -3124,6 +3143,7 @@ class _$TrackingFreqLimitThirtyMinImpl implements TrackingFreqLimitThirtyMin {
     TResult Function(TrackingFreqLimitThirtyMin value)? thirtyMin,
     TResult Function(TrackingFreqLimitFortyFiveMin value)? fortyFiveMin,
     TResult Function(TrackingFreqLimitOneHour value)? oneHour,
+    TResult Function(TrackingFreqLimitUnlimited value)? unlimited,
     required TResult orElse(),
   }) {
     if (thirtyMin != null) {
@@ -3206,6 +3226,7 @@ class _$TrackingFreqLimitFortyFiveMinImpl
     required TResult Function() thirtyMin,
     required TResult Function() fortyFiveMin,
     required TResult Function() oneHour,
+    required TResult Function() unlimited,
   }) {
     return fortyFiveMin();
   }
@@ -3217,6 +3238,7 @@ class _$TrackingFreqLimitFortyFiveMinImpl
     TResult? Function()? thirtyMin,
     TResult? Function()? fortyFiveMin,
     TResult? Function()? oneHour,
+    TResult? Function()? unlimited,
   }) {
     return fortyFiveMin?.call();
   }
@@ -3228,6 +3250,7 @@ class _$TrackingFreqLimitFortyFiveMinImpl
     TResult Function()? thirtyMin,
     TResult Function()? fortyFiveMin,
     TResult Function()? oneHour,
+    TResult Function()? unlimited,
     required TResult orElse(),
   }) {
     if (fortyFiveMin != null) {
@@ -3243,6 +3266,7 @@ class _$TrackingFreqLimitFortyFiveMinImpl
     required TResult Function(TrackingFreqLimitThirtyMin value) thirtyMin,
     required TResult Function(TrackingFreqLimitFortyFiveMin value) fortyFiveMin,
     required TResult Function(TrackingFreqLimitOneHour value) oneHour,
+    required TResult Function(TrackingFreqLimitUnlimited value) unlimited,
   }) {
     return fortyFiveMin(this);
   }
@@ -3254,6 +3278,7 @@ class _$TrackingFreqLimitFortyFiveMinImpl
     TResult? Function(TrackingFreqLimitThirtyMin value)? thirtyMin,
     TResult? Function(TrackingFreqLimitFortyFiveMin value)? fortyFiveMin,
     TResult? Function(TrackingFreqLimitOneHour value)? oneHour,
+    TResult? Function(TrackingFreqLimitUnlimited value)? unlimited,
   }) {
     return fortyFiveMin?.call(this);
   }
@@ -3265,6 +3290,7 @@ class _$TrackingFreqLimitFortyFiveMinImpl
     TResult Function(TrackingFreqLimitThirtyMin value)? thirtyMin,
     TResult Function(TrackingFreqLimitFortyFiveMin value)? fortyFiveMin,
     TResult Function(TrackingFreqLimitOneHour value)? oneHour,
+    TResult Function(TrackingFreqLimitUnlimited value)? unlimited,
     required TResult orElse(),
   }) {
     if (fortyFiveMin != null) {
@@ -3346,6 +3372,7 @@ class _$TrackingFreqLimitOneHourImpl implements TrackingFreqLimitOneHour {
     required TResult Function() thirtyMin,
     required TResult Function() fortyFiveMin,
     required TResult Function() oneHour,
+    required TResult Function() unlimited,
   }) {
     return oneHour();
   }
@@ -3357,6 +3384,7 @@ class _$TrackingFreqLimitOneHourImpl implements TrackingFreqLimitOneHour {
     TResult? Function()? thirtyMin,
     TResult? Function()? fortyFiveMin,
     TResult? Function()? oneHour,
+    TResult? Function()? unlimited,
   }) {
     return oneHour?.call();
   }
@@ -3368,6 +3396,7 @@ class _$TrackingFreqLimitOneHourImpl implements TrackingFreqLimitOneHour {
     TResult Function()? thirtyMin,
     TResult Function()? fortyFiveMin,
     TResult Function()? oneHour,
+    TResult Function()? unlimited,
     required TResult orElse(),
   }) {
     if (oneHour != null) {
@@ -3383,6 +3412,7 @@ class _$TrackingFreqLimitOneHourImpl implements TrackingFreqLimitOneHour {
     required TResult Function(TrackingFreqLimitThirtyMin value) thirtyMin,
     required TResult Function(TrackingFreqLimitFortyFiveMin value) fortyFiveMin,
     required TResult Function(TrackingFreqLimitOneHour value) oneHour,
+    required TResult Function(TrackingFreqLimitUnlimited value) unlimited,
   }) {
     return oneHour(this);
   }
@@ -3394,6 +3424,7 @@ class _$TrackingFreqLimitOneHourImpl implements TrackingFreqLimitOneHour {
     TResult? Function(TrackingFreqLimitThirtyMin value)? thirtyMin,
     TResult? Function(TrackingFreqLimitFortyFiveMin value)? fortyFiveMin,
     TResult? Function(TrackingFreqLimitOneHour value)? oneHour,
+    TResult? Function(TrackingFreqLimitUnlimited value)? unlimited,
   }) {
     return oneHour?.call(this);
   }
@@ -3405,6 +3436,7 @@ class _$TrackingFreqLimitOneHourImpl implements TrackingFreqLimitOneHour {
     TResult Function(TrackingFreqLimitThirtyMin value)? thirtyMin,
     TResult Function(TrackingFreqLimitFortyFiveMin value)? fortyFiveMin,
     TResult Function(TrackingFreqLimitOneHour value)? oneHour,
+    TResult Function(TrackingFreqLimitUnlimited value)? unlimited,
     required TResult orElse(),
   }) {
     if (oneHour != null) {
@@ -3426,6 +3458,152 @@ abstract class TrackingFreqLimitOneHour implements TrackingFreqLimit {
 
   factory TrackingFreqLimitOneHour.fromJson(Map<String, dynamic> json) =
       _$TrackingFreqLimitOneHourImpl.fromJson;
+}
+
+/// @nodoc
+abstract class _$$TrackingFreqLimitUnlimitedImplCopyWith<$Res> {
+  factory _$$TrackingFreqLimitUnlimitedImplCopyWith(
+          _$TrackingFreqLimitUnlimitedImpl value,
+          $Res Function(_$TrackingFreqLimitUnlimitedImpl) then) =
+      __$$TrackingFreqLimitUnlimitedImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$TrackingFreqLimitUnlimitedImplCopyWithImpl<$Res>
+    extends _$TrackingFreqLimitCopyWithImpl<$Res,
+        _$TrackingFreqLimitUnlimitedImpl>
+    implements _$$TrackingFreqLimitUnlimitedImplCopyWith<$Res> {
+  __$$TrackingFreqLimitUnlimitedImplCopyWithImpl(
+      _$TrackingFreqLimitUnlimitedImpl _value,
+      $Res Function(_$TrackingFreqLimitUnlimitedImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of TrackingFreqLimit
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$TrackingFreqLimitUnlimitedImpl implements TrackingFreqLimitUnlimited {
+  const _$TrackingFreqLimitUnlimitedImpl({final String? $type})
+      : $type = $type ?? 'unlimited';
+
+  factory _$TrackingFreqLimitUnlimitedImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$TrackingFreqLimitUnlimitedImplFromJson(json);
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
+
+  @override
+  String toString() {
+    return 'TrackingFreqLimit.unlimited()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$TrackingFreqLimitUnlimitedImpl);
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() fifteenMin,
+    required TResult Function() thirtyMin,
+    required TResult Function() fortyFiveMin,
+    required TResult Function() oneHour,
+    required TResult Function() unlimited,
+  }) {
+    return unlimited();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? fifteenMin,
+    TResult? Function()? thirtyMin,
+    TResult? Function()? fortyFiveMin,
+    TResult? Function()? oneHour,
+    TResult? Function()? unlimited,
+  }) {
+    return unlimited?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? fifteenMin,
+    TResult Function()? thirtyMin,
+    TResult Function()? fortyFiveMin,
+    TResult Function()? oneHour,
+    TResult Function()? unlimited,
+    required TResult orElse(),
+  }) {
+    if (unlimited != null) {
+      return unlimited();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(TrackingFreqLimitFifteenMin value) fifteenMin,
+    required TResult Function(TrackingFreqLimitThirtyMin value) thirtyMin,
+    required TResult Function(TrackingFreqLimitFortyFiveMin value) fortyFiveMin,
+    required TResult Function(TrackingFreqLimitOneHour value) oneHour,
+    required TResult Function(TrackingFreqLimitUnlimited value) unlimited,
+  }) {
+    return unlimited(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(TrackingFreqLimitFifteenMin value)? fifteenMin,
+    TResult? Function(TrackingFreqLimitThirtyMin value)? thirtyMin,
+    TResult? Function(TrackingFreqLimitFortyFiveMin value)? fortyFiveMin,
+    TResult? Function(TrackingFreqLimitOneHour value)? oneHour,
+    TResult? Function(TrackingFreqLimitUnlimited value)? unlimited,
+  }) {
+    return unlimited?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(TrackingFreqLimitFifteenMin value)? fifteenMin,
+    TResult Function(TrackingFreqLimitThirtyMin value)? thirtyMin,
+    TResult Function(TrackingFreqLimitFortyFiveMin value)? fortyFiveMin,
+    TResult Function(TrackingFreqLimitOneHour value)? oneHour,
+    TResult Function(TrackingFreqLimitUnlimited value)? unlimited,
+    required TResult orElse(),
+  }) {
+    if (unlimited != null) {
+      return unlimited(this);
+    }
+    return orElse();
+  }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$TrackingFreqLimitUnlimitedImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class TrackingFreqLimitUnlimited implements TrackingFreqLimit {
+  const factory TrackingFreqLimitUnlimited() = _$TrackingFreqLimitUnlimitedImpl;
+
+  factory TrackingFreqLimitUnlimited.fromJson(Map<String, dynamic> json) =
+      _$TrackingFreqLimitUnlimitedImpl.fromJson;
 }
 
 AutoTrackingFreq _$AutoTrackingFreqFromJson(Map<String, dynamic> json) {

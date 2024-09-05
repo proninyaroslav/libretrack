@@ -278,6 +278,18 @@ Map<String, dynamic> _$$TrackingFreqLimitOneHourImplToJson(
       'runtimeType': instance.$type,
     };
 
+_$TrackingFreqLimitUnlimitedImpl _$$TrackingFreqLimitUnlimitedImplFromJson(
+        Map<String, dynamic> json) =>
+    _$TrackingFreqLimitUnlimitedImpl(
+      $type: json['runtimeType'] as String?,
+    );
+
+Map<String, dynamic> _$$TrackingFreqLimitUnlimitedImplToJson(
+        _$TrackingFreqLimitUnlimitedImpl instance) =>
+    <String, dynamic>{
+      'runtimeType': instance.$type,
+    };
+
 _$AutoTrackingFreqSixHoursImpl _$$AutoTrackingFreqSixHoursImplFromJson(
         Map<String, dynamic> json) =>
     _$AutoTrackingFreqSixHoursImpl(

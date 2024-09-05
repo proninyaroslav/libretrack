@@ -196,6 +196,7 @@ extension TrackingFreqLimitExtension on TrackingFreqLimit {
       thirtyMin: () => S.of(context).settingsTrackingFreqThirtyMin,
       fortyFiveMin: () => S.of(context).settingsTrackingFreqFortyFiveMin,
       oneHour: () => S.of(context).settingsTrackingFreqOneHour,
+      unlimited: () => S.of(context).settingsTrackingFreqUnlimited,
     );
   }
 }

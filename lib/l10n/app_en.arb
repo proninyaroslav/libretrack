@@ -210,6 +210,7 @@
   "settingsTrackingFreqThirtyMin": "30 minutes",
   "settingsTrackingFreqFortyFiveMin": "45 minutes",
   "settingsTrackingFreqOneHour": "1 hour",
+  "settingsTrackingFreqUnlimited": "Unlimited",
   "settingsAutoTracking": "Auto tracking",
   "settingsAutoTrackingFreq": "Tracking frequency",
   "settingsAutoTrackingFreqDescr": "Specifies the minimum tracking interval. This interval is not accurate and may be increased due to system limitations (no internet connection, power saving mode, etc)",
