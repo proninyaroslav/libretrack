@@ -33,7 +33,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   device_info_plus: ^10.1.0
   device_preview: ^1.2.0
-  devicelocale: ^0.7.1
+  devicelocale: ^0.8.1
   diffutil_sliverlist: ^0.5.0
   enum_to_string: ^2.0.1
   equatable: ^2.0.3
