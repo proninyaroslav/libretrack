@@ -1,4 +1,4 @@
-// Copyright (C) 2021 Yaroslav Pronin <proninyaroslav@mail.ru>
+// Copyright (C) 2021-2024 Yaroslav Pronin <proninyaroslav@mail.ru>
 // Copyright (C) 2021 Insurgo Inc. <insurgo@riseup.net>
 //
 // This file is part of LibreTrack.
@@ -60,25 +60,24 @@ class TrackingAllWorker implements Worker {
       return const WorkResult.failure();
     }
 
-    final List<TrackNumberService>? trackServiceList = await _trackNumberRepo
-        .getActiveTrackNumberServicesByList(trackNumbers)
-        .then(
-          (result) => result.when(
-            (list) => list,
-            error: (e) {
-              e.when(
-                database: (e, stackTrace) {
-                  log().e(
-                    'Unable to get track service list',
-                    error: e,
-                    stackTrace: stackTrace,
+    final List<TrackNumberService>? trackServiceList =
+        await _trackNumberRepo.getTrackNumberServicesByList(trackNumbers).then(
+              (result) => result.when(
+                (list) => list,
+                error: (e) {
+                  e.when(
+                    database: (e, stackTrace) {
+                      log().e(
+                        'Unable to get track service list',
+                        error: e,
+                        stackTrace: stackTrace,
+                      );
+                    },
                   );
+                  return null;
                 },
-              );
-              return null;
-            },
-          ),
-        );
+              ),
+            );
     if (trackServiceList == null) {
       return const WorkResult.failure();
     }

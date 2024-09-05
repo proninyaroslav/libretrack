@@ -1,4 +1,4 @@
-// Copyright (C) 2021 Yaroslav Pronin <proninyaroslav@mail.ru>
+// Copyright (C) 2021-2024 Yaroslav Pronin <proninyaroslav@mail.ru>
 // Copyright (C) 2021 Insurgo Inc. <insurgo@riseup.net>
 //
 // This file is part of LibreTrack.
@@ -82,15 +82,6 @@ abstract class TrackNumberRepository {
 
   Future<StorageResult<List<TrackNumberService>>> getTrackNumberServicesByList(
     List<String> trackNumberList,
-  );
-
-  Future<StorageResult<List<TrackNumberService>>>
-      getActiveTrackNumberServicesByList(
-    List<String> trackNumberList,
-  );
-
-  Future<StorageResult<List<TrackNumberService>>> getActiveTrackNumberServices(
-    String trackNumber,
   );
 }
 
@@ -363,41 +354,6 @@ class TrackNumberRepositoryImpl implements TrackNumberRepository {
       return StorageResult(
         await _db.trackNumberServiceDao.getTrackNumberServicesByList(
           trackNumberList,
-        ),
-      );
-    } on Exception catch (e, stackTrace) {
-      return StorageResult.error(
-        StorageError.database(exception: e, stackTrace: stackTrace),
-      );
-    }
-  }
-
-  @override
-  Future<StorageResult<List<TrackNumberService>>>
-      getActiveTrackNumberServicesByList(
-    List<String> trackNumberList,
-  ) async {
-    try {
-      return StorageResult(
-        await _db.trackNumberServiceDao.getActiveTrackNumberServicesByList(
-          trackNumberList,
-        ),
-      );
-    } on Exception catch (e, stackTrace) {
-      return StorageResult.error(
-        StorageError.database(exception: e, stackTrace: stackTrace),
-      );
-    }
-  }
-
-  @override
-  Future<StorageResult<List<TrackNumberService>>> getActiveTrackNumberServices(
-    String trackNumber,
-  ) async {
-    try {
-      return StorageResult(
-        await _db.trackNumberServiceDao.getActiveTrackNumberServices(
-          trackNumber,
         ),
       );
     } on Exception catch (e, stackTrace) {

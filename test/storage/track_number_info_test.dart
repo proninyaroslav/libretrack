@@ -1,4 +1,4 @@
-// Copyright (C) 2021 Yaroslav Pronin <proninyaroslav@mail.ru>
+// Copyright (C) 2021-2024 Yaroslav Pronin <proninyaroslav@mail.ru>
 // Copyright (C) 2021 Insurgo Inc. <insurgo@riseup.net>
 //
 // This file is part of LibreTrack.
@@ -245,48 +245,6 @@ void main() {
       expect(
         await trackRepo.getTrackNumberServices(trackInfo.trackNumber),
         const StorageResult(<TrackNumberService>[]),
-      );
-    });
-
-    test('Get active', () async {
-      final trackInfoList = <TrackNumberInfo>[];
-      final trackServices = range(10).map((i) {
-        final trackInfo = TrackNumberInfo('$i');
-        trackInfoList.add(trackInfo);
-        return TrackNumberService(
-          trackNumber: trackInfo.trackNumber,
-          serviceType: PostalServiceType.ups,
-          isActive: (i as int).isEven,
-        );
-      }).toList();
-      final trackNumberList = trackInfoList
-          .map(
-            (info) => info.trackNumber,
-          )
-          .toList();
-      final expectedTrackServices = trackServices
-          .where(
-            (info) => info.isActive,
-          )
-          .toList();
-
-      expect(
-        await trackRepo.getActiveTrackNumberServicesByList(trackNumberList),
-        const StorageResult(<TrackNumberService>[]),
-      );
-
-      expect(
-        await trackRepo.addTrackList(trackInfoList),
-        StorageResult.empty,
-      );
-      expect(
-        await trackRepo.addTrackNumberServices(trackServices),
-        StorageResult.empty,
-      );
-
-      expect(
-        await trackRepo.getActiveTrackNumberServicesByList(trackNumberList),
-        StorageResult(expectedTrackServices),
       );
     });
 

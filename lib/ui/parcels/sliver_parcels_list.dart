@@ -1,4 +1,4 @@
-// Copyright (C) 2021 Yaroslav Pronin <proninyaroslav@mail.ru>
+// Copyright (C) 2021-2024 Yaroslav Pronin <proninyaroslav@mail.ru>
 // Copyright (C) 2021 Insurgo Inc. <insurgo@riseup.net>
 //
 // This file is part of LibreTrack.
@@ -450,12 +450,16 @@ List<Widget> _buildAuthErrorStatus(
   List<TrackingResponseInfo>? lastTrackingResponse,
 ) {
   bool missingAuthData = false;
-  bool missingAccount = false;
+  bool missingAccount = true;
   if (lastTrackingResponse != null) {
     for (final info in lastTrackingResponse) {
-      missingAuthData = info.error?.type == TrackingErrorType.missingAuthData;
-      missingAccount =
-          info.error?.type == TrackingErrorType.missingTrackingService;
+      final errorType = info.error?.type;
+
+      missingAuthData = errorType == TrackingErrorType.missingAuthData;
+      if (missingAccount &&
+          errorType != TrackingErrorType.missingTrackingService) {
+        missingAccount = false;
+      }
       if (missingAuthData && missingAccount) {
         break;
       }

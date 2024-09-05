@@ -156,9 +156,7 @@ class __$$TrackingTaskStateLoadingImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$TrackingTaskStateLoadingImpl
-    with DiagnosticableTreeMixin
-    implements TrackingTaskStateLoading {
+class _$TrackingTaskStateLoadingImpl implements TrackingTaskStateLoading {
   const _$TrackingTaskStateLoadingImpl(
       {required final List<TrackingInfo> trackingInfoList})
       : _trackingInfoList = trackingInfoList;
@@ -173,16 +171,8 @@ class _$TrackingTaskStateLoadingImpl
   }
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'TrackingTaskState.loading(trackingInfoList: $trackingInfoList)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'TrackingTaskState.loading'))
-      ..add(DiagnosticsProperty('trackingInfoList', trackingInfoList));
   }
 
   @override
@@ -368,9 +358,7 @@ class __$$TrackingTaskStateLoadedImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$TrackingTaskStateLoadedImpl
-    with DiagnosticableTreeMixin
-    implements TrackingTaskStateLoaded {
+class _$TrackingTaskStateLoadedImpl implements TrackingTaskStateLoaded {
   const _$TrackingTaskStateLoadedImpl(
       {required final List<TrackingTaskResult> result,
       required final List<TrackingInfo> trackingInfoList,
@@ -442,20 +430,8 @@ class _$TrackingTaskStateLoadedImpl
   }
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'TrackingTaskState.loaded(result: $result, trackingInfoList: $trackingInfoList, responseInfoList: $responseInfoList, unsupportedServices: $unsupportedServices, disabledServices: $disabledServices)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'TrackingTaskState.loaded'))
-      ..add(DiagnosticsProperty('result', result))
-      ..add(DiagnosticsProperty('trackingInfoList', trackingInfoList))
-      ..add(DiagnosticsProperty('responseInfoList', responseInfoList))
-      ..add(DiagnosticsProperty('unsupportedServices', unsupportedServices))
-      ..add(DiagnosticsProperty('disabledServices', disabledServices));
   }
 
   @override
@@ -730,9 +706,7 @@ class __$$TrackingTaskResultImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$TrackingTaskResultImpl
-    with DiagnosticableTreeMixin
-    implements _TrackingTaskResult {
+class _$TrackingTaskResultImpl implements _TrackingTaskResult {
   const _$TrackingTaskResultImpl(
       {required this.trackService,
       required this.info,
@@ -764,19 +738,8 @@ class _$TrackingTaskResultImpl
   }
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'TrackingTaskResult(trackService: $trackService, info: $info, activity: $activity, alternateTracks: $alternateTracks)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'TrackingTaskResult'))
-      ..add(DiagnosticsProperty('trackService', trackService))
-      ..add(DiagnosticsProperty('info', info))
-      ..add(DiagnosticsProperty('activity', activity))
-      ..add(DiagnosticsProperty('alternateTracks', alternateTracks));
   }
 
   @override
@@ -936,25 +899,15 @@ class __$$TrackingTaskParamsImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$TrackingTaskParamsImpl
-    with DiagnosticableTreeMixin
-    implements _TrackingTaskParams {
+class _$TrackingTaskParamsImpl implements _TrackingTaskParams {
   const _$TrackingTaskParamsImpl({this.locale});
 
   @override
   final Locale? locale;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'TrackingTaskParams(locale: $locale)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'TrackingTaskParams'))
-      ..add(DiagnosticsProperty('locale', locale));
   }
 
   @override
@@ -1119,9 +1072,7 @@ class __$$FailedRequestDataImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$FailedRequestDataImpl
-    with DiagnosticableTreeMixin
-    implements _FailedRequestData {
+class _$FailedRequestDataImpl implements _FailedRequestData {
   const _$FailedRequestDataImpl(
       {required this.id, required this.trackService, required this.reason});
 
@@ -1133,18 +1084,8 @@ class _$FailedRequestDataImpl
   final _FailedRequestReason reason;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return '_FailedRequest(id: $id, trackService: $trackService, reason: $reason)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', '_FailedRequest'))
-      ..add(DiagnosticsProperty('id', id))
-      ..add(DiagnosticsProperty('trackService', trackService))
-      ..add(DiagnosticsProperty('reason', reason));
   }
 
   @override
@@ -1198,18 +1139,21 @@ mixin _$FailedRequestReason {
   TResult when<TResult extends Object?>({
     required TResult Function() missingService,
     required TResult Function() missingAuthData,
+    required TResult Function() serviceInactive,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? missingService,
     TResult? Function()? missingAuthData,
+    TResult? Function()? serviceInactive,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? missingService,
     TResult Function()? missingAuthData,
+    TResult Function()? serviceInactive,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -1219,18 +1163,22 @@ mixin _$FailedRequestReason {
         missingService,
     required TResult Function(_FailedRequestMissingAuthData value)
         missingAuthData,
+    required TResult Function(_FailedRequestServiceInactive value)
+        serviceInactive,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_FailedRequestMissingService value)? missingService,
     TResult? Function(_FailedRequestMissingAuthData value)? missingAuthData,
+    TResult? Function(_FailedRequestServiceInactive value)? serviceInactive,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_FailedRequestMissingService value)? missingService,
     TResult Function(_FailedRequestMissingAuthData value)? missingAuthData,
+    TResult Function(_FailedRequestServiceInactive value)? serviceInactive,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -1283,20 +1231,12 @@ class __$$FailedRequestMissingServiceImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$FailedRequestMissingServiceImpl
-    with DiagnosticableTreeMixin
     implements _FailedRequestMissingService {
   const _$FailedRequestMissingServiceImpl();
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return '_FailedRequestReason.missingService()';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties.add(
-        DiagnosticsProperty('type', '_FailedRequestReason.missingService'));
   }
 
   @override
@@ -1314,6 +1254,7 @@ class _$FailedRequestMissingServiceImpl
   TResult when<TResult extends Object?>({
     required TResult Function() missingService,
     required TResult Function() missingAuthData,
+    required TResult Function() serviceInactive,
   }) {
     return missingService();
   }
@@ -1323,6 +1264,7 @@ class _$FailedRequestMissingServiceImpl
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? missingService,
     TResult? Function()? missingAuthData,
+    TResult? Function()? serviceInactive,
   }) {
     return missingService?.call();
   }
@@ -1332,6 +1274,7 @@ class _$FailedRequestMissingServiceImpl
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? missingService,
     TResult Function()? missingAuthData,
+    TResult Function()? serviceInactive,
     required TResult orElse(),
   }) {
     if (missingService != null) {
@@ -1347,6 +1290,8 @@ class _$FailedRequestMissingServiceImpl
         missingService,
     required TResult Function(_FailedRequestMissingAuthData value)
         missingAuthData,
+    required TResult Function(_FailedRequestServiceInactive value)
+        serviceInactive,
   }) {
     return missingService(this);
   }
@@ -1356,6 +1301,7 @@ class _$FailedRequestMissingServiceImpl
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_FailedRequestMissingService value)? missingService,
     TResult? Function(_FailedRequestMissingAuthData value)? missingAuthData,
+    TResult? Function(_FailedRequestServiceInactive value)? serviceInactive,
   }) {
     return missingService?.call(this);
   }
@@ -1365,6 +1311,7 @@ class _$FailedRequestMissingServiceImpl
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_FailedRequestMissingService value)? missingService,
     TResult Function(_FailedRequestMissingAuthData value)? missingAuthData,
+    TResult Function(_FailedRequestServiceInactive value)? serviceInactive,
     required TResult orElse(),
   }) {
     if (missingService != null) {
@@ -1404,20 +1351,12 @@ class __$$FailedRequestMissingAuthDataImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$FailedRequestMissingAuthDataImpl
-    with DiagnosticableTreeMixin
     implements _FailedRequestMissingAuthData {
   const _$FailedRequestMissingAuthDataImpl();
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return '_FailedRequestReason.missingAuthData()';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties.add(
-        DiagnosticsProperty('type', '_FailedRequestReason.missingAuthData'));
   }
 
   @override
@@ -1435,6 +1374,7 @@ class _$FailedRequestMissingAuthDataImpl
   TResult when<TResult extends Object?>({
     required TResult Function() missingService,
     required TResult Function() missingAuthData,
+    required TResult Function() serviceInactive,
   }) {
     return missingAuthData();
   }
@@ -1444,6 +1384,7 @@ class _$FailedRequestMissingAuthDataImpl
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? missingService,
     TResult? Function()? missingAuthData,
+    TResult? Function()? serviceInactive,
   }) {
     return missingAuthData?.call();
   }
@@ -1453,6 +1394,7 @@ class _$FailedRequestMissingAuthDataImpl
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? missingService,
     TResult Function()? missingAuthData,
+    TResult Function()? serviceInactive,
     required TResult orElse(),
   }) {
     if (missingAuthData != null) {
@@ -1468,6 +1410,8 @@ class _$FailedRequestMissingAuthDataImpl
         missingService,
     required TResult Function(_FailedRequestMissingAuthData value)
         missingAuthData,
+    required TResult Function(_FailedRequestServiceInactive value)
+        serviceInactive,
   }) {
     return missingAuthData(this);
   }
@@ -1477,6 +1421,7 @@ class _$FailedRequestMissingAuthDataImpl
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_FailedRequestMissingService value)? missingService,
     TResult? Function(_FailedRequestMissingAuthData value)? missingAuthData,
+    TResult? Function(_FailedRequestServiceInactive value)? serviceInactive,
   }) {
     return missingAuthData?.call(this);
   }
@@ -1486,6 +1431,7 @@ class _$FailedRequestMissingAuthDataImpl
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_FailedRequestMissingService value)? missingService,
     TResult Function(_FailedRequestMissingAuthData value)? missingAuthData,
+    TResult Function(_FailedRequestServiceInactive value)? serviceInactive,
     required TResult orElse(),
   }) {
     if (missingAuthData != null) {
@@ -1498,4 +1444,124 @@ class _$FailedRequestMissingAuthDataImpl
 abstract class _FailedRequestMissingAuthData implements _FailedRequestReason {
   const factory _FailedRequestMissingAuthData() =
       _$FailedRequestMissingAuthDataImpl;
+}
+
+/// @nodoc
+abstract class _$$FailedRequestServiceInactiveImplCopyWith<$Res> {
+  factory _$$FailedRequestServiceInactiveImplCopyWith(
+          _$FailedRequestServiceInactiveImpl value,
+          $Res Function(_$FailedRequestServiceInactiveImpl) then) =
+      __$$FailedRequestServiceInactiveImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$FailedRequestServiceInactiveImplCopyWithImpl<$Res>
+    extends __$FailedRequestReasonCopyWithImpl<$Res,
+        _$FailedRequestServiceInactiveImpl>
+    implements _$$FailedRequestServiceInactiveImplCopyWith<$Res> {
+  __$$FailedRequestServiceInactiveImplCopyWithImpl(
+      _$FailedRequestServiceInactiveImpl _value,
+      $Res Function(_$FailedRequestServiceInactiveImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of _FailedRequestReason
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$FailedRequestServiceInactiveImpl
+    implements _FailedRequestServiceInactive {
+  const _$FailedRequestServiceInactiveImpl();
+
+  @override
+  String toString() {
+    return '_FailedRequestReason.serviceInactive()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$FailedRequestServiceInactiveImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() missingService,
+    required TResult Function() missingAuthData,
+    required TResult Function() serviceInactive,
+  }) {
+    return serviceInactive();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? missingService,
+    TResult? Function()? missingAuthData,
+    TResult? Function()? serviceInactive,
+  }) {
+    return serviceInactive?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? missingService,
+    TResult Function()? missingAuthData,
+    TResult Function()? serviceInactive,
+    required TResult orElse(),
+  }) {
+    if (serviceInactive != null) {
+      return serviceInactive();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_FailedRequestMissingService value)
+        missingService,
+    required TResult Function(_FailedRequestMissingAuthData value)
+        missingAuthData,
+    required TResult Function(_FailedRequestServiceInactive value)
+        serviceInactive,
+  }) {
+    return serviceInactive(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_FailedRequestMissingService value)? missingService,
+    TResult? Function(_FailedRequestMissingAuthData value)? missingAuthData,
+    TResult? Function(_FailedRequestServiceInactive value)? serviceInactive,
+  }) {
+    return serviceInactive?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_FailedRequestMissingService value)? missingService,
+    TResult Function(_FailedRequestMissingAuthData value)? missingAuthData,
+    TResult Function(_FailedRequestServiceInactive value)? serviceInactive,
+    required TResult orElse(),
+  }) {
+    if (serviceInactive != null) {
+      return serviceInactive(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _FailedRequestServiceInactive implements _FailedRequestReason {
+  const factory _FailedRequestServiceInactive() =
+      _$FailedRequestServiceInactiveImpl;
 }

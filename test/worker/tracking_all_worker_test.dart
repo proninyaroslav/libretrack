@@ -1,4 +1,4 @@
-// Copyright (C) 2021 Yaroslav Pronin <proninyaroslav@mail.ru>
+// Copyright (C) 2021-2024 Yaroslav Pronin <proninyaroslav@mail.ru>
 // Copyright (C) 2021 Insurgo Inc. <insurgo@riseup.net>
 //
 // This file is part of LibreTrack.
@@ -84,7 +84,7 @@ void main() {
       when(() => mockTrackNumberRepo.getAllUnarchivedTracks()).thenAnswer(
         (_) async => StorageResult(nonArchivedTracks),
       );
-      when(() => mockTrackNumberRepo.getActiveTrackNumberServicesByList(
+      when(() => mockTrackNumberRepo.getTrackNumberServicesByList(
             nonArchivedTracks.map((info) => info.trackNumber).toList(),
           )).thenAnswer(
         (_) async => StorageResult(trackServiceList),
@@ -116,7 +116,7 @@ void main() {
       when(() => mockTrackNumberRepo.getAllUnarchivedTracks()).thenAnswer(
         (_) async => const StorageResult([trackInfo]),
       );
-      when(() => mockTrackNumberRepo.getActiveTrackNumberServicesByList(
+      when(() => mockTrackNumberRepo.getTrackNumberServicesByList(
             [trackInfo.trackNumber],
           )).thenAnswer(
         (_) async => StorageResult([trackService]),

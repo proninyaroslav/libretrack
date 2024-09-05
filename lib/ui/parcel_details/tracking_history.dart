@@ -1,4 +1,4 @@
-// Copyright (C) 2021 Yaroslav Pronin <proninyaroslav@mail.ru>
+// Copyright (C) 2021-2024 Yaroslav Pronin <proninyaroslav@mail.ru>
 // Copyright (C) 2021 Insurgo Inc. <insurgo@riseup.net>
 //
 // This file is part of LibreTrack.
@@ -198,13 +198,12 @@ class _TrackingHistoryResponseItem extends StatelessWidget {
     switch (response.status) {
       case TrackingResponseStatus.success:
         tooltip = S.of(context).trackingResponseSuccess;
-        break;
       case TrackingResponseStatus.fail:
         tooltip = S.of(context).trackingResponseError;
-        break;
       case TrackingResponseStatus.noInfo:
         tooltip = S.of(context).trackingResponseNoInfo;
-        break;
+      case TrackingResponseStatus.trackingStopped:
+        tooltip = S.of(context).trackingResponseStopped;
     }
 
     return Tooltip(
@@ -249,17 +248,18 @@ class _TrackingHistoryResponseItem extends StatelessWidget {
         icon = Icons.done;
         color = AppTheme.palette(context).ok;
         iconColor = Theme.of(context).colorScheme.onError;
-        break;
       case TrackingResponseStatus.fail:
         icon = Icons.close;
         color = Theme.of(context).colorScheme.error;
         iconColor = Theme.of(context).colorScheme.onError;
-        break;
       case TrackingResponseStatus.noInfo:
         icon = MdiIcons.help;
         color = Colors.grey;
         iconColor = Colors.white;
-        break;
+      case TrackingResponseStatus.trackingStopped:
+        icon = MdiIcons.minusThick;
+        color = Colors.grey;
+        iconColor = Colors.white;
     }
 
     return Container(

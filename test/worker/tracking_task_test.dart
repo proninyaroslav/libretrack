@@ -412,7 +412,7 @@ void main() {
       final trackService = TrackNumberService(
         trackNumber: track.trackNumber,
         serviceType: PostalServiceType.ups,
-        isActive: false,
+        isActive: true,
       );
       final expectedRequest = TrackingRequest(
         id: TransactionId(track.trackNumber),
@@ -473,7 +473,7 @@ void main() {
               ),
             ),
           ],
-          disabledServices: [trackService],
+          disabledServices: [trackService.copyWith(isActive: false)],
         ),
       ];
 
@@ -1115,7 +1115,7 @@ void main() {
       final trackService = TrackNumberService(
         trackNumber: track.trackNumber,
         serviceType: PostalServiceType.ups,
-        isActive: false,
+        isActive: true,
       );
       final expectedRequest = TrackingRequest(
         id: TransactionId(track.trackNumber),
@@ -1190,7 +1190,7 @@ void main() {
               status: TrackingResponseStatus.success,
             ),
           ],
-          disabledServices: [trackService],
+          disabledServices: [trackService.copyWith(isActive: false)],
         ),
       ];
 

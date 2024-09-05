@@ -1,4 +1,4 @@
-// Copyright (C) 2021 Yaroslav Pronin <proninyaroslav@mail.ru>
+// Copyright (C) 2021-2024 Yaroslav Pronin <proninyaroslav@mail.ru>
 // Copyright (C) 2021 Insurgo Inc. <insurgo@riseup.net>
 //
 // This file is part of LibreTrack.
@@ -66,15 +66,19 @@ class ParcelErrorBannerCubit extends Cubit<ParcelErrorBannerState> {
               !lastTrackingInfo.invalidTrackNumber &&
               info.trackServices.any((trackService) => !trackService.isActive);
           bool showMissingAuthData = false;
-          bool showMissingAccount = false;
+          bool showMissingAccount = true;
           bool showAuthError = false;
           if (lastTrackingResponse != null) {
             for (final info in lastTrackingResponse) {
+              final errorType = info.error?.type;
+
+              if (showMissingAccount &&
+                  errorType != TrackingErrorType.missingTrackingService) {
+                showMissingAccount = false;
+              }
               showMissingAuthData =
-                  info.error?.type == TrackingErrorType.missingAuthData;
-              showMissingAccount =
-                  info.error?.type == TrackingErrorType.missingTrackingService;
-              showAuthError = info.error?.type == TrackingErrorType.auth;
+                  errorType == TrackingErrorType.missingAuthData;
+              showAuthError = errorType == TrackingErrorType.auth;
               if (showMissingAuthData && showMissingAccount && showAuthError) {
                 break;
               }

@@ -1548,33 +1548,6 @@ class _$TrackNumberServiceDao extends TrackNumberServiceDao {
   }
 
   @override
-  Future<List<TrackNumberService>> getActiveTrackNumberServicesByList(
-      List<String> trackNumberList) async {
-    const offset = 1;
-    final _sqliteVariablesForTrackNumberList = Iterable<String>.generate(
-        trackNumberList.length, (i) => '?${i + offset}').join(',');
-    return _queryAdapter.queryList(
-        'SELECT * FROM TrackNumberService   WHERE trackNumber IN (' +
-            _sqliteVariablesForTrackNumberList +
-            ') AND isActive = 1',
-        mapper: (Map<String, Object?> row) => TrackNumberService(
-            trackNumber: row['trackNumber'] as String,
-            serviceType: _postalServiceTypeConverter
-                .decode(row['serviceType'] as String),
-            isActive: (row['isActive'] as int) != 0),
-        arguments: [...trackNumberList]);
-  }
-
-  @override
-  Future<List<TrackNumberService>> getActiveTrackNumberServices(
-      String trackNumber) async {
-    return _queryAdapter.queryList(
-        'SELECT * FROM TrackNumberService   WHERE trackNumber = ?1 AND isActive = 1',
-        mapper: (Map<String, Object?> row) => TrackNumberService(trackNumber: row['trackNumber'] as String, serviceType: _postalServiceTypeConverter.decode(row['serviceType'] as String), isActive: (row['isActive'] as int) != 0),
-        arguments: [trackNumber]);
-  }
-
-  @override
   Future<void> addTrackNumberServices(List<TrackNumberService> infoList) async {
     await _trackNumberServiceInsertionAdapter.insertList(
         infoList, OnConflictStrategy.replace);

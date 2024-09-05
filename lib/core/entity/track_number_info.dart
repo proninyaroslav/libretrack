@@ -1,4 +1,4 @@
-// Copyright (C) 2021 Yaroslav Pronin <proninyaroslav@mail.ru>
+// Copyright (C) 2021-2024 Yaroslav Pronin <proninyaroslav@mail.ru>
 // Copyright (C) 2021 Insurgo Inc. <insurgo@riseup.net>
 //
 // This file is part of LibreTrack.
@@ -89,6 +89,8 @@ class TrackNumberService extends Equatable {
   final PostalServiceType serviceType;
 
   /// if `true`, a pair of track number + service is allowed for tracking
+  /// `false` if the service with non-temporary, hard error, or have a final status
+  /// (for example, the parcel is delivered).
   final bool isActive;
 
   const TrackNumberService({

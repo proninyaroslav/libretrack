@@ -1,4 +1,4 @@
-// Copyright (C) 2021 Yaroslav Pronin <proninyaroslav@mail.ru>
+// Copyright (C) 2021-2024 Yaroslav Pronin <proninyaroslav@mail.ru>
 // Copyright (C) 2021 Insurgo Inc. <insurgo@riseup.net>
 //
 // This file is part of LibreTrack.
@@ -55,21 +55,5 @@ abstract class TrackNumberServiceDao {
   ''')
   Future<List<TrackNumberService>> getTrackNumberServicesByList(
     List<String> trackNumberList,
-  );
-
-  @Query('''
-  SELECT * FROM TrackNumberService
-  WHERE trackNumber IN (:trackNumberList) AND isActive = 1
-  ''')
-  Future<List<TrackNumberService>> getActiveTrackNumberServicesByList(
-    List<String> trackNumberList,
-  );
-
-  @Query('''
-  SELECT * FROM TrackNumberService
-  WHERE trackNumber = :trackNumber AND isActive = 1
-  ''')
-  Future<List<TrackNumberService>> getActiveTrackNumberServices(
-    String trackNumber,
   );
 }

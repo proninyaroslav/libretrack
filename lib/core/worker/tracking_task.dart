@@ -1,4 +1,4 @@
-// Copyright (C) 2021 Yaroslav Pronin <proninyaroslav@mail.ru>
+// Copyright (C) 2021-2024 Yaroslav Pronin <proninyaroslav@mail.ru>
 // Copyright (C) 2021 Insurgo Inc. <insurgo@riseup.net>
 //
 // This file is part of LibreTrack.
@@ -16,7 +16,6 @@
 // You should have received a copy of the GNU General Public License
 // along with LibreTrack.  If not, see <http://www.gnu.org/licenses/>.
 
-import 'package:flutter/foundation.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
 import 'package:libretrack/core/date_time_provider.dart';
@@ -109,13 +108,23 @@ class TrackingTask {
   }
 
   Future<_BuildRequestResult> _buildRequestList(
-    Set<TrackNumberService> infoList, {
+    Iterable<TrackNumberService> infoList, {
     TrackingTaskParams? params,
   }) async {
     final requestList = <TrackingRequest>[];
     final failedRequestList = <_FailedRequest>[];
 
     for (final trackService in infoList) {
+      if (!trackService.isActive) {
+        failedRequestList.add(
+          _FailedRequest(
+            id: _transactionIdGenerator.randomUnique(),
+            trackService: trackService,
+            reason: const _FailedRequestReason.serviceInactive(),
+          ),
+        );
+        continue;
+      }
       final TrackingServiceInfo? service = await _serviceRepo
           .getHighPriorityService(trackService.serviceType)
           .then(
@@ -183,7 +192,7 @@ class TrackingTask {
   }
 
   Map<String, TrackingInfo> _buildInitTrackingInfoList(
-    Set<TrackNumberService> infoList,
+    Iterable<TrackNumberService> infoList,
   ) {
     final trackingDate = _dateTimeProvider.now();
     final initInfo = <String, TrackingInfo>{};
@@ -500,13 +509,20 @@ class TrackingTask {
       trackNumber: trackNumber,
       dateTime: trackingDate,
       serviceType: request.trackService.serviceType,
-      status: TrackingResponseStatus.fail,
-      error: TrackingError(
-        type: request.reason.when(
-          missingService: () => TrackingErrorType.missingTrackingService,
-          missingAuthData: () => TrackingErrorType.missingAuthData,
+      status: request.reason.maybeWhen(
+        serviceInactive: () => TrackingResponseStatus.trackingStopped,
+        orElse: () => TrackingResponseStatus.fail,
+      ),
+      error: request.reason.when(
+        missingService: () => const TrackingError(
+          type: TrackingErrorType.missingTrackingService,
+          isRetryable: true,
         ),
-        isRetryable: true,
+        missingAuthData: () => const TrackingError(
+          type: TrackingErrorType.missingAuthData,
+          isRetryable: true,
+        ),
+        serviceInactive: () => null,
       ),
     );
   }
@@ -592,4 +608,6 @@ class _FailedRequestReason with _$FailedRequestReason {
       _FailedRequestMissingService;
   const factory _FailedRequestReason.missingAuthData() =
       _FailedRequestMissingAuthData;
+  const factory _FailedRequestReason.serviceInactive() =
+      _FailedRequestServiceInactive;
 }

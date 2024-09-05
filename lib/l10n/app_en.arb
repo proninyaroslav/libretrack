@@ -131,6 +131,7 @@
   "trackingResponseSuccess": "Successfully",
   "trackingResponseError": "Error",
   "trackingResponseNoInfo": "No info",
+  "trackingResponseStopped": "Tracking stopped",
   "trackingErrorReason": "Reason",
   "trackingErrorCode": "Code",
   "trackingErrorStackTrace": "Stack trace",
