@@ -21,7 +21,17 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:libretrack/core/crash_report/crash_report_manager.dart';
+import 'package:libretrack/core/date_time_provider.dart';
 import 'package:libretrack/core/entity/entity.dart';
+import 'package:libretrack/core/platform_info.dart';
+import 'package:libretrack/core/settings/settings.dart';
+import 'package:libretrack/core/storage/service_repository.dart';
+import 'package:libretrack/core/storage/shipment_repository.dart';
+import 'package:libretrack/core/storage/track_number_repository.dart';
+import 'package:libretrack/core/storage/tracking_repository.dart';
+import 'package:libretrack/core/tracking_scheduler.dart';
+import 'package:libretrack/platform/system_tray.dart';
 import 'package:libretrack/ui/add_parcels/add_parcels.dart';
 import 'package:libretrack/ui/parcels/parcels.dart';
 import 'package:libretrack/ui/settings/settings.dart';
@@ -308,23 +318,39 @@ class AppRouterDelegate extends RouterDelegate<AppRoutePath>
       key: key,
       child: MultiBlocProvider(
         providers: [
-          BlocProvider.value(
-            value: getIt<ParcelsCubit>(),
+          BlocProvider(
+            create: (context) => ParcelsCubit(
+              getIt<TrackNumberRepository>(),
+              getIt<TrackingRepository>(),
+              getIt<ShipmentRepository>(),
+              getIt<AppSettings>(),
+            ),
           ),
-          BlocProvider.value(
-            value: getIt<FirstStartCubit>(),
+          BlocProvider(
+            create: (context) => FirstStartCubit(
+              getIt<ServiceRepository>(),
+              getIt<AppSettings>(),
+            ),
           ),
-          BlocProvider.value(
-            value: getIt<SelectableParcelsCubit>(),
+          BlocProvider(
+            create: (context) => SelectableParcelsCubit(),
           ),
-          BlocProvider.value(
-            value: getIt<AccountsCubit>(),
+          BlocProvider(
+            create: (context) => AccountsCubit(
+              getIt<ServiceRepository>(),
+            ),
           ),
-          BlocProvider.value(
-            value: getIt<ParcelsActionsCubit>(),
+          BlocProvider(
+            create: (context) => ParcelsActionsCubit(
+              getIt<TrackNumberRepository>(),
+              getIt<TrackingRepository>(),
+              getIt<TrackingScheduler>(),
+            ),
           ),
-          BlocProvider.value(
-            value: getIt<AccountsActionsCubit>(),
+          BlocProvider(
+            create: (context) => AccountsActionsCubit(
+              getIt<ServiceRepository>(),
+            ),
           ),
         ],
         child: HomePage(
@@ -347,14 +373,20 @@ class AppRouterDelegate extends RouterDelegate<AppRoutePath>
       key: key,
       child: MultiBlocProvider(
         providers: [
-          BlocProvider.value(
-            value: getIt<ServiceListCubit>(),
+          BlocProvider(
+            create: (context) => ServiceListCubit(
+              getIt<ServiceRepository>(),
+            ),
           ),
-          BlocProvider.value(
-            value: getIt<AddAccountCubit>(),
+          BlocProvider(
+            create: (context) => AddAccountCubit(
+              getIt<ServiceRepository>(),
+            ),
           ),
-          BlocProvider.value(
-            value: getIt<ErrorReportCubit>(),
+          BlocProvider(
+            create: (context) => ErrorReportCubit(
+              getIt<CrashReportManager>(),
+            ),
           ),
         ],
         child: const AddAccountPage(),
@@ -371,14 +403,20 @@ class AppRouterDelegate extends RouterDelegate<AppRoutePath>
       key: key,
       child: MultiBlocProvider(
         providers: [
-          BlocProvider.value(
-            value: getIt<ServiceInfoCubit>(),
+          BlocProvider(
+            create: (context) => ServiceInfoCubit(
+              getIt<ServiceRepository>(),
+            ),
           ),
-          BlocProvider.value(
-            value: getIt<EditAccountCubit>(),
+          BlocProvider(
+            create: (context) => EditAccountCubit(
+              getIt<ServiceRepository>(),
+            ),
           ),
-          BlocProvider.value(
-            value: getIt<ErrorReportCubit>(),
+          BlocProvider(
+            create: (context) => ErrorReportCubit(
+              getIt<CrashReportManager>(),
+            ),
           ),
         ],
         child: EditAccountPage(
@@ -397,11 +435,17 @@ class AppRouterDelegate extends RouterDelegate<AppRoutePath>
       key: key,
       child: MultiBlocProvider(
         providers: [
-          BlocProvider.value(
-            value: getIt<AddParcelsCubit>(),
+          BlocProvider(
+            create: (context) => AddParcelsCubit(
+              getIt<TrackNumberRepository>(),
+              getIt<TrackingScheduler>(),
+              getIt<DateTimeProvider>(),
+            ),
           ),
-          BlocProvider.value(
-            value: getIt<ErrorReportCubit>(),
+          BlocProvider(
+            create: (context) => ErrorReportCubit(
+              getIt<CrashReportManager>(),
+            ),
           ),
         ],
         child: AddParcelsPage(
@@ -433,20 +477,32 @@ class AppRouterDelegate extends RouterDelegate<AppRoutePath>
       key: key,
       child: MultiBlocProvider(
         providers: [
-          BlocProvider.value(
-            value: getIt<ParcelDetailsCubit>(),
+          BlocProvider(
+            create: (context) => ParcelDetailsCubit(
+              getIt<TrackNumberRepository>(),
+              getIt<ShipmentRepository>(),
+              getIt<TrackingRepository>(),
+            ),
           ),
-          BlocProvider.value(
-            value: getIt<EditParcelCubit>(),
+          BlocProvider(
+            create: (context) => EditParcelCubit(
+              getIt<TrackNumberRepository>(),
+            ),
           ),
-          BlocProvider.value(
-            value: getIt<ParcelErrorBannerCubit>(),
+          BlocProvider(
+            create: (context) => ParcelErrorBannerCubit(),
           ),
-          BlocProvider.value(
-            value: getIt<DetailsActionsCubit>(),
+          BlocProvider(
+            create: (context) => DetailsActionsCubit(
+              getIt<TrackNumberRepository>(),
+              getIt<TrackingRepository>(),
+              getIt<TrackingScheduler>(),
+            ),
           ),
-          BlocProvider.value(
-            value: getIt<ErrorReportCubit>(),
+          BlocProvider(
+            create: (context) => ErrorReportCubit(
+              getIt<CrashReportManager>(),
+            ),
           ),
         ],
         child: ParcelDetailsPage(
@@ -471,11 +527,18 @@ class AppRouterDelegate extends RouterDelegate<AppRoutePath>
       key: key,
       child: MultiBlocProvider(
         providers: [
-          BlocProvider.value(
-            value: getIt<AppearanceSettingsCubit>(),
+          BlocProvider(
+            create: (context) => AppearanceSettingsCubit(
+              getIt<AppSettings>(),
+              BlocProvider.of(context),
+              getIt<SystemTray>(),
+            ),
           ),
-          BlocProvider.value(
-            value: getIt<BehaviorSettingsCubit>(),
+          BlocProvider(
+            create: (context) => BehaviorSettingsCubit(
+              getIt<AppSettings>(),
+              getIt<TrackingScheduler>(),
+            ),
           ),
         ],
         child: SettingsPage(initRoute: subRoute),
@@ -486,8 +549,10 @@ class AppRouterDelegate extends RouterDelegate<AppRoutePath>
   Page _buildAboutPage(ValueKey key, BuildContext context) {
     return DialogPage(
       key: key,
-      child: BlocProvider.value(
-        value: getIt<AboutCubit>(),
+      child: BlocProvider(
+        create: (context) => AboutCubit(
+          getIt<PlatformInfo>(),
+        ),
         child: const AboutPage(),
       ),
     );

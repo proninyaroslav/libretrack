@@ -1,4 +1,4 @@
-// Copyright (C) 2021 Yaroslav Pronin <proninyaroslav@mail.ru>
+// Copyright (C) 2021-2024 Yaroslav Pronin <proninyaroslav@mail.ru>
 // Copyright (C) 2021 Insurgo Inc. <insurgo@riseup.net>
 //
 // This file is part of LibreTrack.
@@ -19,9 +19,8 @@
 import 'package:bloc/bloc.dart';
 import 'package:flutter/foundation.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:injectable/injectable.dart';
-import 'package:libretrack/core/storage/service_repository.dart';
 import 'package:libretrack/core/settings/settings.dart';
+import 'package:libretrack/core/storage/service_repository.dart';
 
 part 'first_start_cubit.freezed.dart';
 
@@ -34,7 +33,6 @@ class FirstStartState with _$FirstStartState {
       FirstStartStateHideAddAccountTip;
 }
 
-@injectable
 class FirstStartCubit extends Cubit<FirstStartState> {
   final ServiceRepository _serviceRepo;
   final AppSettings _pref;

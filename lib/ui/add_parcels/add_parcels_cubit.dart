@@ -1,4 +1,4 @@
-// Copyright (C) 2021 Yaroslav Pronin <proninyaroslav@mail.ru>
+// Copyright (C) 2021-2024 Yaroslav Pronin <proninyaroslav@mail.ru>
 // Copyright (C) 2021 Insurgo Inc. <insurgo@riseup.net>
 //
 // This file is part of LibreTrack.
@@ -19,7 +19,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:flutter/foundation.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:injectable/injectable.dart';
 import 'package:libretrack/core/date_time_provider.dart';
 import 'package:libretrack/core/entity/entity.dart';
 import 'package:libretrack/core/storage/storage_result.dart';
@@ -63,7 +62,6 @@ class AddParcelsState with _$AddParcelsState {
   }) = AddParcelsStateAddFailed;
 }
 
-@injectable
 class AddParcelsCubit extends Cubit<AddParcelsState> {
   final TrackNumberRepository _trackRepo;
   final TrackingScheduler _trackingScheduler;

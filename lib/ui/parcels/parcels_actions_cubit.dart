@@ -1,4 +1,4 @@
-// Copyright (C) 2021 Yaroslav Pronin <proninyaroslav@mail.ru>
+// Copyright (C) 2021-2024 Yaroslav Pronin <proninyaroslav@mail.ru>
 // Copyright (C) 2021 Insurgo Inc. <insurgo@riseup.net>
 //
 // This file is part of LibreTrack.
@@ -18,7 +18,6 @@
 
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:injectable/injectable.dart';
 import 'package:libretrack/core/storage/storage_result.dart';
 import 'package:libretrack/core/storage/track_number_repository.dart';
 import 'package:libretrack/core/storage/tracking_repository.dart';
@@ -105,7 +104,6 @@ class ParcelsActionsState with _$ParcelsActionsState {
   }) = ParcelsActionsStateCopyTrackSuccess;
 }
 
-@injectable
 class ParcelsActionsCubit extends Cubit<ParcelsActionsState> {
   final TrackNumberRepository _trackRepo;
   final TrackingRepository _trackingRepo;

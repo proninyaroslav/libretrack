@@ -1,4 +1,4 @@
-// Copyright (C) 2021 Yaroslav Pronin <proninyaroslav@mail.ru>
+// Copyright (C) 2021-2024 Yaroslav Pronin <proninyaroslav@mail.ru>
 // Copyright (C) 2021 Insurgo Inc. <insurgo@riseup.net>
 //
 // This file is part of LibreTrack.
@@ -19,7 +19,6 @@
 import 'package:async/async.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:injectable/injectable.dart';
 import 'package:libretrack/core/entity/entity.dart';
 import 'package:libretrack/core/storage/shipment_repository.dart';
 import 'package:libretrack/core/storage/storage_result.dart';
@@ -49,7 +48,6 @@ class ParcelDetailsState with _$ParcelDetailsState {
   }) = ParcelDetailsStateLoaded;
 }
 
-@injectable
 class ParcelDetailsCubit extends Cubit<ParcelDetailsState> {
   final TrackNumberRepository _trackRepo;
   final ShipmentRepository _shipmentRepo;

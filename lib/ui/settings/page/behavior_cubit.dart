@@ -1,4 +1,4 @@
-// Copyright (C) 2021 Yaroslav Pronin <proninyaroslav@mail.ru>
+// Copyright (C) 2021-2024 Yaroslav Pronin <proninyaroslav@mail.ru>
 // Copyright (C) 2021 Insurgo Inc. <insurgo@riseup.net>
 //
 // This file is part of LibreTrack.
@@ -18,7 +18,6 @@
 
 import 'package:bloc/bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:injectable/injectable.dart';
 import 'package:libretrack/core/settings/settings.dart';
 import 'package:libretrack/core/tracking_scheduler.dart';
 
@@ -57,7 +56,6 @@ class BehaviorInfo with _$BehaviorInfo {
   }) = _BehaviorInfo;
 }
 
-@injectable
 class BehaviorSettingsCubit extends Cubit<BehaviorState> {
   final AppSettings _pref;
   final TrackingScheduler _trackingScheduler;

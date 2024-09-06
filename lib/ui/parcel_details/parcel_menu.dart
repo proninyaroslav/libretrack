@@ -1,4 +1,4 @@
-// Copyright (C) 2021 Yaroslav Pronin <proninyaroslav@mail.ru>
+// Copyright (C) 2021-2024 Yaroslav Pronin <proninyaroslav@mail.ru>
 // Copyright (C) 2021 Insurgo Inc. <insurgo@riseup.net>
 //
 // This file is part of LibreTrack.
@@ -18,6 +18,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:libretrack/core/storage/track_number_repository.dart';
 import 'package:libretrack/injector.dart';
 import 'package:libretrack/ui/parcel_details/parcel_details.dart';
 import 'package:libretrack/ui/widget/custom_actions_row.dart';
@@ -184,8 +185,10 @@ class ParcelActions extends StatelessWidget {
         showDialog(
           context: context,
           builder: (_) {
-            return BlocProvider.value(
-              value: getIt<EditParcelCubit>(),
+            return BlocProvider(
+              create: (context) => EditParcelCubit(
+                getIt<TrackNumberRepository>(),
+              ),
               child: EditParcelPage(
                 trackInfo: info.trackInfo,
               ),

@@ -21,6 +21,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:jiffy/jiffy.dart';
+import 'package:libretrack/core/crash_report/crash_report_manager.dart';
 import 'package:libretrack/core/entity/entity.dart';
 import 'package:libretrack/ui/cubit/error_report_cubit.dart';
 import 'package:libretrack/ui/utils/utils.dart';
@@ -291,8 +292,10 @@ class _ShowResponseErrorButton extends StatelessWidget {
         showDialog(
           context: context,
           builder: (context) {
-            return BlocProvider.value(
-              value: getIt<ErrorReportCubit>(),
+            return BlocProvider(
+              create: (context) => ErrorReportCubit(
+                getIt<CrashReportManager>(),
+              ),
               child: TrackingErrorDialog(error: error),
             );
           },

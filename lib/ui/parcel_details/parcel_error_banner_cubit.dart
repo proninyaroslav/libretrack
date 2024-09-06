@@ -18,7 +18,6 @@
 
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:injectable/injectable.dart';
 import 'package:libretrack/core/entity/entity.dart';
 
 import 'parcel_details_cubit.dart';
@@ -45,7 +44,6 @@ class ParcelErrorBanner with _$ParcelErrorBanner {
   const factory ParcelErrorBanner.authError() = ParcelErrorBannerAuth;
 }
 
-@injectable
 class ParcelErrorBannerCubit extends Cubit<ParcelErrorBannerState> {
   ParcelErrorBannerCubit()
       : super(const ParcelErrorBannerState.show(banners: {}));

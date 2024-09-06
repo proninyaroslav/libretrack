@@ -20,7 +20,6 @@ import 'package:async/async.dart';
 import 'package:bloc/bloc.dart';
 import 'package:collection/collection.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:injectable/injectable.dart';
 import 'package:libretrack/core/entity/entity.dart';
 import 'package:libretrack/core/settings/settings.dart';
 import 'package:libretrack/core/storage/shipment_repository.dart';
@@ -57,7 +56,6 @@ class ParcelsState with _$ParcelsState {
   }) = ParcelsStateLoadingFailed;
 }
 
-@injectable
 class ParcelsCubit extends Cubit<ParcelsState> {
   final TrackNumberRepository _trackRepo;
   final TrackingRepository _trackingRepo;

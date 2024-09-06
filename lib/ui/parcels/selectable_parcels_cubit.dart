@@ -1,4 +1,4 @@
-// Copyright (C) 2021 Yaroslav Pronin <proninyaroslav@mail.ru>
+// Copyright (C) 2021-2024 Yaroslav Pronin <proninyaroslav@mail.ru>
 // Copyright (C) 2021 Insurgo Inc. <insurgo@riseup.net>
 //
 // This file is part of LibreTrack.
@@ -17,7 +17,6 @@
 // along with LibreTrack.  If not, see <http://www.gnu.org/licenses/>.
 
 import 'package:equatable/equatable.dart';
-import 'package:injectable/injectable.dart';
 import 'package:libretrack/ui/parcels/parcels.dart';
 
 export 'package:libretrack/ui/cubit/selectable_cubit.dart';
@@ -38,7 +37,6 @@ class SelectableParcelsItem extends Equatable {
   bool get stringify => true;
 }
 
-@injectable
 class SelectableParcelsCubit extends SelectableCubit<SelectableParcelsItem> {
   @override
   void select(SelectableParcelsItem item) {

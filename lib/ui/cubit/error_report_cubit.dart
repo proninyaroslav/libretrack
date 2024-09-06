@@ -1,4 +1,4 @@
-// Copyright (C) 2021 Yaroslav Pronin <proninyaroslav@mail.ru>
+// Copyright (C) 2021-2024 Yaroslav Pronin <proninyaroslav@mail.ru>
 // Copyright (C) 2021 Insurgo Inc. <insurgo@riseup.net>
 //
 // This file is part of LibreTrack.
@@ -18,7 +18,6 @@
 
 import 'package:bloc/bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:injectable/injectable.dart';
 import 'package:libretrack/core/crash_report/crash_report_manager.dart';
 
 part 'error_report_cubit.freezed.dart';
@@ -35,7 +34,6 @@ class ErrorReportState with _$ErrorReportState {
       ErrorReportStateEmailUnsupported;
 }
 
-@injectable
 class ErrorReportCubit extends Cubit<ErrorReportState> {
   final CrashReportManager _reportManager;
 

@@ -1,4 +1,4 @@
-// Copyright (C) 2021 Yaroslav Pronin <proninyaroslav@mail.ru>
+// Copyright (C) 2021-2024 Yaroslav Pronin <proninyaroslav@mail.ru>
 // Copyright (C) 2021 Insurgo Inc. <insurgo@riseup.net>
 //
 // This file is part of LibreTrack.
@@ -18,7 +18,6 @@
 
 import 'package:bloc/bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:injectable/injectable.dart';
 import 'package:libretrack/core/settings/settings.dart';
 
 part 'app_cubit.freezed.dart';
@@ -36,7 +35,6 @@ class AppState with _$AppState {
   }) = AppStateChanged;
 }
 
-@singleton
 class AppCubit extends Cubit<AppState> {
   AppCubit(AppSettings pref)
       : super(

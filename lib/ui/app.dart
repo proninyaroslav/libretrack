@@ -209,8 +209,10 @@ class _AppState extends State<App> {
     TransitionBuilder? builder,
     ThemeMode? themeMode,
   }) {
-    return BlocProvider.value(
-      value: getIt<AppCubit>(),
+    return BlocProvider(
+      create: (context) => AppCubit(
+        getIt<AppSettings>(),
+      ),
       child: BlocBuilder<AppCubit, AppState>(
         builder: (context, state) {
           return MaterialApp.router(
