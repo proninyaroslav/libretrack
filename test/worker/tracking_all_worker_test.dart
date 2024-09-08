@@ -98,7 +98,8 @@ void main() {
           )).thenAnswer(
         (_) async => const WorkResult.success(),
       );
-      when(() => mockPref.locale).thenReturn(const AppLocaleType.system());
+      when(() => mockPref.locale)
+          .thenAnswer((_) async => const AppLocaleType.system());
       await trackingAllWorker.doWork(const WorkData.empty());
 
       verify(() => mockTrackingWorker.doTrack(
@@ -130,8 +131,8 @@ void main() {
           )).thenAnswer(
         (_) async => const WorkResult.success(),
       );
-      when(() => mockPref.locale).thenReturn(
-        const AppLocaleType.inner(
+      when(() => mockPref.locale).thenAnswer(
+        (_) async => const AppLocaleType.inner(
           locale: locale,
         ),
       );

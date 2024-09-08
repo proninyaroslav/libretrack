@@ -25,10 +25,14 @@ import 'package:libretrack/ui/app_cubit.dart';
 part 'appearance_cubit.freezed.dart';
 
 @freezed
-class AppearanceState with _$AppearanceState {
-  const factory AppearanceState.initial(
+sealed class AppearanceState with _$AppearanceState {
+  const factory AppearanceState.initial({
+    @Default(null) AppearanceInfo? info,
+  }) = AppearanceStateInitial;
+
+  const factory AppearanceState.loaded(
     AppearanceInfo info,
-  ) = AppearanceStateInitial;
+  ) = AppearanceStateLoaded;
 
   const factory AppearanceState.themeChanged(
     AppearanceInfo info,
@@ -71,53 +75,65 @@ class AppearanceSettingsCubit extends Cubit<AppearanceState> {
     this._pref,
     this._appCubit,
     this._systemTray,
-  ) : super(
-          AppearanceState.initial(
-            AppearanceInfo(
-              theme: _pref.theme,
-              trackingNotify: _pref.trackingNotifications,
-              locale: _pref.locale,
-              trackingErrorNotify: _pref.trackingErrorNotifications,
-              trayIcon: _pref.trayIcon,
-            ),
-          ),
-        );
+  ) : super(const AppearanceState.initial());
 
-  void setTheme(AppThemeType theme) {
-    _pref.theme = theme;
-    _appCubit.setTheme(theme);
-    emit(AppearanceState.themeChanged(
-      state.info.copyWith(theme: theme),
-    ));
+  Future<void> load() async {
+    emit(
+      AppearanceState.loaded(AppearanceInfo(
+        theme: await _pref.theme,
+        trackingNotify: await _pref.trackingNotifications,
+        locale: await _pref.locale,
+        trackingErrorNotify: await _pref.trackingErrorNotifications,
+        trayIcon: await _pref.trayIcon,
+      )),
+    );
   }
 
-  void trackingNotify({required bool enable}) {
-    _pref.trackingNotifications = enable;
-    emit(AppearanceState.trackingNotifyChanged(
-      state.info.copyWith(trackingNotify: enable),
-    ));
+  Future<void> setTheme(AppThemeType theme) async {
+    if (state.info case final info?) {
+      await _pref.setTheme(theme);
+      _appCubit.setTheme(theme);
+      emit(AppearanceState.themeChanged(
+        info.copyWith(theme: theme),
+      ));
+    }
   }
 
-  void setLocale(AppLocaleType locale) {
-    _pref.locale = locale;
-    _appCubit.setLocale(locale);
-    emit(AppearanceState.localeChanged(
-      state.info.copyWith(locale: locale),
-    ));
+  Future<void> trackingNotify({required bool enable}) async {
+    if (state.info case final info?) {
+      await _pref.setTrackingNotifications(enable);
+      emit(AppearanceState.trackingNotifyChanged(
+        info.copyWith(trackingNotify: enable),
+      ));
+    }
   }
 
-  void trackingErrorNotify({required bool enable}) {
-    _pref.trackingErrorNotifications = enable;
-    emit(AppearanceState.trackingErrorNotifyChanged(
-      state.info.copyWith(trackingErrorNotify: enable),
-    ));
+  Future<void> setLocale(AppLocaleType locale) async {
+    if (state.info case final info?) {
+      await _pref.setLocale(locale);
+      _appCubit.setLocale(locale);
+      emit(AppearanceState.localeChanged(
+        info.copyWith(locale: locale),
+      ));
+    }
+  }
+
+  Future<void> trackingErrorNotify({required bool enable}) async {
+    if (state.info case final info?) {
+      await _pref.setTrackingErrorNotifications(enable);
+      emit(AppearanceState.trackingErrorNotifyChanged(
+        info.copyWith(trackingErrorNotify: enable),
+      ));
+    }
   }
 
   Future<void> trayIcon({required bool enable}) async {
-    _pref.trayIcon = enable;
-    await _systemTray.switchTrayIcon(enable: enable);
-    emit(AppearanceState.trayIconChanged(
-      state.info.copyWith(trayIcon: enable),
-    ));
+    if (state.info case final info?) {
+      await _pref.setTrayIcon(enable);
+      await _systemTray.switchTrayIcon(enable: enable);
+      emit(AppearanceState.trayIconChanged(
+        info.copyWith(trayIcon: enable),
+      ));
+    }
   }
 }

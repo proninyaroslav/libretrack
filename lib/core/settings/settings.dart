@@ -23,35 +23,64 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../env.dart';
 import 'model.dart';
+import 'shared_pref_migrator.dart';
 
 export 'model.dart';
 
 abstract class AppSettings {
-  abstract bool addAccountTipShown;
+  Future<void> startMigration();
 
-  abstract ParcelsFilterBatch? parcelsFilters;
+  abstract final Future<bool> addAccountTipShown;
 
-  abstract ParcelsSort? parcelsSort;
+  Future<void> setAddAccountTipShown(bool value);
 
-  abstract AppThemeType theme;
+  abstract final Future<ParcelsFilterBatch?> parcelsFilters;
 
-  abstract bool trackingNotifications;
+  Future<void> setParcelsFilters(ParcelsFilterBatch? value);
 
-  abstract AppLocaleType locale;
+  abstract final Future<ParcelsSort?> parcelsSort;
 
-  abstract TrackingFreqLimit trackingFrequencyLimit;
+  Future<void> setParcelsSort(ParcelsSort? value);
 
-  abstract bool autoTracking;
+  abstract final Future<AppThemeType> theme;
 
-  abstract AutoTrackingFreq autoTrackingFreq;
+  Future<void> setTheme(AppThemeType value);
 
-  abstract int trackingHistorySize;
+  abstract final Future<bool> trackingNotifications;
 
-  abstract bool trackingErrorNotifications;
+  Future<void> setTrackingNotifications(bool value);
 
-  abstract bool trayIcon;
+  abstract final Future<AppLocaleType> locale;
 
-  abstract BarcodeGeneratorType barcodeGeneratorType;
+  Future<void> setLocale(AppLocaleType value);
+
+  abstract final Future<TrackingFreqLimit> trackingFrequencyLimit;
+
+  Future<void> setTrackingFrequencyLimit(TrackingFreqLimit value);
+
+  abstract final Future<bool> autoTracking;
+
+  Future<void> setAutoTracking(bool value);
+
+  abstract final Future<AutoTrackingFreq> autoTrackingFreq;
+
+  Future<void> setAutoTrackingFreq(AutoTrackingFreq value);
+
+  abstract final Future<int> trackingHistorySize;
+
+  Future<void> setTrackingHistorySize(int value);
+
+  abstract final Future<bool> trackingErrorNotifications;
+
+  Future<void> setTrackingErrorNotifications(bool value);
+
+  abstract final Future<bool> trayIcon;
+
+  Future<void> setTrayIcon(bool value);
+
+  abstract final Future<BarcodeGeneratorType> barcodeGeneratorType;
+
+  Future<void> setBarcodeGeneratorType(BarcodeGeneratorType value);
 }
 
 abstract class AppSettingsDefault {
@@ -80,21 +109,30 @@ abstract class AppSettingsDefault {
 
 @Singleton(as: AppSettings)
 class AppSettingsImpl implements AppSettings {
-  final SharedPreferences pref;
+  final SharedPreferencesAsync pref;
+  final SharedPreferences prefOld;
+  late final SharedPreferencesMigrator migrator;
 
-  AppSettingsImpl(this.pref);
-
-  @override
-  bool get addAccountTipShown =>
-      pref.getBool(_AppSettingsKey.addAccountTipShown) ?? false;
-
-  @override
-  set addAccountTipShown(bool value) =>
-      pref.setBool(_AppSettingsKey.addAccountTipShown, value);
+  AppSettingsImpl(this.pref, this.prefOld) {
+    migrator = SharedPreferencesMigrator(oldPrefs: prefOld, newPrefs: pref);
+  }
 
   @override
-  ParcelsFilterBatch? get parcelsFilters {
-    final str = pref.getString(_AppSettingsKey.parcelsFilters);
+  Future<void> startMigration() async {
+    await migrator.migrate();
+  }
+
+  @override
+  Future<bool> get addAccountTipShown async =>
+      await pref.getBool(_AppSettingsKey.addAccountTipShown) ?? false;
+
+  @override
+  Future<void> setAddAccountTipShown(bool value) async =>
+      await pref.setBool(_AppSettingsKey.addAccountTipShown, value);
+
+  @override
+  Future<ParcelsFilterBatch?> get parcelsFilters async {
+    final str = await pref.getString(_AppSettingsKey.parcelsFilters);
     final json = str == null ? null : jsonDecode(str);
     return json == null
         ? null
@@ -102,16 +140,16 @@ class AppSettingsImpl implements AppSettings {
   }
 
   @override
-  set parcelsFilters(ParcelsFilterBatch? value) {
+  Future<void> setParcelsFilters(ParcelsFilterBatch? value) async {
     final json = value?.toJson();
     if (json != null) {
-      pref.setString(_AppSettingsKey.parcelsFilters, jsonEncode(json));
+      await pref.setString(_AppSettingsKey.parcelsFilters, jsonEncode(json));
     }
   }
 
   @override
-  ParcelsSort? get parcelsSort {
-    final str = pref.getString(_AppSettingsKey.parcelsSort);
+  Future<ParcelsSort?> get parcelsSort async {
+    final str = await pref.getString(_AppSettingsKey.parcelsSort);
     final json = str == null ? null : jsonDecode(str);
     return json == null
         ? AppSettingsDefault.parcelsSort
@@ -119,16 +157,16 @@ class AppSettingsImpl implements AppSettings {
   }
 
   @override
-  set parcelsSort(ParcelsSort? value) {
+  Future<void> setParcelsSort(ParcelsSort? value) async {
     final json = value?.toJson();
     if (json != null) {
-      pref.setString(_AppSettingsKey.parcelsSort, jsonEncode(json));
+      await pref.setString(_AppSettingsKey.parcelsSort, jsonEncode(json));
     }
   }
 
   @override
-  AppThemeType get theme {
-    final str = pref.getString(_AppSettingsKey.theme);
+  Future<AppThemeType> get theme async {
+    final str = await pref.getString(_AppSettingsKey.theme);
     final json = str == null ? null : jsonDecode(str);
     return json == null
         ? AppSettingsDefault.theme
@@ -136,25 +174,25 @@ class AppSettingsImpl implements AppSettings {
   }
 
   @override
-  set theme(AppThemeType? value) {
+  Future<void> setTheme(AppThemeType? value) async {
     final json = value?.toJson();
     if (json != null) {
-      pref.setString(_AppSettingsKey.theme, jsonEncode(json));
+      await pref.setString(_AppSettingsKey.theme, jsonEncode(json));
     }
   }
 
   @override
-  set trackingNotifications(bool value) =>
-      pref.setBool(_AppSettingsKey.trackingNotifications, value);
+  Future<void> setTrackingNotifications(bool value) async =>
+      await pref.setBool(_AppSettingsKey.trackingNotifications, value);
 
   @override
-  bool get trackingNotifications =>
-      pref.getBool(_AppSettingsKey.trackingNotifications) ??
+  Future<bool> get trackingNotifications async =>
+      await pref.getBool(_AppSettingsKey.trackingNotifications) ??
       AppSettingsDefault.trackingNotifications;
 
   @override
-  AppLocaleType get locale {
-    final str = pref.getString(_AppSettingsKey.locale);
+  Future<AppLocaleType> get locale async {
+    final str = await pref.getString(_AppSettingsKey.locale);
     final json = str == null ? null : jsonDecode(str);
     return json == null
         ? AppSettingsDefault.locale
@@ -162,16 +200,16 @@ class AppSettingsImpl implements AppSettings {
   }
 
   @override
-  set locale(AppLocaleType? value) {
+  Future<void> setLocale(AppLocaleType? value) async {
     final json = value?.toJson();
     if (json != null) {
-      pref.setString(_AppSettingsKey.locale, jsonEncode(json));
+      await pref.setString(_AppSettingsKey.locale, jsonEncode(json));
     }
   }
 
   @override
-  TrackingFreqLimit get trackingFrequencyLimit {
-    final str = pref.getString(_AppSettingsKey.trackingFrequencyLimit);
+  Future<TrackingFreqLimit> get trackingFrequencyLimit async {
+    final str = await pref.getString(_AppSettingsKey.trackingFrequencyLimit);
     final json = str == null ? null : jsonDecode(str);
     return json == null
         ? AppSettingsDefault.trackingFrequencyLimit
@@ -179,25 +217,26 @@ class AppSettingsImpl implements AppSettings {
   }
 
   @override
-  set trackingFrequencyLimit(TrackingFreqLimit? value) {
+  Future<void> setTrackingFrequencyLimit(TrackingFreqLimit? value) async {
     final json = value?.toJson();
     if (json != null) {
-      pref.setString(_AppSettingsKey.trackingFrequencyLimit, jsonEncode(json));
+      await pref.setString(
+          _AppSettingsKey.trackingFrequencyLimit, jsonEncode(json));
     }
   }
 
   @override
-  bool get autoTracking =>
-      pref.getBool(_AppSettingsKey.autoTracking) ??
+  Future<bool> get autoTracking async =>
+      await pref.getBool(_AppSettingsKey.autoTracking) ??
       AppSettingsDefault.autoTracking;
 
   @override
-  set autoTracking(bool value) =>
-      pref.setBool(_AppSettingsKey.autoTracking, value);
+  Future<void> setAutoTracking(bool value) async =>
+      await pref.setBool(_AppSettingsKey.autoTracking, value);
 
   @override
-  AutoTrackingFreq get autoTrackingFreq {
-    final str = pref.getString(_AppSettingsKey.autoTrackingFreq);
+  Future<AutoTrackingFreq> get autoTrackingFreq async {
+    final str = await pref.getString(_AppSettingsKey.autoTrackingFreq);
     final json = str == null ? null : jsonDecode(str);
     return json == null
         ? AppSettingsDefault.autoTrackingFreq
@@ -205,41 +244,43 @@ class AppSettingsImpl implements AppSettings {
   }
 
   @override
-  set autoTrackingFreq(AutoTrackingFreq? value) {
+  Future<void> setAutoTrackingFreq(AutoTrackingFreq? value) async {
     final json = value?.toJson();
     if (json != null) {
-      pref.setString(_AppSettingsKey.autoTrackingFreq, jsonEncode(json));
+      await pref.setString(_AppSettingsKey.autoTrackingFreq, jsonEncode(json));
     }
   }
 
   @override
-  set trackingHistorySize(int value) =>
-      pref.setInt(_AppSettingsKey.trackingHistorySize, value);
+  Future<void> setTrackingHistorySize(int value) async =>
+      await pref.setInt(_AppSettingsKey.trackingHistorySize, value);
 
   @override
-  int get trackingHistorySize =>
-      pref.getInt(_AppSettingsKey.trackingHistorySize) ??
+  Future<int> get trackingHistorySize async =>
+      await pref.getInt(_AppSettingsKey.trackingHistorySize) ??
       AppSettingsDefault.trackingHistorySize;
 
   @override
-  set trackingErrorNotifications(bool value) =>
-      pref.setBool(_AppSettingsKey.trackingErrorNotifications, value);
+  Future<void> setTrackingErrorNotifications(bool value) async =>
+      await pref.setBool(_AppSettingsKey.trackingErrorNotifications, value);
 
   @override
-  bool get trackingErrorNotifications =>
-      pref.getBool(_AppSettingsKey.trackingErrorNotifications) ??
+  Future<bool> get trackingErrorNotifications async =>
+      await pref.getBool(_AppSettingsKey.trackingErrorNotifications) ??
       AppSettingsDefault.trackingErrorNotifications;
 
   @override
-  set trayIcon(bool value) => pref.setBool(_AppSettingsKey.trayIcon, value);
+  Future<void> setTrayIcon(bool value) async =>
+      await pref.setBool(_AppSettingsKey.trayIcon, value);
 
   @override
-  bool get trayIcon =>
-      pref.getBool(_AppSettingsKey.trayIcon) ?? AppSettingsDefault.trayIcon;
+  Future<bool> get trayIcon async =>
+      await pref.getBool(_AppSettingsKey.trayIcon) ??
+      AppSettingsDefault.trayIcon;
 
   @override
-  BarcodeGeneratorType get barcodeGeneratorType {
-    final str = pref.getString(_AppSettingsKey.barcodeGeneratorType);
+  Future<BarcodeGeneratorType> get barcodeGeneratorType async {
+    final str = await pref.getString(_AppSettingsKey.barcodeGeneratorType);
     final json = str == null ? null : jsonDecode(str);
     return json == null
         ? AppSettingsDefault.barcodeGeneratorType
@@ -247,10 +288,11 @@ class AppSettingsImpl implements AppSettings {
   }
 
   @override
-  set barcodeGeneratorType(BarcodeGeneratorType? value) {
+  Future<void> setBarcodeGeneratorType(BarcodeGeneratorType? value) async {
     final json = value?.toJson();
     if (json != null) {
-      pref.setString(_AppSettingsKey.barcodeGeneratorType, jsonEncode(json));
+      await pref.setString(
+          _AppSettingsKey.barcodeGeneratorType, jsonEncode(json));
     }
   }
 }
@@ -288,51 +330,59 @@ abstract class _AppSettingsKey {
 abstract class SharedPreferencesModule {
   @Singleton(env: [Env.prod, Env.dev])
   @preResolve
-  Future<SharedPreferences> get pref async => SharedPreferences.getInstance();
+  Future<SharedPreferences> get prefOld async =>
+      SharedPreferences.getInstance();
+
+  @Singleton(env: [Env.prod, Env.dev])
+  @preResolve
+  Future<SharedPreferencesAsync> pref(SharedPreferences prefOld) async {
+    final pref = SharedPreferencesAsync();
+    final migrator = SharedPreferencesMigrator(
+      oldPrefs: prefOld,
+      newPrefs: pref,
+    );
+    await migrator.migrate();
+
+    return pref;
+  }
 
   @Singleton(env: [Env.test])
   @preResolve
-  Future<SharedPreferences> get testPref async => TestSharedPreferences();
+  Future<SharedPreferencesAsync> get testPref async =>
+      TestSharedPreferencesAsync();
+
+  @Singleton(env: [Env.test])
+  @preResolve
+  Future<SharedPreferences> get testOldPref async {
+    // ignore: invalid_use_of_visible_for_testing_member
+    SharedPreferences.setMockInitialValues({});
+    return SharedPreferences.getInstance();
+  }
 }
 
-class TestSharedPreferences implements SharedPreferences {
+class TestSharedPreferencesAsync implements SharedPreferencesAsync {
   final Map<String, dynamic> _map = {};
 
-  @override
-  Future<bool> clear() async {
-    _map.clear();
-    return true;
-  }
-
-  @override
-  Future<bool> commit() async => true;
-
-  @override
-  bool containsKey(String key) => _map.containsKey(key);
-
-  @override
   dynamic get(String key) => _map[key];
 
   @override
-  bool? getBool(String key) => get(key) as bool?;
+  Future<bool> containsKey(String key) async => _map.containsKey(key);
 
   @override
-  double? getDouble(String key) => get(key) as double?;
+  Future<bool?> getBool(String key) async => get(key) as bool?;
 
   @override
-  int? getInt(String key) => get(key) as int?;
+  Future<double?> getDouble(String key) async => get(key) as double?;
 
   @override
-  Set<String> getKeys() => _map.keys.toSet();
+  Future<int?> getInt(String key) async => get(key) as int?;
 
   @override
-  String? getString(String key) => get(key) as String?;
+  Future<String?> getString(String key) async => get(key) as String?;
 
   @override
-  List<String>? getStringList(String key) => get(key) as List<String>?;
-
-  @override
-  Future<void> reload() async {}
+  Future<List<String>?> getStringList(String key) async =>
+      get(key) as List<String>?;
 
   @override
   Future<bool> remove(String key) async => _map.remove(key) != null;
@@ -357,4 +407,33 @@ class TestSharedPreferences implements SharedPreferences {
   @override
   Future<bool> setStringList(String key, List<String> value) async =>
       _set(key, value);
+
+  @override
+  Future<void> clear({Set<String>? allowList}) async {
+    if (allowList == null) {
+      _map.clear();
+    } else {
+      _map.removeWhere((k, v) => !allowList.contains(k));
+    }
+  }
+
+  @override
+  Future<Map<String, Object?>> getAll({Set<String>? allowList}) async {
+    if (allowList == null) {
+      return _map;
+    } else {
+      return Map.fromEntries(
+        _map.entries.where((e) => allowList.contains(e.key)),
+      );
+    }
+  }
+
+  @override
+  Future<Set<String>> getKeys({Set<String>? allowList}) async {
+    if (allowList == null) {
+      return Set.from(_map.keys);
+    } else {
+      return Set.from(_map.keys.where((k) => allowList.contains(k)));
+    }
+  }
 }

@@ -1,4 +1,4 @@
-// Copyright (C) 2021 Yaroslav Pronin <proninyaroslav@mail.ru>
+// Copyright (C) 2021-2024 Yaroslav Pronin <proninyaroslav@mail.ru>
 // Copyright (C) 2021 Insurgo Inc. <insurgo@riseup.net>
 //
 // This file is part of LibreTrack.
@@ -41,7 +41,8 @@ class TrackingNotifyTask {
     required Iterable<TrackingInfo> trackingInfo,
     required Iterable<TrackingTaskResult> trackingResult,
   }) async {
-    if (!_pref.trackingNotifications && !_pref.trackingErrorNotifications) {
+    if (!await _pref.trackingNotifications &&
+        !await _pref.trackingErrorNotifications) {
       return;
     }
 
@@ -56,9 +57,9 @@ class TrackingNotifyTask {
       }
     }
     await Future.wait([
-      if (_pref.trackingNotifications)
+      if (await _pref.trackingNotifications)
         _newActivitiesNotify(trackWithNewInfo, trackingResult),
-      if (_pref.trackingErrorNotifications)
+      if (await _pref.trackingErrorNotifications)
         _parcelsHardErrorNotify(trackWithError),
     ]);
   }
@@ -117,7 +118,7 @@ class TrackingNotifyTask {
   }
 
   Future<void> trackingFailedNotify(Iterable<String> trackNumbersList) async {
-    if (!_pref.trackingErrorNotifications) {
+    if (!await _pref.trackingErrorNotifications) {
       return;
     }
 

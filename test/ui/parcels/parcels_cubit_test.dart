@@ -1,4 +1,4 @@
-// Copyright (C) 2021 Yaroslav Pronin <proninyaroslav@mail.ru>
+// Copyright (C) 2021-2024 Yaroslav Pronin <proninyaroslav@mail.ru>
 // Copyright (C) 2021 Insurgo Inc. <insurgo@riseup.net>
 //
 // This file is part of LibreTrack.
@@ -19,10 +19,10 @@
 import 'package:bloc_test/bloc_test.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:libretrack/core/entity/entity.dart';
+import 'package:libretrack/core/settings/settings.dart';
 import 'package:libretrack/core/storage/shipment_repository.dart';
 import 'package:libretrack/core/storage/track_number_repository.dart';
 import 'package:libretrack/core/storage/tracking_repository.dart';
-import 'package:libretrack/core/settings/settings.dart';
 import 'package:libretrack/ui/parcels/parcels.dart';
 import 'package:mocktail/mocktail.dart';
 
@@ -106,26 +106,29 @@ void main() {
       'Status filter',
       build: () => cubit,
       act: (ParcelsCubit cubit) {
+        when(() => mockPref.setParcelsFilters(any()))
+            .thenAnswer((_) async => {});
+
         cubit.setStatusFilter(ShipmentStatusType.inTransit);
         verify(
-          () => mockPref.parcelsFilters = ParcelsFilterBatch()
+          () => mockPref.setParcelsFilters(ParcelsFilterBatch()
             ..statusFilter = const ParcelsFilter.status(
               statusType: ShipmentStatusType.inTransit,
-            ),
+            )),
         ).called(1);
 
         cubit.setStatusFilter(ShipmentStatusType.delivered);
         verify(
-          () => mockPref.parcelsFilters = ParcelsFilterBatch()
+          () => mockPref.setParcelsFilters(ParcelsFilterBatch()
             ..statusFilter = const ParcelsFilter.status(
               statusType: ShipmentStatusType.delivered,
-            ),
+            )),
         ).called(1);
 
         cubit.setStatusFilter(null);
         verify(
-          () => mockPref.parcelsFilters = ParcelsFilterBatch()
-            ..statusFilter = const ParcelsFilter.status(),
+          () => mockPref.setParcelsFilters(ParcelsFilterBatch()
+            ..statusFilter = const ParcelsFilter.status()),
         ).called(1);
       },
       expect: () => [
@@ -152,16 +155,20 @@ void main() {
       'New info filter',
       build: () => cubit,
       act: (ParcelsCubit cubit) {
+        when(() => mockPref.setParcelsFilters(any()))
+            .thenAnswer((_) async => {});
+
         cubit.setNewInfoFilter(enable: true);
         verify(
-          () => mockPref.parcelsFilters = ParcelsFilterBatch()
-            ..newInfoFilter = const ParcelsFilter.newInfo(),
+          () => mockPref.setParcelsFilters(ParcelsFilterBatch()
+            ..newInfoFilter = const ParcelsFilter.newInfo()),
         ).called(1);
 
         cubit.setNewInfoFilter(enable: false);
         verify(
-          () => mockPref.parcelsFilters = ParcelsFilterBatch()
-            ..newInfoFilter = null,
+          () => mockPref.setParcelsFilters(
+            ParcelsFilterBatch()..newInfoFilter = null,
+          ),
         ).called(1);
       },
       expect: () => [
@@ -179,16 +186,19 @@ void main() {
       'Error filter',
       build: () => cubit,
       act: (ParcelsCubit cubit) {
+        when(() => mockPref.setParcelsFilters(any()))
+            .thenAnswer((_) async => {});
+
         cubit.setErrorFilter(enable: true);
         verify(
-          () => mockPref.parcelsFilters = ParcelsFilterBatch()
-            ..errorFilter = const ParcelsFilter.error(),
+          () => mockPref.setParcelsFilters(
+              ParcelsFilterBatch()..errorFilter = const ParcelsFilter.error()),
         ).called(1);
 
         cubit.setErrorFilter(enable: false);
         verify(
-          () => mockPref.parcelsFilters = ParcelsFilterBatch()
-            ..errorFilter = null,
+          () => mockPref
+              .setParcelsFilters(ParcelsFilterBatch()..errorFilter = null),
         ).called(1);
       },
       expect: () => [
@@ -206,18 +216,21 @@ void main() {
       'Postal service filter',
       build: () => cubit,
       act: (ParcelsCubit cubit) {
+        when(() => mockPref.setParcelsFilters(any()))
+            .thenAnswer((_) async => {});
+
         cubit.setPostalServiceFilter(PostalServiceType.ups);
         verify(
-          () => mockPref.parcelsFilters = ParcelsFilterBatch()
+          () => mockPref.setParcelsFilters(ParcelsFilterBatch()
             ..postalServiceFilter = const ParcelsFilter.postalService(
               serviceType: PostalServiceType.ups,
-            ),
+            )),
         ).called(1);
 
         cubit.setPostalServiceFilter(null);
         verify(
-          () => mockPref.parcelsFilters = ParcelsFilterBatch()
-            ..postalServiceFilter = const ParcelsFilter.postalService(),
+          () => mockPref.setParcelsFilters(ParcelsFilterBatch()
+            ..postalServiceFilter = const ParcelsFilter.postalService()),
         ).called(1);
       },
       expect: () => [
@@ -238,15 +251,18 @@ void main() {
       'Alphabetically sort',
       build: () => cubit,
       act: (ParcelsCubit cubit) {
+        when(() => mockPref.setParcelsSort(any())).thenAnswer((_) async => {});
+
         cubit.setAlphabeticallySort();
         verify(
-          () => mockPref.parcelsSort = const ParcelsSort.alphabetically(),
+          () => mockPref.setParcelsSort(const ParcelsSort.alphabetically()),
         ).called(1);
 
         cubit.setAlphabeticallySort(isDesc: true);
         verify(
-          () => mockPref.parcelsSort =
-              const ParcelsSort.alphabetically(isDesc: true),
+          () => mockPref.setParcelsSort(
+            const ParcelsSort.alphabetically(isDesc: true),
+          ),
         ).called(1);
       },
       expect: () => [
@@ -265,15 +281,17 @@ void main() {
       'Activity date sort',
       build: () => cubit,
       act: (ParcelsCubit cubit) {
+        when(() => mockPref.setParcelsSort(any())).thenAnswer((_) async => {});
+
         cubit.setActivityDateSort();
         verify(
-          () => mockPref.parcelsSort = const ParcelsSort.activityDate(),
+          () => mockPref.setParcelsSort(const ParcelsSort.activityDate()),
         ).called(1);
 
         cubit.setActivityDateSort(oldestFirst: true);
         verify(
-          () => mockPref.parcelsSort =
-              const ParcelsSort.activityDate(oldestFirst: true),
+          () => mockPref.setParcelsSort(
+              const ParcelsSort.activityDate(oldestFirst: true)),
         ).called(1);
       },
       expect: () => [
@@ -292,15 +310,18 @@ void main() {
       'Date added sort',
       build: () => cubit,
       act: (ParcelsCubit cubit) {
+        when(() => mockPref.setParcelsSort(any())).thenAnswer((_) async => {});
+
         cubit.setDateAddedSort();
         verify(
-          () => mockPref.parcelsSort = const ParcelsSort.dateAdded(),
+          () => mockPref.setParcelsSort(const ParcelsSort.dateAdded()),
         ).called(1);
 
         cubit.setDateAddedSort(oldestFirst: true);
         verify(
-          () => mockPref.parcelsSort =
-              const ParcelsSort.dateAdded(oldestFirst: true),
+          () => mockPref.setParcelsSort(
+            const ParcelsSort.dateAdded(oldestFirst: true),
+          ),
         ).called(1);
       },
       expect: () => [

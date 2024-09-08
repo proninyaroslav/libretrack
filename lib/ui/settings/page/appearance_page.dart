@@ -1,4 +1,4 @@
-// Copyright (C) 2021 Yaroslav Pronin <proninyaroslav@mail.ru>
+// Copyright (C) 2021-2024 Yaroslav Pronin <proninyaroslav@mail.ru>
 // Copyright (C) 2021 Insurgo Inc. <insurgo@riseup.net>
 //
 // This file is part of LibreTrack.
@@ -38,31 +38,40 @@ class AppearanceSettingsPage extends StatelessWidget {
       appBar: AppBar(
         title: Text(S.of(context).settingsAppearance),
       ),
-      body: SettingsList(
-        key: const PageStorageKey('appearance_list'),
-        groups: [
-          SettingsListGroup(
-            items: [
-              _buildThemeOption(context),
-              _buildLanguageOption(context),
-            ],
-          ),
-          SettingsListGroup(
-            title: S.of(context).settingsNotificationsSection,
-            items: [
-              _buildTrackingNotifyOption(context),
-              _buildTrackingErrorNotifyOption(context),
-            ],
-          ),
-          // TODO: Windows/macOS support
-          if (getIt<PlatformInfo>().isLinux)
-            SettingsListGroup(
-              title: S.of(context).settingsDesktopSection,
-              items: [
-                _buildSystemTrayIconOption(context),
-              ],
-            ),
-        ],
+      body: BlocBuilder<AppearanceSettingsCubit, AppearanceState>(
+        buildWhen: (prev, next) => next is AppearanceStateLoaded,
+        builder: (context, state) {
+          return switch (state) {
+            AppearanceStateInitial() =>
+              const Center(child: CircularProgressIndicator()),
+            _ => SettingsList(
+                key: const PageStorageKey('appearance_list'),
+                groups: [
+                  SettingsListGroup(
+                    items: [
+                      _buildThemeOption(context),
+                      _buildLanguageOption(context),
+                    ],
+                  ),
+                  SettingsListGroup(
+                    title: S.of(context).settingsNotificationsSection,
+                    items: [
+                      _buildTrackingNotifyOption(context),
+                      _buildTrackingErrorNotifyOption(context),
+                    ],
+                  ),
+                  // TODO: Windows/macOS support
+                  if (getIt<PlatformInfo>().isLinux)
+                    SettingsListGroup(
+                      title: S.of(context).settingsDesktopSection,
+                      items: [
+                        _buildSystemTrayIconOption(context),
+                      ],
+                    ),
+                ],
+              ),
+          };
+        },
       ),
     );
   }
@@ -74,7 +83,7 @@ class AppearanceSettingsPage extends StatelessWidget {
         buildWhen: (prev, current) => current is AppearanceStateThemeChanged,
         builder: (context, state) {
           return Text(
-            state.info.theme.toLocalizedString(context),
+            state.info!.theme.toLocalizedString(context),
           );
         },
       ),
@@ -98,10 +107,12 @@ class AppearanceSettingsPage extends StatelessWidget {
                   current is AppearanceStateThemeChanged,
               builder: (context, state) {
                 return _ThemeList(
-                  initialValue: state.info.theme,
-                  onSelected: (theme) {
-                    cubit.setTheme(theme);
-                    Navigator.of(context).pop();
+                  initialValue: state.info!.theme,
+                  onSelected: (theme) async {
+                    await cubit.setTheme(theme);
+                    if (context.mounted) {
+                      Navigator.of(context).pop();
+                    }
                   },
                 );
               },
@@ -130,10 +141,10 @@ class AppearanceSettingsPage extends StatelessWidget {
       },
       builder: (context, state) {
         return SwitchListTile(
-          value: state.info.trackingNotify,
+          value: state.info!.trackingNotify,
           title: Text(S.of(context).settingsTrackingNotifications),
           secondary: Icon(MdiIcons.cubeSend),
-          onChanged: (value) => context
+          onChanged: (value) async => await context
               .read<AppearanceSettingsCubit>()
               .trackingNotify(enable: value),
         );
@@ -148,7 +159,7 @@ class AppearanceSettingsPage extends StatelessWidget {
         buildWhen: (prev, current) => current is AppearanceStateLocaleChanged,
         builder: (context, state) {
           return Text(
-            state.info.locale.when(
+            state.info!.locale.when(
               system: () => S.of(context).settingsSystemLanguageOption,
               inner: (locale) => UiUtils.localeToLocalizedStr(
                 locale.toLocaleString(),
@@ -177,10 +188,12 @@ class AppearanceSettingsPage extends StatelessWidget {
                   current is AppearanceStateLocaleChanged,
               builder: (context, state) {
                 return _LanguageList(
-                  initialValue: state.info.locale,
-                  onSelected: (locale) {
-                    cubit.setLocale(locale);
-                    Navigator.of(context).pop();
+                  initialValue: state.info!.locale,
+                  onSelected: (locale) async {
+                    await cubit.setLocale(locale);
+                    if (context.mounted) {
+                      Navigator.of(context).pop();
+                    }
                   },
                 );
               },
@@ -209,10 +222,10 @@ class AppearanceSettingsPage extends StatelessWidget {
       },
       builder: (context, state) {
         return SwitchListTile(
-          value: state.info.trackingErrorNotify,
+          value: state.info!.trackingErrorNotify,
           title: Text(S.of(context).settingsTrackingErrorNotifications),
           secondary: const Icon(Icons.error_outline),
-          onChanged: (value) => context
+          onChanged: (value) async => await context
               .read<AppearanceSettingsCubit>()
               .trackingErrorNotify(enable: value),
         );
@@ -228,7 +241,7 @@ class AppearanceSettingsPage extends StatelessWidget {
       builder: (context, state) {
         final textTheme = Theme.of(context).textTheme;
         return SwitchListTile(
-          value: state.info.trayIcon,
+          value: state.info!.trayIcon,
           title: Text(S.of(context).settingsSystemTrayIcon),
           subtitle: getIt<PlatformInfo>().isLinux
               ? LinkText(
@@ -239,8 +252,9 @@ class AppearanceSettingsPage extends StatelessWidget {
                 )
               : null,
           secondary: const Icon(Icons.monitor),
-          onChanged: (value) =>
-              context.read<AppearanceSettingsCubit>().trayIcon(enable: value),
+          onChanged: (value) async => await context
+              .read<AppearanceSettingsCubit>()
+              .trayIcon(enable: value),
         );
       },
     );

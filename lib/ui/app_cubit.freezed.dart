@@ -16,23 +16,27 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$AppState {
-  AppThemeType get theme => throw _privateConstructorUsedError;
-  AppLocaleType get locale => throw _privateConstructorUsedError;
+  AppThemeType? get theme => throw _privateConstructorUsedError;
+  AppLocaleType? get locale => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(AppThemeType theme, AppLocaleType locale) initial,
+    required TResult Function(AppThemeType? theme, AppLocaleType? locale)
+        initial,
+    required TResult Function(AppThemeType theme, AppLocaleType locale) loaded,
     required TResult Function(AppThemeType theme, AppLocaleType locale) changed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(AppThemeType theme, AppLocaleType locale)? initial,
+    TResult? Function(AppThemeType? theme, AppLocaleType? locale)? initial,
+    TResult? Function(AppThemeType theme, AppLocaleType locale)? loaded,
     TResult? Function(AppThemeType theme, AppLocaleType locale)? changed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(AppThemeType theme, AppLocaleType locale)? initial,
+    TResult Function(AppThemeType? theme, AppLocaleType? locale)? initial,
+    TResult Function(AppThemeType theme, AppLocaleType locale)? loaded,
     TResult Function(AppThemeType theme, AppLocaleType locale)? changed,
     required TResult orElse(),
   }) =>
@@ -40,18 +44,21 @@ mixin _$AppState {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(AppStateInitial value) initial,
+    required TResult Function(AppStateLoaded value) loaded,
     required TResult Function(AppStateChanged value) changed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(AppStateInitial value)? initial,
+    TResult? Function(AppStateLoaded value)? loaded,
     TResult? Function(AppStateChanged value)? changed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(AppStateInitial value)? initial,
+    TResult Function(AppStateLoaded value)? loaded,
     TResult Function(AppStateChanged value)? changed,
     required TResult orElse(),
   }) =>
@@ -71,8 +78,8 @@ abstract class $AppStateCopyWith<$Res> {
   @useResult
   $Res call({AppThemeType theme, AppLocaleType locale});
 
-  $AppThemeTypeCopyWith<$Res> get theme;
-  $AppLocaleTypeCopyWith<$Res> get locale;
+  $AppThemeTypeCopyWith<$Res>? get theme;
+  $AppLocaleTypeCopyWith<$Res>? get locale;
 }
 
 /// @nodoc
@@ -95,11 +102,11 @@ class _$AppStateCopyWithImpl<$Res, $Val extends AppState>
   }) {
     return _then(_value.copyWith(
       theme: null == theme
-          ? _value.theme
+          ? _value.theme!
           : theme // ignore: cast_nullable_to_non_nullable
               as AppThemeType,
       locale: null == locale
-          ? _value.locale
+          ? _value.locale!
           : locale // ignore: cast_nullable_to_non_nullable
               as AppLocaleType,
     ) as $Val);
@@ -109,8 +116,12 @@ class _$AppStateCopyWithImpl<$Res, $Val extends AppState>
   /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
-  $AppThemeTypeCopyWith<$Res> get theme {
-    return $AppThemeTypeCopyWith<$Res>(_value.theme, (value) {
+  $AppThemeTypeCopyWith<$Res>? get theme {
+    if (_value.theme == null) {
+      return null;
+    }
+
+    return $AppThemeTypeCopyWith<$Res>(_value.theme!, (value) {
       return _then(_value.copyWith(theme: value) as $Val);
     });
   }
@@ -119,8 +130,12 @@ class _$AppStateCopyWithImpl<$Res, $Val extends AppState>
   /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
-  $AppLocaleTypeCopyWith<$Res> get locale {
-    return $AppLocaleTypeCopyWith<$Res>(_value.locale, (value) {
+  $AppLocaleTypeCopyWith<$Res>? get locale {
+    if (_value.locale == null) {
+      return null;
+    }
+
+    return $AppLocaleTypeCopyWith<$Res>(_value.locale!, (value) {
       return _then(_value.copyWith(locale: value) as $Val);
     });
   }
@@ -134,12 +149,12 @@ abstract class _$$AppStateInitialImplCopyWith<$Res>
       __$$AppStateInitialImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({AppThemeType theme, AppLocaleType locale});
+  $Res call({AppThemeType? theme, AppLocaleType? locale});
 
   @override
-  $AppThemeTypeCopyWith<$Res> get theme;
+  $AppThemeTypeCopyWith<$Res>? get theme;
   @override
-  $AppLocaleTypeCopyWith<$Res> get locale;
+  $AppLocaleTypeCopyWith<$Res>? get locale;
 }
 
 /// @nodoc
@@ -155,18 +170,18 @@ class __$$AppStateInitialImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? theme = null,
-    Object? locale = null,
+    Object? theme = freezed,
+    Object? locale = freezed,
   }) {
     return _then(_$AppStateInitialImpl(
-      theme: null == theme
+      theme: freezed == theme
           ? _value.theme
           : theme // ignore: cast_nullable_to_non_nullable
-              as AppThemeType,
-      locale: null == locale
+              as AppThemeType?,
+      locale: freezed == locale
           ? _value.locale
           : locale // ignore: cast_nullable_to_non_nullable
-              as AppLocaleType,
+              as AppLocaleType?,
     ));
   }
 }
@@ -174,12 +189,14 @@ class __$$AppStateInitialImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$AppStateInitialImpl implements AppStateInitial {
-  const _$AppStateInitialImpl({required this.theme, required this.locale});
+  const _$AppStateInitialImpl({this.theme = null, this.locale = null});
 
   @override
-  final AppThemeType theme;
+  @JsonKey()
+  final AppThemeType? theme;
   @override
-  final AppLocaleType locale;
+  @JsonKey()
+  final AppLocaleType? locale;
 
   @override
   String toString() {
@@ -210,7 +227,9 @@ class _$AppStateInitialImpl implements AppStateInitial {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(AppThemeType theme, AppLocaleType locale) initial,
+    required TResult Function(AppThemeType? theme, AppLocaleType? locale)
+        initial,
+    required TResult Function(AppThemeType theme, AppLocaleType locale) loaded,
     required TResult Function(AppThemeType theme, AppLocaleType locale) changed,
   }) {
     return initial(theme, locale);
@@ -219,7 +238,8 @@ class _$AppStateInitialImpl implements AppStateInitial {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(AppThemeType theme, AppLocaleType locale)? initial,
+    TResult? Function(AppThemeType? theme, AppLocaleType? locale)? initial,
+    TResult? Function(AppThemeType theme, AppLocaleType locale)? loaded,
     TResult? Function(AppThemeType theme, AppLocaleType locale)? changed,
   }) {
     return initial?.call(theme, locale);
@@ -228,7 +248,8 @@ class _$AppStateInitialImpl implements AppStateInitial {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(AppThemeType theme, AppLocaleType locale)? initial,
+    TResult Function(AppThemeType? theme, AppLocaleType? locale)? initial,
+    TResult Function(AppThemeType theme, AppLocaleType locale)? loaded,
     TResult Function(AppThemeType theme, AppLocaleType locale)? changed,
     required TResult orElse(),
   }) {
@@ -242,6 +263,7 @@ class _$AppStateInitialImpl implements AppStateInitial {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(AppStateInitial value) initial,
+    required TResult Function(AppStateLoaded value) loaded,
     required TResult Function(AppStateChanged value) changed,
   }) {
     return initial(this);
@@ -251,6 +273,7 @@ class _$AppStateInitialImpl implements AppStateInitial {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(AppStateInitial value)? initial,
+    TResult? Function(AppStateLoaded value)? loaded,
     TResult? Function(AppStateChanged value)? changed,
   }) {
     return initial?.call(this);
@@ -260,6 +283,7 @@ class _$AppStateInitialImpl implements AppStateInitial {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(AppStateInitial value)? initial,
+    TResult Function(AppStateLoaded value)? loaded,
     TResult Function(AppStateChanged value)? changed,
     required TResult orElse(),
   }) {
@@ -272,8 +296,197 @@ class _$AppStateInitialImpl implements AppStateInitial {
 
 abstract class AppStateInitial implements AppState {
   const factory AppStateInitial(
+      {final AppThemeType? theme,
+      final AppLocaleType? locale}) = _$AppStateInitialImpl;
+
+  @override
+  AppThemeType? get theme;
+  @override
+  AppLocaleType? get locale;
+
+  /// Create a copy of AppState
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$AppStateInitialImplCopyWith<_$AppStateInitialImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$AppStateLoadedImplCopyWith<$Res>
+    implements $AppStateCopyWith<$Res> {
+  factory _$$AppStateLoadedImplCopyWith(_$AppStateLoadedImpl value,
+          $Res Function(_$AppStateLoadedImpl) then) =
+      __$$AppStateLoadedImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({AppThemeType theme, AppLocaleType locale});
+
+  @override
+  $AppThemeTypeCopyWith<$Res> get theme;
+  @override
+  $AppLocaleTypeCopyWith<$Res> get locale;
+}
+
+/// @nodoc
+class __$$AppStateLoadedImplCopyWithImpl<$Res>
+    extends _$AppStateCopyWithImpl<$Res, _$AppStateLoadedImpl>
+    implements _$$AppStateLoadedImplCopyWith<$Res> {
+  __$$AppStateLoadedImplCopyWithImpl(
+      _$AppStateLoadedImpl _value, $Res Function(_$AppStateLoadedImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AppState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? theme = null,
+    Object? locale = null,
+  }) {
+    return _then(_$AppStateLoadedImpl(
+      theme: null == theme
+          ? _value.theme
+          : theme // ignore: cast_nullable_to_non_nullable
+              as AppThemeType,
+      locale: null == locale
+          ? _value.locale
+          : locale // ignore: cast_nullable_to_non_nullable
+              as AppLocaleType,
+    ));
+  }
+
+  /// Create a copy of AppState
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $AppThemeTypeCopyWith<$Res> get theme {
+    return $AppThemeTypeCopyWith<$Res>(_value.theme, (value) {
+      return _then(_value.copyWith(theme: value));
+    });
+  }
+
+  /// Create a copy of AppState
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $AppLocaleTypeCopyWith<$Res> get locale {
+    return $AppLocaleTypeCopyWith<$Res>(_value.locale, (value) {
+      return _then(_value.copyWith(locale: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$AppStateLoadedImpl implements AppStateLoaded {
+  const _$AppStateLoadedImpl({required this.theme, required this.locale});
+
+  @override
+  final AppThemeType theme;
+  @override
+  final AppLocaleType locale;
+
+  @override
+  String toString() {
+    return 'AppState.loaded(theme: $theme, locale: $locale)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AppStateLoadedImpl &&
+            (identical(other.theme, theme) || other.theme == theme) &&
+            (identical(other.locale, locale) || other.locale == locale));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, theme, locale);
+
+  /// Create a copy of AppState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$AppStateLoadedImplCopyWith<_$AppStateLoadedImpl> get copyWith =>
+      __$$AppStateLoadedImplCopyWithImpl<_$AppStateLoadedImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(AppThemeType? theme, AppLocaleType? locale)
+        initial,
+    required TResult Function(AppThemeType theme, AppLocaleType locale) loaded,
+    required TResult Function(AppThemeType theme, AppLocaleType locale) changed,
+  }) {
+    return loaded(theme, locale);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(AppThemeType? theme, AppLocaleType? locale)? initial,
+    TResult? Function(AppThemeType theme, AppLocaleType locale)? loaded,
+    TResult? Function(AppThemeType theme, AppLocaleType locale)? changed,
+  }) {
+    return loaded?.call(theme, locale);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(AppThemeType? theme, AppLocaleType? locale)? initial,
+    TResult Function(AppThemeType theme, AppLocaleType locale)? loaded,
+    TResult Function(AppThemeType theme, AppLocaleType locale)? changed,
+    required TResult orElse(),
+  }) {
+    if (loaded != null) {
+      return loaded(theme, locale);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(AppStateInitial value) initial,
+    required TResult Function(AppStateLoaded value) loaded,
+    required TResult Function(AppStateChanged value) changed,
+  }) {
+    return loaded(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(AppStateInitial value)? initial,
+    TResult? Function(AppStateLoaded value)? loaded,
+    TResult? Function(AppStateChanged value)? changed,
+  }) {
+    return loaded?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(AppStateInitial value)? initial,
+    TResult Function(AppStateLoaded value)? loaded,
+    TResult Function(AppStateChanged value)? changed,
+    required TResult orElse(),
+  }) {
+    if (loaded != null) {
+      return loaded(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class AppStateLoaded implements AppState {
+  const factory AppStateLoaded(
       {required final AppThemeType theme,
-      required final AppLocaleType locale}) = _$AppStateInitialImpl;
+      required final AppLocaleType locale}) = _$AppStateLoadedImpl;
 
   @override
   AppThemeType get theme;
@@ -284,7 +497,7 @@ abstract class AppStateInitial implements AppState {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$AppStateInitialImplCopyWith<_$AppStateInitialImpl> get copyWith =>
+  _$$AppStateLoadedImplCopyWith<_$AppStateLoadedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -331,6 +544,26 @@ class __$$AppStateChangedImplCopyWithImpl<$Res>
               as AppLocaleType,
     ));
   }
+
+  /// Create a copy of AppState
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $AppThemeTypeCopyWith<$Res> get theme {
+    return $AppThemeTypeCopyWith<$Res>(_value.theme, (value) {
+      return _then(_value.copyWith(theme: value));
+    });
+  }
+
+  /// Create a copy of AppState
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $AppLocaleTypeCopyWith<$Res> get locale {
+    return $AppLocaleTypeCopyWith<$Res>(_value.locale, (value) {
+      return _then(_value.copyWith(locale: value));
+    });
+  }
 }
 
 /// @nodoc
@@ -372,7 +605,9 @@ class _$AppStateChangedImpl implements AppStateChanged {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(AppThemeType theme, AppLocaleType locale) initial,
+    required TResult Function(AppThemeType? theme, AppLocaleType? locale)
+        initial,
+    required TResult Function(AppThemeType theme, AppLocaleType locale) loaded,
     required TResult Function(AppThemeType theme, AppLocaleType locale) changed,
   }) {
     return changed(theme, locale);
@@ -381,7 +616,8 @@ class _$AppStateChangedImpl implements AppStateChanged {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(AppThemeType theme, AppLocaleType locale)? initial,
+    TResult? Function(AppThemeType? theme, AppLocaleType? locale)? initial,
+    TResult? Function(AppThemeType theme, AppLocaleType locale)? loaded,
     TResult? Function(AppThemeType theme, AppLocaleType locale)? changed,
   }) {
     return changed?.call(theme, locale);
@@ -390,7 +626,8 @@ class _$AppStateChangedImpl implements AppStateChanged {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(AppThemeType theme, AppLocaleType locale)? initial,
+    TResult Function(AppThemeType? theme, AppLocaleType? locale)? initial,
+    TResult Function(AppThemeType theme, AppLocaleType locale)? loaded,
     TResult Function(AppThemeType theme, AppLocaleType locale)? changed,
     required TResult orElse(),
   }) {
@@ -404,6 +641,7 @@ class _$AppStateChangedImpl implements AppStateChanged {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(AppStateInitial value) initial,
+    required TResult Function(AppStateLoaded value) loaded,
     required TResult Function(AppStateChanged value) changed,
   }) {
     return changed(this);
@@ -413,6 +651,7 @@ class _$AppStateChangedImpl implements AppStateChanged {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(AppStateInitial value)? initial,
+    TResult? Function(AppStateLoaded value)? loaded,
     TResult? Function(AppStateChanged value)? changed,
   }) {
     return changed?.call(this);
@@ -422,6 +661,7 @@ class _$AppStateChangedImpl implements AppStateChanged {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(AppStateInitial value)? initial,
+    TResult Function(AppStateLoaded value)? loaded,
     TResult Function(AppStateChanged value)? changed,
     required TResult orElse(),
   }) {

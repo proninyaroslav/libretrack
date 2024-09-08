@@ -1,4 +1,4 @@
-// Copyright (C) 2021 Yaroslav Pronin <proninyaroslav@mail.ru>
+// Copyright (C) 2021-2024 Yaroslav Pronin <proninyaroslav@mail.ru>
 // Copyright (C) 2021 Insurgo Inc. <insurgo@riseup.net>
 //
 // This file is part of LibreTrack.
@@ -320,9 +320,9 @@ class NotificationManagerImpl implements NotificationManager {
 
   Future<AppLocalizations> _getAppLocale() async {
     final oldLocale = _currentLocale;
-    _currentLocale = await _pref.locale.when(
+    _currentLocale = await (await _pref.locale).when(
       system: () => _platformInfo.currentLocale,
-      inner: (locale) async => locale.toLocaleString(),
+      inner: (locale) => locale.toLocaleString(),
     );
     if (_currentAppLocale == null || _currentLocale != oldLocale) {
       return _currentAppLocale = await loadLocale(_currentLocale!);

@@ -71,7 +71,7 @@ class TrackingWorker implements Worker {
     if (trackServiceList == null) {
       return const WorkResult.success();
     }
-    final locale = await _pref.locale.when(
+    final locale = await (await _pref.locale).when(
       system: () => _platformInfo.currentAsLocale,
       inner: (locale) async => locale,
     );
@@ -329,7 +329,7 @@ class TrackingWorker implements Worker {
   Future<StorageError?> _deleteOldTrackingInfo(
     List<TrackingInfo> currTrackingInfoList,
   ) async {
-    final maxSize = _pref.trackingHistorySize;
+    final maxSize = await _pref.trackingHistorySize;
     if (maxSize < 0) {
       throw UnsupportedError('Tracking history size cannot be negative');
     }

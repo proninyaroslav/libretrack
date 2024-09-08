@@ -1,4 +1,4 @@
-// Copyright (C) 2021 Yaroslav Pronin <proninyaroslav@mail.ru>
+// Copyright (C) 2021-2024 Yaroslav Pronin <proninyaroslav@mail.ru>
 // Copyright (C) 2021 Insurgo Inc. <insurgo@riseup.net>
 //
 // This file is part of LibreTrack.
@@ -37,23 +37,32 @@ class BehaviorPage extends StatelessWidget {
       appBar: AppBar(
         title: Text(S.of(context).settingsBehavior),
       ),
-      body: SettingsList(
-        key: const PageStorageKey('behavior_list'),
-        groups: [
-          SettingsListGroup(
-            title: S.of(context).settingsTrackingSection,
-            items: [
-              _buildTrackingFreqLimitOption(context),
-              _buildTrackingHistorySizeOption(context),
-            ],
-          ),
-          SettingsListGroup(
-            items: [
-              _buildAutoTrackingOption(context),
-              _buildAutoTrackingFreqOption(context),
-            ],
-          ),
-        ],
+      body: BlocBuilder<BehaviorSettingsCubit, BehaviorState>(
+        buildWhen: (prev, next) => next is BehaviorStateLoaded,
+        builder: (context, state) {
+          return switch (state) {
+            BehaviorStateInitial() =>
+              const Center(child: CircularProgressIndicator()),
+            _ => SettingsList(
+                key: const PageStorageKey('behavior_list'),
+                groups: [
+                  SettingsListGroup(
+                    title: S.of(context).settingsTrackingSection,
+                    items: [
+                      _buildTrackingFreqLimitOption(context),
+                      _buildTrackingHistorySizeOption(context),
+                    ],
+                  ),
+                  SettingsListGroup(
+                    items: [
+                      _buildAutoTrackingOption(context),
+                      _buildAutoTrackingFreqOption(context),
+                    ],
+                  ),
+                ],
+              ),
+          };
+        },
       ),
     );
   }
@@ -66,11 +75,11 @@ class BehaviorPage extends StatelessWidget {
             current is BehaviorStateTrackingLimitChanged,
         builder: (context, state) {
           return Text(
-            state.info.trackingLimit.maybeWhen(
+            state.info!.trackingLimit.maybeWhen(
               unlimited: () =>
-                  state.info.trackingLimit.toLocalizedString(context),
+                  state.info!.trackingLimit.toLocalizedString(context),
               orElse: () => S.of(context).settingsTrackingFreqLimitSummary(
-                    state.info.trackingLimit.toLocalizedString(context),
+                    state.info!.trackingLimit.toLocalizedString(context),
                   ),
             ),
           );
@@ -96,10 +105,12 @@ class BehaviorPage extends StatelessWidget {
                   current is BehaviorStateTrackingLimitChanged,
               builder: (context, state) {
                 return _TrackingLimitList(
-                  initialValue: state.info.trackingLimit,
-                  onSelected: (limit) {
-                    cubit.setTrackingLimit(limit);
-                    Navigator.of(context).pop();
+                  initialValue: state.info!.trackingLimit,
+                  onSelected: (limit) async {
+                    await cubit.setTrackingLimit(limit);
+                    if (context.mounted) {
+                      Navigator.of(context).pop();
+                    }
                   },
                 );
               },
@@ -126,11 +137,13 @@ class BehaviorPage extends StatelessWidget {
       buildWhen: (prev, current) => current is BehaviorStateAutoTrackingChanged,
       builder: (context, state) {
         return SwitchListTile(
-          value: state.info.autoTracking,
+          value: state.info!.autoTracking,
           title: Text(S.of(context).settingsAutoTracking),
           secondary: const Icon(Icons.refresh),
-          onChanged: (value) {
-            context.read<BehaviorSettingsCubit>().autoTracking(enable: value);
+          onChanged: (value) async {
+            await context
+                .read<BehaviorSettingsCubit>()
+                .autoTracking(enable: value);
           },
         );
       },
@@ -143,9 +156,9 @@ class BehaviorPage extends StatelessWidget {
           current is BehaviorStateAutoTrackingFreqChanged ||
           current is BehaviorStateAutoTrackingChanged,
       builder: (context, state) {
-        final freq = state.info.autoTrackingFreq.toLocalizedString(context);
+        final freq = state.info!.autoTrackingFreq.toLocalizedString(context);
         return ListTile(
-          enabled: state.info.autoTracking,
+          enabled: state.info!.autoTracking,
           isThreeLine: true,
           title: Text(S.of(context).settingsAutoTrackingFreq),
           subtitle: Text(
@@ -173,10 +186,12 @@ class BehaviorPage extends StatelessWidget {
                   current is BehaviorStateAutoTrackingFreqChanged,
               builder: (context, state) {
                 return _AutoTrackingFreqList(
-                  initialValue: state.info.autoTrackingFreq,
-                  onSelected: (limit) {
-                    cubit.setAutoTrackingFreq(limit);
-                    Navigator.of(context).pop();
+                  initialValue: state.info!.autoTrackingFreq,
+                  onSelected: (limit) async {
+                    await cubit.setAutoTrackingFreq(limit);
+                    if (context.mounted) {
+                      Navigator.of(context).pop();
+                    }
                   },
                 );
               },
@@ -205,7 +220,7 @@ class BehaviorPage extends StatelessWidget {
         buildWhen: (prev, current) =>
             current is BehaviorStateTrackingHistorySizeChanged,
         builder: (context, state) {
-          final size = state.info.trackingHistorySize;
+          final size = state.info!.trackingHistorySize;
           return Text(
             '$size\n\n${S.of(context).settingsTrackingHistorySizeDescr}',
           );
@@ -227,8 +242,9 @@ class BehaviorPage extends StatelessWidget {
             current is BehaviorStateTrackingHistorySizeChanged,
         builder: (context, state) {
           return _TrackingHistoryDialog(
-            initialValue: state.info.trackingHistorySize,
-            onChanged: (value) => cubit.setTrackingHistorySize(value),
+            initialValue: state.info!.trackingHistorySize,
+            onChanged: (value) async =>
+                await cubit.setTrackingHistorySize(value),
           );
         },
       ),

@@ -1,4 +1,4 @@
-// Copyright (C) 2021 Yaroslav Pronin <proninyaroslav@mail.ru>
+// Copyright (C) 202-2024 Yaroslav Pronin <proninyaroslav@mail.ru>
 // Copyright (C) 2021 Insurgo Inc. <insurgo@riseup.net>
 //
 // This file is part of LibreTrack.
@@ -32,14 +32,16 @@ void main() {
 
     setUpAll(() {
       mockSettings = MockAppSettings();
-      when(() => mockSettings.theme).thenReturn(
-        const AppThemeType.system(),
+      when(() => mockSettings.theme).thenAnswer(
+        (_) async => const AppThemeType.system(),
       );
-      when(() => mockSettings.locale).thenReturn(const AppLocaleType.system());
+      when(() => mockSettings.locale)
+          .thenAnswer((_) async => const AppLocaleType.system());
     });
 
-    setUp(() {
+    setUp(() async {
       cubit = AppCubit(mockSettings);
+      await cubit.load();
     });
 
     blocTest(

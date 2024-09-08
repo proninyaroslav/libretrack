@@ -1,4 +1,4 @@
-// Copyright (C) 2021 Yaroslav Pronin <proninyaroslav@mail.ru>
+// Copyright (C) 2021-2024 Yaroslav Pronin <proninyaroslav@mail.ru>
 // Copyright (C) 2021 Insurgo Inc. <insurgo@riseup.net>
 //
 // This file is part of LibreTrack.
@@ -184,8 +184,9 @@ void main() {
       ).thenAnswer(
         (_) async => {},
       );
-      when(() => mockPref.trackingNotifications).thenReturn(true);
-      when(() => mockPref.trackingErrorNotifications).thenReturn(true);
+      when(() => mockPref.trackingNotifications).thenAnswer((_) async => true);
+      when(() => mockPref.trackingErrorNotifications)
+          .thenAnswer((_) async => true);
 
       await notifyTask.show(
         trackingInfo: trackingInfo,
@@ -202,8 +203,9 @@ void main() {
     });
 
     test('Disabled notifications', () async {
-      when(() => mockPref.trackingNotifications).thenReturn(false);
-      when(() => mockPref.trackingErrorNotifications).thenReturn(false);
+      when(() => mockPref.trackingNotifications).thenAnswer((_) async => false);
+      when(() => mockPref.trackingErrorNotifications)
+          .thenAnswer((_) async => false);
       await notifyTask.show(trackingInfo: [], trackingResult: []);
       verifyNever(
         () => mockNotifyManager.newActivitiesNotify(any()),
@@ -225,7 +227,8 @@ void main() {
       ).thenAnswer(
         (_) async => {},
       );
-      when(() => mockPref.trackingErrorNotifications).thenReturn(true);
+      when(() => mockPref.trackingErrorNotifications)
+          .thenAnswer((_) async => true);
 
       await notifyTask.trackingFailedNotify(['1']);
       verify(

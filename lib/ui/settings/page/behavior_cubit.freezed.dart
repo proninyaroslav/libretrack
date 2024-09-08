@@ -16,10 +16,11 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$BehaviorState {
-  BehaviorInfo get info => throw _privateConstructorUsedError;
+  BehaviorInfo? get info => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(BehaviorInfo info) initial,
+    required TResult Function(BehaviorInfo? info) initial,
+    required TResult Function(BehaviorInfo info) loaded,
     required TResult Function(BehaviorInfo info) trackingLimitChanged,
     required TResult Function(BehaviorInfo info) autoTrackingChanged,
     required TResult Function(BehaviorInfo info) autoTrackingFreqChanged,
@@ -28,7 +29,8 @@ mixin _$BehaviorState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(BehaviorInfo info)? initial,
+    TResult? Function(BehaviorInfo? info)? initial,
+    TResult? Function(BehaviorInfo info)? loaded,
     TResult? Function(BehaviorInfo info)? trackingLimitChanged,
     TResult? Function(BehaviorInfo info)? autoTrackingChanged,
     TResult? Function(BehaviorInfo info)? autoTrackingFreqChanged,
@@ -37,7 +39,8 @@ mixin _$BehaviorState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(BehaviorInfo info)? initial,
+    TResult Function(BehaviorInfo? info)? initial,
+    TResult Function(BehaviorInfo info)? loaded,
     TResult Function(BehaviorInfo info)? trackingLimitChanged,
     TResult Function(BehaviorInfo info)? autoTrackingChanged,
     TResult Function(BehaviorInfo info)? autoTrackingFreqChanged,
@@ -48,6 +51,7 @@ mixin _$BehaviorState {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(BehaviorStateInitial value) initial,
+    required TResult Function(BehaviorStateLoaded value) loaded,
     required TResult Function(BehaviorStateTrackingLimitChanged value)
         trackingLimitChanged,
     required TResult Function(BehaviorStateAutoTrackingChanged value)
@@ -61,6 +65,7 @@ mixin _$BehaviorState {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(BehaviorStateInitial value)? initial,
+    TResult? Function(BehaviorStateLoaded value)? loaded,
     TResult? Function(BehaviorStateTrackingLimitChanged value)?
         trackingLimitChanged,
     TResult? Function(BehaviorStateAutoTrackingChanged value)?
@@ -74,6 +79,7 @@ mixin _$BehaviorState {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(BehaviorStateInitial value)? initial,
+    TResult Function(BehaviorStateLoaded value)? loaded,
     TResult Function(BehaviorStateTrackingLimitChanged value)?
         trackingLimitChanged,
     TResult Function(BehaviorStateAutoTrackingChanged value)?
@@ -101,7 +107,7 @@ abstract class $BehaviorStateCopyWith<$Res> {
   @useResult
   $Res call({BehaviorInfo info});
 
-  $BehaviorInfoCopyWith<$Res> get info;
+  $BehaviorInfoCopyWith<$Res>? get info;
 }
 
 /// @nodoc
@@ -123,7 +129,7 @@ class _$BehaviorStateCopyWithImpl<$Res, $Val extends BehaviorState>
   }) {
     return _then(_value.copyWith(
       info: null == info
-          ? _value.info
+          ? _value.info!
           : info // ignore: cast_nullable_to_non_nullable
               as BehaviorInfo,
     ) as $Val);
@@ -133,8 +139,12 @@ class _$BehaviorStateCopyWithImpl<$Res, $Val extends BehaviorState>
   /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
-  $BehaviorInfoCopyWith<$Res> get info {
-    return $BehaviorInfoCopyWith<$Res>(_value.info, (value) {
+  $BehaviorInfoCopyWith<$Res>? get info {
+    if (_value.info == null) {
+      return null;
+    }
+
+    return $BehaviorInfoCopyWith<$Res>(_value.info!, (value) {
       return _then(_value.copyWith(info: value) as $Val);
     });
   }
@@ -148,10 +158,10 @@ abstract class _$$BehaviorStateInitialImplCopyWith<$Res>
       __$$BehaviorStateInitialImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({BehaviorInfo info});
+  $Res call({BehaviorInfo? info});
 
   @override
-  $BehaviorInfoCopyWith<$Res> get info;
+  $BehaviorInfoCopyWith<$Res>? get info;
 }
 
 /// @nodoc
@@ -167,13 +177,13 @@ class __$$BehaviorStateInitialImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? info = null,
+    Object? info = freezed,
   }) {
     return _then(_$BehaviorStateInitialImpl(
-      null == info
+      info: freezed == info
           ? _value.info
           : info // ignore: cast_nullable_to_non_nullable
-              as BehaviorInfo,
+              as BehaviorInfo?,
     ));
   }
 }
@@ -181,10 +191,11 @@ class __$$BehaviorStateInitialImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$BehaviorStateInitialImpl implements BehaviorStateInitial {
-  const _$BehaviorStateInitialImpl(this.info);
+  const _$BehaviorStateInitialImpl({this.info = null});
 
   @override
-  final BehaviorInfo info;
+  @JsonKey()
+  final BehaviorInfo? info;
 
   @override
   String toString() {
@@ -215,7 +226,8 @@ class _$BehaviorStateInitialImpl implements BehaviorStateInitial {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(BehaviorInfo info) initial,
+    required TResult Function(BehaviorInfo? info) initial,
+    required TResult Function(BehaviorInfo info) loaded,
     required TResult Function(BehaviorInfo info) trackingLimitChanged,
     required TResult Function(BehaviorInfo info) autoTrackingChanged,
     required TResult Function(BehaviorInfo info) autoTrackingFreqChanged,
@@ -227,7 +239,8 @@ class _$BehaviorStateInitialImpl implements BehaviorStateInitial {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(BehaviorInfo info)? initial,
+    TResult? Function(BehaviorInfo? info)? initial,
+    TResult? Function(BehaviorInfo info)? loaded,
     TResult? Function(BehaviorInfo info)? trackingLimitChanged,
     TResult? Function(BehaviorInfo info)? autoTrackingChanged,
     TResult? Function(BehaviorInfo info)? autoTrackingFreqChanged,
@@ -239,7 +252,8 @@ class _$BehaviorStateInitialImpl implements BehaviorStateInitial {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(BehaviorInfo info)? initial,
+    TResult Function(BehaviorInfo? info)? initial,
+    TResult Function(BehaviorInfo info)? loaded,
     TResult Function(BehaviorInfo info)? trackingLimitChanged,
     TResult Function(BehaviorInfo info)? autoTrackingChanged,
     TResult Function(BehaviorInfo info)? autoTrackingFreqChanged,
@@ -256,6 +270,7 @@ class _$BehaviorStateInitialImpl implements BehaviorStateInitial {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(BehaviorStateInitial value) initial,
+    required TResult Function(BehaviorStateLoaded value) loaded,
     required TResult Function(BehaviorStateTrackingLimitChanged value)
         trackingLimitChanged,
     required TResult Function(BehaviorStateAutoTrackingChanged value)
@@ -272,6 +287,7 @@ class _$BehaviorStateInitialImpl implements BehaviorStateInitial {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(BehaviorStateInitial value)? initial,
+    TResult? Function(BehaviorStateLoaded value)? loaded,
     TResult? Function(BehaviorStateTrackingLimitChanged value)?
         trackingLimitChanged,
     TResult? Function(BehaviorStateAutoTrackingChanged value)?
@@ -288,6 +304,7 @@ class _$BehaviorStateInitialImpl implements BehaviorStateInitial {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(BehaviorStateInitial value)? initial,
+    TResult Function(BehaviorStateLoaded value)? loaded,
     TResult Function(BehaviorStateTrackingLimitChanged value)?
         trackingLimitChanged,
     TResult Function(BehaviorStateAutoTrackingChanged value)?
@@ -306,8 +323,203 @@ class _$BehaviorStateInitialImpl implements BehaviorStateInitial {
 }
 
 abstract class BehaviorStateInitial implements BehaviorState {
-  const factory BehaviorStateInitial(final BehaviorInfo info) =
+  const factory BehaviorStateInitial({final BehaviorInfo? info}) =
       _$BehaviorStateInitialImpl;
+
+  @override
+  BehaviorInfo? get info;
+
+  /// Create a copy of BehaviorState
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$BehaviorStateInitialImplCopyWith<_$BehaviorStateInitialImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$BehaviorStateLoadedImplCopyWith<$Res>
+    implements $BehaviorStateCopyWith<$Res> {
+  factory _$$BehaviorStateLoadedImplCopyWith(_$BehaviorStateLoadedImpl value,
+          $Res Function(_$BehaviorStateLoadedImpl) then) =
+      __$$BehaviorStateLoadedImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({BehaviorInfo info});
+
+  @override
+  $BehaviorInfoCopyWith<$Res> get info;
+}
+
+/// @nodoc
+class __$$BehaviorStateLoadedImplCopyWithImpl<$Res>
+    extends _$BehaviorStateCopyWithImpl<$Res, _$BehaviorStateLoadedImpl>
+    implements _$$BehaviorStateLoadedImplCopyWith<$Res> {
+  __$$BehaviorStateLoadedImplCopyWithImpl(_$BehaviorStateLoadedImpl _value,
+      $Res Function(_$BehaviorStateLoadedImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of BehaviorState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? info = null,
+  }) {
+    return _then(_$BehaviorStateLoadedImpl(
+      null == info
+          ? _value.info
+          : info // ignore: cast_nullable_to_non_nullable
+              as BehaviorInfo,
+    ));
+  }
+
+  /// Create a copy of BehaviorState
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $BehaviorInfoCopyWith<$Res> get info {
+    return $BehaviorInfoCopyWith<$Res>(_value.info, (value) {
+      return _then(_value.copyWith(info: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$BehaviorStateLoadedImpl implements BehaviorStateLoaded {
+  const _$BehaviorStateLoadedImpl(this.info);
+
+  @override
+  final BehaviorInfo info;
+
+  @override
+  String toString() {
+    return 'BehaviorState.loaded(info: $info)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$BehaviorStateLoadedImpl &&
+            (identical(other.info, info) || other.info == info));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, info);
+
+  /// Create a copy of BehaviorState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$BehaviorStateLoadedImplCopyWith<_$BehaviorStateLoadedImpl> get copyWith =>
+      __$$BehaviorStateLoadedImplCopyWithImpl<_$BehaviorStateLoadedImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(BehaviorInfo? info) initial,
+    required TResult Function(BehaviorInfo info) loaded,
+    required TResult Function(BehaviorInfo info) trackingLimitChanged,
+    required TResult Function(BehaviorInfo info) autoTrackingChanged,
+    required TResult Function(BehaviorInfo info) autoTrackingFreqChanged,
+    required TResult Function(BehaviorInfo info) trackingHistorySizeChanged,
+  }) {
+    return loaded(info);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(BehaviorInfo? info)? initial,
+    TResult? Function(BehaviorInfo info)? loaded,
+    TResult? Function(BehaviorInfo info)? trackingLimitChanged,
+    TResult? Function(BehaviorInfo info)? autoTrackingChanged,
+    TResult? Function(BehaviorInfo info)? autoTrackingFreqChanged,
+    TResult? Function(BehaviorInfo info)? trackingHistorySizeChanged,
+  }) {
+    return loaded?.call(info);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(BehaviorInfo? info)? initial,
+    TResult Function(BehaviorInfo info)? loaded,
+    TResult Function(BehaviorInfo info)? trackingLimitChanged,
+    TResult Function(BehaviorInfo info)? autoTrackingChanged,
+    TResult Function(BehaviorInfo info)? autoTrackingFreqChanged,
+    TResult Function(BehaviorInfo info)? trackingHistorySizeChanged,
+    required TResult orElse(),
+  }) {
+    if (loaded != null) {
+      return loaded(info);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(BehaviorStateInitial value) initial,
+    required TResult Function(BehaviorStateLoaded value) loaded,
+    required TResult Function(BehaviorStateTrackingLimitChanged value)
+        trackingLimitChanged,
+    required TResult Function(BehaviorStateAutoTrackingChanged value)
+        autoTrackingChanged,
+    required TResult Function(BehaviorStateAutoTrackingFreqChanged value)
+        autoTrackingFreqChanged,
+    required TResult Function(BehaviorStateTrackingHistorySizeChanged value)
+        trackingHistorySizeChanged,
+  }) {
+    return loaded(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(BehaviorStateInitial value)? initial,
+    TResult? Function(BehaviorStateLoaded value)? loaded,
+    TResult? Function(BehaviorStateTrackingLimitChanged value)?
+        trackingLimitChanged,
+    TResult? Function(BehaviorStateAutoTrackingChanged value)?
+        autoTrackingChanged,
+    TResult? Function(BehaviorStateAutoTrackingFreqChanged value)?
+        autoTrackingFreqChanged,
+    TResult? Function(BehaviorStateTrackingHistorySizeChanged value)?
+        trackingHistorySizeChanged,
+  }) {
+    return loaded?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(BehaviorStateInitial value)? initial,
+    TResult Function(BehaviorStateLoaded value)? loaded,
+    TResult Function(BehaviorStateTrackingLimitChanged value)?
+        trackingLimitChanged,
+    TResult Function(BehaviorStateAutoTrackingChanged value)?
+        autoTrackingChanged,
+    TResult Function(BehaviorStateAutoTrackingFreqChanged value)?
+        autoTrackingFreqChanged,
+    TResult Function(BehaviorStateTrackingHistorySizeChanged value)?
+        trackingHistorySizeChanged,
+    required TResult orElse(),
+  }) {
+    if (loaded != null) {
+      return loaded(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class BehaviorStateLoaded implements BehaviorState {
+  const factory BehaviorStateLoaded(final BehaviorInfo info) =
+      _$BehaviorStateLoadedImpl;
 
   @override
   BehaviorInfo get info;
@@ -316,8 +528,8 @@ abstract class BehaviorStateInitial implements BehaviorState {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$BehaviorStateInitialImplCopyWith<_$BehaviorStateInitialImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  _$$BehaviorStateLoadedImplCopyWith<_$BehaviorStateLoadedImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -359,6 +571,16 @@ class __$$BehaviorStateTrackingLimitChangedImplCopyWithImpl<$Res>
               as BehaviorInfo,
     ));
   }
+
+  /// Create a copy of BehaviorState
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $BehaviorInfoCopyWith<$Res> get info {
+    return $BehaviorInfoCopyWith<$Res>(_value.info, (value) {
+      return _then(_value.copyWith(info: value));
+    });
+  }
 }
 
 /// @nodoc
@@ -399,7 +621,8 @@ class _$BehaviorStateTrackingLimitChangedImpl
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(BehaviorInfo info) initial,
+    required TResult Function(BehaviorInfo? info) initial,
+    required TResult Function(BehaviorInfo info) loaded,
     required TResult Function(BehaviorInfo info) trackingLimitChanged,
     required TResult Function(BehaviorInfo info) autoTrackingChanged,
     required TResult Function(BehaviorInfo info) autoTrackingFreqChanged,
@@ -411,7 +634,8 @@ class _$BehaviorStateTrackingLimitChangedImpl
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(BehaviorInfo info)? initial,
+    TResult? Function(BehaviorInfo? info)? initial,
+    TResult? Function(BehaviorInfo info)? loaded,
     TResult? Function(BehaviorInfo info)? trackingLimitChanged,
     TResult? Function(BehaviorInfo info)? autoTrackingChanged,
     TResult? Function(BehaviorInfo info)? autoTrackingFreqChanged,
@@ -423,7 +647,8 @@ class _$BehaviorStateTrackingLimitChangedImpl
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(BehaviorInfo info)? initial,
+    TResult Function(BehaviorInfo? info)? initial,
+    TResult Function(BehaviorInfo info)? loaded,
     TResult Function(BehaviorInfo info)? trackingLimitChanged,
     TResult Function(BehaviorInfo info)? autoTrackingChanged,
     TResult Function(BehaviorInfo info)? autoTrackingFreqChanged,
@@ -440,6 +665,7 @@ class _$BehaviorStateTrackingLimitChangedImpl
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(BehaviorStateInitial value) initial,
+    required TResult Function(BehaviorStateLoaded value) loaded,
     required TResult Function(BehaviorStateTrackingLimitChanged value)
         trackingLimitChanged,
     required TResult Function(BehaviorStateAutoTrackingChanged value)
@@ -456,6 +682,7 @@ class _$BehaviorStateTrackingLimitChangedImpl
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(BehaviorStateInitial value)? initial,
+    TResult? Function(BehaviorStateLoaded value)? loaded,
     TResult? Function(BehaviorStateTrackingLimitChanged value)?
         trackingLimitChanged,
     TResult? Function(BehaviorStateAutoTrackingChanged value)?
@@ -472,6 +699,7 @@ class _$BehaviorStateTrackingLimitChangedImpl
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(BehaviorStateInitial value)? initial,
+    TResult Function(BehaviorStateLoaded value)? loaded,
     TResult Function(BehaviorStateTrackingLimitChanged value)?
         trackingLimitChanged,
     TResult Function(BehaviorStateAutoTrackingChanged value)?
@@ -544,6 +772,16 @@ class __$$BehaviorStateAutoTrackingChangedImplCopyWithImpl<$Res>
               as BehaviorInfo,
     ));
   }
+
+  /// Create a copy of BehaviorState
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $BehaviorInfoCopyWith<$Res> get info {
+    return $BehaviorInfoCopyWith<$Res>(_value.info, (value) {
+      return _then(_value.copyWith(info: value));
+    });
+  }
 }
 
 /// @nodoc
@@ -584,7 +822,8 @@ class _$BehaviorStateAutoTrackingChangedImpl
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(BehaviorInfo info) initial,
+    required TResult Function(BehaviorInfo? info) initial,
+    required TResult Function(BehaviorInfo info) loaded,
     required TResult Function(BehaviorInfo info) trackingLimitChanged,
     required TResult Function(BehaviorInfo info) autoTrackingChanged,
     required TResult Function(BehaviorInfo info) autoTrackingFreqChanged,
@@ -596,7 +835,8 @@ class _$BehaviorStateAutoTrackingChangedImpl
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(BehaviorInfo info)? initial,
+    TResult? Function(BehaviorInfo? info)? initial,
+    TResult? Function(BehaviorInfo info)? loaded,
     TResult? Function(BehaviorInfo info)? trackingLimitChanged,
     TResult? Function(BehaviorInfo info)? autoTrackingChanged,
     TResult? Function(BehaviorInfo info)? autoTrackingFreqChanged,
@@ -608,7 +848,8 @@ class _$BehaviorStateAutoTrackingChangedImpl
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(BehaviorInfo info)? initial,
+    TResult Function(BehaviorInfo? info)? initial,
+    TResult Function(BehaviorInfo info)? loaded,
     TResult Function(BehaviorInfo info)? trackingLimitChanged,
     TResult Function(BehaviorInfo info)? autoTrackingChanged,
     TResult Function(BehaviorInfo info)? autoTrackingFreqChanged,
@@ -625,6 +866,7 @@ class _$BehaviorStateAutoTrackingChangedImpl
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(BehaviorStateInitial value) initial,
+    required TResult Function(BehaviorStateLoaded value) loaded,
     required TResult Function(BehaviorStateTrackingLimitChanged value)
         trackingLimitChanged,
     required TResult Function(BehaviorStateAutoTrackingChanged value)
@@ -641,6 +883,7 @@ class _$BehaviorStateAutoTrackingChangedImpl
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(BehaviorStateInitial value)? initial,
+    TResult? Function(BehaviorStateLoaded value)? loaded,
     TResult? Function(BehaviorStateTrackingLimitChanged value)?
         trackingLimitChanged,
     TResult? Function(BehaviorStateAutoTrackingChanged value)?
@@ -657,6 +900,7 @@ class _$BehaviorStateAutoTrackingChangedImpl
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(BehaviorStateInitial value)? initial,
+    TResult Function(BehaviorStateLoaded value)? loaded,
     TResult Function(BehaviorStateTrackingLimitChanged value)?
         trackingLimitChanged,
     TResult Function(BehaviorStateAutoTrackingChanged value)?
@@ -729,6 +973,16 @@ class __$$BehaviorStateAutoTrackingFreqChangedImplCopyWithImpl<$Res>
               as BehaviorInfo,
     ));
   }
+
+  /// Create a copy of BehaviorState
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $BehaviorInfoCopyWith<$Res> get info {
+    return $BehaviorInfoCopyWith<$Res>(_value.info, (value) {
+      return _then(_value.copyWith(info: value));
+    });
+  }
 }
 
 /// @nodoc
@@ -769,7 +1023,8 @@ class _$BehaviorStateAutoTrackingFreqChangedImpl
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(BehaviorInfo info) initial,
+    required TResult Function(BehaviorInfo? info) initial,
+    required TResult Function(BehaviorInfo info) loaded,
     required TResult Function(BehaviorInfo info) trackingLimitChanged,
     required TResult Function(BehaviorInfo info) autoTrackingChanged,
     required TResult Function(BehaviorInfo info) autoTrackingFreqChanged,
@@ -781,7 +1036,8 @@ class _$BehaviorStateAutoTrackingFreqChangedImpl
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(BehaviorInfo info)? initial,
+    TResult? Function(BehaviorInfo? info)? initial,
+    TResult? Function(BehaviorInfo info)? loaded,
     TResult? Function(BehaviorInfo info)? trackingLimitChanged,
     TResult? Function(BehaviorInfo info)? autoTrackingChanged,
     TResult? Function(BehaviorInfo info)? autoTrackingFreqChanged,
@@ -793,7 +1049,8 @@ class _$BehaviorStateAutoTrackingFreqChangedImpl
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(BehaviorInfo info)? initial,
+    TResult Function(BehaviorInfo? info)? initial,
+    TResult Function(BehaviorInfo info)? loaded,
     TResult Function(BehaviorInfo info)? trackingLimitChanged,
     TResult Function(BehaviorInfo info)? autoTrackingChanged,
     TResult Function(BehaviorInfo info)? autoTrackingFreqChanged,
@@ -810,6 +1067,7 @@ class _$BehaviorStateAutoTrackingFreqChangedImpl
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(BehaviorStateInitial value) initial,
+    required TResult Function(BehaviorStateLoaded value) loaded,
     required TResult Function(BehaviorStateTrackingLimitChanged value)
         trackingLimitChanged,
     required TResult Function(BehaviorStateAutoTrackingChanged value)
@@ -826,6 +1084,7 @@ class _$BehaviorStateAutoTrackingFreqChangedImpl
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(BehaviorStateInitial value)? initial,
+    TResult? Function(BehaviorStateLoaded value)? loaded,
     TResult? Function(BehaviorStateTrackingLimitChanged value)?
         trackingLimitChanged,
     TResult? Function(BehaviorStateAutoTrackingChanged value)?
@@ -842,6 +1101,7 @@ class _$BehaviorStateAutoTrackingFreqChangedImpl
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(BehaviorStateInitial value)? initial,
+    TResult Function(BehaviorStateLoaded value)? loaded,
     TResult Function(BehaviorStateTrackingLimitChanged value)?
         trackingLimitChanged,
     TResult Function(BehaviorStateAutoTrackingChanged value)?
@@ -914,6 +1174,16 @@ class __$$BehaviorStateTrackingHistorySizeChangedImplCopyWithImpl<$Res>
               as BehaviorInfo,
     ));
   }
+
+  /// Create a copy of BehaviorState
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $BehaviorInfoCopyWith<$Res> get info {
+    return $BehaviorInfoCopyWith<$Res>(_value.info, (value) {
+      return _then(_value.copyWith(info: value));
+    });
+  }
 }
 
 /// @nodoc
@@ -955,7 +1225,8 @@ class _$BehaviorStateTrackingHistorySizeChangedImpl
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(BehaviorInfo info) initial,
+    required TResult Function(BehaviorInfo? info) initial,
+    required TResult Function(BehaviorInfo info) loaded,
     required TResult Function(BehaviorInfo info) trackingLimitChanged,
     required TResult Function(BehaviorInfo info) autoTrackingChanged,
     required TResult Function(BehaviorInfo info) autoTrackingFreqChanged,
@@ -967,7 +1238,8 @@ class _$BehaviorStateTrackingHistorySizeChangedImpl
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(BehaviorInfo info)? initial,
+    TResult? Function(BehaviorInfo? info)? initial,
+    TResult? Function(BehaviorInfo info)? loaded,
     TResult? Function(BehaviorInfo info)? trackingLimitChanged,
     TResult? Function(BehaviorInfo info)? autoTrackingChanged,
     TResult? Function(BehaviorInfo info)? autoTrackingFreqChanged,
@@ -979,7 +1251,8 @@ class _$BehaviorStateTrackingHistorySizeChangedImpl
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(BehaviorInfo info)? initial,
+    TResult Function(BehaviorInfo? info)? initial,
+    TResult Function(BehaviorInfo info)? loaded,
     TResult Function(BehaviorInfo info)? trackingLimitChanged,
     TResult Function(BehaviorInfo info)? autoTrackingChanged,
     TResult Function(BehaviorInfo info)? autoTrackingFreqChanged,
@@ -996,6 +1269,7 @@ class _$BehaviorStateTrackingHistorySizeChangedImpl
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(BehaviorStateInitial value) initial,
+    required TResult Function(BehaviorStateLoaded value) loaded,
     required TResult Function(BehaviorStateTrackingLimitChanged value)
         trackingLimitChanged,
     required TResult Function(BehaviorStateAutoTrackingChanged value)
@@ -1012,6 +1286,7 @@ class _$BehaviorStateTrackingHistorySizeChangedImpl
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(BehaviorStateInitial value)? initial,
+    TResult? Function(BehaviorStateLoaded value)? loaded,
     TResult? Function(BehaviorStateTrackingLimitChanged value)?
         trackingLimitChanged,
     TResult? Function(BehaviorStateAutoTrackingChanged value)?
@@ -1028,6 +1303,7 @@ class _$BehaviorStateTrackingHistorySizeChangedImpl
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(BehaviorStateInitial value)? initial,
+    TResult Function(BehaviorStateLoaded value)? loaded,
     TResult Function(BehaviorStateTrackingLimitChanged value)?
         trackingLimitChanged,
     TResult Function(BehaviorStateAutoTrackingChanged value)?

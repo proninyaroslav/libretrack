@@ -54,44 +54,52 @@ class _GenerateBarcodeDialogState extends State<GenerateBarcodeDialog> {
       child: AlertDialog(
         title: Text(S.of(context).generateBarcode),
         scrollable: true,
-        content: BarcodeWidget(
-          width: deviceType == DeviceScreenType.mobile ? minSize : 300,
-          height: deviceType == DeviceScreenType.mobile ? minSize / 3 : 150,
-          barcode: _getBarcodeByType(pref.barcodeGeneratorType),
-          data: widget.trackNumber,
-          errorBuilder: (context, error) {
-            log().e(
-              'Unable to generate barcode for tracking number ${widget.trackNumber}',
-              error: error,
-            );
-            return _GenerateBarcodeError(
-              error: error,
-            );
+        content: FutureBuilder(
+          future: pref.barcodeGeneratorType,
+          builder: (context, snapshot) {
+            final barcodeType = snapshot.data;
+            if (barcodeType == null) {
+              return const CircularProgressIndicator();
+            } else {
+              return BarcodeWidget(
+                width: deviceType == DeviceScreenType.mobile ? minSize : 300,
+                height:
+                    deviceType == DeviceScreenType.mobile ? minSize / 3 : 150,
+                barcode: _getBarcodeByType(barcodeType),
+                data: widget.trackNumber,
+                errorBuilder: (context, error) {
+                  log().e(
+                    'Unable to generate barcode for tracking number ${widget.trackNumber}',
+                    error: error,
+                  );
+                  return _GenerateBarcodeError(
+                    error: error,
+                  );
+                },
+              );
+            }
           },
         ),
         actions: [
-          TextButton(
-            onPressed: () {
-              setState(() {
-                pref.barcodeGeneratorType.when(
-                  code128: () {
-                    pref.barcodeGeneratorType =
-                        const BarcodeGeneratorType.qrCode();
-                  },
-                  qrCode: () {
-                    pref.barcodeGeneratorType =
-                        const BarcodeGeneratorType.code128();
-                  },
-                );
-              });
+          FutureBuilder(
+            future: pref.barcodeGeneratorType,
+            builder: (context, snapshot) {
+              final barcodeType = snapshot.data;
+              return TextButton(
+                onPressed: barcodeType == null
+                    ? null
+                    : () => _saveBarcodeType(barcodeType),
+                child: Text(
+                  barcodeType?.when(
+                        code128: () => S.of(context).barcodeGeneratorShowQrCode,
+                        qrCode: () =>
+                            S.of(context).barcodeGeneratorShowBarcodeCode,
+                      ) ??
+                      "",
+                  textAlign: TextAlign.end,
+                ),
+              );
             },
-            child: Text(
-              pref.barcodeGeneratorType.when(
-                code128: () => S.of(context).barcodeGeneratorShowQrCode,
-                qrCode: () => S.of(context).barcodeGeneratorShowBarcodeCode,
-              ),
-              textAlign: TextAlign.end,
-            ),
           ),
           TextButton(
             onPressed: () {
@@ -105,6 +113,22 @@ class _GenerateBarcodeDialogState extends State<GenerateBarcodeDialog> {
         ],
       ),
     );
+  }
+
+  Future<void> _saveBarcodeType(BarcodeGeneratorType barcodeType) async {
+    await barcodeType.when(
+      code128: () async {
+        await pref.setBarcodeGeneratorType(
+          const BarcodeGeneratorType.qrCode(),
+        );
+      },
+      qrCode: () async {
+        await pref.setBarcodeGeneratorType(
+          const BarcodeGeneratorType.code128(),
+        );
+      },
+    );
+    setState(() {});
   }
 }
 

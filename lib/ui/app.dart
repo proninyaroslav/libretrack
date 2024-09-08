@@ -16,6 +16,8 @@
 // You should have received a copy of the GNU General Public License
 // along with LibreTrack.  If not, see <http://www.gnu.org/licenses/>.
 
+// ignore_for_file: unused_element
+
 import 'dart:async';
 
 import 'package:collection/collection.dart';
@@ -60,6 +62,10 @@ class _AppState extends State<App> {
   @override
   void initState() {
     super.initState();
+
+    WidgetsBinding.instance.addPostFrameCallback(
+      (_) async => await context.read<AppCubit>().load(),
+    );
 
     _routerDelegate = AppRouterDelegate(navigatorKey: widget.navigatorKey);
 
@@ -209,30 +215,31 @@ class _AppState extends State<App> {
     TransitionBuilder? builder,
     ThemeMode? themeMode,
   }) {
-    return BlocProvider(
-      create: (context) => AppCubit(
-        getIt<AppSettings>(),
-      ),
-      child: BlocBuilder<AppCubit, AppState>(
-        builder: (context, state) {
-          return MaterialApp.router(
-            title: 'LibreTrack',
-            themeMode: themeMode ?? _mapThemeMode(state.theme),
-            theme: AppTheme.getThemeData(),
-            darkTheme: AppTheme.getThemeData(dark: true),
-            localizationsDelegates: AppLocalizations.localizationsDelegates,
-            supportedLocales: AppLocalizations.supportedLocales,
-            locale: locale ?? _mapLocale(state.locale),
-            builder: (context, child) {
-              return InltLocaleBridge(
-                child: builder == null ? child : builder(context, child),
-              );
-            },
-            routerDelegate: _routerDelegate,
-            routeInformationParser: _routeInfoParser,
-          );
-        },
-      ),
+    return BlocBuilder<AppCubit, AppState>(
+      builder: (context, state) {
+        switch (state) {
+          case AppStateInitial():
+            return const _Loading();
+          case AppStateLoaded(locale: var sLocale, theme: final sTheme) ||
+                AppStateChanged(locale: var sLocale, theme: final sTheme):
+            return MaterialApp.router(
+              title: 'LibreTrack',
+              themeMode: themeMode ?? _mapThemeMode(sTheme),
+              theme: AppTheme.getThemeData(),
+              darkTheme: AppTheme.getThemeData(dark: true),
+              localizationsDelegates: AppLocalizations.localizationsDelegates,
+              supportedLocales: AppLocalizations.supportedLocales,
+              locale: locale ?? _mapLocale(sLocale),
+              builder: (context, child) {
+                return InltLocaleBridge(
+                  child: builder == null ? child : builder(context, child),
+                );
+              },
+              routerDelegate: _routerDelegate,
+              routeInformationParser: _routeInfoParser,
+            );
+        }
+      },
     );
   }
 
@@ -250,6 +257,21 @@ class _AppState extends State<App> {
       inner: (locale) => Locale(
         locale.languageCode,
         locale.countryCode,
+      ),
+    );
+  }
+}
+
+class _Loading extends StatelessWidget {
+  const _Loading({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      alignment: Alignment.center,
+      color: AppTheme.paletteLight.primary,
+      child: CircularProgressIndicator(
+        color: AppTheme.paletteLight.secondary,
       ),
     );
   }

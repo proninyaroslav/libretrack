@@ -23,11 +23,16 @@ import 'package:libretrack/core/settings/settings.dart';
 part 'app_cubit.freezed.dart';
 
 @freezed
-class AppState with _$AppState {
+sealed class AppState with _$AppState {
   const factory AppState.initial({
+    @Default(null) AppThemeType? theme,
+    @Default(null) AppLocaleType? locale,
+  }) = AppStateInitial;
+
+  const factory AppState.loaded({
     required AppThemeType theme,
     required AppLocaleType locale,
-  }) = AppStateInitial;
+  }) = AppStateLoaded;
 
   const factory AppState.changed({
     required AppThemeType theme,
@@ -36,25 +41,32 @@ class AppState with _$AppState {
 }
 
 class AppCubit extends Cubit<AppState> {
-  AppCubit(AppSettings pref)
-      : super(
-          AppState.initial(
-            theme: pref.theme,
-            locale: pref.locale,
-          ),
-        );
+  final AppSettings _pref;
 
-  void setTheme(AppThemeType theme) {
+  AppCubit(this._pref) : super(const AppState.initial());
+
+  Future<void> load() async {
     emit(AppState.changed(
-      theme: theme,
-      locale: state.locale,
+      theme: await _pref.theme,
+      locale: await _pref.locale,
     ));
   }
 
+  void setTheme(AppThemeType theme) {
+    if (state.locale case final locale?) {
+      emit(AppState.changed(
+        theme: theme,
+        locale: locale,
+      ));
+    }
+  }
+
   void setLocale(AppLocaleType locale) {
-    emit(AppState.changed(
-      theme: state.theme,
-      locale: locale,
-    ));
+    if (state.theme case final theme?) {
+      emit(AppState.changed(
+        theme: theme,
+        locale: locale,
+      ));
+    }
   }
 }

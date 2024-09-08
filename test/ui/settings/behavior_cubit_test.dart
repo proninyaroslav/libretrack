@@ -1,4 +1,4 @@
-// Copyright (C) 2021 Yaroslav Pronin <proninyaroslav@mail.ru>
+// Copyright (C) 2021-2024 Yaroslav Pronin <proninyaroslav@mail.ru>
 // Copyright (C) 2021 Insurgo Inc. <insurgo@riseup.net>
 //
 // This file is part of LibreTrack.
@@ -32,21 +32,31 @@ void main() {
     late TrackingScheduler mockTrackingScheduler;
 
     setUpAll(() {
+      registerFallbackValue(const TrackingFreqLimit.unlimited());
+      registerFallbackValue(const AutoTrackingFreq.twelveHours());
+
       mockPref = MockAppSettings();
       mockTrackingScheduler = MockTrackingScheduler();
-      when(() => mockPref.trackingFrequencyLimit).thenReturn(
-        const TrackingFreqLimit.fifteenMin(),
+      when(() => mockPref.trackingFrequencyLimit).thenAnswer(
+        (_) async => const TrackingFreqLimit.fifteenMin(),
       );
-      when(() => mockPref.autoTracking).thenReturn(true);
-      when(() => mockPref.autoTrackingFreq).thenReturn(
-        const AutoTrackingFreq.twelveHours(),
+      when(() => mockPref.setTrackingFrequencyLimit(any()))
+          .thenAnswer((_) async {});
+      when(() => mockPref.autoTracking).thenAnswer((_) async => true);
+      when(() => mockPref.setAutoTracking(any())).thenAnswer((_) async {});
+      when(() => mockPref.autoTrackingFreq).thenAnswer(
+        (_) async => const AutoTrackingFreq.twelveHours(),
       );
-      when(() => mockPref.trackingHistorySize).thenReturn(5);
+      when(() => mockPref.setAutoTrackingFreq(any())).thenAnswer((_) async {});
+      when(() => mockPref.trackingHistorySize).thenAnswer((_) async => 5);
+      when(() => mockPref.setTrackingHistorySize(any()))
+          .thenAnswer((_) async {});
       when(() => mockTrackingScheduler.reenqueueAll()).thenAnswer((_) async {});
     });
 
-    setUp(() {
+    setUp(() async {
       cubit = BehaviorSettingsCubit(mockPref, mockTrackingScheduler);
+      await cubit.load();
     });
 
     blocTest(
@@ -58,17 +68,17 @@ void main() {
     blocTest(
       'Change tracking frequency limit',
       build: () => cubit,
-      act: (BehaviorSettingsCubit cubit) {
-        cubit.setTrackingLimit(const TrackingFreqLimit.oneHour());
+      act: (BehaviorSettingsCubit cubit) async {
+        await cubit.setTrackingLimit(const TrackingFreqLimit.oneHour());
         verify(
-          () => mockPref.trackingFrequencyLimit =
-              const TrackingFreqLimit.oneHour(),
+          () => mockPref
+              .setTrackingFrequencyLimit(const TrackingFreqLimit.oneHour()),
         ).called(1);
 
-        cubit.setTrackingLimit(const TrackingFreqLimit.fifteenMin());
+        await cubit.setTrackingLimit(const TrackingFreqLimit.fifteenMin());
         verify(
-          () => mockPref.trackingFrequencyLimit =
-              const TrackingFreqLimit.fifteenMin(),
+          () => mockPref
+              .setTrackingFrequencyLimit(const TrackingFreqLimit.fifteenMin()),
         ).called(1);
       },
       expect: () => [
@@ -94,24 +104,12 @@ void main() {
     blocTest(
       'Auto tracking',
       build: () => cubit,
-      act: (BehaviorSettingsCubit cubit) {
-        cubit.autoTracking(enable: true);
-        verify(() => mockPref.autoTracking = true).called(1);
-        verify(() => mockTrackingScheduler.reenqueueAll()).called(1);
-
-        cubit.autoTracking(enable: false);
-        verify(() => mockPref.autoTracking = false).called(1);
+      act: (BehaviorSettingsCubit cubit) async {
+        await cubit.autoTracking(enable: false);
+        verify(() => mockPref.setAutoTracking(false)).called(1);
         verify(() => mockTrackingScheduler.reenqueueAll()).called(1);
       },
       expect: () => [
-        const BehaviorState.autoTrackingChanged(
-          BehaviorInfo(
-            trackingLimit: TrackingFreqLimit.fifteenMin(),
-            autoTracking: true,
-            autoTrackingFreq: AutoTrackingFreq.twelveHours(),
-            trackingHistorySize: 5,
-          ),
-        ),
         const BehaviorState.autoTrackingChanged(
           BehaviorInfo(
             trackingLimit: TrackingFreqLimit.fifteenMin(),
@@ -126,17 +124,17 @@ void main() {
     blocTest(
       'Auto tracking frequency',
       build: () => cubit,
-      act: (BehaviorSettingsCubit cubit) {
-        cubit.setAutoTrackingFreq(const AutoTrackingFreq.sixHours());
+      act: (BehaviorSettingsCubit cubit) async {
+        await cubit.setAutoTrackingFreq(const AutoTrackingFreq.sixHours());
         verify(
-          () => mockPref.autoTrackingFreq = const AutoTrackingFreq.sixHours(),
+          () => mockPref.setAutoTrackingFreq(const AutoTrackingFreq.sixHours()),
         ).called(1);
         verify(() => mockTrackingScheduler.reenqueueAll()).called(1);
 
-        cubit.setAutoTrackingFreq(const AutoTrackingFreq.twelveHours());
+        await cubit.setAutoTrackingFreq(const AutoTrackingFreq.twelveHours());
         verify(
-          () =>
-              mockPref.autoTrackingFreq = const AutoTrackingFreq.twelveHours(),
+          () => mockPref
+              .setAutoTrackingFreq(const AutoTrackingFreq.twelveHours()),
         ).called(1);
         verify(() => mockTrackingScheduler.reenqueueAll()).called(1);
       },
@@ -163,12 +161,12 @@ void main() {
     blocTest(
       'Change tracking history size',
       build: () => cubit,
-      act: (BehaviorSettingsCubit cubit) {
-        cubit.setTrackingHistorySize(10);
-        verify(() => mockPref.trackingHistorySize = 10).called(1);
+      act: (BehaviorSettingsCubit cubit) async {
+        await cubit.setTrackingHistorySize(10);
+        verify(() => mockPref.setTrackingHistorySize(10)).called(1);
 
-        cubit.setTrackingHistorySize(5);
-        verify(() => mockPref.trackingHistorySize = 5).called(1);
+        await cubit.setTrackingHistorySize(5);
+        verify(() => mockPref.setTrackingHistorySize(5)).called(1);
       },
       expect: () => [
         const BehaviorState.trackingHistorySizeChanged(

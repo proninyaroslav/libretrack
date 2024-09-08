@@ -1,4 +1,4 @@
-// Copyright (C) 2021 Yaroslav Pronin <proninyaroslav@mail.ru>
+// Copyright (C) 2021-2024 Yaroslav Pronin <proninyaroslav@mail.ru>
 // Copyright (C) 2021 Insurgo Inc. <insurgo@riseup.net>
 //
 // This file is part of LibreTrack.
@@ -20,9 +20,9 @@ import 'dart:async';
 
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
+import 'package:libretrack/core/date_time_provider.dart';
 import 'package:libretrack/core/storage/storage_result.dart';
 import 'package:libretrack/core/storage/tracking_repository.dart';
-import 'package:libretrack/core/date_time_provider.dart';
 
 import 'settings/settings.dart';
 
@@ -71,13 +71,13 @@ class TrackingLimiterImpl implements TrackingLimiter {
   @override
   Future<TrackingLimiterState> check(String trackNumber) async {
     final res = await _trackRepo.getTrackingInfoByTrack(trackNumber);
-    return res.when(
-      (trackingList) {
+    return await res.when(
+      (trackingList) async {
         final lastTracking = trackingList.isEmpty ? null : trackingList.first;
         if (lastTracking == null) {
           return TrackingLimiterState.allowed(trackNumber: trackNumber);
         }
-        final frequency = _pref.trackingFrequencyLimit.toDuration();
+        final frequency = (await _pref.trackingFrequencyLimit).toDuration();
         final lastTrackingTime = lastTracking.dateTime.toUtc();
         final nextTrackingTime = lastTrackingTime.add(frequency);
         final currentTime = _timeProvider.now().toUtc();

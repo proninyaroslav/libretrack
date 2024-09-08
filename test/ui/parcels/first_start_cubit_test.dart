@@ -1,4 +1,4 @@
-// Copyright (C) 2021 Yaroslav Pronin <proninyaroslav@mail.ru>
+// Copyright (C) 2021-2024 Yaroslav Pronin <proninyaroslav@mail.ru>
 // Copyright (C) 2021 Insurgo Inc. <insurgo@riseup.net>
 //
 // This file is part of LibreTrack.
@@ -64,7 +64,8 @@ void main() {
             ),
           ]),
         );
-        when(() => mockAppSettings.addAccountTipShown).thenAnswer((_) => false);
+        when(() => mockAppSettings.addAccountTipShown)
+            .thenAnswer((_) async => false);
         await cubit.showAddAccountTip();
       },
       expect: () => [const FirstStartState.hideAddAccountTip()],
@@ -86,7 +87,8 @@ void main() {
             ),
           ]),
         );
-        when(() => mockAppSettings.addAccountTipShown).thenAnswer((_) => true);
+        when(() => mockAppSettings.addAccountTipShown)
+            .thenAnswer((_) async => true);
         await cubit.showAddAccountTip();
       },
       expect: () => [const FirstStartState.hideAddAccountTip()],
@@ -99,7 +101,8 @@ void main() {
         when(() => mockServiceRepo.getAllServices()).thenAnswer(
           (_) async => const StorageResult([]),
         );
-        when(() => mockAppSettings.addAccountTipShown).thenAnswer((_) => false);
+        when(() => mockAppSettings.addAccountTipShown)
+            .thenAnswer((_) async => false);
         await cubit.showAddAccountTip();
       },
       expect: () => [const FirstStartState.showAddAccountTip()],

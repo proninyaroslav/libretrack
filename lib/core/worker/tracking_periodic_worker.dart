@@ -51,7 +51,7 @@ class TrackingPeriodicWorker implements Worker {
 
   @override
   Future<WorkResult> doWork(WorkData? inputData) async {
-    if (!_pref.autoTracking) {
+    if (!await _pref.autoTracking) {
       return const WorkResult.success();
     }
     final res1 = await _trackNumberRepo.getAllUnarchivedTracks();
@@ -89,28 +89,29 @@ class TrackingPeriodicWorker implements Worker {
       return const WorkResult.failure();
     } else if (latestTrackingInfo.isEmpty) {
       final result = await _doTrack(trackNumbers);
-      await _enqueue(_pref.autoTrackingFreq.toDuration());
+      await _enqueue((await _pref.autoTrackingFreq).toDuration());
       return result;
     } else {
       late final Duration nextEnqueueTime;
       late final WorkResult result;
 
-      final oldestTrackNumbers = _getOldestTrackingInfo(latestTrackingInfo)
-          .map((info) => info.trackNumber)
-          .toList();
+      final oldestTrackNumbers =
+          await _getOldestTrackingInfo(latestTrackingInfo)
+              .map((info) => info.trackNumber)
+              .toList();
 
       if (oldestTrackNumbers.isEmpty) {
         result = const WorkResult.success();
-        nextEnqueueTime = _calcNextEnqueueTime(
+        nextEnqueueTime = await _calcNextEnqueueTime(
           currTrackingParcelsCount: 0,
           latestTrackingInfo: latestTrackingInfo,
         );
       } else {
         result = await _doTrack(oldestTrackNumbers);
         if (oldestTrackNumbers.length == latestTrackingInfo.length) {
-          nextEnqueueTime = _pref.autoTrackingFreq.toDuration();
+          nextEnqueueTime = (await _pref.autoTrackingFreq).toDuration();
         } else {
-          nextEnqueueTime = _calcNextEnqueueTime(
+          nextEnqueueTime = await _calcNextEnqueueTime(
             currTrackingParcelsCount: oldestTrackNumbers.length,
             latestTrackingInfo: latestTrackingInfo,
           );
@@ -121,12 +122,12 @@ class TrackingPeriodicWorker implements Worker {
     }
   }
 
-  Iterable<TrackingInfo> _getOldestTrackingInfo(
+  Stream<TrackingInfo> _getOldestTrackingInfo(
     List<TrackingInfo> trackingInfoList,
-  ) sync* {
+  ) async* {
     final currentTime = _dateTimeProvider.now().toUtc();
-    final frequency = _pref.autoTrackingFreq.toDuration();
-    final frequencyLimit = _pref.trackingFrequencyLimit.toDuration();
+    final frequency = (await _pref.autoTrackingFreq).toDuration();
+    final frequencyLimit = (await _pref.trackingFrequencyLimit).toDuration();
     final timeAgo = currentTime.subtract(frequency);
     final maxTime = timeAgo.add(frequencyLimit);
 
@@ -140,14 +141,14 @@ class TrackingPeriodicWorker implements Worker {
     }
   }
 
-  Duration _calcNextEnqueueTime({
+  Future<Duration> _calcNextEnqueueTime({
     required int currTrackingParcelsCount,
     required List<TrackingInfo> latestTrackingInfo,
-  }) {
+  }) async {
     final currentTime = _dateTimeProvider.now().toUtc();
     final nextOldestTrackDate =
         latestTrackingInfo[currTrackingParcelsCount].dateTime.toUtc();
-    final frequency = _pref.autoTrackingFreq.toDuration();
+    final frequency = (await _pref.autoTrackingFreq).toDuration();
 
     return nextOldestTrackDate.add(frequency).difference(currentTime);
   }
@@ -160,7 +161,7 @@ class TrackingPeriodicWorker implements Worker {
   }
 
   Future<WorkResult> _doTrack(List<String> trackNumbersList) async {
-    final locale = await _pref.locale.when(
+    final locale = await (await _pref.locale).when(
       system: () => _platformInfo.currentAsLocale,
       inner: (locale) async => locale,
     );

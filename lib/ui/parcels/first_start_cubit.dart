@@ -43,7 +43,7 @@ class FirstStartCubit extends Cubit<FirstStartState> {
   ) : super(const FirstStartState.initial());
 
   Future<void> showAddAccountTip() async {
-    if (_pref.addAccountTipShown) {
+    if (await _pref.addAccountTipShown) {
       emit(const FirstStartState.hideAddAccountTip());
     } else {
       final result = await _serviceRepo.getAllServices();
@@ -59,7 +59,7 @@ class FirstStartCubit extends Cubit<FirstStartState> {
   }
 
   Future<void> addAccountTipShown() async {
-    _pref.addAccountTipShown = true;
+    await _pref.setAddAccountTipShown(true);
     emit(const FirstStartState.hideAddAccountTip());
   }
 }

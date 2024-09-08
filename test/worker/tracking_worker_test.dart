@@ -1,4 +1,4 @@
-// Copyright (C) 2021 Yaroslav Pronin <proninyaroslav@mail.ru>
+// Copyright (C) 2021-2024 Yaroslav Pronin <proninyaroslav@mail.ru>
 // Copyright (C) 2021 Insurgo Inc. <insurgo@riseup.net>
 //
 // This file is part of LibreTrack.
@@ -184,7 +184,7 @@ void main() {
         ),
       ).thenAnswer((_) async => StorageResult.empty);
 
-      when(() => mockPref.trackingHistorySize).thenReturn(5);
+      when(() => mockPref.trackingHistorySize).thenAnswer((_) async => 5);
       when(() => mockPlatformInfo.currentAsLocale)
           .thenAnswer((_) async => const Locale('en', 'US'));
 
@@ -206,7 +206,8 @@ void main() {
         ),
       ).thenAnswer((_) async => {});
 
-      when(() => mockPref.locale).thenReturn(const AppLocaleType.system());
+      when(() => mockPref.locale)
+          .thenAnswer((_) async => const AppLocaleType.system());
 
       for (final trackInfo in trackList) {
         when(
@@ -362,7 +363,7 @@ void main() {
         ),
       ).thenAnswer((_) async => StorageResult.empty);
 
-      when(() => mockPref.trackingHistorySize).thenReturn(5);
+      when(() => mockPref.trackingHistorySize).thenAnswer((_) async => 5);
 
       when(() => mockPlatformInfo.currentAsLocale)
           .thenAnswer((_) async => null);
@@ -386,8 +387,8 @@ void main() {
         ),
       ).thenAnswer((_) async => {});
 
-      when(() => mockPref.locale).thenReturn(
-        const AppLocaleType.inner(
+      when(() => mockPref.locale).thenAnswer(
+        (_) async => const AppLocaleType.inner(
           locale: locale,
         ),
       );
@@ -512,7 +513,7 @@ void main() {
         ),
       ).thenAnswer((_) async => StorageResult.empty);
 
-      when(() => mockPref.trackingHistorySize).thenReturn(5);
+      when(() => mockPref.trackingHistorySize).thenAnswer((_) async => 5);
 
       when(() => mockPlatformInfo.currentAsLocale)
           .thenAnswer((_) async => const Locale('en', 'US'));
@@ -535,7 +536,8 @@ void main() {
         ),
       ).thenAnswer((_) async => {});
 
-      when(() => mockPref.locale).thenReturn(const AppLocaleType.system());
+      when(() => mockPref.locale)
+          .thenAnswer((_) async => const AppLocaleType.system());
 
       when(
         () => mockLimiter.check(trackList[0].trackNumber),
@@ -650,7 +652,8 @@ void main() {
             }
           },
         );
-        when(() => mockPref.locale).thenReturn(const AppLocaleType.system());
+        when(() => mockPref.locale)
+            .thenAnswer((_) async => const AppLocaleType.system());
         when(
           () => mockLimiter.check(trackNumberInfo.trackNumber),
         ).thenAnswer(
@@ -669,7 +672,7 @@ void main() {
       test('Normal case', () async {
         when(
           () => mockPref.trackingHistorySize,
-        ).thenReturn(allTrackingInfo.length - 1);
+        ).thenAnswer((_) async => allTrackingInfo.length - 1);
         when(
           () => mockTrackingRepo.deleteTrackingInfoByList(
             [allTrackingInfo[0]],
@@ -685,7 +688,7 @@ void main() {
       });
 
       test('History size == 0', () async {
-        when(() => mockPref.trackingHistorySize).thenReturn(0);
+        when(() => mockPref.trackingHistorySize).thenAnswer((_) async => 0);
         when(
           () => mockTrackingRepo.deleteTrackingInfoByList(
             allTrackingInfo,
@@ -701,7 +704,7 @@ void main() {
       });
 
       test('History size is negative', () async {
-        when(() => mockPref.trackingHistorySize).thenReturn(-1);
+        when(() => mockPref.trackingHistorySize).thenAnswer((_) async => -1);
         expect(
           () => worker.doWork(inputData),
           throwsA(isA<UnsupportedError>()),
@@ -746,7 +749,7 @@ void main() {
           ),
         ).thenAnswer((_) async => {});
 
-        when(() => mockPref.trackingHistorySize).thenReturn(0);
+        when(() => mockPref.trackingHistorySize).thenAnswer((_) async => 0);
         when(
           () => mockTrackingRepo.deleteTrackingInfoByList([]),
         ).thenAnswer((_) async => StorageResult.empty);
@@ -760,7 +763,7 @@ void main() {
       test('History size less than the maximum value', () async {
         when(
           () => mockPref.trackingHistorySize,
-        ).thenReturn(allTrackingInfo.length + 1);
+        ).thenAnswer((_) async => allTrackingInfo.length + 1);
         when(
           () => mockTrackingRepo.deleteTrackingInfoByList([]),
         ).thenAnswer((_) async => StorageResult.empty);

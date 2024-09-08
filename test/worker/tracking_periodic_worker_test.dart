@@ -67,12 +67,13 @@ void main() {
       const locale = Locale('en', 'US');
       when(() => mockPlatformInfo.currentAsLocale)
           .thenAnswer((_) async => locale);
-      when(() => mockPref.locale).thenReturn(const AppLocaleType.system());
-      when(() => mockPref.autoTracking).thenReturn(true);
+      when(() => mockPref.locale)
+          .thenAnswer((_) async => const AppLocaleType.system());
+      when(() => mockPref.autoTracking).thenAnswer((_) async => true);
       when(() => mockPref.autoTrackingFreq)
-          .thenReturn(const AutoTrackingFreq.sixHours());
+          .thenAnswer((_) async => const AutoTrackingFreq.sixHours());
       when(() => mockPref.trackingFrequencyLimit)
-          .thenReturn(const TrackingFreqLimit.fifteenMin());
+          .thenAnswer((_) async => const TrackingFreqLimit.fifteenMin());
       when(
         () => mockTrackNumberRepo.getAllUnarchivedTracks(),
       ).thenAnswer(
@@ -258,7 +259,7 @@ void main() {
     });
 
     test('Auto tracking is disabled', () async {
-      when(() => mockPref.autoTracking).thenReturn(false);
+      when(() => mockPref.autoTracking).thenAnswer((_) async => false);
       expect(await worker.doWork(null), const WorkResult.success());
     });
 
@@ -266,12 +267,13 @@ void main() {
       const locale = Locale('en', 'US');
       when(() => mockPlatformInfo.currentAsLocale)
           .thenAnswer((_) async => locale);
-      when(() => mockPref.locale).thenReturn(const AppLocaleType.system());
-      when(() => mockPref.autoTracking).thenReturn(true);
+      when(() => mockPref.locale)
+          .thenAnswer((_) async => const AppLocaleType.system());
+      when(() => mockPref.autoTracking).thenAnswer((_) async => true);
       when(() => mockPref.autoTrackingFreq)
-          .thenReturn(const AutoTrackingFreq.sixHours());
+          .thenAnswer((_) async => const AutoTrackingFreq.sixHours());
       when(() => mockPref.trackingFrequencyLimit)
-          .thenReturn(const TrackingFreqLimit.fifteenMin());
+          .thenAnswer((_) async => const TrackingFreqLimit.fifteenMin());
       when(
         () => mockTrackNumberRepo.getAllUnarchivedTracks(),
       ).thenAnswer(
@@ -392,19 +394,19 @@ void main() {
     });
 
     test('Auto tracking is disabled', () async {
-      when(() => mockPref.autoTracking).thenReturn(false);
+      when(() => mockPref.autoTracking).thenAnswer((_) async => false);
       expect(await worker.doWork(null), const WorkResult.success());
     });
 
     test('Using app locale', () async {
       const locale = Locale('ru', 'RU');
       when(() => mockPref.locale)
-          .thenReturn(const AppLocaleType.inner(locale: locale));
-      when(() => mockPref.autoTracking).thenReturn(true);
+          .thenAnswer((_) async => const AppLocaleType.inner(locale: locale));
+      when(() => mockPref.autoTracking).thenAnswer((_) async => true);
       when(() => mockPref.autoTrackingFreq)
-          .thenReturn(const AutoTrackingFreq.sixHours());
+          .thenAnswer((_) async => const AutoTrackingFreq.sixHours());
       when(() => mockPref.trackingFrequencyLimit)
-          .thenReturn(const TrackingFreqLimit.fifteenMin());
+          .thenAnswer((_) async => const TrackingFreqLimit.fifteenMin());
       when(
         () => mockTrackNumberRepo.getAllUnarchivedTracks(),
       ).thenAnswer(
@@ -473,12 +475,13 @@ void main() {
       const locale = Locale('en', 'US');
       when(() => mockPlatformInfo.currentAsLocale)
           .thenAnswer((_) async => locale);
-      when(() => mockPref.locale).thenReturn(const AppLocaleType.system());
-      when(() => mockPref.autoTracking).thenReturn(true);
+      when(() => mockPref.locale)
+          .thenAnswer((_) async => const AppLocaleType.system());
+      when(() => mockPref.autoTracking).thenAnswer((_) async => true);
       when(() => mockPref.autoTrackingFreq)
-          .thenReturn(const AutoTrackingFreq.sixHours());
+          .thenAnswer((_) async => const AutoTrackingFreq.sixHours());
       when(() => mockPref.trackingFrequencyLimit)
-          .thenReturn(const TrackingFreqLimit.fifteenMin());
+          .thenAnswer((_) async => const TrackingFreqLimit.fifteenMin());
       when(
         () => mockTrackNumberRepo.getAllUnarchivedTracks(),
       ).thenAnswer(
@@ -619,7 +622,7 @@ void main() {
     });
 
     test('No track numbers', () async {
-      when(() => mockPref.autoTracking).thenReturn(true);
+      when(() => mockPref.autoTracking).thenAnswer((_) async => true);
       when(
         () => mockTrackNumberRepo.getAllUnarchivedTracks(),
       ).thenAnswer(
@@ -631,12 +634,12 @@ void main() {
     test('No latest tracking info', () async {
       const locale = Locale('en', 'US');
       when(() => mockPref.locale)
-          .thenReturn(const AppLocaleType.inner(locale: locale));
-      when(() => mockPref.autoTracking).thenReturn(true);
+          .thenAnswer((_) async => const AppLocaleType.inner(locale: locale));
+      when(() => mockPref.autoTracking).thenAnswer((_) async => true);
       when(() => mockPref.autoTrackingFreq)
-          .thenReturn(const AutoTrackingFreq.sixHours());
+          .thenAnswer((_) async => const AutoTrackingFreq.sixHours());
       when(() => mockPref.trackingFrequencyLimit)
-          .thenReturn(const TrackingFreqLimit.fifteenMin());
+          .thenAnswer((_) async => const TrackingFreqLimit.fifteenMin());
       when(
         () => mockTrackNumberRepo.getAllUnarchivedTracks(),
       ).thenAnswer(

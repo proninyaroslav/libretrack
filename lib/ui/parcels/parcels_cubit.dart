@@ -67,16 +67,13 @@ class ParcelsCubit extends Cubit<ParcelsState> {
     this._trackingRepo,
     this._shipmentRepo,
     this._pref,
-  ) : super(ParcelsState.initial(
-          filters: _pref.parcelsFilters ?? ParcelsFilterBatch(),
-          sort: _pref.parcelsSort,
-        ));
+  ) : super(ParcelsState.initial(filters: ParcelsFilterBatch()));
 
   Future<void> observeParcels() async {
     emit(ParcelsState.initial(
-      filters: state.filters,
+      filters: await _pref.parcelsFilters ?? ParcelsFilterBatch(),
       search: state.search,
-      sort: state.sort,
+      sort: await _pref.parcelsSort,
     ));
 
     final group = StreamGroup.mergeBroadcast([
@@ -151,51 +148,51 @@ class ParcelsCubit extends Cubit<ParcelsState> {
     ));
   }
 
-  void setErrorFilter({required bool enable}) {
+  Future<void> setErrorFilter({required bool enable}) async {
     final filters = ParcelsFilterBatch.from(state.filters)
       ..errorFilter = enable ? const ParcelsFilter.error() : null;
-    _pref.parcelsFilters = filters;
+    await _pref.setParcelsFilters(filters);
     emit(state.copyWith(filters: filters));
   }
 
-  void setNewInfoFilter({required bool enable}) {
+  Future<void> setNewInfoFilter({required bool enable}) async {
     final filters = ParcelsFilterBatch.from(state.filters)
       ..newInfoFilter = enable ? const ParcelsFilter.newInfo() : null;
-    _pref.parcelsFilters = filters;
+    await _pref.setParcelsFilters(filters);
     emit(state.copyWith(filters: filters));
   }
 
-  void setPostalServiceFilter(PostalServiceType? serviceType) {
+  Future<void> setPostalServiceFilter(PostalServiceType? serviceType) async {
     final filters = ParcelsFilterBatch.from(state.filters)
       ..postalServiceFilter = ParcelsFilter.postalService(
         serviceType: serviceType,
       );
-    _pref.parcelsFilters = filters;
+    await _pref.setParcelsFilters(filters);
     emit(state.copyWith(filters: filters));
   }
 
-  void setStatusFilter(ShipmentStatusType? statusType) {
+  Future<void> setStatusFilter(ShipmentStatusType? statusType) async {
     final filters = ParcelsFilterBatch.from(state.filters)
       ..statusFilter = ParcelsFilter.status(statusType: statusType);
-    _pref.parcelsFilters = filters;
+    await _pref.setParcelsFilters(filters);
     emit(state.copyWith(filters: filters));
   }
 
-  void setActivityDateSort({bool oldestFirst = false}) {
+  Future<void> setActivityDateSort({bool oldestFirst = false}) async {
     final sort = ParcelsSort.activityDate(oldestFirst: oldestFirst);
-    _pref.parcelsSort = sort;
+    await _pref.setParcelsSort(sort);
     emit(state.copyWith(sort: sort));
   }
 
-  void setAlphabeticallySort({bool isDesc = false}) {
+  Future<void> setAlphabeticallySort({bool isDesc = false}) async {
     final sort = ParcelsSort.alphabetically(isDesc: isDesc);
-    _pref.parcelsSort = sort;
+    await _pref.setParcelsSort(sort);
     emit(state.copyWith(sort: sort));
   }
 
-  void setDateAddedSort({bool oldestFirst = false}) {
+  Future<void> setDateAddedSort({bool oldestFirst = false}) async {
     final sort = ParcelsSort.dateAdded(oldestFirst: oldestFirst);
-    _pref.parcelsSort = sort;
+    await _pref.setParcelsSort(sort);
     emit(state.copyWith(sort: sort));
   }
 

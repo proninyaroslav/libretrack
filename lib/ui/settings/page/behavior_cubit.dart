@@ -25,9 +25,13 @@ part 'behavior_cubit.freezed.dart';
 
 @freezed
 class BehaviorState with _$BehaviorState {
-  const factory BehaviorState.initial(
+  const factory BehaviorState.initial({
+    @Default(null) BehaviorInfo? info,
+  }) = BehaviorStateInitial;
+
+  const factory BehaviorState.loaded(
     BehaviorInfo info,
-  ) = BehaviorStateInitial;
+  ) = BehaviorStateLoaded;
 
   const factory BehaviorState.trackingLimitChanged(
     BehaviorInfo info,
@@ -60,45 +64,59 @@ class BehaviorSettingsCubit extends Cubit<BehaviorState> {
   final AppSettings _pref;
   final TrackingScheduler _trackingScheduler;
 
-  BehaviorSettingsCubit(this._pref, this._trackingScheduler)
-      : super(
-          BehaviorState.initial(
-            BehaviorInfo(
-              trackingLimit: _pref.trackingFrequencyLimit,
-              autoTracking: _pref.autoTracking,
-              autoTrackingFreq: _pref.autoTrackingFreq,
-              trackingHistorySize: _pref.trackingHistorySize,
-            ),
-          ),
-        );
+  BehaviorSettingsCubit(
+    this._pref,
+    this._trackingScheduler,
+  ) : super(const BehaviorState.initial());
 
-  void setTrackingLimit(TrackingFreqLimit limit) {
-    _pref.trackingFrequencyLimit = limit;
-    emit(BehaviorState.trackingLimitChanged(
-      state.info.copyWith(trackingLimit: limit),
-    ));
+  Future<void> load() async {
+    emit(
+      BehaviorState.autoTrackingChanged(
+        BehaviorInfo(
+          trackingLimit: await _pref.trackingFrequencyLimit,
+          autoTracking: await _pref.autoTracking,
+          autoTrackingFreq: await _pref.autoTrackingFreq,
+          trackingHistorySize: await _pref.trackingHistorySize,
+        ),
+      ),
+    );
   }
 
-  void autoTracking({required bool enable}) {
-    _pref.autoTracking = enable;
-    _trackingScheduler.reenqueueAll();
-    emit(BehaviorState.autoTrackingChanged(
-      state.info.copyWith(autoTracking: enable),
-    ));
+  Future<void> setTrackingLimit(TrackingFreqLimit limit) async {
+    if (state.info case final info?) {
+      await _pref.setTrackingFrequencyLimit(limit);
+      emit(BehaviorState.trackingLimitChanged(
+        info.copyWith(trackingLimit: limit),
+      ));
+    }
   }
 
-  void setAutoTrackingFreq(AutoTrackingFreq freq) {
-    _pref.autoTrackingFreq = freq;
-    _trackingScheduler.reenqueueAll();
-    emit(BehaviorState.autoTrackingFreqChanged(
-      state.info.copyWith(autoTrackingFreq: freq),
-    ));
+  Future<void> autoTracking({required bool enable}) async {
+    if (state.info case final info?) {
+      await _pref.setAutoTracking(enable);
+      await _trackingScheduler.reenqueueAll();
+      emit(BehaviorState.autoTrackingChanged(
+        info.copyWith(autoTracking: enable),
+      ));
+    }
   }
 
-  void setTrackingHistorySize(int size) {
-    _pref.trackingHistorySize = size;
-    emit(BehaviorState.trackingHistorySizeChanged(
-      state.info.copyWith(trackingHistorySize: size),
-    ));
+  Future<void> setAutoTrackingFreq(AutoTrackingFreq freq) async {
+    if (state.info case final info?) {
+      await _pref.setAutoTrackingFreq(freq);
+      _trackingScheduler.reenqueueAll();
+      emit(BehaviorState.autoTrackingFreqChanged(
+        info.copyWith(autoTrackingFreq: freq),
+      ));
+    }
+  }
+
+  Future<void> setTrackingHistorySize(int size) async {
+    if (state.info case final info?) {
+      await _pref.setTrackingHistorySize(size);
+      emit(BehaviorState.trackingHistorySizeChanged(
+        info.copyWith(trackingHistorySize: size),
+      ));
+    }
   }
 }

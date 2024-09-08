@@ -104,7 +104,7 @@ extension GetItInjectableX on _i174.GetIt {
       },
     );
     await gh.singletonAsync<_i460.SharedPreferences>(
-      () => sharedPreferencesModule.pref,
+      () => sharedPreferencesModule.prefOld,
       registerFor: {
         _prod,
         _dev,
@@ -123,8 +123,13 @@ extension GetItInjectableX on _i174.GetIt {
       () => flutterSecureStorageModule.testStorage,
       registerFor: {_test},
     );
-    await gh.singletonAsync<_i460.SharedPreferences>(
+    await gh.singletonAsync<_i460.SharedPreferencesAsync>(
       () => sharedPreferencesModule.testPref,
+      registerFor: {_test},
+      preResolve: true,
+    );
+    await gh.singletonAsync<_i460.SharedPreferences>(
+      () => sharedPreferencesModule.testOldPref,
       registerFor: {_test},
       preResolve: true,
     );
@@ -147,6 +152,10 @@ extension GetItInjectableX on _i174.GetIt {
       () => clientModule.clientProd,
       registerFor: {_prod},
     );
+    gh.singleton<_i23.AppSettings>(() => _i23.AppSettingsImpl(
+          gh<_i460.SharedPreferencesAsync>(),
+          gh<_i460.SharedPreferences>(),
+        ));
     gh.factory<_i796.CrashReportSender>(
         () => _i796.CrashReportSenderImpl(gh<_i253.PlatformInfo>()));
     gh.factory<_i776.ServiceAuthStorage>(() => _i776.ServiceAuthStorageImpl(
@@ -177,6 +186,14 @@ extension GetItInjectableX on _i174.GetIt {
         () => _i144.ShipmentRepositoryImpl(gh<_i93.AppDatabase>()));
     gh.singleton<_i819.TrackNumberRepository>(
         () => _i819.TrackNumberRepositoryImpl(gh<_i93.AppDatabase>()));
+    await gh.singletonAsync<_i460.SharedPreferencesAsync>(
+      () => sharedPreferencesModule.pref(gh<_i460.SharedPreferences>()),
+      registerFor: {
+        _prod,
+        _dev,
+      },
+      preResolve: true,
+    );
     gh.singleton<_i36.WorkManagerRepository>(
         () => _i36.WorkManagerRepositoryImpl(gh<_i93.AppDatabase>()));
     gh.singleton<_i35.ServiceRepository>(() => _i35.ServiceRepositoryImpl(
@@ -187,8 +204,6 @@ extension GetItInjectableX on _i174.GetIt {
         () => _i1023.TrackingRepositoryImpl(gh<_i93.AppDatabase>()));
     gh.factory<_i761.ParserFactory>(
         () => _i761.ParserFactoryImpl(gh<_i541.DateTimeProvider>()));
-    gh.singleton<_i23.AppSettings>(
-        () => _i23.AppSettingsImpl(gh<_i460.SharedPreferences>()));
     gh.singleton<_i94.WorkManager>(
       () => _i94.WorkManagerImpl(
         gh<_i36.WorkManagerRepository>(),
@@ -198,6 +213,11 @@ extension GetItInjectableX on _i174.GetIt {
       ),
       registerFor: {_prod},
     );
+    gh.factory<_i514.TrackingNotifyTask>(() => _i514.TrackingNotifyTask(
+          gh<_i710.NotificationManager>(),
+          gh<_i819.TrackNumberRepository>(),
+          gh<_i23.AppSettings>(),
+        ));
     gh.factory<_i554.CrashReportManager>(() => _i554.CrashReportManagerImpl(
           gh<_i97.CrashReportBuilder>(),
           gh<_i796.CrashReportSender>(),
@@ -206,10 +226,6 @@ extension GetItInjectableX on _i174.GetIt {
           gh<_i324.RequestFactory>(),
           gh<_i580.Fetcher>(),
           gh<_i761.ParserFactory>(),
-        ));
-    gh.singleton<_i710.NotificationManager>(() => _i710.NotificationManagerImpl(
-          gh<_i253.PlatformInfo>(),
-          gh<_i23.AppSettings>(),
         ));
     gh.singleton<_i94.WorkManager>(
       () => _i94.DebugWorkManagerImpl(
@@ -233,20 +249,6 @@ extension GetItInjectableX on _i174.GetIt {
         ));
     gh.singleton<_i577.WorkerManager>(
         () => _i577.WorkerManagerImpl(gh<_i94.WorkManager>()));
-    gh.factory<_i728.SystemTray>(() => _i728.SystemTray(
-          gh<_i253.PlatformInfo>(),
-          gh<_i23.AppSettings>(),
-        ));
-    gh.factory<_i521.TrackingLimiter>(() => _i521.TrackingLimiterImpl(
-          gh<_i23.AppSettings>(),
-          gh<_i1023.TrackingRepository>(),
-          gh<_i541.DateTimeProvider>(),
-        ));
-    gh.factory<_i514.TrackingNotifyTask>(() => _i514.TrackingNotifyTask(
-          gh<_i710.NotificationManager>(),
-          gh<_i819.TrackNumberRepository>(),
-          gh<_i23.AppSettings>(),
-        ));
     gh.singleton<_i268.TrackingScheduler>(() => _i268.TrackingSchedulerImpl(
           gh<_i577.WorkerManager>(),
           gh<_i819.TrackNumberRepository>(),

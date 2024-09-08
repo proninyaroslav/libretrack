@@ -1,4 +1,4 @@
-// Copyright (C) 2021 Yaroslav Pronin <proninyaroslav@mail.ru>
+// Copyright (C) 2021-2024 Yaroslav Pronin <proninyaroslav@mail.ru>
 // Copyright (C) 2021 Insurgo Inc. <insurgo@riseup.net>
 //
 // This file is part of LibreTrack.
@@ -19,11 +19,14 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:libretrack/core/app_database_isolate_binder.dart';
 import 'package:libretrack/core/crash_catcher/crash_catcher.dart';
 import 'package:libretrack/core/crash_catcher/hook/flutter_crash_hook.dart';
 import 'package:libretrack/core/notification_manager.dart';
+import 'package:libretrack/core/settings/settings.dart';
 import 'package:libretrack/platform/system_tray.dart';
+import 'package:libretrack/ui/app_cubit.dart';
 
 import 'core/tracking_scheduler.dart';
 import 'core/work_manager/work_manager.dart';
@@ -46,9 +49,14 @@ Future<void> _main() async {
   await getIt<TrackingScheduler>().init();
 
   runApp(
-    App(
-      enableDevicePreview: false,
-      navigatorKey: navigatorKey,
+    BlocProvider(
+      create: (context) => AppCubit(
+        getIt<AppSettings>(),
+      ),
+      child: App(
+        enableDevicePreview: false,
+        navigatorKey: navigatorKey,
+      ),
     ),
   );
 }

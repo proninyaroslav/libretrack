@@ -207,12 +207,12 @@ class _BodyState extends State<_Body> with SingleTickerProviderStateMixin {
             );
             return _AddAccountBanner(
               expanded: expanded,
-              onAddAccount: () {
-                context.read<FirstStartCubit>().addAccountTipShown();
+              onAddAccount: () async {
+                await context.read<FirstStartCubit>().addAccountTipShown();
                 widget.onAddAccount?.call();
               },
-              onClose: () =>
-                  context.read<FirstStartCubit>().addAccountTipShown(),
+              onClose: () async =>
+                  await context.read<FirstStartCubit>().addAccountTipShown(),
             );
           },
         ),

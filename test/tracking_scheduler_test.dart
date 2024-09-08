@@ -50,7 +50,7 @@ void main() {
     });
 
     test('Init', () async {
-      when(() => mockPref.autoTracking).thenReturn(true);
+      when(() => mockPref.autoTracking).thenAnswer((_) async => true);
       when(() => mockWorkerManager.trackingPeriodic()).thenAnswer((_) async {});
 
       await trackingScheduler.init();
@@ -159,14 +159,14 @@ void main() {
         ),
       ];
       when(() => mockPref.autoTrackingFreq)
-          .thenReturn(const AutoTrackingFreq.twelveHours());
+          .thenAnswer((_) async => const AutoTrackingFreq.twelveHours());
       when(
         () => mockWorkerManager.trackingPeriodic(
           initialDelay: const Duration(hours: 12),
         ),
       ).thenAnswer((_) async {});
 
-      when(() => mockPref.autoTracking).thenReturn(true);
+      when(() => mockPref.autoTracking).thenAnswer((_) async => true);
       expect(
         await trackingScheduler.enqueueOneshot(trackNumbersList),
         expectedResult,
@@ -177,7 +177,7 @@ void main() {
         ),
       ).called(1);
 
-      when(() => mockPref.autoTracking).thenReturn(false);
+      when(() => mockPref.autoTracking).thenAnswer((_) async => false);
       expect(
         await trackingScheduler.enqueueOneshot(trackNumbersList),
         expectedResult,
@@ -192,14 +192,14 @@ void main() {
     test('Enqueue oneshot all', () async {
       when(() => mockWorkerManager.trackingAll()).thenAnswer((_) async {});
       when(() => mockPref.autoTrackingFreq)
-          .thenReturn(const AutoTrackingFreq.twelveHours());
+          .thenAnswer((_) async => const AutoTrackingFreq.twelveHours());
       when(
         () => mockWorkerManager.trackingPeriodic(
           initialDelay: const Duration(hours: 12),
         ),
       ).thenAnswer((_) async {});
 
-      when(() => mockPref.autoTracking).thenReturn(true);
+      when(() => mockPref.autoTracking).thenAnswer((_) async => true);
       await trackingScheduler.enqueueOneshotAll();
       verify(() => mockWorkerManager.trackingAll()).called(1);
       verify(
@@ -208,7 +208,7 @@ void main() {
         ),
       ).called(1);
 
-      when(() => mockPref.autoTracking).thenReturn(false);
+      when(() => mockPref.autoTracking).thenAnswer((_) async => false);
       await trackingScheduler.enqueueOneshotAll();
       verify(() => mockWorkerManager.trackingAll()).called(1);
       verifyNever(
@@ -225,7 +225,7 @@ void main() {
         ),
       ).thenAnswer((_) async {});
 
-      when(() => mockPref.autoTracking).thenReturn(true);
+      when(() => mockPref.autoTracking).thenAnswer((_) async => true);
       await trackingScheduler.reenqueueAll();
       verify(
         () => mockWorkerManager.trackingPeriodic(
@@ -233,7 +233,7 @@ void main() {
         ),
       ).called(1);
 
-      when(() => mockPref.autoTracking).thenReturn(false);
+      when(() => mockPref.autoTracking).thenAnswer((_) async => false);
       await trackingScheduler.reenqueueAll();
       verifyNever(
         () => mockWorkerManager.trackingPeriodic(

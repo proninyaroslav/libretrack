@@ -18,6 +18,7 @@
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:libretrack/ui/app_router.dart';
 import 'package:libretrack/ui/settings/settings.dart';
@@ -53,6 +54,13 @@ class SettingsPageState extends State<SettingsPage> {
   @override
   void initState() {
     super.initState();
+
+    WidgetsBinding.instance.addPostFrameCallback((_) async {
+      await Future.wait([
+        context.read<AppearanceSettingsCubit>().load(),
+        context.read<BehaviorSettingsCubit>().load(),
+      ]);
+    });
 
     _routeInfoProvider = PlatformRouteInformationProvider(
       initialRouteInformation: _routeInfoParser.restoreRouteInformation(

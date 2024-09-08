@@ -1,4 +1,4 @@
-// Copyright (C) 2021 Yaroslav Pronin <proninyaroslav@mail.ru>
+// Copyright (C) 2021-2024 Yaroslav Pronin <proninyaroslav@mail.ru>
 // Copyright (C) 2021 Insurgo Inc. <insurgo@riseup.net>
 //
 // This file is part of LibreTrack.
@@ -56,9 +56,9 @@ void main() {
       log.clear();
     });
 
-    test('Init', () {
-      when(() => mockPref.trayIcon).thenReturn(true);
-      systemTray.init();
+    test('Init', () async {
+      when(() => mockPref.trayIcon).thenAnswer((_) async => true);
+      await systemTray.init();
       expect(log, [
         isMethodCall('enableTrayIcon', arguments: null),
       ]);

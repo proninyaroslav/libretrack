@@ -1,4 +1,4 @@
-// Copyright (C) 2021 Yaroslav Pronin <proninyaroslav@mail.ru>
+// Copyright (C) 2021-2024 Yaroslav Pronin <proninyaroslav@mail.ru>
 // Copyright (C) 2021 Insurgo Inc. <insurgo@riseup.net>
 //
 // This file is part of LibreTrack.
@@ -35,31 +35,45 @@ void main() {
     late SystemTray mockSystemTray;
 
     setUpAll(() {
+      registerFallbackValue(const AppThemeType.system());
+      registerFallbackValue(const AppLocaleType.system());
+
       mockPref = MockAppSettings();
-      when(() => mockPref.theme).thenReturn(
-        const AppThemeType.system(),
+      when(() => mockPref.theme).thenAnswer(
+        (_) async => const AppThemeType.system(),
       );
-      when(() => mockPref.trackingNotifications).thenReturn(false);
-      when(() => mockPref.locale).thenReturn(
-        const AppLocaleType.system(),
+      when(() => mockPref.setTheme(any())).thenAnswer((_) async {});
+      when(() => mockPref.trackingNotifications).thenAnswer((_) async => false);
+      when(() => mockPref.setTrackingNotifications(any()))
+          .thenAnswer((_) async {});
+      when(() => mockPref.locale).thenAnswer(
+        (_) async => const AppLocaleType.system(),
       );
-      when(() => mockPref.trackingErrorNotifications).thenReturn(false);
+      when(() => mockPref.setLocale(any())).thenAnswer((_) async {});
+      when(() => mockPref.trackingErrorNotifications)
+          .thenAnswer((_) async => false);
+      when(() => mockPref.setTrackingErrorNotifications(any()))
+          .thenAnswer((_) async {});
       mockSystemTray = MockSystemTray();
       when(
         () => mockSystemTray.switchTrayIcon(
           enable: any(named: 'enable'),
         ),
       ).thenAnswer((_) async => {});
-      when(() => mockPref.trayIcon).thenReturn(true);
+      when(() => mockPref.trayIcon).thenAnswer((_) async => true);
+      when(() => mockPref.setTrayIcon(any())).thenAnswer((_) async {});
       mockAppCubit = MockAppCubit();
+      when(() => mockAppCubit.setTheme(any())).thenAnswer((_) {});
+      when(() => mockAppCubit.setLocale(any())).thenAnswer((_) {});
     });
 
-    setUp(() {
+    setUp(() async {
       cubit = AppearanceSettingsCubit(
         mockPref,
         mockAppCubit,
         mockSystemTray,
       );
+      await cubit.load();
     });
 
     blocTest(
@@ -71,29 +85,29 @@ void main() {
     blocTest(
       'Change theme',
       build: () => cubit,
-      act: (AppearanceSettingsCubit cubit) {
-        cubit.setTheme(const AppThemeType.dark());
+      act: (AppearanceSettingsCubit cubit) async {
+        await cubit.setTheme(const AppThemeType.dark());
         verify(
           () => mockAppCubit.setTheme(const AppThemeType.dark()),
         ).called(1);
         verify(
-          () => mockPref.theme = const AppThemeType.dark(),
+          () => mockPref.setTheme(const AppThemeType.dark()),
         ).called(1);
 
-        cubit.setTheme(const AppThemeType.light());
+        await cubit.setTheme(const AppThemeType.light());
         verify(
           () => mockAppCubit.setTheme(const AppThemeType.light()),
         ).called(1);
         verify(
-          () => mockPref.theme = const AppThemeType.light(),
+          () => mockPref.setTheme(const AppThemeType.light()),
         ).called(1);
 
-        cubit.setTheme(const AppThemeType.system());
+        await cubit.setTheme(const AppThemeType.system());
         verify(
           () => mockAppCubit.setTheme(const AppThemeType.system()),
         ).called(1);
         verify(
-          () => mockPref.theme = const AppThemeType.system(),
+          () => mockPref.setTheme(const AppThemeType.system()),
         ).called(1);
       },
       expect: () => [
@@ -130,15 +144,15 @@ void main() {
     blocTest(
       'Tracking notifications',
       build: () => cubit,
-      act: (AppearanceSettingsCubit cubit) {
-        cubit.trackingNotify(enable: true);
+      act: (AppearanceSettingsCubit cubit) async {
+        await cubit.trackingNotify(enable: true);
         verify(
-          () => mockPref.trackingNotifications = true,
+          () => mockPref.setTrackingNotifications(true),
         ).called(1);
 
-        cubit.trackingNotify(enable: false);
+        await cubit.trackingNotify(enable: false);
         verify(
-          () => mockPref.trackingNotifications = false,
+          () => mockPref.setTrackingNotifications(false),
         ).called(1);
       },
       expect: () => [
@@ -166,8 +180,8 @@ void main() {
     blocTest(
       'Change locale',
       build: () => cubit,
-      act: (AppearanceSettingsCubit cubit) {
-        cubit.setLocale(
+      act: (AppearanceSettingsCubit cubit) async {
+        await cubit.setLocale(
           const AppLocaleType.inner(
             locale: Locale('ru', 'RU'),
           ),
@@ -180,19 +194,21 @@ void main() {
           ),
         ).called(1);
         verify(
-          () => mockPref.locale = const AppLocaleType.inner(
-            locale: Locale('ru', 'RU'),
+          () => mockPref.setLocale(
+            const AppLocaleType.inner(
+              locale: Locale('ru', 'RU'),
+            ),
           ),
         ).called(1);
 
-        cubit.setLocale(const AppLocaleType.system());
+        await cubit.setLocale(const AppLocaleType.system());
         verify(
           () => mockAppCubit.setLocale(
             const AppLocaleType.system(),
           ),
         ).called(1);
         verify(
-          () => mockPref.locale = const AppLocaleType.system(),
+          () => mockPref.setLocale(const AppLocaleType.system()),
         ).called(1);
       },
       expect: () => [
@@ -222,15 +238,15 @@ void main() {
     blocTest(
       'Tracking error notifications',
       build: () => cubit,
-      act: (AppearanceSettingsCubit cubit) {
-        cubit.trackingErrorNotify(enable: true);
+      act: (AppearanceSettingsCubit cubit) async {
+        await cubit.trackingErrorNotify(enable: true);
         verify(
-          () => mockPref.trackingErrorNotifications = true,
+          () => mockPref.setTrackingErrorNotifications(true),
         ).called(1);
 
-        cubit.trackingErrorNotify(enable: false);
+        await cubit.trackingErrorNotify(enable: false);
         verify(
-          () => mockPref.trackingErrorNotifications = false,
+          () => mockPref.setTrackingErrorNotifications(false),
         ).called(1);
       },
       expect: () => [
@@ -258,18 +274,18 @@ void main() {
     blocTest(
       'Tray icon',
       build: () => cubit,
-      act: (AppearanceSettingsCubit cubit) {
-        cubit.trayIcon(enable: true);
+      act: (AppearanceSettingsCubit cubit) async {
+        await cubit.trayIcon(enable: true);
         verify(
-          () => mockPref.trayIcon = true,
+          () => mockPref.setTrayIcon(true),
         ).called(1);
         verify(
           () => mockSystemTray.switchTrayIcon(enable: true),
         ).called(1);
 
-        cubit.trayIcon(enable: false);
+        await cubit.trayIcon(enable: false);
         verify(
-          () => mockPref.trayIcon = false,
+          () => mockPref.setTrayIcon(false),
         ).called(1);
         verify(
           () => mockSystemTray.switchTrayIcon(enable: false),

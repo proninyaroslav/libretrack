@@ -1,4 +1,4 @@
-// Copyright (C) 2021 Yaroslav Pronin <proninyaroslav@mail.ru>
+// Copyright (C) 2021-2024 Yaroslav Pronin <proninyaroslav@mail.ru>
 // Copyright (C) 2021 Insurgo Inc. <insurgo@riseup.net>
 //
 // This file is part of LibreTrack.
@@ -211,8 +211,8 @@ class _StatusFilterList extends StatelessWidget {
       title: S.of(context).status,
       value: statusType,
       items: items,
-      onChanged: (newValue) =>
-          context.read<ParcelsCubit>().setStatusFilter(newValue),
+      onChanged: (newValue) async =>
+          await context.read<ParcelsCubit>().setStatusFilter(newValue),
     );
   }
 
@@ -244,8 +244,8 @@ class _NewInfoFilter extends StatelessWidget {
       icon: Icon(MdiIcons.newBox),
       title: S.of(context).unreadParcels,
       value: enabled,
-      onChanged: (enable) =>
-          context.read<ParcelsCubit>().setNewInfoFilter(enable: enable),
+      onChanged: (enable) async =>
+          await context.read<ParcelsCubit>().setNewInfoFilter(enable: enable),
     );
   }
 }
@@ -261,8 +261,8 @@ class _ErrorFilter extends StatelessWidget {
       icon: const Icon(Icons.error_outline),
       title: S.of(context).error,
       value: enabled,
-      onChanged: (enable) =>
-          context.read<ParcelsCubit>().setErrorFilter(enable: enable),
+      onChanged: (enable) async =>
+          await context.read<ParcelsCubit>().setErrorFilter(enable: enable),
     );
   }
 }
@@ -304,8 +304,8 @@ class _PostalServiceFilter extends StatelessWidget {
       title: S.of(context).postalService,
       value: serviceType,
       items: items,
-      onChanged: (newValue) =>
-          context.read<ParcelsCubit>().setPostalServiceFilter(newValue),
+      onChanged: (newValue) async =>
+          await context.read<ParcelsCubit>().setPostalServiceFilter(newValue),
     );
   }
 
@@ -460,45 +460,48 @@ class _SortList extends StatelessWidget {
           children: [
             _SortListItem(
               sort: const ParcelsSort.activityDate(),
-              currentSort: state.sort!,
+              currentSort: state.sort,
               title: S.of(context).sortActivityDateAsc,
               icon: Icon(MdiIcons.sortClockAscendingOutline),
-              onSelected: () => cubit.setActivityDateSort(),
+              onSelected: () async => await cubit.setActivityDateSort(),
             ),
             _SortListItem(
               sort: const ParcelsSort.activityDate(oldestFirst: true),
-              currentSort: state.sort!,
+              currentSort: state.sort,
               title: S.of(context).sortActivityDateDesc,
               icon: Icon(MdiIcons.sortClockDescendingOutline),
-              onSelected: () => cubit.setActivityDateSort(oldestFirst: true),
+              onSelected: () async =>
+                  await cubit.setActivityDateSort(oldestFirst: true),
             ),
             _SortListItem(
               sort: const ParcelsSort.dateAdded(),
-              currentSort: state.sort!,
+              currentSort: state.sort,
               title: S.of(context).sortDateAddedAsc,
               icon: Icon(MdiIcons.sortCalendarAscending),
-              onSelected: () => cubit.setDateAddedSort(),
+              onSelected: () async => await cubit.setDateAddedSort(),
             ),
             _SortListItem(
               sort: const ParcelsSort.dateAdded(oldestFirst: true),
-              currentSort: state.sort!,
+              currentSort: state.sort,
               title: S.of(context).sortDateAddedDesc,
               icon: Icon(MdiIcons.sortCalendarDescending),
-              onSelected: () => cubit.setDateAddedSort(oldestFirst: true),
+              onSelected: () async =>
+                  await cubit.setDateAddedSort(oldestFirst: true),
             ),
             _SortListItem(
               sort: const ParcelsSort.alphabetically(),
-              currentSort: state.sort!,
+              currentSort: state.sort,
               title: S.of(context).sortAlphabeticallyAsc,
               icon: Icon(MdiIcons.sortAlphabeticalAscending),
-              onSelected: () => cubit.setAlphabeticallySort(),
+              onSelected: () async => await cubit.setAlphabeticallySort(),
             ),
             _SortListItem(
               sort: const ParcelsSort.alphabetically(isDesc: true),
-              currentSort: state.sort!,
+              currentSort: state.sort,
               title: S.of(context).sortAlphabeticallyDesc,
               icon: Icon(MdiIcons.sortAlphabeticalDescending),
-              onSelected: () => cubit.setAlphabeticallySort(isDesc: true),
+              onSelected: () async =>
+                  await cubit.setAlphabeticallySort(isDesc: true),
             ),
           ],
         );
@@ -509,7 +512,7 @@ class _SortList extends StatelessWidget {
 
 class _SortListItem extends StatelessWidget {
   final ParcelsSort sort;
-  final ParcelsSort currentSort;
+  final ParcelsSort? currentSort;
   final String title;
   final Icon icon;
   final VoidCallback onSelected;

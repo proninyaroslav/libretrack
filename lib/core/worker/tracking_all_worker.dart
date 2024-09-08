@@ -42,7 +42,7 @@ class TrackingAllWorker implements Worker {
 
   @override
   Future<WorkResult> doWork(WorkData? inputData) async {
-    final locale = await _pref.locale.when(
+    final locale = await (await _pref.locale).when(
       system: () => _platformInfo.currentAsLocale,
       inner: (locale) async => locale,
     );

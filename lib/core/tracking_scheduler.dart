@@ -82,7 +82,7 @@ class TrackingSchedulerImpl implements TrackingScheduler {
 
   @override
   Future<void> init() async {
-    if (_pref.autoTracking) {
+    if (await _pref.autoTracking) {
       _workerManager.trackingPeriodic();
     }
   }
@@ -131,9 +131,9 @@ class TrackingSchedulerImpl implements TrackingScheduler {
     if (filteredList.isNotEmpty) {
       _workerManager.tracking(trackNumberServiceList: filteredList);
     }
-    if (_pref.autoTracking) {
+    if (await _pref.autoTracking) {
       _workerManager.trackingPeriodic(
-        initialDelay: _pref.autoTrackingFreq.toDuration(),
+        initialDelay: (await _pref.autoTrackingFreq).toDuration(),
       );
     }
 
@@ -144,16 +144,16 @@ class TrackingSchedulerImpl implements TrackingScheduler {
   Future<void> enqueueOneshotAll() async {
     _workerManager.trackingAll();
 
-    if (_pref.autoTracking) {
+    if (await _pref.autoTracking) {
       _workerManager.trackingPeriodic(
-        initialDelay: _pref.autoTrackingFreq.toDuration(),
+        initialDelay: (await _pref.autoTrackingFreq).toDuration(),
       );
     }
   }
 
   @override
   Future<void> reenqueueAll() async {
-    if (_pref.autoTracking) {
+    if (await _pref.autoTracking) {
       _workerManager.trackingPeriodic(replaceIfEnqueued: true);
     }
   }
