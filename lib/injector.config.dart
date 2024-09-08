@@ -184,6 +184,10 @@ extension GetItInjectableX on _i174.GetIt {
     );
     gh.singleton<_i144.ShipmentRepository>(
         () => _i144.ShipmentRepositoryImpl(gh<_i93.AppDatabase>()));
+    gh.singleton<_i710.NotificationManager>(() => _i710.NotificationManagerImpl(
+          gh<_i253.PlatformInfo>(),
+          gh<_i23.AppSettings>(),
+        ));
     gh.singleton<_i819.TrackNumberRepository>(
         () => _i819.TrackNumberRepositoryImpl(gh<_i93.AppDatabase>()));
     await gh.singletonAsync<_i460.SharedPreferencesAsync>(
@@ -196,12 +200,21 @@ extension GetItInjectableX on _i174.GetIt {
     );
     gh.singleton<_i36.WorkManagerRepository>(
         () => _i36.WorkManagerRepositoryImpl(gh<_i93.AppDatabase>()));
+    gh.factory<_i728.SystemTray>(() => _i728.SystemTray(
+          gh<_i253.PlatformInfo>(),
+          gh<_i23.AppSettings>(),
+        ));
     gh.singleton<_i35.ServiceRepository>(() => _i35.ServiceRepositoryImpl(
           gh<_i93.AppDatabase>(),
           gh<_i776.ServiceAuthStorage>(),
         ));
     gh.singleton<_i1023.TrackingRepository>(
         () => _i1023.TrackingRepositoryImpl(gh<_i93.AppDatabase>()));
+    gh.factory<_i521.TrackingLimiter>(() => _i521.TrackingLimiterImpl(
+          gh<_i23.AppSettings>(),
+          gh<_i1023.TrackingRepository>(),
+          gh<_i541.DateTimeProvider>(),
+        ));
     gh.factory<_i761.ParserFactory>(
         () => _i761.ParserFactoryImpl(gh<_i541.DateTimeProvider>()));
     gh.singleton<_i94.WorkManager>(
