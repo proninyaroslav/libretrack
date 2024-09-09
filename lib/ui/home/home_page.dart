@@ -20,13 +20,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:libretrack/locale.dart';
 import 'package:libretrack/ui/accounts/accounts.dart';
+import 'package:libretrack/ui/components/widget.dart';
+import 'package:libretrack/ui/parcels/components/parcels_filter_drawer.dart';
 import 'package:libretrack/ui/parcels/parcels.dart';
-import 'package:libretrack/ui/parcels/parcels_filter_drawer.dart';
-import 'package:libretrack/ui/widget/widget.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
-import '../app_router.dart';
-import 'navigation_page.dart';
+import '../routes/app_router.dart';
+import 'components/navigation_page.dart';
 
 class HomePage extends StatefulWidget {
   final ValueChanged<AppRoutePath>? onLoadRoute;

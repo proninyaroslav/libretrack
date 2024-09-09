@@ -19,10 +19,8 @@
 import 'dart:async';
 
 import 'package:floor/floor.dart';
-import 'package:injectable/injectable.dart';
 import 'package:libretrack/core/entity/converter/converter.dart';
 import 'package:libretrack/core/entity/entity.dart';
-import 'package:libretrack/env.dart';
 import 'package:sqflite/sqflite.dart' as sqflite;
 
 import 'dao/dao.dart';
@@ -58,21 +56,6 @@ abstract class AppDatabase extends FloorDatabase {
   TrackingDao get trackingDao;
 
   TrackNumberServiceDao get trackNumberServiceDao;
-}
-
-@module
-abstract class AppDatabaseModule {
-  @Singleton(env: [Env.prod, Env.dev])
-  @preResolve
-  Future<AppDatabase> get db async => $FloorAppDatabase
-      .databaseBuilder('libretrack.db')
-      .addMigrations(migrations)
-      .build();
-
-  @Singleton(env: [Env.test])
-  @preResolve
-  Future<AppDatabase> get inMemoryDb async =>
-      $FloorAppDatabase.inMemoryDatabaseBuilder().build();
 }
 
 final migrations = [

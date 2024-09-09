@@ -21,7 +21,8 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:libretrack/core/entity/entity.dart';
 import 'package:libretrack/core/storage/storage_result.dart';
 import 'package:libretrack/core/storage/track_number_repository.dart';
-import 'package:libretrack/ui/parcel_details/parcel_details.dart';
+import 'package:libretrack/ui/parcel_details/components/parcel_details.dart';
+import 'package:libretrack/ui/parcel_details/model/edit_parcel_state.dart';
 import 'package:mocktail/mocktail.dart';
 
 import '../../mock/mock.dart';

@@ -1,4 +1,4 @@
-// Copyright (C) 2021 Yaroslav Pronin <proninyaroslav@mail.ru>
+// Copyright (C) 2021-2024 Yaroslav Pronin <proninyaroslav@mail.ru>
 // Copyright (C) 2021 Insurgo Inc. <insurgo@riseup.net>
 //
 // This file is part of LibreTrack.
@@ -24,8 +24,6 @@ import 'package:injectable/injectable.dart';
 import 'package:libretrack/core/entity/entity.dart';
 import 'package:libretrack/core/platform_info.dart';
 import 'package:libretrack/core/storage/database.dart';
-
-import '../../env.dart';
 
 abstract class ServiceAuthStorage {
   Future<void> insert({
@@ -212,6 +210,7 @@ Future<AuthData?> _secureStorageGet(
   return authData.isEmpty ? null : authData;
 }
 
+@visibleForTesting
 class TestFlutterSecureStorage implements FlutterSecureStorage {
   final Map<String?, String?> _keyValueMap = {};
   final Map<String, List<ValueChanged<String?>>> _listeners = {};
@@ -343,13 +342,4 @@ class TestFlutterSecureStorage implements FlutterSecureStorage {
       WindowsOptions? wOptions}) async {
     _keyValueMap[key] = value;
   }
-}
-
-@module
-abstract class FlutterSecureStorageModule {
-  @Injectable(env: [Env.prod, Env.dev])
-  FlutterSecureStorage get storage => const FlutterSecureStorage();
-
-  @Injectable(env: [Env.test])
-  FlutterSecureStorage get testStorage => TestFlutterSecureStorage();
 }

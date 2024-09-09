@@ -23,7 +23,8 @@ import 'package:libretrack/core/entity/entity.dart';
 import 'package:libretrack/core/storage/storage_result.dart';
 import 'package:libretrack/core/storage/track_number_repository.dart';
 import 'package:libretrack/core/tracking_scheduler.dart';
-import 'package:libretrack/ui/add_parcels/add_parcels_cubit.dart';
+import 'package:libretrack/ui/add_parcels/model/add_parcels_cubit.dart';
+import 'package:libretrack/ui/add_parcels/model/add_parcels_state.dart';
 import 'package:mocktail/mocktail.dart';
 
 import '../../mock/mock.dart';

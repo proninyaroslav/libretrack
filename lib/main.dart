@@ -26,14 +26,14 @@ import 'package:libretrack/core/crash_catcher/hook/flutter_crash_hook.dart';
 import 'package:libretrack/core/notification_manager.dart';
 import 'package:libretrack/core/settings/settings.dart';
 import 'package:libretrack/platform/system_tray.dart';
-import 'package:libretrack/ui/app_cubit.dart';
+import 'package:libretrack/ui/model/app_cubit.dart';
 
 import 'core/tracking_scheduler.dart';
 import 'core/work_manager/work_manager.dart';
 import 'env.dart';
 import 'injector.dart';
 import 'ui/app.dart';
-import 'ui/crash_report_dialog/dialog_crash_handler.dart';
+import 'ui/crash_report_dialog/model/dialog_crash_handler.dart';
 
 final navigatorKey = GlobalKey<NavigatorState>();
 

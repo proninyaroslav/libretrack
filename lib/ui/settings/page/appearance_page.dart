@@ -22,9 +22,10 @@ import 'package:libretrack/core/platform_info.dart';
 import 'package:libretrack/core/settings/settings.dart';
 import 'package:libretrack/injector.dart';
 import 'package:libretrack/locale.dart';
-import 'package:libretrack/ui/settings/settings_list.dart';
-import 'package:libretrack/ui/utils/utils.dart';
-import 'package:libretrack/ui/widget/widget.dart';
+import 'package:libretrack/ui/components/widget.dart';
+import 'package:libretrack/ui/model/utils.dart';
+import 'package:libretrack/ui/settings/components/settings_list.dart';
+import 'package:libretrack/ui/settings/model/appearance_state.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 import '../settings.dart';

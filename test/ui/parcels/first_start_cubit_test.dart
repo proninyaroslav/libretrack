@@ -22,7 +22,8 @@ import 'package:libretrack/core/entity/entity.dart';
 import 'package:libretrack/core/settings/settings.dart';
 import 'package:libretrack/core/storage/service_repository.dart';
 import 'package:libretrack/core/storage/storage_result.dart';
-import 'package:libretrack/ui/parcels/first_start_cubit.dart';
+import 'package:libretrack/ui/parcels/model/first_start_cubit.dart';
+import 'package:libretrack/ui/parcels/parcels.dart';
 import 'package:mocktail/mocktail.dart';
 
 import '../../mock/mock.dart';

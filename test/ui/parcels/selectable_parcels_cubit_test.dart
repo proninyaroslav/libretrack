@@ -19,6 +19,7 @@
 import 'package:bloc_test/bloc_test.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:libretrack/core/entity/entity.dart';
+import 'package:libretrack/ui/model/selectable_state.dart';
 import 'package:libretrack/ui/parcels/parcels.dart';
 
 void main() {

@@ -24,8 +24,8 @@ import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:image/image.dart' as image;
 import 'package:injectable/injectable.dart';
+import 'package:libretrack/ui/model/utils.dart';
 import 'package:libretrack/ui/theme.dart';
-import 'package:libretrack/ui/utils/utils.dart';
 import 'package:quiver/core.dart';
 
 import '../locale.dart';

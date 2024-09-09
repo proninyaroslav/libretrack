@@ -48,6 +48,10 @@ import 'package:libretrack/core/worker/tracking_periodic_worker.dart' as _i660;
 import 'package:libretrack/core/worker/tracking_task.dart' as _i257;
 import 'package:libretrack/core/worker/tracking_worker.dart' as _i901;
 import 'package:libretrack/core/worker/worker_manager.dart' as _i577;
+import 'package:libretrack/di/app_database_module.dart' as _i718;
+import 'package:libretrack/di/client_module.dart' as _i672;
+import 'package:libretrack/di/flutter_secure_storage_module.dart' as _i743;
+import 'package:libretrack/di/shared_preferences_module.dart' as _i446;
 import 'package:libretrack/platform/system_tray.dart' as _i728;
 import 'package:shared_preferences/shared_preferences.dart' as _i460;
 
@@ -297,10 +301,10 @@ extension GetItInjectableX on _i174.GetIt {
   }
 }
 
-class _$ClientModule extends _i581.ClientModule {}
+class _$ClientModule extends _i672.ClientModule {}
 
-class _$FlutterSecureStorageModule extends _i776.FlutterSecureStorageModule {}
+class _$FlutterSecureStorageModule extends _i743.FlutterSecureStorageModule {}
 
-class _$SharedPreferencesModule extends _i23.SharedPreferencesModule {}
+class _$SharedPreferencesModule extends _i446.SharedPreferencesModule {}
 
-class _$AppDatabaseModule extends _i93.AppDatabaseModule {}
+class _$AppDatabaseModule extends _i718.AppDatabaseModule {}

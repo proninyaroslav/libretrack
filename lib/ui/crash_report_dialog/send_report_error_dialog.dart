@@ -18,7 +18,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:libretrack/core/crash_report/crash_report_manager.dart';
-import 'package:libretrack/ui/widget/widget.dart';
+import 'package:libretrack/ui/components/widget.dart';
 
 import '../../locale.dart';
 

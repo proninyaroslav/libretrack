@@ -21,11 +21,13 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:libretrack/core/platform_info.dart';
 import 'package:libretrack/locale.dart';
 import 'package:libretrack/platform/barcode_scanner.dart';
-import 'package:libretrack/ui/add_parcels/add_parcels_cubit.dart';
+import 'package:libretrack/ui/add_parcels/model/add_parcels_cubit.dart';
+import 'package:libretrack/ui/add_parcels/model/add_parcels_state.dart';
+import 'package:libretrack/ui/components/widget.dart';
 import 'package:libretrack/ui/crash_report_dialog/send_report_error_dialog.dart';
-import 'package:libretrack/ui/cubit/error_report_cubit.dart';
-import 'package:libretrack/ui/utils/utils.dart';
-import 'package:libretrack/ui/widget/widget.dart';
+import 'package:libretrack/ui/model/error_report_cubit.dart';
+import 'package:libretrack/ui/model/error_report_state.dart';
+import 'package:libretrack/ui/model/utils.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 import '../../injector.dart';

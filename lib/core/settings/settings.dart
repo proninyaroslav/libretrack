@@ -18,10 +18,10 @@
 
 import 'dart:convert';
 
+import 'package:flutter/foundation.dart';
 import 'package:injectable/injectable.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import '../../env.dart';
 import 'model.dart';
 import 'shared_pref_migrator.dart';
 
@@ -326,40 +326,7 @@ abstract class _AppSettingsKey {
   static const barcodeGeneratorType = 'pref_key_barcode_generator_type';
 }
 
-@module
-abstract class SharedPreferencesModule {
-  @Singleton(env: [Env.prod, Env.dev])
-  @preResolve
-  Future<SharedPreferences> get prefOld async =>
-      SharedPreferences.getInstance();
-
-  @Singleton(env: [Env.prod, Env.dev])
-  @preResolve
-  Future<SharedPreferencesAsync> pref(SharedPreferences prefOld) async {
-    final pref = SharedPreferencesAsync();
-    final migrator = SharedPreferencesMigrator(
-      oldPrefs: prefOld,
-      newPrefs: pref,
-    );
-    await migrator.migrate();
-
-    return pref;
-  }
-
-  @Singleton(env: [Env.test])
-  @preResolve
-  Future<SharedPreferencesAsync> get testPref async =>
-      TestSharedPreferencesAsync();
-
-  @Singleton(env: [Env.test])
-  @preResolve
-  Future<SharedPreferences> get testOldPref async {
-    // ignore: invalid_use_of_visible_for_testing_member
-    SharedPreferences.setMockInitialValues({});
-    return SharedPreferences.getInstance();
-  }
-}
-
+@visibleForTesting
 class TestSharedPreferencesAsync implements SharedPreferencesAsync {
   final Map<String, dynamic> _map = {};
 

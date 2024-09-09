@@ -21,13 +21,16 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:libretrack/core/entity/entity.dart';
 import 'package:libretrack/locale.dart';
 import 'package:libretrack/logger.dart';
-import 'package:libretrack/ui/add_account/add_account_cubit.dart';
-import 'package:libretrack/ui/add_account/service_list_cubit.dart';
+import 'package:libretrack/ui/add_account/model/add_account_cubit.dart';
+import 'package:libretrack/ui/add_account/model/add_account_state.dart';
+import 'package:libretrack/ui/add_account/model/service_list_cubit.dart';
+import 'package:libretrack/ui/add_account/model/service_list_state.dart';
+import 'package:libretrack/ui/components/widget.dart';
 import 'package:libretrack/ui/crash_report_dialog/send_report_error_dialog.dart';
-import 'package:libretrack/ui/cubit/error_report_cubit.dart';
-import 'package:libretrack/ui/widget/widget.dart';
+import 'package:libretrack/ui/model/error_report_cubit.dart';
+import 'package:libretrack/ui/model/error_report_state.dart';
 
-import '../utils/service_metadata.dart';
+import '../model/service_metadata.dart';
 
 class AddAccountPage extends StatefulWidget {
   const AddAccountPage({super.key});

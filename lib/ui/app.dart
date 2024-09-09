@@ -32,12 +32,12 @@ import 'package:libretrack/core/settings/settings.dart';
 import 'package:libretrack/locale.dart';
 import 'package:libretrack/logger.dart';
 import 'package:libretrack/platform/system_tray.dart';
-import 'package:libretrack/ui/intl_locale_bridge.dart';
+import 'package:libretrack/ui/components/intl_locale_bridge.dart';
 import 'package:receive_sharing_intent/receive_sharing_intent.dart';
 
 import '../injector.dart';
-import 'app_cubit.dart';
-import 'app_router.dart';
+import 'model/app_cubit.dart';
+import 'routes/app_router.dart';
 import 'theme.dart';
 
 class App extends StatefulWidget {

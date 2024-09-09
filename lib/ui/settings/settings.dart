@@ -1,4 +1,4 @@
-// Copyright (C) 2021 Yaroslav Pronin <proninyaroslav@mail.ru>
+// Copyright (C) 2021-2024 Yaroslav Pronin <proninyaroslav@mail.ru>
 // Copyright (C) 2021 Insurgo Inc. <insurgo@riseup.net>
 //
 // This file is part of LibreTrack.
@@ -16,10 +16,12 @@
 // You should have received a copy of the GNU General Public License
 // along with LibreTrack.  If not, see <http://www.gnu.org/licenses/>.
 
-export 'page/appearance_cubit.dart';
+export 'components/settings_pages_list.dart';
+export 'components/settings_scaffold.dart';
+export 'model/appearance_cubit.dart';
+export 'model/appearance_state.dart';
+export 'model/behavior_cubit.dart';
+export 'model/behavior_state.dart';
 export 'page/appearance_page.dart';
-export 'page/behavior_cubit.dart';
 export 'page/behavior_page.dart';
 export 'settings_page.dart';
-export 'settings_pages_list.dart';
-export 'settings_scaffold.dart';

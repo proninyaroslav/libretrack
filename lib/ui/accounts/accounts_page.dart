@@ -21,13 +21,15 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:libretrack/core/entity/entity.dart';
 import 'package:libretrack/logger.dart';
 import 'package:libretrack/ui/accounts/accounts.dart';
-import 'package:libretrack/ui/widget/widget.dart';
+import 'package:libretrack/ui/accounts/model/accounts_actions_state.dart';
+import 'package:libretrack/ui/accounts/model/accounts_state.dart';
+import 'package:libretrack/ui/components/widget.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:quiver/collection.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 import '../../locale.dart';
-import '../utils/utils.dart';
+import '../model/utils.dart';
 
 class AccountsPage extends StatefulWidget {
   final VoidCallback? onAddAccount;

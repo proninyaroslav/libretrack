@@ -20,7 +20,7 @@ import 'package:bloc_test/bloc_test.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:libretrack/core/model/type/locale.dart';
 import 'package:libretrack/core/settings/settings.dart';
-import 'package:libretrack/ui/app_cubit.dart';
+import 'package:libretrack/ui/model/app_cubit.dart';
 import 'package:mocktail/mocktail.dart';
 
 import '../mock/mock.dart';

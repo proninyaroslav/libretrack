@@ -24,7 +24,8 @@ import 'package:libretrack/core/storage/track_number_repository.dart';
 import 'package:libretrack/core/storage/tracking_repository.dart';
 import 'package:libretrack/core/tracking_limiter.dart';
 import 'package:libretrack/core/tracking_scheduler.dart';
-import 'package:libretrack/ui/parcel_details/parcel_details.dart';
+import 'package:libretrack/ui/parcel_details/components/parcel_details.dart';
+import 'package:libretrack/ui/parcel_details/model/details_actions_state.dart';
 import 'package:mocktail/mocktail.dart';
 
 import '../../mock/mock.dart';

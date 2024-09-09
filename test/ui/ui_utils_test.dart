@@ -17,7 +17,7 @@
 // along with LibreTrack.  If not, see <http://www.gnu.org/licenses/>.
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:libretrack/ui/utils/utils.dart';
+import 'package:libretrack/ui/model/utils.dart';
 
 void main() {
   test('Split words', () {

@@ -19,14 +19,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:libretrack/ui/toast.dart';
-import 'package:libretrack/ui/widget/widget.dart';
+import 'package:libretrack/ui/about/model/about_state.dart';
+import 'package:libretrack/ui/components/toast.dart';
+import 'package:libretrack/ui/components/widget.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../../locale.dart';
 import '../../logger.dart';
 import '../theme.dart';
-import 'about_cubit.dart';
+import 'model/about_cubit.dart';
 
 class AboutPage extends StatefulWidget {
   const AboutPage({super.key});

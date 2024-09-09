@@ -21,9 +21,12 @@ import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:libretrack/core/storage/storage_result.dart';
 import 'package:libretrack/logger.dart';
-import 'package:libretrack/ui/parcel_details/parcel_details.dart';
-import 'package:libretrack/ui/utils/utils.dart';
-import 'package:libretrack/ui/widget/widget.dart';
+import 'package:libretrack/ui/components/widget.dart';
+import 'package:libretrack/ui/model/utils.dart';
+import 'package:libretrack/ui/parcel_details/components/parcel_details.dart';
+import 'package:libretrack/ui/parcel_details/model/details_actions_state.dart';
+import 'package:libretrack/ui/parcel_details/model/parcel_details_state.dart';
+import 'package:libretrack/ui/parcel_details/model/parcel_error_banner_state.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:share_plus/share_plus.dart';
 

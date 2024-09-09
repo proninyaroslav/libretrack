@@ -16,7 +16,7 @@
 // You should have received a copy of the GNU General Public License
 // along with LibreTrack.  If not, see <http://www.gnu.org/licenses/>.
 
-import 'package:libretrack/ui/app_cubit.dart';
+import 'package:libretrack/ui/model/app_cubit.dart';
 import 'package:mocktail/mocktail.dart';
 
 class MockAppCubit extends Mock implements AppCubit {}

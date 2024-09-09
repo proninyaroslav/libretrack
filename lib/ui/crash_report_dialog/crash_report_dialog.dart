@@ -20,7 +20,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:libretrack/locale.dart';
-import 'package:libretrack/ui/widget/widget.dart';
+import 'package:libretrack/ui/components/widget.dart';
 
 typedef OnReportCallback = FutureOr<bool> Function(String? message);
 

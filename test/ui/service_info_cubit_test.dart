@@ -21,7 +21,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:libretrack/core/entity/entity.dart';
 import 'package:libretrack/core/storage/service_repository.dart';
 import 'package:libretrack/core/storage/storage_result.dart';
-import 'package:libretrack/ui/edit_account/service_info_cubit.dart';
+import 'package:libretrack/ui/edit_account/edit_account.dart';
 import 'package:mocktail/mocktail.dart';
 
 import '../mock/mock.dart';

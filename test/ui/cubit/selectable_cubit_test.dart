@@ -18,7 +18,8 @@
 
 import 'package:bloc_test/bloc_test.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:libretrack/ui/cubit/selectable_cubit.dart';
+import 'package:libretrack/ui/model/selectable_cubit.dart';
+import 'package:libretrack/ui/model/selectable_state.dart';
 
 class _TestSelectableCubit<T> extends SelectableCubit<T> {}
 

@@ -19,15 +19,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:libretrack/core/entity/entity.dart';
+import 'package:libretrack/ui/components/widget.dart';
 import 'package:libretrack/ui/crash_report_dialog/send_report_error_dialog.dart';
-import 'package:libretrack/ui/cubit/error_report_cubit.dart';
-import 'package:libretrack/ui/widget/widget.dart';
+import 'package:libretrack/ui/edit_account/model/edit_account_state.dart';
+import 'package:libretrack/ui/edit_account/model/service_info_state.dart';
+import 'package:libretrack/ui/model/error_report_cubit.dart';
+import 'package:libretrack/ui/model/error_report_state.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 import '../../locale.dart';
 import '../../logger.dart';
-import 'edit_account_cubit.dart';
-import 'service_info_cubit.dart';
+import 'model/edit_account_cubit.dart';
+import 'model/service_info_cubit.dart';
 
 class EditAccountPage extends StatefulWidget {
   final TrackingServiceType serviceType;

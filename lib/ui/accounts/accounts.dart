@@ -1,4 +1,4 @@
-// Copyright (C) 2021 Yaroslav Pronin <proninyaroslav@mail.ru>
+// Copyright (C) 2021-2024 Yaroslav Pronin <proninyaroslav@mail.ru>
 // Copyright (C) 2021 Insurgo Inc. <insurgo@riseup.net>
 //
 // This file is part of LibreTrack.
@@ -16,6 +16,8 @@
 // You should have received a copy of the GNU General Public License
 // along with LibreTrack.  If not, see <http://www.gnu.org/licenses/>.
 
-export 'accounts_actions_cubit.dart';
-export 'accounts_cubit.dart';
 export 'accounts_page.dart';
+export 'model/accounts_actions_cubit.dart';
+export 'model/accounts_actions_state.dart';
+export 'model/accounts_cubit.dart';
+export 'model/accounts_state.dart';

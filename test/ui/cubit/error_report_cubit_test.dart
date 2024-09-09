@@ -19,7 +19,8 @@
 import 'package:bloc_test/bloc_test.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:libretrack/core/crash_report/crash_report_manager.dart';
-import 'package:libretrack/ui/cubit/error_report_cubit.dart';
+import 'package:libretrack/ui/model/error_report_cubit.dart';
+import 'package:libretrack/ui/model/error_report_state.dart';
 import 'package:mocktail/mocktail.dart';
 
 import '../../mock/mock.dart';

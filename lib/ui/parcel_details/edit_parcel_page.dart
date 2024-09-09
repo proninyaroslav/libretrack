@@ -20,10 +20,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:libretrack/core/entity/entity.dart';
 import 'package:libretrack/locale.dart';
-import 'package:libretrack/ui/parcel_details/parcel_details.dart';
+import 'package:libretrack/ui/parcel_details/components/parcel_details.dart';
+import 'package:libretrack/ui/parcel_details/model/edit_parcel_state.dart';
 
 import '../../logger.dart';
-import '../toast.dart';
+import '../components/toast.dart';
 
 class EditParcelPage extends StatefulWidget {
   final TrackNumberInfo trackInfo;

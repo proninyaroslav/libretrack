@@ -19,7 +19,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:libretrack/core/entity/entity.dart';
-import 'package:libretrack/ui/app_router.dart';
+import 'package:libretrack/ui/routes/app_router.dart';
 
 void main() {
   group('App route parser |', () {
