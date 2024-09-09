@@ -21,7 +21,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:libretrack/ui/components/custom_actions_row.dart';
 import 'package:libretrack/ui/components/widget.dart';
 import 'package:libretrack/ui/model/selectable_state.dart';
-import 'package:libretrack/ui/parcels/model/selectable_parcels_item.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 import '../../../locale.dart';

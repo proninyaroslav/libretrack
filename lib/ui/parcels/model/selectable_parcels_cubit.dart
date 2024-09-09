@@ -16,7 +16,6 @@
 // You should have received a copy of the GNU General Public License
 // along with LibreTrack.  If not, see <http://www.gnu.org/licenses/>.
 
-import 'package:libretrack/ui/parcels/model/selectable_parcels_item.dart';
 import 'package:libretrack/ui/parcels/parcels.dart';
 
 export 'package:libretrack/ui/model/selectable_cubit.dart';

@@ -24,14 +24,12 @@ import 'package:libretrack/core/settings/settings.dart';
 import 'package:libretrack/ui/components/widget.dart';
 import 'package:libretrack/ui/model/service_metadata.dart';
 import 'package:libretrack/ui/model/shipment_metadata.dart';
-import 'package:libretrack/ui/parcels/model/parcels_state.dart';
 import 'package:libretrack/ui/parcels/parcels.dart';
 import 'package:libretrack/ui/theme.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 import '../../../locale.dart';
-import '../model/parcels_cubit.dart';
 
 class ParcelsFilterDrawer extends StatelessWidget {
   final double frontLayerVisibleSize;

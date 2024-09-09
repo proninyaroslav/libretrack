@@ -23,7 +23,6 @@ import 'package:libretrack/core/settings/model.dart';
 import 'package:libretrack/locale.dart';
 import 'package:libretrack/ui/components/widget.dart';
 import 'package:libretrack/ui/model/utils.dart';
-import 'package:libretrack/ui/settings/model/behavior_state.dart';
 import 'package:libretrack/ui/settings/settings.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
