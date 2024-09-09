@@ -1,0 +1,6 @@
+- Added "unlimited" tracking frequency limit
+- Migration to asynchronous (non-blocking UI) app preferences
+- Bugfixes:
+  - Infinite progress bar after closing a dialog on tablets and desktop
+  - Recognition of some non-standard system locales
+  - Logic of work and display of postal services with the delivered status

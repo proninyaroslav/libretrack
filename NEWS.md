@@ -1,3 +1,12 @@
+### Version 1.6.0 (2024-09-09)
+
+- Added "unlimited" tracking frequency limit
+- Migration to asynchronous (non-blocking UI) app preferences
+- Bugfixes:
+  - Infinite progress bar after closing a dialog on tablets and desktop
+  - Recognition of some non-standard system locales
+  - Logic of work and display of postal services with the delivered status
+
 ### Version 1.5.1 (2024-08-20)
 
 - Fix crash if there is no information about the parcel's movement
