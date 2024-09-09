@@ -118,7 +118,6 @@ class DevCrashReportBuilder extends CrashReportBuilderImpl {
   String get _email => 'foo@bar.com';
 }
 
-@Injectable(as: CrashReportBuilder, env: [Env.test])
 class TestCrashReportBuilder extends DevCrashReportBuilder {
   TestCrashReportBuilder(
     super.platform,

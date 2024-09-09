@@ -17,14 +17,13 @@
 // along with LibreTrack.  If not, see <http://www.gnu.org/licenses/>.
 
 import 'package:flutter_test/flutter_test.dart';
+import 'package:libretrack/core/date_time_provider.dart';
 import 'package:libretrack/core/entity/entity.dart';
 import 'package:libretrack/core/model/fetcher.dart';
 import 'package:libretrack/core/model/http/http_client.dart';
 import 'package:libretrack/core/model/http/http_client_factory.dart';
 import 'package:libretrack/core/model/request_builder.dart';
 import 'package:libretrack/core/model/service_response.dart';
-import 'package:libretrack/env.dart';
-import 'package:libretrack/injector.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:quiver/iterables.dart';
 
@@ -36,19 +35,12 @@ void main() {
     late HttpClientFactory mockClientFactory;
     late HttpClient mockClient;
 
-    setUpAll(() async {
-      await initInjector(Env.test);
-      getIt.allowReassignment = true;
-    });
-
     setUp(() {
       mockClientFactory = MockHttpClientFactory();
       mockClient = MockHttpClient();
       when(() => mockClientFactory.create()).thenReturn(mockClient);
 
-      getIt.registerSingleton<HttpClientFactory>(mockClientFactory);
-      getIt.registerSingleton<HttpClient>(mockClient);
-      fetcher = getIt<Fetcher>();
+      fetcher = FetcherImpl(mockClientFactory, DateTimeProviderImpl());
     });
 
     void initClient(

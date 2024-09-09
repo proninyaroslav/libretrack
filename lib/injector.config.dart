@@ -56,7 +56,6 @@ import 'package:libretrack/platform/system_tray.dart' as _i728;
 import 'package:shared_preferences/shared_preferences.dart' as _i460;
 
 const String _dev = 'dev';
-const String _test = 'test';
 const String _prod = 'prod';
 
 extension GetItInjectableX on _i174.GetIt {
@@ -70,21 +69,34 @@ extension GetItInjectableX on _i174.GetIt {
       environment,
       environmentFilter,
     );
-    final clientModule = _$ClientModule();
     final flutterSecureStorageModule = _$FlutterSecureStorageModule();
     final sharedPreferencesModule = _$SharedPreferencesModule();
     final appDatabaseModule = _$AppDatabaseModule();
+    final clientModule = _$ClientModule();
+    gh.factory<_i558.FlutterSecureStorage>(
+        () => flutterSecureStorageModule.storage);
+    await gh.singletonAsync<_i460.SharedPreferences>(
+      () => sharedPreferencesModule.prefOld,
+      preResolve: true,
+    );
+    await gh.singletonAsync<_i93.AppDatabase>(
+      () => appDatabaseModule.db,
+      preResolve: true,
+    );
     gh.factory<_i1024.CrashReportIdGenerator>(
         () => _i1024.CrashReportIdGeneratorImpl());
+    gh.singleton<_i398.AppDatabaseIsolateBinder>(
+        () => _i398.AppDatabaseIsolateBinder(gh<_i93.AppDatabase>()));
     gh.factory<_i324.RequestFactory>(
       () => _i324.DevRequestFactoryImpl(),
-      registerFor: {
-        _dev,
-        _test,
-      },
+      registerFor: {_dev},
     );
+    gh.singleton<_i144.ShipmentRepository>(
+        () => _i144.ShipmentRepositoryImpl(gh<_i93.AppDatabase>()));
     gh.factory<_i132.TrackingIdGenerator>(
         () => _i132.TrackingIdGeneratorImpl());
+    gh.singleton<_i819.TrackNumberRepository>(
+        () => _i819.TrackNumberRepositoryImpl(gh<_i93.AppDatabase>()));
     gh.factory<_i519.Client>(
       () => clientModule.clientDev,
       registerFor: {_dev},
@@ -92,59 +104,27 @@ extension GetItInjectableX on _i174.GetIt {
     gh.factory<_i581.HttpClient>(
         () => _i581.HttpClientImpl(gh<_i519.Client>()));
     gh.factory<_i253.PlatformInfo>(() => _i253.PlatformInfoImpl());
+    gh.singleton<_i36.WorkManagerRepository>(
+        () => _i36.WorkManagerRepositoryImpl(gh<_i93.AppDatabase>()));
     gh.factory<_i1014.WorkersProvider>(() => _i1014.WorkersProviderImpl());
-    gh.factory<_i97.CrashReportBuilder>(
-      () => _i97.TestCrashReportBuilder(
-        gh<_i253.PlatformInfo>(),
-        gh<_i1024.CrashReportIdGenerator>(),
-      ),
-      registerFor: {_test},
-    );
-    gh.factory<_i558.FlutterSecureStorage>(
-      () => flutterSecureStorageModule.storage,
-      registerFor: {
-        _prod,
-        _dev,
-      },
-    );
-    await gh.singletonAsync<_i460.SharedPreferences>(
-      () => sharedPreferencesModule.prefOld,
-      registerFor: {
-        _prod,
-        _dev,
-      },
-      preResolve: true,
-    );
-    await gh.singletonAsync<_i93.AppDatabase>(
-      () => appDatabaseModule.db,
-      registerFor: {
-        _prod,
-        _dev,
-      },
-      preResolve: true,
-    );
-    gh.factory<_i558.FlutterSecureStorage>(
-      () => flutterSecureStorageModule.testStorage,
-      registerFor: {_test},
-    );
+    gh.singleton<_i1023.TrackingRepository>(
+        () => _i1023.TrackingRepositoryImpl(gh<_i93.AppDatabase>()));
     await gh.singletonAsync<_i460.SharedPreferencesAsync>(
-      () => sharedPreferencesModule.testPref,
-      registerFor: {_test},
-      preResolve: true,
-    );
-    await gh.singletonAsync<_i460.SharedPreferences>(
-      () => sharedPreferencesModule.testOldPref,
-      registerFor: {_test},
-      preResolve: true,
-    );
-    await gh.singletonAsync<_i93.AppDatabase>(
-      () => appDatabaseModule.inMemoryDb,
-      registerFor: {_test},
+      () => sharedPreferencesModule.pref(gh<_i460.SharedPreferences>()),
       preResolve: true,
     );
     gh.factory<_i403.TransactionIdGenerator>(
         () => _i403.TransactionIdGeneratorImpl());
     gh.factory<_i541.DateTimeProvider>(() => _i541.DateTimeProviderImpl());
+    gh.singleton<_i94.WorkManager>(
+      () => _i94.WorkManagerImpl(
+        gh<_i36.WorkManagerRepository>(),
+        gh<_i253.PlatformInfo>(),
+        gh<_i1014.WorkersProvider>(),
+        gh<_i541.DateTimeProvider>(),
+      ),
+      registerFor: {_prod},
+    );
     gh.factory<_i97.CrashReportBuilder>(
       () => _i97.ProdCrashReportBuilder(
         gh<_i253.PlatformInfo>(),
@@ -177,8 +157,6 @@ extension GetItInjectableX on _i174.GetIt {
           gh<_i131.HttpClientFactory>(),
           gh<_i541.DateTimeProvider>(),
         ));
-    gh.singleton<_i398.AppDatabaseIsolateBinder>(
-        () => _i398.AppDatabaseIsolateBinder(gh<_i93.AppDatabase>()));
     gh.factory<_i97.CrashReportBuilder>(
       () => _i97.DevCrashReportBuilder(
         gh<_i253.PlatformInfo>(),
@@ -186,24 +164,21 @@ extension GetItInjectableX on _i174.GetIt {
       ),
       registerFor: {_dev},
     );
-    gh.singleton<_i144.ShipmentRepository>(
-        () => _i144.ShipmentRepositoryImpl(gh<_i93.AppDatabase>()));
     gh.singleton<_i710.NotificationManager>(() => _i710.NotificationManagerImpl(
           gh<_i253.PlatformInfo>(),
           gh<_i23.AppSettings>(),
         ));
-    gh.singleton<_i819.TrackNumberRepository>(
-        () => _i819.TrackNumberRepositoryImpl(gh<_i93.AppDatabase>()));
-    await gh.singletonAsync<_i460.SharedPreferencesAsync>(
-      () => sharedPreferencesModule.pref(gh<_i460.SharedPreferences>()),
-      registerFor: {
-        _prod,
-        _dev,
-      },
-      preResolve: true,
+    gh.singleton<_i94.WorkManager>(
+      () => _i94.DebugWorkManagerImpl(
+        gh<_i36.WorkManagerRepository>(),
+        gh<_i253.PlatformInfo>(),
+        gh<_i541.DateTimeProvider>(),
+        gh<_i1014.WorkersProvider>(),
+      ),
+      registerFor: {_dev},
     );
-    gh.singleton<_i36.WorkManagerRepository>(
-        () => _i36.WorkManagerRepositoryImpl(gh<_i93.AppDatabase>()));
+    gh.singleton<_i577.WorkerManager>(
+        () => _i577.WorkerManagerImpl(gh<_i94.WorkManager>()));
     gh.factory<_i728.SystemTray>(() => _i728.SystemTray(
           gh<_i253.PlatformInfo>(),
           gh<_i23.AppSettings>(),
@@ -212,8 +187,6 @@ extension GetItInjectableX on _i174.GetIt {
           gh<_i93.AppDatabase>(),
           gh<_i776.ServiceAuthStorage>(),
         ));
-    gh.singleton<_i1023.TrackingRepository>(
-        () => _i1023.TrackingRepositoryImpl(gh<_i93.AppDatabase>()));
     gh.factory<_i521.TrackingLimiter>(() => _i521.TrackingLimiterImpl(
           gh<_i23.AppSettings>(),
           gh<_i1023.TrackingRepository>(),
@@ -221,15 +194,6 @@ extension GetItInjectableX on _i174.GetIt {
         ));
     gh.factory<_i761.ParserFactory>(
         () => _i761.ParserFactoryImpl(gh<_i541.DateTimeProvider>()));
-    gh.singleton<_i94.WorkManager>(
-      () => _i94.WorkManagerImpl(
-        gh<_i36.WorkManagerRepository>(),
-        gh<_i253.PlatformInfo>(),
-        gh<_i1014.WorkersProvider>(),
-        gh<_i541.DateTimeProvider>(),
-      ),
-      registerFor: {_prod},
-    );
     gh.factory<_i514.TrackingNotifyTask>(() => _i514.TrackingNotifyTask(
           gh<_i710.NotificationManager>(),
           gh<_i819.TrackNumberRepository>(),
@@ -239,23 +203,17 @@ extension GetItInjectableX on _i174.GetIt {
           gh<_i97.CrashReportBuilder>(),
           gh<_i796.CrashReportSender>(),
         ));
+    gh.singleton<_i268.TrackingScheduler>(() => _i268.TrackingSchedulerImpl(
+          gh<_i577.WorkerManager>(),
+          gh<_i819.TrackNumberRepository>(),
+          gh<_i521.TrackingLimiter>(),
+          gh<_i23.AppSettings>(),
+        ));
     gh.factory<_i910.TrackingService>(() => _i910.TrackingServiceImpl(
           gh<_i324.RequestFactory>(),
           gh<_i580.Fetcher>(),
           gh<_i761.ParserFactory>(),
         ));
-    gh.singleton<_i94.WorkManager>(
-      () => _i94.DebugWorkManagerImpl(
-        gh<_i36.WorkManagerRepository>(),
-        gh<_i253.PlatformInfo>(),
-        gh<_i541.DateTimeProvider>(),
-        gh<_i1014.WorkersProvider>(),
-      ),
-      registerFor: {
-        _dev,
-        _test,
-      },
-    );
     gh.factory<_i257.TrackingTask>(() => _i257.TrackingTask(
           trackingService: gh<_i910.TrackingService>(),
           serviceRepo: gh<_i35.ServiceRepository>(),
@@ -263,14 +221,6 @@ extension GetItInjectableX on _i174.GetIt {
           transactionIdGenerator: gh<_i403.TransactionIdGenerator>(),
           trackingIdGenerator: gh<_i132.TrackingIdGenerator>(),
           dateTimeProvider: gh<_i541.DateTimeProvider>(),
-        ));
-    gh.singleton<_i577.WorkerManager>(
-        () => _i577.WorkerManagerImpl(gh<_i94.WorkManager>()));
-    gh.singleton<_i268.TrackingScheduler>(() => _i268.TrackingSchedulerImpl(
-          gh<_i577.WorkerManager>(),
-          gh<_i819.TrackNumberRepository>(),
-          gh<_i521.TrackingLimiter>(),
-          gh<_i23.AppSettings>(),
         ));
     gh.factory<_i901.TrackingWorker>(() => _i901.TrackingWorker(
           trackingTask: gh<_i257.TrackingTask>(),
@@ -301,10 +251,10 @@ extension GetItInjectableX on _i174.GetIt {
   }
 }
 
-class _$ClientModule extends _i672.ClientModule {}
-
 class _$FlutterSecureStorageModule extends _i743.FlutterSecureStorageModule {}
 
 class _$SharedPreferencesModule extends _i446.SharedPreferencesModule {}
 
 class _$AppDatabaseModule extends _i718.AppDatabaseModule {}
+
+class _$ClientModule extends _i672.ClientModule {}

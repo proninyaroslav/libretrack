@@ -42,7 +42,7 @@ class RequestFactoryImpl implements RequestFactory {
       _mapServiceToBuilder(info: info, authData: authData);
 }
 
-@Injectable(as: RequestFactory, env: [Env.dev, Env.test])
+@Injectable(as: RequestFactory, env: [Env.dev])
 class DevRequestFactoryImpl implements RequestFactory {
   @override
   RequestBuilder builderOf({

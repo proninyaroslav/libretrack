@@ -18,14 +18,9 @@
 
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:injectable/injectable.dart';
-import 'package:libretrack/core/storage/service_auth_storage.dart';
-import 'package:libretrack/env.dart';
 
 @module
 abstract class FlutterSecureStorageModule {
-  @Injectable(env: [Env.prod, Env.dev])
+  @injectable
   FlutterSecureStorage get storage => const FlutterSecureStorage();
-
-  @Injectable(env: [Env.test])
-  FlutterSecureStorage get testStorage => TestFlutterSecureStorage();
 }

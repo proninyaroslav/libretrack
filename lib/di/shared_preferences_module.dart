@@ -17,19 +17,17 @@
 // along with LibreTrack.  If not, see <http://www.gnu.org/licenses/>.
 
 import 'package:injectable/injectable.dart';
-import 'package:libretrack/core/settings/settings.dart';
 import 'package:libretrack/core/settings/shared_pref_migrator.dart';
-import 'package:libretrack/env.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 @module
 abstract class SharedPreferencesModule {
-  @Singleton(env: [Env.prod, Env.dev])
+  @singleton
   @preResolve
   Future<SharedPreferences> get prefOld async =>
       SharedPreferences.getInstance();
 
-  @Singleton(env: [Env.prod, Env.dev])
+  @singleton
   @preResolve
   Future<SharedPreferencesAsync> pref(SharedPreferences prefOld) async {
     final pref = SharedPreferencesAsync();
@@ -40,18 +38,5 @@ abstract class SharedPreferencesModule {
     await migrator.migrate();
 
     return pref;
-  }
-
-  @Singleton(env: [Env.test])
-  @preResolve
-  Future<SharedPreferencesAsync> get testPref async =>
-      TestSharedPreferencesAsync();
-
-  @Singleton(env: [Env.test])
-  @preResolve
-  Future<SharedPreferences> get testOldPref async {
-    // ignore: invalid_use_of_visible_for_testing_member
-    SharedPreferences.setMockInitialValues({});
-    return SharedPreferences.getInstance();
   }
 }

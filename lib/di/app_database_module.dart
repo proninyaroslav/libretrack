@@ -20,19 +20,13 @@ import 'dart:async';
 
 import 'package:injectable/injectable.dart';
 import 'package:libretrack/core/storage/database.dart';
-import 'package:libretrack/env.dart';
 
 @module
 abstract class AppDatabaseModule {
-  @Singleton(env: [Env.prod, Env.dev])
+  @singleton
   @preResolve
   Future<AppDatabase> get db async => $FloorAppDatabase
       .databaseBuilder('libretrack.db')
       .addMigrations(migrations)
       .build();
-
-  @Singleton(env: [Env.test])
-  @preResolve
-  Future<AppDatabase> get inMemoryDb async =>
-      $FloorAppDatabase.inMemoryDatabaseBuilder().build();
 }

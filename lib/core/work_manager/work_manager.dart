@@ -75,7 +75,7 @@ class WorkManagerImpl extends _WorkManagerImpl {
         );
 }
 
-@Singleton(as: WorkManager, env: [Env.dev, Env.test])
+@Singleton(as: WorkManager, env: [Env.dev])
 class DebugWorkManagerImpl extends _WorkManagerImpl {
   DebugWorkManagerImpl(
     WorkManagerRepository repo,

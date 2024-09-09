@@ -19,16 +19,13 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:libretrack/core/entity/entity.dart';
 import 'package:libretrack/core/transaction_id_generator.dart';
-import 'package:libretrack/env.dart';
-import 'package:libretrack/injector.dart';
 
 void main() {
   group('Transaction ID generator |', () {
     late TransactionIdGenerator generator;
 
     setUpAll(() async {
-      await initInjector(Env.test);
-      generator = getIt<TransactionIdGenerator>();
+      generator = TransactionIdGeneratorImpl();
     });
 
     test('Random unique', () {

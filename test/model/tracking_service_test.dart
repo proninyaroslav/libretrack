@@ -26,8 +26,6 @@ import 'package:libretrack/core/model/request_factory.dart';
 import 'package:libretrack/core/model/service_response.dart';
 import 'package:libretrack/core/model/tracking_service.dart';
 import 'package:libretrack/core/model/type/type.dart';
-import 'package:libretrack/env.dart';
-import 'package:libretrack/injector.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:quiver/iterables.dart';
 
@@ -45,8 +43,6 @@ void main() {
     setUpAll(() async {
       registerFallbackValue(FakeTrackingServiceInfo());
       registerFallbackValue(FakeAuthData());
-      await initInjector(Env.test);
-      getIt.allowReassignment = true;
     });
 
     setUp(() {
@@ -61,12 +57,11 @@ void main() {
       mockParser = MockParser();
       when(() => mockParserFactory.parserOf(any())).thenReturn(mockParser);
 
-      getIt.registerSingleton<RequestFactory>(mockRequestFactory);
-      getIt.registerSingleton<RequestBuilder>(mockRequestBuilder);
-      getIt.registerSingleton<Fetcher>(mockFetcher);
-      getIt.registerSingleton<ParserFactory>(mockParserFactory);
-      getIt.registerSingleton<Parser>(mockParser);
-      trackingService = getIt<TrackingService>();
+      trackingService = TrackingServiceImpl(
+        mockRequestFactory,
+        mockFetcher,
+        mockParserFactory,
+      );
     });
 
     test('Multiple tracking requests', () async {

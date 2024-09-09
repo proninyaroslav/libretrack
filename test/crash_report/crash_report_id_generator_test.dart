@@ -19,16 +19,13 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:libretrack/core/crash_report/crash_report_id_generator.dart';
 import 'package:libretrack/core/crash_report/crash_report_manager.dart';
-import 'package:libretrack/env.dart';
-import 'package:libretrack/injector.dart';
 
 void main() {
   group('Crash report ID generator |', () {
     late CrashReportIdGenerator generator;
 
     setUpAll(() async {
-      await initInjector(Env.test);
-      generator = getIt<CrashReportIdGenerator>();
+      generator = CrashReportIdGeneratorImpl();
     });
 
     test('Random', () {
