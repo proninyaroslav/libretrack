@@ -1,3 +1,8 @@
+### Version 1.6.1 (2024-09-10)
+
+- Fix "Bad state" crash
+- Fix "missing account" message during parcel refresh
+
 ### Version 1.6.0 (2024-09-09)
 
 - Added "unlimited" tracking frequency limit

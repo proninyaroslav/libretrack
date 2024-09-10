@@ -1,0 +1,2 @@
+- Fix "Bad state" crash
+- Fix "missing account" message during parcel refresh
