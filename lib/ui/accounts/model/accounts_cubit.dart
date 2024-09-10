@@ -20,6 +20,7 @@ import 'package:bloc/bloc.dart';
 import 'package:libretrack/core/storage/service_repository.dart';
 import 'package:libretrack/core/storage/storage_result.dart';
 import 'package:libretrack/ui/accounts/model/accounts_state.dart';
+import 'package:libretrack/ui/model/utils.dart';
 
 class AccountsCubit extends Cubit<AccountsState> {
   final ServiceRepository _serviceRepo;
@@ -28,12 +29,16 @@ class AccountsCubit extends Cubit<AccountsState> {
 
   Future<void> observeServices() async {
     emit(const AccountsState.initial());
+
     final stream = _serviceRepo.observeAllServices();
     await for (final result in stream) {
-      result.when(
-        (serviceList) => emit(AccountsState.loaded(serviceList)),
-        error: (e) => emit(AccountsState.loadingFailed(error: e)),
+      final newState = result.when(
+        (serviceList) => AccountsState.loaded(serviceList),
+        error: (e) => AccountsState.loadingFailed(error: e),
       );
+
+      safeEmit(newState);
+
       if (result is StorageResultError) {
         break;
       }

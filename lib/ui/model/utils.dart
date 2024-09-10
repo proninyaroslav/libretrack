@@ -18,6 +18,7 @@
 
 import 'dart:ui' as ui;
 
+import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:libretrack/core/entity/dimensions.dart';
@@ -216,5 +217,14 @@ extension AutoTrackingFreqExtension on AutoTrackingFreq {
 extension DoubleExtension on double {
   String removeDecimalZeroFormat() {
     return truncateToDouble() == this ? toStringAsFixed(0) : toString();
+  }
+}
+
+extension CubitExt<T> on Cubit<T> {
+  void safeEmit(T state) {
+    if (!isClosed) {
+      // ignore: invalid_use_of_visible_for_testing_member, invalid_use_of_protected_member
+      emit(state);
+    }
   }
 }

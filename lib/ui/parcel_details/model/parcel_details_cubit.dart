@@ -24,6 +24,7 @@ import 'package:libretrack/core/storage/shipment_repository.dart';
 import 'package:libretrack/core/storage/storage_result.dart';
 import 'package:libretrack/core/storage/track_number_repository.dart';
 import 'package:libretrack/core/storage/tracking_repository.dart';
+import 'package:libretrack/ui/model/utils.dart';
 import 'package:libretrack/ui/parcel_details/components/parcel_details.dart';
 import 'package:libretrack/ui/parcel_details/model/parcel_details_state.dart';
 
@@ -98,23 +99,18 @@ class ParcelDetailsCubit extends Cubit<ParcelDetailsState> {
     ]);
 
     await for (final result in group) {
-      result.when(
-        (info) => emit(
-          ParcelDetailsState.loaded(
-            trackNumber: trackNumber,
-            info: info,
-          ),
+      final newState = result.when(
+        (info) => ParcelDetailsState.loaded(
+          trackNumber: trackNumber,
+          info: info,
         ),
-        notFound: () => emit(
-          ParcelDetailsState.notFound(trackNumber: trackNumber),
-        ),
-        failed: (error) => emit(
-          ParcelDetailsState.loadingFailed(
-            trackNumber: trackNumber,
-            error: error,
-          ),
+        notFound: () => ParcelDetailsState.notFound(trackNumber: trackNumber),
+        failed: (error) => ParcelDetailsState.loadingFailed(
+          trackNumber: trackNumber,
+          error: error,
         ),
       );
+      safeEmit(newState);
 
       if (result is _BuildResultFailed) {
         break;

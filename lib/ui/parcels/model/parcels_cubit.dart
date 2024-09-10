@@ -26,6 +26,7 @@ import 'package:libretrack/core/storage/shipment_repository.dart';
 import 'package:libretrack/core/storage/storage_result.dart';
 import 'package:libretrack/core/storage/track_number_repository.dart';
 import 'package:libretrack/core/storage/tracking_repository.dart';
+import 'package:libretrack/ui/model/utils.dart';
 import 'package:libretrack/ui/parcels/model/parcels_state.dart';
 
 import 'filter.dart';
@@ -80,7 +81,7 @@ class ParcelsCubit extends Cubit<ParcelsState> {
           ),
     ]);
     await for (final result in group) {
-      result.when(
+      final newState = result.when(
         (infoList) {
           final active = <ParcelInfo>[];
           final archive = <ParcelInfo>[];
@@ -91,27 +92,23 @@ class ParcelsCubit extends Cubit<ParcelsState> {
               archive.add(info);
             }
           }
-          emit(
-            ParcelsState.loaded(
-              active: active,
-              archive: archive,
-              filters: state.filters,
-              search: state.search,
-              sort: state.sort,
-            ),
+          return ParcelsState.loaded(
+            active: active,
+            archive: archive,
+            filters: state.filters,
+            search: state.search,
+            sort: state.sort,
           );
         },
-        failed: (error) {
-          emit(
-            ParcelsState.loadingFailed(
-              error: error,
-              filters: state.filters,
-              search: state.search,
-              sort: state.sort,
-            ),
-          );
-        },
+        failed: (error) => ParcelsState.loadingFailed(
+          error: error,
+          filters: state.filters,
+          search: state.search,
+          sort: state.sort,
+        ),
       );
+
+      safeEmit(newState);
 
       if (result is _BuildResultFailed) {
         break;
