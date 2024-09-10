@@ -452,8 +452,10 @@ List<Widget> _buildAuthErrorStatus(
   List<TrackingResponseInfo>? lastTrackingResponse,
 ) {
   bool missingAuthData = false;
-  bool missingAccount = true;
-  if (lastTrackingResponse != null) {
+  bool missingAccount = false;
+  if (lastTrackingResponse != null && lastTrackingResponse.isNotEmpty) {
+    missingAccount = true;
+
     for (final info in lastTrackingResponse) {
       final errorType = info.error?.type;
 

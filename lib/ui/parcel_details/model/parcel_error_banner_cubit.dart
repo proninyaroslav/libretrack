@@ -42,9 +42,11 @@ class ParcelErrorBannerCubit extends Cubit<ParcelErrorBannerState> {
               !lastTrackingInfo.invalidTrackNumber &&
               info.trackServices.any((trackService) => !trackService.isActive);
           bool showMissingAuthData = false;
-          bool showMissingAccount = true;
+          bool showMissingAccount = false;
           bool showAuthError = false;
-          if (lastTrackingResponse != null) {
+          if (lastTrackingResponse != null && lastTrackingResponse.isNotEmpty) {
+            showMissingAccount = true;
+
             for (final info in lastTrackingResponse) {
               final errorType = info.error?.type;
 
