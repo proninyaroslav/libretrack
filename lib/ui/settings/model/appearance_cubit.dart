@@ -46,7 +46,7 @@ class AppearanceSettingsCubit extends Cubit<AppearanceState> {
   }
 
   Future<void> setTheme(AppThemeType theme) async {
-    if (state.info case final info?) {
+    if (state case AppearanceState(:final info?)) {
       await _pref.setTheme(theme);
       _appCubit.setTheme(theme);
       emit(AppearanceState.themeChanged(
@@ -56,7 +56,7 @@ class AppearanceSettingsCubit extends Cubit<AppearanceState> {
   }
 
   Future<void> trackingNotify({required bool enable}) async {
-    if (state.info case final info?) {
+    if (state case AppearanceState(:final info?)) {
       await _pref.setTrackingNotifications(enable);
       emit(AppearanceState.trackingNotifyChanged(
         info.copyWith(trackingNotify: enable),
@@ -65,7 +65,7 @@ class AppearanceSettingsCubit extends Cubit<AppearanceState> {
   }
 
   Future<void> setLocale(AppLocaleType locale) async {
-    if (state.info case final info?) {
+    if (state case AppearanceState(:final info?)) {
       await _pref.setLocale(locale);
       _appCubit.setLocale(locale);
       emit(AppearanceState.localeChanged(
@@ -75,7 +75,7 @@ class AppearanceSettingsCubit extends Cubit<AppearanceState> {
   }
 
   Future<void> trackingErrorNotify({required bool enable}) async {
-    if (state.info case final info?) {
+    if (state case AppearanceState(:final info?)) {
       await _pref.setTrackingErrorNotifications(enable);
       emit(AppearanceState.trackingErrorNotifyChanged(
         info.copyWith(trackingErrorNotify: enable),
@@ -84,7 +84,7 @@ class AppearanceSettingsCubit extends Cubit<AppearanceState> {
   }
 
   Future<void> trayIcon({required bool enable}) async {
-    if (state.info case final info?) {
+    if (state case AppearanceState(:final info?)) {
       await _pref.setTrayIcon(enable);
       await _systemTray.switchTrayIcon(enable: enable);
       emit(AppearanceState.trayIconChanged(

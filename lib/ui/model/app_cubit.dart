@@ -53,7 +53,7 @@ class AppCubit extends Cubit<AppState> {
   }
 
   void setTheme(AppThemeType theme) {
-    if (state.locale case final locale?) {
+    if (state case AppState(:final locale?)) {
       emit(AppState.changed(
         theme: theme,
         locale: locale,
@@ -62,7 +62,7 @@ class AppCubit extends Cubit<AppState> {
   }
 
   void setLocale(AppLocaleType locale) {
-    if (state.theme case final theme?) {
+    if (state case AppState(:final theme?)) {
       emit(AppState.changed(
         theme: theme,
         locale: locale,

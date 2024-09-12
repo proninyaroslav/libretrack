@@ -44,7 +44,7 @@ class BehaviorSettingsCubit extends Cubit<BehaviorState> {
   }
 
   Future<void> setTrackingLimit(TrackingFreqLimit limit) async {
-    if (state.info case final info?) {
+    if (state case BehaviorState(:final info?)) {
       await _pref.setTrackingFrequencyLimit(limit);
       emit(BehaviorState.trackingLimitChanged(
         info.copyWith(trackingLimit: limit),
@@ -53,7 +53,7 @@ class BehaviorSettingsCubit extends Cubit<BehaviorState> {
   }
 
   Future<void> autoTracking({required bool enable}) async {
-    if (state.info case final info?) {
+    if (state case BehaviorState(:final info?)) {
       await _pref.setAutoTracking(enable);
       await _trackingScheduler.reenqueueAll();
       emit(BehaviorState.autoTrackingChanged(
@@ -63,7 +63,7 @@ class BehaviorSettingsCubit extends Cubit<BehaviorState> {
   }
 
   Future<void> setAutoTrackingFreq(AutoTrackingFreq freq) async {
-    if (state.info case final info?) {
+    if (state case BehaviorState(:final info?)) {
       await _pref.setAutoTrackingFreq(freq);
       _trackingScheduler.reenqueueAll();
       emit(BehaviorState.autoTrackingFreqChanged(
@@ -73,7 +73,7 @@ class BehaviorSettingsCubit extends Cubit<BehaviorState> {
   }
 
   Future<void> setTrackingHistorySize(int size) async {
-    if (state.info case final info?) {
+    if (state case BehaviorState(:final info?)) {
       await _pref.setTrackingHistorySize(size);
       emit(BehaviorState.trackingHistorySizeChanged(
         info.copyWith(trackingHistorySize: size),
