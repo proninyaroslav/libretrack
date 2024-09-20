@@ -1,4 +1,4 @@
-// Copyright (C) 2021 Yaroslav Pronin <proninyaroslav@mail.ru>
+// Copyright (C) 2021-2024 Yaroslav Pronin <proninyaroslav@mail.ru>
 // Copyright (C) 2021 Insurgo Inc. <insurgo@riseup.net>
 //
 // This file is part of LibreTrack.
@@ -16,6 +16,7 @@
 // You should have received a copy of the GNU General Public License
 // along with LibreTrack.  If not, see <http://www.gnu.org/licenses/>.
 
+import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -49,8 +50,8 @@ class _AboutPageState extends State<AboutPage> {
     return BlocBuilder<AboutCubit, AboutState>(
       builder: (context, state) {
         return state.when(
-          initial: () => const CircularProgressIndicator(),
-          loading: () => const CircularProgressIndicator(),
+          initial: () => const _AboutDialog.loading(),
+          loading: () => const _AboutDialog.loading(),
           loaded: (appName, appVersion) {
             return _AboutDialog(
               appName: appName,
@@ -69,15 +70,19 @@ class _AboutPageState extends State<AboutPage> {
 }
 
 class _AboutDialog extends StatelessWidget {
-  final String appName;
-  final String appVersion;
-  final Widget appIcon;
+  final _AboutDialogProps? _props;
 
-  const _AboutDialog({
-    required this.appName,
-    required this.appVersion,
-    required this.appIcon,
-  });
+  _AboutDialog({
+    required String appName,
+    required String appVersion,
+    required Widget appIcon,
+  }) : _props = _AboutDialogProps(
+          appName: appName,
+          appVersion: appVersion,
+          appIcon: appIcon,
+        );
+
+  const _AboutDialog.loading() : _props = null;
 
   @override
   Widget build(BuildContext context) {
@@ -89,14 +94,27 @@ class _AboutDialog extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisSize: MainAxisSize.min,
           children: [
-            _Header(
-              appName: appName,
-              appVersion: appVersion,
-              appIcon: appIcon,
-            ),
-            LinkText(text: S.of(context).appDescription),
-            const SizedBox(height: 8.0),
-            LinkText(text: S.of(context).appLicense),
+            if (_props
+                case _AboutDialogProps(
+                  :final appName,
+                  :final appVersion,
+                  :final appIcon
+                )) ...[
+              _Header(
+                appName: appName,
+                appVersion: appVersion,
+                appIcon: appIcon,
+              ),
+              LinkText(text: S.of(context).appDescription),
+              const SizedBox(height: 8.0),
+              LinkText(text: S.of(context).appLicense),
+            ] else
+              const SizedBox(
+                height: 300,
+                child: Center(
+                  child: CircularProgressIndicator(),
+                ),
+              )
           ],
         ),
       ),
@@ -114,6 +132,24 @@ class _AboutDialog extends StatelessWidget {
       ],
     );
   }
+}
+
+class _AboutDialogProps implements Equatable {
+  final String appName;
+  final String appVersion;
+  final Widget appIcon;
+
+  const _AboutDialogProps({
+    required this.appName,
+    required this.appVersion,
+    required this.appIcon,
+  });
+
+  @override
+  List<Object?> get props => [appName, appVersion, appIcon];
+
+  @override
+  bool? get stringify => true;
 }
 
 class _Header extends StatelessWidget {
