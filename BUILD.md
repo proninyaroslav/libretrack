@@ -9,13 +9,6 @@ Enter the following command in the terminal to build the project:
   ```
   flutter build apk --flavor main
   ```
-
-  You can also split APK into different architectures:
-
-  ```
-  flutter build apk --flavor main --split-per-abi
-  ```
-
   or
 
   ```
