@@ -1,23 +1,38 @@
-![Current version](https://img.shields.io/github/release/proninyaroslav/libretrack.svg?logo=github)
-![Made with Flutter](https://img.shields.io/badge/Made%20with-Flutter-blue.svg)
-[![Releases](https://img.shields.io/github/downloads/proninyaroslav/libretrack/total.svg)](https://github.com/proninyaroslav/libretrack/releases)
-[![Matrix Room](https://img.shields.io/matrix/libretrack:matrix.org?label=Matrix%20Room)](https://matrix.to/#libretrack:matrix.org)
-[![Chat - Telegram](https://img.shields.io/badge/chat-Telegram-blue.svg)](https://t.me/LibreTrack)
+<div align="center">
 
-# LibreTrack
-
-![LibreTrack](fastlane/metadata/android/en-US/images/featureGraphic.png)
+<p><img src="fastlane/metadata/android/en-US/images/icon.png" width="150"></p>
+<h2><b>LibreTrack</b></h2>
+<h4>Private, cross-platform package tracking app.</h4>
 
 [![Get it from the Snap Store](https://snapcraft.io/static/images/badges/en/snap-store-black.svg)](https://snapcraft.io/libretrack)
 [<img alt="Get it on Flathub" height="60" src="https://flathub.org/assets/badges/flathub-badge-en.svg">](https://flathub.org/apps/details/ru.proninyaroslav.libretrack)
 
 [<img alt="Get it on F-Droid" height="80" src="https://tachibanagenerallaboratories.github.io/images/badges/F-Droid/get-it-on.png">](https://f-droid.org/packages/org.proninyaroslav.libretrack)
 [<img alt="Get it on Google Play" height="80" src="https://tachibanagenerallaboratories.github.io/images/badges/Google%20Play/google-play-badge.png">](https://play.google.com/store/apps/details?id=org.proninyaroslav.libretrack)
+[<img alt="Get it on OpenAPK" height="80" src="https://www.openapk.net/images/openapk-badge.png">](https://www.openapk.net/libretrack/org.proninyaroslav.libretrack/)
 [<img alt="Get it on GitHub" height="80" src="https://tachibanagenerallaboratories.github.io/images/badges/GitHub/get-it-on-github.png">](https://github.com/proninyaroslav/libretrack/releases)
-[<img alt="Get it on Android File Host" height="80" src="https://tachibanagenerallaboratories.github.io/images/badges/Android%20File%20Host/android-file-host-badge.png">](https://www.androidfilehost.com/?w=files&flid=326398)
 [<img alt="Direct APK Download" height="80" src="https://tachibanagenerallaboratories.github.io/images/badges/Direct%20Download/direct-apk-download.png">](https://proninyaroslav.ru/ftp/libretrack)
 
-Private, cross-platform package tracking app.
+![Current version](https://img.shields.io/github/release/proninyaroslav/libretrack.svg?logo=github)
+![Made with Flutter](https://img.shields.io/badge/Made%20with-Flutter-blue.svg)
+[![Releases](https://img.shields.io/github/downloads/proninyaroslav/libretrack/total.svg)](https://github.com/proninyaroslav/libretrack/releases)
+[![Matrix Room](https://img.shields.io/matrix/libretrack:matrix.org?label=Matrix%20Room)](https://matrix.to/#libretrack:matrix.org)
+[![Chat - Telegram](https://img.shields.io/badge/chat-Telegram-blue.svg)](https://t.me/LibreTrack)
+
+</div>
+
+## Screenshots
+
+<div align="center">
+
+[<img src="art/screenshots/phone.png" width=160>](art/screenshots/phone.png)
+[<img src="art/screenshots/phone_dark.png" width=160>](art/screenshots/phone_dark.png)
+[<img src="art/screenshots/tablet.png" width=480>](art/screenshots/tablet.png)
+[<img src="art/linux_screenshots/s1.png" width=480>](art/linux_screenshots/s1.png)
+
+</div>
+
+## Description
 
 Track postal items directly on your device using accounts of postal services. The app respects your privacy and freedom: you don't use third-party online services.
 
@@ -94,10 +109,6 @@ Please see [CONTRIBUTING.md](CONTRIBUTING.md)
 #### Logo
 
 - [Ramy (@rshirwan)](https://t.me/rshirwan)
-
-## Screenshots
-
-![phone](art/screenshots/phone.png) ![phone dark](art/screenshots/phone_dark.png) ![tablet](art/screenshots/tablet.png) ![desktop](art/linux_screenshots/s1.png)
 
 ## 🔒 Privacy Policy
 
