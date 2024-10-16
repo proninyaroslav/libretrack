@@ -21,6 +21,8 @@
 
 </div>
 
+---
+
 ## Screenshots
 
 <div align="center">
