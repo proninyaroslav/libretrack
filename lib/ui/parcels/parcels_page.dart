@@ -478,7 +478,7 @@ class _TabBar extends StatelessWidget {
       controller: tabController,
       tabs: tabs,
       indicator: BoxDecoration(
-        color: AppTheme.textPrimaryColorLight(context).withOpacity(0.2),
+        color: AppTheme.textPrimaryColorLight(context).withValues(alpha: 0.2),
         borderRadius: BorderRadius.circular(32.0),
       ),
     );

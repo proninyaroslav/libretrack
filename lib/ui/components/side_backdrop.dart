@@ -526,8 +526,6 @@ class SideBackdropScaffoldState extends State<SideBackdropScaffold>
           return false;
         }
         return true;
-      default:
-        throw UnsupportedError('Unknown side: $_currentActiveSide');
     }
   }
 
@@ -588,7 +586,7 @@ class SideBackdropScaffoldState extends State<SideBackdropScaffold>
           behavior: HitTestBehavior.opaque,
           child: Container(
             color: widget.inactiveOverlayColor
-                .withOpacity(widget.inactiveOverlayOpacity),
+                .withValues(alpha: widget.inactiveOverlayOpacity),
           ),
         ),
       ),
@@ -603,8 +601,6 @@ class SideBackdropScaffoldState extends State<SideBackdropScaffold>
       case _SideType.end:
         flingEndSide();
         break;
-      default:
-        throw UnsupportedError('Unknown side: $_currentActiveSide');
     }
   }
 
@@ -614,8 +610,6 @@ class SideBackdropScaffoldState extends State<SideBackdropScaffold>
         return startSideController;
       case _SideType.end:
         return endSideController;
-      default:
-        throw UnsupportedError('Unknown side: $_currentActiveSide');
     }
   }
 
@@ -635,8 +629,6 @@ class SideBackdropScaffoldState extends State<SideBackdropScaffold>
         sideWidth = _endSideWidth;
         miniSideWidth = _miniEndSideWidth;
         break;
-      default:
-        throw UnsupportedError('Unknown side: $_currentActiveSide');
     }
 
     if (widget.stickyFrontLayer &&
@@ -681,8 +673,6 @@ class SideBackdropScaffoldState extends State<SideBackdropScaffold>
           begin = leftToRight;
         }
         break;
-      default:
-        throw UnsupportedError('Unknown side: $_currentActiveSide');
     }
 
     return RelativeRectTween(

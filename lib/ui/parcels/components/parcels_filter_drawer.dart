@@ -345,14 +345,14 @@ class _FilterSwitchListTile extends StatelessWidget {
       value: value,
       secondary: IconTheme(
         data: iconTheme.copyWith(
-          color: iconTheme.color!.withOpacity(0.87),
+          color: iconTheme.color!.withValues(alpha: 0.87),
         ),
         child: icon,
       ),
       title: Text(
         title,
         style: _getTextTheme(context).titleMedium!.copyWith(
-              color: iconTheme.color!.withOpacity(0.87),
+              color: iconTheme.color!.withValues(alpha: 0.87),
             ),
       ),
       onChanged: onChanged,
@@ -410,14 +410,14 @@ class _FilterDropdownListTile<T> extends StatelessWidget {
           contentPadding: const EdgeInsets.symmetric(horizontal: 16.0),
           leading: IconTheme(
             data: iconTheme.copyWith(
-              color: iconTheme.color!.withOpacity(0.87),
+              color: iconTheme.color!.withValues(alpha: 0.87),
             ),
             child: icon,
           ),
           title: Text(
             title,
             style: textTheme.titleMedium!.copyWith(
-              color: iconTheme.color!.withOpacity(0.87),
+              color: iconTheme.color!.withValues(alpha: 0.87),
             ),
           ),
         ),
@@ -541,14 +541,14 @@ class _SortListItem extends StatelessWidget {
         selectedTileColor: _getItemSelectableColor(context),
         secondary: IconTheme(
           data: iconTheme.copyWith(
-            color: iconTheme.color!.withOpacity(0.87),
+            color: iconTheme.color!.withValues(alpha: 0.87),
           ),
           child: icon,
         ),
         title: Text(
           title,
           style: textTheme.titleMedium!.copyWith(
-            color: iconTheme.color!.withOpacity(0.87),
+            color: iconTheme.color!.withValues(alpha: 0.87),
           ),
         ),
         onChanged: (dynamic _) => onSelected(),
@@ -575,9 +575,9 @@ IconThemeData _getIconTheme(BuildContext context) {
 
 Color _getForegroundColor(BuildContext context) {
   if (AppTheme.isDark(context)) {
-    return Theme.of(context).colorScheme.onSurface.withOpacity(0.24);
+    return Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.24);
   } else {
-    return Theme.of(context).colorScheme.onPrimary.withOpacity(0.24);
+    return Theme.of(context).colorScheme.onPrimary.withValues(alpha: 0.24);
   }
 }
 
@@ -585,6 +585,6 @@ Color _getItemSelectableColor(BuildContext context) {
   if (AppTheme.isDark(context)) {
     return AppTheme.itemSelectableColor(context);
   } else {
-    return Theme.of(context).colorScheme.onPrimary.withOpacity(0.24);
+    return Theme.of(context).colorScheme.onPrimary.withValues(alpha: 0.24);
   }
 }

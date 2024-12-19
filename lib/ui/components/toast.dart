@@ -58,7 +58,7 @@ class Toast {
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20.0),
-          color: Theme.of(context).cardColor.withOpacity(0.8),
+          color: Theme.of(context).cardColor.withValues(alpha: 0.8),
         ),
         padding: const EdgeInsets.fromLTRB(24.0, 16.0, 24.0, 16.0),
         child: Text(text),

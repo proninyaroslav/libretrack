@@ -141,7 +141,7 @@ class AppTheme {
   }
 
   static Color itemSelectableColor(BuildContext context) {
-    return AppTheme.textPrimaryColorLight(context).withOpacity(0.24);
+    return AppTheme.textPrimaryColorLight(context).withValues(alpha: 0.24);
   }
 
   static AppPalette palette(BuildContext context) {

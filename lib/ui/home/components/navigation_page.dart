@@ -1248,7 +1248,7 @@ class _NavigationDrawerItem extends StatelessWidget {
       if (AppTheme.isDark(context)) {
         return AppTheme.itemSelectableColor(context);
       } else {
-        return Theme.of(context).colorScheme.onPrimary.withOpacity(0.24);
+        return Theme.of(context).colorScheme.onPrimary.withValues(alpha: 0.24);
       }
     } else {
       return Colors.transparent;
@@ -1257,7 +1257,7 @@ class _NavigationDrawerItem extends StatelessWidget {
 
   Color _getItemTintColor(BuildContext context) => isSelected
       ? _foregroundColor(context)
-      : _foregroundColor(context).withOpacity(0.54);
+      : _foregroundColor(context).withValues(alpha: 0.54);
 }
 
 class _BackdropAutoFling extends StatefulWidget {

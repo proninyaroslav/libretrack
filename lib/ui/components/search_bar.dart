@@ -63,8 +63,8 @@ class _SearchBarState extends State<SearchBar> {
         ),
       ),
       color: AppTheme.isDark(context)
-          ? colorScheme.onSurface.withOpacity(0.24)
-          : colorScheme.onPrimary.withOpacity(0.7),
+          ? colorScheme.onSurface.withValues(alpha: 0.24)
+          : colorScheme.onPrimary.withValues(alpha: 0.7),
       child: Focus(
         focusNode: _focusNode,
         onFocusChange: (hasFocus) {
