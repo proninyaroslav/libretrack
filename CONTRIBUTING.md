@@ -9,13 +9,11 @@ The app uses ARB format for localization. If you wonder how to format key-values
 
 If you are making changes to the localization files, run the following command:
 ```
-flutter pub run intl_utils:generate
+flutter gen-l10n
 ```
-or use [VSCode](https://marketplace.visualstudio.com/items?itemName=localizely.flutter-intl)/[Intellij IDEA](https://plugins.jetbrains.com/plugin/13666-flutter-intl) special plugin.
+or use `Generate Localizations` button in VSCode when the file is open in the editor.
 
-If you added a new language, make sure to add it to the [lib/locale.dart](lib/locale.dart).
-
-Detailed documentation on `intl_utils` [here](https://pub.dev/packages/intl_utils).
+Detailed documentation about localization [here](https://docs.flutter.dev/ui/accessibility-and-internationalization/internationalization).
 
 ### Android localization
 
