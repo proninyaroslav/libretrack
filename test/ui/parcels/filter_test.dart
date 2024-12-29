@@ -107,11 +107,12 @@ void main() {
       });
     });
 
-    test('Active track number filter', () {
+    test('Receiver track number filter', () {
       expect(
-        const ParcelsFilter.active().apply(
+        const ParcelsFilter.receiver().apply(
           const ParcelInfo(
-            trackInfo: TrackNumberInfo('1'),
+            trackInfo:
+                TrackNumberInfo('1', customerType: CustomerType.receiver),
             trackServices: [],
             currentStatus: ShipmentStatusType.delivered,
           ),
@@ -119,9 +120,58 @@ void main() {
         isTrue,
       );
       expect(
-        const ParcelsFilter.active().apply(
+        const ParcelsFilter.receiver().apply(
           const ParcelInfo(
-            trackInfo: TrackNumberInfo('1', isArchived: true),
+            trackInfo: TrackNumberInfo(
+              '1',
+              customerType: CustomerType.receiver,
+              isArchived: true,
+            ),
+            trackServices: [],
+            currentStatus: ShipmentStatusType.delivered,
+          ),
+        ),
+        isFalse,
+      );
+      expect(
+        const ParcelsFilter.receiver().apply(
+          const ParcelInfo(
+            trackInfo: TrackNumberInfo('1', customerType: CustomerType.shipper),
+            trackServices: [],
+            currentStatus: ShipmentStatusType.delivered,
+          ),
+        ),
+        isFalse,
+      );
+    });
+
+    test('Shipper track number filter', () {
+      expect(
+        const ParcelsFilter.shipper().apply(
+          const ParcelInfo(
+            trackInfo: TrackNumberInfo('1', customerType: CustomerType.shipper),
+            trackServices: [],
+            currentStatus: ShipmentStatusType.delivered,
+          ),
+        ),
+        isTrue,
+      );
+      expect(
+        const ParcelsFilter.shipper().apply(
+          const ParcelInfo(
+            trackInfo: TrackNumberInfo('1',
+                customerType: CustomerType.shipper, isArchived: true),
+            trackServices: [],
+            currentStatus: ShipmentStatusType.delivered,
+          ),
+        ),
+        isFalse,
+      );
+      expect(
+        const ParcelsFilter.shipper().apply(
+          const ParcelInfo(
+            trackInfo:
+                TrackNumberInfo('1', customerType: CustomerType.receiver),
             trackServices: [],
             currentStatus: ShipmentStatusType.delivered,
           ),

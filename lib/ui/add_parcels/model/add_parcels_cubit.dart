@@ -19,6 +19,7 @@
 import 'package:bloc/bloc.dart';
 import 'package:libretrack/core/date_time_provider.dart';
 import 'package:libretrack/core/entity/entity.dart';
+import 'package:libretrack/core/settings/settings.dart';
 import 'package:libretrack/core/storage/storage_result.dart';
 import 'package:libretrack/core/storage/track_number_repository.dart';
 import 'package:libretrack/core/tracking_scheduler.dart';
@@ -28,63 +29,109 @@ class AddParcelsCubit extends Cubit<AddParcelsState> {
   final TrackNumberRepository _trackRepo;
   final TrackingScheduler _trackingScheduler;
   final DateTimeProvider _dateTimeProvider;
+  final AppSettings _pref;
 
   AddParcelsCubit(
     this._trackRepo,
     this._trackingScheduler,
     this._dateTimeProvider,
+    this._pref,
   ) : super(const AddParcelsState.initial());
 
+  Future<void> load({TrackingNumbers? trackingNumbers}) async {
+    final customerType = await _pref.addParcelsCustomerType;
+    emit(
+      AddParcelsState.loaded(
+        trackingNumbers: trackingNumbers ?? TrackingNumbers(),
+        customerType: customerType,
+      ),
+    );
+  }
+
   void trackingNumbersChanged(String value) {
-    _handleCurrentState((trackingNumbers, parcelNames) {
+    _handleCurrentState((trackingNumbers, parcelNames, customerType) {
       emit(
         AddParcelsState.fieldChanged(
           trackingNumbers: TrackingNumbers(value: value),
           parcelNames: parcelNames,
+          customerType: customerType,
         ),
       );
     });
   }
 
   void parcelNamesChanged(String value) {
-    _handleCurrentState((trackingNumbers, parcelNames) {
+    _handleCurrentState((trackingNumbers, parcelNames, customerType) {
       emit(
         AddParcelsState.fieldChanged(
           trackingNumbers: trackingNumbers,
           parcelNames: ParcelNames(value: value),
+          customerType: customerType,
         ),
       );
     });
   }
 
-  void _handleCurrentState(void Function(TrackingNumbers, ParcelNames) onEmit) {
+  void customerTypeChanged(CustomerType type) async {
+    _handleCurrentState((trackingNumbers, parcelNames, _) async {
+      await _pref.setAddParcelsCustomerType(type);
+      emit(
+        AddParcelsState.customerTypeChanged(
+          trackingNumbers: trackingNumbers,
+          parcelNames: parcelNames,
+          customerType: type,
+        ),
+      );
+    });
+  }
+
+  void _handleCurrentState(
+      void Function(TrackingNumbers, ParcelNames, CustomerType) onEmit) {
     state.when(
-      initial: onEmit,
+      loaded: onEmit,
       fieldChanged: onEmit,
+      customerTypeChanged: onEmit,
       validationFailed: onEmit,
-      addFailed: (trackingNumbers, parcelNames, exception, stackTrace) {
-        onEmit(trackingNumbers, parcelNames);
+      addFailed: (
+        trackingNumbers,
+        parcelNames,
+        customerType,
+        exception,
+        stackTrace,
+      ) {
+        onEmit(trackingNumbers, parcelNames, customerType);
       },
       adding: () => throw StateError('Cannot change fields while adding'),
       added: (_) => throw StateError('Cannot change fields after adding'),
+      initial: (trackingNumbers, parcelNames) =>
+          throw StateError('Cannot change fields before initialize'),
     );
   }
 
   Future<void> submit() async {
     await state.when(
-      initial: _submit,
+      loaded: _submit,
       fieldChanged: _submit,
       validationFailed: _submit,
-      addFailed: (trackingNumbers, parcelNames, exception, stackTrace) =>
-          _submit(trackingNumbers, parcelNames),
+      customerTypeChanged: _submit,
+      addFailed: (
+        trackingNumbers,
+        parcelNames,
+        customerType,
+        exception,
+        stackTrace,
+      ) =>
+          _submit(trackingNumbers, parcelNames, customerType),
       adding: () {},
       added: (_) {},
+      initial: (trackingNumbers, parcelNames) {},
     );
   }
 
   Future<void> _submit(
     TrackingNumbers trackingNumbers,
     ParcelNames parcelNames,
+    CustomerType customerType,
   ) async {
     final trackingNumbersRes =
         TrackingNumbersParser.of(trackingNumbers).parse();
@@ -114,12 +161,13 @@ class AddParcelsCubit extends Cubit<AddParcelsState> {
           parcelNames: parcelNames.copyWith(
             error: parcelNamesError,
           ),
+          customerType: customerType,
         ),
       );
     } else {
       emit(const AddParcelsState.adding());
 
-      final infoList = _makeInfoList(trackList, namesList);
+      final infoList = _makeInfoList(trackList, namesList, customerType);
       final trackNumberServiceList = _makeTrackNumberServiceList(infoList);
       try {
         await _trackRepo.addTrackList(infoList).then(
@@ -140,6 +188,7 @@ class AddParcelsCubit extends Cubit<AddParcelsState> {
             emit(AddParcelsState.addFailed(
               trackingNumbers: trackingNumbers,
               parcelNames: parcelNames,
+              customerType: customerType,
               exception: e,
               stackTrace: stackTrace,
             ));
@@ -155,6 +204,7 @@ class AddParcelsCubit extends Cubit<AddParcelsState> {
   List<TrackNumberInfo> _makeInfoList(
     List<String>? trackList,
     List<String>? namesList,
+    CustomerType customerType,
   ) {
     final infoList = <TrackNumberInfo>[];
     final trackNumberSet = <String>{};
@@ -173,12 +223,14 @@ class AddParcelsCubit extends Cubit<AddParcelsState> {
           track,
           description: name.isEmpty ? null : name,
           dateAdded: _dateTimeProvider.now(),
+          customerType: customerType,
         ));
       } else {
         infoList.add(
           TrackNumberInfo(
             track,
             dateAdded: _dateTimeProvider.now(),
+            customerType: customerType,
           ),
         );
       }

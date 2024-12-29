@@ -94,7 +94,7 @@ class _$AppDatabase extends AppDatabase {
     Callback? callback,
   ]) async {
     final databaseOptions = sqflite.OpenDatabaseOptions(
-      version: 3,
+      version: 4,
       onConfigure: (database) async {
         await database.execute('PRAGMA foreign_keys = ON');
         await callback?.onConfigure?.call(database);
@@ -116,7 +116,7 @@ class _$AppDatabase extends AppDatabase {
         await database.execute(
             'CREATE TABLE IF NOT EXISTS `PostalServiceInfo` (`type` TEXT NOT NULL, `trackingServiceType` TEXT NOT NULL, `priority` INTEGER NOT NULL, FOREIGN KEY (`trackingServiceType`) REFERENCES `TrackingServiceInfo` (`type`) ON UPDATE NO ACTION ON DELETE CASCADE, PRIMARY KEY (`type`, `trackingServiceType`))');
         await database.execute(
-            'CREATE TABLE IF NOT EXISTS `TrackNumberInfo` (`trackNumber` TEXT NOT NULL, `description` TEXT, `isArchived` INTEGER NOT NULL, `dateAdded` INTEGER, PRIMARY KEY (`trackNumber`))');
+            'CREATE TABLE IF NOT EXISTS `TrackNumberInfo` (`trackNumber` TEXT NOT NULL, `description` TEXT, `isArchived` INTEGER NOT NULL, `dateAdded` INTEGER, `customerType` TEXT NOT NULL, PRIMARY KEY (`trackNumber`))');
         await database.execute(
             'CREATE TABLE IF NOT EXISTS `TrackNumberService` (`trackNumber` TEXT NOT NULL, `serviceType` TEXT NOT NULL, `isActive` INTEGER NOT NULL, FOREIGN KEY (`trackNumber`) REFERENCES `TrackNumberInfo` (`trackNumber`) ON UPDATE NO ACTION ON DELETE CASCADE, PRIMARY KEY (`trackNumber`, `serviceType`))');
         await database.execute(
@@ -387,7 +387,10 @@ class _$TrackNumberInfoDao extends TrackNumberInfoDao {
                   'trackNumber': item.trackNumber,
                   'description': item.description,
                   'isArchived': item.isArchived ? 1 : 0,
-                  'dateAdded': _nullableDateTimeConverter.encode(item.dateAdded)
+                  'dateAdded':
+                      _nullableDateTimeConverter.encode(item.dateAdded),
+                  'customerType':
+                      _customerTypeConverter.encode(item.customerType)
                 },
             changeListener),
         _trackNumberInfoUpdateAdapter = UpdateAdapter(
@@ -398,7 +401,10 @@ class _$TrackNumberInfoDao extends TrackNumberInfoDao {
                   'trackNumber': item.trackNumber,
                   'description': item.description,
                   'isArchived': item.isArchived ? 1 : 0,
-                  'dateAdded': _nullableDateTimeConverter.encode(item.dateAdded)
+                  'dateAdded':
+                      _nullableDateTimeConverter.encode(item.dateAdded),
+                  'customerType':
+                      _customerTypeConverter.encode(item.customerType)
                 },
             changeListener),
         _trackNumberInfoDeletionAdapter = DeletionAdapter(
@@ -409,7 +415,10 @@ class _$TrackNumberInfoDao extends TrackNumberInfoDao {
                   'trackNumber': item.trackNumber,
                   'description': item.description,
                   'isArchived': item.isArchived ? 1 : 0,
-                  'dateAdded': _nullableDateTimeConverter.encode(item.dateAdded)
+                  'dateAdded':
+                      _nullableDateTimeConverter.encode(item.dateAdded),
+                  'customerType':
+                      _customerTypeConverter.encode(item.customerType)
                 },
             changeListener);
 
@@ -433,7 +442,9 @@ class _$TrackNumberInfoDao extends TrackNumberInfoDao {
             description: row['description'] as String?,
             isArchived: (row['isArchived'] as int) != 0,
             dateAdded:
-                _nullableDateTimeConverter.decode(row['dateAdded'] as int?)));
+                _nullableDateTimeConverter.decode(row['dateAdded'] as int?),
+            customerType:
+                _customerTypeConverter.decode(row['customerType'] as String)));
   }
 
   @override
@@ -445,7 +456,9 @@ class _$TrackNumberInfoDao extends TrackNumberInfoDao {
             description: row['description'] as String?,
             isArchived: (row['isArchived'] as int) != 0,
             dateAdded:
-                _nullableDateTimeConverter.decode(row['dateAdded'] as int?)));
+                _nullableDateTimeConverter.decode(row['dateAdded'] as int?),
+            customerType:
+                _customerTypeConverter.decode(row['customerType'] as String)));
   }
 
   @override
@@ -456,7 +469,9 @@ class _$TrackNumberInfoDao extends TrackNumberInfoDao {
             description: row['description'] as String?,
             isArchived: (row['isArchived'] as int) != 0,
             dateAdded:
-                _nullableDateTimeConverter.decode(row['dateAdded'] as int?)),
+                _nullableDateTimeConverter.decode(row['dateAdded'] as int?),
+            customerType:
+                _customerTypeConverter.decode(row['customerType'] as String)),
         queryableName: 'TrackNumberInfo',
         isView: false);
   }
@@ -470,7 +485,9 @@ class _$TrackNumberInfoDao extends TrackNumberInfoDao {
             description: row['description'] as String?,
             isArchived: (row['isArchived'] as int) != 0,
             dateAdded:
-                _nullableDateTimeConverter.decode(row['dateAdded'] as int?)),
+                _nullableDateTimeConverter.decode(row['dateAdded'] as int?),
+            customerType:
+                _customerTypeConverter.decode(row['customerType'] as String)),
         arguments: [trackNumber],
         queryableName: 'TrackNumberInfo',
         isView: false);
@@ -485,7 +502,9 @@ class _$TrackNumberInfoDao extends TrackNumberInfoDao {
             description: row['description'] as String?,
             isArchived: (row['isArchived'] as int) != 0,
             dateAdded:
-                _nullableDateTimeConverter.decode(row['dateAdded'] as int?)),
+                _nullableDateTimeConverter.decode(row['dateAdded'] as int?),
+            customerType:
+                _customerTypeConverter.decode(row['customerType'] as String)),
         arguments: [trackNumber]);
   }
 
@@ -1571,6 +1590,7 @@ class _$TrackNumberServiceDao extends TrackNumberServiceDao {
 final _trackingServiceTypeConverter = TrackingServiceTypeConverter();
 final _postalServiceTypeConverter = PostalServiceTypeConverter();
 final _nullableDateTimeConverter = NullableDateTimeConverter();
+final _customerTypeConverter = CustomerTypeConverter();
 final _dateTimeConverter = DateTimeConverter();
 final _shipmentStatusTypeConverter = ShipmentStatusTypeConverter();
 final _nullableMeasurementConverter = NullableMeasurementConverter();

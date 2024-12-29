@@ -25,7 +25,6 @@ import 'package:libretrack/locale.dart';
 import 'package:libretrack/ui/components/widget.dart';
 import 'package:libretrack/ui/model/utils.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
-import 'package:responsive_builder/responsive_builder.dart';
 import 'package:share_plus/share_plus.dart';
 
 import '../../logger.dart';
@@ -109,7 +108,7 @@ class _BodyState extends State<_Body> with SingleTickerProviderStateMixin {
     super.initState();
 
     _tabController = TabController(
-      length: 2,
+      length: ParcelsPageType.values.length,
       vsync: this,
       initialIndex: _currentTabPos,
     );
@@ -142,7 +141,15 @@ class _BodyState extends State<_Body> with SingleTickerProviderStateMixin {
                 controller: _tabController,
                 children: [
                   SliverParcelsPage(
-                    type: ParcelsPageType.active,
+                    type: ParcelsPageType.receiver,
+                    onSelectionChanged: widget.onSelectionChanged,
+                    onParcelDetails: widget.onParcelDetails,
+                    onPageRefresh: () {
+                      context.read<ParcelsCubit>().observeParcels();
+                    },
+                  ),
+                  SliverParcelsPage(
+                    type: ParcelsPageType.shipper,
                     onSelectionChanged: widget.onSelectionChanged,
                     onParcelDetails: widget.onParcelDetails,
                     onPageRefresh: () {
@@ -176,14 +183,29 @@ class _BodyState extends State<_Body> with SingleTickerProviderStateMixin {
           tabController: _tabController,
           tabs: [
             _Tab(
-              icon: Icon(MdiIcons.packageVariantClosed),
-              label: Text(S.of(context).activeParcels),
+              icon: Icon(MdiIcons.packageDown),
+              label: Text(S.of(context).receiverParcels),
               trailing: BlocBuilder<ParcelsCubit, ParcelsState>(
-                builder: _buildUnreadCounter,
+                builder: (context, state) => _buildUnreadCounter(
+                  context,
+                  state,
+                  type: ParcelsPageType.receiver,
+                ),
               ),
             ),
             _Tab(
-              icon: const Icon(Icons.archive_outlined),
+              icon: Icon(MdiIcons.packageUp),
+              label: Text(S.of(context).shipperParcels),
+              trailing: BlocBuilder<ParcelsCubit, ParcelsState>(
+                builder: (context, state) => _buildUnreadCounter(
+                  context,
+                  state,
+                  type: ParcelsPageType.shipper,
+                ),
+              ),
+            ),
+            _Tab(
+              icon: Icon(MdiIcons.archiveOutline),
               label: Text(S.of(context).archiveParcels),
             ),
           ],
@@ -220,12 +242,22 @@ class _BodyState extends State<_Body> with SingleTickerProviderStateMixin {
     ];
   }
 
-  Widget _buildUnreadCounter(BuildContext context, ParcelsState state) {
+  Widget _buildUnreadCounter(
+    BuildContext context,
+    ParcelsState state, {
+    required ParcelsPageType type,
+  }) {
     final count = state.map(
       initial: (value) => 0,
       loadingFailed: (value) => 0,
       loaded: (value) => _countUnreadParcels(
-        value.active.where(value.filters.applyAll),
+        switch (type) {
+          ParcelsPageType.receiver =>
+            value.receiver.where(value.filters.applyAll),
+          ParcelsPageType.shipper =>
+            value.shipper.where(value.filters.applyAll),
+          ParcelsPageType.archive => []
+        },
       ),
     );
     return AnimatedSwitcher(
@@ -445,17 +477,21 @@ class _Tab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Tab(
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          icon,
-          const SizedBox(width: 8.0),
-          Flexible(
-            child: FittedBox(child: label),
-          ),
-          if (trailing != null) const SizedBox(width: 8.0),
-          trailing ?? const SizedBox.shrink(),
-        ],
+      child: ConstrainedBox(
+        constraints: BoxConstraints(minWidth: 100.0),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            icon,
+            const SizedBox(width: 8.0),
+            Flexible(
+              child: FittedBox(child: label),
+            ),
+            if (trailing != null) const SizedBox(width: 8.0),
+            trailing ?? const SizedBox.shrink(),
+          ],
+        ),
       ),
     );
   }
@@ -472,36 +508,25 @@ class _TabBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final tabBar = TabBar(
+    final borderRadius = BorderRadius.circular(32.0);
+    return TabBar(
       labelColor: AppTheme.textPrimaryColorLight(context),
       unselectedLabelColor: Theme.of(context).unselectedWidgetColor,
       controller: tabController,
       tabs: tabs,
       indicator: BoxDecoration(
         color: AppTheme.textPrimaryColorLight(context).withValues(alpha: 0.2),
-        borderRadius: BorderRadius.circular(32.0),
+        borderRadius: borderRadius,
       ),
-    );
-
-    return ScreenTypeLayout.builder(
-      mobile: (context) => OrientationLayoutBuilder(
-        portrait: (context) => tabBar,
-        landscape: (context) => FractionallySizedBox(
-          widthFactor: 0.7,
-          child: tabBar,
-        ),
-      ),
-      tablet: (context) => FractionallySizedBox(
-        widthFactor: 0.7,
-        child: tabBar,
-      ),
+      splashBorderRadius: borderRadius,
+      isScrollable: true,
     );
   }
 }
 
 class _UnreadCounter extends StatelessWidget {
   final int count;
-  final int maxCount = 0;
+  final int maxCount = 100;
 
   const _UnreadCounter({
     required this.count,

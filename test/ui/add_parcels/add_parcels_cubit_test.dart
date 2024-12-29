@@ -1,4 +1,4 @@
-// Copyright (C) 2021 Yaroslav Pronin <proninyaroslav@mail.ru>
+// Copyright (C) 2021-2024 Yaroslav Pronin <proninyaroslav@mail.ru>
 // Copyright (C) 2021 Insurgo Inc. <insurgo@riseup.net>
 //
 // This file is part of LibreTrack.
@@ -20,6 +20,7 @@ import 'package:bloc_test/bloc_test.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:libretrack/core/date_time_provider.dart';
 import 'package:libretrack/core/entity/entity.dart';
+import 'package:libretrack/core/settings/settings.dart';
 import 'package:libretrack/core/storage/storage_result.dart';
 import 'package:libretrack/core/storage/track_number_repository.dart';
 import 'package:libretrack/core/tracking_scheduler.dart';
@@ -35,6 +36,7 @@ void main() {
     late TrackNumberRepository mockTrackRepo;
     late TrackingScheduler mockTrackingScheduler;
     late DateTimeProvider mockDateTimeProvider;
+    late AppSettings mockPref;
 
     setUpAll(() {
       registerFallbackValue(
@@ -46,6 +48,7 @@ void main() {
       mockTrackRepo = MockTrackNumberRepository();
       mockTrackingScheduler = MockTrackingScheduler();
       mockDateTimeProvider = MockDateTimeProvider();
+      mockPref = MockAppSettings();
     });
 
     setUp(() async {
@@ -53,7 +56,11 @@ void main() {
         mockTrackRepo,
         mockTrackingScheduler,
         mockDateTimeProvider,
+        mockPref,
       );
+      when(() => mockPref.addParcelsCustomerType)
+          .thenAnswer((_) async => CustomerType.receiver);
+      await cubit.load();
     });
 
     blocTest(
@@ -73,10 +80,31 @@ void main() {
         const AddParcelsState.fieldChanged(
           trackingNumbers: TrackingNumbers(value: '1'),
           parcelNames: ParcelNames(),
+          customerType: CustomerType.receiver,
         ),
         const AddParcelsState.fieldChanged(
           trackingNumbers: TrackingNumbers(value: '1'),
           parcelNames: ParcelNames(value: 'name'),
+          customerType: CustomerType.receiver,
+        ),
+      ],
+    );
+
+    blocTest(
+      'Customer type changed',
+      build: () => cubit,
+      act: (AddParcelsCubit cubit) {
+        when(() => mockPref.setAddParcelsCustomerType(CustomerType.shipper))
+            .thenAnswer((_) async {});
+        cubit.customerTypeChanged(CustomerType.shipper);
+        verify(() => mockPref.setAddParcelsCustomerType(CustomerType.shipper))
+            .called(1);
+      },
+      expect: () => [
+        const AddParcelsState.customerTypeChanged(
+          trackingNumbers: TrackingNumbers(),
+          parcelNames: ParcelNames(),
+          customerType: CustomerType.shipper,
         ),
       ],
     );
@@ -93,6 +121,7 @@ void main() {
             error: TrackingNumbersError.empty(),
           ),
           parcelNames: ParcelNames(),
+          customerType: CustomerType.receiver,
         ),
       ],
     );
@@ -108,12 +137,14 @@ void main() {
         const AddParcelsState.fieldChanged(
           trackingNumbers: TrackingNumbers(),
           parcelNames: ParcelNames(),
+          customerType: CustomerType.receiver,
         ),
         const AddParcelsState.validationFailed(
           trackingNumbers: TrackingNumbers(
             error: TrackingNumbersError.empty(),
           ),
           parcelNames: ParcelNames(),
+          customerType: CustomerType.receiver,
         ),
       ],
     );
@@ -151,10 +182,12 @@ void main() {
         const AddParcelsState.fieldChanged(
           trackingNumbers: TrackingNumbers(value: '1'),
           parcelNames: ParcelNames(),
+          customerType: CustomerType.receiver,
         ),
         const AddParcelsState.fieldChanged(
           trackingNumbers: TrackingNumbers(value: '1'),
           parcelNames: ParcelNames(value: 'name'),
+          customerType: CustomerType.receiver,
         ),
         const AddParcelsState.adding(),
         isA<AddParcelsStateAddFailed>(),
@@ -191,10 +224,12 @@ void main() {
         const AddParcelsState.fieldChanged(
           trackingNumbers: TrackingNumbers(value: '1'),
           parcelNames: ParcelNames(),
+          customerType: CustomerType.receiver,
         ),
         const AddParcelsState.fieldChanged(
           trackingNumbers: TrackingNumbers(value: '1'),
           parcelNames: ParcelNames(value: 'name'),
+          customerType: CustomerType.receiver,
         ),
         const AddParcelsState.adding(),
         AddParcelsState.added(
@@ -230,10 +265,12 @@ void main() {
         const AddParcelsState.fieldChanged(
           trackingNumbers: TrackingNumbers(value: '1'),
           parcelNames: ParcelNames(),
+          customerType: CustomerType.receiver,
         ),
         const AddParcelsState.fieldChanged(
           trackingNumbers: TrackingNumbers(value: '1'),
           parcelNames: ParcelNames(value: 'name'),
+          customerType: CustomerType.receiver,
         ),
         const AddParcelsState.adding(),
         AddParcelsState.added(
@@ -268,6 +305,7 @@ void main() {
         const AddParcelsState.fieldChanged(
           trackingNumbers: TrackingNumbers(value: '1'),
           parcelNames: ParcelNames(),
+          customerType: CustomerType.receiver,
         ),
         const AddParcelsState.adding(),
         AddParcelsState.added(
@@ -315,6 +353,7 @@ void main() {
         ''',
           ),
           parcelNames: ParcelNames(),
+          customerType: CustomerType.receiver,
         ),
         const AddParcelsState.fieldChanged(
           trackingNumbers: TrackingNumbers(
@@ -331,6 +370,7 @@ void main() {
         Name1_2
         ''',
           ),
+          customerType: CustomerType.receiver,
         ),
         const AddParcelsState.adding(),
         AddParcelsState.added(
@@ -387,6 +427,7 @@ void main() {
         ''',
           ),
           parcelNames: ParcelNames(),
+          customerType: CustomerType.receiver,
         ),
         const AddParcelsState.fieldChanged(
           trackingNumbers: TrackingNumbers(
@@ -405,6 +446,7 @@ void main() {
         Name5
         ''',
           ),
+          customerType: CustomerType.receiver,
         ),
         const AddParcelsState.adding(),
         AddParcelsState.added(

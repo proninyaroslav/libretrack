@@ -21,8 +21,8 @@
       "request": "launch",
       "type": "dart",
       "flutterMode": "debug",
-      // TODO: https://github.com/flutter/flutter/issues/146890#issuecomment-2212409188
-      "args": ["--flavor", "base" /*"--enable-software-rendering"*/],
+      //TODO: https://github.com/flutter/flutter/issues/160442
+      "args": ["--flavor", "base", "--no-enable-impeller"],
       "program": "lib/main.dart"
     },
     {

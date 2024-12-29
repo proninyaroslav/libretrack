@@ -1,5 +1,4 @@
-// Copyright (C) 2021-2024 Yaroslav Pronin <proninyaroslav@mail.ru>
-// Copyright (C) 2021 Insurgo Inc. <insurgo@riseup.net>
+// Copyright (C) 2024 Yaroslav Pronin <proninyaroslav@mail.ru>
 //
 // This file is part of LibreTrack.
 //
@@ -16,8 +15,21 @@
 // You should have received a copy of the GNU General Public License
 // along with LibreTrack.  If not, see <http://www.gnu.org/licenses/>.
 
-enum ParcelsPageType {
-  receiver,
-  shipper,
-  archive,
+import 'package:enum_to_string/enum_to_string.dart';
+import 'package:floor/floor.dart';
+import 'package:libretrack/core/entity/entity.dart';
+
+class CustomerTypeConverter extends TypeConverter<CustomerType, String> {
+  @override
+  CustomerType decode(String databaseValue) {
+    return EnumToString.fromString(
+      CustomerType.values,
+      databaseValue,
+    )!;
+  }
+
+  @override
+  String encode(CustomerType value) {
+    return EnumToString.convertToString(value);
+  }
 }

@@ -1,4 +1,4 @@
-// Copyright (C) 2021 Yaroslav Pronin <proninyaroslav@mail.ru>
+// Copyright (C) 2021-2024 Yaroslav Pronin <proninyaroslav@mail.ru>
 // Copyright (C) 2021 Insurgo Inc. <insurgo@riseup.net>
 //
 // This file is part of LibreTrack.
@@ -25,13 +25,14 @@ extension ParcelsFilterExtension on ParcelsFilter {
   bool apply(ParcelInfo? info) {
     return when(
       search: (query) => _FiltersCollection.search(info, query),
-      active: () => _FiltersCollection.active(info),
       archive: () => _FiltersCollection.archive(info),
       status: (statusType) => _FiltersCollection.status(info, statusType),
       newInfo: () => _FiltersCollection.newInfo(info),
       error: () => _FiltersCollection.error(info),
       postalService: (serviceType) =>
           _FiltersCollection.postalService(info, serviceType),
+      receiver: () => _FiltersCollection.receiver(info),
+      shipper: () => _FiltersCollection.shipper(info),
     );
   }
 }
@@ -50,7 +51,17 @@ extension ParcelsFilterBatchExtension on ParcelsFilterBatch {
 class _FiltersCollection {
   static bool archive(ParcelInfo? info) => info?.trackInfo.isArchived ?? false;
 
-  static bool active(ParcelInfo? info) {
+  static bool receiver(ParcelInfo? info) {
+    return _active(info) &&
+        info?.trackInfo.customerType == CustomerType.receiver;
+  }
+
+  static bool shipper(ParcelInfo? info) {
+    return _active(info) &&
+        info?.trackInfo.customerType == CustomerType.shipper;
+  }
+
+  static bool _active(ParcelInfo? info) {
     if (info == null) {
       return false;
     } else {

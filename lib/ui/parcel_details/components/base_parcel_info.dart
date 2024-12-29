@@ -1,4 +1,4 @@
-// Copyright (C) 2021 Yaroslav Pronin <proninyaroslav@mail.ru>
+// Copyright (C) 2021-2024 Yaroslav Pronin <proninyaroslav@mail.ru>
 // Copyright (C) 2021 Insurgo Inc. <insurgo@riseup.net>
 //
 // This file is part of LibreTrack.
@@ -61,11 +61,25 @@ class BaseParcelInfo extends StatelessWidget {
               _ParcelTrackingDate(
                 trackingDate: lastTrackingInfo.dateTime,
               ),
+            _Categories(
+              children: [
+                _buildCustomerTag(context),
+              ],
+            ),
             const Divider(),
             _Status(info: info),
           ],
         ),
       ),
+    );
+  }
+
+  _CategoryTag _buildCustomerTag(BuildContext context) {
+    return _CategoryTag(
+      switch (info.trackInfo.customerType) {
+        CustomerType.receiver => S.of(context).receiverParcels,
+        CustomerType.shipper => S.of(context).shipperParcels
+      },
     );
   }
 }
@@ -358,6 +372,57 @@ class _ActivateAndRefreshButton extends StatelessWidget {
       },
       icon: const Icon(Icons.refresh),
       label: Text(S.of(context).activateAndRefresh),
+    );
+  }
+}
+
+class _Categories extends StatelessWidget {
+  final List<_CategoryTag> children;
+
+  const _Categories({required this.children});
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 4.0),
+      child: Wrap(
+        children: children,
+      ),
+    );
+  }
+}
+
+class _CategoryTag extends StatelessWidget {
+  final String label;
+
+  const _CategoryTag(this.label);
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+
+    return Card(
+      elevation: 0.0,
+      shape: RoundedRectangleBorder(
+        side: BorderSide(color: theme.dividerColor),
+        borderRadius: BorderRadius.all(
+          Radius.circular(8.0),
+        ),
+      ),
+      child: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 10.0),
+        child: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Icon(MdiIcons.tag, size: 16.0),
+            SizedBox(width: 8.0),
+            Text(
+              label,
+              style: theme.textTheme.labelLarge,
+            ),
+          ],
+        ),
+      ),
     );
   }
 }

@@ -83,17 +83,21 @@ class ParcelsCubit extends Cubit<ParcelsState> {
     await for (final result in group) {
       final newState = result.when(
         (infoList) {
-          final active = <ParcelInfo>[];
+          final receiver = <ParcelInfo>[];
+          final shipper = <ParcelInfo>[];
           final archive = <ParcelInfo>[];
           for (final info in infoList) {
-            if (const ParcelsFilter.active().apply(info)) {
-              active.add(info);
+            if (const ParcelsFilter.receiver().apply(info)) {
+              receiver.add(info);
+            } else if (const ParcelsFilter.shipper().apply(info)) {
+              shipper.add(info);
             } else if (const ParcelsFilter.archive().apply(info)) {
               archive.add(info);
             }
           }
           return ParcelsState.loaded(
-            active: active,
+            receiver: receiver,
+            shipper: shipper,
             archive: archive,
             filters: state.filters,
             search: state.search,

@@ -18,6 +18,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:libretrack/core/entity/track_number_info.dart';
 import 'package:libretrack/core/storage/track_number_repository.dart';
 import 'package:libretrack/injector.dart';
 import 'package:libretrack/ui/components/custom_actions_row.dart';
@@ -37,6 +38,8 @@ enum ParcelMenuType {
   share,
   edit,
   activateTracking,
+  moveToShipper,
+  moveToReceiver,
 }
 
 class ParcelActions extends StatelessWidget {
@@ -50,6 +53,7 @@ class ParcelActions extends StatelessWidget {
           loaded: (trackNumber, info) {
             return _buildActions(
               context,
+              customerType: info.trackInfo.customerType,
               isArchive: info.trackInfo.isArchived,
               onMenuSelected: (type) => _onMenuItemSelected(
                 context,
@@ -74,6 +78,7 @@ class ParcelActions extends StatelessWidget {
 
   List<CustomAction> _buildActions(
     BuildContext context, {
+    required CustomerType customerType,
     required bool isArchive,
     void Function(ParcelMenuType)? onMenuSelected,
   }) {
@@ -112,7 +117,7 @@ class ParcelActions extends StatelessWidget {
       else
         CustomAction(
           visibleWidget: IconButton(
-            icon: const Icon(Icons.archive_outlined),
+            icon: Icon(MdiIcons.archiveArrowDownOutline),
             tooltip: S.of(context).moveToArchive,
             onPressed: () => onMenuSelected?.call(ParcelMenuType.moveToArchive),
           ),
@@ -146,6 +151,19 @@ class ParcelActions extends StatelessWidget {
         onPressed: () => onMenuSelected?.call(ParcelMenuType.activateTracking),
         showAsAction: ShowAsAction.never,
       ),
+      switch (customerType) {
+        CustomerType.receiver => CustomAction(
+            overflowWidget: Text(S.of(context).moveToShipper),
+            onPressed: () => onMenuSelected?.call(ParcelMenuType.moveToShipper),
+            showAsAction: ShowAsAction.never,
+          ),
+        CustomerType.shipper => CustomAction(
+            overflowWidget: Text(S.of(context).moveToReceiver),
+            onPressed: () =>
+                onMenuSelected?.call(ParcelMenuType.moveToReceiver),
+            showAsAction: ShowAsAction.never,
+          ),
+      }
     ];
   }
 
@@ -199,6 +217,16 @@ class ParcelActions extends StatelessWidget {
         break;
       case ParcelMenuType.activateTracking:
         context.read<DetailsActionsCubit>().activateTracking(info);
+        break;
+      case ParcelMenuType.moveToShipper:
+        context
+            .read<DetailsActionsCubit>()
+            .changeCustomerType(info, type: CustomerType.shipper);
+        break;
+      case ParcelMenuType.moveToReceiver:
+        context
+            .read<DetailsActionsCubit>()
+            .changeCustomerType(info, type: CustomerType.receiver);
         break;
     }
   }

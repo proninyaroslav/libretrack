@@ -17,6 +17,7 @@
 // along with LibreTrack.  If not, see <http://www.gnu.org/licenses/>.
 
 import 'package:bloc/bloc.dart';
+import 'package:libretrack/core/entity/track_number_info.dart';
 import 'package:libretrack/core/storage/track_number_repository.dart';
 import 'package:libretrack/core/storage/tracking_repository.dart';
 import 'package:libretrack/core/tracking_scheduler.dart';
@@ -140,6 +141,21 @@ class DetailsActionsCubit extends Cubit<DetailsActionsState> {
     res.when(
       (value) => emit(const DetailsActionsState.activateSuccess()),
       error: (e) => emit(DetailsActionsState.activateFailed(error: e)),
+    );
+  }
+
+  Future<void> changeCustomerType(
+    ParcelInfo info, {
+    required CustomerType type,
+  }) async {
+    emit(const DetailsActionsState.changingCustomerType());
+    final res = await _trackRepo.updateTrack(
+      info.trackInfo.copyWith(customerType: type),
+    );
+    res.when(
+      (value) => emit(const DetailsActionsState.changeCustomerTypeSuccess()),
+      error: (e) =>
+          emit(DetailsActionsState.changeCustomerTypeFailed(error: e)),
     );
   }
 }

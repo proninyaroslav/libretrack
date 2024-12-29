@@ -42,6 +42,9 @@ mixin _$DetailsActionsState {
     required TResult Function() activating,
     required TResult Function() activateSuccess,
     required TResult Function(StorageError error) activateFailed,
+    required TResult Function() changingCustomerType,
+    required TResult Function() changeCustomerTypeSuccess,
+    required TResult Function(StorageError error) changeCustomerTypeFailed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -70,6 +73,9 @@ mixin _$DetailsActionsState {
     TResult? Function()? activating,
     TResult? Function()? activateSuccess,
     TResult? Function(StorageError error)? activateFailed,
+    TResult? Function()? changingCustomerType,
+    TResult? Function()? changeCustomerTypeSuccess,
+    TResult? Function(StorageError error)? changeCustomerTypeFailed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -98,6 +104,9 @@ mixin _$DetailsActionsState {
     TResult Function()? activating,
     TResult Function()? activateSuccess,
     TResult Function(StorageError error)? activateFailed,
+    TResult Function()? changingCustomerType,
+    TResult Function()? changeCustomerTypeSuccess,
+    TResult Function(StorageError error)? changeCustomerTypeFailed,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -147,6 +156,13 @@ mixin _$DetailsActionsState {
         activateSuccess,
     required TResult Function(DetailsActionsStateActivateFailed value)
         activateFailed,
+    required TResult Function(DetailsActionsStateChangingCustomerType value)
+        changingCustomerType,
+    required TResult Function(
+            DetailsActionsStateChangeCustomerTypeSuccess value)
+        changeCustomerTypeSuccess,
+    required TResult Function(DetailsActionsStateChangeCustomerTypeFailed value)
+        changeCustomerTypeFailed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -186,6 +202,12 @@ mixin _$DetailsActionsState {
     TResult? Function(DetailsActionsStateActivateSuccess value)?
         activateSuccess,
     TResult? Function(DetailsActionsStateActivateFailed value)? activateFailed,
+    TResult? Function(DetailsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult? Function(DetailsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult? Function(DetailsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -223,6 +245,12 @@ mixin _$DetailsActionsState {
     TResult Function(DetailsActionsStateActivating value)? activating,
     TResult Function(DetailsActionsStateActivateSuccess value)? activateSuccess,
     TResult Function(DetailsActionsStateActivateFailed value)? activateFailed,
+    TResult Function(DetailsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult Function(DetailsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult Function(DetailsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -326,6 +354,9 @@ class _$DetailsActionsStateInitialImpl
     required TResult Function() activating,
     required TResult Function() activateSuccess,
     required TResult Function(StorageError error) activateFailed,
+    required TResult Function() changingCustomerType,
+    required TResult Function() changeCustomerTypeSuccess,
+    required TResult Function(StorageError error) changeCustomerTypeFailed,
   }) {
     return initial();
   }
@@ -357,6 +388,9 @@ class _$DetailsActionsStateInitialImpl
     TResult? Function()? activating,
     TResult? Function()? activateSuccess,
     TResult? Function(StorageError error)? activateFailed,
+    TResult? Function()? changingCustomerType,
+    TResult? Function()? changeCustomerTypeSuccess,
+    TResult? Function(StorageError error)? changeCustomerTypeFailed,
   }) {
     return initial?.call();
   }
@@ -388,6 +422,9 @@ class _$DetailsActionsStateInitialImpl
     TResult Function()? activating,
     TResult Function()? activateSuccess,
     TResult Function(StorageError error)? activateFailed,
+    TResult Function()? changingCustomerType,
+    TResult Function()? changeCustomerTypeSuccess,
+    TResult Function(StorageError error)? changeCustomerTypeFailed,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -443,6 +480,13 @@ class _$DetailsActionsStateInitialImpl
         activateSuccess,
     required TResult Function(DetailsActionsStateActivateFailed value)
         activateFailed,
+    required TResult Function(DetailsActionsStateChangingCustomerType value)
+        changingCustomerType,
+    required TResult Function(
+            DetailsActionsStateChangeCustomerTypeSuccess value)
+        changeCustomerTypeSuccess,
+    required TResult Function(DetailsActionsStateChangeCustomerTypeFailed value)
+        changeCustomerTypeFailed,
   }) {
     return initial(this);
   }
@@ -485,6 +529,12 @@ class _$DetailsActionsStateInitialImpl
     TResult? Function(DetailsActionsStateActivateSuccess value)?
         activateSuccess,
     TResult? Function(DetailsActionsStateActivateFailed value)? activateFailed,
+    TResult? Function(DetailsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult? Function(DetailsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult? Function(DetailsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
   }) {
     return initial?.call(this);
   }
@@ -525,6 +575,12 @@ class _$DetailsActionsStateInitialImpl
     TResult Function(DetailsActionsStateActivating value)? activating,
     TResult Function(DetailsActionsStateActivateSuccess value)? activateSuccess,
     TResult Function(DetailsActionsStateActivateFailed value)? activateFailed,
+    TResult Function(DetailsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult Function(DetailsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult Function(DetailsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -615,6 +671,9 @@ class _$DetailsActionsStateDeletingImpl
     required TResult Function() activating,
     required TResult Function() activateSuccess,
     required TResult Function(StorageError error) activateFailed,
+    required TResult Function() changingCustomerType,
+    required TResult Function() changeCustomerTypeSuccess,
+    required TResult Function(StorageError error) changeCustomerTypeFailed,
   }) {
     return deleting();
   }
@@ -646,6 +705,9 @@ class _$DetailsActionsStateDeletingImpl
     TResult? Function()? activating,
     TResult? Function()? activateSuccess,
     TResult? Function(StorageError error)? activateFailed,
+    TResult? Function()? changingCustomerType,
+    TResult? Function()? changeCustomerTypeSuccess,
+    TResult? Function(StorageError error)? changeCustomerTypeFailed,
   }) {
     return deleting?.call();
   }
@@ -677,6 +739,9 @@ class _$DetailsActionsStateDeletingImpl
     TResult Function()? activating,
     TResult Function()? activateSuccess,
     TResult Function(StorageError error)? activateFailed,
+    TResult Function()? changingCustomerType,
+    TResult Function()? changeCustomerTypeSuccess,
+    TResult Function(StorageError error)? changeCustomerTypeFailed,
     required TResult orElse(),
   }) {
     if (deleting != null) {
@@ -732,6 +797,13 @@ class _$DetailsActionsStateDeletingImpl
         activateSuccess,
     required TResult Function(DetailsActionsStateActivateFailed value)
         activateFailed,
+    required TResult Function(DetailsActionsStateChangingCustomerType value)
+        changingCustomerType,
+    required TResult Function(
+            DetailsActionsStateChangeCustomerTypeSuccess value)
+        changeCustomerTypeSuccess,
+    required TResult Function(DetailsActionsStateChangeCustomerTypeFailed value)
+        changeCustomerTypeFailed,
   }) {
     return deleting(this);
   }
@@ -774,6 +846,12 @@ class _$DetailsActionsStateDeletingImpl
     TResult? Function(DetailsActionsStateActivateSuccess value)?
         activateSuccess,
     TResult? Function(DetailsActionsStateActivateFailed value)? activateFailed,
+    TResult? Function(DetailsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult? Function(DetailsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult? Function(DetailsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
   }) {
     return deleting?.call(this);
   }
@@ -814,6 +892,12 @@ class _$DetailsActionsStateDeletingImpl
     TResult Function(DetailsActionsStateActivating value)? activating,
     TResult Function(DetailsActionsStateActivateSuccess value)? activateSuccess,
     TResult Function(DetailsActionsStateActivateFailed value)? activateFailed,
+    TResult Function(DetailsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult Function(DetailsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult Function(DetailsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
     required TResult orElse(),
   }) {
     if (deleting != null) {
@@ -906,6 +990,9 @@ class _$DetailsActionsStateDeleteSuccessImpl
     required TResult Function() activating,
     required TResult Function() activateSuccess,
     required TResult Function(StorageError error) activateFailed,
+    required TResult Function() changingCustomerType,
+    required TResult Function() changeCustomerTypeSuccess,
+    required TResult Function(StorageError error) changeCustomerTypeFailed,
   }) {
     return deleteSuccess();
   }
@@ -937,6 +1024,9 @@ class _$DetailsActionsStateDeleteSuccessImpl
     TResult? Function()? activating,
     TResult? Function()? activateSuccess,
     TResult? Function(StorageError error)? activateFailed,
+    TResult? Function()? changingCustomerType,
+    TResult? Function()? changeCustomerTypeSuccess,
+    TResult? Function(StorageError error)? changeCustomerTypeFailed,
   }) {
     return deleteSuccess?.call();
   }
@@ -968,6 +1058,9 @@ class _$DetailsActionsStateDeleteSuccessImpl
     TResult Function()? activating,
     TResult Function()? activateSuccess,
     TResult Function(StorageError error)? activateFailed,
+    TResult Function()? changingCustomerType,
+    TResult Function()? changeCustomerTypeSuccess,
+    TResult Function(StorageError error)? changeCustomerTypeFailed,
     required TResult orElse(),
   }) {
     if (deleteSuccess != null) {
@@ -1023,6 +1116,13 @@ class _$DetailsActionsStateDeleteSuccessImpl
         activateSuccess,
     required TResult Function(DetailsActionsStateActivateFailed value)
         activateFailed,
+    required TResult Function(DetailsActionsStateChangingCustomerType value)
+        changingCustomerType,
+    required TResult Function(
+            DetailsActionsStateChangeCustomerTypeSuccess value)
+        changeCustomerTypeSuccess,
+    required TResult Function(DetailsActionsStateChangeCustomerTypeFailed value)
+        changeCustomerTypeFailed,
   }) {
     return deleteSuccess(this);
   }
@@ -1065,6 +1165,12 @@ class _$DetailsActionsStateDeleteSuccessImpl
     TResult? Function(DetailsActionsStateActivateSuccess value)?
         activateSuccess,
     TResult? Function(DetailsActionsStateActivateFailed value)? activateFailed,
+    TResult? Function(DetailsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult? Function(DetailsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult? Function(DetailsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
   }) {
     return deleteSuccess?.call(this);
   }
@@ -1105,6 +1211,12 @@ class _$DetailsActionsStateDeleteSuccessImpl
     TResult Function(DetailsActionsStateActivating value)? activating,
     TResult Function(DetailsActionsStateActivateSuccess value)? activateSuccess,
     TResult Function(DetailsActionsStateActivateFailed value)? activateFailed,
+    TResult Function(DetailsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult Function(DetailsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult Function(DetailsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
     required TResult orElse(),
   }) {
     if (deleteSuccess != null) {
@@ -1238,6 +1350,9 @@ class _$DetailsActionsStateDeleteFailedImpl
     required TResult Function() activating,
     required TResult Function() activateSuccess,
     required TResult Function(StorageError error) activateFailed,
+    required TResult Function() changingCustomerType,
+    required TResult Function() changeCustomerTypeSuccess,
+    required TResult Function(StorageError error) changeCustomerTypeFailed,
   }) {
     return deleteFailed(error);
   }
@@ -1269,6 +1384,9 @@ class _$DetailsActionsStateDeleteFailedImpl
     TResult? Function()? activating,
     TResult? Function()? activateSuccess,
     TResult? Function(StorageError error)? activateFailed,
+    TResult? Function()? changingCustomerType,
+    TResult? Function()? changeCustomerTypeSuccess,
+    TResult? Function(StorageError error)? changeCustomerTypeFailed,
   }) {
     return deleteFailed?.call(error);
   }
@@ -1300,6 +1418,9 @@ class _$DetailsActionsStateDeleteFailedImpl
     TResult Function()? activating,
     TResult Function()? activateSuccess,
     TResult Function(StorageError error)? activateFailed,
+    TResult Function()? changingCustomerType,
+    TResult Function()? changeCustomerTypeSuccess,
+    TResult Function(StorageError error)? changeCustomerTypeFailed,
     required TResult orElse(),
   }) {
     if (deleteFailed != null) {
@@ -1355,6 +1476,13 @@ class _$DetailsActionsStateDeleteFailedImpl
         activateSuccess,
     required TResult Function(DetailsActionsStateActivateFailed value)
         activateFailed,
+    required TResult Function(DetailsActionsStateChangingCustomerType value)
+        changingCustomerType,
+    required TResult Function(
+            DetailsActionsStateChangeCustomerTypeSuccess value)
+        changeCustomerTypeSuccess,
+    required TResult Function(DetailsActionsStateChangeCustomerTypeFailed value)
+        changeCustomerTypeFailed,
   }) {
     return deleteFailed(this);
   }
@@ -1397,6 +1525,12 @@ class _$DetailsActionsStateDeleteFailedImpl
     TResult? Function(DetailsActionsStateActivateSuccess value)?
         activateSuccess,
     TResult? Function(DetailsActionsStateActivateFailed value)? activateFailed,
+    TResult? Function(DetailsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult? Function(DetailsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult? Function(DetailsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
   }) {
     return deleteFailed?.call(this);
   }
@@ -1437,6 +1571,12 @@ class _$DetailsActionsStateDeleteFailedImpl
     TResult Function(DetailsActionsStateActivating value)? activating,
     TResult Function(DetailsActionsStateActivateSuccess value)? activateSuccess,
     TResult Function(DetailsActionsStateActivateFailed value)? activateFailed,
+    TResult Function(DetailsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult Function(DetailsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult Function(DetailsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
     required TResult orElse(),
   }) {
     if (deleteFailed != null) {
@@ -1539,6 +1679,9 @@ class _$DetailsActionsStateMarkingAsReadImpl
     required TResult Function() activating,
     required TResult Function() activateSuccess,
     required TResult Function(StorageError error) activateFailed,
+    required TResult Function() changingCustomerType,
+    required TResult Function() changeCustomerTypeSuccess,
+    required TResult Function(StorageError error) changeCustomerTypeFailed,
   }) {
     return markingAsRead();
   }
@@ -1570,6 +1713,9 @@ class _$DetailsActionsStateMarkingAsReadImpl
     TResult? Function()? activating,
     TResult? Function()? activateSuccess,
     TResult? Function(StorageError error)? activateFailed,
+    TResult? Function()? changingCustomerType,
+    TResult? Function()? changeCustomerTypeSuccess,
+    TResult? Function(StorageError error)? changeCustomerTypeFailed,
   }) {
     return markingAsRead?.call();
   }
@@ -1601,6 +1747,9 @@ class _$DetailsActionsStateMarkingAsReadImpl
     TResult Function()? activating,
     TResult Function()? activateSuccess,
     TResult Function(StorageError error)? activateFailed,
+    TResult Function()? changingCustomerType,
+    TResult Function()? changeCustomerTypeSuccess,
+    TResult Function(StorageError error)? changeCustomerTypeFailed,
     required TResult orElse(),
   }) {
     if (markingAsRead != null) {
@@ -1656,6 +1805,13 @@ class _$DetailsActionsStateMarkingAsReadImpl
         activateSuccess,
     required TResult Function(DetailsActionsStateActivateFailed value)
         activateFailed,
+    required TResult Function(DetailsActionsStateChangingCustomerType value)
+        changingCustomerType,
+    required TResult Function(
+            DetailsActionsStateChangeCustomerTypeSuccess value)
+        changeCustomerTypeSuccess,
+    required TResult Function(DetailsActionsStateChangeCustomerTypeFailed value)
+        changeCustomerTypeFailed,
   }) {
     return markingAsRead(this);
   }
@@ -1698,6 +1854,12 @@ class _$DetailsActionsStateMarkingAsReadImpl
     TResult? Function(DetailsActionsStateActivateSuccess value)?
         activateSuccess,
     TResult? Function(DetailsActionsStateActivateFailed value)? activateFailed,
+    TResult? Function(DetailsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult? Function(DetailsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult? Function(DetailsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
   }) {
     return markingAsRead?.call(this);
   }
@@ -1738,6 +1900,12 @@ class _$DetailsActionsStateMarkingAsReadImpl
     TResult Function(DetailsActionsStateActivating value)? activating,
     TResult Function(DetailsActionsStateActivateSuccess value)? activateSuccess,
     TResult Function(DetailsActionsStateActivateFailed value)? activateFailed,
+    TResult Function(DetailsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult Function(DetailsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult Function(DetailsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
     required TResult orElse(),
   }) {
     if (markingAsRead != null) {
@@ -1830,6 +1998,9 @@ class _$DetailsActionsStateMarkAsReadSuccessImpl
     required TResult Function() activating,
     required TResult Function() activateSuccess,
     required TResult Function(StorageError error) activateFailed,
+    required TResult Function() changingCustomerType,
+    required TResult Function() changeCustomerTypeSuccess,
+    required TResult Function(StorageError error) changeCustomerTypeFailed,
   }) {
     return markAsReadSuccess();
   }
@@ -1861,6 +2032,9 @@ class _$DetailsActionsStateMarkAsReadSuccessImpl
     TResult? Function()? activating,
     TResult? Function()? activateSuccess,
     TResult? Function(StorageError error)? activateFailed,
+    TResult? Function()? changingCustomerType,
+    TResult? Function()? changeCustomerTypeSuccess,
+    TResult? Function(StorageError error)? changeCustomerTypeFailed,
   }) {
     return markAsReadSuccess?.call();
   }
@@ -1892,6 +2066,9 @@ class _$DetailsActionsStateMarkAsReadSuccessImpl
     TResult Function()? activating,
     TResult Function()? activateSuccess,
     TResult Function(StorageError error)? activateFailed,
+    TResult Function()? changingCustomerType,
+    TResult Function()? changeCustomerTypeSuccess,
+    TResult Function(StorageError error)? changeCustomerTypeFailed,
     required TResult orElse(),
   }) {
     if (markAsReadSuccess != null) {
@@ -1947,6 +2124,13 @@ class _$DetailsActionsStateMarkAsReadSuccessImpl
         activateSuccess,
     required TResult Function(DetailsActionsStateActivateFailed value)
         activateFailed,
+    required TResult Function(DetailsActionsStateChangingCustomerType value)
+        changingCustomerType,
+    required TResult Function(
+            DetailsActionsStateChangeCustomerTypeSuccess value)
+        changeCustomerTypeSuccess,
+    required TResult Function(DetailsActionsStateChangeCustomerTypeFailed value)
+        changeCustomerTypeFailed,
   }) {
     return markAsReadSuccess(this);
   }
@@ -1989,6 +2173,12 @@ class _$DetailsActionsStateMarkAsReadSuccessImpl
     TResult? Function(DetailsActionsStateActivateSuccess value)?
         activateSuccess,
     TResult? Function(DetailsActionsStateActivateFailed value)? activateFailed,
+    TResult? Function(DetailsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult? Function(DetailsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult? Function(DetailsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
   }) {
     return markAsReadSuccess?.call(this);
   }
@@ -2029,6 +2219,12 @@ class _$DetailsActionsStateMarkAsReadSuccessImpl
     TResult Function(DetailsActionsStateActivating value)? activating,
     TResult Function(DetailsActionsStateActivateSuccess value)? activateSuccess,
     TResult Function(DetailsActionsStateActivateFailed value)? activateFailed,
+    TResult Function(DetailsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult Function(DetailsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult Function(DetailsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
     required TResult orElse(),
   }) {
     if (markAsReadSuccess != null) {
@@ -2163,6 +2359,9 @@ class _$DetailsActionsStateMarkAsReadFailedImpl
     required TResult Function() activating,
     required TResult Function() activateSuccess,
     required TResult Function(StorageError error) activateFailed,
+    required TResult Function() changingCustomerType,
+    required TResult Function() changeCustomerTypeSuccess,
+    required TResult Function(StorageError error) changeCustomerTypeFailed,
   }) {
     return markAsReadFailed(error);
   }
@@ -2194,6 +2393,9 @@ class _$DetailsActionsStateMarkAsReadFailedImpl
     TResult? Function()? activating,
     TResult? Function()? activateSuccess,
     TResult? Function(StorageError error)? activateFailed,
+    TResult? Function()? changingCustomerType,
+    TResult? Function()? changeCustomerTypeSuccess,
+    TResult? Function(StorageError error)? changeCustomerTypeFailed,
   }) {
     return markAsReadFailed?.call(error);
   }
@@ -2225,6 +2427,9 @@ class _$DetailsActionsStateMarkAsReadFailedImpl
     TResult Function()? activating,
     TResult Function()? activateSuccess,
     TResult Function(StorageError error)? activateFailed,
+    TResult Function()? changingCustomerType,
+    TResult Function()? changeCustomerTypeSuccess,
+    TResult Function(StorageError error)? changeCustomerTypeFailed,
     required TResult orElse(),
   }) {
     if (markAsReadFailed != null) {
@@ -2280,6 +2485,13 @@ class _$DetailsActionsStateMarkAsReadFailedImpl
         activateSuccess,
     required TResult Function(DetailsActionsStateActivateFailed value)
         activateFailed,
+    required TResult Function(DetailsActionsStateChangingCustomerType value)
+        changingCustomerType,
+    required TResult Function(
+            DetailsActionsStateChangeCustomerTypeSuccess value)
+        changeCustomerTypeSuccess,
+    required TResult Function(DetailsActionsStateChangeCustomerTypeFailed value)
+        changeCustomerTypeFailed,
   }) {
     return markAsReadFailed(this);
   }
@@ -2322,6 +2534,12 @@ class _$DetailsActionsStateMarkAsReadFailedImpl
     TResult? Function(DetailsActionsStateActivateSuccess value)?
         activateSuccess,
     TResult? Function(DetailsActionsStateActivateFailed value)? activateFailed,
+    TResult? Function(DetailsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult? Function(DetailsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult? Function(DetailsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
   }) {
     return markAsReadFailed?.call(this);
   }
@@ -2362,6 +2580,12 @@ class _$DetailsActionsStateMarkAsReadFailedImpl
     TResult Function(DetailsActionsStateActivating value)? activating,
     TResult Function(DetailsActionsStateActivateSuccess value)? activateSuccess,
     TResult Function(DetailsActionsStateActivateFailed value)? activateFailed,
+    TResult Function(DetailsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult Function(DetailsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult Function(DetailsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
     required TResult orElse(),
   }) {
     if (markAsReadFailed != null) {
@@ -2465,6 +2689,9 @@ class _$DetailsActionsStateMovingToActiveImpl
     required TResult Function() activating,
     required TResult Function() activateSuccess,
     required TResult Function(StorageError error) activateFailed,
+    required TResult Function() changingCustomerType,
+    required TResult Function() changeCustomerTypeSuccess,
+    required TResult Function(StorageError error) changeCustomerTypeFailed,
   }) {
     return movingToActive();
   }
@@ -2496,6 +2723,9 @@ class _$DetailsActionsStateMovingToActiveImpl
     TResult? Function()? activating,
     TResult? Function()? activateSuccess,
     TResult? Function(StorageError error)? activateFailed,
+    TResult? Function()? changingCustomerType,
+    TResult? Function()? changeCustomerTypeSuccess,
+    TResult? Function(StorageError error)? changeCustomerTypeFailed,
   }) {
     return movingToActive?.call();
   }
@@ -2527,6 +2757,9 @@ class _$DetailsActionsStateMovingToActiveImpl
     TResult Function()? activating,
     TResult Function()? activateSuccess,
     TResult Function(StorageError error)? activateFailed,
+    TResult Function()? changingCustomerType,
+    TResult Function()? changeCustomerTypeSuccess,
+    TResult Function(StorageError error)? changeCustomerTypeFailed,
     required TResult orElse(),
   }) {
     if (movingToActive != null) {
@@ -2582,6 +2815,13 @@ class _$DetailsActionsStateMovingToActiveImpl
         activateSuccess,
     required TResult Function(DetailsActionsStateActivateFailed value)
         activateFailed,
+    required TResult Function(DetailsActionsStateChangingCustomerType value)
+        changingCustomerType,
+    required TResult Function(
+            DetailsActionsStateChangeCustomerTypeSuccess value)
+        changeCustomerTypeSuccess,
+    required TResult Function(DetailsActionsStateChangeCustomerTypeFailed value)
+        changeCustomerTypeFailed,
   }) {
     return movingToActive(this);
   }
@@ -2624,6 +2864,12 @@ class _$DetailsActionsStateMovingToActiveImpl
     TResult? Function(DetailsActionsStateActivateSuccess value)?
         activateSuccess,
     TResult? Function(DetailsActionsStateActivateFailed value)? activateFailed,
+    TResult? Function(DetailsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult? Function(DetailsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult? Function(DetailsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
   }) {
     return movingToActive?.call(this);
   }
@@ -2664,6 +2910,12 @@ class _$DetailsActionsStateMovingToActiveImpl
     TResult Function(DetailsActionsStateActivating value)? activating,
     TResult Function(DetailsActionsStateActivateSuccess value)? activateSuccess,
     TResult Function(DetailsActionsStateActivateFailed value)? activateFailed,
+    TResult Function(DetailsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult Function(DetailsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult Function(DetailsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
     required TResult orElse(),
   }) {
     if (movingToActive != null) {
@@ -2757,6 +3009,9 @@ class _$DetailsActionsStateMoveToActiveSuccessImpl
     required TResult Function() activating,
     required TResult Function() activateSuccess,
     required TResult Function(StorageError error) activateFailed,
+    required TResult Function() changingCustomerType,
+    required TResult Function() changeCustomerTypeSuccess,
+    required TResult Function(StorageError error) changeCustomerTypeFailed,
   }) {
     return moveToActiveSuccess();
   }
@@ -2788,6 +3043,9 @@ class _$DetailsActionsStateMoveToActiveSuccessImpl
     TResult? Function()? activating,
     TResult? Function()? activateSuccess,
     TResult? Function(StorageError error)? activateFailed,
+    TResult? Function()? changingCustomerType,
+    TResult? Function()? changeCustomerTypeSuccess,
+    TResult? Function(StorageError error)? changeCustomerTypeFailed,
   }) {
     return moveToActiveSuccess?.call();
   }
@@ -2819,6 +3077,9 @@ class _$DetailsActionsStateMoveToActiveSuccessImpl
     TResult Function()? activating,
     TResult Function()? activateSuccess,
     TResult Function(StorageError error)? activateFailed,
+    TResult Function()? changingCustomerType,
+    TResult Function()? changeCustomerTypeSuccess,
+    TResult Function(StorageError error)? changeCustomerTypeFailed,
     required TResult orElse(),
   }) {
     if (moveToActiveSuccess != null) {
@@ -2874,6 +3135,13 @@ class _$DetailsActionsStateMoveToActiveSuccessImpl
         activateSuccess,
     required TResult Function(DetailsActionsStateActivateFailed value)
         activateFailed,
+    required TResult Function(DetailsActionsStateChangingCustomerType value)
+        changingCustomerType,
+    required TResult Function(
+            DetailsActionsStateChangeCustomerTypeSuccess value)
+        changeCustomerTypeSuccess,
+    required TResult Function(DetailsActionsStateChangeCustomerTypeFailed value)
+        changeCustomerTypeFailed,
   }) {
     return moveToActiveSuccess(this);
   }
@@ -2916,6 +3184,12 @@ class _$DetailsActionsStateMoveToActiveSuccessImpl
     TResult? Function(DetailsActionsStateActivateSuccess value)?
         activateSuccess,
     TResult? Function(DetailsActionsStateActivateFailed value)? activateFailed,
+    TResult? Function(DetailsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult? Function(DetailsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult? Function(DetailsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
   }) {
     return moveToActiveSuccess?.call(this);
   }
@@ -2956,6 +3230,12 @@ class _$DetailsActionsStateMoveToActiveSuccessImpl
     TResult Function(DetailsActionsStateActivating value)? activating,
     TResult Function(DetailsActionsStateActivateSuccess value)? activateSuccess,
     TResult Function(DetailsActionsStateActivateFailed value)? activateFailed,
+    TResult Function(DetailsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult Function(DetailsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult Function(DetailsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
     required TResult orElse(),
   }) {
     if (moveToActiveSuccess != null) {
@@ -3091,6 +3371,9 @@ class _$DetailsActionsStateMoveToActiveFailedImpl
     required TResult Function() activating,
     required TResult Function() activateSuccess,
     required TResult Function(StorageError error) activateFailed,
+    required TResult Function() changingCustomerType,
+    required TResult Function() changeCustomerTypeSuccess,
+    required TResult Function(StorageError error) changeCustomerTypeFailed,
   }) {
     return moveToActiveFailed(error);
   }
@@ -3122,6 +3405,9 @@ class _$DetailsActionsStateMoveToActiveFailedImpl
     TResult? Function()? activating,
     TResult? Function()? activateSuccess,
     TResult? Function(StorageError error)? activateFailed,
+    TResult? Function()? changingCustomerType,
+    TResult? Function()? changeCustomerTypeSuccess,
+    TResult? Function(StorageError error)? changeCustomerTypeFailed,
   }) {
     return moveToActiveFailed?.call(error);
   }
@@ -3153,6 +3439,9 @@ class _$DetailsActionsStateMoveToActiveFailedImpl
     TResult Function()? activating,
     TResult Function()? activateSuccess,
     TResult Function(StorageError error)? activateFailed,
+    TResult Function()? changingCustomerType,
+    TResult Function()? changeCustomerTypeSuccess,
+    TResult Function(StorageError error)? changeCustomerTypeFailed,
     required TResult orElse(),
   }) {
     if (moveToActiveFailed != null) {
@@ -3208,6 +3497,13 @@ class _$DetailsActionsStateMoveToActiveFailedImpl
         activateSuccess,
     required TResult Function(DetailsActionsStateActivateFailed value)
         activateFailed,
+    required TResult Function(DetailsActionsStateChangingCustomerType value)
+        changingCustomerType,
+    required TResult Function(
+            DetailsActionsStateChangeCustomerTypeSuccess value)
+        changeCustomerTypeSuccess,
+    required TResult Function(DetailsActionsStateChangeCustomerTypeFailed value)
+        changeCustomerTypeFailed,
   }) {
     return moveToActiveFailed(this);
   }
@@ -3250,6 +3546,12 @@ class _$DetailsActionsStateMoveToActiveFailedImpl
     TResult? Function(DetailsActionsStateActivateSuccess value)?
         activateSuccess,
     TResult? Function(DetailsActionsStateActivateFailed value)? activateFailed,
+    TResult? Function(DetailsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult? Function(DetailsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult? Function(DetailsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
   }) {
     return moveToActiveFailed?.call(this);
   }
@@ -3290,6 +3592,12 @@ class _$DetailsActionsStateMoveToActiveFailedImpl
     TResult Function(DetailsActionsStateActivating value)? activating,
     TResult Function(DetailsActionsStateActivateSuccess value)? activateSuccess,
     TResult Function(DetailsActionsStateActivateFailed value)? activateFailed,
+    TResult Function(DetailsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult Function(DetailsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult Function(DetailsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
     required TResult orElse(),
   }) {
     if (moveToActiveFailed != null) {
@@ -3393,6 +3701,9 @@ class _$DetailsActionsStateMovingToArchiveImpl
     required TResult Function() activating,
     required TResult Function() activateSuccess,
     required TResult Function(StorageError error) activateFailed,
+    required TResult Function() changingCustomerType,
+    required TResult Function() changeCustomerTypeSuccess,
+    required TResult Function(StorageError error) changeCustomerTypeFailed,
   }) {
     return movingToArchive();
   }
@@ -3424,6 +3735,9 @@ class _$DetailsActionsStateMovingToArchiveImpl
     TResult? Function()? activating,
     TResult? Function()? activateSuccess,
     TResult? Function(StorageError error)? activateFailed,
+    TResult? Function()? changingCustomerType,
+    TResult? Function()? changeCustomerTypeSuccess,
+    TResult? Function(StorageError error)? changeCustomerTypeFailed,
   }) {
     return movingToArchive?.call();
   }
@@ -3455,6 +3769,9 @@ class _$DetailsActionsStateMovingToArchiveImpl
     TResult Function()? activating,
     TResult Function()? activateSuccess,
     TResult Function(StorageError error)? activateFailed,
+    TResult Function()? changingCustomerType,
+    TResult Function()? changeCustomerTypeSuccess,
+    TResult Function(StorageError error)? changeCustomerTypeFailed,
     required TResult orElse(),
   }) {
     if (movingToArchive != null) {
@@ -3510,6 +3827,13 @@ class _$DetailsActionsStateMovingToArchiveImpl
         activateSuccess,
     required TResult Function(DetailsActionsStateActivateFailed value)
         activateFailed,
+    required TResult Function(DetailsActionsStateChangingCustomerType value)
+        changingCustomerType,
+    required TResult Function(
+            DetailsActionsStateChangeCustomerTypeSuccess value)
+        changeCustomerTypeSuccess,
+    required TResult Function(DetailsActionsStateChangeCustomerTypeFailed value)
+        changeCustomerTypeFailed,
   }) {
     return movingToArchive(this);
   }
@@ -3552,6 +3876,12 @@ class _$DetailsActionsStateMovingToArchiveImpl
     TResult? Function(DetailsActionsStateActivateSuccess value)?
         activateSuccess,
     TResult? Function(DetailsActionsStateActivateFailed value)? activateFailed,
+    TResult? Function(DetailsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult? Function(DetailsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult? Function(DetailsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
   }) {
     return movingToArchive?.call(this);
   }
@@ -3592,6 +3922,12 @@ class _$DetailsActionsStateMovingToArchiveImpl
     TResult Function(DetailsActionsStateActivating value)? activating,
     TResult Function(DetailsActionsStateActivateSuccess value)? activateSuccess,
     TResult Function(DetailsActionsStateActivateFailed value)? activateFailed,
+    TResult Function(DetailsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult Function(DetailsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult Function(DetailsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
     required TResult orElse(),
   }) {
     if (movingToArchive != null) {
@@ -3685,6 +4021,9 @@ class _$DetailsActionsStateMoveToArchiveSuccessImpl
     required TResult Function() activating,
     required TResult Function() activateSuccess,
     required TResult Function(StorageError error) activateFailed,
+    required TResult Function() changingCustomerType,
+    required TResult Function() changeCustomerTypeSuccess,
+    required TResult Function(StorageError error) changeCustomerTypeFailed,
   }) {
     return moveToArchiveSuccess();
   }
@@ -3716,6 +4055,9 @@ class _$DetailsActionsStateMoveToArchiveSuccessImpl
     TResult? Function()? activating,
     TResult? Function()? activateSuccess,
     TResult? Function(StorageError error)? activateFailed,
+    TResult? Function()? changingCustomerType,
+    TResult? Function()? changeCustomerTypeSuccess,
+    TResult? Function(StorageError error)? changeCustomerTypeFailed,
   }) {
     return moveToArchiveSuccess?.call();
   }
@@ -3747,6 +4089,9 @@ class _$DetailsActionsStateMoveToArchiveSuccessImpl
     TResult Function()? activating,
     TResult Function()? activateSuccess,
     TResult Function(StorageError error)? activateFailed,
+    TResult Function()? changingCustomerType,
+    TResult Function()? changeCustomerTypeSuccess,
+    TResult Function(StorageError error)? changeCustomerTypeFailed,
     required TResult orElse(),
   }) {
     if (moveToArchiveSuccess != null) {
@@ -3802,6 +4147,13 @@ class _$DetailsActionsStateMoveToArchiveSuccessImpl
         activateSuccess,
     required TResult Function(DetailsActionsStateActivateFailed value)
         activateFailed,
+    required TResult Function(DetailsActionsStateChangingCustomerType value)
+        changingCustomerType,
+    required TResult Function(
+            DetailsActionsStateChangeCustomerTypeSuccess value)
+        changeCustomerTypeSuccess,
+    required TResult Function(DetailsActionsStateChangeCustomerTypeFailed value)
+        changeCustomerTypeFailed,
   }) {
     return moveToArchiveSuccess(this);
   }
@@ -3844,6 +4196,12 @@ class _$DetailsActionsStateMoveToArchiveSuccessImpl
     TResult? Function(DetailsActionsStateActivateSuccess value)?
         activateSuccess,
     TResult? Function(DetailsActionsStateActivateFailed value)? activateFailed,
+    TResult? Function(DetailsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult? Function(DetailsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult? Function(DetailsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
   }) {
     return moveToArchiveSuccess?.call(this);
   }
@@ -3884,6 +4242,12 @@ class _$DetailsActionsStateMoveToArchiveSuccessImpl
     TResult Function(DetailsActionsStateActivating value)? activating,
     TResult Function(DetailsActionsStateActivateSuccess value)? activateSuccess,
     TResult Function(DetailsActionsStateActivateFailed value)? activateFailed,
+    TResult Function(DetailsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult Function(DetailsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult Function(DetailsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
     required TResult orElse(),
   }) {
     if (moveToArchiveSuccess != null) {
@@ -4020,6 +4384,9 @@ class _$DetailsActionsStateMoveToArchiveFailedImpl
     required TResult Function() activating,
     required TResult Function() activateSuccess,
     required TResult Function(StorageError error) activateFailed,
+    required TResult Function() changingCustomerType,
+    required TResult Function() changeCustomerTypeSuccess,
+    required TResult Function(StorageError error) changeCustomerTypeFailed,
   }) {
     return moveToArchiveFailed(error);
   }
@@ -4051,6 +4418,9 @@ class _$DetailsActionsStateMoveToArchiveFailedImpl
     TResult? Function()? activating,
     TResult? Function()? activateSuccess,
     TResult? Function(StorageError error)? activateFailed,
+    TResult? Function()? changingCustomerType,
+    TResult? Function()? changeCustomerTypeSuccess,
+    TResult? Function(StorageError error)? changeCustomerTypeFailed,
   }) {
     return moveToArchiveFailed?.call(error);
   }
@@ -4082,6 +4452,9 @@ class _$DetailsActionsStateMoveToArchiveFailedImpl
     TResult Function()? activating,
     TResult Function()? activateSuccess,
     TResult Function(StorageError error)? activateFailed,
+    TResult Function()? changingCustomerType,
+    TResult Function()? changeCustomerTypeSuccess,
+    TResult Function(StorageError error)? changeCustomerTypeFailed,
     required TResult orElse(),
   }) {
     if (moveToArchiveFailed != null) {
@@ -4137,6 +4510,13 @@ class _$DetailsActionsStateMoveToArchiveFailedImpl
         activateSuccess,
     required TResult Function(DetailsActionsStateActivateFailed value)
         activateFailed,
+    required TResult Function(DetailsActionsStateChangingCustomerType value)
+        changingCustomerType,
+    required TResult Function(
+            DetailsActionsStateChangeCustomerTypeSuccess value)
+        changeCustomerTypeSuccess,
+    required TResult Function(DetailsActionsStateChangeCustomerTypeFailed value)
+        changeCustomerTypeFailed,
   }) {
     return moveToArchiveFailed(this);
   }
@@ -4179,6 +4559,12 @@ class _$DetailsActionsStateMoveToArchiveFailedImpl
     TResult? Function(DetailsActionsStateActivateSuccess value)?
         activateSuccess,
     TResult? Function(DetailsActionsStateActivateFailed value)? activateFailed,
+    TResult? Function(DetailsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult? Function(DetailsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult? Function(DetailsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
   }) {
     return moveToArchiveFailed?.call(this);
   }
@@ -4219,6 +4605,12 @@ class _$DetailsActionsStateMoveToArchiveFailedImpl
     TResult Function(DetailsActionsStateActivating value)? activating,
     TResult Function(DetailsActionsStateActivateSuccess value)? activateSuccess,
     TResult Function(DetailsActionsStateActivateFailed value)? activateFailed,
+    TResult Function(DetailsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult Function(DetailsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult Function(DetailsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
     required TResult orElse(),
   }) {
     if (moveToArchiveFailed != null) {
@@ -4322,6 +4714,9 @@ class _$DetailsActionsStateRefreshingImpl
     required TResult Function() activating,
     required TResult Function() activateSuccess,
     required TResult Function(StorageError error) activateFailed,
+    required TResult Function() changingCustomerType,
+    required TResult Function() changeCustomerTypeSuccess,
+    required TResult Function(StorageError error) changeCustomerTypeFailed,
   }) {
     return refreshing();
   }
@@ -4353,6 +4748,9 @@ class _$DetailsActionsStateRefreshingImpl
     TResult? Function()? activating,
     TResult? Function()? activateSuccess,
     TResult? Function(StorageError error)? activateFailed,
+    TResult? Function()? changingCustomerType,
+    TResult? Function()? changeCustomerTypeSuccess,
+    TResult? Function(StorageError error)? changeCustomerTypeFailed,
   }) {
     return refreshing?.call();
   }
@@ -4384,6 +4782,9 @@ class _$DetailsActionsStateRefreshingImpl
     TResult Function()? activating,
     TResult Function()? activateSuccess,
     TResult Function(StorageError error)? activateFailed,
+    TResult Function()? changingCustomerType,
+    TResult Function()? changeCustomerTypeSuccess,
+    TResult Function(StorageError error)? changeCustomerTypeFailed,
     required TResult orElse(),
   }) {
     if (refreshing != null) {
@@ -4439,6 +4840,13 @@ class _$DetailsActionsStateRefreshingImpl
         activateSuccess,
     required TResult Function(DetailsActionsStateActivateFailed value)
         activateFailed,
+    required TResult Function(DetailsActionsStateChangingCustomerType value)
+        changingCustomerType,
+    required TResult Function(
+            DetailsActionsStateChangeCustomerTypeSuccess value)
+        changeCustomerTypeSuccess,
+    required TResult Function(DetailsActionsStateChangeCustomerTypeFailed value)
+        changeCustomerTypeFailed,
   }) {
     return refreshing(this);
   }
@@ -4481,6 +4889,12 @@ class _$DetailsActionsStateRefreshingImpl
     TResult? Function(DetailsActionsStateActivateSuccess value)?
         activateSuccess,
     TResult? Function(DetailsActionsStateActivateFailed value)? activateFailed,
+    TResult? Function(DetailsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult? Function(DetailsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult? Function(DetailsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
   }) {
     return refreshing?.call(this);
   }
@@ -4521,6 +4935,12 @@ class _$DetailsActionsStateRefreshingImpl
     TResult Function(DetailsActionsStateActivating value)? activating,
     TResult Function(DetailsActionsStateActivateSuccess value)? activateSuccess,
     TResult Function(DetailsActionsStateActivateFailed value)? activateFailed,
+    TResult Function(DetailsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult Function(DetailsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult Function(DetailsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
     required TResult orElse(),
   }) {
     if (refreshing != null) {
@@ -4613,6 +5033,9 @@ class _$DetailsActionsStateRefreshSuccessImpl
     required TResult Function() activating,
     required TResult Function() activateSuccess,
     required TResult Function(StorageError error) activateFailed,
+    required TResult Function() changingCustomerType,
+    required TResult Function() changeCustomerTypeSuccess,
+    required TResult Function(StorageError error) changeCustomerTypeFailed,
   }) {
     return refreshSuccess();
   }
@@ -4644,6 +5067,9 @@ class _$DetailsActionsStateRefreshSuccessImpl
     TResult? Function()? activating,
     TResult? Function()? activateSuccess,
     TResult? Function(StorageError error)? activateFailed,
+    TResult? Function()? changingCustomerType,
+    TResult? Function()? changeCustomerTypeSuccess,
+    TResult? Function(StorageError error)? changeCustomerTypeFailed,
   }) {
     return refreshSuccess?.call();
   }
@@ -4675,6 +5101,9 @@ class _$DetailsActionsStateRefreshSuccessImpl
     TResult Function()? activating,
     TResult Function()? activateSuccess,
     TResult Function(StorageError error)? activateFailed,
+    TResult Function()? changingCustomerType,
+    TResult Function()? changeCustomerTypeSuccess,
+    TResult Function(StorageError error)? changeCustomerTypeFailed,
     required TResult orElse(),
   }) {
     if (refreshSuccess != null) {
@@ -4730,6 +5159,13 @@ class _$DetailsActionsStateRefreshSuccessImpl
         activateSuccess,
     required TResult Function(DetailsActionsStateActivateFailed value)
         activateFailed,
+    required TResult Function(DetailsActionsStateChangingCustomerType value)
+        changingCustomerType,
+    required TResult Function(
+            DetailsActionsStateChangeCustomerTypeSuccess value)
+        changeCustomerTypeSuccess,
+    required TResult Function(DetailsActionsStateChangeCustomerTypeFailed value)
+        changeCustomerTypeFailed,
   }) {
     return refreshSuccess(this);
   }
@@ -4772,6 +5208,12 @@ class _$DetailsActionsStateRefreshSuccessImpl
     TResult? Function(DetailsActionsStateActivateSuccess value)?
         activateSuccess,
     TResult? Function(DetailsActionsStateActivateFailed value)? activateFailed,
+    TResult? Function(DetailsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult? Function(DetailsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult? Function(DetailsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
   }) {
     return refreshSuccess?.call(this);
   }
@@ -4812,6 +5254,12 @@ class _$DetailsActionsStateRefreshSuccessImpl
     TResult Function(DetailsActionsStateActivating value)? activating,
     TResult Function(DetailsActionsStateActivateSuccess value)? activateSuccess,
     TResult Function(DetailsActionsStateActivateFailed value)? activateFailed,
+    TResult Function(DetailsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult Function(DetailsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult Function(DetailsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
     required TResult orElse(),
   }) {
     if (refreshSuccess != null) {
@@ -4946,6 +5394,9 @@ class _$DetailsActionsStateRefreshFailedImpl
     required TResult Function() activating,
     required TResult Function() activateSuccess,
     required TResult Function(StorageError error) activateFailed,
+    required TResult Function() changingCustomerType,
+    required TResult Function() changeCustomerTypeSuccess,
+    required TResult Function(StorageError error) changeCustomerTypeFailed,
   }) {
     return refreshFailed(error);
   }
@@ -4977,6 +5428,9 @@ class _$DetailsActionsStateRefreshFailedImpl
     TResult? Function()? activating,
     TResult? Function()? activateSuccess,
     TResult? Function(StorageError error)? activateFailed,
+    TResult? Function()? changingCustomerType,
+    TResult? Function()? changeCustomerTypeSuccess,
+    TResult? Function(StorageError error)? changeCustomerTypeFailed,
   }) {
     return refreshFailed?.call(error);
   }
@@ -5008,6 +5462,9 @@ class _$DetailsActionsStateRefreshFailedImpl
     TResult Function()? activating,
     TResult Function()? activateSuccess,
     TResult Function(StorageError error)? activateFailed,
+    TResult Function()? changingCustomerType,
+    TResult Function()? changeCustomerTypeSuccess,
+    TResult Function(StorageError error)? changeCustomerTypeFailed,
     required TResult orElse(),
   }) {
     if (refreshFailed != null) {
@@ -5063,6 +5520,13 @@ class _$DetailsActionsStateRefreshFailedImpl
         activateSuccess,
     required TResult Function(DetailsActionsStateActivateFailed value)
         activateFailed,
+    required TResult Function(DetailsActionsStateChangingCustomerType value)
+        changingCustomerType,
+    required TResult Function(
+            DetailsActionsStateChangeCustomerTypeSuccess value)
+        changeCustomerTypeSuccess,
+    required TResult Function(DetailsActionsStateChangeCustomerTypeFailed value)
+        changeCustomerTypeFailed,
   }) {
     return refreshFailed(this);
   }
@@ -5105,6 +5569,12 @@ class _$DetailsActionsStateRefreshFailedImpl
     TResult? Function(DetailsActionsStateActivateSuccess value)?
         activateSuccess,
     TResult? Function(DetailsActionsStateActivateFailed value)? activateFailed,
+    TResult? Function(DetailsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult? Function(DetailsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult? Function(DetailsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
   }) {
     return refreshFailed?.call(this);
   }
@@ -5145,6 +5615,12 @@ class _$DetailsActionsStateRefreshFailedImpl
     TResult Function(DetailsActionsStateActivating value)? activating,
     TResult Function(DetailsActionsStateActivateSuccess value)? activateSuccess,
     TResult Function(DetailsActionsStateActivateFailed value)? activateFailed,
+    TResult Function(DetailsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult Function(DetailsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult Function(DetailsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
     required TResult orElse(),
   }) {
     if (refreshFailed != null) {
@@ -5279,6 +5755,9 @@ class _$DetailsActionsStateRefreshFreqLimitedImpl
     required TResult Function() activating,
     required TResult Function() activateSuccess,
     required TResult Function(StorageError error) activateFailed,
+    required TResult Function() changingCustomerType,
+    required TResult Function() changeCustomerTypeSuccess,
+    required TResult Function(StorageError error) changeCustomerTypeFailed,
   }) {
     return refreshFreqLimited(remainingTime);
   }
@@ -5310,6 +5789,9 @@ class _$DetailsActionsStateRefreshFreqLimitedImpl
     TResult? Function()? activating,
     TResult? Function()? activateSuccess,
     TResult? Function(StorageError error)? activateFailed,
+    TResult? Function()? changingCustomerType,
+    TResult? Function()? changeCustomerTypeSuccess,
+    TResult? Function(StorageError error)? changeCustomerTypeFailed,
   }) {
     return refreshFreqLimited?.call(remainingTime);
   }
@@ -5341,6 +5823,9 @@ class _$DetailsActionsStateRefreshFreqLimitedImpl
     TResult Function()? activating,
     TResult Function()? activateSuccess,
     TResult Function(StorageError error)? activateFailed,
+    TResult Function()? changingCustomerType,
+    TResult Function()? changeCustomerTypeSuccess,
+    TResult Function(StorageError error)? changeCustomerTypeFailed,
     required TResult orElse(),
   }) {
     if (refreshFreqLimited != null) {
@@ -5396,6 +5881,13 @@ class _$DetailsActionsStateRefreshFreqLimitedImpl
         activateSuccess,
     required TResult Function(DetailsActionsStateActivateFailed value)
         activateFailed,
+    required TResult Function(DetailsActionsStateChangingCustomerType value)
+        changingCustomerType,
+    required TResult Function(
+            DetailsActionsStateChangeCustomerTypeSuccess value)
+        changeCustomerTypeSuccess,
+    required TResult Function(DetailsActionsStateChangeCustomerTypeFailed value)
+        changeCustomerTypeFailed,
   }) {
     return refreshFreqLimited(this);
   }
@@ -5438,6 +5930,12 @@ class _$DetailsActionsStateRefreshFreqLimitedImpl
     TResult? Function(DetailsActionsStateActivateSuccess value)?
         activateSuccess,
     TResult? Function(DetailsActionsStateActivateFailed value)? activateFailed,
+    TResult? Function(DetailsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult? Function(DetailsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult? Function(DetailsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
   }) {
     return refreshFreqLimited?.call(this);
   }
@@ -5478,6 +5976,12 @@ class _$DetailsActionsStateRefreshFreqLimitedImpl
     TResult Function(DetailsActionsStateActivating value)? activating,
     TResult Function(DetailsActionsStateActivateSuccess value)? activateSuccess,
     TResult Function(DetailsActionsStateActivateFailed value)? activateFailed,
+    TResult Function(DetailsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult Function(DetailsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult Function(DetailsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
     required TResult orElse(),
   }) {
     if (refreshFreqLimited != null) {
@@ -5581,6 +6085,9 @@ class _$DetailsActionsStateSharingStringImpl
     required TResult Function() activating,
     required TResult Function() activateSuccess,
     required TResult Function(StorageError error) activateFailed,
+    required TResult Function() changingCustomerType,
+    required TResult Function() changeCustomerTypeSuccess,
+    required TResult Function(StorageError error) changeCustomerTypeFailed,
   }) {
     return sharingString();
   }
@@ -5612,6 +6119,9 @@ class _$DetailsActionsStateSharingStringImpl
     TResult? Function()? activating,
     TResult? Function()? activateSuccess,
     TResult? Function(StorageError error)? activateFailed,
+    TResult? Function()? changingCustomerType,
+    TResult? Function()? changeCustomerTypeSuccess,
+    TResult? Function(StorageError error)? changeCustomerTypeFailed,
   }) {
     return sharingString?.call();
   }
@@ -5643,6 +6153,9 @@ class _$DetailsActionsStateSharingStringImpl
     TResult Function()? activating,
     TResult Function()? activateSuccess,
     TResult Function(StorageError error)? activateFailed,
+    TResult Function()? changingCustomerType,
+    TResult Function()? changeCustomerTypeSuccess,
+    TResult Function(StorageError error)? changeCustomerTypeFailed,
     required TResult orElse(),
   }) {
     if (sharingString != null) {
@@ -5698,6 +6211,13 @@ class _$DetailsActionsStateSharingStringImpl
         activateSuccess,
     required TResult Function(DetailsActionsStateActivateFailed value)
         activateFailed,
+    required TResult Function(DetailsActionsStateChangingCustomerType value)
+        changingCustomerType,
+    required TResult Function(
+            DetailsActionsStateChangeCustomerTypeSuccess value)
+        changeCustomerTypeSuccess,
+    required TResult Function(DetailsActionsStateChangeCustomerTypeFailed value)
+        changeCustomerTypeFailed,
   }) {
     return sharingString(this);
   }
@@ -5740,6 +6260,12 @@ class _$DetailsActionsStateSharingStringImpl
     TResult? Function(DetailsActionsStateActivateSuccess value)?
         activateSuccess,
     TResult? Function(DetailsActionsStateActivateFailed value)? activateFailed,
+    TResult? Function(DetailsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult? Function(DetailsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult? Function(DetailsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
   }) {
     return sharingString?.call(this);
   }
@@ -5780,6 +6306,12 @@ class _$DetailsActionsStateSharingStringImpl
     TResult Function(DetailsActionsStateActivating value)? activating,
     TResult Function(DetailsActionsStateActivateSuccess value)? activateSuccess,
     TResult Function(DetailsActionsStateActivateFailed value)? activateFailed,
+    TResult Function(DetailsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult Function(DetailsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult Function(DetailsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
     required TResult orElse(),
   }) {
     if (sharingString != null) {
@@ -5902,6 +6434,9 @@ class _$DetailsActionsStateShareStringSuccessImpl
     required TResult Function() activating,
     required TResult Function() activateSuccess,
     required TResult Function(StorageError error) activateFailed,
+    required TResult Function() changingCustomerType,
+    required TResult Function() changeCustomerTypeSuccess,
+    required TResult Function(StorageError error) changeCustomerTypeFailed,
   }) {
     return shareStringSuccess(text);
   }
@@ -5933,6 +6468,9 @@ class _$DetailsActionsStateShareStringSuccessImpl
     TResult? Function()? activating,
     TResult? Function()? activateSuccess,
     TResult? Function(StorageError error)? activateFailed,
+    TResult? Function()? changingCustomerType,
+    TResult? Function()? changeCustomerTypeSuccess,
+    TResult? Function(StorageError error)? changeCustomerTypeFailed,
   }) {
     return shareStringSuccess?.call(text);
   }
@@ -5964,6 +6502,9 @@ class _$DetailsActionsStateShareStringSuccessImpl
     TResult Function()? activating,
     TResult Function()? activateSuccess,
     TResult Function(StorageError error)? activateFailed,
+    TResult Function()? changingCustomerType,
+    TResult Function()? changeCustomerTypeSuccess,
+    TResult Function(StorageError error)? changeCustomerTypeFailed,
     required TResult orElse(),
   }) {
     if (shareStringSuccess != null) {
@@ -6019,6 +6560,13 @@ class _$DetailsActionsStateShareStringSuccessImpl
         activateSuccess,
     required TResult Function(DetailsActionsStateActivateFailed value)
         activateFailed,
+    required TResult Function(DetailsActionsStateChangingCustomerType value)
+        changingCustomerType,
+    required TResult Function(
+            DetailsActionsStateChangeCustomerTypeSuccess value)
+        changeCustomerTypeSuccess,
+    required TResult Function(DetailsActionsStateChangeCustomerTypeFailed value)
+        changeCustomerTypeFailed,
   }) {
     return shareStringSuccess(this);
   }
@@ -6061,6 +6609,12 @@ class _$DetailsActionsStateShareStringSuccessImpl
     TResult? Function(DetailsActionsStateActivateSuccess value)?
         activateSuccess,
     TResult? Function(DetailsActionsStateActivateFailed value)? activateFailed,
+    TResult? Function(DetailsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult? Function(DetailsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult? Function(DetailsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
   }) {
     return shareStringSuccess?.call(this);
   }
@@ -6101,6 +6655,12 @@ class _$DetailsActionsStateShareStringSuccessImpl
     TResult Function(DetailsActionsStateActivating value)? activating,
     TResult Function(DetailsActionsStateActivateSuccess value)? activateSuccess,
     TResult Function(DetailsActionsStateActivateFailed value)? activateFailed,
+    TResult Function(DetailsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult Function(DetailsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult Function(DetailsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
     required TResult orElse(),
   }) {
     if (shareStringSuccess != null) {
@@ -6204,6 +6764,9 @@ class _$DetailsActionsStateCopyingTrackImpl
     required TResult Function() activating,
     required TResult Function() activateSuccess,
     required TResult Function(StorageError error) activateFailed,
+    required TResult Function() changingCustomerType,
+    required TResult Function() changeCustomerTypeSuccess,
+    required TResult Function(StorageError error) changeCustomerTypeFailed,
   }) {
     return copyingTrack();
   }
@@ -6235,6 +6798,9 @@ class _$DetailsActionsStateCopyingTrackImpl
     TResult? Function()? activating,
     TResult? Function()? activateSuccess,
     TResult? Function(StorageError error)? activateFailed,
+    TResult? Function()? changingCustomerType,
+    TResult? Function()? changeCustomerTypeSuccess,
+    TResult? Function(StorageError error)? changeCustomerTypeFailed,
   }) {
     return copyingTrack?.call();
   }
@@ -6266,6 +6832,9 @@ class _$DetailsActionsStateCopyingTrackImpl
     TResult Function()? activating,
     TResult Function()? activateSuccess,
     TResult Function(StorageError error)? activateFailed,
+    TResult Function()? changingCustomerType,
+    TResult Function()? changeCustomerTypeSuccess,
+    TResult Function(StorageError error)? changeCustomerTypeFailed,
     required TResult orElse(),
   }) {
     if (copyingTrack != null) {
@@ -6321,6 +6890,13 @@ class _$DetailsActionsStateCopyingTrackImpl
         activateSuccess,
     required TResult Function(DetailsActionsStateActivateFailed value)
         activateFailed,
+    required TResult Function(DetailsActionsStateChangingCustomerType value)
+        changingCustomerType,
+    required TResult Function(
+            DetailsActionsStateChangeCustomerTypeSuccess value)
+        changeCustomerTypeSuccess,
+    required TResult Function(DetailsActionsStateChangeCustomerTypeFailed value)
+        changeCustomerTypeFailed,
   }) {
     return copyingTrack(this);
   }
@@ -6363,6 +6939,12 @@ class _$DetailsActionsStateCopyingTrackImpl
     TResult? Function(DetailsActionsStateActivateSuccess value)?
         activateSuccess,
     TResult? Function(DetailsActionsStateActivateFailed value)? activateFailed,
+    TResult? Function(DetailsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult? Function(DetailsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult? Function(DetailsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
   }) {
     return copyingTrack?.call(this);
   }
@@ -6403,6 +6985,12 @@ class _$DetailsActionsStateCopyingTrackImpl
     TResult Function(DetailsActionsStateActivating value)? activating,
     TResult Function(DetailsActionsStateActivateSuccess value)? activateSuccess,
     TResult Function(DetailsActionsStateActivateFailed value)? activateFailed,
+    TResult Function(DetailsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult Function(DetailsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult Function(DetailsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
     required TResult orElse(),
   }) {
     if (copyingTrack != null) {
@@ -6525,6 +7113,9 @@ class _$DetailsActionsStateCopyTrackSuccessImpl
     required TResult Function() activating,
     required TResult Function() activateSuccess,
     required TResult Function(StorageError error) activateFailed,
+    required TResult Function() changingCustomerType,
+    required TResult Function() changeCustomerTypeSuccess,
+    required TResult Function(StorageError error) changeCustomerTypeFailed,
   }) {
     return copyTrackSuccess(trackNumber);
   }
@@ -6556,6 +7147,9 @@ class _$DetailsActionsStateCopyTrackSuccessImpl
     TResult? Function()? activating,
     TResult? Function()? activateSuccess,
     TResult? Function(StorageError error)? activateFailed,
+    TResult? Function()? changingCustomerType,
+    TResult? Function()? changeCustomerTypeSuccess,
+    TResult? Function(StorageError error)? changeCustomerTypeFailed,
   }) {
     return copyTrackSuccess?.call(trackNumber);
   }
@@ -6587,6 +7181,9 @@ class _$DetailsActionsStateCopyTrackSuccessImpl
     TResult Function()? activating,
     TResult Function()? activateSuccess,
     TResult Function(StorageError error)? activateFailed,
+    TResult Function()? changingCustomerType,
+    TResult Function()? changeCustomerTypeSuccess,
+    TResult Function(StorageError error)? changeCustomerTypeFailed,
     required TResult orElse(),
   }) {
     if (copyTrackSuccess != null) {
@@ -6642,6 +7239,13 @@ class _$DetailsActionsStateCopyTrackSuccessImpl
         activateSuccess,
     required TResult Function(DetailsActionsStateActivateFailed value)
         activateFailed,
+    required TResult Function(DetailsActionsStateChangingCustomerType value)
+        changingCustomerType,
+    required TResult Function(
+            DetailsActionsStateChangeCustomerTypeSuccess value)
+        changeCustomerTypeSuccess,
+    required TResult Function(DetailsActionsStateChangeCustomerTypeFailed value)
+        changeCustomerTypeFailed,
   }) {
     return copyTrackSuccess(this);
   }
@@ -6684,6 +7288,12 @@ class _$DetailsActionsStateCopyTrackSuccessImpl
     TResult? Function(DetailsActionsStateActivateSuccess value)?
         activateSuccess,
     TResult? Function(DetailsActionsStateActivateFailed value)? activateFailed,
+    TResult? Function(DetailsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult? Function(DetailsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult? Function(DetailsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
   }) {
     return copyTrackSuccess?.call(this);
   }
@@ -6724,6 +7334,12 @@ class _$DetailsActionsStateCopyTrackSuccessImpl
     TResult Function(DetailsActionsStateActivating value)? activating,
     TResult Function(DetailsActionsStateActivateSuccess value)? activateSuccess,
     TResult Function(DetailsActionsStateActivateFailed value)? activateFailed,
+    TResult Function(DetailsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult Function(DetailsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult Function(DetailsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
     required TResult orElse(),
   }) {
     if (copyTrackSuccess != null) {
@@ -6827,6 +7443,9 @@ class _$DetailsActionsStateActivatingImpl
     required TResult Function() activating,
     required TResult Function() activateSuccess,
     required TResult Function(StorageError error) activateFailed,
+    required TResult Function() changingCustomerType,
+    required TResult Function() changeCustomerTypeSuccess,
+    required TResult Function(StorageError error) changeCustomerTypeFailed,
   }) {
     return activating();
   }
@@ -6858,6 +7477,9 @@ class _$DetailsActionsStateActivatingImpl
     TResult? Function()? activating,
     TResult? Function()? activateSuccess,
     TResult? Function(StorageError error)? activateFailed,
+    TResult? Function()? changingCustomerType,
+    TResult? Function()? changeCustomerTypeSuccess,
+    TResult? Function(StorageError error)? changeCustomerTypeFailed,
   }) {
     return activating?.call();
   }
@@ -6889,6 +7511,9 @@ class _$DetailsActionsStateActivatingImpl
     TResult Function()? activating,
     TResult Function()? activateSuccess,
     TResult Function(StorageError error)? activateFailed,
+    TResult Function()? changingCustomerType,
+    TResult Function()? changeCustomerTypeSuccess,
+    TResult Function(StorageError error)? changeCustomerTypeFailed,
     required TResult orElse(),
   }) {
     if (activating != null) {
@@ -6944,6 +7569,13 @@ class _$DetailsActionsStateActivatingImpl
         activateSuccess,
     required TResult Function(DetailsActionsStateActivateFailed value)
         activateFailed,
+    required TResult Function(DetailsActionsStateChangingCustomerType value)
+        changingCustomerType,
+    required TResult Function(
+            DetailsActionsStateChangeCustomerTypeSuccess value)
+        changeCustomerTypeSuccess,
+    required TResult Function(DetailsActionsStateChangeCustomerTypeFailed value)
+        changeCustomerTypeFailed,
   }) {
     return activating(this);
   }
@@ -6986,6 +7618,12 @@ class _$DetailsActionsStateActivatingImpl
     TResult? Function(DetailsActionsStateActivateSuccess value)?
         activateSuccess,
     TResult? Function(DetailsActionsStateActivateFailed value)? activateFailed,
+    TResult? Function(DetailsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult? Function(DetailsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult? Function(DetailsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
   }) {
     return activating?.call(this);
   }
@@ -7026,6 +7664,12 @@ class _$DetailsActionsStateActivatingImpl
     TResult Function(DetailsActionsStateActivating value)? activating,
     TResult Function(DetailsActionsStateActivateSuccess value)? activateSuccess,
     TResult Function(DetailsActionsStateActivateFailed value)? activateFailed,
+    TResult Function(DetailsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult Function(DetailsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult Function(DetailsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
     required TResult orElse(),
   }) {
     if (activating != null) {
@@ -7118,6 +7762,9 @@ class _$DetailsActionsStateActivateSuccessImpl
     required TResult Function() activating,
     required TResult Function() activateSuccess,
     required TResult Function(StorageError error) activateFailed,
+    required TResult Function() changingCustomerType,
+    required TResult Function() changeCustomerTypeSuccess,
+    required TResult Function(StorageError error) changeCustomerTypeFailed,
   }) {
     return activateSuccess();
   }
@@ -7149,6 +7796,9 @@ class _$DetailsActionsStateActivateSuccessImpl
     TResult? Function()? activating,
     TResult? Function()? activateSuccess,
     TResult? Function(StorageError error)? activateFailed,
+    TResult? Function()? changingCustomerType,
+    TResult? Function()? changeCustomerTypeSuccess,
+    TResult? Function(StorageError error)? changeCustomerTypeFailed,
   }) {
     return activateSuccess?.call();
   }
@@ -7180,6 +7830,9 @@ class _$DetailsActionsStateActivateSuccessImpl
     TResult Function()? activating,
     TResult Function()? activateSuccess,
     TResult Function(StorageError error)? activateFailed,
+    TResult Function()? changingCustomerType,
+    TResult Function()? changeCustomerTypeSuccess,
+    TResult Function(StorageError error)? changeCustomerTypeFailed,
     required TResult orElse(),
   }) {
     if (activateSuccess != null) {
@@ -7235,6 +7888,13 @@ class _$DetailsActionsStateActivateSuccessImpl
         activateSuccess,
     required TResult Function(DetailsActionsStateActivateFailed value)
         activateFailed,
+    required TResult Function(DetailsActionsStateChangingCustomerType value)
+        changingCustomerType,
+    required TResult Function(
+            DetailsActionsStateChangeCustomerTypeSuccess value)
+        changeCustomerTypeSuccess,
+    required TResult Function(DetailsActionsStateChangeCustomerTypeFailed value)
+        changeCustomerTypeFailed,
   }) {
     return activateSuccess(this);
   }
@@ -7277,6 +7937,12 @@ class _$DetailsActionsStateActivateSuccessImpl
     TResult? Function(DetailsActionsStateActivateSuccess value)?
         activateSuccess,
     TResult? Function(DetailsActionsStateActivateFailed value)? activateFailed,
+    TResult? Function(DetailsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult? Function(DetailsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult? Function(DetailsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
   }) {
     return activateSuccess?.call(this);
   }
@@ -7317,6 +7983,12 @@ class _$DetailsActionsStateActivateSuccessImpl
     TResult Function(DetailsActionsStateActivating value)? activating,
     TResult Function(DetailsActionsStateActivateSuccess value)? activateSuccess,
     TResult Function(DetailsActionsStateActivateFailed value)? activateFailed,
+    TResult Function(DetailsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult Function(DetailsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult Function(DetailsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
     required TResult orElse(),
   }) {
     if (activateSuccess != null) {
@@ -7451,6 +8123,9 @@ class _$DetailsActionsStateActivateFailedImpl
     required TResult Function() activating,
     required TResult Function() activateSuccess,
     required TResult Function(StorageError error) activateFailed,
+    required TResult Function() changingCustomerType,
+    required TResult Function() changeCustomerTypeSuccess,
+    required TResult Function(StorageError error) changeCustomerTypeFailed,
   }) {
     return activateFailed(error);
   }
@@ -7482,6 +8157,9 @@ class _$DetailsActionsStateActivateFailedImpl
     TResult? Function()? activating,
     TResult? Function()? activateSuccess,
     TResult? Function(StorageError error)? activateFailed,
+    TResult? Function()? changingCustomerType,
+    TResult? Function()? changeCustomerTypeSuccess,
+    TResult? Function(StorageError error)? changeCustomerTypeFailed,
   }) {
     return activateFailed?.call(error);
   }
@@ -7513,6 +8191,9 @@ class _$DetailsActionsStateActivateFailedImpl
     TResult Function()? activating,
     TResult Function()? activateSuccess,
     TResult Function(StorageError error)? activateFailed,
+    TResult Function()? changingCustomerType,
+    TResult Function()? changeCustomerTypeSuccess,
+    TResult Function(StorageError error)? changeCustomerTypeFailed,
     required TResult orElse(),
   }) {
     if (activateFailed != null) {
@@ -7568,6 +8249,13 @@ class _$DetailsActionsStateActivateFailedImpl
         activateSuccess,
     required TResult Function(DetailsActionsStateActivateFailed value)
         activateFailed,
+    required TResult Function(DetailsActionsStateChangingCustomerType value)
+        changingCustomerType,
+    required TResult Function(
+            DetailsActionsStateChangeCustomerTypeSuccess value)
+        changeCustomerTypeSuccess,
+    required TResult Function(DetailsActionsStateChangeCustomerTypeFailed value)
+        changeCustomerTypeFailed,
   }) {
     return activateFailed(this);
   }
@@ -7610,6 +8298,12 @@ class _$DetailsActionsStateActivateFailedImpl
     TResult? Function(DetailsActionsStateActivateSuccess value)?
         activateSuccess,
     TResult? Function(DetailsActionsStateActivateFailed value)? activateFailed,
+    TResult? Function(DetailsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult? Function(DetailsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult? Function(DetailsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
   }) {
     return activateFailed?.call(this);
   }
@@ -7650,6 +8344,12 @@ class _$DetailsActionsStateActivateFailedImpl
     TResult Function(DetailsActionsStateActivating value)? activating,
     TResult Function(DetailsActionsStateActivateSuccess value)? activateSuccess,
     TResult Function(DetailsActionsStateActivateFailed value)? activateFailed,
+    TResult Function(DetailsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult Function(DetailsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult Function(DetailsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
     required TResult orElse(),
   }) {
     if (activateFailed != null) {
@@ -7672,5 +8372,1026 @@ abstract class DetailsActionsStateActivateFailed
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DetailsActionsStateActivateFailedImplCopyWith<
           _$DetailsActionsStateActivateFailedImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$DetailsActionsStateChangingCustomerTypeImplCopyWith<$Res> {
+  factory _$$DetailsActionsStateChangingCustomerTypeImplCopyWith(
+          _$DetailsActionsStateChangingCustomerTypeImpl value,
+          $Res Function(_$DetailsActionsStateChangingCustomerTypeImpl) then) =
+      __$$DetailsActionsStateChangingCustomerTypeImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$DetailsActionsStateChangingCustomerTypeImplCopyWithImpl<$Res>
+    extends _$DetailsActionsStateCopyWithImpl<$Res,
+        _$DetailsActionsStateChangingCustomerTypeImpl>
+    implements _$$DetailsActionsStateChangingCustomerTypeImplCopyWith<$Res> {
+  __$$DetailsActionsStateChangingCustomerTypeImplCopyWithImpl(
+      _$DetailsActionsStateChangingCustomerTypeImpl _value,
+      $Res Function(_$DetailsActionsStateChangingCustomerTypeImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of DetailsActionsState
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$DetailsActionsStateChangingCustomerTypeImpl
+    with DiagnosticableTreeMixin
+    implements DetailsActionsStateChangingCustomerType {
+  const _$DetailsActionsStateChangingCustomerTypeImpl();
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'DetailsActionsState.changingCustomerType()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties.add(DiagnosticsProperty(
+        'type', 'DetailsActionsState.changingCustomerType'));
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$DetailsActionsStateChangingCustomerTypeImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() deleting,
+    required TResult Function() deleteSuccess,
+    required TResult Function(StorageError error) deleteFailed,
+    required TResult Function() markingAsRead,
+    required TResult Function() markAsReadSuccess,
+    required TResult Function(StorageError error) markAsReadFailed,
+    required TResult Function() movingToActive,
+    required TResult Function() moveToActiveSuccess,
+    required TResult Function(StorageError error) moveToActiveFailed,
+    required TResult Function() movingToArchive,
+    required TResult Function() moveToArchiveSuccess,
+    required TResult Function(StorageError error) moveToArchiveFailed,
+    required TResult Function() refreshing,
+    required TResult Function() refreshSuccess,
+    required TResult Function(StorageError error) refreshFailed,
+    required TResult Function(Duration remainingTime) refreshFreqLimited,
+    required TResult Function() sharingString,
+    required TResult Function(String text) shareStringSuccess,
+    required TResult Function() copyingTrack,
+    required TResult Function(String trackNumber) copyTrackSuccess,
+    required TResult Function() activating,
+    required TResult Function() activateSuccess,
+    required TResult Function(StorageError error) activateFailed,
+    required TResult Function() changingCustomerType,
+    required TResult Function() changeCustomerTypeSuccess,
+    required TResult Function(StorageError error) changeCustomerTypeFailed,
+  }) {
+    return changingCustomerType();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? deleting,
+    TResult? Function()? deleteSuccess,
+    TResult? Function(StorageError error)? deleteFailed,
+    TResult? Function()? markingAsRead,
+    TResult? Function()? markAsReadSuccess,
+    TResult? Function(StorageError error)? markAsReadFailed,
+    TResult? Function()? movingToActive,
+    TResult? Function()? moveToActiveSuccess,
+    TResult? Function(StorageError error)? moveToActiveFailed,
+    TResult? Function()? movingToArchive,
+    TResult? Function()? moveToArchiveSuccess,
+    TResult? Function(StorageError error)? moveToArchiveFailed,
+    TResult? Function()? refreshing,
+    TResult? Function()? refreshSuccess,
+    TResult? Function(StorageError error)? refreshFailed,
+    TResult? Function(Duration remainingTime)? refreshFreqLimited,
+    TResult? Function()? sharingString,
+    TResult? Function(String text)? shareStringSuccess,
+    TResult? Function()? copyingTrack,
+    TResult? Function(String trackNumber)? copyTrackSuccess,
+    TResult? Function()? activating,
+    TResult? Function()? activateSuccess,
+    TResult? Function(StorageError error)? activateFailed,
+    TResult? Function()? changingCustomerType,
+    TResult? Function()? changeCustomerTypeSuccess,
+    TResult? Function(StorageError error)? changeCustomerTypeFailed,
+  }) {
+    return changingCustomerType?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? deleting,
+    TResult Function()? deleteSuccess,
+    TResult Function(StorageError error)? deleteFailed,
+    TResult Function()? markingAsRead,
+    TResult Function()? markAsReadSuccess,
+    TResult Function(StorageError error)? markAsReadFailed,
+    TResult Function()? movingToActive,
+    TResult Function()? moveToActiveSuccess,
+    TResult Function(StorageError error)? moveToActiveFailed,
+    TResult Function()? movingToArchive,
+    TResult Function()? moveToArchiveSuccess,
+    TResult Function(StorageError error)? moveToArchiveFailed,
+    TResult Function()? refreshing,
+    TResult Function()? refreshSuccess,
+    TResult Function(StorageError error)? refreshFailed,
+    TResult Function(Duration remainingTime)? refreshFreqLimited,
+    TResult Function()? sharingString,
+    TResult Function(String text)? shareStringSuccess,
+    TResult Function()? copyingTrack,
+    TResult Function(String trackNumber)? copyTrackSuccess,
+    TResult Function()? activating,
+    TResult Function()? activateSuccess,
+    TResult Function(StorageError error)? activateFailed,
+    TResult Function()? changingCustomerType,
+    TResult Function()? changeCustomerTypeSuccess,
+    TResult Function(StorageError error)? changeCustomerTypeFailed,
+    required TResult orElse(),
+  }) {
+    if (changingCustomerType != null) {
+      return changingCustomerType();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(DetailsActionsStateInitial value) initial,
+    required TResult Function(DetailsActionsStateDeleting value) deleting,
+    required TResult Function(DetailsActionsStateDeleteSuccess value)
+        deleteSuccess,
+    required TResult Function(DetailsActionsStateDeleteFailed value)
+        deleteFailed,
+    required TResult Function(DetailsActionsStateMarkingAsRead value)
+        markingAsRead,
+    required TResult Function(DetailsActionsStateMarkAsReadSuccess value)
+        markAsReadSuccess,
+    required TResult Function(DetailsActionsStateMarkAsReadFailed value)
+        markAsReadFailed,
+    required TResult Function(DetailsActionsStateMovingToActive value)
+        movingToActive,
+    required TResult Function(DetailsActionsStateMoveToActiveSuccess value)
+        moveToActiveSuccess,
+    required TResult Function(DetailsActionsStateMoveToActiveFailed value)
+        moveToActiveFailed,
+    required TResult Function(DetailsActionsStateMovingToArchive value)
+        movingToArchive,
+    required TResult Function(DetailsActionsStateMoveToArchiveSuccess value)
+        moveToArchiveSuccess,
+    required TResult Function(DetailsActionsStateMoveToArchiveFailed value)
+        moveToArchiveFailed,
+    required TResult Function(DetailsActionsStateRefreshing value) refreshing,
+    required TResult Function(DetailsActionsStateRefreshSuccess value)
+        refreshSuccess,
+    required TResult Function(DetailsActionsStateRefreshFailed value)
+        refreshFailed,
+    required TResult Function(DetailsActionsStateRefreshFreqLimited value)
+        refreshFreqLimited,
+    required TResult Function(DetailsActionsStateSharingString value)
+        sharingString,
+    required TResult Function(DetailsActionsStateShareStringSuccess value)
+        shareStringSuccess,
+    required TResult Function(DetailsActionsStateCopyingTrack value)
+        copyingTrack,
+    required TResult Function(DetailsActionsStateCopyTrackSuccess value)
+        copyTrackSuccess,
+    required TResult Function(DetailsActionsStateActivating value) activating,
+    required TResult Function(DetailsActionsStateActivateSuccess value)
+        activateSuccess,
+    required TResult Function(DetailsActionsStateActivateFailed value)
+        activateFailed,
+    required TResult Function(DetailsActionsStateChangingCustomerType value)
+        changingCustomerType,
+    required TResult Function(
+            DetailsActionsStateChangeCustomerTypeSuccess value)
+        changeCustomerTypeSuccess,
+    required TResult Function(DetailsActionsStateChangeCustomerTypeFailed value)
+        changeCustomerTypeFailed,
+  }) {
+    return changingCustomerType(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(DetailsActionsStateInitial value)? initial,
+    TResult? Function(DetailsActionsStateDeleting value)? deleting,
+    TResult? Function(DetailsActionsStateDeleteSuccess value)? deleteSuccess,
+    TResult? Function(DetailsActionsStateDeleteFailed value)? deleteFailed,
+    TResult? Function(DetailsActionsStateMarkingAsRead value)? markingAsRead,
+    TResult? Function(DetailsActionsStateMarkAsReadSuccess value)?
+        markAsReadSuccess,
+    TResult? Function(DetailsActionsStateMarkAsReadFailed value)?
+        markAsReadFailed,
+    TResult? Function(DetailsActionsStateMovingToActive value)? movingToActive,
+    TResult? Function(DetailsActionsStateMoveToActiveSuccess value)?
+        moveToActiveSuccess,
+    TResult? Function(DetailsActionsStateMoveToActiveFailed value)?
+        moveToActiveFailed,
+    TResult? Function(DetailsActionsStateMovingToArchive value)?
+        movingToArchive,
+    TResult? Function(DetailsActionsStateMoveToArchiveSuccess value)?
+        moveToArchiveSuccess,
+    TResult? Function(DetailsActionsStateMoveToArchiveFailed value)?
+        moveToArchiveFailed,
+    TResult? Function(DetailsActionsStateRefreshing value)? refreshing,
+    TResult? Function(DetailsActionsStateRefreshSuccess value)? refreshSuccess,
+    TResult? Function(DetailsActionsStateRefreshFailed value)? refreshFailed,
+    TResult? Function(DetailsActionsStateRefreshFreqLimited value)?
+        refreshFreqLimited,
+    TResult? Function(DetailsActionsStateSharingString value)? sharingString,
+    TResult? Function(DetailsActionsStateShareStringSuccess value)?
+        shareStringSuccess,
+    TResult? Function(DetailsActionsStateCopyingTrack value)? copyingTrack,
+    TResult? Function(DetailsActionsStateCopyTrackSuccess value)?
+        copyTrackSuccess,
+    TResult? Function(DetailsActionsStateActivating value)? activating,
+    TResult? Function(DetailsActionsStateActivateSuccess value)?
+        activateSuccess,
+    TResult? Function(DetailsActionsStateActivateFailed value)? activateFailed,
+    TResult? Function(DetailsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult? Function(DetailsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult? Function(DetailsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
+  }) {
+    return changingCustomerType?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(DetailsActionsStateInitial value)? initial,
+    TResult Function(DetailsActionsStateDeleting value)? deleting,
+    TResult Function(DetailsActionsStateDeleteSuccess value)? deleteSuccess,
+    TResult Function(DetailsActionsStateDeleteFailed value)? deleteFailed,
+    TResult Function(DetailsActionsStateMarkingAsRead value)? markingAsRead,
+    TResult Function(DetailsActionsStateMarkAsReadSuccess value)?
+        markAsReadSuccess,
+    TResult Function(DetailsActionsStateMarkAsReadFailed value)?
+        markAsReadFailed,
+    TResult Function(DetailsActionsStateMovingToActive value)? movingToActive,
+    TResult Function(DetailsActionsStateMoveToActiveSuccess value)?
+        moveToActiveSuccess,
+    TResult Function(DetailsActionsStateMoveToActiveFailed value)?
+        moveToActiveFailed,
+    TResult Function(DetailsActionsStateMovingToArchive value)? movingToArchive,
+    TResult Function(DetailsActionsStateMoveToArchiveSuccess value)?
+        moveToArchiveSuccess,
+    TResult Function(DetailsActionsStateMoveToArchiveFailed value)?
+        moveToArchiveFailed,
+    TResult Function(DetailsActionsStateRefreshing value)? refreshing,
+    TResult Function(DetailsActionsStateRefreshSuccess value)? refreshSuccess,
+    TResult Function(DetailsActionsStateRefreshFailed value)? refreshFailed,
+    TResult Function(DetailsActionsStateRefreshFreqLimited value)?
+        refreshFreqLimited,
+    TResult Function(DetailsActionsStateSharingString value)? sharingString,
+    TResult Function(DetailsActionsStateShareStringSuccess value)?
+        shareStringSuccess,
+    TResult Function(DetailsActionsStateCopyingTrack value)? copyingTrack,
+    TResult Function(DetailsActionsStateCopyTrackSuccess value)?
+        copyTrackSuccess,
+    TResult Function(DetailsActionsStateActivating value)? activating,
+    TResult Function(DetailsActionsStateActivateSuccess value)? activateSuccess,
+    TResult Function(DetailsActionsStateActivateFailed value)? activateFailed,
+    TResult Function(DetailsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult Function(DetailsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult Function(DetailsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
+    required TResult orElse(),
+  }) {
+    if (changingCustomerType != null) {
+      return changingCustomerType(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class DetailsActionsStateChangingCustomerType
+    implements DetailsActionsState {
+  const factory DetailsActionsStateChangingCustomerType() =
+      _$DetailsActionsStateChangingCustomerTypeImpl;
+}
+
+/// @nodoc
+abstract class _$$DetailsActionsStateChangeCustomerTypeSuccessImplCopyWith<
+    $Res> {
+  factory _$$DetailsActionsStateChangeCustomerTypeSuccessImplCopyWith(
+          _$DetailsActionsStateChangeCustomerTypeSuccessImpl value,
+          $Res Function(_$DetailsActionsStateChangeCustomerTypeSuccessImpl)
+              then) =
+      __$$DetailsActionsStateChangeCustomerTypeSuccessImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$DetailsActionsStateChangeCustomerTypeSuccessImplCopyWithImpl<$Res>
+    extends _$DetailsActionsStateCopyWithImpl<$Res,
+        _$DetailsActionsStateChangeCustomerTypeSuccessImpl>
+    implements
+        _$$DetailsActionsStateChangeCustomerTypeSuccessImplCopyWith<$Res> {
+  __$$DetailsActionsStateChangeCustomerTypeSuccessImplCopyWithImpl(
+      _$DetailsActionsStateChangeCustomerTypeSuccessImpl _value,
+      $Res Function(_$DetailsActionsStateChangeCustomerTypeSuccessImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of DetailsActionsState
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$DetailsActionsStateChangeCustomerTypeSuccessImpl
+    with DiagnosticableTreeMixin
+    implements DetailsActionsStateChangeCustomerTypeSuccess {
+  const _$DetailsActionsStateChangeCustomerTypeSuccessImpl();
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'DetailsActionsState.changeCustomerTypeSuccess()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties.add(DiagnosticsProperty(
+        'type', 'DetailsActionsState.changeCustomerTypeSuccess'));
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$DetailsActionsStateChangeCustomerTypeSuccessImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() deleting,
+    required TResult Function() deleteSuccess,
+    required TResult Function(StorageError error) deleteFailed,
+    required TResult Function() markingAsRead,
+    required TResult Function() markAsReadSuccess,
+    required TResult Function(StorageError error) markAsReadFailed,
+    required TResult Function() movingToActive,
+    required TResult Function() moveToActiveSuccess,
+    required TResult Function(StorageError error) moveToActiveFailed,
+    required TResult Function() movingToArchive,
+    required TResult Function() moveToArchiveSuccess,
+    required TResult Function(StorageError error) moveToArchiveFailed,
+    required TResult Function() refreshing,
+    required TResult Function() refreshSuccess,
+    required TResult Function(StorageError error) refreshFailed,
+    required TResult Function(Duration remainingTime) refreshFreqLimited,
+    required TResult Function() sharingString,
+    required TResult Function(String text) shareStringSuccess,
+    required TResult Function() copyingTrack,
+    required TResult Function(String trackNumber) copyTrackSuccess,
+    required TResult Function() activating,
+    required TResult Function() activateSuccess,
+    required TResult Function(StorageError error) activateFailed,
+    required TResult Function() changingCustomerType,
+    required TResult Function() changeCustomerTypeSuccess,
+    required TResult Function(StorageError error) changeCustomerTypeFailed,
+  }) {
+    return changeCustomerTypeSuccess();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? deleting,
+    TResult? Function()? deleteSuccess,
+    TResult? Function(StorageError error)? deleteFailed,
+    TResult? Function()? markingAsRead,
+    TResult? Function()? markAsReadSuccess,
+    TResult? Function(StorageError error)? markAsReadFailed,
+    TResult? Function()? movingToActive,
+    TResult? Function()? moveToActiveSuccess,
+    TResult? Function(StorageError error)? moveToActiveFailed,
+    TResult? Function()? movingToArchive,
+    TResult? Function()? moveToArchiveSuccess,
+    TResult? Function(StorageError error)? moveToArchiveFailed,
+    TResult? Function()? refreshing,
+    TResult? Function()? refreshSuccess,
+    TResult? Function(StorageError error)? refreshFailed,
+    TResult? Function(Duration remainingTime)? refreshFreqLimited,
+    TResult? Function()? sharingString,
+    TResult? Function(String text)? shareStringSuccess,
+    TResult? Function()? copyingTrack,
+    TResult? Function(String trackNumber)? copyTrackSuccess,
+    TResult? Function()? activating,
+    TResult? Function()? activateSuccess,
+    TResult? Function(StorageError error)? activateFailed,
+    TResult? Function()? changingCustomerType,
+    TResult? Function()? changeCustomerTypeSuccess,
+    TResult? Function(StorageError error)? changeCustomerTypeFailed,
+  }) {
+    return changeCustomerTypeSuccess?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? deleting,
+    TResult Function()? deleteSuccess,
+    TResult Function(StorageError error)? deleteFailed,
+    TResult Function()? markingAsRead,
+    TResult Function()? markAsReadSuccess,
+    TResult Function(StorageError error)? markAsReadFailed,
+    TResult Function()? movingToActive,
+    TResult Function()? moveToActiveSuccess,
+    TResult Function(StorageError error)? moveToActiveFailed,
+    TResult Function()? movingToArchive,
+    TResult Function()? moveToArchiveSuccess,
+    TResult Function(StorageError error)? moveToArchiveFailed,
+    TResult Function()? refreshing,
+    TResult Function()? refreshSuccess,
+    TResult Function(StorageError error)? refreshFailed,
+    TResult Function(Duration remainingTime)? refreshFreqLimited,
+    TResult Function()? sharingString,
+    TResult Function(String text)? shareStringSuccess,
+    TResult Function()? copyingTrack,
+    TResult Function(String trackNumber)? copyTrackSuccess,
+    TResult Function()? activating,
+    TResult Function()? activateSuccess,
+    TResult Function(StorageError error)? activateFailed,
+    TResult Function()? changingCustomerType,
+    TResult Function()? changeCustomerTypeSuccess,
+    TResult Function(StorageError error)? changeCustomerTypeFailed,
+    required TResult orElse(),
+  }) {
+    if (changeCustomerTypeSuccess != null) {
+      return changeCustomerTypeSuccess();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(DetailsActionsStateInitial value) initial,
+    required TResult Function(DetailsActionsStateDeleting value) deleting,
+    required TResult Function(DetailsActionsStateDeleteSuccess value)
+        deleteSuccess,
+    required TResult Function(DetailsActionsStateDeleteFailed value)
+        deleteFailed,
+    required TResult Function(DetailsActionsStateMarkingAsRead value)
+        markingAsRead,
+    required TResult Function(DetailsActionsStateMarkAsReadSuccess value)
+        markAsReadSuccess,
+    required TResult Function(DetailsActionsStateMarkAsReadFailed value)
+        markAsReadFailed,
+    required TResult Function(DetailsActionsStateMovingToActive value)
+        movingToActive,
+    required TResult Function(DetailsActionsStateMoveToActiveSuccess value)
+        moveToActiveSuccess,
+    required TResult Function(DetailsActionsStateMoveToActiveFailed value)
+        moveToActiveFailed,
+    required TResult Function(DetailsActionsStateMovingToArchive value)
+        movingToArchive,
+    required TResult Function(DetailsActionsStateMoveToArchiveSuccess value)
+        moveToArchiveSuccess,
+    required TResult Function(DetailsActionsStateMoveToArchiveFailed value)
+        moveToArchiveFailed,
+    required TResult Function(DetailsActionsStateRefreshing value) refreshing,
+    required TResult Function(DetailsActionsStateRefreshSuccess value)
+        refreshSuccess,
+    required TResult Function(DetailsActionsStateRefreshFailed value)
+        refreshFailed,
+    required TResult Function(DetailsActionsStateRefreshFreqLimited value)
+        refreshFreqLimited,
+    required TResult Function(DetailsActionsStateSharingString value)
+        sharingString,
+    required TResult Function(DetailsActionsStateShareStringSuccess value)
+        shareStringSuccess,
+    required TResult Function(DetailsActionsStateCopyingTrack value)
+        copyingTrack,
+    required TResult Function(DetailsActionsStateCopyTrackSuccess value)
+        copyTrackSuccess,
+    required TResult Function(DetailsActionsStateActivating value) activating,
+    required TResult Function(DetailsActionsStateActivateSuccess value)
+        activateSuccess,
+    required TResult Function(DetailsActionsStateActivateFailed value)
+        activateFailed,
+    required TResult Function(DetailsActionsStateChangingCustomerType value)
+        changingCustomerType,
+    required TResult Function(
+            DetailsActionsStateChangeCustomerTypeSuccess value)
+        changeCustomerTypeSuccess,
+    required TResult Function(DetailsActionsStateChangeCustomerTypeFailed value)
+        changeCustomerTypeFailed,
+  }) {
+    return changeCustomerTypeSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(DetailsActionsStateInitial value)? initial,
+    TResult? Function(DetailsActionsStateDeleting value)? deleting,
+    TResult? Function(DetailsActionsStateDeleteSuccess value)? deleteSuccess,
+    TResult? Function(DetailsActionsStateDeleteFailed value)? deleteFailed,
+    TResult? Function(DetailsActionsStateMarkingAsRead value)? markingAsRead,
+    TResult? Function(DetailsActionsStateMarkAsReadSuccess value)?
+        markAsReadSuccess,
+    TResult? Function(DetailsActionsStateMarkAsReadFailed value)?
+        markAsReadFailed,
+    TResult? Function(DetailsActionsStateMovingToActive value)? movingToActive,
+    TResult? Function(DetailsActionsStateMoveToActiveSuccess value)?
+        moveToActiveSuccess,
+    TResult? Function(DetailsActionsStateMoveToActiveFailed value)?
+        moveToActiveFailed,
+    TResult? Function(DetailsActionsStateMovingToArchive value)?
+        movingToArchive,
+    TResult? Function(DetailsActionsStateMoveToArchiveSuccess value)?
+        moveToArchiveSuccess,
+    TResult? Function(DetailsActionsStateMoveToArchiveFailed value)?
+        moveToArchiveFailed,
+    TResult? Function(DetailsActionsStateRefreshing value)? refreshing,
+    TResult? Function(DetailsActionsStateRefreshSuccess value)? refreshSuccess,
+    TResult? Function(DetailsActionsStateRefreshFailed value)? refreshFailed,
+    TResult? Function(DetailsActionsStateRefreshFreqLimited value)?
+        refreshFreqLimited,
+    TResult? Function(DetailsActionsStateSharingString value)? sharingString,
+    TResult? Function(DetailsActionsStateShareStringSuccess value)?
+        shareStringSuccess,
+    TResult? Function(DetailsActionsStateCopyingTrack value)? copyingTrack,
+    TResult? Function(DetailsActionsStateCopyTrackSuccess value)?
+        copyTrackSuccess,
+    TResult? Function(DetailsActionsStateActivating value)? activating,
+    TResult? Function(DetailsActionsStateActivateSuccess value)?
+        activateSuccess,
+    TResult? Function(DetailsActionsStateActivateFailed value)? activateFailed,
+    TResult? Function(DetailsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult? Function(DetailsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult? Function(DetailsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
+  }) {
+    return changeCustomerTypeSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(DetailsActionsStateInitial value)? initial,
+    TResult Function(DetailsActionsStateDeleting value)? deleting,
+    TResult Function(DetailsActionsStateDeleteSuccess value)? deleteSuccess,
+    TResult Function(DetailsActionsStateDeleteFailed value)? deleteFailed,
+    TResult Function(DetailsActionsStateMarkingAsRead value)? markingAsRead,
+    TResult Function(DetailsActionsStateMarkAsReadSuccess value)?
+        markAsReadSuccess,
+    TResult Function(DetailsActionsStateMarkAsReadFailed value)?
+        markAsReadFailed,
+    TResult Function(DetailsActionsStateMovingToActive value)? movingToActive,
+    TResult Function(DetailsActionsStateMoveToActiveSuccess value)?
+        moveToActiveSuccess,
+    TResult Function(DetailsActionsStateMoveToActiveFailed value)?
+        moveToActiveFailed,
+    TResult Function(DetailsActionsStateMovingToArchive value)? movingToArchive,
+    TResult Function(DetailsActionsStateMoveToArchiveSuccess value)?
+        moveToArchiveSuccess,
+    TResult Function(DetailsActionsStateMoveToArchiveFailed value)?
+        moveToArchiveFailed,
+    TResult Function(DetailsActionsStateRefreshing value)? refreshing,
+    TResult Function(DetailsActionsStateRefreshSuccess value)? refreshSuccess,
+    TResult Function(DetailsActionsStateRefreshFailed value)? refreshFailed,
+    TResult Function(DetailsActionsStateRefreshFreqLimited value)?
+        refreshFreqLimited,
+    TResult Function(DetailsActionsStateSharingString value)? sharingString,
+    TResult Function(DetailsActionsStateShareStringSuccess value)?
+        shareStringSuccess,
+    TResult Function(DetailsActionsStateCopyingTrack value)? copyingTrack,
+    TResult Function(DetailsActionsStateCopyTrackSuccess value)?
+        copyTrackSuccess,
+    TResult Function(DetailsActionsStateActivating value)? activating,
+    TResult Function(DetailsActionsStateActivateSuccess value)? activateSuccess,
+    TResult Function(DetailsActionsStateActivateFailed value)? activateFailed,
+    TResult Function(DetailsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult Function(DetailsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult Function(DetailsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
+    required TResult orElse(),
+  }) {
+    if (changeCustomerTypeSuccess != null) {
+      return changeCustomerTypeSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class DetailsActionsStateChangeCustomerTypeSuccess
+    implements DetailsActionsState {
+  const factory DetailsActionsStateChangeCustomerTypeSuccess() =
+      _$DetailsActionsStateChangeCustomerTypeSuccessImpl;
+}
+
+/// @nodoc
+abstract class _$$DetailsActionsStateChangeCustomerTypeFailedImplCopyWith<
+    $Res> {
+  factory _$$DetailsActionsStateChangeCustomerTypeFailedImplCopyWith(
+          _$DetailsActionsStateChangeCustomerTypeFailedImpl value,
+          $Res Function(_$DetailsActionsStateChangeCustomerTypeFailedImpl)
+              then) =
+      __$$DetailsActionsStateChangeCustomerTypeFailedImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({StorageError error});
+
+  $StorageErrorCopyWith<$Res> get error;
+}
+
+/// @nodoc
+class __$$DetailsActionsStateChangeCustomerTypeFailedImplCopyWithImpl<$Res>
+    extends _$DetailsActionsStateCopyWithImpl<$Res,
+        _$DetailsActionsStateChangeCustomerTypeFailedImpl>
+    implements
+        _$$DetailsActionsStateChangeCustomerTypeFailedImplCopyWith<$Res> {
+  __$$DetailsActionsStateChangeCustomerTypeFailedImplCopyWithImpl(
+      _$DetailsActionsStateChangeCustomerTypeFailedImpl _value,
+      $Res Function(_$DetailsActionsStateChangeCustomerTypeFailedImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of DetailsActionsState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? error = null,
+  }) {
+    return _then(_$DetailsActionsStateChangeCustomerTypeFailedImpl(
+      error: null == error
+          ? _value.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as StorageError,
+    ));
+  }
+
+  /// Create a copy of DetailsActionsState
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $StorageErrorCopyWith<$Res> get error {
+    return $StorageErrorCopyWith<$Res>(_value.error, (value) {
+      return _then(_value.copyWith(error: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$DetailsActionsStateChangeCustomerTypeFailedImpl
+    with DiagnosticableTreeMixin
+    implements DetailsActionsStateChangeCustomerTypeFailed {
+  const _$DetailsActionsStateChangeCustomerTypeFailedImpl(
+      {required this.error});
+
+  @override
+  final StorageError error;
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'DetailsActionsState.changeCustomerTypeFailed(error: $error)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty(
+          'type', 'DetailsActionsState.changeCustomerTypeFailed'))
+      ..add(DiagnosticsProperty('error', error));
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$DetailsActionsStateChangeCustomerTypeFailedImpl &&
+            (identical(other.error, error) || other.error == error));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, error);
+
+  /// Create a copy of DetailsActionsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$DetailsActionsStateChangeCustomerTypeFailedImplCopyWith<
+          _$DetailsActionsStateChangeCustomerTypeFailedImpl>
+      get copyWith =>
+          __$$DetailsActionsStateChangeCustomerTypeFailedImplCopyWithImpl<
+                  _$DetailsActionsStateChangeCustomerTypeFailedImpl>(
+              this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() deleting,
+    required TResult Function() deleteSuccess,
+    required TResult Function(StorageError error) deleteFailed,
+    required TResult Function() markingAsRead,
+    required TResult Function() markAsReadSuccess,
+    required TResult Function(StorageError error) markAsReadFailed,
+    required TResult Function() movingToActive,
+    required TResult Function() moveToActiveSuccess,
+    required TResult Function(StorageError error) moveToActiveFailed,
+    required TResult Function() movingToArchive,
+    required TResult Function() moveToArchiveSuccess,
+    required TResult Function(StorageError error) moveToArchiveFailed,
+    required TResult Function() refreshing,
+    required TResult Function() refreshSuccess,
+    required TResult Function(StorageError error) refreshFailed,
+    required TResult Function(Duration remainingTime) refreshFreqLimited,
+    required TResult Function() sharingString,
+    required TResult Function(String text) shareStringSuccess,
+    required TResult Function() copyingTrack,
+    required TResult Function(String trackNumber) copyTrackSuccess,
+    required TResult Function() activating,
+    required TResult Function() activateSuccess,
+    required TResult Function(StorageError error) activateFailed,
+    required TResult Function() changingCustomerType,
+    required TResult Function() changeCustomerTypeSuccess,
+    required TResult Function(StorageError error) changeCustomerTypeFailed,
+  }) {
+    return changeCustomerTypeFailed(error);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? deleting,
+    TResult? Function()? deleteSuccess,
+    TResult? Function(StorageError error)? deleteFailed,
+    TResult? Function()? markingAsRead,
+    TResult? Function()? markAsReadSuccess,
+    TResult? Function(StorageError error)? markAsReadFailed,
+    TResult? Function()? movingToActive,
+    TResult? Function()? moveToActiveSuccess,
+    TResult? Function(StorageError error)? moveToActiveFailed,
+    TResult? Function()? movingToArchive,
+    TResult? Function()? moveToArchiveSuccess,
+    TResult? Function(StorageError error)? moveToArchiveFailed,
+    TResult? Function()? refreshing,
+    TResult? Function()? refreshSuccess,
+    TResult? Function(StorageError error)? refreshFailed,
+    TResult? Function(Duration remainingTime)? refreshFreqLimited,
+    TResult? Function()? sharingString,
+    TResult? Function(String text)? shareStringSuccess,
+    TResult? Function()? copyingTrack,
+    TResult? Function(String trackNumber)? copyTrackSuccess,
+    TResult? Function()? activating,
+    TResult? Function()? activateSuccess,
+    TResult? Function(StorageError error)? activateFailed,
+    TResult? Function()? changingCustomerType,
+    TResult? Function()? changeCustomerTypeSuccess,
+    TResult? Function(StorageError error)? changeCustomerTypeFailed,
+  }) {
+    return changeCustomerTypeFailed?.call(error);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? deleting,
+    TResult Function()? deleteSuccess,
+    TResult Function(StorageError error)? deleteFailed,
+    TResult Function()? markingAsRead,
+    TResult Function()? markAsReadSuccess,
+    TResult Function(StorageError error)? markAsReadFailed,
+    TResult Function()? movingToActive,
+    TResult Function()? moveToActiveSuccess,
+    TResult Function(StorageError error)? moveToActiveFailed,
+    TResult Function()? movingToArchive,
+    TResult Function()? moveToArchiveSuccess,
+    TResult Function(StorageError error)? moveToArchiveFailed,
+    TResult Function()? refreshing,
+    TResult Function()? refreshSuccess,
+    TResult Function(StorageError error)? refreshFailed,
+    TResult Function(Duration remainingTime)? refreshFreqLimited,
+    TResult Function()? sharingString,
+    TResult Function(String text)? shareStringSuccess,
+    TResult Function()? copyingTrack,
+    TResult Function(String trackNumber)? copyTrackSuccess,
+    TResult Function()? activating,
+    TResult Function()? activateSuccess,
+    TResult Function(StorageError error)? activateFailed,
+    TResult Function()? changingCustomerType,
+    TResult Function()? changeCustomerTypeSuccess,
+    TResult Function(StorageError error)? changeCustomerTypeFailed,
+    required TResult orElse(),
+  }) {
+    if (changeCustomerTypeFailed != null) {
+      return changeCustomerTypeFailed(error);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(DetailsActionsStateInitial value) initial,
+    required TResult Function(DetailsActionsStateDeleting value) deleting,
+    required TResult Function(DetailsActionsStateDeleteSuccess value)
+        deleteSuccess,
+    required TResult Function(DetailsActionsStateDeleteFailed value)
+        deleteFailed,
+    required TResult Function(DetailsActionsStateMarkingAsRead value)
+        markingAsRead,
+    required TResult Function(DetailsActionsStateMarkAsReadSuccess value)
+        markAsReadSuccess,
+    required TResult Function(DetailsActionsStateMarkAsReadFailed value)
+        markAsReadFailed,
+    required TResult Function(DetailsActionsStateMovingToActive value)
+        movingToActive,
+    required TResult Function(DetailsActionsStateMoveToActiveSuccess value)
+        moveToActiveSuccess,
+    required TResult Function(DetailsActionsStateMoveToActiveFailed value)
+        moveToActiveFailed,
+    required TResult Function(DetailsActionsStateMovingToArchive value)
+        movingToArchive,
+    required TResult Function(DetailsActionsStateMoveToArchiveSuccess value)
+        moveToArchiveSuccess,
+    required TResult Function(DetailsActionsStateMoveToArchiveFailed value)
+        moveToArchiveFailed,
+    required TResult Function(DetailsActionsStateRefreshing value) refreshing,
+    required TResult Function(DetailsActionsStateRefreshSuccess value)
+        refreshSuccess,
+    required TResult Function(DetailsActionsStateRefreshFailed value)
+        refreshFailed,
+    required TResult Function(DetailsActionsStateRefreshFreqLimited value)
+        refreshFreqLimited,
+    required TResult Function(DetailsActionsStateSharingString value)
+        sharingString,
+    required TResult Function(DetailsActionsStateShareStringSuccess value)
+        shareStringSuccess,
+    required TResult Function(DetailsActionsStateCopyingTrack value)
+        copyingTrack,
+    required TResult Function(DetailsActionsStateCopyTrackSuccess value)
+        copyTrackSuccess,
+    required TResult Function(DetailsActionsStateActivating value) activating,
+    required TResult Function(DetailsActionsStateActivateSuccess value)
+        activateSuccess,
+    required TResult Function(DetailsActionsStateActivateFailed value)
+        activateFailed,
+    required TResult Function(DetailsActionsStateChangingCustomerType value)
+        changingCustomerType,
+    required TResult Function(
+            DetailsActionsStateChangeCustomerTypeSuccess value)
+        changeCustomerTypeSuccess,
+    required TResult Function(DetailsActionsStateChangeCustomerTypeFailed value)
+        changeCustomerTypeFailed,
+  }) {
+    return changeCustomerTypeFailed(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(DetailsActionsStateInitial value)? initial,
+    TResult? Function(DetailsActionsStateDeleting value)? deleting,
+    TResult? Function(DetailsActionsStateDeleteSuccess value)? deleteSuccess,
+    TResult? Function(DetailsActionsStateDeleteFailed value)? deleteFailed,
+    TResult? Function(DetailsActionsStateMarkingAsRead value)? markingAsRead,
+    TResult? Function(DetailsActionsStateMarkAsReadSuccess value)?
+        markAsReadSuccess,
+    TResult? Function(DetailsActionsStateMarkAsReadFailed value)?
+        markAsReadFailed,
+    TResult? Function(DetailsActionsStateMovingToActive value)? movingToActive,
+    TResult? Function(DetailsActionsStateMoveToActiveSuccess value)?
+        moveToActiveSuccess,
+    TResult? Function(DetailsActionsStateMoveToActiveFailed value)?
+        moveToActiveFailed,
+    TResult? Function(DetailsActionsStateMovingToArchive value)?
+        movingToArchive,
+    TResult? Function(DetailsActionsStateMoveToArchiveSuccess value)?
+        moveToArchiveSuccess,
+    TResult? Function(DetailsActionsStateMoveToArchiveFailed value)?
+        moveToArchiveFailed,
+    TResult? Function(DetailsActionsStateRefreshing value)? refreshing,
+    TResult? Function(DetailsActionsStateRefreshSuccess value)? refreshSuccess,
+    TResult? Function(DetailsActionsStateRefreshFailed value)? refreshFailed,
+    TResult? Function(DetailsActionsStateRefreshFreqLimited value)?
+        refreshFreqLimited,
+    TResult? Function(DetailsActionsStateSharingString value)? sharingString,
+    TResult? Function(DetailsActionsStateShareStringSuccess value)?
+        shareStringSuccess,
+    TResult? Function(DetailsActionsStateCopyingTrack value)? copyingTrack,
+    TResult? Function(DetailsActionsStateCopyTrackSuccess value)?
+        copyTrackSuccess,
+    TResult? Function(DetailsActionsStateActivating value)? activating,
+    TResult? Function(DetailsActionsStateActivateSuccess value)?
+        activateSuccess,
+    TResult? Function(DetailsActionsStateActivateFailed value)? activateFailed,
+    TResult? Function(DetailsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult? Function(DetailsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult? Function(DetailsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
+  }) {
+    return changeCustomerTypeFailed?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(DetailsActionsStateInitial value)? initial,
+    TResult Function(DetailsActionsStateDeleting value)? deleting,
+    TResult Function(DetailsActionsStateDeleteSuccess value)? deleteSuccess,
+    TResult Function(DetailsActionsStateDeleteFailed value)? deleteFailed,
+    TResult Function(DetailsActionsStateMarkingAsRead value)? markingAsRead,
+    TResult Function(DetailsActionsStateMarkAsReadSuccess value)?
+        markAsReadSuccess,
+    TResult Function(DetailsActionsStateMarkAsReadFailed value)?
+        markAsReadFailed,
+    TResult Function(DetailsActionsStateMovingToActive value)? movingToActive,
+    TResult Function(DetailsActionsStateMoveToActiveSuccess value)?
+        moveToActiveSuccess,
+    TResult Function(DetailsActionsStateMoveToActiveFailed value)?
+        moveToActiveFailed,
+    TResult Function(DetailsActionsStateMovingToArchive value)? movingToArchive,
+    TResult Function(DetailsActionsStateMoveToArchiveSuccess value)?
+        moveToArchiveSuccess,
+    TResult Function(DetailsActionsStateMoveToArchiveFailed value)?
+        moveToArchiveFailed,
+    TResult Function(DetailsActionsStateRefreshing value)? refreshing,
+    TResult Function(DetailsActionsStateRefreshSuccess value)? refreshSuccess,
+    TResult Function(DetailsActionsStateRefreshFailed value)? refreshFailed,
+    TResult Function(DetailsActionsStateRefreshFreqLimited value)?
+        refreshFreqLimited,
+    TResult Function(DetailsActionsStateSharingString value)? sharingString,
+    TResult Function(DetailsActionsStateShareStringSuccess value)?
+        shareStringSuccess,
+    TResult Function(DetailsActionsStateCopyingTrack value)? copyingTrack,
+    TResult Function(DetailsActionsStateCopyTrackSuccess value)?
+        copyTrackSuccess,
+    TResult Function(DetailsActionsStateActivating value)? activating,
+    TResult Function(DetailsActionsStateActivateSuccess value)? activateSuccess,
+    TResult Function(DetailsActionsStateActivateFailed value)? activateFailed,
+    TResult Function(DetailsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult Function(DetailsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult Function(DetailsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
+    required TResult orElse(),
+  }) {
+    if (changeCustomerTypeFailed != null) {
+      return changeCustomerTypeFailed(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class DetailsActionsStateChangeCustomerTypeFailed
+    implements DetailsActionsState {
+  const factory DetailsActionsStateChangeCustomerTypeFailed(
+          {required final StorageError error}) =
+      _$DetailsActionsStateChangeCustomerTypeFailedImpl;
+
+  StorageError get error;
+
+  /// Create a copy of DetailsActionsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$DetailsActionsStateChangeCustomerTypeFailedImplCopyWith<
+          _$DetailsActionsStateChangeCustomerTypeFailedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

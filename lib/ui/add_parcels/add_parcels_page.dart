@@ -1,4 +1,4 @@
-// Copyright (C) 2021 Yaroslav Pronin <proninyaroslav@mail.ru>
+// Copyright (C) 2021-2024 Yaroslav Pronin <proninyaroslav@mail.ru>
 // Copyright (C) 2021 Insurgo Inc. <insurgo@riseup.net>
 //
 // This file is part of LibreTrack.
@@ -18,9 +18,11 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:libretrack/core/entity/entity.dart';
 import 'package:libretrack/core/platform_info.dart';
 import 'package:libretrack/locale.dart';
 import 'package:libretrack/platform/barcode_scanner.dart';
+import 'package:libretrack/ui/add_parcels/components/customer_type_chips.dart';
 import 'package:libretrack/ui/add_parcels/model/add_parcels_cubit.dart';
 import 'package:libretrack/ui/add_parcels/model/add_parcels_state.dart';
 import 'package:libretrack/ui/components/widget.dart';
@@ -50,7 +52,7 @@ class AddParcelsPage extends StatelessWidget {
         title: Text(S.of(context).addParcels),
         body: Unfocus(
           child: _Form(
-            trackNumbers: initialTrackNumbers,
+            trackingNumbers: initialTrackNumbers,
           ),
         ),
         floatingActionButtonLocation: UiUtils.getAdaptiveFabLocation(
@@ -72,6 +74,7 @@ class AddParcelsPage extends StatelessWidget {
                 addFailed: (
                   trackingNumbers,
                   parcelNames,
+                  customerType,
                   exception,
                   stackTrace,
                 ) {
@@ -174,7 +177,7 @@ class AddParcelsPage extends StatelessWidget {
 }
 
 class _Form extends StatefulWidget {
-  final TrackingNumbers? trackNumbers;
+  final TrackingNumbers? trackingNumbers;
 
   static const _listPadding = EdgeInsets.fromLTRB(
     24.0,
@@ -183,7 +186,7 @@ class _Form extends StatefulWidget {
     UiUtils.fabBottomMargin,
   );
 
-  const _Form({this.trackNumbers});
+  const _Form({this.trackingNumbers});
 
   @override
   _FormState createState() => _FormState();
@@ -197,11 +200,13 @@ class _FormState extends State<_Form> {
     super.initState();
 
     _trackNumbersController = TextEditingController(
-      text: widget.trackNumbers?.value ?? '',
+      text: widget.trackingNumbers?.value ?? '',
     );
-    context
-        .read<AddParcelsCubit>()
-        .trackingNumbersChanged(_trackNumbersController.text);
+    WidgetsBinding.instance.addPostFrameCallback((_) async {
+      await context
+          .read<AddParcelsCubit>()
+          .load(trackingNumbers: widget.trackingNumbers);
+    });
   }
 
   @override
@@ -213,8 +218,8 @@ class _FormState extends State<_Form> {
 
   @override
   void didUpdateWidget(covariant _Form oldWidget) {
-    final trackNumbers = widget.trackNumbers;
-    if (trackNumbers != null && oldWidget.trackNumbers != trackNumbers) {
+    final trackNumbers = widget.trackingNumbers;
+    if (trackNumbers != null && oldWidget.trackingNumbers != trackNumbers) {
       _trackNumbersController.text = trackNumbers.value;
       context
           .read<AddParcelsCubit>()
@@ -232,27 +237,83 @@ class _FormState extends State<_Form> {
           key: const PageStorageKey('AddParcelsPageContent'),
           child: Padding(
             padding: _Form._listPadding,
-            child: BlocBuilder<AddParcelsCubit, AddParcelsState>(
-              buildWhen: (prev, next) {
-                return next.maybeMap(
-                  validationFailed: (_) => true,
-                  fieldChanged: (_) => true,
-                  orElse: () => false,
-                );
-              },
-              builder: (context, state) {
-                return state.maybeWhen(
-                  validationFailed: (trackingNumbers, parcelNames) {
-                    return _buildFields(context, trackingNumbers, parcelNames);
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                BlocBuilder<AddParcelsCubit, AddParcelsState>(
+                  buildWhen: (prev, next) {
+                    return next.maybeMap(
+                      loaded: (_) => true,
+                      customerTypeChanged: (_) => true,
+                      orElse: () => false,
+                    );
                   },
-                  fieldChanged: (trackingNumbers, parcelNames) {
-                    return _buildFields(context, trackingNumbers, parcelNames);
+                  builder: (context, state) {
+                    return CustomerTypeChips(
+                      customerType: _getCustomerType(state),
+                      onSelect: (type) {
+                        context
+                            .read<AddParcelsCubit>()
+                            .customerTypeChanged(type);
+                      },
+                    );
                   },
-                  orElse: () {
-                    return _buildFields(context, null, null);
+                ),
+
+                const SizedBox(height: 16.0),
+
+                BlocBuilder<AddParcelsCubit, AddParcelsState>(
+                  buildWhen: (prev, next) {
+                    return next.maybeMap(
+                      validationFailed: (_) => true,
+                      fieldChanged: (_) => true,
+                      orElse: () => false,
+                    );
                   },
-                );
-              },
+                  builder: (context, state) {
+                    return _MultilineFormField(
+                      controller: _trackNumbersController,
+                      labelText: S.of(context).trackingNumbers,
+                      hintText: S.of(context).trackingNumbersFieldHint,
+                      errorText: _getTrackingNumbersErrorStr(context, state),
+                      enableSuggestions: false,
+                      autocorrect: false,
+                      onChanged: (value) {
+                        context
+                            .read<AddParcelsCubit>()
+                            .trackingNumbersChanged(value);
+                      },
+                    );
+                  },
+                ),
+
+                // TODO: iOS/Desktop/Web support
+                if (getIt<PlatformInfo>().isAndroid)
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 8.0),
+                    child: _BarcodeScanButton(
+                      controller: _trackNumbersController,
+                      onScanned: () {
+                        context.read<AddParcelsCubit>().trackingNumbersChanged(
+                              _trackNumbersController.text,
+                            );
+                      },
+                    ),
+                  )
+                else
+                  const SizedBox(height: 8.0),
+
+                const SizedBox(height: 8.0),
+
+                _MultilineFormField(
+                  labelText: S.of(context).parcelNames,
+                  hintText: S.of(context).parcelNamesFieldHint,
+                  textCapitalization: TextCapitalization.sentences,
+                  onChanged: (value) {
+                    context.read<AddParcelsCubit>().parcelNamesChanged(value);
+                  },
+                ),
+              ],
             ),
           ),
         ),
@@ -260,64 +321,30 @@ class _FormState extends State<_Form> {
     );
   }
 
-  Widget _buildFields(
-    BuildContext context,
-    TrackingNumbers? trackingNumbers,
-    ParcelNames? parcelNames,
-  ) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        _MultilineFormField(
-          controller: _trackNumbersController,
-          labelText: S.of(context).trackingNumbers,
-          hintText: S.of(context).trackingNumbersFieldHint,
-          errorText: _getTrackingNumbersErrorStr(
-            context,
-            trackingNumbers?.error,
-          ),
-          enableSuggestions: false,
-          autocorrect: false,
-          onChanged: (value) {
-            context.read<AddParcelsCubit>().trackingNumbersChanged(value);
-          },
-        ),
-        // TODO: iOS/Desktop/Web support
-        if (getIt<PlatformInfo>().isAndroid)
-          Padding(
-            padding: const EdgeInsets.symmetric(vertical: 8.0),
-            child: _BarcodeScanButton(
-              controller: _trackNumbersController,
-              onScanned: () {
-                context
-                    .read<AddParcelsCubit>()
-                    .trackingNumbersChanged(_trackNumbersController.text);
-              },
-            ),
-          )
-        else
-          const SizedBox(height: 8.0),
-        const SizedBox(height: 8.0),
-        _MultilineFormField(
-          labelText: S.of(context).parcelNames,
-          hintText: S.of(context).parcelNamesFieldHint,
-          textCapitalization: TextCapitalization.sentences,
-          onChanged: (value) {
-            context.read<AddParcelsCubit>().parcelNamesChanged(value);
-          },
-        ),
-      ],
-    );
-  }
-
   String? _getTrackingNumbersErrorStr(
     BuildContext context,
-    TrackingNumbersError? error,
+    AddParcelsState? state,
   ) {
+    final error = state
+        ?.maybeMap(
+          validationFailed: (s) => s.trackingNumbers,
+          fieldChanged: (s) => s.trackingNumbers,
+          orElse: () => null,
+        )
+        ?.error;
     return error?.when(
       empty: () => S.of(context).fieldRequiredError,
     );
   }
+
+  CustomerType? _getCustomerType(AddParcelsState state) => state.maybeMap(
+        loaded: (s) => s.customerType,
+        fieldChanged: (s) => s.customerType,
+        customerTypeChanged: (s) => s.customerType,
+        validationFailed: (s) => s.customerType,
+        addFailed: (s) => s.customerType,
+        orElse: () => null,
+      );
 }
 
 class _MultilineFormField extends StatelessWidget {

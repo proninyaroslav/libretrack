@@ -51,7 +51,9 @@ class ParcelsFilter with _$ParcelsFilter {
     String? query,
   }) = ParcelsFilterSearch;
 
-  const factory ParcelsFilter.active() = ParcelsFilterActive;
+  const factory ParcelsFilter.receiver() = ParcelsFilterReceiver;
+
+  const factory ParcelsFilter.shipper() = ParcelsFilterShipper;
 
   const factory ParcelsFilter.archive() = ParcelsFilterArchive;
 

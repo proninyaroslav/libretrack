@@ -98,4 +98,15 @@ class ParcelsActionsState with _$ParcelsActionsState {
   const factory ParcelsActionsState.copyTrackSuccess({
     required String trackNumbers,
   }) = ParcelsActionsStateCopyTrackSuccess;
+
+  const factory ParcelsActionsState.changingCustomerType() =
+      ParcelsActionsStateChangingCustomerType;
+
+  const factory ParcelsActionsState.changeCustomerTypeSuccess() =
+      ParcelsActionsStateChangeCustomerTypeSuccess;
+
+  const factory ParcelsActionsState.changeCustomerTypeFailed({
+    required StorageError error,
+    required int parcelsCount,
+  }) = ParcelsActionsStateChangeCustomerTypeFailed;
 }

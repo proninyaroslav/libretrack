@@ -25,7 +25,10 @@ import 'entity.dart';
 
 part 'track_number_info.g.dart';
 
-@TypeConverters([NullableDateTimeConverter])
+@TypeConverters([
+  NullableDateTimeConverter,
+  CustomerTypeConverter,
+])
 @entity
 class TrackNumberInfo extends Equatable {
   @primaryKey
@@ -37,11 +40,14 @@ class TrackNumberInfo extends Equatable {
 
   final DateTime? dateAdded;
 
+  final CustomerType customerType;
+
   const TrackNumberInfo(
     this.trackNumber, {
     this.description,
     this.isArchived = false,
     this.dateAdded,
+    this.customerType = CustomerType.receiver,
   });
 
   @override
@@ -50,6 +56,7 @@ class TrackNumberInfo extends Equatable {
         description,
         isArchived,
         dateAdded,
+        customerType,
       ];
 
   @override
@@ -60,12 +67,14 @@ class TrackNumberInfo extends Equatable {
     String? description,
     bool? isArchived,
     DateTime? dateAdded,
+    CustomerType? customerType,
   }) =>
       TrackNumberInfo(
         trackNumber ?? this.trackNumber,
         description: description ?? this.description,
         isArchived: isArchived ?? this.isArchived,
         dateAdded: dateAdded ?? this.dateAdded,
+        customerType: customerType ?? this.customerType,
       );
 }
 
@@ -124,4 +133,12 @@ class TrackNumberService extends Equatable {
         serviceType: serviceType ?? this.serviceType,
         isActive: isActive ?? this.isActive,
       );
+}
+
+enum CustomerType {
+  @JsonValue('receiver')
+  receiver,
+
+  @JsonValue('shipper')
+  shipper,
 }

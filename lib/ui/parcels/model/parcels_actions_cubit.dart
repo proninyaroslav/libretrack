@@ -17,6 +17,7 @@
 // along with LibreTrack.  If not, see <http://www.gnu.org/licenses/>.
 
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:libretrack/core/entity/entity.dart';
 import 'package:libretrack/core/storage/track_number_repository.dart';
 import 'package:libretrack/core/storage/tracking_repository.dart';
 import 'package:libretrack/core/tracking_scheduler.dart';
@@ -179,4 +180,26 @@ class ParcelsActionsCubit extends Cubit<ParcelsActionsState> {
   }
 
   void refreshAll() => _trackingScheduler.enqueueOneshotAll();
+
+  Future<void> changeCustomerType(
+    Iterable<ParcelInfo> infoList, {
+    required CustomerType type,
+  }) async {
+    emit(const ParcelsActionsState.changingCustomerType());
+    final list = infoList
+        .map(
+          (info) => info.trackInfo.copyWith(customerType: type),
+        )
+        .toList();
+    final res = await _trackRepo.updateTrackList(list);
+    res.when(
+      (value) => emit(const ParcelsActionsState.changeCustomerTypeSuccess()),
+      error: (e) => emit(
+        ParcelsActionsState.changeCustomerTypeFailed(
+          error: e,
+          parcelsCount: infoList.length,
+        ),
+      ),
+    );
+  }
 }

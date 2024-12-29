@@ -64,7 +64,8 @@ void main() {
         cubit.search('test1');
         cubit.search('test2');
         cubit.emit(ParcelsState.loaded(
-          active: [],
+          receiver: [],
+          shipper: [],
           archive: [],
           filters: cubit.state.filters,
           search: const ParcelsFilter.search(query: 'test2'),
@@ -82,19 +83,22 @@ void main() {
           search: const ParcelsFilter.search(query: 'test2'),
         ),
         ParcelsState.loaded(
-          active: [],
+          receiver: [],
+          shipper: [],
           archive: [],
           filters: ParcelsFilterBatch(),
           search: const ParcelsFilter.search(query: 'test2'),
         ),
         ParcelsState.loaded(
-          active: [],
+          receiver: [],
+          shipper: [],
           archive: [],
           filters: ParcelsFilterBatch(),
           search: const ParcelsFilter.search(query: 'test3'),
         ),
         ParcelsState.loaded(
-          active: [],
+          receiver: [],
+          shipper: [],
           archive: [],
           filters: ParcelsFilterBatch(),
           search: const ParcelsFilter.search(),

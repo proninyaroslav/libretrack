@@ -39,7 +39,8 @@
   "addAccountFailed": "Failed to add account",
   "editAccountFailed": "Failed to edit account",
   "parcels": "Packages",
-  "activeParcels": "Active",
+  "receiverParcels": "I'm receiver",
+  "shipperParcels": "I'm shipper",
   "archiveParcels": "Archive",
   "filtersAndSorting": "Filters and sorting",
   "filters": "Filters",
@@ -78,6 +79,8 @@
   "trackingErrorMissingAccount": "Account is missing. Check if the account has been added and that it supports the selected postal service",
   "parcelsListHardErrorOccurred": "A hard error has occurred, tracking stopped. Please check details inside",
   "moveToArchive": "Move to archive",
+  "moveToReceiver": "Move to incoming list",
+  "moveToShipper": "Move to outgoing list",
   "moveToActive": "Move to active",
   "markAsRead": "Mark as read",
   "markAllAsRead": "Mark all as read",
@@ -254,5 +257,6 @@
   "apiKey": "API key",
   "postNordAddAccountDescription": "API key is required for authorization. It can be obtained in several ways. Take an existing one (for example, find the package named «postnord» on https://www.npmjs.com/ and search in the source code), or register it (as a legal person):\n\n1. Register as a customer or partner on https://developer.postnord.com/\n2. Copy API key from this page: https://atdeveloper.postnord.com/admin/applications. If there is no key, click the «Create new application» button.",
   "barcodeGeneratorShowQrCode": "Show QR",
-  "barcodeGeneratorShowBarcodeCode": "Show barcode"
+  "barcodeGeneratorShowBarcodeCode": "Show barcode",
+  "shipmentCustomerType": "Type of shipment"
 }

@@ -616,8 +616,10 @@ ParcelsFilter _$ParcelsFilterFromJson(Map<String, dynamic> json) {
   switch (json['runtimeType']) {
     case 'search':
       return ParcelsFilterSearch.fromJson(json);
-    case 'active':
-      return ParcelsFilterActive.fromJson(json);
+    case 'receiver':
+      return ParcelsFilterReceiver.fromJson(json);
+    case 'shipper':
+      return ParcelsFilterShipper.fromJson(json);
     case 'archive':
       return ParcelsFilterArchive.fromJson(json);
     case 'status':
@@ -640,7 +642,8 @@ mixin _$ParcelsFilter {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(String? query) search,
-    required TResult Function() active,
+    required TResult Function() receiver,
+    required TResult Function() shipper,
     required TResult Function() archive,
     required TResult Function(ShipmentStatusType? statusType) status,
     required TResult Function() newInfo,
@@ -651,7 +654,8 @@ mixin _$ParcelsFilter {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(String? query)? search,
-    TResult? Function()? active,
+    TResult? Function()? receiver,
+    TResult? Function()? shipper,
     TResult? Function()? archive,
     TResult? Function(ShipmentStatusType? statusType)? status,
     TResult? Function()? newInfo,
@@ -662,7 +666,8 @@ mixin _$ParcelsFilter {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String? query)? search,
-    TResult Function()? active,
+    TResult Function()? receiver,
+    TResult Function()? shipper,
     TResult Function()? archive,
     TResult Function(ShipmentStatusType? statusType)? status,
     TResult Function()? newInfo,
@@ -674,7 +679,8 @@ mixin _$ParcelsFilter {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(ParcelsFilterSearch value) search,
-    required TResult Function(ParcelsFilterActive value) active,
+    required TResult Function(ParcelsFilterReceiver value) receiver,
+    required TResult Function(ParcelsFilterShipper value) shipper,
     required TResult Function(ParcelsFilterArchive value) archive,
     required TResult Function(ParcelsFilterStatus value) status,
     required TResult Function(ParcelsFilterNewInfo value) newInfo,
@@ -685,7 +691,8 @@ mixin _$ParcelsFilter {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(ParcelsFilterSearch value)? search,
-    TResult? Function(ParcelsFilterActive value)? active,
+    TResult? Function(ParcelsFilterReceiver value)? receiver,
+    TResult? Function(ParcelsFilterShipper value)? shipper,
     TResult? Function(ParcelsFilterArchive value)? archive,
     TResult? Function(ParcelsFilterStatus value)? status,
     TResult? Function(ParcelsFilterNewInfo value)? newInfo,
@@ -696,7 +703,8 @@ mixin _$ParcelsFilter {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(ParcelsFilterSearch value)? search,
-    TResult Function(ParcelsFilterActive value)? active,
+    TResult Function(ParcelsFilterReceiver value)? receiver,
+    TResult Function(ParcelsFilterShipper value)? shipper,
     TResult Function(ParcelsFilterArchive value)? archive,
     TResult Function(ParcelsFilterStatus value)? status,
     TResult Function(ParcelsFilterNewInfo value)? newInfo,
@@ -809,7 +817,8 @@ class _$ParcelsFilterSearchImpl implements ParcelsFilterSearch {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(String? query) search,
-    required TResult Function() active,
+    required TResult Function() receiver,
+    required TResult Function() shipper,
     required TResult Function() archive,
     required TResult Function(ShipmentStatusType? statusType) status,
     required TResult Function() newInfo,
@@ -823,7 +832,8 @@ class _$ParcelsFilterSearchImpl implements ParcelsFilterSearch {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(String? query)? search,
-    TResult? Function()? active,
+    TResult? Function()? receiver,
+    TResult? Function()? shipper,
     TResult? Function()? archive,
     TResult? Function(ShipmentStatusType? statusType)? status,
     TResult? Function()? newInfo,
@@ -837,7 +847,8 @@ class _$ParcelsFilterSearchImpl implements ParcelsFilterSearch {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String? query)? search,
-    TResult Function()? active,
+    TResult Function()? receiver,
+    TResult Function()? shipper,
     TResult Function()? archive,
     TResult Function(ShipmentStatusType? statusType)? status,
     TResult Function()? newInfo,
@@ -855,7 +866,8 @@ class _$ParcelsFilterSearchImpl implements ParcelsFilterSearch {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(ParcelsFilterSearch value) search,
-    required TResult Function(ParcelsFilterActive value) active,
+    required TResult Function(ParcelsFilterReceiver value) receiver,
+    required TResult Function(ParcelsFilterShipper value) shipper,
     required TResult Function(ParcelsFilterArchive value) archive,
     required TResult Function(ParcelsFilterStatus value) status,
     required TResult Function(ParcelsFilterNewInfo value) newInfo,
@@ -869,7 +881,8 @@ class _$ParcelsFilterSearchImpl implements ParcelsFilterSearch {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(ParcelsFilterSearch value)? search,
-    TResult? Function(ParcelsFilterActive value)? active,
+    TResult? Function(ParcelsFilterReceiver value)? receiver,
+    TResult? Function(ParcelsFilterShipper value)? shipper,
     TResult? Function(ParcelsFilterArchive value)? archive,
     TResult? Function(ParcelsFilterStatus value)? status,
     TResult? Function(ParcelsFilterNewInfo value)? newInfo,
@@ -883,7 +896,8 @@ class _$ParcelsFilterSearchImpl implements ParcelsFilterSearch {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(ParcelsFilterSearch value)? search,
-    TResult Function(ParcelsFilterActive value)? active,
+    TResult Function(ParcelsFilterReceiver value)? receiver,
+    TResult Function(ParcelsFilterShipper value)? shipper,
     TResult Function(ParcelsFilterArchive value)? archive,
     TResult Function(ParcelsFilterStatus value)? status,
     TResult Function(ParcelsFilterNewInfo value)? newInfo,
@@ -922,18 +936,19 @@ abstract class ParcelsFilterSearch implements ParcelsFilter {
 }
 
 /// @nodoc
-abstract class _$$ParcelsFilterActiveImplCopyWith<$Res> {
-  factory _$$ParcelsFilterActiveImplCopyWith(_$ParcelsFilterActiveImpl value,
-          $Res Function(_$ParcelsFilterActiveImpl) then) =
-      __$$ParcelsFilterActiveImplCopyWithImpl<$Res>;
+abstract class _$$ParcelsFilterReceiverImplCopyWith<$Res> {
+  factory _$$ParcelsFilterReceiverImplCopyWith(
+          _$ParcelsFilterReceiverImpl value,
+          $Res Function(_$ParcelsFilterReceiverImpl) then) =
+      __$$ParcelsFilterReceiverImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$ParcelsFilterActiveImplCopyWithImpl<$Res>
-    extends _$ParcelsFilterCopyWithImpl<$Res, _$ParcelsFilterActiveImpl>
-    implements _$$ParcelsFilterActiveImplCopyWith<$Res> {
-  __$$ParcelsFilterActiveImplCopyWithImpl(_$ParcelsFilterActiveImpl _value,
-      $Res Function(_$ParcelsFilterActiveImpl) _then)
+class __$$ParcelsFilterReceiverImplCopyWithImpl<$Res>
+    extends _$ParcelsFilterCopyWithImpl<$Res, _$ParcelsFilterReceiverImpl>
+    implements _$$ParcelsFilterReceiverImplCopyWith<$Res> {
+  __$$ParcelsFilterReceiverImplCopyWithImpl(_$ParcelsFilterReceiverImpl _value,
+      $Res Function(_$ParcelsFilterReceiverImpl) _then)
       : super(_value, _then);
 
   /// Create a copy of ParcelsFilter
@@ -942,26 +957,26 @@ class __$$ParcelsFilterActiveImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$ParcelsFilterActiveImpl implements ParcelsFilterActive {
-  const _$ParcelsFilterActiveImpl({final String? $type})
-      : $type = $type ?? 'active';
+class _$ParcelsFilterReceiverImpl implements ParcelsFilterReceiver {
+  const _$ParcelsFilterReceiverImpl({final String? $type})
+      : $type = $type ?? 'receiver';
 
-  factory _$ParcelsFilterActiveImpl.fromJson(Map<String, dynamic> json) =>
-      _$$ParcelsFilterActiveImplFromJson(json);
+  factory _$ParcelsFilterReceiverImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ParcelsFilterReceiverImplFromJson(json);
 
   @JsonKey(name: 'runtimeType')
   final String $type;
 
   @override
   String toString() {
-    return 'ParcelsFilter.active()';
+    return 'ParcelsFilter.receiver()';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$ParcelsFilterActiveImpl);
+            other is _$ParcelsFilterReceiverImpl);
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -972,35 +987,38 @@ class _$ParcelsFilterActiveImpl implements ParcelsFilterActive {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(String? query) search,
-    required TResult Function() active,
+    required TResult Function() receiver,
+    required TResult Function() shipper,
     required TResult Function() archive,
     required TResult Function(ShipmentStatusType? statusType) status,
     required TResult Function() newInfo,
     required TResult Function() error,
     required TResult Function(PostalServiceType? serviceType) postalService,
   }) {
-    return active();
+    return receiver();
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(String? query)? search,
-    TResult? Function()? active,
+    TResult? Function()? receiver,
+    TResult? Function()? shipper,
     TResult? Function()? archive,
     TResult? Function(ShipmentStatusType? statusType)? status,
     TResult? Function()? newInfo,
     TResult? Function()? error,
     TResult? Function(PostalServiceType? serviceType)? postalService,
   }) {
-    return active?.call();
+    return receiver?.call();
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String? query)? search,
-    TResult Function()? active,
+    TResult Function()? receiver,
+    TResult Function()? shipper,
     TResult Function()? archive,
     TResult Function(ShipmentStatusType? statusType)? status,
     TResult Function()? newInfo,
@@ -1008,8 +1026,8 @@ class _$ParcelsFilterActiveImpl implements ParcelsFilterActive {
     TResult Function(PostalServiceType? serviceType)? postalService,
     required TResult orElse(),
   }) {
-    if (active != null) {
-      return active();
+    if (receiver != null) {
+      return receiver();
     }
     return orElse();
   }
@@ -1018,35 +1036,38 @@ class _$ParcelsFilterActiveImpl implements ParcelsFilterActive {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(ParcelsFilterSearch value) search,
-    required TResult Function(ParcelsFilterActive value) active,
+    required TResult Function(ParcelsFilterReceiver value) receiver,
+    required TResult Function(ParcelsFilterShipper value) shipper,
     required TResult Function(ParcelsFilterArchive value) archive,
     required TResult Function(ParcelsFilterStatus value) status,
     required TResult Function(ParcelsFilterNewInfo value) newInfo,
     required TResult Function(ParcelsFilterError value) error,
     required TResult Function(ParcelsFilterPostalService value) postalService,
   }) {
-    return active(this);
+    return receiver(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(ParcelsFilterSearch value)? search,
-    TResult? Function(ParcelsFilterActive value)? active,
+    TResult? Function(ParcelsFilterReceiver value)? receiver,
+    TResult? Function(ParcelsFilterShipper value)? shipper,
     TResult? Function(ParcelsFilterArchive value)? archive,
     TResult? Function(ParcelsFilterStatus value)? status,
     TResult? Function(ParcelsFilterNewInfo value)? newInfo,
     TResult? Function(ParcelsFilterError value)? error,
     TResult? Function(ParcelsFilterPostalService value)? postalService,
   }) {
-    return active?.call(this);
+    return receiver?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(ParcelsFilterSearch value)? search,
-    TResult Function(ParcelsFilterActive value)? active,
+    TResult Function(ParcelsFilterReceiver value)? receiver,
+    TResult Function(ParcelsFilterShipper value)? shipper,
     TResult Function(ParcelsFilterArchive value)? archive,
     TResult Function(ParcelsFilterStatus value)? status,
     TResult Function(ParcelsFilterNewInfo value)? newInfo,
@@ -1054,25 +1075,185 @@ class _$ParcelsFilterActiveImpl implements ParcelsFilterActive {
     TResult Function(ParcelsFilterPostalService value)? postalService,
     required TResult orElse(),
   }) {
-    if (active != null) {
-      return active(this);
+    if (receiver != null) {
+      return receiver(this);
     }
     return orElse();
   }
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ParcelsFilterActiveImplToJson(
+    return _$$ParcelsFilterReceiverImplToJson(
       this,
     );
   }
 }
 
-abstract class ParcelsFilterActive implements ParcelsFilter {
-  const factory ParcelsFilterActive() = _$ParcelsFilterActiveImpl;
+abstract class ParcelsFilterReceiver implements ParcelsFilter {
+  const factory ParcelsFilterReceiver() = _$ParcelsFilterReceiverImpl;
 
-  factory ParcelsFilterActive.fromJson(Map<String, dynamic> json) =
-      _$ParcelsFilterActiveImpl.fromJson;
+  factory ParcelsFilterReceiver.fromJson(Map<String, dynamic> json) =
+      _$ParcelsFilterReceiverImpl.fromJson;
+}
+
+/// @nodoc
+abstract class _$$ParcelsFilterShipperImplCopyWith<$Res> {
+  factory _$$ParcelsFilterShipperImplCopyWith(_$ParcelsFilterShipperImpl value,
+          $Res Function(_$ParcelsFilterShipperImpl) then) =
+      __$$ParcelsFilterShipperImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$ParcelsFilterShipperImplCopyWithImpl<$Res>
+    extends _$ParcelsFilterCopyWithImpl<$Res, _$ParcelsFilterShipperImpl>
+    implements _$$ParcelsFilterShipperImplCopyWith<$Res> {
+  __$$ParcelsFilterShipperImplCopyWithImpl(_$ParcelsFilterShipperImpl _value,
+      $Res Function(_$ParcelsFilterShipperImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of ParcelsFilter
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$ParcelsFilterShipperImpl implements ParcelsFilterShipper {
+  const _$ParcelsFilterShipperImpl({final String? $type})
+      : $type = $type ?? 'shipper';
+
+  factory _$ParcelsFilterShipperImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ParcelsFilterShipperImplFromJson(json);
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
+
+  @override
+  String toString() {
+    return 'ParcelsFilter.shipper()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ParcelsFilterShipperImpl);
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String? query) search,
+    required TResult Function() receiver,
+    required TResult Function() shipper,
+    required TResult Function() archive,
+    required TResult Function(ShipmentStatusType? statusType) status,
+    required TResult Function() newInfo,
+    required TResult Function() error,
+    required TResult Function(PostalServiceType? serviceType) postalService,
+  }) {
+    return shipper();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String? query)? search,
+    TResult? Function()? receiver,
+    TResult? Function()? shipper,
+    TResult? Function()? archive,
+    TResult? Function(ShipmentStatusType? statusType)? status,
+    TResult? Function()? newInfo,
+    TResult? Function()? error,
+    TResult? Function(PostalServiceType? serviceType)? postalService,
+  }) {
+    return shipper?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String? query)? search,
+    TResult Function()? receiver,
+    TResult Function()? shipper,
+    TResult Function()? archive,
+    TResult Function(ShipmentStatusType? statusType)? status,
+    TResult Function()? newInfo,
+    TResult Function()? error,
+    TResult Function(PostalServiceType? serviceType)? postalService,
+    required TResult orElse(),
+  }) {
+    if (shipper != null) {
+      return shipper();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(ParcelsFilterSearch value) search,
+    required TResult Function(ParcelsFilterReceiver value) receiver,
+    required TResult Function(ParcelsFilterShipper value) shipper,
+    required TResult Function(ParcelsFilterArchive value) archive,
+    required TResult Function(ParcelsFilterStatus value) status,
+    required TResult Function(ParcelsFilterNewInfo value) newInfo,
+    required TResult Function(ParcelsFilterError value) error,
+    required TResult Function(ParcelsFilterPostalService value) postalService,
+  }) {
+    return shipper(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(ParcelsFilterSearch value)? search,
+    TResult? Function(ParcelsFilterReceiver value)? receiver,
+    TResult? Function(ParcelsFilterShipper value)? shipper,
+    TResult? Function(ParcelsFilterArchive value)? archive,
+    TResult? Function(ParcelsFilterStatus value)? status,
+    TResult? Function(ParcelsFilterNewInfo value)? newInfo,
+    TResult? Function(ParcelsFilterError value)? error,
+    TResult? Function(ParcelsFilterPostalService value)? postalService,
+  }) {
+    return shipper?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(ParcelsFilterSearch value)? search,
+    TResult Function(ParcelsFilterReceiver value)? receiver,
+    TResult Function(ParcelsFilterShipper value)? shipper,
+    TResult Function(ParcelsFilterArchive value)? archive,
+    TResult Function(ParcelsFilterStatus value)? status,
+    TResult Function(ParcelsFilterNewInfo value)? newInfo,
+    TResult Function(ParcelsFilterError value)? error,
+    TResult Function(ParcelsFilterPostalService value)? postalService,
+    required TResult orElse(),
+  }) {
+    if (shipper != null) {
+      return shipper(this);
+    }
+    return orElse();
+  }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$ParcelsFilterShipperImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class ParcelsFilterShipper implements ParcelsFilter {
+  const factory ParcelsFilterShipper() = _$ParcelsFilterShipperImpl;
+
+  factory ParcelsFilterShipper.fromJson(Map<String, dynamic> json) =
+      _$ParcelsFilterShipperImpl.fromJson;
 }
 
 /// @nodoc
@@ -1126,7 +1307,8 @@ class _$ParcelsFilterArchiveImpl implements ParcelsFilterArchive {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(String? query) search,
-    required TResult Function() active,
+    required TResult Function() receiver,
+    required TResult Function() shipper,
     required TResult Function() archive,
     required TResult Function(ShipmentStatusType? statusType) status,
     required TResult Function() newInfo,
@@ -1140,7 +1322,8 @@ class _$ParcelsFilterArchiveImpl implements ParcelsFilterArchive {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(String? query)? search,
-    TResult? Function()? active,
+    TResult? Function()? receiver,
+    TResult? Function()? shipper,
     TResult? Function()? archive,
     TResult? Function(ShipmentStatusType? statusType)? status,
     TResult? Function()? newInfo,
@@ -1154,7 +1337,8 @@ class _$ParcelsFilterArchiveImpl implements ParcelsFilterArchive {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String? query)? search,
-    TResult Function()? active,
+    TResult Function()? receiver,
+    TResult Function()? shipper,
     TResult Function()? archive,
     TResult Function(ShipmentStatusType? statusType)? status,
     TResult Function()? newInfo,
@@ -1172,7 +1356,8 @@ class _$ParcelsFilterArchiveImpl implements ParcelsFilterArchive {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(ParcelsFilterSearch value) search,
-    required TResult Function(ParcelsFilterActive value) active,
+    required TResult Function(ParcelsFilterReceiver value) receiver,
+    required TResult Function(ParcelsFilterShipper value) shipper,
     required TResult Function(ParcelsFilterArchive value) archive,
     required TResult Function(ParcelsFilterStatus value) status,
     required TResult Function(ParcelsFilterNewInfo value) newInfo,
@@ -1186,7 +1371,8 @@ class _$ParcelsFilterArchiveImpl implements ParcelsFilterArchive {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(ParcelsFilterSearch value)? search,
-    TResult? Function(ParcelsFilterActive value)? active,
+    TResult? Function(ParcelsFilterReceiver value)? receiver,
+    TResult? Function(ParcelsFilterShipper value)? shipper,
     TResult? Function(ParcelsFilterArchive value)? archive,
     TResult? Function(ParcelsFilterStatus value)? status,
     TResult? Function(ParcelsFilterNewInfo value)? newInfo,
@@ -1200,7 +1386,8 @@ class _$ParcelsFilterArchiveImpl implements ParcelsFilterArchive {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(ParcelsFilterSearch value)? search,
-    TResult Function(ParcelsFilterActive value)? active,
+    TResult Function(ParcelsFilterReceiver value)? receiver,
+    TResult Function(ParcelsFilterShipper value)? shipper,
     TResult Function(ParcelsFilterArchive value)? archive,
     TResult Function(ParcelsFilterStatus value)? status,
     TResult Function(ParcelsFilterNewInfo value)? newInfo,
@@ -1308,7 +1495,8 @@ class _$ParcelsFilterStatusImpl implements ParcelsFilterStatus {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(String? query) search,
-    required TResult Function() active,
+    required TResult Function() receiver,
+    required TResult Function() shipper,
     required TResult Function() archive,
     required TResult Function(ShipmentStatusType? statusType) status,
     required TResult Function() newInfo,
@@ -1322,7 +1510,8 @@ class _$ParcelsFilterStatusImpl implements ParcelsFilterStatus {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(String? query)? search,
-    TResult? Function()? active,
+    TResult? Function()? receiver,
+    TResult? Function()? shipper,
     TResult? Function()? archive,
     TResult? Function(ShipmentStatusType? statusType)? status,
     TResult? Function()? newInfo,
@@ -1336,7 +1525,8 @@ class _$ParcelsFilterStatusImpl implements ParcelsFilterStatus {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String? query)? search,
-    TResult Function()? active,
+    TResult Function()? receiver,
+    TResult Function()? shipper,
     TResult Function()? archive,
     TResult Function(ShipmentStatusType? statusType)? status,
     TResult Function()? newInfo,
@@ -1354,7 +1544,8 @@ class _$ParcelsFilterStatusImpl implements ParcelsFilterStatus {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(ParcelsFilterSearch value) search,
-    required TResult Function(ParcelsFilterActive value) active,
+    required TResult Function(ParcelsFilterReceiver value) receiver,
+    required TResult Function(ParcelsFilterShipper value) shipper,
     required TResult Function(ParcelsFilterArchive value) archive,
     required TResult Function(ParcelsFilterStatus value) status,
     required TResult Function(ParcelsFilterNewInfo value) newInfo,
@@ -1368,7 +1559,8 @@ class _$ParcelsFilterStatusImpl implements ParcelsFilterStatus {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(ParcelsFilterSearch value)? search,
-    TResult? Function(ParcelsFilterActive value)? active,
+    TResult? Function(ParcelsFilterReceiver value)? receiver,
+    TResult? Function(ParcelsFilterShipper value)? shipper,
     TResult? Function(ParcelsFilterArchive value)? archive,
     TResult? Function(ParcelsFilterStatus value)? status,
     TResult? Function(ParcelsFilterNewInfo value)? newInfo,
@@ -1382,7 +1574,8 @@ class _$ParcelsFilterStatusImpl implements ParcelsFilterStatus {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(ParcelsFilterSearch value)? search,
-    TResult Function(ParcelsFilterActive value)? active,
+    TResult Function(ParcelsFilterReceiver value)? receiver,
+    TResult Function(ParcelsFilterShipper value)? shipper,
     TResult Function(ParcelsFilterArchive value)? archive,
     TResult Function(ParcelsFilterStatus value)? status,
     TResult Function(ParcelsFilterNewInfo value)? newInfo,
@@ -1471,7 +1664,8 @@ class _$ParcelsFilterNewInfoImpl implements ParcelsFilterNewInfo {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(String? query) search,
-    required TResult Function() active,
+    required TResult Function() receiver,
+    required TResult Function() shipper,
     required TResult Function() archive,
     required TResult Function(ShipmentStatusType? statusType) status,
     required TResult Function() newInfo,
@@ -1485,7 +1679,8 @@ class _$ParcelsFilterNewInfoImpl implements ParcelsFilterNewInfo {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(String? query)? search,
-    TResult? Function()? active,
+    TResult? Function()? receiver,
+    TResult? Function()? shipper,
     TResult? Function()? archive,
     TResult? Function(ShipmentStatusType? statusType)? status,
     TResult? Function()? newInfo,
@@ -1499,7 +1694,8 @@ class _$ParcelsFilterNewInfoImpl implements ParcelsFilterNewInfo {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String? query)? search,
-    TResult Function()? active,
+    TResult Function()? receiver,
+    TResult Function()? shipper,
     TResult Function()? archive,
     TResult Function(ShipmentStatusType? statusType)? status,
     TResult Function()? newInfo,
@@ -1517,7 +1713,8 @@ class _$ParcelsFilterNewInfoImpl implements ParcelsFilterNewInfo {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(ParcelsFilterSearch value) search,
-    required TResult Function(ParcelsFilterActive value) active,
+    required TResult Function(ParcelsFilterReceiver value) receiver,
+    required TResult Function(ParcelsFilterShipper value) shipper,
     required TResult Function(ParcelsFilterArchive value) archive,
     required TResult Function(ParcelsFilterStatus value) status,
     required TResult Function(ParcelsFilterNewInfo value) newInfo,
@@ -1531,7 +1728,8 @@ class _$ParcelsFilterNewInfoImpl implements ParcelsFilterNewInfo {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(ParcelsFilterSearch value)? search,
-    TResult? Function(ParcelsFilterActive value)? active,
+    TResult? Function(ParcelsFilterReceiver value)? receiver,
+    TResult? Function(ParcelsFilterShipper value)? shipper,
     TResult? Function(ParcelsFilterArchive value)? archive,
     TResult? Function(ParcelsFilterStatus value)? status,
     TResult? Function(ParcelsFilterNewInfo value)? newInfo,
@@ -1545,7 +1743,8 @@ class _$ParcelsFilterNewInfoImpl implements ParcelsFilterNewInfo {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(ParcelsFilterSearch value)? search,
-    TResult Function(ParcelsFilterActive value)? active,
+    TResult Function(ParcelsFilterReceiver value)? receiver,
+    TResult Function(ParcelsFilterShipper value)? shipper,
     TResult Function(ParcelsFilterArchive value)? archive,
     TResult Function(ParcelsFilterStatus value)? status,
     TResult Function(ParcelsFilterNewInfo value)? newInfo,
@@ -1624,7 +1823,8 @@ class _$ParcelsFilterErrorImpl implements ParcelsFilterError {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(String? query) search,
-    required TResult Function() active,
+    required TResult Function() receiver,
+    required TResult Function() shipper,
     required TResult Function() archive,
     required TResult Function(ShipmentStatusType? statusType) status,
     required TResult Function() newInfo,
@@ -1638,7 +1838,8 @@ class _$ParcelsFilterErrorImpl implements ParcelsFilterError {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(String? query)? search,
-    TResult? Function()? active,
+    TResult? Function()? receiver,
+    TResult? Function()? shipper,
     TResult? Function()? archive,
     TResult? Function(ShipmentStatusType? statusType)? status,
     TResult? Function()? newInfo,
@@ -1652,7 +1853,8 @@ class _$ParcelsFilterErrorImpl implements ParcelsFilterError {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String? query)? search,
-    TResult Function()? active,
+    TResult Function()? receiver,
+    TResult Function()? shipper,
     TResult Function()? archive,
     TResult Function(ShipmentStatusType? statusType)? status,
     TResult Function()? newInfo,
@@ -1670,7 +1872,8 @@ class _$ParcelsFilterErrorImpl implements ParcelsFilterError {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(ParcelsFilterSearch value) search,
-    required TResult Function(ParcelsFilterActive value) active,
+    required TResult Function(ParcelsFilterReceiver value) receiver,
+    required TResult Function(ParcelsFilterShipper value) shipper,
     required TResult Function(ParcelsFilterArchive value) archive,
     required TResult Function(ParcelsFilterStatus value) status,
     required TResult Function(ParcelsFilterNewInfo value) newInfo,
@@ -1684,7 +1887,8 @@ class _$ParcelsFilterErrorImpl implements ParcelsFilterError {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(ParcelsFilterSearch value)? search,
-    TResult? Function(ParcelsFilterActive value)? active,
+    TResult? Function(ParcelsFilterReceiver value)? receiver,
+    TResult? Function(ParcelsFilterShipper value)? shipper,
     TResult? Function(ParcelsFilterArchive value)? archive,
     TResult? Function(ParcelsFilterStatus value)? status,
     TResult? Function(ParcelsFilterNewInfo value)? newInfo,
@@ -1698,7 +1902,8 @@ class _$ParcelsFilterErrorImpl implements ParcelsFilterError {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(ParcelsFilterSearch value)? search,
-    TResult Function(ParcelsFilterActive value)? active,
+    TResult Function(ParcelsFilterReceiver value)? receiver,
+    TResult Function(ParcelsFilterShipper value)? shipper,
     TResult Function(ParcelsFilterArchive value)? archive,
     TResult Function(ParcelsFilterStatus value)? status,
     TResult Function(ParcelsFilterNewInfo value)? newInfo,
@@ -1810,7 +2015,8 @@ class _$ParcelsFilterPostalServiceImpl implements ParcelsFilterPostalService {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(String? query) search,
-    required TResult Function() active,
+    required TResult Function() receiver,
+    required TResult Function() shipper,
     required TResult Function() archive,
     required TResult Function(ShipmentStatusType? statusType) status,
     required TResult Function() newInfo,
@@ -1824,7 +2030,8 @@ class _$ParcelsFilterPostalServiceImpl implements ParcelsFilterPostalService {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(String? query)? search,
-    TResult? Function()? active,
+    TResult? Function()? receiver,
+    TResult? Function()? shipper,
     TResult? Function()? archive,
     TResult? Function(ShipmentStatusType? statusType)? status,
     TResult? Function()? newInfo,
@@ -1838,7 +2045,8 @@ class _$ParcelsFilterPostalServiceImpl implements ParcelsFilterPostalService {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String? query)? search,
-    TResult Function()? active,
+    TResult Function()? receiver,
+    TResult Function()? shipper,
     TResult Function()? archive,
     TResult Function(ShipmentStatusType? statusType)? status,
     TResult Function()? newInfo,
@@ -1856,7 +2064,8 @@ class _$ParcelsFilterPostalServiceImpl implements ParcelsFilterPostalService {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(ParcelsFilterSearch value) search,
-    required TResult Function(ParcelsFilterActive value) active,
+    required TResult Function(ParcelsFilterReceiver value) receiver,
+    required TResult Function(ParcelsFilterShipper value) shipper,
     required TResult Function(ParcelsFilterArchive value) archive,
     required TResult Function(ParcelsFilterStatus value) status,
     required TResult Function(ParcelsFilterNewInfo value) newInfo,
@@ -1870,7 +2079,8 @@ class _$ParcelsFilterPostalServiceImpl implements ParcelsFilterPostalService {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(ParcelsFilterSearch value)? search,
-    TResult? Function(ParcelsFilterActive value)? active,
+    TResult? Function(ParcelsFilterReceiver value)? receiver,
+    TResult? Function(ParcelsFilterShipper value)? shipper,
     TResult? Function(ParcelsFilterArchive value)? archive,
     TResult? Function(ParcelsFilterStatus value)? status,
     TResult? Function(ParcelsFilterNewInfo value)? newInfo,
@@ -1884,7 +2094,8 @@ class _$ParcelsFilterPostalServiceImpl implements ParcelsFilterPostalService {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(ParcelsFilterSearch value)? search,
-    TResult Function(ParcelsFilterActive value)? active,
+    TResult Function(ParcelsFilterReceiver value)? receiver,
+    TResult Function(ParcelsFilterShipper value)? shipper,
     TResult Function(ParcelsFilterArchive value)? archive,
     TResult Function(ParcelsFilterStatus value)? status,
     TResult Function(ParcelsFilterNewInfo value)? newInfo,

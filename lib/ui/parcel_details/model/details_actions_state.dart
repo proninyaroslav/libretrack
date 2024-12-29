@@ -103,4 +103,14 @@ class DetailsActionsState with _$DetailsActionsState {
   const factory DetailsActionsState.activateFailed({
     required StorageError error,
   }) = DetailsActionsStateActivateFailed;
+
+  const factory DetailsActionsState.changingCustomerType() =
+      DetailsActionsStateChangingCustomerType;
+
+  const factory DetailsActionsState.changeCustomerTypeSuccess() =
+      DetailsActionsStateChangeCustomerTypeSuccess;
+
+  const factory DetailsActionsState.changeCustomerTypeFailed({
+    required StorageError error,
+  }) = DetailsActionsStateChangeCustomerTypeFailed;
 }

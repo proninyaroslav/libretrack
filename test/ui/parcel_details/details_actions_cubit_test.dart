@@ -1,4 +1,4 @@
-// Copyright (C) 2021 Yaroslav Pronin <proninyaroslav@mail.ru>
+// Copyright (C) 2021-2024 Yaroslav Pronin <proninyaroslav@mail.ru>
 // Copyright (C) 2021 Insurgo Inc. <insurgo@riseup.net>
 //
 // This file is part of LibreTrack.
@@ -354,6 +354,35 @@ void main() {
       expect: () => [
         const DetailsActionsState.activating(),
         const DetailsActionsState.activateSuccess(),
+      ],
+    );
+
+    blocTest(
+      'Change customer type',
+      build: () => cubit,
+      act: (DetailsActionsCubit cubit) async {
+        const trackInfo = TrackNumberInfo(
+          '123',
+          customerType: CustomerType.shipper,
+        );
+        const parcelInfo = ParcelInfo(trackInfo: trackInfo);
+        when(
+          () => mockTrackNumberRepo.updateTrack(
+            trackInfo.copyWith(customerType: CustomerType.receiver),
+          ),
+        ).thenAnswer(
+          (_) async => StorageResult.empty,
+        );
+        await cubit.changeCustomerType(parcelInfo, type: CustomerType.receiver);
+        verify(
+          () => mockTrackNumberRepo.updateTrack(
+            trackInfo.copyWith(customerType: CustomerType.receiver),
+          ),
+        ).called(1);
+      },
+      expect: () => [
+        const DetailsActionsState.changingCustomerType(),
+        const DetailsActionsState.changeCustomerTypeSuccess(),
       ],
     );
   });

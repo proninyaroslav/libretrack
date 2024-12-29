@@ -25,7 +25,8 @@ mixin _$ParcelsState {
             ParcelsSort? sort)
         initial,
     required TResult Function(
-            List<ParcelInfo> active,
+            List<ParcelInfo> receiver,
+            List<ParcelInfo> shipper,
             List<ParcelInfo> archive,
             ParcelsFilterBatch filters,
             ParcelsFilter? search,
@@ -42,7 +43,8 @@ mixin _$ParcelsState {
             ParcelsSort? sort)?
         initial,
     TResult? Function(
-            List<ParcelInfo> active,
+            List<ParcelInfo> receiver,
+            List<ParcelInfo> shipper,
             List<ParcelInfo> archive,
             ParcelsFilterBatch filters,
             ParcelsFilter? search,
@@ -59,7 +61,8 @@ mixin _$ParcelsState {
             ParcelsSort? sort)?
         initial,
     TResult Function(
-            List<ParcelInfo> active,
+            List<ParcelInfo> receiver,
+            List<ParcelInfo> shipper,
             List<ParcelInfo> archive,
             ParcelsFilterBatch filters,
             ParcelsFilter? search,
@@ -289,7 +292,8 @@ class _$ParcelsStateInitialImpl
             ParcelsSort? sort)
         initial,
     required TResult Function(
-            List<ParcelInfo> active,
+            List<ParcelInfo> receiver,
+            List<ParcelInfo> shipper,
             List<ParcelInfo> archive,
             ParcelsFilterBatch filters,
             ParcelsFilter? search,
@@ -309,7 +313,8 @@ class _$ParcelsStateInitialImpl
             ParcelsSort? sort)?
         initial,
     TResult? Function(
-            List<ParcelInfo> active,
+            List<ParcelInfo> receiver,
+            List<ParcelInfo> shipper,
             List<ParcelInfo> archive,
             ParcelsFilterBatch filters,
             ParcelsFilter? search,
@@ -329,7 +334,8 @@ class _$ParcelsStateInitialImpl
             ParcelsSort? sort)?
         initial,
     TResult Function(
-            List<ParcelInfo> active,
+            List<ParcelInfo> receiver,
+            List<ParcelInfo> shipper,
             List<ParcelInfo> archive,
             ParcelsFilterBatch filters,
             ParcelsFilter? search,
@@ -411,7 +417,8 @@ abstract class _$$ParcelsStateLoadedImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {List<ParcelInfo> active,
+      {List<ParcelInfo> receiver,
+      List<ParcelInfo> shipper,
       List<ParcelInfo> archive,
       ParcelsFilterBatch filters,
       ParcelsFilter? search,
@@ -436,16 +443,21 @@ class __$$ParcelsStateLoadedImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? active = null,
+    Object? receiver = null,
+    Object? shipper = null,
     Object? archive = null,
     Object? filters = null,
     Object? search = freezed,
     Object? sort = freezed,
   }) {
     return _then(_$ParcelsStateLoadedImpl(
-      active: null == active
-          ? _value._active
-          : active // ignore: cast_nullable_to_non_nullable
+      receiver: null == receiver
+          ? _value._receiver
+          : receiver // ignore: cast_nullable_to_non_nullable
+              as List<ParcelInfo>,
+      shipper: null == shipper
+          ? _value._shipper
+          : shipper // ignore: cast_nullable_to_non_nullable
               as List<ParcelInfo>,
       archive: null == archive
           ? _value._archive
@@ -473,20 +485,30 @@ class _$ParcelsStateLoadedImpl
     with DiagnosticableTreeMixin
     implements ParcelsStateLoaded {
   const _$ParcelsStateLoadedImpl(
-      {required final List<ParcelInfo> active,
+      {required final List<ParcelInfo> receiver,
+      required final List<ParcelInfo> shipper,
       required final List<ParcelInfo> archive,
       required this.filters,
       this.search,
       this.sort})
-      : _active = active,
+      : _receiver = receiver,
+        _shipper = shipper,
         _archive = archive;
 
-  final List<ParcelInfo> _active;
+  final List<ParcelInfo> _receiver;
   @override
-  List<ParcelInfo> get active {
-    if (_active is EqualUnmodifiableListView) return _active;
+  List<ParcelInfo> get receiver {
+    if (_receiver is EqualUnmodifiableListView) return _receiver;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_active);
+    return EqualUnmodifiableListView(_receiver);
+  }
+
+  final List<ParcelInfo> _shipper;
+  @override
+  List<ParcelInfo> get shipper {
+    if (_shipper is EqualUnmodifiableListView) return _shipper;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_shipper);
   }
 
   final List<ParcelInfo> _archive;
@@ -506,7 +528,7 @@ class _$ParcelsStateLoadedImpl
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'ParcelsState.loaded(active: $active, archive: $archive, filters: $filters, search: $search, sort: $sort)';
+    return 'ParcelsState.loaded(receiver: $receiver, shipper: $shipper, archive: $archive, filters: $filters, search: $search, sort: $sort)';
   }
 
   @override
@@ -514,7 +536,8 @@ class _$ParcelsStateLoadedImpl
     super.debugFillProperties(properties);
     properties
       ..add(DiagnosticsProperty('type', 'ParcelsState.loaded'))
-      ..add(DiagnosticsProperty('active', active))
+      ..add(DiagnosticsProperty('receiver', receiver))
+      ..add(DiagnosticsProperty('shipper', shipper))
       ..add(DiagnosticsProperty('archive', archive))
       ..add(DiagnosticsProperty('filters', filters))
       ..add(DiagnosticsProperty('search', search))
@@ -526,7 +549,8 @@ class _$ParcelsStateLoadedImpl
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ParcelsStateLoadedImpl &&
-            const DeepCollectionEquality().equals(other._active, _active) &&
+            const DeepCollectionEquality().equals(other._receiver, _receiver) &&
+            const DeepCollectionEquality().equals(other._shipper, _shipper) &&
             const DeepCollectionEquality().equals(other._archive, _archive) &&
             const DeepCollectionEquality().equals(other.filters, filters) &&
             (identical(other.search, search) || other.search == search) &&
@@ -536,7 +560,8 @@ class _$ParcelsStateLoadedImpl
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(_active),
+      const DeepCollectionEquality().hash(_receiver),
+      const DeepCollectionEquality().hash(_shipper),
       const DeepCollectionEquality().hash(_archive),
       const DeepCollectionEquality().hash(filters),
       search,
@@ -558,7 +583,8 @@ class _$ParcelsStateLoadedImpl
             ParcelsSort? sort)
         initial,
     required TResult Function(
-            List<ParcelInfo> active,
+            List<ParcelInfo> receiver,
+            List<ParcelInfo> shipper,
             List<ParcelInfo> archive,
             ParcelsFilterBatch filters,
             ParcelsFilter? search,
@@ -568,7 +594,7 @@ class _$ParcelsStateLoadedImpl
             ParcelsFilter? search, ParcelsSort? sort)
         loadingFailed,
   }) {
-    return loaded(active, archive, filters, search, sort);
+    return loaded(receiver, shipper, archive, filters, search, sort);
   }
 
   @override
@@ -578,7 +604,8 @@ class _$ParcelsStateLoadedImpl
             ParcelsSort? sort)?
         initial,
     TResult? Function(
-            List<ParcelInfo> active,
+            List<ParcelInfo> receiver,
+            List<ParcelInfo> shipper,
             List<ParcelInfo> archive,
             ParcelsFilterBatch filters,
             ParcelsFilter? search,
@@ -588,7 +615,7 @@ class _$ParcelsStateLoadedImpl
             ParcelsFilter? search, ParcelsSort? sort)?
         loadingFailed,
   }) {
-    return loaded?.call(active, archive, filters, search, sort);
+    return loaded?.call(receiver, shipper, archive, filters, search, sort);
   }
 
   @override
@@ -598,7 +625,8 @@ class _$ParcelsStateLoadedImpl
             ParcelsSort? sort)?
         initial,
     TResult Function(
-            List<ParcelInfo> active,
+            List<ParcelInfo> receiver,
+            List<ParcelInfo> shipper,
             List<ParcelInfo> archive,
             ParcelsFilterBatch filters,
             ParcelsFilter? search,
@@ -610,7 +638,7 @@ class _$ParcelsStateLoadedImpl
     required TResult orElse(),
   }) {
     if (loaded != null) {
-      return loaded(active, archive, filters, search, sort);
+      return loaded(receiver, shipper, archive, filters, search, sort);
     }
     return orElse();
   }
@@ -652,13 +680,15 @@ class _$ParcelsStateLoadedImpl
 
 abstract class ParcelsStateLoaded implements ParcelsState {
   const factory ParcelsStateLoaded(
-      {required final List<ParcelInfo> active,
+      {required final List<ParcelInfo> receiver,
+      required final List<ParcelInfo> shipper,
       required final List<ParcelInfo> archive,
       required final ParcelsFilterBatch filters,
       final ParcelsFilter? search,
       final ParcelsSort? sort}) = _$ParcelsStateLoadedImpl;
 
-  List<ParcelInfo> get active;
+  List<ParcelInfo> get receiver;
+  List<ParcelInfo> get shipper;
   List<ParcelInfo> get archive;
   @override
   ParcelsFilterBatch get filters;
@@ -815,7 +845,8 @@ class _$ParcelsStateLoadingFailedImpl
             ParcelsSort? sort)
         initial,
     required TResult Function(
-            List<ParcelInfo> active,
+            List<ParcelInfo> receiver,
+            List<ParcelInfo> shipper,
             List<ParcelInfo> archive,
             ParcelsFilterBatch filters,
             ParcelsFilter? search,
@@ -835,7 +866,8 @@ class _$ParcelsStateLoadingFailedImpl
             ParcelsSort? sort)?
         initial,
     TResult? Function(
-            List<ParcelInfo> active,
+            List<ParcelInfo> receiver,
+            List<ParcelInfo> shipper,
             List<ParcelInfo> archive,
             ParcelsFilterBatch filters,
             ParcelsFilter? search,
@@ -855,7 +887,8 @@ class _$ParcelsStateLoadingFailedImpl
             ParcelsSort? sort)?
         initial,
     TResult Function(
-            List<ParcelInfo> active,
+            List<ParcelInfo> receiver,
+            List<ParcelInfo> shipper,
             List<ParcelInfo> archive,
             ParcelsFilterBatch filters,
             ParcelsFilter? search,

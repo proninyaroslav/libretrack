@@ -34,7 +34,8 @@ class ParcelsState with _$ParcelsState {
   }) = ParcelsStateInitial;
 
   const factory ParcelsState.loaded({
-    required List<ParcelInfo> active,
+    required List<ParcelInfo> receiver,
+    required List<ParcelInfo> shipper,
     required List<ParcelInfo> archive,
     required ParcelsFilterBatch filters,
     ParcelsFilter? search,

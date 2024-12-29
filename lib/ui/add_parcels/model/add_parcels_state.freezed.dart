@@ -21,17 +21,24 @@ mixin _$AddParcelsState {
     required TResult Function(
             TrackingNumbers trackingNumbers, ParcelNames parcelNames)
         initial,
-    required TResult Function(
-            TrackingNumbers trackingNumbers, ParcelNames parcelNames)
+    required TResult Function(TrackingNumbers trackingNumbers,
+            ParcelNames parcelNames, CustomerType customerType)
+        loaded,
+    required TResult Function(TrackingNumbers trackingNumbers,
+            ParcelNames parcelNames, CustomerType customerType)
         fieldChanged,
+    required TResult Function(TrackingNumbers trackingNumbers,
+            ParcelNames parcelNames, CustomerType customerType)
+        customerTypeChanged,
     required TResult Function() adding,
     required TResult Function(List<TrackNumberInfo> addedTrackInfoList) added,
-    required TResult Function(
-            TrackingNumbers trackingNumbers, ParcelNames parcelNames)
+    required TResult Function(TrackingNumbers trackingNumbers,
+            ParcelNames parcelNames, CustomerType customerType)
         validationFailed,
     required TResult Function(
             TrackingNumbers trackingNumbers,
             ParcelNames parcelNames,
+            CustomerType customerType,
             Exception? exception,
             StackTrace? stackTrace)
         addFailed,
@@ -41,14 +48,26 @@ mixin _$AddParcelsState {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames)?
         initial,
-    TResult? Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames)?
+    TResult? Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames,
+            CustomerType customerType)?
+        loaded,
+    TResult? Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames,
+            CustomerType customerType)?
         fieldChanged,
+    TResult? Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames,
+            CustomerType customerType)?
+        customerTypeChanged,
     TResult? Function()? adding,
     TResult? Function(List<TrackNumberInfo> addedTrackInfoList)? added,
-    TResult? Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames)?
-        validationFailed,
     TResult? Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames,
-            Exception? exception, StackTrace? stackTrace)?
+            CustomerType customerType)?
+        validationFailed,
+    TResult? Function(
+            TrackingNumbers trackingNumbers,
+            ParcelNames parcelNames,
+            CustomerType customerType,
+            Exception? exception,
+            StackTrace? stackTrace)?
         addFailed,
   }) =>
       throw _privateConstructorUsedError;
@@ -56,14 +75,26 @@ mixin _$AddParcelsState {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames)?
         initial,
-    TResult Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames)?
+    TResult Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames,
+            CustomerType customerType)?
+        loaded,
+    TResult Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames,
+            CustomerType customerType)?
         fieldChanged,
+    TResult Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames,
+            CustomerType customerType)?
+        customerTypeChanged,
     TResult Function()? adding,
     TResult Function(List<TrackNumberInfo> addedTrackInfoList)? added,
-    TResult Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames)?
-        validationFailed,
     TResult Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames,
-            Exception? exception, StackTrace? stackTrace)?
+            CustomerType customerType)?
+        validationFailed,
+    TResult Function(
+            TrackingNumbers trackingNumbers,
+            ParcelNames parcelNames,
+            CustomerType customerType,
+            Exception? exception,
+            StackTrace? stackTrace)?
         addFailed,
     required TResult orElse(),
   }) =>
@@ -71,7 +102,10 @@ mixin _$AddParcelsState {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(AddParcelsStateInitial value) initial,
+    required TResult Function(AddParcelsStateLoaded value) loaded,
     required TResult Function(AddParcelsStateFieldChanged value) fieldChanged,
+    required TResult Function(AddParcelsStateCustomerTypeChanged value)
+        customerTypeChanged,
     required TResult Function(AddParcelsStateAdding value) adding,
     required TResult Function(AddParcelsStateAdded value) added,
     required TResult Function(AddParcelsStateValidationFailed value)
@@ -82,7 +116,10 @@ mixin _$AddParcelsState {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(AddParcelsStateInitial value)? initial,
+    TResult? Function(AddParcelsStateLoaded value)? loaded,
     TResult? Function(AddParcelsStateFieldChanged value)? fieldChanged,
+    TResult? Function(AddParcelsStateCustomerTypeChanged value)?
+        customerTypeChanged,
     TResult? Function(AddParcelsStateAdding value)? adding,
     TResult? Function(AddParcelsStateAdded value)? added,
     TResult? Function(AddParcelsStateValidationFailed value)? validationFailed,
@@ -92,7 +129,10 @@ mixin _$AddParcelsState {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(AddParcelsStateInitial value)? initial,
+    TResult Function(AddParcelsStateLoaded value)? loaded,
     TResult Function(AddParcelsStateFieldChanged value)? fieldChanged,
+    TResult Function(AddParcelsStateCustomerTypeChanged value)?
+        customerTypeChanged,
     TResult Function(AddParcelsStateAdding value)? adding,
     TResult Function(AddParcelsStateAdded value)? added,
     TResult Function(AddParcelsStateValidationFailed value)? validationFailed,
@@ -245,17 +285,24 @@ class _$AddParcelsStateInitialImpl
     required TResult Function(
             TrackingNumbers trackingNumbers, ParcelNames parcelNames)
         initial,
-    required TResult Function(
-            TrackingNumbers trackingNumbers, ParcelNames parcelNames)
+    required TResult Function(TrackingNumbers trackingNumbers,
+            ParcelNames parcelNames, CustomerType customerType)
+        loaded,
+    required TResult Function(TrackingNumbers trackingNumbers,
+            ParcelNames parcelNames, CustomerType customerType)
         fieldChanged,
+    required TResult Function(TrackingNumbers trackingNumbers,
+            ParcelNames parcelNames, CustomerType customerType)
+        customerTypeChanged,
     required TResult Function() adding,
     required TResult Function(List<TrackNumberInfo> addedTrackInfoList) added,
-    required TResult Function(
-            TrackingNumbers trackingNumbers, ParcelNames parcelNames)
+    required TResult Function(TrackingNumbers trackingNumbers,
+            ParcelNames parcelNames, CustomerType customerType)
         validationFailed,
     required TResult Function(
             TrackingNumbers trackingNumbers,
             ParcelNames parcelNames,
+            CustomerType customerType,
             Exception? exception,
             StackTrace? stackTrace)
         addFailed,
@@ -268,14 +315,26 @@ class _$AddParcelsStateInitialImpl
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames)?
         initial,
-    TResult? Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames)?
+    TResult? Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames,
+            CustomerType customerType)?
+        loaded,
+    TResult? Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames,
+            CustomerType customerType)?
         fieldChanged,
+    TResult? Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames,
+            CustomerType customerType)?
+        customerTypeChanged,
     TResult? Function()? adding,
     TResult? Function(List<TrackNumberInfo> addedTrackInfoList)? added,
-    TResult? Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames)?
-        validationFailed,
     TResult? Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames,
-            Exception? exception, StackTrace? stackTrace)?
+            CustomerType customerType)?
+        validationFailed,
+    TResult? Function(
+            TrackingNumbers trackingNumbers,
+            ParcelNames parcelNames,
+            CustomerType customerType,
+            Exception? exception,
+            StackTrace? stackTrace)?
         addFailed,
   }) {
     return initial?.call(trackingNumbers, parcelNames);
@@ -286,14 +345,26 @@ class _$AddParcelsStateInitialImpl
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames)?
         initial,
-    TResult Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames)?
+    TResult Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames,
+            CustomerType customerType)?
+        loaded,
+    TResult Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames,
+            CustomerType customerType)?
         fieldChanged,
+    TResult Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames,
+            CustomerType customerType)?
+        customerTypeChanged,
     TResult Function()? adding,
     TResult Function(List<TrackNumberInfo> addedTrackInfoList)? added,
-    TResult Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames)?
-        validationFailed,
     TResult Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames,
-            Exception? exception, StackTrace? stackTrace)?
+            CustomerType customerType)?
+        validationFailed,
+    TResult Function(
+            TrackingNumbers trackingNumbers,
+            ParcelNames parcelNames,
+            CustomerType customerType,
+            Exception? exception,
+            StackTrace? stackTrace)?
         addFailed,
     required TResult orElse(),
   }) {
@@ -307,7 +378,10 @@ class _$AddParcelsStateInitialImpl
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(AddParcelsStateInitial value) initial,
+    required TResult Function(AddParcelsStateLoaded value) loaded,
     required TResult Function(AddParcelsStateFieldChanged value) fieldChanged,
+    required TResult Function(AddParcelsStateCustomerTypeChanged value)
+        customerTypeChanged,
     required TResult Function(AddParcelsStateAdding value) adding,
     required TResult Function(AddParcelsStateAdded value) added,
     required TResult Function(AddParcelsStateValidationFailed value)
@@ -321,7 +395,10 @@ class _$AddParcelsStateInitialImpl
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(AddParcelsStateInitial value)? initial,
+    TResult? Function(AddParcelsStateLoaded value)? loaded,
     TResult? Function(AddParcelsStateFieldChanged value)? fieldChanged,
+    TResult? Function(AddParcelsStateCustomerTypeChanged value)?
+        customerTypeChanged,
     TResult? Function(AddParcelsStateAdding value)? adding,
     TResult? Function(AddParcelsStateAdded value)? added,
     TResult? Function(AddParcelsStateValidationFailed value)? validationFailed,
@@ -334,7 +411,10 @@ class _$AddParcelsStateInitialImpl
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(AddParcelsStateInitial value)? initial,
+    TResult Function(AddParcelsStateLoaded value)? loaded,
     TResult Function(AddParcelsStateFieldChanged value)? fieldChanged,
+    TResult Function(AddParcelsStateCustomerTypeChanged value)?
+        customerTypeChanged,
     TResult Function(AddParcelsStateAdding value)? adding,
     TResult Function(AddParcelsStateAdded value)? added,
     TResult Function(AddParcelsStateValidationFailed value)? validationFailed,
@@ -364,13 +444,312 @@ abstract class AddParcelsStateInitial implements AddParcelsState {
 }
 
 /// @nodoc
+abstract class _$$AddParcelsStateLoadedImplCopyWith<$Res> {
+  factory _$$AddParcelsStateLoadedImplCopyWith(
+          _$AddParcelsStateLoadedImpl value,
+          $Res Function(_$AddParcelsStateLoadedImpl) then) =
+      __$$AddParcelsStateLoadedImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call(
+      {TrackingNumbers trackingNumbers,
+      ParcelNames parcelNames,
+      CustomerType customerType});
+
+  $TrackingNumbersCopyWith<$Res> get trackingNumbers;
+  $ParcelNamesCopyWith<$Res> get parcelNames;
+}
+
+/// @nodoc
+class __$$AddParcelsStateLoadedImplCopyWithImpl<$Res>
+    extends _$AddParcelsStateCopyWithImpl<$Res, _$AddParcelsStateLoadedImpl>
+    implements _$$AddParcelsStateLoadedImplCopyWith<$Res> {
+  __$$AddParcelsStateLoadedImplCopyWithImpl(_$AddParcelsStateLoadedImpl _value,
+      $Res Function(_$AddParcelsStateLoadedImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AddParcelsState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? trackingNumbers = null,
+    Object? parcelNames = null,
+    Object? customerType = null,
+  }) {
+    return _then(_$AddParcelsStateLoadedImpl(
+      trackingNumbers: null == trackingNumbers
+          ? _value.trackingNumbers
+          : trackingNumbers // ignore: cast_nullable_to_non_nullable
+              as TrackingNumbers,
+      parcelNames: null == parcelNames
+          ? _value.parcelNames
+          : parcelNames // ignore: cast_nullable_to_non_nullable
+              as ParcelNames,
+      customerType: null == customerType
+          ? _value.customerType
+          : customerType // ignore: cast_nullable_to_non_nullable
+              as CustomerType,
+    ));
+  }
+
+  /// Create a copy of AddParcelsState
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $TrackingNumbersCopyWith<$Res> get trackingNumbers {
+    return $TrackingNumbersCopyWith<$Res>(_value.trackingNumbers, (value) {
+      return _then(_value.copyWith(trackingNumbers: value));
+    });
+  }
+
+  /// Create a copy of AddParcelsState
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $ParcelNamesCopyWith<$Res> get parcelNames {
+    return $ParcelNamesCopyWith<$Res>(_value.parcelNames, (value) {
+      return _then(_value.copyWith(parcelNames: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$AddParcelsStateLoadedImpl
+    with DiagnosticableTreeMixin
+    implements AddParcelsStateLoaded {
+  const _$AddParcelsStateLoadedImpl(
+      {this.trackingNumbers = const TrackingNumbers(),
+      this.parcelNames = const ParcelNames(),
+      required this.customerType});
+
+  @override
+  @JsonKey()
+  final TrackingNumbers trackingNumbers;
+  @override
+  @JsonKey()
+  final ParcelNames parcelNames;
+  @override
+  final CustomerType customerType;
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'AddParcelsState.loaded(trackingNumbers: $trackingNumbers, parcelNames: $parcelNames, customerType: $customerType)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'AddParcelsState.loaded'))
+      ..add(DiagnosticsProperty('trackingNumbers', trackingNumbers))
+      ..add(DiagnosticsProperty('parcelNames', parcelNames))
+      ..add(DiagnosticsProperty('customerType', customerType));
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AddParcelsStateLoadedImpl &&
+            (identical(other.trackingNumbers, trackingNumbers) ||
+                other.trackingNumbers == trackingNumbers) &&
+            (identical(other.parcelNames, parcelNames) ||
+                other.parcelNames == parcelNames) &&
+            (identical(other.customerType, customerType) ||
+                other.customerType == customerType));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, trackingNumbers, parcelNames, customerType);
+
+  /// Create a copy of AddParcelsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$AddParcelsStateLoadedImplCopyWith<_$AddParcelsStateLoadedImpl>
+      get copyWith => __$$AddParcelsStateLoadedImplCopyWithImpl<
+          _$AddParcelsStateLoadedImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(
+            TrackingNumbers trackingNumbers, ParcelNames parcelNames)
+        initial,
+    required TResult Function(TrackingNumbers trackingNumbers,
+            ParcelNames parcelNames, CustomerType customerType)
+        loaded,
+    required TResult Function(TrackingNumbers trackingNumbers,
+            ParcelNames parcelNames, CustomerType customerType)
+        fieldChanged,
+    required TResult Function(TrackingNumbers trackingNumbers,
+            ParcelNames parcelNames, CustomerType customerType)
+        customerTypeChanged,
+    required TResult Function() adding,
+    required TResult Function(List<TrackNumberInfo> addedTrackInfoList) added,
+    required TResult Function(TrackingNumbers trackingNumbers,
+            ParcelNames parcelNames, CustomerType customerType)
+        validationFailed,
+    required TResult Function(
+            TrackingNumbers trackingNumbers,
+            ParcelNames parcelNames,
+            CustomerType customerType,
+            Exception? exception,
+            StackTrace? stackTrace)
+        addFailed,
+  }) {
+    return loaded(trackingNumbers, parcelNames, customerType);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames)?
+        initial,
+    TResult? Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames,
+            CustomerType customerType)?
+        loaded,
+    TResult? Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames,
+            CustomerType customerType)?
+        fieldChanged,
+    TResult? Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames,
+            CustomerType customerType)?
+        customerTypeChanged,
+    TResult? Function()? adding,
+    TResult? Function(List<TrackNumberInfo> addedTrackInfoList)? added,
+    TResult? Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames,
+            CustomerType customerType)?
+        validationFailed,
+    TResult? Function(
+            TrackingNumbers trackingNumbers,
+            ParcelNames parcelNames,
+            CustomerType customerType,
+            Exception? exception,
+            StackTrace? stackTrace)?
+        addFailed,
+  }) {
+    return loaded?.call(trackingNumbers, parcelNames, customerType);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames)?
+        initial,
+    TResult Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames,
+            CustomerType customerType)?
+        loaded,
+    TResult Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames,
+            CustomerType customerType)?
+        fieldChanged,
+    TResult Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames,
+            CustomerType customerType)?
+        customerTypeChanged,
+    TResult Function()? adding,
+    TResult Function(List<TrackNumberInfo> addedTrackInfoList)? added,
+    TResult Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames,
+            CustomerType customerType)?
+        validationFailed,
+    TResult Function(
+            TrackingNumbers trackingNumbers,
+            ParcelNames parcelNames,
+            CustomerType customerType,
+            Exception? exception,
+            StackTrace? stackTrace)?
+        addFailed,
+    required TResult orElse(),
+  }) {
+    if (loaded != null) {
+      return loaded(trackingNumbers, parcelNames, customerType);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(AddParcelsStateInitial value) initial,
+    required TResult Function(AddParcelsStateLoaded value) loaded,
+    required TResult Function(AddParcelsStateFieldChanged value) fieldChanged,
+    required TResult Function(AddParcelsStateCustomerTypeChanged value)
+        customerTypeChanged,
+    required TResult Function(AddParcelsStateAdding value) adding,
+    required TResult Function(AddParcelsStateAdded value) added,
+    required TResult Function(AddParcelsStateValidationFailed value)
+        validationFailed,
+    required TResult Function(AddParcelsStateAddFailed value) addFailed,
+  }) {
+    return loaded(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(AddParcelsStateInitial value)? initial,
+    TResult? Function(AddParcelsStateLoaded value)? loaded,
+    TResult? Function(AddParcelsStateFieldChanged value)? fieldChanged,
+    TResult? Function(AddParcelsStateCustomerTypeChanged value)?
+        customerTypeChanged,
+    TResult? Function(AddParcelsStateAdding value)? adding,
+    TResult? Function(AddParcelsStateAdded value)? added,
+    TResult? Function(AddParcelsStateValidationFailed value)? validationFailed,
+    TResult? Function(AddParcelsStateAddFailed value)? addFailed,
+  }) {
+    return loaded?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(AddParcelsStateInitial value)? initial,
+    TResult Function(AddParcelsStateLoaded value)? loaded,
+    TResult Function(AddParcelsStateFieldChanged value)? fieldChanged,
+    TResult Function(AddParcelsStateCustomerTypeChanged value)?
+        customerTypeChanged,
+    TResult Function(AddParcelsStateAdding value)? adding,
+    TResult Function(AddParcelsStateAdded value)? added,
+    TResult Function(AddParcelsStateValidationFailed value)? validationFailed,
+    TResult Function(AddParcelsStateAddFailed value)? addFailed,
+    required TResult orElse(),
+  }) {
+    if (loaded != null) {
+      return loaded(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class AddParcelsStateLoaded implements AddParcelsState {
+  const factory AddParcelsStateLoaded(
+      {final TrackingNumbers trackingNumbers,
+      final ParcelNames parcelNames,
+      required final CustomerType customerType}) = _$AddParcelsStateLoadedImpl;
+
+  TrackingNumbers get trackingNumbers;
+  ParcelNames get parcelNames;
+  CustomerType get customerType;
+
+  /// Create a copy of AddParcelsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$AddParcelsStateLoadedImplCopyWith<_$AddParcelsStateLoadedImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
 abstract class _$$AddParcelsStateFieldChangedImplCopyWith<$Res> {
   factory _$$AddParcelsStateFieldChangedImplCopyWith(
           _$AddParcelsStateFieldChangedImpl value,
           $Res Function(_$AddParcelsStateFieldChangedImpl) then) =
       __$$AddParcelsStateFieldChangedImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({TrackingNumbers trackingNumbers, ParcelNames parcelNames});
+  $Res call(
+      {TrackingNumbers trackingNumbers,
+      ParcelNames parcelNames,
+      CustomerType customerType});
 
   $TrackingNumbersCopyWith<$Res> get trackingNumbers;
   $ParcelNamesCopyWith<$Res> get parcelNames;
@@ -393,6 +772,7 @@ class __$$AddParcelsStateFieldChangedImplCopyWithImpl<$Res>
   $Res call({
     Object? trackingNumbers = null,
     Object? parcelNames = null,
+    Object? customerType = null,
   }) {
     return _then(_$AddParcelsStateFieldChangedImpl(
       trackingNumbers: null == trackingNumbers
@@ -403,6 +783,10 @@ class __$$AddParcelsStateFieldChangedImplCopyWithImpl<$Res>
           ? _value.parcelNames
           : parcelNames // ignore: cast_nullable_to_non_nullable
               as ParcelNames,
+      customerType: null == customerType
+          ? _value.customerType
+          : customerType // ignore: cast_nullable_to_non_nullable
+              as CustomerType,
     ));
   }
 
@@ -433,16 +817,20 @@ class _$AddParcelsStateFieldChangedImpl
     with DiagnosticableTreeMixin
     implements AddParcelsStateFieldChanged {
   const _$AddParcelsStateFieldChangedImpl(
-      {required this.trackingNumbers, required this.parcelNames});
+      {required this.trackingNumbers,
+      required this.parcelNames,
+      required this.customerType});
 
   @override
   final TrackingNumbers trackingNumbers;
   @override
   final ParcelNames parcelNames;
+  @override
+  final CustomerType customerType;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'AddParcelsState.fieldChanged(trackingNumbers: $trackingNumbers, parcelNames: $parcelNames)';
+    return 'AddParcelsState.fieldChanged(trackingNumbers: $trackingNumbers, parcelNames: $parcelNames, customerType: $customerType)';
   }
 
   @override
@@ -451,7 +839,8 @@ class _$AddParcelsStateFieldChangedImpl
     properties
       ..add(DiagnosticsProperty('type', 'AddParcelsState.fieldChanged'))
       ..add(DiagnosticsProperty('trackingNumbers', trackingNumbers))
-      ..add(DiagnosticsProperty('parcelNames', parcelNames));
+      ..add(DiagnosticsProperty('parcelNames', parcelNames))
+      ..add(DiagnosticsProperty('customerType', customerType));
   }
 
   @override
@@ -462,11 +851,14 @@ class _$AddParcelsStateFieldChangedImpl
             (identical(other.trackingNumbers, trackingNumbers) ||
                 other.trackingNumbers == trackingNumbers) &&
             (identical(other.parcelNames, parcelNames) ||
-                other.parcelNames == parcelNames));
+                other.parcelNames == parcelNames) &&
+            (identical(other.customerType, customerType) ||
+                other.customerType == customerType));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, trackingNumbers, parcelNames);
+  int get hashCode =>
+      Object.hash(runtimeType, trackingNumbers, parcelNames, customerType);
 
   /// Create a copy of AddParcelsState
   /// with the given fields replaced by the non-null parameter values.
@@ -483,22 +875,29 @@ class _$AddParcelsStateFieldChangedImpl
     required TResult Function(
             TrackingNumbers trackingNumbers, ParcelNames parcelNames)
         initial,
-    required TResult Function(
-            TrackingNumbers trackingNumbers, ParcelNames parcelNames)
+    required TResult Function(TrackingNumbers trackingNumbers,
+            ParcelNames parcelNames, CustomerType customerType)
+        loaded,
+    required TResult Function(TrackingNumbers trackingNumbers,
+            ParcelNames parcelNames, CustomerType customerType)
         fieldChanged,
+    required TResult Function(TrackingNumbers trackingNumbers,
+            ParcelNames parcelNames, CustomerType customerType)
+        customerTypeChanged,
     required TResult Function() adding,
     required TResult Function(List<TrackNumberInfo> addedTrackInfoList) added,
-    required TResult Function(
-            TrackingNumbers trackingNumbers, ParcelNames parcelNames)
+    required TResult Function(TrackingNumbers trackingNumbers,
+            ParcelNames parcelNames, CustomerType customerType)
         validationFailed,
     required TResult Function(
             TrackingNumbers trackingNumbers,
             ParcelNames parcelNames,
+            CustomerType customerType,
             Exception? exception,
             StackTrace? stackTrace)
         addFailed,
   }) {
-    return fieldChanged(trackingNumbers, parcelNames);
+    return fieldChanged(trackingNumbers, parcelNames, customerType);
   }
 
   @override
@@ -506,17 +905,29 @@ class _$AddParcelsStateFieldChangedImpl
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames)?
         initial,
-    TResult? Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames)?
+    TResult? Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames,
+            CustomerType customerType)?
+        loaded,
+    TResult? Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames,
+            CustomerType customerType)?
         fieldChanged,
+    TResult? Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames,
+            CustomerType customerType)?
+        customerTypeChanged,
     TResult? Function()? adding,
     TResult? Function(List<TrackNumberInfo> addedTrackInfoList)? added,
-    TResult? Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames)?
-        validationFailed,
     TResult? Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames,
-            Exception? exception, StackTrace? stackTrace)?
+            CustomerType customerType)?
+        validationFailed,
+    TResult? Function(
+            TrackingNumbers trackingNumbers,
+            ParcelNames parcelNames,
+            CustomerType customerType,
+            Exception? exception,
+            StackTrace? stackTrace)?
         addFailed,
   }) {
-    return fieldChanged?.call(trackingNumbers, parcelNames);
+    return fieldChanged?.call(trackingNumbers, parcelNames, customerType);
   }
 
   @override
@@ -524,19 +935,31 @@ class _$AddParcelsStateFieldChangedImpl
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames)?
         initial,
-    TResult Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames)?
+    TResult Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames,
+            CustomerType customerType)?
+        loaded,
+    TResult Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames,
+            CustomerType customerType)?
         fieldChanged,
+    TResult Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames,
+            CustomerType customerType)?
+        customerTypeChanged,
     TResult Function()? adding,
     TResult Function(List<TrackNumberInfo> addedTrackInfoList)? added,
-    TResult Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames)?
-        validationFailed,
     TResult Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames,
-            Exception? exception, StackTrace? stackTrace)?
+            CustomerType customerType)?
+        validationFailed,
+    TResult Function(
+            TrackingNumbers trackingNumbers,
+            ParcelNames parcelNames,
+            CustomerType customerType,
+            Exception? exception,
+            StackTrace? stackTrace)?
         addFailed,
     required TResult orElse(),
   }) {
     if (fieldChanged != null) {
-      return fieldChanged(trackingNumbers, parcelNames);
+      return fieldChanged(trackingNumbers, parcelNames, customerType);
     }
     return orElse();
   }
@@ -545,7 +968,10 @@ class _$AddParcelsStateFieldChangedImpl
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(AddParcelsStateInitial value) initial,
+    required TResult Function(AddParcelsStateLoaded value) loaded,
     required TResult Function(AddParcelsStateFieldChanged value) fieldChanged,
+    required TResult Function(AddParcelsStateCustomerTypeChanged value)
+        customerTypeChanged,
     required TResult Function(AddParcelsStateAdding value) adding,
     required TResult Function(AddParcelsStateAdded value) added,
     required TResult Function(AddParcelsStateValidationFailed value)
@@ -559,7 +985,10 @@ class _$AddParcelsStateFieldChangedImpl
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(AddParcelsStateInitial value)? initial,
+    TResult? Function(AddParcelsStateLoaded value)? loaded,
     TResult? Function(AddParcelsStateFieldChanged value)? fieldChanged,
+    TResult? Function(AddParcelsStateCustomerTypeChanged value)?
+        customerTypeChanged,
     TResult? Function(AddParcelsStateAdding value)? adding,
     TResult? Function(AddParcelsStateAdded value)? added,
     TResult? Function(AddParcelsStateValidationFailed value)? validationFailed,
@@ -572,7 +1001,10 @@ class _$AddParcelsStateFieldChangedImpl
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(AddParcelsStateInitial value)? initial,
+    TResult Function(AddParcelsStateLoaded value)? loaded,
     TResult Function(AddParcelsStateFieldChanged value)? fieldChanged,
+    TResult Function(AddParcelsStateCustomerTypeChanged value)?
+        customerTypeChanged,
     TResult Function(AddParcelsStateAdding value)? adding,
     TResult Function(AddParcelsStateAdded value)? added,
     TResult Function(AddParcelsStateValidationFailed value)? validationFailed,
@@ -589,16 +1021,318 @@ class _$AddParcelsStateFieldChangedImpl
 abstract class AddParcelsStateFieldChanged implements AddParcelsState {
   const factory AddParcelsStateFieldChanged(
           {required final TrackingNumbers trackingNumbers,
-          required final ParcelNames parcelNames}) =
+          required final ParcelNames parcelNames,
+          required final CustomerType customerType}) =
       _$AddParcelsStateFieldChangedImpl;
 
   TrackingNumbers get trackingNumbers;
   ParcelNames get parcelNames;
+  CustomerType get customerType;
 
   /// Create a copy of AddParcelsState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AddParcelsStateFieldChangedImplCopyWith<_$AddParcelsStateFieldChangedImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$AddParcelsStateCustomerTypeChangedImplCopyWith<$Res> {
+  factory _$$AddParcelsStateCustomerTypeChangedImplCopyWith(
+          _$AddParcelsStateCustomerTypeChangedImpl value,
+          $Res Function(_$AddParcelsStateCustomerTypeChangedImpl) then) =
+      __$$AddParcelsStateCustomerTypeChangedImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call(
+      {TrackingNumbers trackingNumbers,
+      ParcelNames parcelNames,
+      CustomerType customerType});
+
+  $TrackingNumbersCopyWith<$Res> get trackingNumbers;
+  $ParcelNamesCopyWith<$Res> get parcelNames;
+}
+
+/// @nodoc
+class __$$AddParcelsStateCustomerTypeChangedImplCopyWithImpl<$Res>
+    extends _$AddParcelsStateCopyWithImpl<$Res,
+        _$AddParcelsStateCustomerTypeChangedImpl>
+    implements _$$AddParcelsStateCustomerTypeChangedImplCopyWith<$Res> {
+  __$$AddParcelsStateCustomerTypeChangedImplCopyWithImpl(
+      _$AddParcelsStateCustomerTypeChangedImpl _value,
+      $Res Function(_$AddParcelsStateCustomerTypeChangedImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AddParcelsState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? trackingNumbers = null,
+    Object? parcelNames = null,
+    Object? customerType = null,
+  }) {
+    return _then(_$AddParcelsStateCustomerTypeChangedImpl(
+      trackingNumbers: null == trackingNumbers
+          ? _value.trackingNumbers
+          : trackingNumbers // ignore: cast_nullable_to_non_nullable
+              as TrackingNumbers,
+      parcelNames: null == parcelNames
+          ? _value.parcelNames
+          : parcelNames // ignore: cast_nullable_to_non_nullable
+              as ParcelNames,
+      customerType: null == customerType
+          ? _value.customerType
+          : customerType // ignore: cast_nullable_to_non_nullable
+              as CustomerType,
+    ));
+  }
+
+  /// Create a copy of AddParcelsState
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $TrackingNumbersCopyWith<$Res> get trackingNumbers {
+    return $TrackingNumbersCopyWith<$Res>(_value.trackingNumbers, (value) {
+      return _then(_value.copyWith(trackingNumbers: value));
+    });
+  }
+
+  /// Create a copy of AddParcelsState
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $ParcelNamesCopyWith<$Res> get parcelNames {
+    return $ParcelNamesCopyWith<$Res>(_value.parcelNames, (value) {
+      return _then(_value.copyWith(parcelNames: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$AddParcelsStateCustomerTypeChangedImpl
+    with DiagnosticableTreeMixin
+    implements AddParcelsStateCustomerTypeChanged {
+  const _$AddParcelsStateCustomerTypeChangedImpl(
+      {required this.trackingNumbers,
+      required this.parcelNames,
+      required this.customerType});
+
+  @override
+  final TrackingNumbers trackingNumbers;
+  @override
+  final ParcelNames parcelNames;
+  @override
+  final CustomerType customerType;
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'AddParcelsState.customerTypeChanged(trackingNumbers: $trackingNumbers, parcelNames: $parcelNames, customerType: $customerType)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'AddParcelsState.customerTypeChanged'))
+      ..add(DiagnosticsProperty('trackingNumbers', trackingNumbers))
+      ..add(DiagnosticsProperty('parcelNames', parcelNames))
+      ..add(DiagnosticsProperty('customerType', customerType));
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AddParcelsStateCustomerTypeChangedImpl &&
+            (identical(other.trackingNumbers, trackingNumbers) ||
+                other.trackingNumbers == trackingNumbers) &&
+            (identical(other.parcelNames, parcelNames) ||
+                other.parcelNames == parcelNames) &&
+            (identical(other.customerType, customerType) ||
+                other.customerType == customerType));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, trackingNumbers, parcelNames, customerType);
+
+  /// Create a copy of AddParcelsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$AddParcelsStateCustomerTypeChangedImplCopyWith<
+          _$AddParcelsStateCustomerTypeChangedImpl>
+      get copyWith => __$$AddParcelsStateCustomerTypeChangedImplCopyWithImpl<
+          _$AddParcelsStateCustomerTypeChangedImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(
+            TrackingNumbers trackingNumbers, ParcelNames parcelNames)
+        initial,
+    required TResult Function(TrackingNumbers trackingNumbers,
+            ParcelNames parcelNames, CustomerType customerType)
+        loaded,
+    required TResult Function(TrackingNumbers trackingNumbers,
+            ParcelNames parcelNames, CustomerType customerType)
+        fieldChanged,
+    required TResult Function(TrackingNumbers trackingNumbers,
+            ParcelNames parcelNames, CustomerType customerType)
+        customerTypeChanged,
+    required TResult Function() adding,
+    required TResult Function(List<TrackNumberInfo> addedTrackInfoList) added,
+    required TResult Function(TrackingNumbers trackingNumbers,
+            ParcelNames parcelNames, CustomerType customerType)
+        validationFailed,
+    required TResult Function(
+            TrackingNumbers trackingNumbers,
+            ParcelNames parcelNames,
+            CustomerType customerType,
+            Exception? exception,
+            StackTrace? stackTrace)
+        addFailed,
+  }) {
+    return customerTypeChanged(trackingNumbers, parcelNames, customerType);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames)?
+        initial,
+    TResult? Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames,
+            CustomerType customerType)?
+        loaded,
+    TResult? Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames,
+            CustomerType customerType)?
+        fieldChanged,
+    TResult? Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames,
+            CustomerType customerType)?
+        customerTypeChanged,
+    TResult? Function()? adding,
+    TResult? Function(List<TrackNumberInfo> addedTrackInfoList)? added,
+    TResult? Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames,
+            CustomerType customerType)?
+        validationFailed,
+    TResult? Function(
+            TrackingNumbers trackingNumbers,
+            ParcelNames parcelNames,
+            CustomerType customerType,
+            Exception? exception,
+            StackTrace? stackTrace)?
+        addFailed,
+  }) {
+    return customerTypeChanged?.call(
+        trackingNumbers, parcelNames, customerType);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames)?
+        initial,
+    TResult Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames,
+            CustomerType customerType)?
+        loaded,
+    TResult Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames,
+            CustomerType customerType)?
+        fieldChanged,
+    TResult Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames,
+            CustomerType customerType)?
+        customerTypeChanged,
+    TResult Function()? adding,
+    TResult Function(List<TrackNumberInfo> addedTrackInfoList)? added,
+    TResult Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames,
+            CustomerType customerType)?
+        validationFailed,
+    TResult Function(
+            TrackingNumbers trackingNumbers,
+            ParcelNames parcelNames,
+            CustomerType customerType,
+            Exception? exception,
+            StackTrace? stackTrace)?
+        addFailed,
+    required TResult orElse(),
+  }) {
+    if (customerTypeChanged != null) {
+      return customerTypeChanged(trackingNumbers, parcelNames, customerType);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(AddParcelsStateInitial value) initial,
+    required TResult Function(AddParcelsStateLoaded value) loaded,
+    required TResult Function(AddParcelsStateFieldChanged value) fieldChanged,
+    required TResult Function(AddParcelsStateCustomerTypeChanged value)
+        customerTypeChanged,
+    required TResult Function(AddParcelsStateAdding value) adding,
+    required TResult Function(AddParcelsStateAdded value) added,
+    required TResult Function(AddParcelsStateValidationFailed value)
+        validationFailed,
+    required TResult Function(AddParcelsStateAddFailed value) addFailed,
+  }) {
+    return customerTypeChanged(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(AddParcelsStateInitial value)? initial,
+    TResult? Function(AddParcelsStateLoaded value)? loaded,
+    TResult? Function(AddParcelsStateFieldChanged value)? fieldChanged,
+    TResult? Function(AddParcelsStateCustomerTypeChanged value)?
+        customerTypeChanged,
+    TResult? Function(AddParcelsStateAdding value)? adding,
+    TResult? Function(AddParcelsStateAdded value)? added,
+    TResult? Function(AddParcelsStateValidationFailed value)? validationFailed,
+    TResult? Function(AddParcelsStateAddFailed value)? addFailed,
+  }) {
+    return customerTypeChanged?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(AddParcelsStateInitial value)? initial,
+    TResult Function(AddParcelsStateLoaded value)? loaded,
+    TResult Function(AddParcelsStateFieldChanged value)? fieldChanged,
+    TResult Function(AddParcelsStateCustomerTypeChanged value)?
+        customerTypeChanged,
+    TResult Function(AddParcelsStateAdding value)? adding,
+    TResult Function(AddParcelsStateAdded value)? added,
+    TResult Function(AddParcelsStateValidationFailed value)? validationFailed,
+    TResult Function(AddParcelsStateAddFailed value)? addFailed,
+    required TResult orElse(),
+  }) {
+    if (customerTypeChanged != null) {
+      return customerTypeChanged(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class AddParcelsStateCustomerTypeChanged implements AddParcelsState {
+  const factory AddParcelsStateCustomerTypeChanged(
+          {required final TrackingNumbers trackingNumbers,
+          required final ParcelNames parcelNames,
+          required final CustomerType customerType}) =
+      _$AddParcelsStateCustomerTypeChangedImpl;
+
+  TrackingNumbers get trackingNumbers;
+  ParcelNames get parcelNames;
+  CustomerType get customerType;
+
+  /// Create a copy of AddParcelsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$AddParcelsStateCustomerTypeChangedImplCopyWith<
+          _$AddParcelsStateCustomerTypeChangedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -656,17 +1390,24 @@ class _$AddParcelsStateAddingImpl
     required TResult Function(
             TrackingNumbers trackingNumbers, ParcelNames parcelNames)
         initial,
-    required TResult Function(
-            TrackingNumbers trackingNumbers, ParcelNames parcelNames)
+    required TResult Function(TrackingNumbers trackingNumbers,
+            ParcelNames parcelNames, CustomerType customerType)
+        loaded,
+    required TResult Function(TrackingNumbers trackingNumbers,
+            ParcelNames parcelNames, CustomerType customerType)
         fieldChanged,
+    required TResult Function(TrackingNumbers trackingNumbers,
+            ParcelNames parcelNames, CustomerType customerType)
+        customerTypeChanged,
     required TResult Function() adding,
     required TResult Function(List<TrackNumberInfo> addedTrackInfoList) added,
-    required TResult Function(
-            TrackingNumbers trackingNumbers, ParcelNames parcelNames)
+    required TResult Function(TrackingNumbers trackingNumbers,
+            ParcelNames parcelNames, CustomerType customerType)
         validationFailed,
     required TResult Function(
             TrackingNumbers trackingNumbers,
             ParcelNames parcelNames,
+            CustomerType customerType,
             Exception? exception,
             StackTrace? stackTrace)
         addFailed,
@@ -679,14 +1420,26 @@ class _$AddParcelsStateAddingImpl
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames)?
         initial,
-    TResult? Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames)?
+    TResult? Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames,
+            CustomerType customerType)?
+        loaded,
+    TResult? Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames,
+            CustomerType customerType)?
         fieldChanged,
+    TResult? Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames,
+            CustomerType customerType)?
+        customerTypeChanged,
     TResult? Function()? adding,
     TResult? Function(List<TrackNumberInfo> addedTrackInfoList)? added,
-    TResult? Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames)?
-        validationFailed,
     TResult? Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames,
-            Exception? exception, StackTrace? stackTrace)?
+            CustomerType customerType)?
+        validationFailed,
+    TResult? Function(
+            TrackingNumbers trackingNumbers,
+            ParcelNames parcelNames,
+            CustomerType customerType,
+            Exception? exception,
+            StackTrace? stackTrace)?
         addFailed,
   }) {
     return adding?.call();
@@ -697,14 +1450,26 @@ class _$AddParcelsStateAddingImpl
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames)?
         initial,
-    TResult Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames)?
+    TResult Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames,
+            CustomerType customerType)?
+        loaded,
+    TResult Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames,
+            CustomerType customerType)?
         fieldChanged,
+    TResult Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames,
+            CustomerType customerType)?
+        customerTypeChanged,
     TResult Function()? adding,
     TResult Function(List<TrackNumberInfo> addedTrackInfoList)? added,
-    TResult Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames)?
-        validationFailed,
     TResult Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames,
-            Exception? exception, StackTrace? stackTrace)?
+            CustomerType customerType)?
+        validationFailed,
+    TResult Function(
+            TrackingNumbers trackingNumbers,
+            ParcelNames parcelNames,
+            CustomerType customerType,
+            Exception? exception,
+            StackTrace? stackTrace)?
         addFailed,
     required TResult orElse(),
   }) {
@@ -718,7 +1483,10 @@ class _$AddParcelsStateAddingImpl
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(AddParcelsStateInitial value) initial,
+    required TResult Function(AddParcelsStateLoaded value) loaded,
     required TResult Function(AddParcelsStateFieldChanged value) fieldChanged,
+    required TResult Function(AddParcelsStateCustomerTypeChanged value)
+        customerTypeChanged,
     required TResult Function(AddParcelsStateAdding value) adding,
     required TResult Function(AddParcelsStateAdded value) added,
     required TResult Function(AddParcelsStateValidationFailed value)
@@ -732,7 +1500,10 @@ class _$AddParcelsStateAddingImpl
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(AddParcelsStateInitial value)? initial,
+    TResult? Function(AddParcelsStateLoaded value)? loaded,
     TResult? Function(AddParcelsStateFieldChanged value)? fieldChanged,
+    TResult? Function(AddParcelsStateCustomerTypeChanged value)?
+        customerTypeChanged,
     TResult? Function(AddParcelsStateAdding value)? adding,
     TResult? Function(AddParcelsStateAdded value)? added,
     TResult? Function(AddParcelsStateValidationFailed value)? validationFailed,
@@ -745,7 +1516,10 @@ class _$AddParcelsStateAddingImpl
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(AddParcelsStateInitial value)? initial,
+    TResult Function(AddParcelsStateLoaded value)? loaded,
     TResult Function(AddParcelsStateFieldChanged value)? fieldChanged,
+    TResult Function(AddParcelsStateCustomerTypeChanged value)?
+        customerTypeChanged,
     TResult Function(AddParcelsStateAdding value)? adding,
     TResult Function(AddParcelsStateAdded value)? added,
     TResult Function(AddParcelsStateValidationFailed value)? validationFailed,
@@ -856,17 +1630,24 @@ class _$AddParcelsStateAddedImpl
     required TResult Function(
             TrackingNumbers trackingNumbers, ParcelNames parcelNames)
         initial,
-    required TResult Function(
-            TrackingNumbers trackingNumbers, ParcelNames parcelNames)
+    required TResult Function(TrackingNumbers trackingNumbers,
+            ParcelNames parcelNames, CustomerType customerType)
+        loaded,
+    required TResult Function(TrackingNumbers trackingNumbers,
+            ParcelNames parcelNames, CustomerType customerType)
         fieldChanged,
+    required TResult Function(TrackingNumbers trackingNumbers,
+            ParcelNames parcelNames, CustomerType customerType)
+        customerTypeChanged,
     required TResult Function() adding,
     required TResult Function(List<TrackNumberInfo> addedTrackInfoList) added,
-    required TResult Function(
-            TrackingNumbers trackingNumbers, ParcelNames parcelNames)
+    required TResult Function(TrackingNumbers trackingNumbers,
+            ParcelNames parcelNames, CustomerType customerType)
         validationFailed,
     required TResult Function(
             TrackingNumbers trackingNumbers,
             ParcelNames parcelNames,
+            CustomerType customerType,
             Exception? exception,
             StackTrace? stackTrace)
         addFailed,
@@ -879,14 +1660,26 @@ class _$AddParcelsStateAddedImpl
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames)?
         initial,
-    TResult? Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames)?
+    TResult? Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames,
+            CustomerType customerType)?
+        loaded,
+    TResult? Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames,
+            CustomerType customerType)?
         fieldChanged,
+    TResult? Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames,
+            CustomerType customerType)?
+        customerTypeChanged,
     TResult? Function()? adding,
     TResult? Function(List<TrackNumberInfo> addedTrackInfoList)? added,
-    TResult? Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames)?
-        validationFailed,
     TResult? Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames,
-            Exception? exception, StackTrace? stackTrace)?
+            CustomerType customerType)?
+        validationFailed,
+    TResult? Function(
+            TrackingNumbers trackingNumbers,
+            ParcelNames parcelNames,
+            CustomerType customerType,
+            Exception? exception,
+            StackTrace? stackTrace)?
         addFailed,
   }) {
     return added?.call(addedTrackInfoList);
@@ -897,14 +1690,26 @@ class _$AddParcelsStateAddedImpl
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames)?
         initial,
-    TResult Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames)?
+    TResult Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames,
+            CustomerType customerType)?
+        loaded,
+    TResult Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames,
+            CustomerType customerType)?
         fieldChanged,
+    TResult Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames,
+            CustomerType customerType)?
+        customerTypeChanged,
     TResult Function()? adding,
     TResult Function(List<TrackNumberInfo> addedTrackInfoList)? added,
-    TResult Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames)?
-        validationFailed,
     TResult Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames,
-            Exception? exception, StackTrace? stackTrace)?
+            CustomerType customerType)?
+        validationFailed,
+    TResult Function(
+            TrackingNumbers trackingNumbers,
+            ParcelNames parcelNames,
+            CustomerType customerType,
+            Exception? exception,
+            StackTrace? stackTrace)?
         addFailed,
     required TResult orElse(),
   }) {
@@ -918,7 +1723,10 @@ class _$AddParcelsStateAddedImpl
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(AddParcelsStateInitial value) initial,
+    required TResult Function(AddParcelsStateLoaded value) loaded,
     required TResult Function(AddParcelsStateFieldChanged value) fieldChanged,
+    required TResult Function(AddParcelsStateCustomerTypeChanged value)
+        customerTypeChanged,
     required TResult Function(AddParcelsStateAdding value) adding,
     required TResult Function(AddParcelsStateAdded value) added,
     required TResult Function(AddParcelsStateValidationFailed value)
@@ -932,7 +1740,10 @@ class _$AddParcelsStateAddedImpl
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(AddParcelsStateInitial value)? initial,
+    TResult? Function(AddParcelsStateLoaded value)? loaded,
     TResult? Function(AddParcelsStateFieldChanged value)? fieldChanged,
+    TResult? Function(AddParcelsStateCustomerTypeChanged value)?
+        customerTypeChanged,
     TResult? Function(AddParcelsStateAdding value)? adding,
     TResult? Function(AddParcelsStateAdded value)? added,
     TResult? Function(AddParcelsStateValidationFailed value)? validationFailed,
@@ -945,7 +1756,10 @@ class _$AddParcelsStateAddedImpl
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(AddParcelsStateInitial value)? initial,
+    TResult Function(AddParcelsStateLoaded value)? loaded,
     TResult Function(AddParcelsStateFieldChanged value)? fieldChanged,
+    TResult Function(AddParcelsStateCustomerTypeChanged value)?
+        customerTypeChanged,
     TResult Function(AddParcelsStateAdding value)? adding,
     TResult Function(AddParcelsStateAdded value)? added,
     TResult Function(AddParcelsStateValidationFailed value)? validationFailed,
@@ -980,7 +1794,10 @@ abstract class _$$AddParcelsStateValidationFailedImplCopyWith<$Res> {
           $Res Function(_$AddParcelsStateValidationFailedImpl) then) =
       __$$AddParcelsStateValidationFailedImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({TrackingNumbers trackingNumbers, ParcelNames parcelNames});
+  $Res call(
+      {TrackingNumbers trackingNumbers,
+      ParcelNames parcelNames,
+      CustomerType customerType});
 
   $TrackingNumbersCopyWith<$Res> get trackingNumbers;
   $ParcelNamesCopyWith<$Res> get parcelNames;
@@ -1003,6 +1820,7 @@ class __$$AddParcelsStateValidationFailedImplCopyWithImpl<$Res>
   $Res call({
     Object? trackingNumbers = null,
     Object? parcelNames = null,
+    Object? customerType = null,
   }) {
     return _then(_$AddParcelsStateValidationFailedImpl(
       trackingNumbers: null == trackingNumbers
@@ -1013,6 +1831,10 @@ class __$$AddParcelsStateValidationFailedImplCopyWithImpl<$Res>
           ? _value.parcelNames
           : parcelNames // ignore: cast_nullable_to_non_nullable
               as ParcelNames,
+      customerType: null == customerType
+          ? _value.customerType
+          : customerType // ignore: cast_nullable_to_non_nullable
+              as CustomerType,
     ));
   }
 
@@ -1043,16 +1865,20 @@ class _$AddParcelsStateValidationFailedImpl
     with DiagnosticableTreeMixin
     implements AddParcelsStateValidationFailed {
   const _$AddParcelsStateValidationFailedImpl(
-      {required this.trackingNumbers, required this.parcelNames});
+      {required this.trackingNumbers,
+      required this.parcelNames,
+      required this.customerType});
 
   @override
   final TrackingNumbers trackingNumbers;
   @override
   final ParcelNames parcelNames;
+  @override
+  final CustomerType customerType;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'AddParcelsState.validationFailed(trackingNumbers: $trackingNumbers, parcelNames: $parcelNames)';
+    return 'AddParcelsState.validationFailed(trackingNumbers: $trackingNumbers, parcelNames: $parcelNames, customerType: $customerType)';
   }
 
   @override
@@ -1061,7 +1887,8 @@ class _$AddParcelsStateValidationFailedImpl
     properties
       ..add(DiagnosticsProperty('type', 'AddParcelsState.validationFailed'))
       ..add(DiagnosticsProperty('trackingNumbers', trackingNumbers))
-      ..add(DiagnosticsProperty('parcelNames', parcelNames));
+      ..add(DiagnosticsProperty('parcelNames', parcelNames))
+      ..add(DiagnosticsProperty('customerType', customerType));
   }
 
   @override
@@ -1072,11 +1899,14 @@ class _$AddParcelsStateValidationFailedImpl
             (identical(other.trackingNumbers, trackingNumbers) ||
                 other.trackingNumbers == trackingNumbers) &&
             (identical(other.parcelNames, parcelNames) ||
-                other.parcelNames == parcelNames));
+                other.parcelNames == parcelNames) &&
+            (identical(other.customerType, customerType) ||
+                other.customerType == customerType));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, trackingNumbers, parcelNames);
+  int get hashCode =>
+      Object.hash(runtimeType, trackingNumbers, parcelNames, customerType);
 
   /// Create a copy of AddParcelsState
   /// with the given fields replaced by the non-null parameter values.
@@ -1094,22 +1924,29 @@ class _$AddParcelsStateValidationFailedImpl
     required TResult Function(
             TrackingNumbers trackingNumbers, ParcelNames parcelNames)
         initial,
-    required TResult Function(
-            TrackingNumbers trackingNumbers, ParcelNames parcelNames)
+    required TResult Function(TrackingNumbers trackingNumbers,
+            ParcelNames parcelNames, CustomerType customerType)
+        loaded,
+    required TResult Function(TrackingNumbers trackingNumbers,
+            ParcelNames parcelNames, CustomerType customerType)
         fieldChanged,
+    required TResult Function(TrackingNumbers trackingNumbers,
+            ParcelNames parcelNames, CustomerType customerType)
+        customerTypeChanged,
     required TResult Function() adding,
     required TResult Function(List<TrackNumberInfo> addedTrackInfoList) added,
-    required TResult Function(
-            TrackingNumbers trackingNumbers, ParcelNames parcelNames)
+    required TResult Function(TrackingNumbers trackingNumbers,
+            ParcelNames parcelNames, CustomerType customerType)
         validationFailed,
     required TResult Function(
             TrackingNumbers trackingNumbers,
             ParcelNames parcelNames,
+            CustomerType customerType,
             Exception? exception,
             StackTrace? stackTrace)
         addFailed,
   }) {
-    return validationFailed(trackingNumbers, parcelNames);
+    return validationFailed(trackingNumbers, parcelNames, customerType);
   }
 
   @override
@@ -1117,17 +1954,29 @@ class _$AddParcelsStateValidationFailedImpl
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames)?
         initial,
-    TResult? Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames)?
+    TResult? Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames,
+            CustomerType customerType)?
+        loaded,
+    TResult? Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames,
+            CustomerType customerType)?
         fieldChanged,
+    TResult? Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames,
+            CustomerType customerType)?
+        customerTypeChanged,
     TResult? Function()? adding,
     TResult? Function(List<TrackNumberInfo> addedTrackInfoList)? added,
-    TResult? Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames)?
-        validationFailed,
     TResult? Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames,
-            Exception? exception, StackTrace? stackTrace)?
+            CustomerType customerType)?
+        validationFailed,
+    TResult? Function(
+            TrackingNumbers trackingNumbers,
+            ParcelNames parcelNames,
+            CustomerType customerType,
+            Exception? exception,
+            StackTrace? stackTrace)?
         addFailed,
   }) {
-    return validationFailed?.call(trackingNumbers, parcelNames);
+    return validationFailed?.call(trackingNumbers, parcelNames, customerType);
   }
 
   @override
@@ -1135,19 +1984,31 @@ class _$AddParcelsStateValidationFailedImpl
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames)?
         initial,
-    TResult Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames)?
+    TResult Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames,
+            CustomerType customerType)?
+        loaded,
+    TResult Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames,
+            CustomerType customerType)?
         fieldChanged,
+    TResult Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames,
+            CustomerType customerType)?
+        customerTypeChanged,
     TResult Function()? adding,
     TResult Function(List<TrackNumberInfo> addedTrackInfoList)? added,
-    TResult Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames)?
-        validationFailed,
     TResult Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames,
-            Exception? exception, StackTrace? stackTrace)?
+            CustomerType customerType)?
+        validationFailed,
+    TResult Function(
+            TrackingNumbers trackingNumbers,
+            ParcelNames parcelNames,
+            CustomerType customerType,
+            Exception? exception,
+            StackTrace? stackTrace)?
         addFailed,
     required TResult orElse(),
   }) {
     if (validationFailed != null) {
-      return validationFailed(trackingNumbers, parcelNames);
+      return validationFailed(trackingNumbers, parcelNames, customerType);
     }
     return orElse();
   }
@@ -1156,7 +2017,10 @@ class _$AddParcelsStateValidationFailedImpl
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(AddParcelsStateInitial value) initial,
+    required TResult Function(AddParcelsStateLoaded value) loaded,
     required TResult Function(AddParcelsStateFieldChanged value) fieldChanged,
+    required TResult Function(AddParcelsStateCustomerTypeChanged value)
+        customerTypeChanged,
     required TResult Function(AddParcelsStateAdding value) adding,
     required TResult Function(AddParcelsStateAdded value) added,
     required TResult Function(AddParcelsStateValidationFailed value)
@@ -1170,7 +2034,10 @@ class _$AddParcelsStateValidationFailedImpl
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(AddParcelsStateInitial value)? initial,
+    TResult? Function(AddParcelsStateLoaded value)? loaded,
     TResult? Function(AddParcelsStateFieldChanged value)? fieldChanged,
+    TResult? Function(AddParcelsStateCustomerTypeChanged value)?
+        customerTypeChanged,
     TResult? Function(AddParcelsStateAdding value)? adding,
     TResult? Function(AddParcelsStateAdded value)? added,
     TResult? Function(AddParcelsStateValidationFailed value)? validationFailed,
@@ -1183,7 +2050,10 @@ class _$AddParcelsStateValidationFailedImpl
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(AddParcelsStateInitial value)? initial,
+    TResult Function(AddParcelsStateLoaded value)? loaded,
     TResult Function(AddParcelsStateFieldChanged value)? fieldChanged,
+    TResult Function(AddParcelsStateCustomerTypeChanged value)?
+        customerTypeChanged,
     TResult Function(AddParcelsStateAdding value)? adding,
     TResult Function(AddParcelsStateAdded value)? added,
     TResult Function(AddParcelsStateValidationFailed value)? validationFailed,
@@ -1200,11 +2070,13 @@ class _$AddParcelsStateValidationFailedImpl
 abstract class AddParcelsStateValidationFailed implements AddParcelsState {
   const factory AddParcelsStateValidationFailed(
           {required final TrackingNumbers trackingNumbers,
-          required final ParcelNames parcelNames}) =
+          required final ParcelNames parcelNames,
+          required final CustomerType customerType}) =
       _$AddParcelsStateValidationFailedImpl;
 
   TrackingNumbers get trackingNumbers;
   ParcelNames get parcelNames;
+  CustomerType get customerType;
 
   /// Create a copy of AddParcelsState
   /// with the given fields replaced by the non-null parameter values.
@@ -1224,6 +2096,7 @@ abstract class _$$AddParcelsStateAddFailedImplCopyWith<$Res> {
   $Res call(
       {TrackingNumbers trackingNumbers,
       ParcelNames parcelNames,
+      CustomerType customerType,
       Exception? exception,
       StackTrace? stackTrace});
 
@@ -1247,6 +2120,7 @@ class __$$AddParcelsStateAddFailedImplCopyWithImpl<$Res>
   $Res call({
     Object? trackingNumbers = null,
     Object? parcelNames = null,
+    Object? customerType = null,
     Object? exception = freezed,
     Object? stackTrace = freezed,
   }) {
@@ -1259,6 +2133,10 @@ class __$$AddParcelsStateAddFailedImplCopyWithImpl<$Res>
           ? _value.parcelNames
           : parcelNames // ignore: cast_nullable_to_non_nullable
               as ParcelNames,
+      customerType: null == customerType
+          ? _value.customerType
+          : customerType // ignore: cast_nullable_to_non_nullable
+              as CustomerType,
       exception: freezed == exception
           ? _value.exception
           : exception // ignore: cast_nullable_to_non_nullable
@@ -1299,6 +2177,7 @@ class _$AddParcelsStateAddFailedImpl
   const _$AddParcelsStateAddFailedImpl(
       {required this.trackingNumbers,
       required this.parcelNames,
+      required this.customerType,
       this.exception,
       this.stackTrace});
 
@@ -1307,13 +2186,15 @@ class _$AddParcelsStateAddFailedImpl
   @override
   final ParcelNames parcelNames;
   @override
+  final CustomerType customerType;
+  @override
   final Exception? exception;
   @override
   final StackTrace? stackTrace;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'AddParcelsState.addFailed(trackingNumbers: $trackingNumbers, parcelNames: $parcelNames, exception: $exception, stackTrace: $stackTrace)';
+    return 'AddParcelsState.addFailed(trackingNumbers: $trackingNumbers, parcelNames: $parcelNames, customerType: $customerType, exception: $exception, stackTrace: $stackTrace)';
   }
 
   @override
@@ -1323,6 +2204,7 @@ class _$AddParcelsStateAddFailedImpl
       ..add(DiagnosticsProperty('type', 'AddParcelsState.addFailed'))
       ..add(DiagnosticsProperty('trackingNumbers', trackingNumbers))
       ..add(DiagnosticsProperty('parcelNames', parcelNames))
+      ..add(DiagnosticsProperty('customerType', customerType))
       ..add(DiagnosticsProperty('exception', exception))
       ..add(DiagnosticsProperty('stackTrace', stackTrace));
   }
@@ -1336,6 +2218,8 @@ class _$AddParcelsStateAddFailedImpl
                 other.trackingNumbers == trackingNumbers) &&
             (identical(other.parcelNames, parcelNames) ||
                 other.parcelNames == parcelNames) &&
+            (identical(other.customerType, customerType) ||
+                other.customerType == customerType) &&
             (identical(other.exception, exception) ||
                 other.exception == exception) &&
             (identical(other.stackTrace, stackTrace) ||
@@ -1343,8 +2227,8 @@ class _$AddParcelsStateAddFailedImpl
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType, trackingNumbers, parcelNames, exception, stackTrace);
+  int get hashCode => Object.hash(runtimeType, trackingNumbers, parcelNames,
+      customerType, exception, stackTrace);
 
   /// Create a copy of AddParcelsState
   /// with the given fields replaced by the non-null parameter values.
@@ -1361,22 +2245,30 @@ class _$AddParcelsStateAddFailedImpl
     required TResult Function(
             TrackingNumbers trackingNumbers, ParcelNames parcelNames)
         initial,
-    required TResult Function(
-            TrackingNumbers trackingNumbers, ParcelNames parcelNames)
+    required TResult Function(TrackingNumbers trackingNumbers,
+            ParcelNames parcelNames, CustomerType customerType)
+        loaded,
+    required TResult Function(TrackingNumbers trackingNumbers,
+            ParcelNames parcelNames, CustomerType customerType)
         fieldChanged,
+    required TResult Function(TrackingNumbers trackingNumbers,
+            ParcelNames parcelNames, CustomerType customerType)
+        customerTypeChanged,
     required TResult Function() adding,
     required TResult Function(List<TrackNumberInfo> addedTrackInfoList) added,
-    required TResult Function(
-            TrackingNumbers trackingNumbers, ParcelNames parcelNames)
+    required TResult Function(TrackingNumbers trackingNumbers,
+            ParcelNames parcelNames, CustomerType customerType)
         validationFailed,
     required TResult Function(
             TrackingNumbers trackingNumbers,
             ParcelNames parcelNames,
+            CustomerType customerType,
             Exception? exception,
             StackTrace? stackTrace)
         addFailed,
   }) {
-    return addFailed(trackingNumbers, parcelNames, exception, stackTrace);
+    return addFailed(
+        trackingNumbers, parcelNames, customerType, exception, stackTrace);
   }
 
   @override
@@ -1384,17 +2276,30 @@ class _$AddParcelsStateAddFailedImpl
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames)?
         initial,
-    TResult? Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames)?
+    TResult? Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames,
+            CustomerType customerType)?
+        loaded,
+    TResult? Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames,
+            CustomerType customerType)?
         fieldChanged,
+    TResult? Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames,
+            CustomerType customerType)?
+        customerTypeChanged,
     TResult? Function()? adding,
     TResult? Function(List<TrackNumberInfo> addedTrackInfoList)? added,
-    TResult? Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames)?
-        validationFailed,
     TResult? Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames,
-            Exception? exception, StackTrace? stackTrace)?
+            CustomerType customerType)?
+        validationFailed,
+    TResult? Function(
+            TrackingNumbers trackingNumbers,
+            ParcelNames parcelNames,
+            CustomerType customerType,
+            Exception? exception,
+            StackTrace? stackTrace)?
         addFailed,
   }) {
-    return addFailed?.call(trackingNumbers, parcelNames, exception, stackTrace);
+    return addFailed?.call(
+        trackingNumbers, parcelNames, customerType, exception, stackTrace);
   }
 
   @override
@@ -1402,19 +2307,32 @@ class _$AddParcelsStateAddFailedImpl
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames)?
         initial,
-    TResult Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames)?
+    TResult Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames,
+            CustomerType customerType)?
+        loaded,
+    TResult Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames,
+            CustomerType customerType)?
         fieldChanged,
+    TResult Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames,
+            CustomerType customerType)?
+        customerTypeChanged,
     TResult Function()? adding,
     TResult Function(List<TrackNumberInfo> addedTrackInfoList)? added,
-    TResult Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames)?
-        validationFailed,
     TResult Function(TrackingNumbers trackingNumbers, ParcelNames parcelNames,
-            Exception? exception, StackTrace? stackTrace)?
+            CustomerType customerType)?
+        validationFailed,
+    TResult Function(
+            TrackingNumbers trackingNumbers,
+            ParcelNames parcelNames,
+            CustomerType customerType,
+            Exception? exception,
+            StackTrace? stackTrace)?
         addFailed,
     required TResult orElse(),
   }) {
     if (addFailed != null) {
-      return addFailed(trackingNumbers, parcelNames, exception, stackTrace);
+      return addFailed(
+          trackingNumbers, parcelNames, customerType, exception, stackTrace);
     }
     return orElse();
   }
@@ -1423,7 +2341,10 @@ class _$AddParcelsStateAddFailedImpl
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(AddParcelsStateInitial value) initial,
+    required TResult Function(AddParcelsStateLoaded value) loaded,
     required TResult Function(AddParcelsStateFieldChanged value) fieldChanged,
+    required TResult Function(AddParcelsStateCustomerTypeChanged value)
+        customerTypeChanged,
     required TResult Function(AddParcelsStateAdding value) adding,
     required TResult Function(AddParcelsStateAdded value) added,
     required TResult Function(AddParcelsStateValidationFailed value)
@@ -1437,7 +2358,10 @@ class _$AddParcelsStateAddFailedImpl
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(AddParcelsStateInitial value)? initial,
+    TResult? Function(AddParcelsStateLoaded value)? loaded,
     TResult? Function(AddParcelsStateFieldChanged value)? fieldChanged,
+    TResult? Function(AddParcelsStateCustomerTypeChanged value)?
+        customerTypeChanged,
     TResult? Function(AddParcelsStateAdding value)? adding,
     TResult? Function(AddParcelsStateAdded value)? added,
     TResult? Function(AddParcelsStateValidationFailed value)? validationFailed,
@@ -1450,7 +2374,10 @@ class _$AddParcelsStateAddFailedImpl
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(AddParcelsStateInitial value)? initial,
+    TResult Function(AddParcelsStateLoaded value)? loaded,
     TResult Function(AddParcelsStateFieldChanged value)? fieldChanged,
+    TResult Function(AddParcelsStateCustomerTypeChanged value)?
+        customerTypeChanged,
     TResult Function(AddParcelsStateAdding value)? adding,
     TResult Function(AddParcelsStateAdded value)? added,
     TResult Function(AddParcelsStateValidationFailed value)? validationFailed,
@@ -1468,11 +2395,13 @@ abstract class AddParcelsStateAddFailed implements AddParcelsState {
   const factory AddParcelsStateAddFailed(
       {required final TrackingNumbers trackingNumbers,
       required final ParcelNames parcelNames,
+      required final CustomerType customerType,
       final Exception? exception,
       final StackTrace? stackTrace}) = _$AddParcelsStateAddFailedImpl;
 
   TrackingNumbers get trackingNumbers;
   ParcelNames get parcelNames;
+  CustomerType get customerType;
   Exception? get exception;
   StackTrace? get stackTrace;
 

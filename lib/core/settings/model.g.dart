@@ -62,14 +62,26 @@ Map<String, dynamic> _$$ParcelsFilterSearchImplToJson(
       'runtimeType': instance.$type,
     };
 
-_$ParcelsFilterActiveImpl _$$ParcelsFilterActiveImplFromJson(
+_$ParcelsFilterReceiverImpl _$$ParcelsFilterReceiverImplFromJson(
         Map<String, dynamic> json) =>
-    _$ParcelsFilterActiveImpl(
+    _$ParcelsFilterReceiverImpl(
       $type: json['runtimeType'] as String?,
     );
 
-Map<String, dynamic> _$$ParcelsFilterActiveImplToJson(
-        _$ParcelsFilterActiveImpl instance) =>
+Map<String, dynamic> _$$ParcelsFilterReceiverImplToJson(
+        _$ParcelsFilterReceiverImpl instance) =>
+    <String, dynamic>{
+      'runtimeType': instance.$type,
+    };
+
+_$ParcelsFilterShipperImpl _$$ParcelsFilterShipperImplFromJson(
+        Map<String, dynamic> json) =>
+    _$ParcelsFilterShipperImpl(
+      $type: json['runtimeType'] as String?,
+    );
+
+Map<String, dynamic> _$$ParcelsFilterShipperImplToJson(
+        _$ParcelsFilterShipperImpl instance) =>
     <String, dynamic>{
       'runtimeType': instance.$type,
     };

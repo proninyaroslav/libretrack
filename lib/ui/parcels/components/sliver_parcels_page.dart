@@ -159,8 +159,10 @@ class SliverParcelsPage extends StatelessWidget {
     ParcelsStateLoaded state,
   ) {
     switch (type) {
-      case ParcelsPageType.active:
-        return state.active;
+      case ParcelsPageType.receiver:
+        return state.receiver;
+      case ParcelsPageType.shipper:
+        return state.shipper;
       case ParcelsPageType.archive:
         return state.archive;
     }
@@ -171,7 +173,7 @@ class SliverParcelsPage extends StatelessWidget {
     List<ParcelInfo> infoList,
   ) {
     switch (type) {
-      case ParcelsPageType.active:
+      case ParcelsPageType.receiver || ParcelsPageType.shipper:
         return infoList.any(
           (info) => info.lastTrackingInfo?.hasNewInfo ?? false,
         );

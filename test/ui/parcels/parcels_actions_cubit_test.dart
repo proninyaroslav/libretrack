@@ -384,5 +384,38 @@ void main() {
         const ParcelsActionsState.refreshSuccess(),
       ],
     );
+
+    blocTest(
+      'Change customer type',
+      build: () => cubit,
+      act: (ParcelsActionsCubit cubit) async {
+        const trackInfo = TrackNumberInfo(
+          '123',
+          customerType: CustomerType.shipper,
+        );
+        const parcelInfo = ParcelInfo(
+          trackInfo: trackInfo,
+          currentStatus: ShipmentStatusType.delivered,
+        );
+        when(
+          () => mockTrackNumberRepo.updateTrackList([
+            trackInfo.copyWith(customerType: CustomerType.receiver),
+          ]),
+        ).thenAnswer(
+          (_) async => StorageResult.empty,
+        );
+        await cubit
+            .changeCustomerType([parcelInfo], type: CustomerType.receiver);
+        verify(
+          () => mockTrackNumberRepo.updateTrackList([
+            trackInfo.copyWith(customerType: CustomerType.receiver),
+          ]),
+        ).called(1);
+      },
+      expect: () => [
+        const ParcelsActionsState.changingCustomerType(),
+        const ParcelsActionsState.changeCustomerTypeSuccess(),
+      ],
+    );
   });
 }

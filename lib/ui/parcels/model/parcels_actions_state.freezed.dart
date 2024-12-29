@@ -44,6 +44,10 @@ mixin _$ParcelsActionsState {
     required TResult Function(String text) shareStringSuccess,
     required TResult Function() copyingTrack,
     required TResult Function(String trackNumbers) copyTrackSuccess,
+    required TResult Function() changingCustomerType,
+    required TResult Function() changeCustomerTypeSuccess,
+    required TResult Function(StorageError error, int parcelsCount)
+        changeCustomerTypeFailed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -70,6 +74,10 @@ mixin _$ParcelsActionsState {
     TResult? Function(String text)? shareStringSuccess,
     TResult? Function()? copyingTrack,
     TResult? Function(String trackNumbers)? copyTrackSuccess,
+    TResult? Function()? changingCustomerType,
+    TResult? Function()? changeCustomerTypeSuccess,
+    TResult? Function(StorageError error, int parcelsCount)?
+        changeCustomerTypeFailed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -95,6 +103,10 @@ mixin _$ParcelsActionsState {
     TResult Function(String text)? shareStringSuccess,
     TResult Function()? copyingTrack,
     TResult Function(String trackNumbers)? copyTrackSuccess,
+    TResult Function()? changingCustomerType,
+    TResult Function()? changeCustomerTypeSuccess,
+    TResult Function(StorageError error, int parcelsCount)?
+        changeCustomerTypeFailed,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -139,6 +151,13 @@ mixin _$ParcelsActionsState {
         copyingTrack,
     required TResult Function(ParcelsActionsStateCopyTrackSuccess value)
         copyTrackSuccess,
+    required TResult Function(ParcelsActionsStateChangingCustomerType value)
+        changingCustomerType,
+    required TResult Function(
+            ParcelsActionsStateChangeCustomerTypeSuccess value)
+        changeCustomerTypeSuccess,
+    required TResult Function(ParcelsActionsStateChangeCustomerTypeFailed value)
+        changeCustomerTypeFailed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -174,6 +193,12 @@ mixin _$ParcelsActionsState {
     TResult? Function(ParcelsActionsStateCopyingTrack value)? copyingTrack,
     TResult? Function(ParcelsActionsStateCopyTrackSuccess value)?
         copyTrackSuccess,
+    TResult? Function(ParcelsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult? Function(ParcelsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult? Function(ParcelsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -208,6 +233,12 @@ mixin _$ParcelsActionsState {
     TResult Function(ParcelsActionsStateCopyingTrack value)? copyingTrack,
     TResult Function(ParcelsActionsStateCopyTrackSuccess value)?
         copyTrackSuccess,
+    TResult Function(ParcelsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult Function(ParcelsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult Function(ParcelsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -313,6 +344,10 @@ class _$ParcelsActionsStateInitialImpl
     required TResult Function(String text) shareStringSuccess,
     required TResult Function() copyingTrack,
     required TResult Function(String trackNumbers) copyTrackSuccess,
+    required TResult Function() changingCustomerType,
+    required TResult Function() changeCustomerTypeSuccess,
+    required TResult Function(StorageError error, int parcelsCount)
+        changeCustomerTypeFailed,
   }) {
     return initial();
   }
@@ -342,6 +377,10 @@ class _$ParcelsActionsStateInitialImpl
     TResult? Function(String text)? shareStringSuccess,
     TResult? Function()? copyingTrack,
     TResult? Function(String trackNumbers)? copyTrackSuccess,
+    TResult? Function()? changingCustomerType,
+    TResult? Function()? changeCustomerTypeSuccess,
+    TResult? Function(StorageError error, int parcelsCount)?
+        changeCustomerTypeFailed,
   }) {
     return initial?.call();
   }
@@ -370,6 +409,10 @@ class _$ParcelsActionsStateInitialImpl
     TResult Function(String text)? shareStringSuccess,
     TResult Function()? copyingTrack,
     TResult Function(String trackNumbers)? copyTrackSuccess,
+    TResult Function()? changingCustomerType,
+    TResult Function()? changeCustomerTypeSuccess,
+    TResult Function(StorageError error, int parcelsCount)?
+        changeCustomerTypeFailed,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -420,6 +463,13 @@ class _$ParcelsActionsStateInitialImpl
         copyingTrack,
     required TResult Function(ParcelsActionsStateCopyTrackSuccess value)
         copyTrackSuccess,
+    required TResult Function(ParcelsActionsStateChangingCustomerType value)
+        changingCustomerType,
+    required TResult Function(
+            ParcelsActionsStateChangeCustomerTypeSuccess value)
+        changeCustomerTypeSuccess,
+    required TResult Function(ParcelsActionsStateChangeCustomerTypeFailed value)
+        changeCustomerTypeFailed,
   }) {
     return initial(this);
   }
@@ -458,6 +508,12 @@ class _$ParcelsActionsStateInitialImpl
     TResult? Function(ParcelsActionsStateCopyingTrack value)? copyingTrack,
     TResult? Function(ParcelsActionsStateCopyTrackSuccess value)?
         copyTrackSuccess,
+    TResult? Function(ParcelsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult? Function(ParcelsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult? Function(ParcelsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
   }) {
     return initial?.call(this);
   }
@@ -495,6 +551,12 @@ class _$ParcelsActionsStateInitialImpl
     TResult Function(ParcelsActionsStateCopyingTrack value)? copyingTrack,
     TResult Function(ParcelsActionsStateCopyTrackSuccess value)?
         copyTrackSuccess,
+    TResult Function(ParcelsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult Function(ParcelsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult Function(ParcelsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -587,6 +649,10 @@ class _$ParcelsActionsStateDeletingImpl
     required TResult Function(String text) shareStringSuccess,
     required TResult Function() copyingTrack,
     required TResult Function(String trackNumbers) copyTrackSuccess,
+    required TResult Function() changingCustomerType,
+    required TResult Function() changeCustomerTypeSuccess,
+    required TResult Function(StorageError error, int parcelsCount)
+        changeCustomerTypeFailed,
   }) {
     return deleting();
   }
@@ -616,6 +682,10 @@ class _$ParcelsActionsStateDeletingImpl
     TResult? Function(String text)? shareStringSuccess,
     TResult? Function()? copyingTrack,
     TResult? Function(String trackNumbers)? copyTrackSuccess,
+    TResult? Function()? changingCustomerType,
+    TResult? Function()? changeCustomerTypeSuccess,
+    TResult? Function(StorageError error, int parcelsCount)?
+        changeCustomerTypeFailed,
   }) {
     return deleting?.call();
   }
@@ -644,6 +714,10 @@ class _$ParcelsActionsStateDeletingImpl
     TResult Function(String text)? shareStringSuccess,
     TResult Function()? copyingTrack,
     TResult Function(String trackNumbers)? copyTrackSuccess,
+    TResult Function()? changingCustomerType,
+    TResult Function()? changeCustomerTypeSuccess,
+    TResult Function(StorageError error, int parcelsCount)?
+        changeCustomerTypeFailed,
     required TResult orElse(),
   }) {
     if (deleting != null) {
@@ -694,6 +768,13 @@ class _$ParcelsActionsStateDeletingImpl
         copyingTrack,
     required TResult Function(ParcelsActionsStateCopyTrackSuccess value)
         copyTrackSuccess,
+    required TResult Function(ParcelsActionsStateChangingCustomerType value)
+        changingCustomerType,
+    required TResult Function(
+            ParcelsActionsStateChangeCustomerTypeSuccess value)
+        changeCustomerTypeSuccess,
+    required TResult Function(ParcelsActionsStateChangeCustomerTypeFailed value)
+        changeCustomerTypeFailed,
   }) {
     return deleting(this);
   }
@@ -732,6 +813,12 @@ class _$ParcelsActionsStateDeletingImpl
     TResult? Function(ParcelsActionsStateCopyingTrack value)? copyingTrack,
     TResult? Function(ParcelsActionsStateCopyTrackSuccess value)?
         copyTrackSuccess,
+    TResult? Function(ParcelsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult? Function(ParcelsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult? Function(ParcelsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
   }) {
     return deleting?.call(this);
   }
@@ -769,6 +856,12 @@ class _$ParcelsActionsStateDeletingImpl
     TResult Function(ParcelsActionsStateCopyingTrack value)? copyingTrack,
     TResult Function(ParcelsActionsStateCopyTrackSuccess value)?
         copyTrackSuccess,
+    TResult Function(ParcelsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult Function(ParcelsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult Function(ParcelsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
     required TResult orElse(),
   }) {
     if (deleting != null) {
@@ -863,6 +956,10 @@ class _$ParcelsActionsStateDeleteSuccessImpl
     required TResult Function(String text) shareStringSuccess,
     required TResult Function() copyingTrack,
     required TResult Function(String trackNumbers) copyTrackSuccess,
+    required TResult Function() changingCustomerType,
+    required TResult Function() changeCustomerTypeSuccess,
+    required TResult Function(StorageError error, int parcelsCount)
+        changeCustomerTypeFailed,
   }) {
     return deleteSuccess();
   }
@@ -892,6 +989,10 @@ class _$ParcelsActionsStateDeleteSuccessImpl
     TResult? Function(String text)? shareStringSuccess,
     TResult? Function()? copyingTrack,
     TResult? Function(String trackNumbers)? copyTrackSuccess,
+    TResult? Function()? changingCustomerType,
+    TResult? Function()? changeCustomerTypeSuccess,
+    TResult? Function(StorageError error, int parcelsCount)?
+        changeCustomerTypeFailed,
   }) {
     return deleteSuccess?.call();
   }
@@ -920,6 +1021,10 @@ class _$ParcelsActionsStateDeleteSuccessImpl
     TResult Function(String text)? shareStringSuccess,
     TResult Function()? copyingTrack,
     TResult Function(String trackNumbers)? copyTrackSuccess,
+    TResult Function()? changingCustomerType,
+    TResult Function()? changeCustomerTypeSuccess,
+    TResult Function(StorageError error, int parcelsCount)?
+        changeCustomerTypeFailed,
     required TResult orElse(),
   }) {
     if (deleteSuccess != null) {
@@ -970,6 +1075,13 @@ class _$ParcelsActionsStateDeleteSuccessImpl
         copyingTrack,
     required TResult Function(ParcelsActionsStateCopyTrackSuccess value)
         copyTrackSuccess,
+    required TResult Function(ParcelsActionsStateChangingCustomerType value)
+        changingCustomerType,
+    required TResult Function(
+            ParcelsActionsStateChangeCustomerTypeSuccess value)
+        changeCustomerTypeSuccess,
+    required TResult Function(ParcelsActionsStateChangeCustomerTypeFailed value)
+        changeCustomerTypeFailed,
   }) {
     return deleteSuccess(this);
   }
@@ -1008,6 +1120,12 @@ class _$ParcelsActionsStateDeleteSuccessImpl
     TResult? Function(ParcelsActionsStateCopyingTrack value)? copyingTrack,
     TResult? Function(ParcelsActionsStateCopyTrackSuccess value)?
         copyTrackSuccess,
+    TResult? Function(ParcelsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult? Function(ParcelsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult? Function(ParcelsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
   }) {
     return deleteSuccess?.call(this);
   }
@@ -1045,6 +1163,12 @@ class _$ParcelsActionsStateDeleteSuccessImpl
     TResult Function(ParcelsActionsStateCopyingTrack value)? copyingTrack,
     TResult Function(ParcelsActionsStateCopyTrackSuccess value)?
         copyTrackSuccess,
+    TResult Function(ParcelsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult Function(ParcelsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult Function(ParcelsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
     required TResult orElse(),
   }) {
     if (deleteSuccess != null) {
@@ -1191,6 +1315,10 @@ class _$ParcelsActionsStateDeleteFailedImpl
     required TResult Function(String text) shareStringSuccess,
     required TResult Function() copyingTrack,
     required TResult Function(String trackNumbers) copyTrackSuccess,
+    required TResult Function() changingCustomerType,
+    required TResult Function() changeCustomerTypeSuccess,
+    required TResult Function(StorageError error, int parcelsCount)
+        changeCustomerTypeFailed,
   }) {
     return deleteFailed(error, parcelsCount);
   }
@@ -1220,6 +1348,10 @@ class _$ParcelsActionsStateDeleteFailedImpl
     TResult? Function(String text)? shareStringSuccess,
     TResult? Function()? copyingTrack,
     TResult? Function(String trackNumbers)? copyTrackSuccess,
+    TResult? Function()? changingCustomerType,
+    TResult? Function()? changeCustomerTypeSuccess,
+    TResult? Function(StorageError error, int parcelsCount)?
+        changeCustomerTypeFailed,
   }) {
     return deleteFailed?.call(error, parcelsCount);
   }
@@ -1248,6 +1380,10 @@ class _$ParcelsActionsStateDeleteFailedImpl
     TResult Function(String text)? shareStringSuccess,
     TResult Function()? copyingTrack,
     TResult Function(String trackNumbers)? copyTrackSuccess,
+    TResult Function()? changingCustomerType,
+    TResult Function()? changeCustomerTypeSuccess,
+    TResult Function(StorageError error, int parcelsCount)?
+        changeCustomerTypeFailed,
     required TResult orElse(),
   }) {
     if (deleteFailed != null) {
@@ -1298,6 +1434,13 @@ class _$ParcelsActionsStateDeleteFailedImpl
         copyingTrack,
     required TResult Function(ParcelsActionsStateCopyTrackSuccess value)
         copyTrackSuccess,
+    required TResult Function(ParcelsActionsStateChangingCustomerType value)
+        changingCustomerType,
+    required TResult Function(
+            ParcelsActionsStateChangeCustomerTypeSuccess value)
+        changeCustomerTypeSuccess,
+    required TResult Function(ParcelsActionsStateChangeCustomerTypeFailed value)
+        changeCustomerTypeFailed,
   }) {
     return deleteFailed(this);
   }
@@ -1336,6 +1479,12 @@ class _$ParcelsActionsStateDeleteFailedImpl
     TResult? Function(ParcelsActionsStateCopyingTrack value)? copyingTrack,
     TResult? Function(ParcelsActionsStateCopyTrackSuccess value)?
         copyTrackSuccess,
+    TResult? Function(ParcelsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult? Function(ParcelsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult? Function(ParcelsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
   }) {
     return deleteFailed?.call(this);
   }
@@ -1373,6 +1522,12 @@ class _$ParcelsActionsStateDeleteFailedImpl
     TResult Function(ParcelsActionsStateCopyingTrack value)? copyingTrack,
     TResult Function(ParcelsActionsStateCopyTrackSuccess value)?
         copyTrackSuccess,
+    TResult Function(ParcelsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult Function(ParcelsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult Function(ParcelsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
     required TResult orElse(),
   }) {
     if (deleteFailed != null) {
@@ -1478,6 +1633,10 @@ class _$ParcelsActionsStateMarkingAsReadImpl
     required TResult Function(String text) shareStringSuccess,
     required TResult Function() copyingTrack,
     required TResult Function(String trackNumbers) copyTrackSuccess,
+    required TResult Function() changingCustomerType,
+    required TResult Function() changeCustomerTypeSuccess,
+    required TResult Function(StorageError error, int parcelsCount)
+        changeCustomerTypeFailed,
   }) {
     return markingAsRead();
   }
@@ -1507,6 +1666,10 @@ class _$ParcelsActionsStateMarkingAsReadImpl
     TResult? Function(String text)? shareStringSuccess,
     TResult? Function()? copyingTrack,
     TResult? Function(String trackNumbers)? copyTrackSuccess,
+    TResult? Function()? changingCustomerType,
+    TResult? Function()? changeCustomerTypeSuccess,
+    TResult? Function(StorageError error, int parcelsCount)?
+        changeCustomerTypeFailed,
   }) {
     return markingAsRead?.call();
   }
@@ -1535,6 +1698,10 @@ class _$ParcelsActionsStateMarkingAsReadImpl
     TResult Function(String text)? shareStringSuccess,
     TResult Function()? copyingTrack,
     TResult Function(String trackNumbers)? copyTrackSuccess,
+    TResult Function()? changingCustomerType,
+    TResult Function()? changeCustomerTypeSuccess,
+    TResult Function(StorageError error, int parcelsCount)?
+        changeCustomerTypeFailed,
     required TResult orElse(),
   }) {
     if (markingAsRead != null) {
@@ -1585,6 +1752,13 @@ class _$ParcelsActionsStateMarkingAsReadImpl
         copyingTrack,
     required TResult Function(ParcelsActionsStateCopyTrackSuccess value)
         copyTrackSuccess,
+    required TResult Function(ParcelsActionsStateChangingCustomerType value)
+        changingCustomerType,
+    required TResult Function(
+            ParcelsActionsStateChangeCustomerTypeSuccess value)
+        changeCustomerTypeSuccess,
+    required TResult Function(ParcelsActionsStateChangeCustomerTypeFailed value)
+        changeCustomerTypeFailed,
   }) {
     return markingAsRead(this);
   }
@@ -1623,6 +1797,12 @@ class _$ParcelsActionsStateMarkingAsReadImpl
     TResult? Function(ParcelsActionsStateCopyingTrack value)? copyingTrack,
     TResult? Function(ParcelsActionsStateCopyTrackSuccess value)?
         copyTrackSuccess,
+    TResult? Function(ParcelsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult? Function(ParcelsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult? Function(ParcelsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
   }) {
     return markingAsRead?.call(this);
   }
@@ -1660,6 +1840,12 @@ class _$ParcelsActionsStateMarkingAsReadImpl
     TResult Function(ParcelsActionsStateCopyingTrack value)? copyingTrack,
     TResult Function(ParcelsActionsStateCopyTrackSuccess value)?
         copyTrackSuccess,
+    TResult Function(ParcelsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult Function(ParcelsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult Function(ParcelsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
     required TResult orElse(),
   }) {
     if (markingAsRead != null) {
@@ -1754,6 +1940,10 @@ class _$ParcelsActionsStateMarkAsReadSuccessImpl
     required TResult Function(String text) shareStringSuccess,
     required TResult Function() copyingTrack,
     required TResult Function(String trackNumbers) copyTrackSuccess,
+    required TResult Function() changingCustomerType,
+    required TResult Function() changeCustomerTypeSuccess,
+    required TResult Function(StorageError error, int parcelsCount)
+        changeCustomerTypeFailed,
   }) {
     return markAsReadSuccess();
   }
@@ -1783,6 +1973,10 @@ class _$ParcelsActionsStateMarkAsReadSuccessImpl
     TResult? Function(String text)? shareStringSuccess,
     TResult? Function()? copyingTrack,
     TResult? Function(String trackNumbers)? copyTrackSuccess,
+    TResult? Function()? changingCustomerType,
+    TResult? Function()? changeCustomerTypeSuccess,
+    TResult? Function(StorageError error, int parcelsCount)?
+        changeCustomerTypeFailed,
   }) {
     return markAsReadSuccess?.call();
   }
@@ -1811,6 +2005,10 @@ class _$ParcelsActionsStateMarkAsReadSuccessImpl
     TResult Function(String text)? shareStringSuccess,
     TResult Function()? copyingTrack,
     TResult Function(String trackNumbers)? copyTrackSuccess,
+    TResult Function()? changingCustomerType,
+    TResult Function()? changeCustomerTypeSuccess,
+    TResult Function(StorageError error, int parcelsCount)?
+        changeCustomerTypeFailed,
     required TResult orElse(),
   }) {
     if (markAsReadSuccess != null) {
@@ -1861,6 +2059,13 @@ class _$ParcelsActionsStateMarkAsReadSuccessImpl
         copyingTrack,
     required TResult Function(ParcelsActionsStateCopyTrackSuccess value)
         copyTrackSuccess,
+    required TResult Function(ParcelsActionsStateChangingCustomerType value)
+        changingCustomerType,
+    required TResult Function(
+            ParcelsActionsStateChangeCustomerTypeSuccess value)
+        changeCustomerTypeSuccess,
+    required TResult Function(ParcelsActionsStateChangeCustomerTypeFailed value)
+        changeCustomerTypeFailed,
   }) {
     return markAsReadSuccess(this);
   }
@@ -1899,6 +2104,12 @@ class _$ParcelsActionsStateMarkAsReadSuccessImpl
     TResult? Function(ParcelsActionsStateCopyingTrack value)? copyingTrack,
     TResult? Function(ParcelsActionsStateCopyTrackSuccess value)?
         copyTrackSuccess,
+    TResult? Function(ParcelsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult? Function(ParcelsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult? Function(ParcelsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
   }) {
     return markAsReadSuccess?.call(this);
   }
@@ -1936,6 +2147,12 @@ class _$ParcelsActionsStateMarkAsReadSuccessImpl
     TResult Function(ParcelsActionsStateCopyingTrack value)? copyingTrack,
     TResult Function(ParcelsActionsStateCopyTrackSuccess value)?
         copyTrackSuccess,
+    TResult Function(ParcelsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult Function(ParcelsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult Function(ParcelsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
     required TResult orElse(),
   }) {
     if (markAsReadSuccess != null) {
@@ -2083,6 +2300,10 @@ class _$ParcelsActionsStateMarkAsReadFailedImpl
     required TResult Function(String text) shareStringSuccess,
     required TResult Function() copyingTrack,
     required TResult Function(String trackNumbers) copyTrackSuccess,
+    required TResult Function() changingCustomerType,
+    required TResult Function() changeCustomerTypeSuccess,
+    required TResult Function(StorageError error, int parcelsCount)
+        changeCustomerTypeFailed,
   }) {
     return markAsReadFailed(error, parcelsCount);
   }
@@ -2112,6 +2333,10 @@ class _$ParcelsActionsStateMarkAsReadFailedImpl
     TResult? Function(String text)? shareStringSuccess,
     TResult? Function()? copyingTrack,
     TResult? Function(String trackNumbers)? copyTrackSuccess,
+    TResult? Function()? changingCustomerType,
+    TResult? Function()? changeCustomerTypeSuccess,
+    TResult? Function(StorageError error, int parcelsCount)?
+        changeCustomerTypeFailed,
   }) {
     return markAsReadFailed?.call(error, parcelsCount);
   }
@@ -2140,6 +2365,10 @@ class _$ParcelsActionsStateMarkAsReadFailedImpl
     TResult Function(String text)? shareStringSuccess,
     TResult Function()? copyingTrack,
     TResult Function(String trackNumbers)? copyTrackSuccess,
+    TResult Function()? changingCustomerType,
+    TResult Function()? changeCustomerTypeSuccess,
+    TResult Function(StorageError error, int parcelsCount)?
+        changeCustomerTypeFailed,
     required TResult orElse(),
   }) {
     if (markAsReadFailed != null) {
@@ -2190,6 +2419,13 @@ class _$ParcelsActionsStateMarkAsReadFailedImpl
         copyingTrack,
     required TResult Function(ParcelsActionsStateCopyTrackSuccess value)
         copyTrackSuccess,
+    required TResult Function(ParcelsActionsStateChangingCustomerType value)
+        changingCustomerType,
+    required TResult Function(
+            ParcelsActionsStateChangeCustomerTypeSuccess value)
+        changeCustomerTypeSuccess,
+    required TResult Function(ParcelsActionsStateChangeCustomerTypeFailed value)
+        changeCustomerTypeFailed,
   }) {
     return markAsReadFailed(this);
   }
@@ -2228,6 +2464,12 @@ class _$ParcelsActionsStateMarkAsReadFailedImpl
     TResult? Function(ParcelsActionsStateCopyingTrack value)? copyingTrack,
     TResult? Function(ParcelsActionsStateCopyTrackSuccess value)?
         copyTrackSuccess,
+    TResult? Function(ParcelsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult? Function(ParcelsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult? Function(ParcelsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
   }) {
     return markAsReadFailed?.call(this);
   }
@@ -2265,6 +2507,12 @@ class _$ParcelsActionsStateMarkAsReadFailedImpl
     TResult Function(ParcelsActionsStateCopyingTrack value)? copyingTrack,
     TResult Function(ParcelsActionsStateCopyTrackSuccess value)?
         copyTrackSuccess,
+    TResult Function(ParcelsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult Function(ParcelsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult Function(ParcelsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
     required TResult orElse(),
   }) {
     if (markAsReadFailed != null) {
@@ -2372,6 +2620,10 @@ class _$ParcelsActionsStateMovingToActiveImpl
     required TResult Function(String text) shareStringSuccess,
     required TResult Function() copyingTrack,
     required TResult Function(String trackNumbers) copyTrackSuccess,
+    required TResult Function() changingCustomerType,
+    required TResult Function() changeCustomerTypeSuccess,
+    required TResult Function(StorageError error, int parcelsCount)
+        changeCustomerTypeFailed,
   }) {
     return movingToActive();
   }
@@ -2401,6 +2653,10 @@ class _$ParcelsActionsStateMovingToActiveImpl
     TResult? Function(String text)? shareStringSuccess,
     TResult? Function()? copyingTrack,
     TResult? Function(String trackNumbers)? copyTrackSuccess,
+    TResult? Function()? changingCustomerType,
+    TResult? Function()? changeCustomerTypeSuccess,
+    TResult? Function(StorageError error, int parcelsCount)?
+        changeCustomerTypeFailed,
   }) {
     return movingToActive?.call();
   }
@@ -2429,6 +2685,10 @@ class _$ParcelsActionsStateMovingToActiveImpl
     TResult Function(String text)? shareStringSuccess,
     TResult Function()? copyingTrack,
     TResult Function(String trackNumbers)? copyTrackSuccess,
+    TResult Function()? changingCustomerType,
+    TResult Function()? changeCustomerTypeSuccess,
+    TResult Function(StorageError error, int parcelsCount)?
+        changeCustomerTypeFailed,
     required TResult orElse(),
   }) {
     if (movingToActive != null) {
@@ -2479,6 +2739,13 @@ class _$ParcelsActionsStateMovingToActiveImpl
         copyingTrack,
     required TResult Function(ParcelsActionsStateCopyTrackSuccess value)
         copyTrackSuccess,
+    required TResult Function(ParcelsActionsStateChangingCustomerType value)
+        changingCustomerType,
+    required TResult Function(
+            ParcelsActionsStateChangeCustomerTypeSuccess value)
+        changeCustomerTypeSuccess,
+    required TResult Function(ParcelsActionsStateChangeCustomerTypeFailed value)
+        changeCustomerTypeFailed,
   }) {
     return movingToActive(this);
   }
@@ -2517,6 +2784,12 @@ class _$ParcelsActionsStateMovingToActiveImpl
     TResult? Function(ParcelsActionsStateCopyingTrack value)? copyingTrack,
     TResult? Function(ParcelsActionsStateCopyTrackSuccess value)?
         copyTrackSuccess,
+    TResult? Function(ParcelsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult? Function(ParcelsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult? Function(ParcelsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
   }) {
     return movingToActive?.call(this);
   }
@@ -2554,6 +2827,12 @@ class _$ParcelsActionsStateMovingToActiveImpl
     TResult Function(ParcelsActionsStateCopyingTrack value)? copyingTrack,
     TResult Function(ParcelsActionsStateCopyTrackSuccess value)?
         copyTrackSuccess,
+    TResult Function(ParcelsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult Function(ParcelsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult Function(ParcelsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
     required TResult orElse(),
   }) {
     if (movingToActive != null) {
@@ -2649,6 +2928,10 @@ class _$ParcelsActionsStateMoveToActiveSuccessImpl
     required TResult Function(String text) shareStringSuccess,
     required TResult Function() copyingTrack,
     required TResult Function(String trackNumbers) copyTrackSuccess,
+    required TResult Function() changingCustomerType,
+    required TResult Function() changeCustomerTypeSuccess,
+    required TResult Function(StorageError error, int parcelsCount)
+        changeCustomerTypeFailed,
   }) {
     return moveToActiveSuccess();
   }
@@ -2678,6 +2961,10 @@ class _$ParcelsActionsStateMoveToActiveSuccessImpl
     TResult? Function(String text)? shareStringSuccess,
     TResult? Function()? copyingTrack,
     TResult? Function(String trackNumbers)? copyTrackSuccess,
+    TResult? Function()? changingCustomerType,
+    TResult? Function()? changeCustomerTypeSuccess,
+    TResult? Function(StorageError error, int parcelsCount)?
+        changeCustomerTypeFailed,
   }) {
     return moveToActiveSuccess?.call();
   }
@@ -2706,6 +2993,10 @@ class _$ParcelsActionsStateMoveToActiveSuccessImpl
     TResult Function(String text)? shareStringSuccess,
     TResult Function()? copyingTrack,
     TResult Function(String trackNumbers)? copyTrackSuccess,
+    TResult Function()? changingCustomerType,
+    TResult Function()? changeCustomerTypeSuccess,
+    TResult Function(StorageError error, int parcelsCount)?
+        changeCustomerTypeFailed,
     required TResult orElse(),
   }) {
     if (moveToActiveSuccess != null) {
@@ -2756,6 +3047,13 @@ class _$ParcelsActionsStateMoveToActiveSuccessImpl
         copyingTrack,
     required TResult Function(ParcelsActionsStateCopyTrackSuccess value)
         copyTrackSuccess,
+    required TResult Function(ParcelsActionsStateChangingCustomerType value)
+        changingCustomerType,
+    required TResult Function(
+            ParcelsActionsStateChangeCustomerTypeSuccess value)
+        changeCustomerTypeSuccess,
+    required TResult Function(ParcelsActionsStateChangeCustomerTypeFailed value)
+        changeCustomerTypeFailed,
   }) {
     return moveToActiveSuccess(this);
   }
@@ -2794,6 +3092,12 @@ class _$ParcelsActionsStateMoveToActiveSuccessImpl
     TResult? Function(ParcelsActionsStateCopyingTrack value)? copyingTrack,
     TResult? Function(ParcelsActionsStateCopyTrackSuccess value)?
         copyTrackSuccess,
+    TResult? Function(ParcelsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult? Function(ParcelsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult? Function(ParcelsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
   }) {
     return moveToActiveSuccess?.call(this);
   }
@@ -2831,6 +3135,12 @@ class _$ParcelsActionsStateMoveToActiveSuccessImpl
     TResult Function(ParcelsActionsStateCopyingTrack value)? copyingTrack,
     TResult Function(ParcelsActionsStateCopyTrackSuccess value)?
         copyTrackSuccess,
+    TResult Function(ParcelsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult Function(ParcelsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult Function(ParcelsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
     required TResult orElse(),
   }) {
     if (moveToActiveSuccess != null) {
@@ -2979,6 +3289,10 @@ class _$ParcelsActionsStateMoveToActiveFailedImpl
     required TResult Function(String text) shareStringSuccess,
     required TResult Function() copyingTrack,
     required TResult Function(String trackNumbers) copyTrackSuccess,
+    required TResult Function() changingCustomerType,
+    required TResult Function() changeCustomerTypeSuccess,
+    required TResult Function(StorageError error, int parcelsCount)
+        changeCustomerTypeFailed,
   }) {
     return moveToActiveFailed(error, parcelsCount);
   }
@@ -3008,6 +3322,10 @@ class _$ParcelsActionsStateMoveToActiveFailedImpl
     TResult? Function(String text)? shareStringSuccess,
     TResult? Function()? copyingTrack,
     TResult? Function(String trackNumbers)? copyTrackSuccess,
+    TResult? Function()? changingCustomerType,
+    TResult? Function()? changeCustomerTypeSuccess,
+    TResult? Function(StorageError error, int parcelsCount)?
+        changeCustomerTypeFailed,
   }) {
     return moveToActiveFailed?.call(error, parcelsCount);
   }
@@ -3036,6 +3354,10 @@ class _$ParcelsActionsStateMoveToActiveFailedImpl
     TResult Function(String text)? shareStringSuccess,
     TResult Function()? copyingTrack,
     TResult Function(String trackNumbers)? copyTrackSuccess,
+    TResult Function()? changingCustomerType,
+    TResult Function()? changeCustomerTypeSuccess,
+    TResult Function(StorageError error, int parcelsCount)?
+        changeCustomerTypeFailed,
     required TResult orElse(),
   }) {
     if (moveToActiveFailed != null) {
@@ -3086,6 +3408,13 @@ class _$ParcelsActionsStateMoveToActiveFailedImpl
         copyingTrack,
     required TResult Function(ParcelsActionsStateCopyTrackSuccess value)
         copyTrackSuccess,
+    required TResult Function(ParcelsActionsStateChangingCustomerType value)
+        changingCustomerType,
+    required TResult Function(
+            ParcelsActionsStateChangeCustomerTypeSuccess value)
+        changeCustomerTypeSuccess,
+    required TResult Function(ParcelsActionsStateChangeCustomerTypeFailed value)
+        changeCustomerTypeFailed,
   }) {
     return moveToActiveFailed(this);
   }
@@ -3124,6 +3453,12 @@ class _$ParcelsActionsStateMoveToActiveFailedImpl
     TResult? Function(ParcelsActionsStateCopyingTrack value)? copyingTrack,
     TResult? Function(ParcelsActionsStateCopyTrackSuccess value)?
         copyTrackSuccess,
+    TResult? Function(ParcelsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult? Function(ParcelsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult? Function(ParcelsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
   }) {
     return moveToActiveFailed?.call(this);
   }
@@ -3161,6 +3496,12 @@ class _$ParcelsActionsStateMoveToActiveFailedImpl
     TResult Function(ParcelsActionsStateCopyingTrack value)? copyingTrack,
     TResult Function(ParcelsActionsStateCopyTrackSuccess value)?
         copyTrackSuccess,
+    TResult Function(ParcelsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult Function(ParcelsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult Function(ParcelsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
     required TResult orElse(),
   }) {
     if (moveToActiveFailed != null) {
@@ -3268,6 +3609,10 @@ class _$ParcelsActionsStateMovingToArchiveImpl
     required TResult Function(String text) shareStringSuccess,
     required TResult Function() copyingTrack,
     required TResult Function(String trackNumbers) copyTrackSuccess,
+    required TResult Function() changingCustomerType,
+    required TResult Function() changeCustomerTypeSuccess,
+    required TResult Function(StorageError error, int parcelsCount)
+        changeCustomerTypeFailed,
   }) {
     return movingToArchive();
   }
@@ -3297,6 +3642,10 @@ class _$ParcelsActionsStateMovingToArchiveImpl
     TResult? Function(String text)? shareStringSuccess,
     TResult? Function()? copyingTrack,
     TResult? Function(String trackNumbers)? copyTrackSuccess,
+    TResult? Function()? changingCustomerType,
+    TResult? Function()? changeCustomerTypeSuccess,
+    TResult? Function(StorageError error, int parcelsCount)?
+        changeCustomerTypeFailed,
   }) {
     return movingToArchive?.call();
   }
@@ -3325,6 +3674,10 @@ class _$ParcelsActionsStateMovingToArchiveImpl
     TResult Function(String text)? shareStringSuccess,
     TResult Function()? copyingTrack,
     TResult Function(String trackNumbers)? copyTrackSuccess,
+    TResult Function()? changingCustomerType,
+    TResult Function()? changeCustomerTypeSuccess,
+    TResult Function(StorageError error, int parcelsCount)?
+        changeCustomerTypeFailed,
     required TResult orElse(),
   }) {
     if (movingToArchive != null) {
@@ -3375,6 +3728,13 @@ class _$ParcelsActionsStateMovingToArchiveImpl
         copyingTrack,
     required TResult Function(ParcelsActionsStateCopyTrackSuccess value)
         copyTrackSuccess,
+    required TResult Function(ParcelsActionsStateChangingCustomerType value)
+        changingCustomerType,
+    required TResult Function(
+            ParcelsActionsStateChangeCustomerTypeSuccess value)
+        changeCustomerTypeSuccess,
+    required TResult Function(ParcelsActionsStateChangeCustomerTypeFailed value)
+        changeCustomerTypeFailed,
   }) {
     return movingToArchive(this);
   }
@@ -3413,6 +3773,12 @@ class _$ParcelsActionsStateMovingToArchiveImpl
     TResult? Function(ParcelsActionsStateCopyingTrack value)? copyingTrack,
     TResult? Function(ParcelsActionsStateCopyTrackSuccess value)?
         copyTrackSuccess,
+    TResult? Function(ParcelsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult? Function(ParcelsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult? Function(ParcelsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
   }) {
     return movingToArchive?.call(this);
   }
@@ -3450,6 +3816,12 @@ class _$ParcelsActionsStateMovingToArchiveImpl
     TResult Function(ParcelsActionsStateCopyingTrack value)? copyingTrack,
     TResult Function(ParcelsActionsStateCopyTrackSuccess value)?
         copyTrackSuccess,
+    TResult Function(ParcelsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult Function(ParcelsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult Function(ParcelsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
     required TResult orElse(),
   }) {
     if (movingToArchive != null) {
@@ -3545,6 +3917,10 @@ class _$ParcelsActionsStateMoveToArchiveSuccessImpl
     required TResult Function(String text) shareStringSuccess,
     required TResult Function() copyingTrack,
     required TResult Function(String trackNumbers) copyTrackSuccess,
+    required TResult Function() changingCustomerType,
+    required TResult Function() changeCustomerTypeSuccess,
+    required TResult Function(StorageError error, int parcelsCount)
+        changeCustomerTypeFailed,
   }) {
     return moveToArchiveSuccess();
   }
@@ -3574,6 +3950,10 @@ class _$ParcelsActionsStateMoveToArchiveSuccessImpl
     TResult? Function(String text)? shareStringSuccess,
     TResult? Function()? copyingTrack,
     TResult? Function(String trackNumbers)? copyTrackSuccess,
+    TResult? Function()? changingCustomerType,
+    TResult? Function()? changeCustomerTypeSuccess,
+    TResult? Function(StorageError error, int parcelsCount)?
+        changeCustomerTypeFailed,
   }) {
     return moveToArchiveSuccess?.call();
   }
@@ -3602,6 +3982,10 @@ class _$ParcelsActionsStateMoveToArchiveSuccessImpl
     TResult Function(String text)? shareStringSuccess,
     TResult Function()? copyingTrack,
     TResult Function(String trackNumbers)? copyTrackSuccess,
+    TResult Function()? changingCustomerType,
+    TResult Function()? changeCustomerTypeSuccess,
+    TResult Function(StorageError error, int parcelsCount)?
+        changeCustomerTypeFailed,
     required TResult orElse(),
   }) {
     if (moveToArchiveSuccess != null) {
@@ -3652,6 +4036,13 @@ class _$ParcelsActionsStateMoveToArchiveSuccessImpl
         copyingTrack,
     required TResult Function(ParcelsActionsStateCopyTrackSuccess value)
         copyTrackSuccess,
+    required TResult Function(ParcelsActionsStateChangingCustomerType value)
+        changingCustomerType,
+    required TResult Function(
+            ParcelsActionsStateChangeCustomerTypeSuccess value)
+        changeCustomerTypeSuccess,
+    required TResult Function(ParcelsActionsStateChangeCustomerTypeFailed value)
+        changeCustomerTypeFailed,
   }) {
     return moveToArchiveSuccess(this);
   }
@@ -3690,6 +4081,12 @@ class _$ParcelsActionsStateMoveToArchiveSuccessImpl
     TResult? Function(ParcelsActionsStateCopyingTrack value)? copyingTrack,
     TResult? Function(ParcelsActionsStateCopyTrackSuccess value)?
         copyTrackSuccess,
+    TResult? Function(ParcelsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult? Function(ParcelsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult? Function(ParcelsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
   }) {
     return moveToArchiveSuccess?.call(this);
   }
@@ -3727,6 +4124,12 @@ class _$ParcelsActionsStateMoveToArchiveSuccessImpl
     TResult Function(ParcelsActionsStateCopyingTrack value)? copyingTrack,
     TResult Function(ParcelsActionsStateCopyTrackSuccess value)?
         copyTrackSuccess,
+    TResult Function(ParcelsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult Function(ParcelsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult Function(ParcelsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
     required TResult orElse(),
   }) {
     if (moveToArchiveSuccess != null) {
@@ -3876,6 +4279,10 @@ class _$ParcelsActionsStateMoveToArchiveFailedImpl
     required TResult Function(String text) shareStringSuccess,
     required TResult Function() copyingTrack,
     required TResult Function(String trackNumbers) copyTrackSuccess,
+    required TResult Function() changingCustomerType,
+    required TResult Function() changeCustomerTypeSuccess,
+    required TResult Function(StorageError error, int parcelsCount)
+        changeCustomerTypeFailed,
   }) {
     return moveToArchiveFailed(error, parcelsCount);
   }
@@ -3905,6 +4312,10 @@ class _$ParcelsActionsStateMoveToArchiveFailedImpl
     TResult? Function(String text)? shareStringSuccess,
     TResult? Function()? copyingTrack,
     TResult? Function(String trackNumbers)? copyTrackSuccess,
+    TResult? Function()? changingCustomerType,
+    TResult? Function()? changeCustomerTypeSuccess,
+    TResult? Function(StorageError error, int parcelsCount)?
+        changeCustomerTypeFailed,
   }) {
     return moveToArchiveFailed?.call(error, parcelsCount);
   }
@@ -3933,6 +4344,10 @@ class _$ParcelsActionsStateMoveToArchiveFailedImpl
     TResult Function(String text)? shareStringSuccess,
     TResult Function()? copyingTrack,
     TResult Function(String trackNumbers)? copyTrackSuccess,
+    TResult Function()? changingCustomerType,
+    TResult Function()? changeCustomerTypeSuccess,
+    TResult Function(StorageError error, int parcelsCount)?
+        changeCustomerTypeFailed,
     required TResult orElse(),
   }) {
     if (moveToArchiveFailed != null) {
@@ -3983,6 +4398,13 @@ class _$ParcelsActionsStateMoveToArchiveFailedImpl
         copyingTrack,
     required TResult Function(ParcelsActionsStateCopyTrackSuccess value)
         copyTrackSuccess,
+    required TResult Function(ParcelsActionsStateChangingCustomerType value)
+        changingCustomerType,
+    required TResult Function(
+            ParcelsActionsStateChangeCustomerTypeSuccess value)
+        changeCustomerTypeSuccess,
+    required TResult Function(ParcelsActionsStateChangeCustomerTypeFailed value)
+        changeCustomerTypeFailed,
   }) {
     return moveToArchiveFailed(this);
   }
@@ -4021,6 +4443,12 @@ class _$ParcelsActionsStateMoveToArchiveFailedImpl
     TResult? Function(ParcelsActionsStateCopyingTrack value)? copyingTrack,
     TResult? Function(ParcelsActionsStateCopyTrackSuccess value)?
         copyTrackSuccess,
+    TResult? Function(ParcelsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult? Function(ParcelsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult? Function(ParcelsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
   }) {
     return moveToArchiveFailed?.call(this);
   }
@@ -4058,6 +4486,12 @@ class _$ParcelsActionsStateMoveToArchiveFailedImpl
     TResult Function(ParcelsActionsStateCopyingTrack value)? copyingTrack,
     TResult Function(ParcelsActionsStateCopyTrackSuccess value)?
         copyTrackSuccess,
+    TResult Function(ParcelsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult Function(ParcelsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult Function(ParcelsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
     required TResult orElse(),
   }) {
     if (moveToArchiveFailed != null) {
@@ -4165,6 +4599,10 @@ class _$ParcelsActionsStateRefreshingImpl
     required TResult Function(String text) shareStringSuccess,
     required TResult Function() copyingTrack,
     required TResult Function(String trackNumbers) copyTrackSuccess,
+    required TResult Function() changingCustomerType,
+    required TResult Function() changeCustomerTypeSuccess,
+    required TResult Function(StorageError error, int parcelsCount)
+        changeCustomerTypeFailed,
   }) {
     return refreshing();
   }
@@ -4194,6 +4632,10 @@ class _$ParcelsActionsStateRefreshingImpl
     TResult? Function(String text)? shareStringSuccess,
     TResult? Function()? copyingTrack,
     TResult? Function(String trackNumbers)? copyTrackSuccess,
+    TResult? Function()? changingCustomerType,
+    TResult? Function()? changeCustomerTypeSuccess,
+    TResult? Function(StorageError error, int parcelsCount)?
+        changeCustomerTypeFailed,
   }) {
     return refreshing?.call();
   }
@@ -4222,6 +4664,10 @@ class _$ParcelsActionsStateRefreshingImpl
     TResult Function(String text)? shareStringSuccess,
     TResult Function()? copyingTrack,
     TResult Function(String trackNumbers)? copyTrackSuccess,
+    TResult Function()? changingCustomerType,
+    TResult Function()? changeCustomerTypeSuccess,
+    TResult Function(StorageError error, int parcelsCount)?
+        changeCustomerTypeFailed,
     required TResult orElse(),
   }) {
     if (refreshing != null) {
@@ -4272,6 +4718,13 @@ class _$ParcelsActionsStateRefreshingImpl
         copyingTrack,
     required TResult Function(ParcelsActionsStateCopyTrackSuccess value)
         copyTrackSuccess,
+    required TResult Function(ParcelsActionsStateChangingCustomerType value)
+        changingCustomerType,
+    required TResult Function(
+            ParcelsActionsStateChangeCustomerTypeSuccess value)
+        changeCustomerTypeSuccess,
+    required TResult Function(ParcelsActionsStateChangeCustomerTypeFailed value)
+        changeCustomerTypeFailed,
   }) {
     return refreshing(this);
   }
@@ -4310,6 +4763,12 @@ class _$ParcelsActionsStateRefreshingImpl
     TResult? Function(ParcelsActionsStateCopyingTrack value)? copyingTrack,
     TResult? Function(ParcelsActionsStateCopyTrackSuccess value)?
         copyTrackSuccess,
+    TResult? Function(ParcelsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult? Function(ParcelsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult? Function(ParcelsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
   }) {
     return refreshing?.call(this);
   }
@@ -4347,6 +4806,12 @@ class _$ParcelsActionsStateRefreshingImpl
     TResult Function(ParcelsActionsStateCopyingTrack value)? copyingTrack,
     TResult Function(ParcelsActionsStateCopyTrackSuccess value)?
         copyTrackSuccess,
+    TResult Function(ParcelsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult Function(ParcelsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult Function(ParcelsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
     required TResult orElse(),
   }) {
     if (refreshing != null) {
@@ -4441,6 +4906,10 @@ class _$ParcelsActionsStateRefreshSuccessImpl
     required TResult Function(String text) shareStringSuccess,
     required TResult Function() copyingTrack,
     required TResult Function(String trackNumbers) copyTrackSuccess,
+    required TResult Function() changingCustomerType,
+    required TResult Function() changeCustomerTypeSuccess,
+    required TResult Function(StorageError error, int parcelsCount)
+        changeCustomerTypeFailed,
   }) {
     return refreshSuccess();
   }
@@ -4470,6 +4939,10 @@ class _$ParcelsActionsStateRefreshSuccessImpl
     TResult? Function(String text)? shareStringSuccess,
     TResult? Function()? copyingTrack,
     TResult? Function(String trackNumbers)? copyTrackSuccess,
+    TResult? Function()? changingCustomerType,
+    TResult? Function()? changeCustomerTypeSuccess,
+    TResult? Function(StorageError error, int parcelsCount)?
+        changeCustomerTypeFailed,
   }) {
     return refreshSuccess?.call();
   }
@@ -4498,6 +4971,10 @@ class _$ParcelsActionsStateRefreshSuccessImpl
     TResult Function(String text)? shareStringSuccess,
     TResult Function()? copyingTrack,
     TResult Function(String trackNumbers)? copyTrackSuccess,
+    TResult Function()? changingCustomerType,
+    TResult Function()? changeCustomerTypeSuccess,
+    TResult Function(StorageError error, int parcelsCount)?
+        changeCustomerTypeFailed,
     required TResult orElse(),
   }) {
     if (refreshSuccess != null) {
@@ -4548,6 +5025,13 @@ class _$ParcelsActionsStateRefreshSuccessImpl
         copyingTrack,
     required TResult Function(ParcelsActionsStateCopyTrackSuccess value)
         copyTrackSuccess,
+    required TResult Function(ParcelsActionsStateChangingCustomerType value)
+        changingCustomerType,
+    required TResult Function(
+            ParcelsActionsStateChangeCustomerTypeSuccess value)
+        changeCustomerTypeSuccess,
+    required TResult Function(ParcelsActionsStateChangeCustomerTypeFailed value)
+        changeCustomerTypeFailed,
   }) {
     return refreshSuccess(this);
   }
@@ -4586,6 +5070,12 @@ class _$ParcelsActionsStateRefreshSuccessImpl
     TResult? Function(ParcelsActionsStateCopyingTrack value)? copyingTrack,
     TResult? Function(ParcelsActionsStateCopyTrackSuccess value)?
         copyTrackSuccess,
+    TResult? Function(ParcelsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult? Function(ParcelsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult? Function(ParcelsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
   }) {
     return refreshSuccess?.call(this);
   }
@@ -4623,6 +5113,12 @@ class _$ParcelsActionsStateRefreshSuccessImpl
     TResult Function(ParcelsActionsStateCopyingTrack value)? copyingTrack,
     TResult Function(ParcelsActionsStateCopyTrackSuccess value)?
         copyTrackSuccess,
+    TResult Function(ParcelsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult Function(ParcelsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult Function(ParcelsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
     required TResult orElse(),
   }) {
     if (refreshSuccess != null) {
@@ -4755,6 +5251,10 @@ class _$ParcelsActionsStateRefreshFailedImpl
     required TResult Function(String text) shareStringSuccess,
     required TResult Function() copyingTrack,
     required TResult Function(String trackNumbers) copyTrackSuccess,
+    required TResult Function() changingCustomerType,
+    required TResult Function() changeCustomerTypeSuccess,
+    required TResult Function(StorageError error, int parcelsCount)
+        changeCustomerTypeFailed,
   }) {
     return refreshFailed(errors);
   }
@@ -4784,6 +5284,10 @@ class _$ParcelsActionsStateRefreshFailedImpl
     TResult? Function(String text)? shareStringSuccess,
     TResult? Function()? copyingTrack,
     TResult? Function(String trackNumbers)? copyTrackSuccess,
+    TResult? Function()? changingCustomerType,
+    TResult? Function()? changeCustomerTypeSuccess,
+    TResult? Function(StorageError error, int parcelsCount)?
+        changeCustomerTypeFailed,
   }) {
     return refreshFailed?.call(errors);
   }
@@ -4812,6 +5316,10 @@ class _$ParcelsActionsStateRefreshFailedImpl
     TResult Function(String text)? shareStringSuccess,
     TResult Function()? copyingTrack,
     TResult Function(String trackNumbers)? copyTrackSuccess,
+    TResult Function()? changingCustomerType,
+    TResult Function()? changeCustomerTypeSuccess,
+    TResult Function(StorageError error, int parcelsCount)?
+        changeCustomerTypeFailed,
     required TResult orElse(),
   }) {
     if (refreshFailed != null) {
@@ -4862,6 +5370,13 @@ class _$ParcelsActionsStateRefreshFailedImpl
         copyingTrack,
     required TResult Function(ParcelsActionsStateCopyTrackSuccess value)
         copyTrackSuccess,
+    required TResult Function(ParcelsActionsStateChangingCustomerType value)
+        changingCustomerType,
+    required TResult Function(
+            ParcelsActionsStateChangeCustomerTypeSuccess value)
+        changeCustomerTypeSuccess,
+    required TResult Function(ParcelsActionsStateChangeCustomerTypeFailed value)
+        changeCustomerTypeFailed,
   }) {
     return refreshFailed(this);
   }
@@ -4900,6 +5415,12 @@ class _$ParcelsActionsStateRefreshFailedImpl
     TResult? Function(ParcelsActionsStateCopyingTrack value)? copyingTrack,
     TResult? Function(ParcelsActionsStateCopyTrackSuccess value)?
         copyTrackSuccess,
+    TResult? Function(ParcelsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult? Function(ParcelsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult? Function(ParcelsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
   }) {
     return refreshFailed?.call(this);
   }
@@ -4937,6 +5458,12 @@ class _$ParcelsActionsStateRefreshFailedImpl
     TResult Function(ParcelsActionsStateCopyingTrack value)? copyingTrack,
     TResult Function(ParcelsActionsStateCopyTrackSuccess value)?
         copyTrackSuccess,
+    TResult Function(ParcelsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult Function(ParcelsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult Function(ParcelsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
     required TResult orElse(),
   }) {
     if (refreshFailed != null) {
@@ -5073,6 +5600,10 @@ class _$ParcelsActionsStateRefreshFreqLimitedImpl
     required TResult Function(String text) shareStringSuccess,
     required TResult Function() copyingTrack,
     required TResult Function(String trackNumbers) copyTrackSuccess,
+    required TResult Function() changingCustomerType,
+    required TResult Function() changeCustomerTypeSuccess,
+    required TResult Function(StorageError error, int parcelsCount)
+        changeCustomerTypeFailed,
   }) {
     return refreshFreqLimited(remainingTime);
   }
@@ -5102,6 +5633,10 @@ class _$ParcelsActionsStateRefreshFreqLimitedImpl
     TResult? Function(String text)? shareStringSuccess,
     TResult? Function()? copyingTrack,
     TResult? Function(String trackNumbers)? copyTrackSuccess,
+    TResult? Function()? changingCustomerType,
+    TResult? Function()? changeCustomerTypeSuccess,
+    TResult? Function(StorageError error, int parcelsCount)?
+        changeCustomerTypeFailed,
   }) {
     return refreshFreqLimited?.call(remainingTime);
   }
@@ -5130,6 +5665,10 @@ class _$ParcelsActionsStateRefreshFreqLimitedImpl
     TResult Function(String text)? shareStringSuccess,
     TResult Function()? copyingTrack,
     TResult Function(String trackNumbers)? copyTrackSuccess,
+    TResult Function()? changingCustomerType,
+    TResult Function()? changeCustomerTypeSuccess,
+    TResult Function(StorageError error, int parcelsCount)?
+        changeCustomerTypeFailed,
     required TResult orElse(),
   }) {
     if (refreshFreqLimited != null) {
@@ -5180,6 +5719,13 @@ class _$ParcelsActionsStateRefreshFreqLimitedImpl
         copyingTrack,
     required TResult Function(ParcelsActionsStateCopyTrackSuccess value)
         copyTrackSuccess,
+    required TResult Function(ParcelsActionsStateChangingCustomerType value)
+        changingCustomerType,
+    required TResult Function(
+            ParcelsActionsStateChangeCustomerTypeSuccess value)
+        changeCustomerTypeSuccess,
+    required TResult Function(ParcelsActionsStateChangeCustomerTypeFailed value)
+        changeCustomerTypeFailed,
   }) {
     return refreshFreqLimited(this);
   }
@@ -5218,6 +5764,12 @@ class _$ParcelsActionsStateRefreshFreqLimitedImpl
     TResult? Function(ParcelsActionsStateCopyingTrack value)? copyingTrack,
     TResult? Function(ParcelsActionsStateCopyTrackSuccess value)?
         copyTrackSuccess,
+    TResult? Function(ParcelsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult? Function(ParcelsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult? Function(ParcelsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
   }) {
     return refreshFreqLimited?.call(this);
   }
@@ -5255,6 +5807,12 @@ class _$ParcelsActionsStateRefreshFreqLimitedImpl
     TResult Function(ParcelsActionsStateCopyingTrack value)? copyingTrack,
     TResult Function(ParcelsActionsStateCopyTrackSuccess value)?
         copyTrackSuccess,
+    TResult Function(ParcelsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult Function(ParcelsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult Function(ParcelsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
     required TResult orElse(),
   }) {
     if (refreshFreqLimited != null) {
@@ -5360,6 +5918,10 @@ class _$ParcelsActionsStateSharingStringImpl
     required TResult Function(String text) shareStringSuccess,
     required TResult Function() copyingTrack,
     required TResult Function(String trackNumbers) copyTrackSuccess,
+    required TResult Function() changingCustomerType,
+    required TResult Function() changeCustomerTypeSuccess,
+    required TResult Function(StorageError error, int parcelsCount)
+        changeCustomerTypeFailed,
   }) {
     return sharingString();
   }
@@ -5389,6 +5951,10 @@ class _$ParcelsActionsStateSharingStringImpl
     TResult? Function(String text)? shareStringSuccess,
     TResult? Function()? copyingTrack,
     TResult? Function(String trackNumbers)? copyTrackSuccess,
+    TResult? Function()? changingCustomerType,
+    TResult? Function()? changeCustomerTypeSuccess,
+    TResult? Function(StorageError error, int parcelsCount)?
+        changeCustomerTypeFailed,
   }) {
     return sharingString?.call();
   }
@@ -5417,6 +5983,10 @@ class _$ParcelsActionsStateSharingStringImpl
     TResult Function(String text)? shareStringSuccess,
     TResult Function()? copyingTrack,
     TResult Function(String trackNumbers)? copyTrackSuccess,
+    TResult Function()? changingCustomerType,
+    TResult Function()? changeCustomerTypeSuccess,
+    TResult Function(StorageError error, int parcelsCount)?
+        changeCustomerTypeFailed,
     required TResult orElse(),
   }) {
     if (sharingString != null) {
@@ -5467,6 +6037,13 @@ class _$ParcelsActionsStateSharingStringImpl
         copyingTrack,
     required TResult Function(ParcelsActionsStateCopyTrackSuccess value)
         copyTrackSuccess,
+    required TResult Function(ParcelsActionsStateChangingCustomerType value)
+        changingCustomerType,
+    required TResult Function(
+            ParcelsActionsStateChangeCustomerTypeSuccess value)
+        changeCustomerTypeSuccess,
+    required TResult Function(ParcelsActionsStateChangeCustomerTypeFailed value)
+        changeCustomerTypeFailed,
   }) {
     return sharingString(this);
   }
@@ -5505,6 +6082,12 @@ class _$ParcelsActionsStateSharingStringImpl
     TResult? Function(ParcelsActionsStateCopyingTrack value)? copyingTrack,
     TResult? Function(ParcelsActionsStateCopyTrackSuccess value)?
         copyTrackSuccess,
+    TResult? Function(ParcelsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult? Function(ParcelsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult? Function(ParcelsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
   }) {
     return sharingString?.call(this);
   }
@@ -5542,6 +6125,12 @@ class _$ParcelsActionsStateSharingStringImpl
     TResult Function(ParcelsActionsStateCopyingTrack value)? copyingTrack,
     TResult Function(ParcelsActionsStateCopyTrackSuccess value)?
         copyTrackSuccess,
+    TResult Function(ParcelsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult Function(ParcelsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult Function(ParcelsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
     required TResult orElse(),
   }) {
     if (sharingString != null) {
@@ -5666,6 +6255,10 @@ class _$ParcelsActionsStateShareStringSuccessImpl
     required TResult Function(String text) shareStringSuccess,
     required TResult Function() copyingTrack,
     required TResult Function(String trackNumbers) copyTrackSuccess,
+    required TResult Function() changingCustomerType,
+    required TResult Function() changeCustomerTypeSuccess,
+    required TResult Function(StorageError error, int parcelsCount)
+        changeCustomerTypeFailed,
   }) {
     return shareStringSuccess(text);
   }
@@ -5695,6 +6288,10 @@ class _$ParcelsActionsStateShareStringSuccessImpl
     TResult? Function(String text)? shareStringSuccess,
     TResult? Function()? copyingTrack,
     TResult? Function(String trackNumbers)? copyTrackSuccess,
+    TResult? Function()? changingCustomerType,
+    TResult? Function()? changeCustomerTypeSuccess,
+    TResult? Function(StorageError error, int parcelsCount)?
+        changeCustomerTypeFailed,
   }) {
     return shareStringSuccess?.call(text);
   }
@@ -5723,6 +6320,10 @@ class _$ParcelsActionsStateShareStringSuccessImpl
     TResult Function(String text)? shareStringSuccess,
     TResult Function()? copyingTrack,
     TResult Function(String trackNumbers)? copyTrackSuccess,
+    TResult Function()? changingCustomerType,
+    TResult Function()? changeCustomerTypeSuccess,
+    TResult Function(StorageError error, int parcelsCount)?
+        changeCustomerTypeFailed,
     required TResult orElse(),
   }) {
     if (shareStringSuccess != null) {
@@ -5773,6 +6374,13 @@ class _$ParcelsActionsStateShareStringSuccessImpl
         copyingTrack,
     required TResult Function(ParcelsActionsStateCopyTrackSuccess value)
         copyTrackSuccess,
+    required TResult Function(ParcelsActionsStateChangingCustomerType value)
+        changingCustomerType,
+    required TResult Function(
+            ParcelsActionsStateChangeCustomerTypeSuccess value)
+        changeCustomerTypeSuccess,
+    required TResult Function(ParcelsActionsStateChangeCustomerTypeFailed value)
+        changeCustomerTypeFailed,
   }) {
     return shareStringSuccess(this);
   }
@@ -5811,6 +6419,12 @@ class _$ParcelsActionsStateShareStringSuccessImpl
     TResult? Function(ParcelsActionsStateCopyingTrack value)? copyingTrack,
     TResult? Function(ParcelsActionsStateCopyTrackSuccess value)?
         copyTrackSuccess,
+    TResult? Function(ParcelsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult? Function(ParcelsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult? Function(ParcelsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
   }) {
     return shareStringSuccess?.call(this);
   }
@@ -5848,6 +6462,12 @@ class _$ParcelsActionsStateShareStringSuccessImpl
     TResult Function(ParcelsActionsStateCopyingTrack value)? copyingTrack,
     TResult Function(ParcelsActionsStateCopyTrackSuccess value)?
         copyTrackSuccess,
+    TResult Function(ParcelsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult Function(ParcelsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult Function(ParcelsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
     required TResult orElse(),
   }) {
     if (shareStringSuccess != null) {
@@ -5953,6 +6573,10 @@ class _$ParcelsActionsStateCopyingTrackImpl
     required TResult Function(String text) shareStringSuccess,
     required TResult Function() copyingTrack,
     required TResult Function(String trackNumbers) copyTrackSuccess,
+    required TResult Function() changingCustomerType,
+    required TResult Function() changeCustomerTypeSuccess,
+    required TResult Function(StorageError error, int parcelsCount)
+        changeCustomerTypeFailed,
   }) {
     return copyingTrack();
   }
@@ -5982,6 +6606,10 @@ class _$ParcelsActionsStateCopyingTrackImpl
     TResult? Function(String text)? shareStringSuccess,
     TResult? Function()? copyingTrack,
     TResult? Function(String trackNumbers)? copyTrackSuccess,
+    TResult? Function()? changingCustomerType,
+    TResult? Function()? changeCustomerTypeSuccess,
+    TResult? Function(StorageError error, int parcelsCount)?
+        changeCustomerTypeFailed,
   }) {
     return copyingTrack?.call();
   }
@@ -6010,6 +6638,10 @@ class _$ParcelsActionsStateCopyingTrackImpl
     TResult Function(String text)? shareStringSuccess,
     TResult Function()? copyingTrack,
     TResult Function(String trackNumbers)? copyTrackSuccess,
+    TResult Function()? changingCustomerType,
+    TResult Function()? changeCustomerTypeSuccess,
+    TResult Function(StorageError error, int parcelsCount)?
+        changeCustomerTypeFailed,
     required TResult orElse(),
   }) {
     if (copyingTrack != null) {
@@ -6060,6 +6692,13 @@ class _$ParcelsActionsStateCopyingTrackImpl
         copyingTrack,
     required TResult Function(ParcelsActionsStateCopyTrackSuccess value)
         copyTrackSuccess,
+    required TResult Function(ParcelsActionsStateChangingCustomerType value)
+        changingCustomerType,
+    required TResult Function(
+            ParcelsActionsStateChangeCustomerTypeSuccess value)
+        changeCustomerTypeSuccess,
+    required TResult Function(ParcelsActionsStateChangeCustomerTypeFailed value)
+        changeCustomerTypeFailed,
   }) {
     return copyingTrack(this);
   }
@@ -6098,6 +6737,12 @@ class _$ParcelsActionsStateCopyingTrackImpl
     TResult? Function(ParcelsActionsStateCopyingTrack value)? copyingTrack,
     TResult? Function(ParcelsActionsStateCopyTrackSuccess value)?
         copyTrackSuccess,
+    TResult? Function(ParcelsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult? Function(ParcelsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult? Function(ParcelsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
   }) {
     return copyingTrack?.call(this);
   }
@@ -6135,6 +6780,12 @@ class _$ParcelsActionsStateCopyingTrackImpl
     TResult Function(ParcelsActionsStateCopyingTrack value)? copyingTrack,
     TResult Function(ParcelsActionsStateCopyTrackSuccess value)?
         copyTrackSuccess,
+    TResult Function(ParcelsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult Function(ParcelsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult Function(ParcelsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
     required TResult orElse(),
   }) {
     if (copyingTrack != null) {
@@ -6259,6 +6910,10 @@ class _$ParcelsActionsStateCopyTrackSuccessImpl
     required TResult Function(String text) shareStringSuccess,
     required TResult Function() copyingTrack,
     required TResult Function(String trackNumbers) copyTrackSuccess,
+    required TResult Function() changingCustomerType,
+    required TResult Function() changeCustomerTypeSuccess,
+    required TResult Function(StorageError error, int parcelsCount)
+        changeCustomerTypeFailed,
   }) {
     return copyTrackSuccess(trackNumbers);
   }
@@ -6288,6 +6943,10 @@ class _$ParcelsActionsStateCopyTrackSuccessImpl
     TResult? Function(String text)? shareStringSuccess,
     TResult? Function()? copyingTrack,
     TResult? Function(String trackNumbers)? copyTrackSuccess,
+    TResult? Function()? changingCustomerType,
+    TResult? Function()? changeCustomerTypeSuccess,
+    TResult? Function(StorageError error, int parcelsCount)?
+        changeCustomerTypeFailed,
   }) {
     return copyTrackSuccess?.call(trackNumbers);
   }
@@ -6316,6 +6975,10 @@ class _$ParcelsActionsStateCopyTrackSuccessImpl
     TResult Function(String text)? shareStringSuccess,
     TResult Function()? copyingTrack,
     TResult Function(String trackNumbers)? copyTrackSuccess,
+    TResult Function()? changingCustomerType,
+    TResult Function()? changeCustomerTypeSuccess,
+    TResult Function(StorageError error, int parcelsCount)?
+        changeCustomerTypeFailed,
     required TResult orElse(),
   }) {
     if (copyTrackSuccess != null) {
@@ -6366,6 +7029,13 @@ class _$ParcelsActionsStateCopyTrackSuccessImpl
         copyingTrack,
     required TResult Function(ParcelsActionsStateCopyTrackSuccess value)
         copyTrackSuccess,
+    required TResult Function(ParcelsActionsStateChangingCustomerType value)
+        changingCustomerType,
+    required TResult Function(
+            ParcelsActionsStateChangeCustomerTypeSuccess value)
+        changeCustomerTypeSuccess,
+    required TResult Function(ParcelsActionsStateChangeCustomerTypeFailed value)
+        changeCustomerTypeFailed,
   }) {
     return copyTrackSuccess(this);
   }
@@ -6404,6 +7074,12 @@ class _$ParcelsActionsStateCopyTrackSuccessImpl
     TResult? Function(ParcelsActionsStateCopyingTrack value)? copyingTrack,
     TResult? Function(ParcelsActionsStateCopyTrackSuccess value)?
         copyTrackSuccess,
+    TResult? Function(ParcelsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult? Function(ParcelsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult? Function(ParcelsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
   }) {
     return copyTrackSuccess?.call(this);
   }
@@ -6441,6 +7117,12 @@ class _$ParcelsActionsStateCopyTrackSuccessImpl
     TResult Function(ParcelsActionsStateCopyingTrack value)? copyingTrack,
     TResult Function(ParcelsActionsStateCopyTrackSuccess value)?
         copyTrackSuccess,
+    TResult Function(ParcelsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult Function(ParcelsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult Function(ParcelsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
     required TResult orElse(),
   }) {
     if (copyTrackSuccess != null) {
@@ -6463,5 +7145,1002 @@ abstract class ParcelsActionsStateCopyTrackSuccess
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ParcelsActionsStateCopyTrackSuccessImplCopyWith<
           _$ParcelsActionsStateCopyTrackSuccessImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$ParcelsActionsStateChangingCustomerTypeImplCopyWith<$Res> {
+  factory _$$ParcelsActionsStateChangingCustomerTypeImplCopyWith(
+          _$ParcelsActionsStateChangingCustomerTypeImpl value,
+          $Res Function(_$ParcelsActionsStateChangingCustomerTypeImpl) then) =
+      __$$ParcelsActionsStateChangingCustomerTypeImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$ParcelsActionsStateChangingCustomerTypeImplCopyWithImpl<$Res>
+    extends _$ParcelsActionsStateCopyWithImpl<$Res,
+        _$ParcelsActionsStateChangingCustomerTypeImpl>
+    implements _$$ParcelsActionsStateChangingCustomerTypeImplCopyWith<$Res> {
+  __$$ParcelsActionsStateChangingCustomerTypeImplCopyWithImpl(
+      _$ParcelsActionsStateChangingCustomerTypeImpl _value,
+      $Res Function(_$ParcelsActionsStateChangingCustomerTypeImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of ParcelsActionsState
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$ParcelsActionsStateChangingCustomerTypeImpl
+    with DiagnosticableTreeMixin
+    implements ParcelsActionsStateChangingCustomerType {
+  const _$ParcelsActionsStateChangingCustomerTypeImpl();
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'ParcelsActionsState.changingCustomerType()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties.add(DiagnosticsProperty(
+        'type', 'ParcelsActionsState.changingCustomerType'));
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ParcelsActionsStateChangingCustomerTypeImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() deleting,
+    required TResult Function() deleteSuccess,
+    required TResult Function(StorageError error, int parcelsCount)
+        deleteFailed,
+    required TResult Function() markingAsRead,
+    required TResult Function() markAsReadSuccess,
+    required TResult Function(StorageError error, int parcelsCount)
+        markAsReadFailed,
+    required TResult Function() movingToActive,
+    required TResult Function() moveToActiveSuccess,
+    required TResult Function(StorageError error, int parcelsCount)
+        moveToActiveFailed,
+    required TResult Function() movingToArchive,
+    required TResult Function() moveToArchiveSuccess,
+    required TResult Function(StorageError error, int parcelsCount)
+        moveToArchiveFailed,
+    required TResult Function() refreshing,
+    required TResult Function() refreshSuccess,
+    required TResult Function(Map<String, EnqueueOneshotError> errors)
+        refreshFailed,
+    required TResult Function(Duration remainingTime) refreshFreqLimited,
+    required TResult Function() sharingString,
+    required TResult Function(String text) shareStringSuccess,
+    required TResult Function() copyingTrack,
+    required TResult Function(String trackNumbers) copyTrackSuccess,
+    required TResult Function() changingCustomerType,
+    required TResult Function() changeCustomerTypeSuccess,
+    required TResult Function(StorageError error, int parcelsCount)
+        changeCustomerTypeFailed,
+  }) {
+    return changingCustomerType();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? deleting,
+    TResult? Function()? deleteSuccess,
+    TResult? Function(StorageError error, int parcelsCount)? deleteFailed,
+    TResult? Function()? markingAsRead,
+    TResult? Function()? markAsReadSuccess,
+    TResult? Function(StorageError error, int parcelsCount)? markAsReadFailed,
+    TResult? Function()? movingToActive,
+    TResult? Function()? moveToActiveSuccess,
+    TResult? Function(StorageError error, int parcelsCount)? moveToActiveFailed,
+    TResult? Function()? movingToArchive,
+    TResult? Function()? moveToArchiveSuccess,
+    TResult? Function(StorageError error, int parcelsCount)?
+        moveToArchiveFailed,
+    TResult? Function()? refreshing,
+    TResult? Function()? refreshSuccess,
+    TResult? Function(Map<String, EnqueueOneshotError> errors)? refreshFailed,
+    TResult? Function(Duration remainingTime)? refreshFreqLimited,
+    TResult? Function()? sharingString,
+    TResult? Function(String text)? shareStringSuccess,
+    TResult? Function()? copyingTrack,
+    TResult? Function(String trackNumbers)? copyTrackSuccess,
+    TResult? Function()? changingCustomerType,
+    TResult? Function()? changeCustomerTypeSuccess,
+    TResult? Function(StorageError error, int parcelsCount)?
+        changeCustomerTypeFailed,
+  }) {
+    return changingCustomerType?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? deleting,
+    TResult Function()? deleteSuccess,
+    TResult Function(StorageError error, int parcelsCount)? deleteFailed,
+    TResult Function()? markingAsRead,
+    TResult Function()? markAsReadSuccess,
+    TResult Function(StorageError error, int parcelsCount)? markAsReadFailed,
+    TResult Function()? movingToActive,
+    TResult Function()? moveToActiveSuccess,
+    TResult Function(StorageError error, int parcelsCount)? moveToActiveFailed,
+    TResult Function()? movingToArchive,
+    TResult Function()? moveToArchiveSuccess,
+    TResult Function(StorageError error, int parcelsCount)? moveToArchiveFailed,
+    TResult Function()? refreshing,
+    TResult Function()? refreshSuccess,
+    TResult Function(Map<String, EnqueueOneshotError> errors)? refreshFailed,
+    TResult Function(Duration remainingTime)? refreshFreqLimited,
+    TResult Function()? sharingString,
+    TResult Function(String text)? shareStringSuccess,
+    TResult Function()? copyingTrack,
+    TResult Function(String trackNumbers)? copyTrackSuccess,
+    TResult Function()? changingCustomerType,
+    TResult Function()? changeCustomerTypeSuccess,
+    TResult Function(StorageError error, int parcelsCount)?
+        changeCustomerTypeFailed,
+    required TResult orElse(),
+  }) {
+    if (changingCustomerType != null) {
+      return changingCustomerType();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(ParcelsActionsStateInitial value) initial,
+    required TResult Function(ParcelsActionsStateDeleting value) deleting,
+    required TResult Function(ParcelsActionsStateDeleteSuccess value)
+        deleteSuccess,
+    required TResult Function(ParcelsActionsStateDeleteFailed value)
+        deleteFailed,
+    required TResult Function(ParcelsActionsStateMarkingAsRead value)
+        markingAsRead,
+    required TResult Function(ParcelsActionsStateMarkAsReadSuccess value)
+        markAsReadSuccess,
+    required TResult Function(ParcelsActionsStateMarkAsReadFailed value)
+        markAsReadFailed,
+    required TResult Function(ParcelsActionsStateMovingToActive value)
+        movingToActive,
+    required TResult Function(ParcelsActionsStateMoveToActiveSuccess value)
+        moveToActiveSuccess,
+    required TResult Function(ParcelsActionsStateMoveToActiveFailed value)
+        moveToActiveFailed,
+    required TResult Function(ParcelsActionsStateMovingToArchive value)
+        movingToArchive,
+    required TResult Function(ParcelsActionsStateMoveToArchiveSuccess value)
+        moveToArchiveSuccess,
+    required TResult Function(ParcelsActionsStateMoveToArchiveFailed value)
+        moveToArchiveFailed,
+    required TResult Function(ParcelsActionsStateRefreshing value) refreshing,
+    required TResult Function(ParcelsActionsStateRefreshSuccess value)
+        refreshSuccess,
+    required TResult Function(ParcelsActionsStateRefreshFailed value)
+        refreshFailed,
+    required TResult Function(ParcelsActionsStateRefreshFreqLimited value)
+        refreshFreqLimited,
+    required TResult Function(ParcelsActionsStateSharingString value)
+        sharingString,
+    required TResult Function(ParcelsActionsStateShareStringSuccess value)
+        shareStringSuccess,
+    required TResult Function(ParcelsActionsStateCopyingTrack value)
+        copyingTrack,
+    required TResult Function(ParcelsActionsStateCopyTrackSuccess value)
+        copyTrackSuccess,
+    required TResult Function(ParcelsActionsStateChangingCustomerType value)
+        changingCustomerType,
+    required TResult Function(
+            ParcelsActionsStateChangeCustomerTypeSuccess value)
+        changeCustomerTypeSuccess,
+    required TResult Function(ParcelsActionsStateChangeCustomerTypeFailed value)
+        changeCustomerTypeFailed,
+  }) {
+    return changingCustomerType(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(ParcelsActionsStateInitial value)? initial,
+    TResult? Function(ParcelsActionsStateDeleting value)? deleting,
+    TResult? Function(ParcelsActionsStateDeleteSuccess value)? deleteSuccess,
+    TResult? Function(ParcelsActionsStateDeleteFailed value)? deleteFailed,
+    TResult? Function(ParcelsActionsStateMarkingAsRead value)? markingAsRead,
+    TResult? Function(ParcelsActionsStateMarkAsReadSuccess value)?
+        markAsReadSuccess,
+    TResult? Function(ParcelsActionsStateMarkAsReadFailed value)?
+        markAsReadFailed,
+    TResult? Function(ParcelsActionsStateMovingToActive value)? movingToActive,
+    TResult? Function(ParcelsActionsStateMoveToActiveSuccess value)?
+        moveToActiveSuccess,
+    TResult? Function(ParcelsActionsStateMoveToActiveFailed value)?
+        moveToActiveFailed,
+    TResult? Function(ParcelsActionsStateMovingToArchive value)?
+        movingToArchive,
+    TResult? Function(ParcelsActionsStateMoveToArchiveSuccess value)?
+        moveToArchiveSuccess,
+    TResult? Function(ParcelsActionsStateMoveToArchiveFailed value)?
+        moveToArchiveFailed,
+    TResult? Function(ParcelsActionsStateRefreshing value)? refreshing,
+    TResult? Function(ParcelsActionsStateRefreshSuccess value)? refreshSuccess,
+    TResult? Function(ParcelsActionsStateRefreshFailed value)? refreshFailed,
+    TResult? Function(ParcelsActionsStateRefreshFreqLimited value)?
+        refreshFreqLimited,
+    TResult? Function(ParcelsActionsStateSharingString value)? sharingString,
+    TResult? Function(ParcelsActionsStateShareStringSuccess value)?
+        shareStringSuccess,
+    TResult? Function(ParcelsActionsStateCopyingTrack value)? copyingTrack,
+    TResult? Function(ParcelsActionsStateCopyTrackSuccess value)?
+        copyTrackSuccess,
+    TResult? Function(ParcelsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult? Function(ParcelsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult? Function(ParcelsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
+  }) {
+    return changingCustomerType?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(ParcelsActionsStateInitial value)? initial,
+    TResult Function(ParcelsActionsStateDeleting value)? deleting,
+    TResult Function(ParcelsActionsStateDeleteSuccess value)? deleteSuccess,
+    TResult Function(ParcelsActionsStateDeleteFailed value)? deleteFailed,
+    TResult Function(ParcelsActionsStateMarkingAsRead value)? markingAsRead,
+    TResult Function(ParcelsActionsStateMarkAsReadSuccess value)?
+        markAsReadSuccess,
+    TResult Function(ParcelsActionsStateMarkAsReadFailed value)?
+        markAsReadFailed,
+    TResult Function(ParcelsActionsStateMovingToActive value)? movingToActive,
+    TResult Function(ParcelsActionsStateMoveToActiveSuccess value)?
+        moveToActiveSuccess,
+    TResult Function(ParcelsActionsStateMoveToActiveFailed value)?
+        moveToActiveFailed,
+    TResult Function(ParcelsActionsStateMovingToArchive value)? movingToArchive,
+    TResult Function(ParcelsActionsStateMoveToArchiveSuccess value)?
+        moveToArchiveSuccess,
+    TResult Function(ParcelsActionsStateMoveToArchiveFailed value)?
+        moveToArchiveFailed,
+    TResult Function(ParcelsActionsStateRefreshing value)? refreshing,
+    TResult Function(ParcelsActionsStateRefreshSuccess value)? refreshSuccess,
+    TResult Function(ParcelsActionsStateRefreshFailed value)? refreshFailed,
+    TResult Function(ParcelsActionsStateRefreshFreqLimited value)?
+        refreshFreqLimited,
+    TResult Function(ParcelsActionsStateSharingString value)? sharingString,
+    TResult Function(ParcelsActionsStateShareStringSuccess value)?
+        shareStringSuccess,
+    TResult Function(ParcelsActionsStateCopyingTrack value)? copyingTrack,
+    TResult Function(ParcelsActionsStateCopyTrackSuccess value)?
+        copyTrackSuccess,
+    TResult Function(ParcelsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult Function(ParcelsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult Function(ParcelsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
+    required TResult orElse(),
+  }) {
+    if (changingCustomerType != null) {
+      return changingCustomerType(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ParcelsActionsStateChangingCustomerType
+    implements ParcelsActionsState {
+  const factory ParcelsActionsStateChangingCustomerType() =
+      _$ParcelsActionsStateChangingCustomerTypeImpl;
+}
+
+/// @nodoc
+abstract class _$$ParcelsActionsStateChangeCustomerTypeSuccessImplCopyWith<
+    $Res> {
+  factory _$$ParcelsActionsStateChangeCustomerTypeSuccessImplCopyWith(
+          _$ParcelsActionsStateChangeCustomerTypeSuccessImpl value,
+          $Res Function(_$ParcelsActionsStateChangeCustomerTypeSuccessImpl)
+              then) =
+      __$$ParcelsActionsStateChangeCustomerTypeSuccessImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$ParcelsActionsStateChangeCustomerTypeSuccessImplCopyWithImpl<$Res>
+    extends _$ParcelsActionsStateCopyWithImpl<$Res,
+        _$ParcelsActionsStateChangeCustomerTypeSuccessImpl>
+    implements
+        _$$ParcelsActionsStateChangeCustomerTypeSuccessImplCopyWith<$Res> {
+  __$$ParcelsActionsStateChangeCustomerTypeSuccessImplCopyWithImpl(
+      _$ParcelsActionsStateChangeCustomerTypeSuccessImpl _value,
+      $Res Function(_$ParcelsActionsStateChangeCustomerTypeSuccessImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of ParcelsActionsState
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$ParcelsActionsStateChangeCustomerTypeSuccessImpl
+    with DiagnosticableTreeMixin
+    implements ParcelsActionsStateChangeCustomerTypeSuccess {
+  const _$ParcelsActionsStateChangeCustomerTypeSuccessImpl();
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'ParcelsActionsState.changeCustomerTypeSuccess()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties.add(DiagnosticsProperty(
+        'type', 'ParcelsActionsState.changeCustomerTypeSuccess'));
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ParcelsActionsStateChangeCustomerTypeSuccessImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() deleting,
+    required TResult Function() deleteSuccess,
+    required TResult Function(StorageError error, int parcelsCount)
+        deleteFailed,
+    required TResult Function() markingAsRead,
+    required TResult Function() markAsReadSuccess,
+    required TResult Function(StorageError error, int parcelsCount)
+        markAsReadFailed,
+    required TResult Function() movingToActive,
+    required TResult Function() moveToActiveSuccess,
+    required TResult Function(StorageError error, int parcelsCount)
+        moveToActiveFailed,
+    required TResult Function() movingToArchive,
+    required TResult Function() moveToArchiveSuccess,
+    required TResult Function(StorageError error, int parcelsCount)
+        moveToArchiveFailed,
+    required TResult Function() refreshing,
+    required TResult Function() refreshSuccess,
+    required TResult Function(Map<String, EnqueueOneshotError> errors)
+        refreshFailed,
+    required TResult Function(Duration remainingTime) refreshFreqLimited,
+    required TResult Function() sharingString,
+    required TResult Function(String text) shareStringSuccess,
+    required TResult Function() copyingTrack,
+    required TResult Function(String trackNumbers) copyTrackSuccess,
+    required TResult Function() changingCustomerType,
+    required TResult Function() changeCustomerTypeSuccess,
+    required TResult Function(StorageError error, int parcelsCount)
+        changeCustomerTypeFailed,
+  }) {
+    return changeCustomerTypeSuccess();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? deleting,
+    TResult? Function()? deleteSuccess,
+    TResult? Function(StorageError error, int parcelsCount)? deleteFailed,
+    TResult? Function()? markingAsRead,
+    TResult? Function()? markAsReadSuccess,
+    TResult? Function(StorageError error, int parcelsCount)? markAsReadFailed,
+    TResult? Function()? movingToActive,
+    TResult? Function()? moveToActiveSuccess,
+    TResult? Function(StorageError error, int parcelsCount)? moveToActiveFailed,
+    TResult? Function()? movingToArchive,
+    TResult? Function()? moveToArchiveSuccess,
+    TResult? Function(StorageError error, int parcelsCount)?
+        moveToArchiveFailed,
+    TResult? Function()? refreshing,
+    TResult? Function()? refreshSuccess,
+    TResult? Function(Map<String, EnqueueOneshotError> errors)? refreshFailed,
+    TResult? Function(Duration remainingTime)? refreshFreqLimited,
+    TResult? Function()? sharingString,
+    TResult? Function(String text)? shareStringSuccess,
+    TResult? Function()? copyingTrack,
+    TResult? Function(String trackNumbers)? copyTrackSuccess,
+    TResult? Function()? changingCustomerType,
+    TResult? Function()? changeCustomerTypeSuccess,
+    TResult? Function(StorageError error, int parcelsCount)?
+        changeCustomerTypeFailed,
+  }) {
+    return changeCustomerTypeSuccess?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? deleting,
+    TResult Function()? deleteSuccess,
+    TResult Function(StorageError error, int parcelsCount)? deleteFailed,
+    TResult Function()? markingAsRead,
+    TResult Function()? markAsReadSuccess,
+    TResult Function(StorageError error, int parcelsCount)? markAsReadFailed,
+    TResult Function()? movingToActive,
+    TResult Function()? moveToActiveSuccess,
+    TResult Function(StorageError error, int parcelsCount)? moveToActiveFailed,
+    TResult Function()? movingToArchive,
+    TResult Function()? moveToArchiveSuccess,
+    TResult Function(StorageError error, int parcelsCount)? moveToArchiveFailed,
+    TResult Function()? refreshing,
+    TResult Function()? refreshSuccess,
+    TResult Function(Map<String, EnqueueOneshotError> errors)? refreshFailed,
+    TResult Function(Duration remainingTime)? refreshFreqLimited,
+    TResult Function()? sharingString,
+    TResult Function(String text)? shareStringSuccess,
+    TResult Function()? copyingTrack,
+    TResult Function(String trackNumbers)? copyTrackSuccess,
+    TResult Function()? changingCustomerType,
+    TResult Function()? changeCustomerTypeSuccess,
+    TResult Function(StorageError error, int parcelsCount)?
+        changeCustomerTypeFailed,
+    required TResult orElse(),
+  }) {
+    if (changeCustomerTypeSuccess != null) {
+      return changeCustomerTypeSuccess();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(ParcelsActionsStateInitial value) initial,
+    required TResult Function(ParcelsActionsStateDeleting value) deleting,
+    required TResult Function(ParcelsActionsStateDeleteSuccess value)
+        deleteSuccess,
+    required TResult Function(ParcelsActionsStateDeleteFailed value)
+        deleteFailed,
+    required TResult Function(ParcelsActionsStateMarkingAsRead value)
+        markingAsRead,
+    required TResult Function(ParcelsActionsStateMarkAsReadSuccess value)
+        markAsReadSuccess,
+    required TResult Function(ParcelsActionsStateMarkAsReadFailed value)
+        markAsReadFailed,
+    required TResult Function(ParcelsActionsStateMovingToActive value)
+        movingToActive,
+    required TResult Function(ParcelsActionsStateMoveToActiveSuccess value)
+        moveToActiveSuccess,
+    required TResult Function(ParcelsActionsStateMoveToActiveFailed value)
+        moveToActiveFailed,
+    required TResult Function(ParcelsActionsStateMovingToArchive value)
+        movingToArchive,
+    required TResult Function(ParcelsActionsStateMoveToArchiveSuccess value)
+        moveToArchiveSuccess,
+    required TResult Function(ParcelsActionsStateMoveToArchiveFailed value)
+        moveToArchiveFailed,
+    required TResult Function(ParcelsActionsStateRefreshing value) refreshing,
+    required TResult Function(ParcelsActionsStateRefreshSuccess value)
+        refreshSuccess,
+    required TResult Function(ParcelsActionsStateRefreshFailed value)
+        refreshFailed,
+    required TResult Function(ParcelsActionsStateRefreshFreqLimited value)
+        refreshFreqLimited,
+    required TResult Function(ParcelsActionsStateSharingString value)
+        sharingString,
+    required TResult Function(ParcelsActionsStateShareStringSuccess value)
+        shareStringSuccess,
+    required TResult Function(ParcelsActionsStateCopyingTrack value)
+        copyingTrack,
+    required TResult Function(ParcelsActionsStateCopyTrackSuccess value)
+        copyTrackSuccess,
+    required TResult Function(ParcelsActionsStateChangingCustomerType value)
+        changingCustomerType,
+    required TResult Function(
+            ParcelsActionsStateChangeCustomerTypeSuccess value)
+        changeCustomerTypeSuccess,
+    required TResult Function(ParcelsActionsStateChangeCustomerTypeFailed value)
+        changeCustomerTypeFailed,
+  }) {
+    return changeCustomerTypeSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(ParcelsActionsStateInitial value)? initial,
+    TResult? Function(ParcelsActionsStateDeleting value)? deleting,
+    TResult? Function(ParcelsActionsStateDeleteSuccess value)? deleteSuccess,
+    TResult? Function(ParcelsActionsStateDeleteFailed value)? deleteFailed,
+    TResult? Function(ParcelsActionsStateMarkingAsRead value)? markingAsRead,
+    TResult? Function(ParcelsActionsStateMarkAsReadSuccess value)?
+        markAsReadSuccess,
+    TResult? Function(ParcelsActionsStateMarkAsReadFailed value)?
+        markAsReadFailed,
+    TResult? Function(ParcelsActionsStateMovingToActive value)? movingToActive,
+    TResult? Function(ParcelsActionsStateMoveToActiveSuccess value)?
+        moveToActiveSuccess,
+    TResult? Function(ParcelsActionsStateMoveToActiveFailed value)?
+        moveToActiveFailed,
+    TResult? Function(ParcelsActionsStateMovingToArchive value)?
+        movingToArchive,
+    TResult? Function(ParcelsActionsStateMoveToArchiveSuccess value)?
+        moveToArchiveSuccess,
+    TResult? Function(ParcelsActionsStateMoveToArchiveFailed value)?
+        moveToArchiveFailed,
+    TResult? Function(ParcelsActionsStateRefreshing value)? refreshing,
+    TResult? Function(ParcelsActionsStateRefreshSuccess value)? refreshSuccess,
+    TResult? Function(ParcelsActionsStateRefreshFailed value)? refreshFailed,
+    TResult? Function(ParcelsActionsStateRefreshFreqLimited value)?
+        refreshFreqLimited,
+    TResult? Function(ParcelsActionsStateSharingString value)? sharingString,
+    TResult? Function(ParcelsActionsStateShareStringSuccess value)?
+        shareStringSuccess,
+    TResult? Function(ParcelsActionsStateCopyingTrack value)? copyingTrack,
+    TResult? Function(ParcelsActionsStateCopyTrackSuccess value)?
+        copyTrackSuccess,
+    TResult? Function(ParcelsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult? Function(ParcelsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult? Function(ParcelsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
+  }) {
+    return changeCustomerTypeSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(ParcelsActionsStateInitial value)? initial,
+    TResult Function(ParcelsActionsStateDeleting value)? deleting,
+    TResult Function(ParcelsActionsStateDeleteSuccess value)? deleteSuccess,
+    TResult Function(ParcelsActionsStateDeleteFailed value)? deleteFailed,
+    TResult Function(ParcelsActionsStateMarkingAsRead value)? markingAsRead,
+    TResult Function(ParcelsActionsStateMarkAsReadSuccess value)?
+        markAsReadSuccess,
+    TResult Function(ParcelsActionsStateMarkAsReadFailed value)?
+        markAsReadFailed,
+    TResult Function(ParcelsActionsStateMovingToActive value)? movingToActive,
+    TResult Function(ParcelsActionsStateMoveToActiveSuccess value)?
+        moveToActiveSuccess,
+    TResult Function(ParcelsActionsStateMoveToActiveFailed value)?
+        moveToActiveFailed,
+    TResult Function(ParcelsActionsStateMovingToArchive value)? movingToArchive,
+    TResult Function(ParcelsActionsStateMoveToArchiveSuccess value)?
+        moveToArchiveSuccess,
+    TResult Function(ParcelsActionsStateMoveToArchiveFailed value)?
+        moveToArchiveFailed,
+    TResult Function(ParcelsActionsStateRefreshing value)? refreshing,
+    TResult Function(ParcelsActionsStateRefreshSuccess value)? refreshSuccess,
+    TResult Function(ParcelsActionsStateRefreshFailed value)? refreshFailed,
+    TResult Function(ParcelsActionsStateRefreshFreqLimited value)?
+        refreshFreqLimited,
+    TResult Function(ParcelsActionsStateSharingString value)? sharingString,
+    TResult Function(ParcelsActionsStateShareStringSuccess value)?
+        shareStringSuccess,
+    TResult Function(ParcelsActionsStateCopyingTrack value)? copyingTrack,
+    TResult Function(ParcelsActionsStateCopyTrackSuccess value)?
+        copyTrackSuccess,
+    TResult Function(ParcelsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult Function(ParcelsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult Function(ParcelsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
+    required TResult orElse(),
+  }) {
+    if (changeCustomerTypeSuccess != null) {
+      return changeCustomerTypeSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ParcelsActionsStateChangeCustomerTypeSuccess
+    implements ParcelsActionsState {
+  const factory ParcelsActionsStateChangeCustomerTypeSuccess() =
+      _$ParcelsActionsStateChangeCustomerTypeSuccessImpl;
+}
+
+/// @nodoc
+abstract class _$$ParcelsActionsStateChangeCustomerTypeFailedImplCopyWith<
+    $Res> {
+  factory _$$ParcelsActionsStateChangeCustomerTypeFailedImplCopyWith(
+          _$ParcelsActionsStateChangeCustomerTypeFailedImpl value,
+          $Res Function(_$ParcelsActionsStateChangeCustomerTypeFailedImpl)
+              then) =
+      __$$ParcelsActionsStateChangeCustomerTypeFailedImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({StorageError error, int parcelsCount});
+
+  $StorageErrorCopyWith<$Res> get error;
+}
+
+/// @nodoc
+class __$$ParcelsActionsStateChangeCustomerTypeFailedImplCopyWithImpl<$Res>
+    extends _$ParcelsActionsStateCopyWithImpl<$Res,
+        _$ParcelsActionsStateChangeCustomerTypeFailedImpl>
+    implements
+        _$$ParcelsActionsStateChangeCustomerTypeFailedImplCopyWith<$Res> {
+  __$$ParcelsActionsStateChangeCustomerTypeFailedImplCopyWithImpl(
+      _$ParcelsActionsStateChangeCustomerTypeFailedImpl _value,
+      $Res Function(_$ParcelsActionsStateChangeCustomerTypeFailedImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of ParcelsActionsState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? error = null,
+    Object? parcelsCount = null,
+  }) {
+    return _then(_$ParcelsActionsStateChangeCustomerTypeFailedImpl(
+      error: null == error
+          ? _value.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as StorageError,
+      parcelsCount: null == parcelsCount
+          ? _value.parcelsCount
+          : parcelsCount // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
+
+  /// Create a copy of ParcelsActionsState
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $StorageErrorCopyWith<$Res> get error {
+    return $StorageErrorCopyWith<$Res>(_value.error, (value) {
+      return _then(_value.copyWith(error: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$ParcelsActionsStateChangeCustomerTypeFailedImpl
+    with DiagnosticableTreeMixin
+    implements ParcelsActionsStateChangeCustomerTypeFailed {
+  const _$ParcelsActionsStateChangeCustomerTypeFailedImpl(
+      {required this.error, required this.parcelsCount});
+
+  @override
+  final StorageError error;
+  @override
+  final int parcelsCount;
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'ParcelsActionsState.changeCustomerTypeFailed(error: $error, parcelsCount: $parcelsCount)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty(
+          'type', 'ParcelsActionsState.changeCustomerTypeFailed'))
+      ..add(DiagnosticsProperty('error', error))
+      ..add(DiagnosticsProperty('parcelsCount', parcelsCount));
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ParcelsActionsStateChangeCustomerTypeFailedImpl &&
+            (identical(other.error, error) || other.error == error) &&
+            (identical(other.parcelsCount, parcelsCount) ||
+                other.parcelsCount == parcelsCount));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, error, parcelsCount);
+
+  /// Create a copy of ParcelsActionsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ParcelsActionsStateChangeCustomerTypeFailedImplCopyWith<
+          _$ParcelsActionsStateChangeCustomerTypeFailedImpl>
+      get copyWith =>
+          __$$ParcelsActionsStateChangeCustomerTypeFailedImplCopyWithImpl<
+                  _$ParcelsActionsStateChangeCustomerTypeFailedImpl>(
+              this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() deleting,
+    required TResult Function() deleteSuccess,
+    required TResult Function(StorageError error, int parcelsCount)
+        deleteFailed,
+    required TResult Function() markingAsRead,
+    required TResult Function() markAsReadSuccess,
+    required TResult Function(StorageError error, int parcelsCount)
+        markAsReadFailed,
+    required TResult Function() movingToActive,
+    required TResult Function() moveToActiveSuccess,
+    required TResult Function(StorageError error, int parcelsCount)
+        moveToActiveFailed,
+    required TResult Function() movingToArchive,
+    required TResult Function() moveToArchiveSuccess,
+    required TResult Function(StorageError error, int parcelsCount)
+        moveToArchiveFailed,
+    required TResult Function() refreshing,
+    required TResult Function() refreshSuccess,
+    required TResult Function(Map<String, EnqueueOneshotError> errors)
+        refreshFailed,
+    required TResult Function(Duration remainingTime) refreshFreqLimited,
+    required TResult Function() sharingString,
+    required TResult Function(String text) shareStringSuccess,
+    required TResult Function() copyingTrack,
+    required TResult Function(String trackNumbers) copyTrackSuccess,
+    required TResult Function() changingCustomerType,
+    required TResult Function() changeCustomerTypeSuccess,
+    required TResult Function(StorageError error, int parcelsCount)
+        changeCustomerTypeFailed,
+  }) {
+    return changeCustomerTypeFailed(error, parcelsCount);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? deleting,
+    TResult? Function()? deleteSuccess,
+    TResult? Function(StorageError error, int parcelsCount)? deleteFailed,
+    TResult? Function()? markingAsRead,
+    TResult? Function()? markAsReadSuccess,
+    TResult? Function(StorageError error, int parcelsCount)? markAsReadFailed,
+    TResult? Function()? movingToActive,
+    TResult? Function()? moveToActiveSuccess,
+    TResult? Function(StorageError error, int parcelsCount)? moveToActiveFailed,
+    TResult? Function()? movingToArchive,
+    TResult? Function()? moveToArchiveSuccess,
+    TResult? Function(StorageError error, int parcelsCount)?
+        moveToArchiveFailed,
+    TResult? Function()? refreshing,
+    TResult? Function()? refreshSuccess,
+    TResult? Function(Map<String, EnqueueOneshotError> errors)? refreshFailed,
+    TResult? Function(Duration remainingTime)? refreshFreqLimited,
+    TResult? Function()? sharingString,
+    TResult? Function(String text)? shareStringSuccess,
+    TResult? Function()? copyingTrack,
+    TResult? Function(String trackNumbers)? copyTrackSuccess,
+    TResult? Function()? changingCustomerType,
+    TResult? Function()? changeCustomerTypeSuccess,
+    TResult? Function(StorageError error, int parcelsCount)?
+        changeCustomerTypeFailed,
+  }) {
+    return changeCustomerTypeFailed?.call(error, parcelsCount);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? deleting,
+    TResult Function()? deleteSuccess,
+    TResult Function(StorageError error, int parcelsCount)? deleteFailed,
+    TResult Function()? markingAsRead,
+    TResult Function()? markAsReadSuccess,
+    TResult Function(StorageError error, int parcelsCount)? markAsReadFailed,
+    TResult Function()? movingToActive,
+    TResult Function()? moveToActiveSuccess,
+    TResult Function(StorageError error, int parcelsCount)? moveToActiveFailed,
+    TResult Function()? movingToArchive,
+    TResult Function()? moveToArchiveSuccess,
+    TResult Function(StorageError error, int parcelsCount)? moveToArchiveFailed,
+    TResult Function()? refreshing,
+    TResult Function()? refreshSuccess,
+    TResult Function(Map<String, EnqueueOneshotError> errors)? refreshFailed,
+    TResult Function(Duration remainingTime)? refreshFreqLimited,
+    TResult Function()? sharingString,
+    TResult Function(String text)? shareStringSuccess,
+    TResult Function()? copyingTrack,
+    TResult Function(String trackNumbers)? copyTrackSuccess,
+    TResult Function()? changingCustomerType,
+    TResult Function()? changeCustomerTypeSuccess,
+    TResult Function(StorageError error, int parcelsCount)?
+        changeCustomerTypeFailed,
+    required TResult orElse(),
+  }) {
+    if (changeCustomerTypeFailed != null) {
+      return changeCustomerTypeFailed(error, parcelsCount);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(ParcelsActionsStateInitial value) initial,
+    required TResult Function(ParcelsActionsStateDeleting value) deleting,
+    required TResult Function(ParcelsActionsStateDeleteSuccess value)
+        deleteSuccess,
+    required TResult Function(ParcelsActionsStateDeleteFailed value)
+        deleteFailed,
+    required TResult Function(ParcelsActionsStateMarkingAsRead value)
+        markingAsRead,
+    required TResult Function(ParcelsActionsStateMarkAsReadSuccess value)
+        markAsReadSuccess,
+    required TResult Function(ParcelsActionsStateMarkAsReadFailed value)
+        markAsReadFailed,
+    required TResult Function(ParcelsActionsStateMovingToActive value)
+        movingToActive,
+    required TResult Function(ParcelsActionsStateMoveToActiveSuccess value)
+        moveToActiveSuccess,
+    required TResult Function(ParcelsActionsStateMoveToActiveFailed value)
+        moveToActiveFailed,
+    required TResult Function(ParcelsActionsStateMovingToArchive value)
+        movingToArchive,
+    required TResult Function(ParcelsActionsStateMoveToArchiveSuccess value)
+        moveToArchiveSuccess,
+    required TResult Function(ParcelsActionsStateMoveToArchiveFailed value)
+        moveToArchiveFailed,
+    required TResult Function(ParcelsActionsStateRefreshing value) refreshing,
+    required TResult Function(ParcelsActionsStateRefreshSuccess value)
+        refreshSuccess,
+    required TResult Function(ParcelsActionsStateRefreshFailed value)
+        refreshFailed,
+    required TResult Function(ParcelsActionsStateRefreshFreqLimited value)
+        refreshFreqLimited,
+    required TResult Function(ParcelsActionsStateSharingString value)
+        sharingString,
+    required TResult Function(ParcelsActionsStateShareStringSuccess value)
+        shareStringSuccess,
+    required TResult Function(ParcelsActionsStateCopyingTrack value)
+        copyingTrack,
+    required TResult Function(ParcelsActionsStateCopyTrackSuccess value)
+        copyTrackSuccess,
+    required TResult Function(ParcelsActionsStateChangingCustomerType value)
+        changingCustomerType,
+    required TResult Function(
+            ParcelsActionsStateChangeCustomerTypeSuccess value)
+        changeCustomerTypeSuccess,
+    required TResult Function(ParcelsActionsStateChangeCustomerTypeFailed value)
+        changeCustomerTypeFailed,
+  }) {
+    return changeCustomerTypeFailed(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(ParcelsActionsStateInitial value)? initial,
+    TResult? Function(ParcelsActionsStateDeleting value)? deleting,
+    TResult? Function(ParcelsActionsStateDeleteSuccess value)? deleteSuccess,
+    TResult? Function(ParcelsActionsStateDeleteFailed value)? deleteFailed,
+    TResult? Function(ParcelsActionsStateMarkingAsRead value)? markingAsRead,
+    TResult? Function(ParcelsActionsStateMarkAsReadSuccess value)?
+        markAsReadSuccess,
+    TResult? Function(ParcelsActionsStateMarkAsReadFailed value)?
+        markAsReadFailed,
+    TResult? Function(ParcelsActionsStateMovingToActive value)? movingToActive,
+    TResult? Function(ParcelsActionsStateMoveToActiveSuccess value)?
+        moveToActiveSuccess,
+    TResult? Function(ParcelsActionsStateMoveToActiveFailed value)?
+        moveToActiveFailed,
+    TResult? Function(ParcelsActionsStateMovingToArchive value)?
+        movingToArchive,
+    TResult? Function(ParcelsActionsStateMoveToArchiveSuccess value)?
+        moveToArchiveSuccess,
+    TResult? Function(ParcelsActionsStateMoveToArchiveFailed value)?
+        moveToArchiveFailed,
+    TResult? Function(ParcelsActionsStateRefreshing value)? refreshing,
+    TResult? Function(ParcelsActionsStateRefreshSuccess value)? refreshSuccess,
+    TResult? Function(ParcelsActionsStateRefreshFailed value)? refreshFailed,
+    TResult? Function(ParcelsActionsStateRefreshFreqLimited value)?
+        refreshFreqLimited,
+    TResult? Function(ParcelsActionsStateSharingString value)? sharingString,
+    TResult? Function(ParcelsActionsStateShareStringSuccess value)?
+        shareStringSuccess,
+    TResult? Function(ParcelsActionsStateCopyingTrack value)? copyingTrack,
+    TResult? Function(ParcelsActionsStateCopyTrackSuccess value)?
+        copyTrackSuccess,
+    TResult? Function(ParcelsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult? Function(ParcelsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult? Function(ParcelsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
+  }) {
+    return changeCustomerTypeFailed?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(ParcelsActionsStateInitial value)? initial,
+    TResult Function(ParcelsActionsStateDeleting value)? deleting,
+    TResult Function(ParcelsActionsStateDeleteSuccess value)? deleteSuccess,
+    TResult Function(ParcelsActionsStateDeleteFailed value)? deleteFailed,
+    TResult Function(ParcelsActionsStateMarkingAsRead value)? markingAsRead,
+    TResult Function(ParcelsActionsStateMarkAsReadSuccess value)?
+        markAsReadSuccess,
+    TResult Function(ParcelsActionsStateMarkAsReadFailed value)?
+        markAsReadFailed,
+    TResult Function(ParcelsActionsStateMovingToActive value)? movingToActive,
+    TResult Function(ParcelsActionsStateMoveToActiveSuccess value)?
+        moveToActiveSuccess,
+    TResult Function(ParcelsActionsStateMoveToActiveFailed value)?
+        moveToActiveFailed,
+    TResult Function(ParcelsActionsStateMovingToArchive value)? movingToArchive,
+    TResult Function(ParcelsActionsStateMoveToArchiveSuccess value)?
+        moveToArchiveSuccess,
+    TResult Function(ParcelsActionsStateMoveToArchiveFailed value)?
+        moveToArchiveFailed,
+    TResult Function(ParcelsActionsStateRefreshing value)? refreshing,
+    TResult Function(ParcelsActionsStateRefreshSuccess value)? refreshSuccess,
+    TResult Function(ParcelsActionsStateRefreshFailed value)? refreshFailed,
+    TResult Function(ParcelsActionsStateRefreshFreqLimited value)?
+        refreshFreqLimited,
+    TResult Function(ParcelsActionsStateSharingString value)? sharingString,
+    TResult Function(ParcelsActionsStateShareStringSuccess value)?
+        shareStringSuccess,
+    TResult Function(ParcelsActionsStateCopyingTrack value)? copyingTrack,
+    TResult Function(ParcelsActionsStateCopyTrackSuccess value)?
+        copyTrackSuccess,
+    TResult Function(ParcelsActionsStateChangingCustomerType value)?
+        changingCustomerType,
+    TResult Function(ParcelsActionsStateChangeCustomerTypeSuccess value)?
+        changeCustomerTypeSuccess,
+    TResult Function(ParcelsActionsStateChangeCustomerTypeFailed value)?
+        changeCustomerTypeFailed,
+    required TResult orElse(),
+  }) {
+    if (changeCustomerTypeFailed != null) {
+      return changeCustomerTypeFailed(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ParcelsActionsStateChangeCustomerTypeFailed
+    implements ParcelsActionsState {
+  const factory ParcelsActionsStateChangeCustomerTypeFailed(
+          {required final StorageError error,
+          required final int parcelsCount}) =
+      _$ParcelsActionsStateChangeCustomerTypeFailedImpl;
+
+  StorageError get error;
+  int get parcelsCount;
+
+  /// Create a copy of ParcelsActionsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$ParcelsActionsStateChangeCustomerTypeFailedImplCopyWith<
+          _$ParcelsActionsStateChangeCustomerTypeFailedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

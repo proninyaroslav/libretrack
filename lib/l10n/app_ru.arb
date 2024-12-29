@@ -39,7 +39,6 @@
   "addAccountFailed": "Не удалось добавить аккаунт",
   "editAccountFailed": "Не удалось изменить аккаунт",
   "parcels": "Посылки",
-  "activeParcels": "Активные",
   "archiveParcels": "Архив",
   "filtersAndSorting": "Фильтры и сортировка",
   "filters": "Фильтры",
@@ -255,5 +254,10 @@
   "barcodeGeneratorShowQrCode": "Показать QR",
   "barcodeGeneratorShowBarcodeCode": "Показать штрих-код",
   "trackingResponseStopped": "Отслеживание остановлено",
-  "settingsTrackingFreqUnlimited": "Неограниченно"
+  "settingsTrackingFreqUnlimited": "Неограниченно",
+  "receiverParcels": "Я получатель",
+  "shipperParcels": "Я отправитель",
+  "moveToReceiver": "Переместить в список получаемых",
+  "moveToShipper": "Переместить в список отправляемых",
+  "shipmentCustomerType": "Тип отправления"
 }

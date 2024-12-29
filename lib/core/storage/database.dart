@@ -27,7 +27,7 @@ import 'dao/dao.dart';
 
 part 'database.g.dart';
 
-@Database(version: 3, entities: [
+@Database(version: 4, entities: [
   TrackingServiceInfo,
   AuthDataField,
   PostalServiceInfo,
@@ -143,5 +143,10 @@ final migrations = [
         'ALTER TABLE `ShipmentInfo` ADD `currentStatus` TEXT',
       );
     });
+  }),
+  Migration(3, 4, (db) async {
+    await db.execute(
+      "ALTER TABLE `TrackNumberInfo` ADD `customerType` TEXT NOT NULL DEFAULT 'receiver'",
+    );
   }),
 ];

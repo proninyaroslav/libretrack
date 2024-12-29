@@ -30,10 +30,23 @@ class AddParcelsState with _$AddParcelsState {
     @Default(ParcelNames()) ParcelNames parcelNames,
   }) = AddParcelsStateInitial;
 
+  const factory AddParcelsState.loaded({
+    @Default(TrackingNumbers()) TrackingNumbers trackingNumbers,
+    @Default(ParcelNames()) ParcelNames parcelNames,
+    required CustomerType customerType,
+  }) = AddParcelsStateLoaded;
+
   const factory AddParcelsState.fieldChanged({
     required TrackingNumbers trackingNumbers,
     required ParcelNames parcelNames,
+    required CustomerType customerType,
   }) = AddParcelsStateFieldChanged;
+
+  const factory AddParcelsState.customerTypeChanged({
+    required TrackingNumbers trackingNumbers,
+    required ParcelNames parcelNames,
+    required CustomerType customerType,
+  }) = AddParcelsStateCustomerTypeChanged;
 
   const factory AddParcelsState.adding() = AddParcelsStateAdding;
 
@@ -44,11 +57,13 @@ class AddParcelsState with _$AddParcelsState {
   const factory AddParcelsState.validationFailed({
     required TrackingNumbers trackingNumbers,
     required ParcelNames parcelNames,
+    required CustomerType customerType,
   }) = AddParcelsStateValidationFailed;
 
   const factory AddParcelsState.addFailed({
     required TrackingNumbers trackingNumbers,
     required ParcelNames parcelNames,
+    required CustomerType customerType,
     Exception? exception,
     StackTrace? stackTrace,
   }) = AddParcelsStateAddFailed;

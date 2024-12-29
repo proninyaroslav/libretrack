@@ -1,4 +1,4 @@
-// Copyright (C) 2021 Yaroslav Pronin <proninyaroslav@mail.ru>
+// Copyright (C) 2021-2024 Yaroslav Pronin <proninyaroslav@mail.ru>
 // Copyright (C) 2021 Insurgo Inc. <insurgo@riseup.net>
 //
 // This file is part of LibreTrack.
@@ -18,6 +18,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:libretrack/core/entity/entity.dart';
 import 'package:libretrack/ui/components/custom_actions_row.dart';
 import 'package:libretrack/ui/components/widget.dart';
 import 'package:libretrack/ui/model/selectable_state.dart';
@@ -35,6 +36,8 @@ enum ParcelMenuType {
   refresh,
   copyTrackNumber,
   share,
+  moveToShipper,
+  moveToReceiver,
 }
 
 class ParcelContextualActions extends StatelessWidget {
@@ -50,8 +53,23 @@ class ParcelContextualActions extends StatelessWidget {
           selected: (items) {
             final pageType = items.last.pageType;
             switch (pageType) {
-              case ParcelsPageType.active:
-                return _buildActivePageActions(
+              case ParcelsPageType.receiver:
+                return _buildReceiverPageActions(
+                  context,
+                  onMenuSelected: (type) {
+                    final clear = _onMenuItemSelected(
+                      context,
+                      type,
+                      pageType,
+                      items.map((item) => item.info),
+                    );
+                    if (clear) {
+                      context.read<SelectableParcelsCubit>().clearSelection();
+                    }
+                  },
+                );
+              case ParcelsPageType.shipper:
+                return _buildShipperPageActions(
                   context,
                   onMenuSelected: (type) {
                     final clear = _onMenuItemSelected(
@@ -95,6 +113,34 @@ class ParcelContextualActions extends StatelessWidget {
     );
   }
 
+  List<CustomAction> _buildReceiverPageActions(
+    BuildContext context, {
+    void Function(ParcelMenuType)? onMenuSelected,
+  }) {
+    return [
+      ..._buildActivePageActions(context, onMenuSelected: onMenuSelected),
+      CustomAction(
+        overflowWidget: Text(S.of(context).moveToShipper),
+        onPressed: () => onMenuSelected?.call(ParcelMenuType.moveToShipper),
+        showAsAction: ShowAsAction.never,
+      ),
+    ];
+  }
+
+  List<CustomAction> _buildShipperPageActions(
+    BuildContext context, {
+    void Function(ParcelMenuType)? onMenuSelected,
+  }) {
+    return [
+      ..._buildActivePageActions(context, onMenuSelected: onMenuSelected),
+      CustomAction(
+        overflowWidget: Text(S.of(context).moveToReceiver),
+        onPressed: () => onMenuSelected?.call(ParcelMenuType.moveToReceiver),
+        showAsAction: ShowAsAction.never,
+      ),
+    ];
+  }
+
   List<CustomAction> _buildActivePageActions(
     BuildContext context, {
     void Function(ParcelMenuType)? onMenuSelected,
@@ -112,7 +158,7 @@ class ParcelContextualActions extends StatelessWidget {
       ),
       CustomAction(
         visibleWidget: IconButton(
-          icon: const Icon(Icons.archive_outlined),
+          icon: Icon(MdiIcons.archiveArrowDownOutline),
           tooltip: S.of(context).moveToArchive,
           onPressed: () => onMenuSelected?.call(ParcelMenuType.moveToArchive),
         ),
@@ -288,7 +334,7 @@ class ParcelPopupMenuButton extends StatelessWidget {
     ParcelsPageType pageType,
   ) {
     switch (pageType) {
-      case ParcelsPageType.active:
+      case ParcelsPageType.receiver:
         return [
           PopupMenuItem(
             value: ParcelMenuType.moveToArchive,
@@ -297,6 +343,25 @@ class ParcelPopupMenuButton extends StatelessWidget {
           PopupMenuItem(
             value: ParcelMenuType.refresh,
             child: Text(S.of(context).refresh),
+          ),
+          PopupMenuItem(
+            value: ParcelMenuType.moveToShipper,
+            child: Text(S.of(context).moveToShipper),
+          ),
+        ];
+      case ParcelsPageType.shipper:
+        return [
+          PopupMenuItem(
+            value: ParcelMenuType.moveToArchive,
+            child: Text(S.of(context).moveToArchive),
+          ),
+          PopupMenuItem(
+            value: ParcelMenuType.refresh,
+            child: Text(S.of(context).refresh),
+          ),
+          PopupMenuItem(
+            value: ParcelMenuType.moveToReceiver,
+            child: Text(S.of(context).moveToReceiver),
           ),
         ];
       case ParcelsPageType.archive:
@@ -351,6 +416,16 @@ bool _onMenuItemSelected(
     case ParcelMenuType.share:
       context.read<ParcelsActionsCubit>().buildShareString(infoList);
       return true;
+    case ParcelMenuType.moveToShipper:
+      context
+          .read<ParcelsActionsCubit>()
+          .changeCustomerType(infoList, type: CustomerType.shipper);
+      return true;
+    case ParcelMenuType.moveToReceiver:
+      context
+          .read<ParcelsActionsCubit>()
+          .changeCustomerType(infoList, type: CustomerType.receiver);
+      return true;
   }
 }
 
@@ -364,15 +439,15 @@ void _selectAll(
   parcelsCubit.state.when(
     initial: (filters, search, sort) {},
     loadingFailed: (error, filters, search, sort) {},
-    loaded: (active, archive, filters, search, sort) {
+    loaded: (receiver, shipper, archive, filters, search, sort) {
       Iterable<ParcelInfo> infoList;
       switch (pageType) {
-        case ParcelsPageType.active:
-          infoList = active;
-          break;
+        case ParcelsPageType.receiver:
+          infoList = receiver;
+        case ParcelsPageType.shipper:
+          infoList = shipper;
         case ParcelsPageType.archive:
           infoList = archive;
-          break;
       }
       selectableCubit.selectSet(
         infoList

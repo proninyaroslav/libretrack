@@ -20,6 +20,8 @@ import 'dart:convert';
 
 import 'package:flutter/foundation.dart';
 import 'package:injectable/injectable.dart';
+import 'package:libretrack/core/entity/converter/customer_type_converter.dart';
+import 'package:libretrack/core/entity/track_number_info.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'model.dart';
@@ -30,57 +32,61 @@ export 'model.dart';
 abstract class AppSettings {
   Future<void> startMigration();
 
-  abstract final Future<bool> addAccountTipShown;
+  Future<bool> get addAccountTipShown;
 
   Future<void> setAddAccountTipShown(bool value);
 
-  abstract final Future<ParcelsFilterBatch?> parcelsFilters;
+  Future<ParcelsFilterBatch?> get parcelsFilters;
 
   Future<void> setParcelsFilters(ParcelsFilterBatch? value);
 
-  abstract final Future<ParcelsSort?> parcelsSort;
+  Future<ParcelsSort?> get parcelsSort;
 
   Future<void> setParcelsSort(ParcelsSort? value);
 
-  abstract final Future<AppThemeType> theme;
+  Future<AppThemeType> get theme;
 
   Future<void> setTheme(AppThemeType value);
 
-  abstract final Future<bool> trackingNotifications;
+  Future<bool> get trackingNotifications;
 
   Future<void> setTrackingNotifications(bool value);
 
-  abstract final Future<AppLocaleType> locale;
+  Future<AppLocaleType> get locale;
 
   Future<void> setLocale(AppLocaleType value);
 
-  abstract final Future<TrackingFreqLimit> trackingFrequencyLimit;
+  Future<TrackingFreqLimit> get trackingFrequencyLimit;
 
   Future<void> setTrackingFrequencyLimit(TrackingFreqLimit value);
 
-  abstract final Future<bool> autoTracking;
+  Future<bool> get autoTracking;
 
   Future<void> setAutoTracking(bool value);
 
-  abstract final Future<AutoTrackingFreq> autoTrackingFreq;
+  Future<AutoTrackingFreq> get autoTrackingFreq;
 
   Future<void> setAutoTrackingFreq(AutoTrackingFreq value);
 
-  abstract final Future<int> trackingHistorySize;
+  Future<int> get trackingHistorySize;
 
   Future<void> setTrackingHistorySize(int value);
 
-  abstract final Future<bool> trackingErrorNotifications;
+  Future<bool> get trackingErrorNotifications;
 
   Future<void> setTrackingErrorNotifications(bool value);
 
-  abstract final Future<bool> trayIcon;
+  Future<bool> get trayIcon;
 
   Future<void> setTrayIcon(bool value);
 
-  abstract final Future<BarcodeGeneratorType> barcodeGeneratorType;
+  Future<BarcodeGeneratorType> get barcodeGeneratorType;
 
   Future<void> setBarcodeGeneratorType(BarcodeGeneratorType value);
+
+  Future<CustomerType> get addParcelsCustomerType;
+
+  Future<void> setAddParcelsCustomerType(CustomerType value);
 }
 
 abstract class AppSettingsDefault {
@@ -105,6 +111,8 @@ abstract class AppSettingsDefault {
   static const trayIcon = false;
 
   static const barcodeGeneratorType = BarcodeGeneratorType.code128();
+
+  static const addParcelsCustomerType = CustomerType.receiver;
 }
 
 @Singleton(as: AppSettings)
@@ -295,6 +303,24 @@ class AppSettingsImpl implements AppSettings {
           _AppSettingsKey.barcodeGeneratorType, jsonEncode(json));
     }
   }
+
+  @override
+  Future<CustomerType> get addParcelsCustomerType async {
+    final strValue = await pref.getString(
+      _AppSettingsKey.addParcelsCustomerType,
+    );
+    return strValue == null
+        ? AppSettingsDefault.addParcelsCustomerType
+        : CustomerTypeConverter().decode(strValue);
+  }
+
+  @override
+  Future<void> setAddParcelsCustomerType(CustomerType value) async {
+    await pref.setString(
+      _AppSettingsKey.addParcelsCustomerType,
+      CustomerTypeConverter().encode(value),
+    );
+  }
 }
 
 abstract class _AppSettingsKey {
@@ -324,6 +350,8 @@ abstract class _AppSettingsKey {
   static const trayIcon = 'pref_key_tray_icon';
 
   static const barcodeGeneratorType = 'pref_key_barcode_generator_type';
+
+  static const addParcelsCustomerType = 'pref_add_parcels_customer_type';
 }
 
 @visibleForTesting

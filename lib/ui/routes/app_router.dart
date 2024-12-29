@@ -440,6 +440,7 @@ class AppRouterDelegate extends RouterDelegate<AppRoutePath>
               getIt<TrackNumberRepository>(),
               getIt<TrackingScheduler>(),
               getIt<DateTimeProvider>(),
+              getIt<AppSettings>(),
             ),
           ),
           BlocProvider(
