@@ -28,7 +28,6 @@ export 'model/parcel_info.dart';
 export 'model/parcels_actions_cubit.dart';
 export 'model/parcels_actions_state.dart';
 export 'model/parcels_cubit.dart';
-export 'model/parcels_page_type.dart';
 export 'model/parcels_state.dart';
 export 'model/selectable_parcels_cubit.dart';
 export 'model/selectable_parcels_item.dart';

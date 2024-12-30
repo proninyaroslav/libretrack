@@ -87,6 +87,10 @@ abstract class AppSettings {
   Future<CustomerType> get addParcelsCustomerType;
 
   Future<void> setAddParcelsCustomerType(CustomerType value);
+
+  Future<ParcelsPageType> get parcelsPageType;
+
+  Future<void> setParcelsPageType(ParcelsPageType value);
 }
 
 abstract class AppSettingsDefault {
@@ -113,6 +117,8 @@ abstract class AppSettingsDefault {
   static const barcodeGeneratorType = BarcodeGeneratorType.code128();
 
   static const addParcelsCustomerType = CustomerType.receiver;
+
+  static const parcelsPageType = ParcelsPageType.receiver();
 }
 
 @Singleton(as: AppSettings)
@@ -321,6 +327,21 @@ class AppSettingsImpl implements AppSettings {
       CustomerTypeConverter().encode(value),
     );
   }
+
+  @override
+  Future<ParcelsPageType> get parcelsPageType async {
+    final str = await pref.getString(_AppSettingsKey.parcelsPageType);
+    final json = str == null ? null : jsonDecode(str);
+    return json == null
+        ? AppSettingsDefault.parcelsPageType
+        : ParcelsPageType.fromJson(json as Map<String, dynamic>);
+  }
+
+  @override
+  Future<void> setParcelsPageType(ParcelsPageType value) async {
+    final json = value.toJson();
+    await pref.setString(_AppSettingsKey.parcelsPageType, jsonEncode(json));
+  }
 }
 
 abstract class _AppSettingsKey {
@@ -352,6 +373,8 @@ abstract class _AppSettingsKey {
   static const barcodeGeneratorType = 'pref_key_barcode_generator_type';
 
   static const addParcelsCustomerType = 'pref_add_parcels_customer_type';
+
+  static const parcelsPageType = 'pref_parcels_page_type';
 }
 
 @visibleForTesting

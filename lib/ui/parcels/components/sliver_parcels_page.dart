@@ -1,4 +1,4 @@
-// Copyright (C) 2021 Yaroslav Pronin <proninyaroslav@mail.ru>
+// Copyright (C) 2021-2024 Yaroslav Pronin <proninyaroslav@mail.ru>
 // Copyright (C) 2021 Insurgo Inc. <insurgo@riseup.net>
 //
 // This file is part of LibreTrack.
@@ -16,9 +16,9 @@
 // You should have received a copy of the GNU General Public License
 // along with LibreTrack.  If not, see <http://www.gnu.org/licenses/>.
 
-import 'package:enum_to_string/enum_to_string.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:libretrack/core/settings/model.dart';
 import 'package:libretrack/ui/components/widget.dart';
 import 'package:libretrack/ui/model/utils.dart';
 import 'package:libretrack/ui/parcels/model/parcels_state.dart';
@@ -31,7 +31,6 @@ import '../model/filter.dart';
 import '../model/parcel_info.dart';
 import '../model/parcels_actions_cubit.dart';
 import '../model/parcels_cubit.dart';
-import '../model/parcels_page_type.dart';
 import '../model/sort.dart';
 import 'sliver_parcels_list.dart';
 
@@ -135,7 +134,7 @@ class SliverParcelsPage extends StatelessWidget {
             Scrollbar(
               child: CustomScrollView(
                 key: PageStorageKey(
-                  'SliverParcelsPage${EnumToString.convertToString(type)}',
+                  'SliverParcelsPage_$type',
                 ),
                 slivers: [
                   SliverOverlapInjector(
@@ -159,11 +158,11 @@ class SliverParcelsPage extends StatelessWidget {
     ParcelsStateLoaded state,
   ) {
     switch (type) {
-      case ParcelsPageType.receiver:
+      case ParcelsPageTypeReceiver():
         return state.receiver;
-      case ParcelsPageType.shipper:
+      case ParcelsPageTypeShipper():
         return state.shipper;
-      case ParcelsPageType.archive:
+      case ParcelsPageTypeArchive():
         return state.archive;
     }
   }
@@ -173,11 +172,11 @@ class SliverParcelsPage extends StatelessWidget {
     List<ParcelInfo> infoList,
   ) {
     switch (type) {
-      case ParcelsPageType.receiver || ParcelsPageType.shipper:
+      case ParcelsPageTypeReceiver() || ParcelsPageTypeShipper():
         return infoList.any(
           (info) => info.lastTrackingInfo?.hasNewInfo ?? false,
         );
-      case ParcelsPageType.archive:
+      case ParcelsPageTypeArchive():
         return false;
     }
   }

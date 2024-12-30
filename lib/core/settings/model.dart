@@ -166,3 +166,21 @@ class BarcodeGeneratorType with _$BarcodeGeneratorType {
   factory BarcodeGeneratorType.fromJson(Map<String, dynamic> json) =>
       _$BarcodeGeneratorTypeFromJson(json);
 }
+
+@freezed
+sealed class ParcelsPageType with _$ParcelsPageType {
+  const factory ParcelsPageType.receiver() = ParcelsPageTypeReceiver;
+
+  const factory ParcelsPageType.shipper() = ParcelsPageTypeShipper;
+
+  const factory ParcelsPageType.archive() = ParcelsPageTypeArchive;
+
+  factory ParcelsPageType.fromJson(Map<String, dynamic> json) =>
+      _$ParcelsPageTypeFromJson(json);
+
+  static List<ParcelsPageType> all = [
+    ParcelsPageType.receiver(),
+    ParcelsPageType.shipper(),
+    ParcelsPageType.archive()
+  ];
+}

@@ -19,6 +19,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:libretrack/core/entity/entity.dart';
+import 'package:libretrack/core/settings/model.dart';
 import 'package:libretrack/ui/components/custom_actions_row.dart';
 import 'package:libretrack/ui/components/widget.dart';
 import 'package:libretrack/ui/model/selectable_state.dart';
@@ -53,7 +54,7 @@ class ParcelContextualActions extends StatelessWidget {
           selected: (items) {
             final pageType = items.last.pageType;
             switch (pageType) {
-              case ParcelsPageType.receiver:
+              case ParcelsPageTypeReceiver():
                 return _buildReceiverPageActions(
                   context,
                   onMenuSelected: (type) {
@@ -68,7 +69,7 @@ class ParcelContextualActions extends StatelessWidget {
                     }
                   },
                 );
-              case ParcelsPageType.shipper:
+              case ParcelsPageTypeShipper():
                 return _buildShipperPageActions(
                   context,
                   onMenuSelected: (type) {
@@ -83,7 +84,7 @@ class ParcelContextualActions extends StatelessWidget {
                     }
                   },
                 );
-              case ParcelsPageType.archive:
+              case ParcelsPageTypeArchive():
                 return _buildArchivePageActions(
                   context,
                   onMenuSelected: (type) {
@@ -334,7 +335,7 @@ class ParcelPopupMenuButton extends StatelessWidget {
     ParcelsPageType pageType,
   ) {
     switch (pageType) {
-      case ParcelsPageType.receiver:
+      case ParcelsPageTypeReceiver():
         return [
           PopupMenuItem(
             value: ParcelMenuType.moveToArchive,
@@ -349,7 +350,7 @@ class ParcelPopupMenuButton extends StatelessWidget {
             child: Text(S.of(context).moveToShipper),
           ),
         ];
-      case ParcelsPageType.shipper:
+      case ParcelsPageTypeShipper():
         return [
           PopupMenuItem(
             value: ParcelMenuType.moveToArchive,
@@ -364,7 +365,7 @@ class ParcelPopupMenuButton extends StatelessWidget {
             child: Text(S.of(context).moveToReceiver),
           ),
         ];
-      case ParcelsPageType.archive:
+      case ParcelsPageTypeArchive():
         return [
           PopupMenuItem(
             value: ParcelMenuType.moveToActive,
@@ -442,11 +443,11 @@ void _selectAll(
     loaded: (receiver, shipper, archive, filters, search, sort) {
       Iterable<ParcelInfo> infoList;
       switch (pageType) {
-        case ParcelsPageType.receiver:
+        case ParcelsPageTypeReceiver():
           infoList = receiver;
-        case ParcelsPageType.shipper:
+        case ParcelsPageTypeShipper():
           infoList = shipper;
-        case ParcelsPageType.archive:
+        case ParcelsPageTypeArchive():
           infoList = archive;
       }
       selectableCubit.selectSet(

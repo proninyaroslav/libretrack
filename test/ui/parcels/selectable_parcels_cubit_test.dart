@@ -19,6 +19,7 @@
 import 'package:bloc_test/bloc_test.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:libretrack/core/entity/entity.dart';
+import 'package:libretrack/core/settings/model.dart';
 import 'package:libretrack/ui/model/selectable_state.dart';
 import 'package:libretrack/ui/parcels/parcels.dart';
 
@@ -46,7 +47,7 @@ void main() {
               trackInfo: TrackNumberInfo('1'),
               currentStatus: ShipmentStatusType.delivered,
             ),
-            pageType: ParcelsPageType.receiver,
+            pageType: ParcelsPageType.receiver(),
           ),
         );
         cubit.select(
@@ -55,7 +56,7 @@ void main() {
               trackInfo: TrackNumberInfo('2'),
               currentStatus: ShipmentStatusType.delivered,
             ),
-            pageType: ParcelsPageType.receiver,
+            pageType: ParcelsPageType.receiver(),
           ),
         );
         cubit.select(
@@ -64,7 +65,7 @@ void main() {
               trackInfo: TrackNumberInfo('3'),
               currentStatus: ShipmentStatusType.delivered,
             ),
-            pageType: ParcelsPageType.receiver,
+            pageType: ParcelsPageType.receiver(),
           ),
         );
       },
@@ -75,7 +76,7 @@ void main() {
               trackInfo: TrackNumberInfo('1'),
               currentStatus: ShipmentStatusType.delivered,
             ),
-            pageType: ParcelsPageType.receiver,
+            pageType: ParcelsPageType.receiver(),
           ),
         }),
         SelectableState.selected({
@@ -84,14 +85,14 @@ void main() {
               trackInfo: TrackNumberInfo('1'),
               currentStatus: ShipmentStatusType.delivered,
             ),
-            pageType: ParcelsPageType.receiver,
+            pageType: ParcelsPageType.receiver(),
           ),
           const SelectableParcelsItem(
             info: ParcelInfo(
               trackInfo: TrackNumberInfo('2'),
               currentStatus: ShipmentStatusType.delivered,
             ),
-            pageType: ParcelsPageType.receiver,
+            pageType: ParcelsPageType.receiver(),
           ),
         }),
         SelectableState.selected({
@@ -100,21 +101,21 @@ void main() {
               trackInfo: TrackNumberInfo('1'),
               currentStatus: ShipmentStatusType.delivered,
             ),
-            pageType: ParcelsPageType.receiver,
+            pageType: ParcelsPageType.receiver(),
           ),
           const SelectableParcelsItem(
             info: ParcelInfo(
               trackInfo: TrackNumberInfo('2'),
               currentStatus: ShipmentStatusType.delivered,
             ),
-            pageType: ParcelsPageType.receiver,
+            pageType: ParcelsPageType.receiver(),
           ),
           const SelectableParcelsItem(
             info: ParcelInfo(
               trackInfo: TrackNumberInfo('3'),
               currentStatus: ShipmentStatusType.delivered,
             ),
-            pageType: ParcelsPageType.receiver,
+            pageType: ParcelsPageType.receiver(),
           ),
         }),
       ],
@@ -130,21 +131,21 @@ void main() {
               trackInfo: TrackNumberInfo('1'),
               currentStatus: ShipmentStatusType.delivered,
             ),
-            pageType: ParcelsPageType.receiver,
+            pageType: ParcelsPageType.receiver(),
           ),
           const SelectableParcelsItem(
             info: ParcelInfo(
               trackInfo: TrackNumberInfo('2'),
               currentStatus: ShipmentStatusType.delivered,
             ),
-            pageType: ParcelsPageType.receiver,
+            pageType: ParcelsPageType.receiver(),
           ),
           const SelectableParcelsItem(
             info: ParcelInfo(
               trackInfo: TrackNumberInfo('3'),
               currentStatus: ShipmentStatusType.delivered,
             ),
-            pageType: ParcelsPageType.receiver,
+            pageType: ParcelsPageType.receiver(),
           ),
         });
       },
@@ -155,21 +156,21 @@ void main() {
               trackInfo: TrackNumberInfo('1'),
               currentStatus: ShipmentStatusType.delivered,
             ),
-            pageType: ParcelsPageType.receiver,
+            pageType: ParcelsPageType.receiver(),
           ),
           const SelectableParcelsItem(
             info: ParcelInfo(
               trackInfo: TrackNumberInfo('2'),
               currentStatus: ShipmentStatusType.delivered,
             ),
-            pageType: ParcelsPageType.receiver,
+            pageType: ParcelsPageType.receiver(),
           ),
           const SelectableParcelsItem(
             info: ParcelInfo(
               trackInfo: TrackNumberInfo('3'),
               currentStatus: ShipmentStatusType.delivered,
             ),
-            pageType: ParcelsPageType.receiver,
+            pageType: ParcelsPageType.receiver(),
           ),
         }),
       ],
@@ -185,7 +186,7 @@ void main() {
               trackInfo: TrackNumberInfo('1'),
               currentStatus: ShipmentStatusType.delivered,
             ),
-            pageType: ParcelsPageType.receiver,
+            pageType: ParcelsPageType.receiver(),
           ),
         );
         cubit.select(
@@ -194,7 +195,7 @@ void main() {
               trackInfo: TrackNumberInfo('2'),
               currentStatus: ShipmentStatusType.delivered,
             ),
-            pageType: ParcelsPageType.receiver,
+            pageType: ParcelsPageType.receiver(),
           ),
         );
         cubit.select(
@@ -203,7 +204,7 @@ void main() {
               trackInfo: TrackNumberInfo('3'),
               currentStatus: ShipmentStatusType.delivered,
             ),
-            pageType: ParcelsPageType.archive,
+            pageType: ParcelsPageType.archive(),
           ),
         );
       },
@@ -214,7 +215,7 @@ void main() {
               trackInfo: TrackNumberInfo('1'),
               currentStatus: ShipmentStatusType.delivered,
             ),
-            pageType: ParcelsPageType.receiver,
+            pageType: ParcelsPageType.receiver(),
           ),
         }),
         SelectableState.selected({
@@ -223,14 +224,14 @@ void main() {
               trackInfo: TrackNumberInfo('1'),
               currentStatus: ShipmentStatusType.delivered,
             ),
-            pageType: ParcelsPageType.receiver,
+            pageType: ParcelsPageType.receiver(),
           ),
           const SelectableParcelsItem(
             info: ParcelInfo(
               trackInfo: TrackNumberInfo('2'),
               currentStatus: ShipmentStatusType.delivered,
             ),
-            pageType: ParcelsPageType.receiver,
+            pageType: ParcelsPageType.receiver(),
           ),
         }),
         const SelectableState<SelectableParcelsItem>.noSelection(),
@@ -240,7 +241,7 @@ void main() {
               trackInfo: TrackNumberInfo('3'),
               currentStatus: ShipmentStatusType.delivered,
             ),
-            pageType: ParcelsPageType.archive,
+            pageType: ParcelsPageType.archive(),
           ),
         }),
       ],
@@ -256,7 +257,7 @@ void main() {
               trackInfo: TrackNumberInfo('1'),
               currentStatus: ShipmentStatusType.delivered,
             ),
-            pageType: ParcelsPageType.receiver,
+            pageType: ParcelsPageType.receiver(),
           ),
         );
         cubit.selectSet({
@@ -265,14 +266,14 @@ void main() {
               trackInfo: TrackNumberInfo('2'),
               currentStatus: ShipmentStatusType.delivered,
             ),
-            pageType: ParcelsPageType.archive,
+            pageType: ParcelsPageType.archive(),
           ),
           const SelectableParcelsItem(
             info: ParcelInfo(
               trackInfo: TrackNumberInfo('3'),
               currentStatus: ShipmentStatusType.delivered,
             ),
-            pageType: ParcelsPageType.archive,
+            pageType: ParcelsPageType.archive(),
           ),
         });
       },
@@ -283,7 +284,7 @@ void main() {
               trackInfo: TrackNumberInfo('1'),
               currentStatus: ShipmentStatusType.delivered,
             ),
-            pageType: ParcelsPageType.receiver,
+            pageType: ParcelsPageType.receiver(),
           ),
         }),
         const SelectableState<SelectableParcelsItem>.noSelection(),
@@ -293,14 +294,14 @@ void main() {
               trackInfo: TrackNumberInfo('2'),
               currentStatus: ShipmentStatusType.delivered,
             ),
-            pageType: ParcelsPageType.archive,
+            pageType: ParcelsPageType.archive(),
           ),
           const SelectableParcelsItem(
             info: ParcelInfo(
               trackInfo: TrackNumberInfo('3'),
               currentStatus: ShipmentStatusType.delivered,
             ),
-            pageType: ParcelsPageType.archive,
+            pageType: ParcelsPageType.archive(),
           ),
         }),
       ],
@@ -316,7 +317,7 @@ void main() {
               trackInfo: TrackNumberInfo('1'),
               currentStatus: ShipmentStatusType.delivered,
             ),
-            pageType: ParcelsPageType.receiver,
+            pageType: ParcelsPageType.receiver(),
           ),
         );
         cubit.select(
@@ -325,7 +326,7 @@ void main() {
               trackInfo: TrackNumberInfo('2'),
               currentStatus: ShipmentStatusType.delivered,
             ),
-            pageType: ParcelsPageType.receiver,
+            pageType: ParcelsPageType.receiver(),
           ),
         );
         cubit.select(
@@ -334,7 +335,7 @@ void main() {
               trackInfo: TrackNumberInfo('3'),
               currentStatus: ShipmentStatusType.delivered,
             ),
-            pageType: ParcelsPageType.receiver,
+            pageType: ParcelsPageType.receiver(),
           ),
         );
 
@@ -344,7 +345,7 @@ void main() {
               trackInfo: TrackNumberInfo('2'),
               currentStatus: ShipmentStatusType.delivered,
             ),
-            pageType: ParcelsPageType.receiver,
+            pageType: ParcelsPageType.receiver(),
           ),
         );
         cubit.unselect(
@@ -353,7 +354,7 @@ void main() {
               trackInfo: TrackNumberInfo('1'),
               currentStatus: ShipmentStatusType.delivered,
             ),
-            pageType: ParcelsPageType.receiver,
+            pageType: ParcelsPageType.receiver(),
           ),
         );
         cubit.unselect(
@@ -362,7 +363,7 @@ void main() {
               trackInfo: TrackNumberInfo('3'),
               currentStatus: ShipmentStatusType.delivered,
             ),
-            pageType: ParcelsPageType.receiver,
+            pageType: ParcelsPageType.receiver(),
           ),
         );
       },
@@ -373,7 +374,7 @@ void main() {
               trackInfo: TrackNumberInfo('1'),
               currentStatus: ShipmentStatusType.delivered,
             ),
-            pageType: ParcelsPageType.receiver,
+            pageType: ParcelsPageType.receiver(),
           ),
         }),
         SelectableState.selected({
@@ -382,14 +383,14 @@ void main() {
               trackInfo: TrackNumberInfo('1'),
               currentStatus: ShipmentStatusType.delivered,
             ),
-            pageType: ParcelsPageType.receiver,
+            pageType: ParcelsPageType.receiver(),
           ),
           const SelectableParcelsItem(
             info: ParcelInfo(
               trackInfo: TrackNumberInfo('2'),
               currentStatus: ShipmentStatusType.delivered,
             ),
-            pageType: ParcelsPageType.receiver,
+            pageType: ParcelsPageType.receiver(),
           ),
         }),
         SelectableState.selected({
@@ -398,21 +399,21 @@ void main() {
               trackInfo: TrackNumberInfo('1'),
               currentStatus: ShipmentStatusType.delivered,
             ),
-            pageType: ParcelsPageType.receiver,
+            pageType: ParcelsPageType.receiver(),
           ),
           const SelectableParcelsItem(
             info: ParcelInfo(
               trackInfo: TrackNumberInfo('2'),
               currentStatus: ShipmentStatusType.delivered,
             ),
-            pageType: ParcelsPageType.receiver,
+            pageType: ParcelsPageType.receiver(),
           ),
           const SelectableParcelsItem(
             info: ParcelInfo(
               trackInfo: TrackNumberInfo('3'),
               currentStatus: ShipmentStatusType.delivered,
             ),
-            pageType: ParcelsPageType.receiver,
+            pageType: ParcelsPageType.receiver(),
           ),
         }),
         SelectableState.selected({
@@ -421,14 +422,14 @@ void main() {
               trackInfo: TrackNumberInfo('1'),
               currentStatus: ShipmentStatusType.delivered,
             ),
-            pageType: ParcelsPageType.receiver,
+            pageType: ParcelsPageType.receiver(),
           ),
           const SelectableParcelsItem(
             info: ParcelInfo(
               trackInfo: TrackNumberInfo('3'),
               currentStatus: ShipmentStatusType.delivered,
             ),
-            pageType: ParcelsPageType.receiver,
+            pageType: ParcelsPageType.receiver(),
           ),
         }),
         SelectableState.selected({
@@ -437,7 +438,7 @@ void main() {
               trackInfo: TrackNumberInfo('3'),
               currentStatus: ShipmentStatusType.delivered,
             ),
-            pageType: ParcelsPageType.receiver,
+            pageType: ParcelsPageType.receiver(),
           ),
         }),
         const SelectableState<SelectableParcelsItem>.noSelection(),
@@ -454,7 +455,7 @@ void main() {
               trackInfo: TrackNumberInfo('1'),
               currentStatus: ShipmentStatusType.delivered,
             ),
-            pageType: ParcelsPageType.receiver,
+            pageType: ParcelsPageType.receiver(),
           ),
         );
         cubit.select(
@@ -463,7 +464,7 @@ void main() {
               trackInfo: TrackNumberInfo('2'),
               currentStatus: ShipmentStatusType.delivered,
             ),
-            pageType: ParcelsPageType.receiver,
+            pageType: ParcelsPageType.receiver(),
           ),
         );
         cubit.select(
@@ -472,7 +473,7 @@ void main() {
               trackInfo: TrackNumberInfo('3'),
               currentStatus: ShipmentStatusType.delivered,
             ),
-            pageType: ParcelsPageType.receiver,
+            pageType: ParcelsPageType.receiver(),
           ),
         );
         cubit.clearSelection();
@@ -484,7 +485,7 @@ void main() {
               trackInfo: TrackNumberInfo('1'),
               currentStatus: ShipmentStatusType.delivered,
             ),
-            pageType: ParcelsPageType.receiver,
+            pageType: ParcelsPageType.receiver(),
           ),
         }),
         SelectableState.selected({
@@ -493,14 +494,14 @@ void main() {
               trackInfo: TrackNumberInfo('1'),
               currentStatus: ShipmentStatusType.delivered,
             ),
-            pageType: ParcelsPageType.receiver,
+            pageType: ParcelsPageType.receiver(),
           ),
           const SelectableParcelsItem(
             info: ParcelInfo(
               trackInfo: TrackNumberInfo('2'),
               currentStatus: ShipmentStatusType.delivered,
             ),
-            pageType: ParcelsPageType.receiver,
+            pageType: ParcelsPageType.receiver(),
           ),
         }),
         SelectableState.selected({
@@ -509,21 +510,21 @@ void main() {
               trackInfo: TrackNumberInfo('1'),
               currentStatus: ShipmentStatusType.delivered,
             ),
-            pageType: ParcelsPageType.receiver,
+            pageType: ParcelsPageType.receiver(),
           ),
           const SelectableParcelsItem(
             info: ParcelInfo(
               trackInfo: TrackNumberInfo('2'),
               currentStatus: ShipmentStatusType.delivered,
             ),
-            pageType: ParcelsPageType.receiver,
+            pageType: ParcelsPageType.receiver(),
           ),
           const SelectableParcelsItem(
             info: ParcelInfo(
               trackInfo: TrackNumberInfo('3'),
               currentStatus: ShipmentStatusType.delivered,
             ),
-            pageType: ParcelsPageType.receiver,
+            pageType: ParcelsPageType.receiver(),
           ),
         }),
         const SelectableState<SelectableParcelsItem>.noSelection(),

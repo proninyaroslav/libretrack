@@ -16,11 +16,15 @@
 // You should have received a copy of the GNU General Public License
 // along with LibreTrack.  If not, see <http://www.gnu.org/licenses/>.
 
+import 'dart:collection';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:libretrack/core/entity/entity.dart';
+import 'package:libretrack/core/settings/settings.dart';
 import 'package:libretrack/core/storage/storage_result.dart';
+import 'package:libretrack/injector.dart';
 import 'package:libretrack/locale.dart';
 import 'package:libretrack/ui/components/widget.dart';
 import 'package:libretrack/ui/model/utils.dart';
@@ -47,12 +51,30 @@ class ParcelsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final pref = getIt<AppSettings>();
+
     return OrientationBuilder(
       builder: (context, orientation) => Scaffold(
-        body: _Body(
-          onAddAccount: onAddAccount,
-          onSelectionChanged: onSelectionChanged,
-          onParcelDetails: onParcelDetails,
+        body: FutureBuilder(
+          future: pref.parcelsPageType,
+          builder: (context, snapshot) {
+            final pageType = snapshot.data;
+            if (pageType == null) {
+              return Center(
+                child: CircularProgressIndicator(),
+              );
+            } else {
+              return _Body(
+                initialPage: pageType,
+                onAddAccount: onAddAccount,
+                onSelectionChanged: onSelectionChanged,
+                onParcelDetails: onParcelDetails,
+                onPageChanged: (type) async {
+                  await pref.setParcelsPageType(type);
+                },
+              );
+            }
+          },
         ),
         floatingActionButtonLocation: UiUtils.getAdaptiveFabLocation(
           context,
@@ -71,14 +93,18 @@ class ParcelsPage extends StatelessWidget {
 }
 
 class _Body extends StatefulWidget {
+  final ParcelsPageType initialPage;
   final VoidCallback? onAddAccount;
   final OnSelectionChangedCallback? onSelectionChanged;
   final OnParcelDetailsCallback? onParcelDetails;
+  final ValueChanged<ParcelsPageType> onPageChanged;
 
   const _Body({
+    required this.initialPage,
     this.onAddAccount,
     this.onSelectionChanged,
     this.onParcelDetails,
+    required this.onPageChanged,
   });
 
   @override
@@ -86,40 +112,33 @@ class _Body extends StatefulWidget {
 }
 
 class _BodyState extends State<_Body> with SingleTickerProviderStateMixin {
-  static const _keyCurrentTabPos = "current_tab_pos";
-
   late TabController _tabController;
 
-  int get _currentTabPos =>
-      PageStorage.of(context).readState(
-        context,
-        identifier: _keyCurrentTabPos,
-      ) as int? ??
-      0;
+  int _pageToIndex(ParcelsPageType type) => ParcelsPageType.all.indexOf(type);
 
-  set _currentTabPos(int value) => PageStorage.of(context).writeState(
-        context,
-        value,
-        identifier: _keyCurrentTabPos,
-      );
+  ParcelsPageType _indexToPage(int index) => ParcelsPageType.all[index];
 
   @override
   void initState() {
     super.initState();
 
     _tabController = TabController(
-      length: ParcelsPageType.values.length,
+      length: ParcelsPageType.all.length,
       vsync: this,
-      initialIndex: _currentTabPos,
+      initialIndex: _pageToIndex(widget.initialPage),
     );
     _tabController.addListener(() {
       if (_tabController.indexIsChanging) {
-        _currentTabPos = _tabController.index;
+        widget.onPageChanged(_indexToPage(_tabController.index));
       }
     });
+    WidgetsBinding.instance.addPostFrameCallback((_) async {
+      final firstStartCubit = context.read<FirstStartCubit>();
+      final parcelsCubit = context.read<ParcelsCubit>();
 
-    context.read<ParcelsCubit>().observeParcels();
-    context.read<FirstStartCubit>().showAddAccountTip();
+      await firstStartCubit.showAddAccountTip();
+      await parcelsCubit.observeParcels();
+    });
   }
 
   @override
@@ -139,32 +158,18 @@ class _BodyState extends State<_Body> with SingleTickerProviderStateMixin {
               },
               child: TabBarView(
                 controller: _tabController,
-                children: [
-                  SliverParcelsPage(
-                    type: ParcelsPageType.receiver,
-                    onSelectionChanged: widget.onSelectionChanged,
-                    onParcelDetails: widget.onParcelDetails,
-                    onPageRefresh: () {
-                      context.read<ParcelsCubit>().observeParcels();
-                    },
+                children: UnmodifiableListView(
+                  ParcelsPageType.all.map(
+                    (type) => SliverParcelsPage(
+                      type: type,
+                      onSelectionChanged: widget.onSelectionChanged,
+                      onParcelDetails: widget.onParcelDetails,
+                      onPageRefresh: () {
+                        context.read<ParcelsCubit>().observeParcels();
+                      },
+                    ),
                   ),
-                  SliverParcelsPage(
-                    type: ParcelsPageType.shipper,
-                    onSelectionChanged: widget.onSelectionChanged,
-                    onParcelDetails: widget.onParcelDetails,
-                    onPageRefresh: () {
-                      context.read<ParcelsCubit>().observeParcels();
-                    },
-                  ),
-                  SliverParcelsPage(
-                    type: ParcelsPageType.archive,
-                    onSelectionChanged: widget.onSelectionChanged,
-                    onParcelDetails: widget.onParcelDetails,
-                    onPageRefresh: () {
-                      context.read<ParcelsCubit>().observeParcels();
-                    },
-                  ),
-                ],
+                ),
               ),
             ),
           ),
@@ -189,7 +194,7 @@ class _BodyState extends State<_Body> with SingleTickerProviderStateMixin {
                 builder: (context, state) => _buildUnreadCounter(
                   context,
                   state,
-                  type: ParcelsPageType.receiver,
+                  type: ParcelsPageType.receiver(),
                 ),
               ),
             ),
@@ -200,7 +205,7 @@ class _BodyState extends State<_Body> with SingleTickerProviderStateMixin {
                 builder: (context, state) => _buildUnreadCounter(
                   context,
                   state,
-                  type: ParcelsPageType.shipper,
+                  type: ParcelsPageType.shipper(),
                 ),
               ),
             ),
@@ -252,11 +257,11 @@ class _BodyState extends State<_Body> with SingleTickerProviderStateMixin {
       loadingFailed: (value) => 0,
       loaded: (value) => _countUnreadParcels(
         switch (type) {
-          ParcelsPageType.receiver =>
+          ParcelsPageTypeReceiver() =>
             value.receiver.where(value.filters.applyAll),
-          ParcelsPageType.shipper =>
+          ParcelsPageTypeShipper() =>
             value.shipper.where(value.filters.applyAll),
-          ParcelsPageType.archive => []
+          ParcelsPageTypeArchive() => []
         },
       ),
     );

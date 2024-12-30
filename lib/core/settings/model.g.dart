@@ -385,3 +385,39 @@ Map<String, dynamic> _$$BarcodeGeneratorTypeQrCodeImplToJson(
     <String, dynamic>{
       'runtimeType': instance.$type,
     };
+
+_$ParcelsPageTypeReceiverImpl _$$ParcelsPageTypeReceiverImplFromJson(
+        Map<String, dynamic> json) =>
+    _$ParcelsPageTypeReceiverImpl(
+      $type: json['runtimeType'] as String?,
+    );
+
+Map<String, dynamic> _$$ParcelsPageTypeReceiverImplToJson(
+        _$ParcelsPageTypeReceiverImpl instance) =>
+    <String, dynamic>{
+      'runtimeType': instance.$type,
+    };
+
+_$ParcelsPageTypeShipperImpl _$$ParcelsPageTypeShipperImplFromJson(
+        Map<String, dynamic> json) =>
+    _$ParcelsPageTypeShipperImpl(
+      $type: json['runtimeType'] as String?,
+    );
+
+Map<String, dynamic> _$$ParcelsPageTypeShipperImplToJson(
+        _$ParcelsPageTypeShipperImpl instance) =>
+    <String, dynamic>{
+      'runtimeType': instance.$type,
+    };
+
+_$ParcelsPageTypeArchiveImpl _$$ParcelsPageTypeArchiveImplFromJson(
+        Map<String, dynamic> json) =>
+    _$ParcelsPageTypeArchiveImpl(
+      $type: json['runtimeType'] as String?,
+    );
+
+Map<String, dynamic> _$$ParcelsPageTypeArchiveImplToJson(
+        _$ParcelsPageTypeArchiveImpl instance) =>
+    <String, dynamic>{
+      'runtimeType': instance.$type,
+    };

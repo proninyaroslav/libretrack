@@ -22,6 +22,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:jiffy/jiffy.dart';
 import 'package:libretrack/core/entity/entity.dart';
+import 'package:libretrack/core/settings/model.dart';
 import 'package:libretrack/ui/components/widget.dart';
 import 'package:libretrack/ui/model/selectable_state.dart';
 import 'package:libretrack/ui/model/utils.dart';
@@ -32,7 +33,6 @@ import '../../../locale.dart';
 import '../../theme.dart';
 import '../model/callback.dart';
 import '../model/parcel_info.dart';
-import '../model/parcels_page_type.dart';
 import '../model/selectable_parcels_cubit.dart';
 import 'parcel_menu.dart';
 

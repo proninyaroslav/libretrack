@@ -17,6 +17,7 @@
 // along with LibreTrack.  If not, see <http://www.gnu.org/licenses/>.
 
 import 'package:equatable/equatable.dart';
+import 'package:libretrack/core/settings/model.dart';
 import 'package:libretrack/ui/parcels/parcels.dart';
 
 class SelectableParcelsItem extends Equatable {

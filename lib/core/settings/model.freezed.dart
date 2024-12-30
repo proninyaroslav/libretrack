@@ -4983,3 +4983,486 @@ abstract class BarcodeGeneratorTypeQrCode implements BarcodeGeneratorType {
   factory BarcodeGeneratorTypeQrCode.fromJson(Map<String, dynamic> json) =
       _$BarcodeGeneratorTypeQrCodeImpl.fromJson;
 }
+
+ParcelsPageType _$ParcelsPageTypeFromJson(Map<String, dynamic> json) {
+  switch (json['runtimeType']) {
+    case 'receiver':
+      return ParcelsPageTypeReceiver.fromJson(json);
+    case 'shipper':
+      return ParcelsPageTypeShipper.fromJson(json);
+    case 'archive':
+      return ParcelsPageTypeArchive.fromJson(json);
+
+    default:
+      throw CheckedFromJsonException(json, 'runtimeType', 'ParcelsPageType',
+          'Invalid union type "${json['runtimeType']}"!');
+  }
+}
+
+/// @nodoc
+mixin _$ParcelsPageType {
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() receiver,
+    required TResult Function() shipper,
+    required TResult Function() archive,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? receiver,
+    TResult? Function()? shipper,
+    TResult? Function()? archive,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? receiver,
+    TResult Function()? shipper,
+    TResult Function()? archive,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(ParcelsPageTypeReceiver value) receiver,
+    required TResult Function(ParcelsPageTypeShipper value) shipper,
+    required TResult Function(ParcelsPageTypeArchive value) archive,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(ParcelsPageTypeReceiver value)? receiver,
+    TResult? Function(ParcelsPageTypeShipper value)? shipper,
+    TResult? Function(ParcelsPageTypeArchive value)? archive,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(ParcelsPageTypeReceiver value)? receiver,
+    TResult Function(ParcelsPageTypeShipper value)? shipper,
+    TResult Function(ParcelsPageTypeArchive value)? archive,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
+
+  /// Serializes this ParcelsPageType to a JSON map.
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $ParcelsPageTypeCopyWith<$Res> {
+  factory $ParcelsPageTypeCopyWith(
+          ParcelsPageType value, $Res Function(ParcelsPageType) then) =
+      _$ParcelsPageTypeCopyWithImpl<$Res, ParcelsPageType>;
+}
+
+/// @nodoc
+class _$ParcelsPageTypeCopyWithImpl<$Res, $Val extends ParcelsPageType>
+    implements $ParcelsPageTypeCopyWith<$Res> {
+  _$ParcelsPageTypeCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  /// Create a copy of ParcelsPageType
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+abstract class _$$ParcelsPageTypeReceiverImplCopyWith<$Res> {
+  factory _$$ParcelsPageTypeReceiverImplCopyWith(
+          _$ParcelsPageTypeReceiverImpl value,
+          $Res Function(_$ParcelsPageTypeReceiverImpl) then) =
+      __$$ParcelsPageTypeReceiverImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$ParcelsPageTypeReceiverImplCopyWithImpl<$Res>
+    extends _$ParcelsPageTypeCopyWithImpl<$Res, _$ParcelsPageTypeReceiverImpl>
+    implements _$$ParcelsPageTypeReceiverImplCopyWith<$Res> {
+  __$$ParcelsPageTypeReceiverImplCopyWithImpl(
+      _$ParcelsPageTypeReceiverImpl _value,
+      $Res Function(_$ParcelsPageTypeReceiverImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of ParcelsPageType
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$ParcelsPageTypeReceiverImpl implements ParcelsPageTypeReceiver {
+  const _$ParcelsPageTypeReceiverImpl({final String? $type})
+      : $type = $type ?? 'receiver';
+
+  factory _$ParcelsPageTypeReceiverImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ParcelsPageTypeReceiverImplFromJson(json);
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
+
+  @override
+  String toString() {
+    return 'ParcelsPageType.receiver()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ParcelsPageTypeReceiverImpl);
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() receiver,
+    required TResult Function() shipper,
+    required TResult Function() archive,
+  }) {
+    return receiver();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? receiver,
+    TResult? Function()? shipper,
+    TResult? Function()? archive,
+  }) {
+    return receiver?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? receiver,
+    TResult Function()? shipper,
+    TResult Function()? archive,
+    required TResult orElse(),
+  }) {
+    if (receiver != null) {
+      return receiver();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(ParcelsPageTypeReceiver value) receiver,
+    required TResult Function(ParcelsPageTypeShipper value) shipper,
+    required TResult Function(ParcelsPageTypeArchive value) archive,
+  }) {
+    return receiver(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(ParcelsPageTypeReceiver value)? receiver,
+    TResult? Function(ParcelsPageTypeShipper value)? shipper,
+    TResult? Function(ParcelsPageTypeArchive value)? archive,
+  }) {
+    return receiver?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(ParcelsPageTypeReceiver value)? receiver,
+    TResult Function(ParcelsPageTypeShipper value)? shipper,
+    TResult Function(ParcelsPageTypeArchive value)? archive,
+    required TResult orElse(),
+  }) {
+    if (receiver != null) {
+      return receiver(this);
+    }
+    return orElse();
+  }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$ParcelsPageTypeReceiverImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class ParcelsPageTypeReceiver implements ParcelsPageType {
+  const factory ParcelsPageTypeReceiver() = _$ParcelsPageTypeReceiverImpl;
+
+  factory ParcelsPageTypeReceiver.fromJson(Map<String, dynamic> json) =
+      _$ParcelsPageTypeReceiverImpl.fromJson;
+}
+
+/// @nodoc
+abstract class _$$ParcelsPageTypeShipperImplCopyWith<$Res> {
+  factory _$$ParcelsPageTypeShipperImplCopyWith(
+          _$ParcelsPageTypeShipperImpl value,
+          $Res Function(_$ParcelsPageTypeShipperImpl) then) =
+      __$$ParcelsPageTypeShipperImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$ParcelsPageTypeShipperImplCopyWithImpl<$Res>
+    extends _$ParcelsPageTypeCopyWithImpl<$Res, _$ParcelsPageTypeShipperImpl>
+    implements _$$ParcelsPageTypeShipperImplCopyWith<$Res> {
+  __$$ParcelsPageTypeShipperImplCopyWithImpl(
+      _$ParcelsPageTypeShipperImpl _value,
+      $Res Function(_$ParcelsPageTypeShipperImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of ParcelsPageType
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$ParcelsPageTypeShipperImpl implements ParcelsPageTypeShipper {
+  const _$ParcelsPageTypeShipperImpl({final String? $type})
+      : $type = $type ?? 'shipper';
+
+  factory _$ParcelsPageTypeShipperImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ParcelsPageTypeShipperImplFromJson(json);
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
+
+  @override
+  String toString() {
+    return 'ParcelsPageType.shipper()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ParcelsPageTypeShipperImpl);
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() receiver,
+    required TResult Function() shipper,
+    required TResult Function() archive,
+  }) {
+    return shipper();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? receiver,
+    TResult? Function()? shipper,
+    TResult? Function()? archive,
+  }) {
+    return shipper?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? receiver,
+    TResult Function()? shipper,
+    TResult Function()? archive,
+    required TResult orElse(),
+  }) {
+    if (shipper != null) {
+      return shipper();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(ParcelsPageTypeReceiver value) receiver,
+    required TResult Function(ParcelsPageTypeShipper value) shipper,
+    required TResult Function(ParcelsPageTypeArchive value) archive,
+  }) {
+    return shipper(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(ParcelsPageTypeReceiver value)? receiver,
+    TResult? Function(ParcelsPageTypeShipper value)? shipper,
+    TResult? Function(ParcelsPageTypeArchive value)? archive,
+  }) {
+    return shipper?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(ParcelsPageTypeReceiver value)? receiver,
+    TResult Function(ParcelsPageTypeShipper value)? shipper,
+    TResult Function(ParcelsPageTypeArchive value)? archive,
+    required TResult orElse(),
+  }) {
+    if (shipper != null) {
+      return shipper(this);
+    }
+    return orElse();
+  }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$ParcelsPageTypeShipperImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class ParcelsPageTypeShipper implements ParcelsPageType {
+  const factory ParcelsPageTypeShipper() = _$ParcelsPageTypeShipperImpl;
+
+  factory ParcelsPageTypeShipper.fromJson(Map<String, dynamic> json) =
+      _$ParcelsPageTypeShipperImpl.fromJson;
+}
+
+/// @nodoc
+abstract class _$$ParcelsPageTypeArchiveImplCopyWith<$Res> {
+  factory _$$ParcelsPageTypeArchiveImplCopyWith(
+          _$ParcelsPageTypeArchiveImpl value,
+          $Res Function(_$ParcelsPageTypeArchiveImpl) then) =
+      __$$ParcelsPageTypeArchiveImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$ParcelsPageTypeArchiveImplCopyWithImpl<$Res>
+    extends _$ParcelsPageTypeCopyWithImpl<$Res, _$ParcelsPageTypeArchiveImpl>
+    implements _$$ParcelsPageTypeArchiveImplCopyWith<$Res> {
+  __$$ParcelsPageTypeArchiveImplCopyWithImpl(
+      _$ParcelsPageTypeArchiveImpl _value,
+      $Res Function(_$ParcelsPageTypeArchiveImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of ParcelsPageType
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$ParcelsPageTypeArchiveImpl implements ParcelsPageTypeArchive {
+  const _$ParcelsPageTypeArchiveImpl({final String? $type})
+      : $type = $type ?? 'archive';
+
+  factory _$ParcelsPageTypeArchiveImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ParcelsPageTypeArchiveImplFromJson(json);
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
+
+  @override
+  String toString() {
+    return 'ParcelsPageType.archive()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ParcelsPageTypeArchiveImpl);
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() receiver,
+    required TResult Function() shipper,
+    required TResult Function() archive,
+  }) {
+    return archive();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? receiver,
+    TResult? Function()? shipper,
+    TResult? Function()? archive,
+  }) {
+    return archive?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? receiver,
+    TResult Function()? shipper,
+    TResult Function()? archive,
+    required TResult orElse(),
+  }) {
+    if (archive != null) {
+      return archive();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(ParcelsPageTypeReceiver value) receiver,
+    required TResult Function(ParcelsPageTypeShipper value) shipper,
+    required TResult Function(ParcelsPageTypeArchive value) archive,
+  }) {
+    return archive(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(ParcelsPageTypeReceiver value)? receiver,
+    TResult? Function(ParcelsPageTypeShipper value)? shipper,
+    TResult? Function(ParcelsPageTypeArchive value)? archive,
+  }) {
+    return archive?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(ParcelsPageTypeReceiver value)? receiver,
+    TResult Function(ParcelsPageTypeShipper value)? shipper,
+    TResult Function(ParcelsPageTypeArchive value)? archive,
+    required TResult orElse(),
+  }) {
+    if (archive != null) {
+      return archive(this);
+    }
+    return orElse();
+  }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$ParcelsPageTypeArchiveImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class ParcelsPageTypeArchive implements ParcelsPageType {
+  const factory ParcelsPageTypeArchive() = _$ParcelsPageTypeArchiveImpl;
+
+  factory ParcelsPageTypeArchive.fromJson(Map<String, dynamic> json) =
+      _$ParcelsPageTypeArchiveImpl.fromJson;
+}
