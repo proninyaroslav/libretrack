@@ -1,0 +1,2 @@
+- "I'm receiver" and "I'm shipper" categories added
+- Saving the current parcels list tab after closing the app

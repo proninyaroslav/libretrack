@@ -1,6 +1,6 @@
 name: libretrack
 base: core22
-version: 1.6.1
+version: 1.7.0
 license: GPL-3.0-or-later
 summary: Private, cross-platform package tracking app.
 description: |
@@ -43,7 +43,7 @@ parts:
   libretrack:
     plugin: flutter
     source: https://github.com/proninyaroslav/libretrack.git
-    source-tag: 1.6.1
+    source-tag: 1.7.0
     flutter-target: lib/main.dart
     build-packages:
       - libsecret-1-dev

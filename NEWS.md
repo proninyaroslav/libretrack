@@ -1,3 +1,8 @@
+### Version 1.7.0 (2024-12-30)
+
+- "I'm receiver" and "I'm shipper" categories added
+- Saving the current parcels list tab after closing the app
+
 ### Version 1.6.1 (2024-09-10)
 
 - Fix "Bad state" crash
