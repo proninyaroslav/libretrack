@@ -40,6 +40,14 @@ Track postal items directly on your device using accounts of postal services. Th
 
 [Use, see, change and share](https://en.wikipedia.org/wiki/Free_software); [with all](https://en.wikipedia.org/wiki/Copyleft).
 
+
+## 📦 Supported postal services
+
+[![UPS](assets/service_logo/ups.png)](https://www.ups.com)
+[![Russian Post](assets/service_logo/russian_post.png)](https://www.pochta.ru/)
+[![USPS](assets/service_logo/usps.png)](https://www.usps.com/)
+[![PostNord](art/postnord.png)](https://www.postnord.se/en/)
+
 ## 📋 Features
 
 - Free and Open Source software (FOSS)
@@ -66,13 +74,6 @@ Track postal items directly on your device using accounts of postal services. Th
 - ~~macOS~~ (planned)
 - ~~Web~~ (planned)
 - ~~Windows~~ (planned)
-
-## 📦 Supported postal services
-
-[![UPS](assets/service_logo/ups.png)](https://www.ups.com)
-[![Russian Post](assets/service_logo/russian_post.png)](https://www.pochta.ru/)
-[![USPS](assets/service_logo/usps.png)](https://www.usps.com/)
-[![PostNord](art/postnord.png)](https://www.postnord.se/en/)
 
 ## 🌍 Translations
 
