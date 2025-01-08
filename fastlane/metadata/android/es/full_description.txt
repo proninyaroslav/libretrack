@@ -1,5 +1,11 @@
 Track postal items directly on your device using accounts of postal services. The app respects your privacy and freedom: you don't use third-party online services.
 
+📦 Servicios postales admitidos
+* UPS
+* USPS
+* Correos de Rusia
+* PostNord
+
 📋 Features
 * Free and Open Source software (FOSS)
 * Support for various platforms and devices
