@@ -28,6 +28,7 @@ import 'package:libretrack/ui/model/utils.dart';
 import 'package:libretrack/ui/theme.dart';
 import 'package:quiver/core.dart';
 
+import '../l10n/app_localizations.dart';
 import '../locale.dart';
 import 'crash_report/crash_report_manager.dart';
 import 'entity/entity.dart';

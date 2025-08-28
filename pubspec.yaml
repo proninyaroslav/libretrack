@@ -42,6 +42,7 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_bloc: ^8.0.1
+  flutter_gen: ^5.10.0
   flutter_linkify: ^6.0.0
   flutter_local_notifications: ^18.0.1
   flutter_localizations:
