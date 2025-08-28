@@ -19,9 +19,7 @@ mixin _$USPSAuthData {
   String get username => throw _privateConstructorUsedError;
   String get companyName => throw _privateConstructorUsedError;
 
-  /// Create a copy of USPSAuthData
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $USPSAuthDataCopyWith<USPSAuthData> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -45,8 +43,6 @@ class _$USPSAuthDataCopyWithImpl<$Res, $Val extends USPSAuthData>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of USPSAuthData
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -85,8 +81,6 @@ class __$$USPSAuthDataImplCopyWithImpl<$Res>
       _$USPSAuthDataImpl _value, $Res Function(_$USPSAuthDataImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of USPSAuthData
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -145,9 +139,7 @@ class _$USPSAuthDataImpl extends _USPSAuthData with DiagnosticableTreeMixin {
   @override
   int get hashCode => Object.hash(runtimeType, username, companyName);
 
-  /// Create a copy of USPSAuthData
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$USPSAuthDataImplCopyWith<_$USPSAuthDataImpl> get copyWith =>
@@ -164,11 +156,8 @@ abstract class _USPSAuthData extends USPSAuthData {
   String get username;
   @override
   String get companyName;
-
-  /// Create a copy of USPSAuthData
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$USPSAuthDataImplCopyWith<_$USPSAuthDataImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

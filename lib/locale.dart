@@ -17,10 +17,10 @@
 // along with LibreTrack.  If not, see <http://www.gnu.org/licenses/>.
 
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:intl/locale.dart' as intl;
+import 'package:libretrack/l10n/app_localizations.dart';
 
-export 'package:flutter_gen/gen_l10n/app_localizations.dart';
+export 'package:libretrack/l10n/app_localizations.dart';
 
 class S {
   static AppLocalizations of(BuildContext context) {

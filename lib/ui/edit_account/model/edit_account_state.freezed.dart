@@ -86,9 +86,6 @@ class _$EditAccountStateCopyWithImpl<$Res, $Val extends EditAccountState>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
-
-  /// Create a copy of EditAccountState
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -107,9 +104,6 @@ class __$$EditAccountStateInitialImplCopyWithImpl<$Res>
       _$EditAccountStateInitialImpl _value,
       $Res Function(_$EditAccountStateInitialImpl) _then)
       : super(_value, _then);
-
-  /// Create a copy of EditAccountState
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -237,9 +231,6 @@ class __$$EditAccountStateApplyingImplCopyWithImpl<$Res>
       _$EditAccountStateApplyingImpl _value,
       $Res Function(_$EditAccountStateApplyingImpl) _then)
       : super(_value, _then);
-
-  /// Create a copy of EditAccountState
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -367,9 +358,6 @@ class __$$EditAccountStateAppliedImplCopyWithImpl<$Res>
       _$EditAccountStateAppliedImpl _value,
       $Res Function(_$EditAccountStateAppliedImpl) _then)
       : super(_value, _then);
-
-  /// Create a copy of EditAccountState
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -501,8 +489,6 @@ class __$$EditAccountStateApplyFailedImplCopyWithImpl<$Res>
       $Res Function(_$EditAccountStateApplyFailedImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of EditAccountState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -562,9 +548,7 @@ class _$EditAccountStateApplyFailedImpl
   @override
   int get hashCode => Object.hash(runtimeType, exception, stackTrace);
 
-  /// Create a copy of EditAccountState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$EditAccountStateApplyFailedImplCopyWith<_$EditAccountStateApplyFailedImpl>
@@ -655,10 +639,7 @@ abstract class EditAccountStateApplyFailed implements EditAccountState {
 
   Exception? get exception;
   StackTrace? get stackTrace;
-
-  /// Create a copy of EditAccountState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$EditAccountStateApplyFailedImplCopyWith<_$EditAccountStateApplyFailedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

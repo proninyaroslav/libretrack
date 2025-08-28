@@ -92,9 +92,7 @@ mixin _$BehaviorState {
   }) =>
       throw _privateConstructorUsedError;
 
-  /// Create a copy of BehaviorState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $BehaviorStateCopyWith<BehaviorState> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -120,8 +118,6 @@ class _$BehaviorStateCopyWithImpl<$Res, $Val extends BehaviorState>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of BehaviorState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -135,8 +131,6 @@ class _$BehaviorStateCopyWithImpl<$Res, $Val extends BehaviorState>
     ) as $Val);
   }
 
-  /// Create a copy of BehaviorState
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $BehaviorInfoCopyWith<$Res>? get info {
@@ -172,8 +166,6 @@ class __$$BehaviorStateInitialImplCopyWithImpl<$Res>
       $Res Function(_$BehaviorStateInitialImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of BehaviorState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -223,9 +215,7 @@ class _$BehaviorStateInitialImpl
   @override
   int get hashCode => Object.hash(runtimeType, info);
 
-  /// Create a copy of BehaviorState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$BehaviorStateInitialImplCopyWith<_$BehaviorStateInitialImpl>
@@ -338,11 +328,8 @@ abstract class BehaviorStateInitial implements BehaviorState {
 
   @override
   BehaviorInfo? get info;
-
-  /// Create a copy of BehaviorState
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$BehaviorStateInitialImplCopyWith<_$BehaviorStateInitialImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -369,8 +356,6 @@ class __$$BehaviorStateLoadedImplCopyWithImpl<$Res>
       $Res Function(_$BehaviorStateLoadedImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of BehaviorState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -384,8 +369,6 @@ class __$$BehaviorStateLoadedImplCopyWithImpl<$Res>
     ));
   }
 
-  /// Create a copy of BehaviorState
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $BehaviorInfoCopyWith<$Res> get info {
@@ -429,9 +412,7 @@ class _$BehaviorStateLoadedImpl
   @override
   int get hashCode => Object.hash(runtimeType, info);
 
-  /// Create a copy of BehaviorState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$BehaviorStateLoadedImplCopyWith<_$BehaviorStateLoadedImpl> get copyWith =>
@@ -543,11 +524,8 @@ abstract class BehaviorStateLoaded implements BehaviorState {
 
   @override
   BehaviorInfo get info;
-
-  /// Create a copy of BehaviorState
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$BehaviorStateLoadedImplCopyWith<_$BehaviorStateLoadedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -577,8 +555,6 @@ class __$$BehaviorStateTrackingLimitChangedImplCopyWithImpl<$Res>
       $Res Function(_$BehaviorStateTrackingLimitChangedImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of BehaviorState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -592,8 +568,6 @@ class __$$BehaviorStateTrackingLimitChangedImplCopyWithImpl<$Res>
     ));
   }
 
-  /// Create a copy of BehaviorState
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $BehaviorInfoCopyWith<$Res> get info {
@@ -637,9 +611,7 @@ class _$BehaviorStateTrackingLimitChangedImpl
   @override
   int get hashCode => Object.hash(runtimeType, info);
 
-  /// Create a copy of BehaviorState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$BehaviorStateTrackingLimitChangedImplCopyWith<
@@ -752,11 +724,8 @@ abstract class BehaviorStateTrackingLimitChanged implements BehaviorState {
 
   @override
   BehaviorInfo get info;
-
-  /// Create a copy of BehaviorState
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$BehaviorStateTrackingLimitChangedImplCopyWith<
           _$BehaviorStateTrackingLimitChangedImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -787,8 +756,6 @@ class __$$BehaviorStateAutoTrackingChangedImplCopyWithImpl<$Res>
       $Res Function(_$BehaviorStateAutoTrackingChangedImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of BehaviorState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -802,8 +769,6 @@ class __$$BehaviorStateAutoTrackingChangedImplCopyWithImpl<$Res>
     ));
   }
 
-  /// Create a copy of BehaviorState
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $BehaviorInfoCopyWith<$Res> get info {
@@ -847,9 +812,7 @@ class _$BehaviorStateAutoTrackingChangedImpl
   @override
   int get hashCode => Object.hash(runtimeType, info);
 
-  /// Create a copy of BehaviorState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$BehaviorStateAutoTrackingChangedImplCopyWith<
@@ -962,11 +925,8 @@ abstract class BehaviorStateAutoTrackingChanged implements BehaviorState {
 
   @override
   BehaviorInfo get info;
-
-  /// Create a copy of BehaviorState
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$BehaviorStateAutoTrackingChangedImplCopyWith<
           _$BehaviorStateAutoTrackingChangedImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -997,8 +957,6 @@ class __$$BehaviorStateAutoTrackingFreqChangedImplCopyWithImpl<$Res>
       $Res Function(_$BehaviorStateAutoTrackingFreqChangedImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of BehaviorState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1012,8 +970,6 @@ class __$$BehaviorStateAutoTrackingFreqChangedImplCopyWithImpl<$Res>
     ));
   }
 
-  /// Create a copy of BehaviorState
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $BehaviorInfoCopyWith<$Res> get info {
@@ -1058,9 +1014,7 @@ class _$BehaviorStateAutoTrackingFreqChangedImpl
   @override
   int get hashCode => Object.hash(runtimeType, info);
 
-  /// Create a copy of BehaviorState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$BehaviorStateAutoTrackingFreqChangedImplCopyWith<
@@ -1173,11 +1127,8 @@ abstract class BehaviorStateAutoTrackingFreqChanged implements BehaviorState {
 
   @override
   BehaviorInfo get info;
-
-  /// Create a copy of BehaviorState
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$BehaviorStateAutoTrackingFreqChangedImplCopyWith<
           _$BehaviorStateAutoTrackingFreqChangedImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -1208,8 +1159,6 @@ class __$$BehaviorStateTrackingHistorySizeChangedImplCopyWithImpl<$Res>
       $Res Function(_$BehaviorStateTrackingHistorySizeChangedImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of BehaviorState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1223,8 +1172,6 @@ class __$$BehaviorStateTrackingHistorySizeChangedImplCopyWithImpl<$Res>
     ));
   }
 
-  /// Create a copy of BehaviorState
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $BehaviorInfoCopyWith<$Res> get info {
@@ -1269,9 +1216,7 @@ class _$BehaviorStateTrackingHistorySizeChangedImpl
   @override
   int get hashCode => Object.hash(runtimeType, info);
 
-  /// Create a copy of BehaviorState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$BehaviorStateTrackingHistorySizeChangedImplCopyWith<
@@ -1386,11 +1331,8 @@ abstract class BehaviorStateTrackingHistorySizeChanged
 
   @override
   BehaviorInfo get info;
-
-  /// Create a copy of BehaviorState
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$BehaviorStateTrackingHistorySizeChangedImplCopyWith<
           _$BehaviorStateTrackingHistorySizeChangedImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -1403,9 +1345,7 @@ mixin _$BehaviorInfo {
   AutoTrackingFreq get autoTrackingFreq => throw _privateConstructorUsedError;
   int get trackingHistorySize => throw _privateConstructorUsedError;
 
-  /// Create a copy of BehaviorInfo
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $BehaviorInfoCopyWith<BehaviorInfo> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1436,8 +1376,6 @@ class _$BehaviorInfoCopyWithImpl<$Res, $Val extends BehaviorInfo>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of BehaviorInfo
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1466,8 +1404,6 @@ class _$BehaviorInfoCopyWithImpl<$Res, $Val extends BehaviorInfo>
     ) as $Val);
   }
 
-  /// Create a copy of BehaviorInfo
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $TrackingFreqLimitCopyWith<$Res> get trackingLimit {
@@ -1476,8 +1412,6 @@ class _$BehaviorInfoCopyWithImpl<$Res, $Val extends BehaviorInfo>
     });
   }
 
-  /// Create a copy of BehaviorInfo
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $AutoTrackingFreqCopyWith<$Res> get autoTrackingFreq {
@@ -1515,8 +1449,6 @@ class __$$BehaviorInfoImplCopyWithImpl<$Res>
       _$BehaviorInfoImpl _value, $Res Function(_$BehaviorInfoImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of BehaviorInfo
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1599,9 +1531,7 @@ class _$BehaviorInfoImpl with DiagnosticableTreeMixin implements _BehaviorInfo {
   int get hashCode => Object.hash(runtimeType, trackingLimit, autoTracking,
       autoTrackingFreq, trackingHistorySize);
 
-  /// Create a copy of BehaviorInfo
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$BehaviorInfoImplCopyWith<_$BehaviorInfoImpl> get copyWith =>
@@ -1623,11 +1553,8 @@ abstract class _BehaviorInfo implements BehaviorInfo {
   AutoTrackingFreq get autoTrackingFreq;
   @override
   int get trackingHistorySize;
-
-  /// Create a copy of BehaviorInfo
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$BehaviorInfoImplCopyWith<_$BehaviorInfoImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

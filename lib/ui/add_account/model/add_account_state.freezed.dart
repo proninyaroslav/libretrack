@@ -85,9 +85,6 @@ class _$AddAccountStateCopyWithImpl<$Res, $Val extends AddAccountState>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
-
-  /// Create a copy of AddAccountState
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -106,9 +103,6 @@ class __$$AddAccountStateInitialImplCopyWithImpl<$Res>
       _$AddAccountStateInitialImpl _value,
       $Res Function(_$AddAccountStateInitialImpl) _then)
       : super(_value, _then);
-
-  /// Create a copy of AddAccountState
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -234,9 +228,6 @@ class __$$AddAccountStateAddingImplCopyWithImpl<$Res>
   __$$AddAccountStateAddingImplCopyWithImpl(_$AddAccountStateAddingImpl _value,
       $Res Function(_$AddAccountStateAddingImpl) _then)
       : super(_value, _then);
-
-  /// Create a copy of AddAccountState
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -361,9 +352,6 @@ class __$$AddAccountStateAddedImplCopyWithImpl<$Res>
   __$$AddAccountStateAddedImplCopyWithImpl(_$AddAccountStateAddedImpl _value,
       $Res Function(_$AddAccountStateAddedImpl) _then)
       : super(_value, _then);
-
-  /// Create a copy of AddAccountState
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -493,8 +481,6 @@ class __$$AddAccountStateAddFailedImplCopyWithImpl<$Res>
       $Res Function(_$AddAccountStateAddFailedImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of AddAccountState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -554,9 +540,7 @@ class _$AddAccountStateAddFailedImpl
   @override
   int get hashCode => Object.hash(runtimeType, exception, stackTrace);
 
-  /// Create a copy of AddAccountState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$AddAccountStateAddFailedImplCopyWith<_$AddAccountStateAddFailedImpl>
@@ -646,10 +630,7 @@ abstract class AddAccountStateAddFailed implements AddAccountState {
 
   Exception? get exception;
   StackTrace? get stackTrace;
-
-  /// Create a copy of AddAccountState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$AddAccountStateAddFailedImplCopyWith<_$AddAccountStateAddFailedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

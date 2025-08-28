@@ -25,9 +25,7 @@ mixin _$ParcelInfo {
   List<TrackingResponseInfo>? get lastTrackingResponse =>
       throw _privateConstructorUsedError;
 
-  /// Create a copy of ParcelInfo
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $ParcelInfoCopyWith<ParcelInfo> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -57,8 +55,6 @@ class _$ParcelInfoCopyWithImpl<$Res, $Val extends ParcelInfo>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of ParcelInfo
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -123,8 +119,6 @@ class __$$ParcelInfoImplCopyWithImpl<$Res>
       _$ParcelInfoImpl _value, $Res Function(_$ParcelInfoImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of ParcelInfo
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -239,9 +233,7 @@ class _$ParcelInfoImpl implements _ParcelInfo {
       lastActivity,
       const DeepCollectionEquality().hash(_lastTrackingResponse));
 
-  /// Create a copy of ParcelInfo
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$ParcelInfoImplCopyWith<_$ParcelInfoImpl> get copyWith =>
@@ -270,11 +262,8 @@ abstract class _ParcelInfo implements ParcelInfo {
   ShipmentActivityInfo? get lastActivity;
   @override
   List<TrackingResponseInfo>? get lastTrackingResponse;
-
-  /// Create a copy of ParcelInfo
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$ParcelInfoImplCopyWith<_$ParcelInfoImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

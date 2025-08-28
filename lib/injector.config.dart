@@ -70,17 +70,17 @@ extension GetItInjectableX on _i174.GetIt {
       environmentFilter,
     );
     final flutterSecureStorageModule = _$FlutterSecureStorageModule();
-    final sharedPreferencesModule = _$SharedPreferencesModule();
     final appDatabaseModule = _$AppDatabaseModule();
+    final sharedPreferencesModule = _$SharedPreferencesModule();
     final clientModule = _$ClientModule();
     gh.factory<_i558.FlutterSecureStorage>(
         () => flutterSecureStorageModule.storage);
-    await gh.singletonAsync<_i460.SharedPreferences>(
-      () => sharedPreferencesModule.prefOld,
-      preResolve: true,
-    );
     await gh.singletonAsync<_i93.AppDatabase>(
       () => appDatabaseModule.db,
+      preResolve: true,
+    );
+    await gh.singletonAsync<_i460.SharedPreferences>(
+      () => sharedPreferencesModule.prefOld,
       preResolve: true,
     );
     gh.factory<_i1024.CrashReportIdGenerator>(
@@ -253,8 +253,8 @@ extension GetItInjectableX on _i174.GetIt {
 
 class _$FlutterSecureStorageModule extends _i743.FlutterSecureStorageModule {}
 
-class _$SharedPreferencesModule extends _i446.SharedPreferencesModule {}
-
 class _$AppDatabaseModule extends _i718.AppDatabaseModule {}
+
+class _$SharedPreferencesModule extends _i446.SharedPreferencesModule {}
 
 class _$ClientModule extends _i672.ClientModule {}

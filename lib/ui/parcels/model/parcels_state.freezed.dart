@@ -97,9 +97,7 @@ mixin _$ParcelsState {
   }) =>
       throw _privateConstructorUsedError;
 
-  /// Create a copy of ParcelsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $ParcelsStateCopyWith<ParcelsState> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -127,8 +125,6 @@ class _$ParcelsStateCopyWithImpl<$Res, $Val extends ParcelsState>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of ParcelsState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -152,8 +148,6 @@ class _$ParcelsStateCopyWithImpl<$Res, $Val extends ParcelsState>
     ) as $Val);
   }
 
-  /// Create a copy of ParcelsState
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ParcelsFilterCopyWith<$Res>? get search {
@@ -166,8 +160,6 @@ class _$ParcelsStateCopyWithImpl<$Res, $Val extends ParcelsState>
     });
   }
 
-  /// Create a copy of ParcelsState
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ParcelsSortCopyWith<$Res>? get sort {
@@ -206,8 +198,6 @@ class __$$ParcelsStateInitialImplCopyWithImpl<$Res>
       $Res Function(_$ParcelsStateInitialImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of ParcelsState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -276,9 +266,7 @@ class _$ParcelsStateInitialImpl
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(filters), search, sort);
 
-  /// Create a copy of ParcelsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$ParcelsStateInitialImplCopyWith<_$ParcelsStateInitialImpl> get copyWith =>
@@ -399,11 +387,8 @@ abstract class ParcelsStateInitial implements ParcelsState {
   ParcelsFilter? get search;
   @override
   ParcelsSort? get sort;
-
-  /// Create a copy of ParcelsState
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$ParcelsStateInitialImplCopyWith<_$ParcelsStateInitialImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -438,8 +423,6 @@ class __$$ParcelsStateLoadedImplCopyWithImpl<$Res>
       $Res Function(_$ParcelsStateLoadedImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of ParcelsState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -567,9 +550,7 @@ class _$ParcelsStateLoadedImpl
       search,
       sort);
 
-  /// Create a copy of ParcelsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$ParcelsStateLoadedImplCopyWith<_$ParcelsStateLoadedImpl> get copyWith =>
@@ -696,11 +677,8 @@ abstract class ParcelsStateLoaded implements ParcelsState {
   ParcelsFilter? get search;
   @override
   ParcelsSort? get sort;
-
-  /// Create a copy of ParcelsState
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$ParcelsStateLoadedImplCopyWith<_$ParcelsStateLoadedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -736,8 +714,6 @@ class __$$ParcelsStateLoadingFailedImplCopyWithImpl<$Res>
       $Res Function(_$ParcelsStateLoadingFailedImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of ParcelsState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -766,8 +742,6 @@ class __$$ParcelsStateLoadingFailedImplCopyWithImpl<$Res>
     ));
   }
 
-  /// Create a copy of ParcelsState
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $StorageErrorCopyWith<$Res>? get error {
@@ -829,9 +803,7 @@ class _$ParcelsStateLoadingFailedImpl
   int get hashCode => Object.hash(runtimeType, error,
       const DeepCollectionEquality().hash(filters), search, sort);
 
-  /// Create a copy of ParcelsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$ParcelsStateLoadingFailedImplCopyWith<_$ParcelsStateLoadingFailedImpl>
@@ -954,11 +926,8 @@ abstract class ParcelsStateLoadingFailed implements ParcelsState {
   ParcelsFilter? get search;
   @override
   ParcelsSort? get sort;
-
-  /// Create a copy of ParcelsState
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$ParcelsStateLoadingFailedImplCopyWith<_$ParcelsStateLoadingFailedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

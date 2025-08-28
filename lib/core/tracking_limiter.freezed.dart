@@ -64,9 +64,7 @@ mixin _$TrackingLimiterState {
   }) =>
       throw _privateConstructorUsedError;
 
-  /// Create a copy of TrackingLimiterState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $TrackingLimiterStateCopyWith<TrackingLimiterState> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -91,8 +89,6 @@ class _$TrackingLimiterStateCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of TrackingLimiterState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -129,8 +125,6 @@ class __$$TrackingLimiterStateAllowedImplCopyWithImpl<$Res>
       $Res Function(_$TrackingLimiterStateAllowedImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of TrackingLimiterState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -170,9 +164,7 @@ class _$TrackingLimiterStateAllowedImpl implements TrackingLimiterStateAllowed {
   @override
   int get hashCode => Object.hash(runtimeType, trackNumber);
 
-  /// Create a copy of TrackingLimiterState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$TrackingLimiterStateAllowedImplCopyWith<_$TrackingLimiterStateAllowedImpl>
@@ -256,11 +248,8 @@ abstract class TrackingLimiterStateAllowed implements TrackingLimiterState {
 
   @override
   String get trackNumber;
-
-  /// Create a copy of TrackingLimiterState
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$TrackingLimiterStateAllowedImplCopyWith<_$TrackingLimiterStateAllowedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -287,8 +276,6 @@ class __$$TrackingLimiterStateDissalowedImplCopyWithImpl<$Res>
       $Res Function(_$TrackingLimiterStateDissalowedImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of TrackingLimiterState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -339,9 +326,7 @@ class _$TrackingLimiterStateDissalowedImpl
   @override
   int get hashCode => Object.hash(runtimeType, trackNumber, remainingTime);
 
-  /// Create a copy of TrackingLimiterState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$TrackingLimiterStateDissalowedImplCopyWith<
@@ -429,11 +414,8 @@ abstract class TrackingLimiterStateDissalowed implements TrackingLimiterState {
   @override
   String get trackNumber;
   Duration get remainingTime;
-
-  /// Create a copy of TrackingLimiterState
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$TrackingLimiterStateDissalowedImplCopyWith<
           _$TrackingLimiterStateDissalowedImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -463,8 +445,6 @@ class __$$TrackingLimiterStateErrorImplCopyWithImpl<$Res>
       $Res Function(_$TrackingLimiterStateErrorImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of TrackingLimiterState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -483,8 +463,6 @@ class __$$TrackingLimiterStateErrorImplCopyWithImpl<$Res>
     ));
   }
 
-  /// Create a copy of TrackingLimiterState
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $TrackingLimiterErrorCopyWith<$Res> get error {
@@ -523,9 +501,7 @@ class _$TrackingLimiterStateErrorImpl implements TrackingLimiterStateError {
   @override
   int get hashCode => Object.hash(runtimeType, trackNumber, error);
 
-  /// Create a copy of TrackingLimiterState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$TrackingLimiterStateErrorImplCopyWith<_$TrackingLimiterStateErrorImpl>
@@ -612,11 +588,8 @@ abstract class TrackingLimiterStateError implements TrackingLimiterState {
   @override
   String get trackNumber;
   TrackingLimiterError get error;
-
-  /// Create a copy of TrackingLimiterState
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$TrackingLimiterStateErrorImplCopyWith<_$TrackingLimiterStateErrorImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -657,9 +630,7 @@ mixin _$TrackingLimiterError {
   }) =>
       throw _privateConstructorUsedError;
 
-  /// Create a copy of TrackingLimiterError
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $TrackingLimiterErrorCopyWith<TrackingLimiterError> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -686,8 +657,6 @@ class _$TrackingLimiterErrorCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of TrackingLimiterError
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -701,8 +670,6 @@ class _$TrackingLimiterErrorCopyWithImpl<$Res,
     ) as $Val);
   }
 
-  /// Create a copy of TrackingLimiterError
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $StorageErrorCopyWith<$Res> get error {
@@ -737,8 +704,6 @@ class __$$TrackingLimiterErrorStorageImplCopyWithImpl<$Res>
       $Res Function(_$TrackingLimiterErrorStorageImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of TrackingLimiterError
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -777,9 +742,7 @@ class _$TrackingLimiterErrorStorageImpl implements TrackingLimiterErrorStorage {
   @override
   int get hashCode => Object.hash(runtimeType, error);
 
-  /// Create a copy of TrackingLimiterError
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$TrackingLimiterErrorStorageImplCopyWith<_$TrackingLimiterErrorStorageImpl>
@@ -849,11 +812,8 @@ abstract class TrackingLimiterErrorStorage implements TrackingLimiterError {
 
   @override
   StorageError get error;
-
-  /// Create a copy of TrackingLimiterError
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$TrackingLimiterErrorStorageImplCopyWith<_$TrackingLimiterErrorStorageImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

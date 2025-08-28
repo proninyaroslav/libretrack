@@ -93,9 +93,7 @@ mixin _$AppearanceState {
   }) =>
       throw _privateConstructorUsedError;
 
-  /// Create a copy of AppearanceState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $AppearanceStateCopyWith<AppearanceState> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -121,8 +119,6 @@ class _$AppearanceStateCopyWithImpl<$Res, $Val extends AppearanceState>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of AppearanceState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -136,8 +132,6 @@ class _$AppearanceStateCopyWithImpl<$Res, $Val extends AppearanceState>
     ) as $Val);
   }
 
-  /// Create a copy of AppearanceState
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $AppearanceInfoCopyWith<$Res>? get info {
@@ -175,8 +169,6 @@ class __$$AppearanceStateInitialImplCopyWithImpl<$Res>
       $Res Function(_$AppearanceStateInitialImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of AppearanceState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -226,9 +218,7 @@ class _$AppearanceStateInitialImpl
   @override
   int get hashCode => Object.hash(runtimeType, info);
 
-  /// Create a copy of AppearanceState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$AppearanceStateInitialImplCopyWith<_$AppearanceStateInitialImpl>
@@ -341,11 +331,8 @@ abstract class AppearanceStateInitial implements AppearanceState {
 
   @override
   AppearanceInfo? get info;
-
-  /// Create a copy of AppearanceState
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$AppearanceStateInitialImplCopyWith<_$AppearanceStateInitialImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -373,8 +360,6 @@ class __$$AppearanceStateLoadedImplCopyWithImpl<$Res>
       $Res Function(_$AppearanceStateLoadedImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of AppearanceState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -388,8 +373,6 @@ class __$$AppearanceStateLoadedImplCopyWithImpl<$Res>
     ));
   }
 
-  /// Create a copy of AppearanceState
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $AppearanceInfoCopyWith<$Res> get info {
@@ -433,9 +416,7 @@ class _$AppearanceStateLoadedImpl
   @override
   int get hashCode => Object.hash(runtimeType, info);
 
-  /// Create a copy of AppearanceState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$AppearanceStateLoadedImplCopyWith<_$AppearanceStateLoadedImpl>
@@ -548,11 +529,8 @@ abstract class AppearanceStateLoaded implements AppearanceState {
 
   @override
   AppearanceInfo get info;
-
-  /// Create a copy of AppearanceState
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$AppearanceStateLoadedImplCopyWith<_$AppearanceStateLoadedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -582,8 +560,6 @@ class __$$AppearanceStateThemeChangedImplCopyWithImpl<$Res>
       $Res Function(_$AppearanceStateThemeChangedImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of AppearanceState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -597,8 +573,6 @@ class __$$AppearanceStateThemeChangedImplCopyWithImpl<$Res>
     ));
   }
 
-  /// Create a copy of AppearanceState
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $AppearanceInfoCopyWith<$Res> get info {
@@ -642,9 +616,7 @@ class _$AppearanceStateThemeChangedImpl
   @override
   int get hashCode => Object.hash(runtimeType, info);
 
-  /// Create a copy of AppearanceState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$AppearanceStateThemeChangedImplCopyWith<_$AppearanceStateThemeChangedImpl>
@@ -757,11 +729,8 @@ abstract class AppearanceStateThemeChanged implements AppearanceState {
 
   @override
   AppearanceInfo get info;
-
-  /// Create a copy of AppearanceState
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$AppearanceStateThemeChangedImplCopyWith<_$AppearanceStateThemeChangedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -791,8 +760,6 @@ class __$$AppearanceStateTrackingNotifyChangedImplCopyWithImpl<$Res>
       $Res Function(_$AppearanceStateTrackingNotifyChangedImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of AppearanceState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -806,8 +773,6 @@ class __$$AppearanceStateTrackingNotifyChangedImplCopyWithImpl<$Res>
     ));
   }
 
-  /// Create a copy of AppearanceState
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $AppearanceInfoCopyWith<$Res> get info {
@@ -852,9 +817,7 @@ class _$AppearanceStateTrackingNotifyChangedImpl
   @override
   int get hashCode => Object.hash(runtimeType, info);
 
-  /// Create a copy of AppearanceState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$AppearanceStateTrackingNotifyChangedImplCopyWith<
@@ -968,11 +931,8 @@ abstract class AppearanceStateTrackingNotifyChanged implements AppearanceState {
 
   @override
   AppearanceInfo get info;
-
-  /// Create a copy of AppearanceState
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$AppearanceStateTrackingNotifyChangedImplCopyWith<
           _$AppearanceStateTrackingNotifyChangedImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -1003,8 +963,6 @@ class __$$AppearanceStateLocaleChangedImplCopyWithImpl<$Res>
       $Res Function(_$AppearanceStateLocaleChangedImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of AppearanceState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1018,8 +976,6 @@ class __$$AppearanceStateLocaleChangedImplCopyWithImpl<$Res>
     ));
   }
 
-  /// Create a copy of AppearanceState
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $AppearanceInfoCopyWith<$Res> get info {
@@ -1063,9 +1019,7 @@ class _$AppearanceStateLocaleChangedImpl
   @override
   int get hashCode => Object.hash(runtimeType, info);
 
-  /// Create a copy of AppearanceState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$AppearanceStateLocaleChangedImplCopyWith<
@@ -1179,11 +1133,8 @@ abstract class AppearanceStateLocaleChanged implements AppearanceState {
 
   @override
   AppearanceInfo get info;
-
-  /// Create a copy of AppearanceState
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$AppearanceStateLocaleChangedImplCopyWith<
           _$AppearanceStateLocaleChangedImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -1214,8 +1165,6 @@ class __$$AppearanceStateTrackingErrorNotifyChangedImplCopyWithImpl<$Res>
       $Res Function(_$AppearanceStateTrackingErrorNotifyChangedImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of AppearanceState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1229,8 +1178,6 @@ class __$$AppearanceStateTrackingErrorNotifyChangedImplCopyWithImpl<$Res>
     ));
   }
 
-  /// Create a copy of AppearanceState
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $AppearanceInfoCopyWith<$Res> get info {
@@ -1275,9 +1222,7 @@ class _$AppearanceStateTrackingErrorNotifyChangedImpl
   @override
   int get hashCode => Object.hash(runtimeType, info);
 
-  /// Create a copy of AppearanceState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$AppearanceStateTrackingErrorNotifyChangedImplCopyWith<
@@ -1395,11 +1340,8 @@ abstract class AppearanceStateTrackingErrorNotifyChanged
 
   @override
   AppearanceInfo get info;
-
-  /// Create a copy of AppearanceState
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$AppearanceStateTrackingErrorNotifyChangedImplCopyWith<
           _$AppearanceStateTrackingErrorNotifyChangedImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -1430,8 +1372,6 @@ class __$$AppearanceStateTrayIconChangedImplCopyWithImpl<$Res>
       $Res Function(_$AppearanceStateTrayIconChangedImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of AppearanceState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1445,8 +1385,6 @@ class __$$AppearanceStateTrayIconChangedImplCopyWithImpl<$Res>
     ));
   }
 
-  /// Create a copy of AppearanceState
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $AppearanceInfoCopyWith<$Res> get info {
@@ -1490,9 +1428,7 @@ class _$AppearanceStateTrayIconChangedImpl
   @override
   int get hashCode => Object.hash(runtimeType, info);
 
-  /// Create a copy of AppearanceState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$AppearanceStateTrayIconChangedImplCopyWith<
@@ -1606,11 +1542,8 @@ abstract class AppearanceStateTrayIconChanged implements AppearanceState {
 
   @override
   AppearanceInfo get info;
-
-  /// Create a copy of AppearanceState
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$AppearanceStateTrayIconChangedImplCopyWith<
           _$AppearanceStateTrayIconChangedImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -1624,9 +1557,7 @@ mixin _$AppearanceInfo {
   bool get trackingErrorNotify => throw _privateConstructorUsedError;
   bool get trayIcon => throw _privateConstructorUsedError;
 
-  /// Create a copy of AppearanceInfo
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $AppearanceInfoCopyWith<AppearanceInfo> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1658,8 +1589,6 @@ class _$AppearanceInfoCopyWithImpl<$Res, $Val extends AppearanceInfo>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of AppearanceInfo
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1693,8 +1622,6 @@ class _$AppearanceInfoCopyWithImpl<$Res, $Val extends AppearanceInfo>
     ) as $Val);
   }
 
-  /// Create a copy of AppearanceInfo
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $AppThemeTypeCopyWith<$Res> get theme {
@@ -1703,8 +1630,6 @@ class _$AppearanceInfoCopyWithImpl<$Res, $Val extends AppearanceInfo>
     });
   }
 
-  /// Create a copy of AppearanceInfo
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $AppLocaleTypeCopyWith<$Res> get locale {
@@ -1743,8 +1668,6 @@ class __$$AppearanceInfoImplCopyWithImpl<$Res>
       _$AppearanceInfoImpl _value, $Res Function(_$AppearanceInfoImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of AppearanceInfo
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1838,9 +1761,7 @@ class _$AppearanceInfoImpl
   int get hashCode => Object.hash(runtimeType, theme, trackingNotify, locale,
       trackingErrorNotify, trayIcon);
 
-  /// Create a copy of AppearanceInfo
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$AppearanceInfoImplCopyWith<_$AppearanceInfoImpl> get copyWith =>
@@ -1866,11 +1787,8 @@ abstract class _AppearanceInfo implements AppearanceInfo {
   bool get trackingErrorNotify;
   @override
   bool get trayIcon;
-
-  /// Create a copy of AppearanceInfo
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$AppearanceInfoImplCopyWith<_$AppearanceInfoImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

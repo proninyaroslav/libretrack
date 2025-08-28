@@ -86,9 +86,6 @@ class _$ParcelDetailsStateCopyWithImpl<$Res, $Val extends ParcelDetailsState>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
-
-  /// Create a copy of ParcelDetailsState
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -108,9 +105,6 @@ class __$$ParcelDetailsStateInitialImplCopyWithImpl<$Res>
       _$ParcelDetailsStateInitialImpl _value,
       $Res Function(_$ParcelDetailsStateInitialImpl) _then)
       : super(_value, _then);
-
-  /// Create a copy of ParcelDetailsState
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -242,8 +236,6 @@ class __$$ParcelDetailsStateNotFoundImplCopyWithImpl<$Res>
       $Res Function(_$ParcelDetailsStateNotFoundImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of ParcelDetailsState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -293,9 +285,7 @@ class _$ParcelDetailsStateNotFoundImpl
   @override
   int get hashCode => Object.hash(runtimeType, trackNumber);
 
-  /// Create a copy of ParcelDetailsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$ParcelDetailsStateNotFoundImplCopyWith<_$ParcelDetailsStateNotFoundImpl>
@@ -384,10 +374,7 @@ abstract class ParcelDetailsStateNotFound implements ParcelDetailsState {
       {required final String trackNumber}) = _$ParcelDetailsStateNotFoundImpl;
 
   String get trackNumber;
-
-  /// Create a copy of ParcelDetailsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$ParcelDetailsStateNotFoundImplCopyWith<_$ParcelDetailsStateNotFoundImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -414,8 +401,6 @@ class __$$ParcelDetailsStateLoadingFailedImplCopyWithImpl<$Res>
       $Res Function(_$ParcelDetailsStateLoadingFailedImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of ParcelDetailsState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -434,8 +419,6 @@ class __$$ParcelDetailsStateLoadingFailedImplCopyWithImpl<$Res>
     ));
   }
 
-  /// Create a copy of ParcelDetailsState
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $StorageErrorCopyWith<$Res>? get error {
@@ -489,9 +472,7 @@ class _$ParcelDetailsStateLoadingFailedImpl
   @override
   int get hashCode => Object.hash(runtimeType, trackNumber, error);
 
-  /// Create a copy of ParcelDetailsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$ParcelDetailsStateLoadingFailedImplCopyWith<
@@ -583,10 +564,7 @@ abstract class ParcelDetailsStateLoadingFailed implements ParcelDetailsState {
 
   String get trackNumber;
   StorageError? get error;
-
-  /// Create a copy of ParcelDetailsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$ParcelDetailsStateLoadingFailedImplCopyWith<
           _$ParcelDetailsStateLoadingFailedImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -614,8 +592,6 @@ class __$$ParcelDetailsStateLoadedImplCopyWithImpl<$Res>
       $Res Function(_$ParcelDetailsStateLoadedImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of ParcelDetailsState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -634,8 +610,6 @@ class __$$ParcelDetailsStateLoadedImplCopyWithImpl<$Res>
     ));
   }
 
-  /// Create a copy of ParcelDetailsState
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ParcelInfoCopyWith<$Res> get info {
@@ -685,9 +659,7 @@ class _$ParcelDetailsStateLoadedImpl
   @override
   int get hashCode => Object.hash(runtimeType, trackNumber, info);
 
-  /// Create a copy of ParcelDetailsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$ParcelDetailsStateLoadedImplCopyWith<_$ParcelDetailsStateLoadedImpl>
@@ -778,10 +750,7 @@ abstract class ParcelDetailsStateLoaded implements ParcelDetailsState {
 
   String get trackNumber;
   ParcelInfo get info;
-
-  /// Create a copy of ParcelDetailsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$ParcelDetailsStateLoadedImplCopyWith<_$ParcelDetailsStateLoadedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

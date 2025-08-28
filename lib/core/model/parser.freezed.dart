@@ -84,9 +84,6 @@ class _$ParseResultCopyWithImpl<$Res, $Val extends ParseResult>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
-
-  /// Create a copy of ParseResult
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -109,8 +106,6 @@ class __$$ParseResultDataImplCopyWithImpl<$Res>
       _$ParseResultDataImpl _value, $Res Function(_$ParseResultDataImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of ParseResult
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -200,9 +195,7 @@ class _$ParseResultDataImpl
       const DeepCollectionEquality().hash(_activity),
       const DeepCollectionEquality().hash(_alternateTracks));
 
-  /// Create a copy of ParseResult
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$ParseResultDataImplCopyWith<_$ParseResultDataImpl> get copyWith =>
@@ -293,10 +286,7 @@ abstract class ParseResultData implements ParseResult {
   ShipmentInfo get info;
   List<ShipmentActivityInfo> get activity;
   List<String>? get alternateTracks;
-
-  /// Create a copy of ParseResult
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$ParseResultDataImplCopyWith<_$ParseResultDataImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -315,9 +305,6 @@ class __$$ParseResultNoInfoImplCopyWithImpl<$Res>
   __$$ParseResultNoInfoImplCopyWithImpl(_$ParseResultNoInfoImpl _value,
       $Res Function(_$ParseResultNoInfoImpl) _then)
       : super(_value, _then);
-
-  /// Create a copy of ParseResult
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -445,8 +432,6 @@ class __$$ParseResultErrorImplCopyWithImpl<$Res>
       $Res Function(_$ParseResultErrorImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of ParseResult
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -460,8 +445,6 @@ class __$$ParseResultErrorImplCopyWithImpl<$Res>
     ));
   }
 
-  /// Create a copy of ParseResult
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ParseErrorCopyWith<$Res> get error {
@@ -505,9 +488,7 @@ class _$ParseResultErrorImpl
   @override
   int get hashCode => Object.hash(runtimeType, error);
 
-  /// Create a copy of ParseResult
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$ParseResultErrorImplCopyWith<_$ParseResultErrorImpl> get copyWith =>
@@ -594,10 +575,7 @@ abstract class ParseResultError implements ParseResult {
       _$ParseResultErrorImpl;
 
   ParseError get error;
-
-  /// Create a copy of ParseResult
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$ParseResultErrorImplCopyWith<_$ParseResultErrorImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -686,9 +664,6 @@ class _$ParseErrorCopyWithImpl<$Res, $Val extends ParseError>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
-
-  /// Create a copy of ParseError
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -708,8 +683,6 @@ class __$$ParseErrorFormatImplCopyWithImpl<$Res>
       $Res Function(_$ParseErrorFormatImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of ParseError
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -758,9 +731,7 @@ class _$ParseErrorFormatImpl
   @override
   int get hashCode => Object.hash(runtimeType, message);
 
-  /// Create a copy of ParseError
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$ParseErrorFormatImplCopyWith<_$ParseErrorFormatImpl> get copyWith =>
@@ -860,10 +831,7 @@ abstract class ParseErrorFormat implements ParseError {
   const factory ParseErrorFormat(final String message) = _$ParseErrorFormatImpl;
 
   String get message;
-
-  /// Create a copy of ParseError
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$ParseErrorFormatImplCopyWith<_$ParseErrorFormatImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -887,8 +855,6 @@ class __$$ParseErrorServiceTemporaryImplCopyWithImpl<$Res>
       $Res Function(_$ParseErrorServiceTemporaryImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of ParseError
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -946,9 +912,7 @@ class _$ParseErrorServiceTemporaryImpl
   @override
   int get hashCode => Object.hash(runtimeType, code, message);
 
-  /// Create a copy of ParseError
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$ParseErrorServiceTemporaryImplCopyWith<_$ParseErrorServiceTemporaryImpl>
@@ -1051,10 +1015,7 @@ abstract class ParseErrorServiceTemporary implements ParseError {
 
   String? get code;
   String? get message;
-
-  /// Create a copy of ParseError
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$ParseErrorServiceTemporaryImplCopyWith<_$ParseErrorServiceTemporaryImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -1077,8 +1038,6 @@ class __$$ParseErrorServiceHardImplCopyWithImpl<$Res>
       $Res Function(_$ParseErrorServiceHardImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of ParseError
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1136,9 +1095,7 @@ class _$ParseErrorServiceHardImpl
   @override
   int get hashCode => Object.hash(runtimeType, code, message);
 
-  /// Create a copy of ParseError
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$ParseErrorServiceHardImplCopyWith<_$ParseErrorServiceHardImpl>
@@ -1241,10 +1198,7 @@ abstract class ParseErrorServiceHard implements ParseError {
 
   String? get code;
   String? get message;
-
-  /// Create a copy of ParseError
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$ParseErrorServiceHardImplCopyWith<_$ParseErrorServiceHardImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -1266,8 +1220,6 @@ class __$$ParseErrorAuthImplCopyWithImpl<$Res>
       _$ParseErrorAuthImpl _value, $Res Function(_$ParseErrorAuthImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of ParseError
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1325,9 +1277,7 @@ class _$ParseErrorAuthImpl
   @override
   int get hashCode => Object.hash(runtimeType, code, message);
 
-  /// Create a copy of ParseError
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$ParseErrorAuthImplCopyWith<_$ParseErrorAuthImpl> get copyWith =>
@@ -1429,10 +1379,7 @@ abstract class ParseErrorAuth implements ParseError {
 
   String? get code;
   String? get message;
-
-  /// Create a copy of ParseError
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$ParseErrorAuthImplCopyWith<_$ParseErrorAuthImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1454,8 +1401,6 @@ class __$$ParseErrorBadRequestImplCopyWithImpl<$Res>
       $Res Function(_$ParseErrorBadRequestImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of ParseError
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1513,9 +1458,7 @@ class _$ParseErrorBadRequestImpl
   @override
   int get hashCode => Object.hash(runtimeType, code, message);
 
-  /// Create a copy of ParseError
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$ParseErrorBadRequestImplCopyWith<_$ParseErrorBadRequestImpl>
@@ -1618,10 +1561,7 @@ abstract class ParseErrorBadRequest implements ParseError {
 
   String? get code;
   String? get message;
-
-  /// Create a copy of ParseError
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$ParseErrorBadRequestImplCopyWith<_$ParseErrorBadRequestImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -1642,9 +1582,6 @@ class __$$ParseErrorInvalidTrackNumberImplCopyWithImpl<$Res>
       _$ParseErrorInvalidTrackNumberImpl _value,
       $Res Function(_$ParseErrorInvalidTrackNumberImpl) _then)
       : super(_value, _then);
-
-  /// Create a copy of ParseError
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc

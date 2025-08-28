@@ -50,9 +50,7 @@ mixin _$ParcelErrorBannerState {
   }) =>
       throw _privateConstructorUsedError;
 
-  /// Create a copy of ParcelErrorBannerState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $ParcelErrorBannerStateCopyWith<ParcelErrorBannerState> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -77,8 +75,6 @@ class _$ParcelErrorBannerStateCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of ParcelErrorBannerState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -115,8 +111,6 @@ class __$$ParcelErrorBannerStateShowImplCopyWithImpl<$Res>
       $Res Function(_$ParcelErrorBannerStateShowImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of ParcelErrorBannerState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -173,9 +167,7 @@ class _$ParcelErrorBannerStateShowImpl
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(_banners));
 
-  /// Create a copy of ParcelErrorBannerState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$ParcelErrorBannerStateShowImplCopyWith<_$ParcelErrorBannerStateShowImpl>
@@ -246,11 +238,8 @@ abstract class ParcelErrorBannerStateShow implements ParcelErrorBannerState {
 
   @override
   Set<ParcelErrorBanner> get banners;
-
-  /// Create a copy of ParcelErrorBannerState
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$ParcelErrorBannerStateShowImplCopyWith<_$ParcelErrorBannerStateShowImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -327,9 +316,6 @@ class _$ParcelErrorBannerCopyWithImpl<$Res, $Val extends ParcelErrorBanner>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
-
-  /// Create a copy of ParcelErrorBanner
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -349,9 +335,6 @@ class __$$ParcelErrorBannerHardErrorImplCopyWithImpl<$Res>
       _$ParcelErrorBannerHardErrorImpl _value,
       $Res Function(_$ParcelErrorBannerHardErrorImpl) _then)
       : super(_value, _then);
-
-  /// Create a copy of ParcelErrorBanner
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -480,9 +463,6 @@ class __$$ParcelErrorBannerMissingAuthDataImplCopyWithImpl<$Res>
       _$ParcelErrorBannerMissingAuthDataImpl _value,
       $Res Function(_$ParcelErrorBannerMissingAuthDataImpl) _then)
       : super(_value, _then);
-
-  /// Create a copy of ParcelErrorBanner
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -613,9 +593,6 @@ class __$$ParcelErrorBannerMissingAccountImplCopyWithImpl<$Res>
       _$ParcelErrorBannerMissingAccountImpl _value,
       $Res Function(_$ParcelErrorBannerMissingAccountImpl) _then)
       : super(_value, _then);
-
-  /// Create a copy of ParcelErrorBanner
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -744,9 +721,6 @@ class __$$ParcelErrorBannerAuthImplCopyWithImpl<$Res>
   __$$ParcelErrorBannerAuthImplCopyWithImpl(_$ParcelErrorBannerAuthImpl _value,
       $Res Function(_$ParcelErrorBannerAuthImpl) _then)
       : super(_value, _then);
-
-  /// Create a copy of ParcelErrorBanner
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc

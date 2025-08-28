@@ -60,9 +60,7 @@ mixin _$RRectIconData {
   }) =>
       throw _privateConstructorUsedError;
 
-  /// Create a copy of RRectIconData
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $RRectIconDataCopyWith<RRectIconData> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -86,8 +84,6 @@ class _$RRectIconDataCopyWithImpl<$Res, $Val extends RRectIconData>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of RRectIconData
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -121,8 +117,6 @@ class __$$RRectIconDataImplCopyWithImpl<$Res>
       _$RRectIconDataImpl _value, $Res Function(_$RRectIconDataImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of RRectIconData
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -184,9 +178,7 @@ class _$RRectIconDataImpl implements _RRectIconData {
   int get hashCode =>
       Object.hash(runtimeType, iconData, iconColor, backgroundColor);
 
-  /// Create a copy of RRectIconData
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$RRectIconDataImplCopyWith<_$RRectIconDataImpl> get copyWith =>
@@ -269,11 +261,8 @@ abstract class _RRectIconData implements RRectIconData {
   Color get iconColor;
   @override
   Color get backgroundColor;
-
-  /// Create a copy of RRectIconData
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$RRectIconDataImplCopyWith<_$RRectIconDataImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -297,8 +286,6 @@ class __$$RRectIconDataWidgetImplCopyWithImpl<$Res>
       $Res Function(_$RRectIconDataWidgetImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of RRectIconData
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -347,9 +334,7 @@ class _$RRectIconDataWidgetImpl implements _RRectIconDataWidget {
   @override
   int get hashCode => Object.hash(runtimeType, icon, backgroundColor);
 
-  /// Create a copy of RRectIconData
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$RRectIconDataWidgetImplCopyWith<_$RRectIconDataWidgetImpl> get copyWith =>
@@ -431,11 +416,8 @@ abstract class _RRectIconDataWidget implements RRectIconData {
   Widget get icon;
   @override
   Color get backgroundColor;
-
-  /// Create a copy of RRectIconData
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$RRectIconDataWidgetImplCopyWith<_$RRectIconDataWidgetImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

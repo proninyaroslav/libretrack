@@ -82,9 +82,6 @@ class _$FirstStartStateCopyWithImpl<$Res, $Val extends FirstStartState>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
-
-  /// Create a copy of FirstStartState
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -103,9 +100,6 @@ class __$$FirstStartStateInitialImplCopyWithImpl<$Res>
       _$FirstStartStateInitialImpl _value,
       $Res Function(_$FirstStartStateInitialImpl) _then)
       : super(_value, _then);
-
-  /// Create a copy of FirstStartState
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -230,9 +224,6 @@ class __$$FirstStartStateShowAddAccountTipImplCopyWithImpl<$Res>
       _$FirstStartStateShowAddAccountTipImpl _value,
       $Res Function(_$FirstStartStateShowAddAccountTipImpl) _then)
       : super(_value, _then);
-
-  /// Create a copy of FirstStartState
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -359,9 +350,6 @@ class __$$FirstStartStateHideAddAccountTipImplCopyWithImpl<$Res>
       _$FirstStartStateHideAddAccountTipImpl _value,
       $Res Function(_$FirstStartStateHideAddAccountTipImpl) _then)
       : super(_value, _then);
-
-  /// Create a copy of FirstStartState
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc

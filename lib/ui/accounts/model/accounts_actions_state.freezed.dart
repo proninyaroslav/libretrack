@@ -87,9 +87,6 @@ class _$AccountsActionsStateCopyWithImpl<$Res,
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
-
-  /// Create a copy of AccountsActionsState
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -109,9 +106,6 @@ class __$$AccountsActionsStateInitialImplCopyWithImpl<$Res>
       _$AccountsActionsStateInitialImpl _value,
       $Res Function(_$AccountsActionsStateInitialImpl) _then)
       : super(_value, _then);
-
-  /// Create a copy of AccountsActionsState
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -241,9 +235,6 @@ class __$$AccountsActionsStateDeletingImplCopyWithImpl<$Res>
       _$AccountsActionsStateDeletingImpl _value,
       $Res Function(_$AccountsActionsStateDeletingImpl) _then)
       : super(_value, _then);
-
-  /// Create a copy of AccountsActionsState
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -374,9 +365,6 @@ class __$$AccountsActionsStateDeleteSuccessImplCopyWithImpl<$Res>
       _$AccountsActionsStateDeleteSuccessImpl _value,
       $Res Function(_$AccountsActionsStateDeleteSuccessImpl) _then)
       : super(_value, _then);
-
-  /// Create a copy of AccountsActionsState
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -513,8 +501,6 @@ class __$$AccountsActionsStateDeleteFailedImplCopyWithImpl<$Res>
       $Res Function(_$AccountsActionsStateDeleteFailedImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of AccountsActionsState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -528,8 +514,6 @@ class __$$AccountsActionsStateDeleteFailedImplCopyWithImpl<$Res>
     ));
   }
 
-  /// Create a copy of AccountsActionsState
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $StorageErrorCopyWith<$Res> get error {
@@ -573,9 +557,7 @@ class _$AccountsActionsStateDeleteFailedImpl
   @override
   int get hashCode => Object.hash(runtimeType, error);
 
-  /// Create a copy of AccountsActionsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$AccountsActionsStateDeleteFailedImplCopyWith<
@@ -667,10 +649,7 @@ abstract class AccountsActionsStateDeleteFailed
       _$AccountsActionsStateDeleteFailedImpl;
 
   StorageError get error;
-
-  /// Create a copy of AccountsActionsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$AccountsActionsStateDeleteFailedImplCopyWith<
           _$AccountsActionsStateDeleteFailedImpl>
       get copyWith => throw _privateConstructorUsedError;

@@ -26,12 +26,8 @@ mixin _$CrashInfo {
   StackTrace? get stackTrace => throw _privateConstructorUsedError;
   String? get message => throw _privateConstructorUsedError;
 
-  /// Serializes this CrashInfo to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of CrashInfo
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $CrashInfoCopyWith<CrashInfo> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -57,8 +53,6 @@ class _$CrashInfoCopyWithImpl<$Res, $Val extends CrashInfo>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of CrashInfo
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -102,8 +96,6 @@ class __$$CrashInfoImplCopyWithImpl<$Res>
       _$CrashInfoImpl _value, $Res Function(_$CrashInfoImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of CrashInfo
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -161,14 +153,12 @@ class _$CrashInfoImpl implements _CrashInfo {
             (identical(other.message, message) || other.message == message));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType,
       const DeepCollectionEquality().hash(error), stackTrace, message);
 
-  /// Create a copy of CrashInfo
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$CrashInfoImplCopyWith<_$CrashInfoImpl> get copyWith =>
@@ -199,11 +189,8 @@ abstract class _CrashInfo implements CrashInfo {
   StackTrace? get stackTrace;
   @override
   String? get message;
-
-  /// Create a copy of CrashInfo
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$CrashInfoImplCopyWith<_$CrashInfoImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -214,9 +201,7 @@ mixin _$CrashReport {
   String get subject => throw _privateConstructorUsedError;
   CrashReportData get data => throw _privateConstructorUsedError;
 
-  /// Create a copy of CrashReport
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $CrashReportCopyWith<CrashReport> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -242,8 +227,6 @@ class _$CrashReportCopyWithImpl<$Res, $Val extends CrashReport>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of CrashReport
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -267,8 +250,6 @@ class _$CrashReportCopyWithImpl<$Res, $Val extends CrashReport>
     ) as $Val);
   }
 
-  /// Create a copy of CrashReport
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CrashReportDataCopyWith<$Res> get data {
@@ -300,8 +281,6 @@ class __$$CrashReportImplCopyWithImpl<$Res>
       _$CrashReportImpl _value, $Res Function(_$CrashReportImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of CrashReport
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -357,9 +336,7 @@ class _$CrashReportImpl implements _CrashReport {
   @override
   int get hashCode => Object.hash(runtimeType, email, subject, data);
 
-  /// Create a copy of CrashReport
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$CrashReportImplCopyWith<_$CrashReportImpl> get copyWith =>
@@ -378,11 +355,8 @@ abstract class _CrashReport implements CrashReport {
   String get subject;
   @override
   CrashReportData get data;
-
-  /// Create a copy of CrashReport
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$CrashReportImplCopyWith<_$CrashReportImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -404,12 +378,8 @@ mixin _$CrashReportData {
   String? get stackTrace => throw _privateConstructorUsedError;
   ReportableInfo get deviceInfo => throw _privateConstructorUsedError;
 
-  /// Serializes this CrashReportData to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of CrashReportData
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $CrashReportDataCopyWith<CrashReportData> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -444,8 +414,6 @@ class _$CrashReportDataCopyWithImpl<$Res, $Val extends CrashReportData>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of CrashReportData
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -499,8 +467,6 @@ class _$CrashReportDataCopyWithImpl<$Res, $Val extends CrashReportData>
     ) as $Val);
   }
 
-  /// Create a copy of CrashReportData
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReportableInfoCopyWith<$Res> get deviceInfo {
@@ -541,8 +507,6 @@ class __$$CrashReportDataImplCopyWithImpl<$Res>
       _$CrashReportDataImpl _value, $Res Function(_$CrashReportDataImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of CrashReportData
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -660,14 +624,12 @@ class _$CrashReportDataImpl implements _CrashReportData {
                 other.deviceInfo == deviceInfo));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, reportId, packageName, appName,
       version, buildNumber, error, comment, stackTrace, deviceInfo);
 
-  /// Create a copy of CrashReportData
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$CrashReportDataImplCopyWith<_$CrashReportDataImpl> get copyWith =>
@@ -716,11 +678,8 @@ abstract class _CrashReportData implements CrashReportData {
   String? get stackTrace;
   @override
   ReportableInfo get deviceInfo;
-
-  /// Create a copy of CrashReportData
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$CrashReportDataImplCopyWith<_$CrashReportDataImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -787,9 +746,6 @@ class _$CrashReportSendResultCopyWithImpl<$Res,
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
-
-  /// Create a copy of CrashReportSendResult
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -809,9 +765,6 @@ class __$$CrashReportSendResultSuccessImplCopyWithImpl<$Res>
       _$CrashReportSendResultSuccessImpl _value,
       $Res Function(_$CrashReportSendResultSuccessImpl) _then)
       : super(_value, _then);
-
-  /// Create a copy of CrashReportSendResult
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -923,9 +876,6 @@ class __$$CrashReportSendResultEmailUnsupportedImplCopyWithImpl<$Res>
       _$CrashReportSendResultEmailUnsupportedImpl _value,
       $Res Function(_$CrashReportSendResultEmailUnsupportedImpl) _then)
       : super(_value, _then);
-
-  /// Create a copy of CrashReportSendResult
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -1157,8 +1107,6 @@ mixin _$ReportableInfo {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
-
-  /// Serializes this ReportableInfo to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 }
 
@@ -1178,9 +1126,6 @@ class _$ReportableInfoCopyWithImpl<$Res, $Val extends ReportableInfo>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
-
-  /// Create a copy of ReportableInfo
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -1198,9 +1143,6 @@ class __$$UnknownReportableInfoImplCopyWithImpl<$Res>
   __$$UnknownReportableInfoImplCopyWithImpl(_$UnknownReportableInfoImpl _value,
       $Res Function(_$UnknownReportableInfoImpl) _then)
       : super(_value, _then);
-
-  /// Create a copy of ReportableInfo
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -1227,7 +1169,7 @@ class _$UnknownReportableInfoImpl implements UnknownReportableInfo {
             other is _$UnknownReportableInfoImpl);
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -1406,8 +1348,6 @@ class __$$AndroidReportableInfoImplCopyWithImpl<$Res>
       $Res Function(_$AndroidReportableInfoImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of ReportableInfo
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1531,7 +1471,7 @@ class _$AndroidReportableInfoImpl implements AndroidReportableInfo {
             (identical(other.product, product) || other.product == product));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -1543,9 +1483,7 @@ class _$AndroidReportableInfoImpl implements AndroidReportableInfo {
       hardware,
       product);
 
-  /// Create a copy of ReportableInfo
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$AndroidReportableInfoImplCopyWith<_$AndroidReportableInfoImpl>
@@ -1731,10 +1669,7 @@ abstract class AndroidReportableInfo implements ReportableInfo {
 
   /// The name of the overall product.
   String? get product;
-
-  /// Create a copy of ReportableInfo
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$AndroidReportableInfoImplCopyWith<_$AndroidReportableInfoImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -1760,8 +1695,6 @@ class __$$IOSReportableInfoImplCopyWithImpl<$Res>
       $Res Function(_$IOSReportableInfoImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of ReportableInfo
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1837,14 +1770,12 @@ class _$IOSReportableInfoImpl implements IOSReportableInfo {
                 other.systemVersion == systemVersion));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType, deviceName, deviceModel, systemName, systemVersion);
 
-  /// Create a copy of ReportableInfo
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$IOSReportableInfoImplCopyWith<_$IOSReportableInfoImpl> get copyWith =>
@@ -2008,10 +1939,7 @@ abstract class IOSReportableInfo implements ReportableInfo {
   String? get deviceModel;
   String? get systemName;
   String? get systemVersion;
-
-  /// Create a copy of ReportableInfo
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$IOSReportableInfoImplCopyWith<_$IOSReportableInfoImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2033,8 +1961,6 @@ class __$$LinuxReportableInfoImplCopyWithImpl<$Res>
       $Res Function(_$LinuxReportableInfoImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of ReportableInfo
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2099,14 +2025,12 @@ class _$LinuxReportableInfoImpl implements LinuxReportableInfo {
                 other.osVersion == osVersion));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, osName, kernelVersion, osVersion);
 
-  /// Create a copy of ReportableInfo
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$LinuxReportableInfoImplCopyWith<_$LinuxReportableInfoImpl> get copyWith =>
@@ -2268,10 +2192,7 @@ abstract class LinuxReportableInfo implements ReportableInfo {
   String get osName;
   String get kernelVersion;
   String? get osVersion;
-
-  /// Create a copy of ReportableInfo
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$LinuxReportableInfoImplCopyWith<_$LinuxReportableInfoImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2294,8 +2215,6 @@ class __$$WindowsReportableInfoImplCopyWithImpl<$Res>
       $Res Function(_$WindowsReportableInfoImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of ReportableInfo
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2340,13 +2259,11 @@ class _$WindowsReportableInfoImpl implements WindowsReportableInfo {
                 other.osVersion == osVersion));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, osVersion);
 
-  /// Create a copy of ReportableInfo
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$WindowsReportableInfoImplCopyWith<_$WindowsReportableInfoImpl>
@@ -2504,10 +2421,7 @@ abstract class WindowsReportableInfo implements ReportableInfo {
       _$WindowsReportableInfoImpl.fromJson;
 
   String get osVersion;
-
-  /// Create a copy of ReportableInfo
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$WindowsReportableInfoImplCopyWith<_$WindowsReportableInfoImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -2530,8 +2444,6 @@ class __$$MacOSReportableInfoImplCopyWithImpl<$Res>
       $Res Function(_$MacOSReportableInfoImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of ReportableInfo
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2605,14 +2517,12 @@ class _$MacOSReportableInfoImpl implements MacOSReportableInfo {
             (identical(other.model, model) || other.model == model));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, arch, kernelVersion, osVersion, model);
 
-  /// Create a copy of ReportableInfo
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$MacOSReportableInfoImplCopyWith<_$MacOSReportableInfoImpl> get copyWith =>
@@ -2776,10 +2686,7 @@ abstract class MacOSReportableInfo implements ReportableInfo {
   String get kernelVersion;
   String get osVersion;
   String get model;
-
-  /// Create a copy of ReportableInfo
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$MacOSReportableInfoImplCopyWith<_$MacOSReportableInfoImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2801,8 +2708,6 @@ class __$$WebReportableInfoImplCopyWithImpl<$Res>
       $Res Function(_$WebReportableInfoImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of ReportableInfo
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2871,13 +2776,11 @@ class _$WebReportableInfoImpl implements WebReportableInfo {
             (identical(other.vendor, vendor) || other.vendor == vendor));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, browserName, platform, vendor);
 
-  /// Create a copy of ReportableInfo
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$WebReportableInfoImplCopyWith<_$WebReportableInfoImpl> get copyWith =>
@@ -3043,10 +2946,7 @@ abstract class WebReportableInfo implements ReportableInfo {
 
   /// The vendor name of the current browser
   String? get vendor;
-
-  /// Create a copy of ReportableInfo
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$WebReportableInfoImplCopyWith<_$WebReportableInfoImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

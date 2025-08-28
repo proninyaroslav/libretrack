@@ -96,9 +96,6 @@ class _$EditParcelStateCopyWithImpl<$Res, $Val extends EditParcelState>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
-
-  /// Create a copy of EditParcelState
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -122,8 +119,6 @@ class __$$EditParcelStateInitialImplCopyWithImpl<$Res>
       $Res Function(_$EditParcelStateInitialImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of EditParcelState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -137,8 +132,6 @@ class __$$EditParcelStateInitialImplCopyWithImpl<$Res>
     ));
   }
 
-  /// Create a copy of EditParcelState
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ParcelNameCopyWith<$Res> get name {
@@ -183,9 +176,7 @@ class _$EditParcelStateInitialImpl
   @override
   int get hashCode => Object.hash(runtimeType, name);
 
-  /// Create a copy of EditParcelState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$EditParcelStateInitialImplCopyWith<_$EditParcelStateInitialImpl>
@@ -284,10 +275,7 @@ abstract class EditParcelStateInitial implements EditParcelState {
       _$EditParcelStateInitialImpl;
 
   ParcelName get name;
-
-  /// Create a copy of EditParcelState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$EditParcelStateInitialImplCopyWith<_$EditParcelStateInitialImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -314,8 +302,6 @@ class __$$EditParcelStateFieldChangedImplCopyWithImpl<$Res>
       $Res Function(_$EditParcelStateFieldChangedImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of EditParcelState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -329,8 +315,6 @@ class __$$EditParcelStateFieldChangedImplCopyWithImpl<$Res>
     ));
   }
 
-  /// Create a copy of EditParcelState
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ParcelNameCopyWith<$Res> get name {
@@ -374,9 +358,7 @@ class _$EditParcelStateFieldChangedImpl
   @override
   int get hashCode => Object.hash(runtimeType, name);
 
-  /// Create a copy of EditParcelState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$EditParcelStateFieldChangedImplCopyWith<_$EditParcelStateFieldChangedImpl>
@@ -475,10 +457,7 @@ abstract class EditParcelStateFieldChanged implements EditParcelState {
       _$EditParcelStateFieldChangedImpl;
 
   ParcelName get name;
-
-  /// Create a copy of EditParcelState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$EditParcelStateFieldChangedImplCopyWith<_$EditParcelStateFieldChangedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -499,9 +478,6 @@ class __$$EditParcelStateEditingImplCopyWithImpl<$Res>
       _$EditParcelStateEditingImpl _value,
       $Res Function(_$EditParcelStateEditingImpl) _then)
       : super(_value, _then);
-
-  /// Create a copy of EditParcelState
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -643,8 +619,6 @@ class __$$EditParcelStateEditedImplCopyWithImpl<$Res>
       $Res Function(_$EditParcelStateEditedImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of EditParcelState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -658,8 +632,6 @@ class __$$EditParcelStateEditedImplCopyWithImpl<$Res>
     ));
   }
 
-  /// Create a copy of EditParcelState
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ParcelNameCopyWith<$Res> get name {
@@ -703,9 +675,7 @@ class _$EditParcelStateEditedImpl
   @override
   int get hashCode => Object.hash(runtimeType, name);
 
-  /// Create a copy of EditParcelState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$EditParcelStateEditedImplCopyWith<_$EditParcelStateEditedImpl>
@@ -804,10 +774,7 @@ abstract class EditParcelStateEdited implements EditParcelState {
       _$EditParcelStateEditedImpl;
 
   ParcelName get name;
-
-  /// Create a copy of EditParcelState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$EditParcelStateEditedImplCopyWith<_$EditParcelStateEditedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -833,8 +800,6 @@ class __$$EditParcelStateEditFailedImplCopyWithImpl<$Res>
       $Res Function(_$EditParcelStateEditFailedImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of EditParcelState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -858,8 +823,6 @@ class __$$EditParcelStateEditFailedImplCopyWithImpl<$Res>
     ));
   }
 
-  /// Create a copy of EditParcelState
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ParcelNameCopyWith<$Res> get name {
@@ -914,9 +877,7 @@ class _$EditParcelStateEditFailedImpl
   @override
   int get hashCode => Object.hash(runtimeType, name, exception, stackTrace);
 
-  /// Create a copy of EditParcelState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$EditParcelStateEditFailedImplCopyWith<_$EditParcelStateEditFailedImpl>
@@ -1019,10 +980,7 @@ abstract class EditParcelStateEditFailed implements EditParcelState {
   ParcelName get name;
   Exception? get exception;
   StackTrace? get stackTrace;
-
-  /// Create a copy of EditParcelState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$EditParcelStateEditFailedImplCopyWith<_$EditParcelStateEditFailedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -1031,9 +989,7 @@ abstract class EditParcelStateEditFailed implements EditParcelState {
 mixin _$ParcelName {
   String? get value => throw _privateConstructorUsedError;
 
-  /// Create a copy of ParcelName
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $ParcelNameCopyWith<ParcelName> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1057,8 +1013,6 @@ class _$ParcelNameCopyWithImpl<$Res, $Val extends ParcelName>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of ParcelName
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1092,8 +1046,6 @@ class __$$ParcelNameImplCopyWithImpl<$Res>
       _$ParcelNameImpl _value, $Res Function(_$ParcelNameImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of ParcelName
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1140,9 +1092,7 @@ class _$ParcelNameImpl with DiagnosticableTreeMixin implements _ParcelName {
   @override
   int get hashCode => Object.hash(runtimeType, value);
 
-  /// Create a copy of ParcelName
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$ParcelNameImplCopyWith<_$ParcelNameImpl> get copyWith =>
@@ -1154,11 +1104,8 @@ abstract class _ParcelName implements ParcelName {
 
   @override
   String? get value;
-
-  /// Create a copy of ParcelName
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$ParcelNameImplCopyWith<_$ParcelNameImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -26,9 +26,7 @@ mixin _$ParcelInfo {
   List<TrackingHistoryEntry> get trackingHistory =>
       throw _privateConstructorUsedError;
 
-  /// Create a copy of ParcelInfo
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $ParcelInfoCopyWith<ParcelInfo> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -57,8 +55,6 @@ class _$ParcelInfoCopyWithImpl<$Res, $Val extends ParcelInfo>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of ParcelInfo
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -117,8 +113,6 @@ class __$$ParcelInfoImplCopyWithImpl<$Res>
       _$ParcelInfoImpl _value, $Res Function(_$ParcelInfoImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of ParcelInfo
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -237,9 +231,7 @@ class _$ParcelInfoImpl implements _ParcelInfo {
       const DeepCollectionEquality().hash(_activities),
       const DeepCollectionEquality().hash(_trackingHistory));
 
-  /// Create a copy of ParcelInfo
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$ParcelInfoImplCopyWith<_$ParcelInfoImpl> get copyWith =>
@@ -264,11 +256,8 @@ abstract class _ParcelInfo implements ParcelInfo {
   List<ShipmentActivityInfo> get activities;
   @override
   List<TrackingHistoryEntry> get trackingHistory;
-
-  /// Create a copy of ParcelInfo
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$ParcelInfoImplCopyWith<_$ParcelInfoImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -279,9 +268,7 @@ mixin _$TrackingHistoryEntry {
   List<TrackingResponseInfo> get responseList =>
       throw _privateConstructorUsedError;
 
-  /// Create a copy of TrackingHistoryEntry
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $TrackingHistoryEntryCopyWith<TrackingHistoryEntry> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -307,8 +294,6 @@ class _$TrackingHistoryEntryCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of TrackingHistoryEntry
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -348,8 +333,6 @@ class __$$TrackingHistoryEntryImplCopyWithImpl<$Res>
       $Res Function(_$TrackingHistoryEntryImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of TrackingHistoryEntry
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -407,9 +390,7 @@ class _$TrackingHistoryEntryImpl implements _TrackingHistoryEntry {
   int get hashCode => Object.hash(runtimeType, trackingInfo,
       const DeepCollectionEquality().hash(_responseList));
 
-  /// Create a copy of TrackingHistoryEntry
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$TrackingHistoryEntryImplCopyWith<_$TrackingHistoryEntryImpl>
@@ -428,11 +409,8 @@ abstract class _TrackingHistoryEntry implements TrackingHistoryEntry {
   TrackingInfo get trackingInfo;
   @override
   List<TrackingResponseInfo> get responseList;
-
-  /// Create a copy of TrackingHistoryEntry
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$TrackingHistoryEntryImplCopyWith<_$TrackingHistoryEntryImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -443,9 +421,7 @@ mixin _$ShipmentInfoEntry {
   List<AlternateTrackNumber> get alternateTrackNumbers =>
       throw _privateConstructorUsedError;
 
-  /// Create a copy of ShipmentInfoEntry
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $ShipmentInfoEntryCopyWith<ShipmentInfoEntry> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -471,8 +447,6 @@ class _$ShipmentInfoEntryCopyWithImpl<$Res, $Val extends ShipmentInfoEntry>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of ShipmentInfoEntry
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -513,8 +487,6 @@ class __$$ShipmentInfoEntryImplCopyWithImpl<$Res>
       $Res Function(_$ShipmentInfoEntryImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of ShipmentInfoEntry
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -574,9 +546,7 @@ class _$ShipmentInfoEntryImpl implements _ShipmentInfoEntry {
   int get hashCode => Object.hash(runtimeType, shipmentInfo,
       const DeepCollectionEquality().hash(_alternateTrackNumbers));
 
-  /// Create a copy of ShipmentInfoEntry
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$ShipmentInfoEntryImplCopyWith<_$ShipmentInfoEntryImpl> get copyWith =>
@@ -594,11 +564,8 @@ abstract class _ShipmentInfoEntry implements ShipmentInfoEntry {
   ShipmentInfo get shipmentInfo;
   @override
   List<AlternateTrackNumber> get alternateTrackNumbers;
-
-  /// Create a copy of ShipmentInfoEntry
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$ShipmentInfoEntryImplCopyWith<_$ShipmentInfoEntryImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

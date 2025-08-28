@@ -78,9 +78,6 @@ class __$BuildResultCopyWithImpl<$Res, $Val extends _BuildResult>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
-
-  /// Create a copy of _BuildResult
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -102,8 +99,6 @@ class __$$BuildResultDataImplCopyWithImpl<$Res>
       _$BuildResultDataImpl _value, $Res Function(_$BuildResultDataImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of _BuildResult
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -117,8 +112,6 @@ class __$$BuildResultDataImplCopyWithImpl<$Res>
     ));
   }
 
-  /// Create a copy of _BuildResult
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ParcelInfoCopyWith<$Res> get info {
@@ -152,9 +145,7 @@ class _$BuildResultDataImpl implements _BuildResultData {
   @override
   int get hashCode => Object.hash(runtimeType, info);
 
-  /// Create a copy of _BuildResult
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$BuildResultDataImplCopyWith<_$BuildResultDataImpl> get copyWith =>
@@ -235,10 +226,7 @@ abstract class _BuildResultData implements _BuildResult {
       _$BuildResultDataImpl;
 
   ParcelInfo get info;
-
-  /// Create a copy of _BuildResult
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$BuildResultDataImplCopyWith<_$BuildResultDataImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -257,9 +245,6 @@ class __$$BuildResultNotFoundImplCopyWithImpl<$Res>
   __$$BuildResultNotFoundImplCopyWithImpl(_$BuildResultNotFoundImpl _value,
       $Res Function(_$BuildResultNotFoundImpl) _then)
       : super(_value, _then);
-
-  /// Create a copy of _BuildResult
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -374,8 +359,6 @@ class __$$BuildResultFailedImplCopyWithImpl<$Res>
       $Res Function(_$BuildResultFailedImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of _BuildResult
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -389,8 +372,6 @@ class __$$BuildResultFailedImplCopyWithImpl<$Res>
     ));
   }
 
-  /// Create a copy of _BuildResult
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $StorageErrorCopyWith<$Res> get error {
@@ -424,9 +405,7 @@ class _$BuildResultFailedImpl implements _BuildResultFailed {
   @override
   int get hashCode => Object.hash(runtimeType, error);
 
-  /// Create a copy of _BuildResult
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$BuildResultFailedImplCopyWith<_$BuildResultFailedImpl> get copyWith =>
@@ -507,10 +486,7 @@ abstract class _BuildResultFailed implements _BuildResult {
       _$BuildResultFailedImpl;
 
   StorageError get error;
-
-  /// Create a copy of _BuildResult
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$BuildResultFailedImplCopyWith<_$BuildResultFailedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -79,8 +79,6 @@ mixin _$NotificationAction {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
-
-  /// Serializes this NotificationAction to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 }
 
@@ -100,9 +98,6 @@ class _$NotificationActionCopyWithImpl<$Res, $Val extends NotificationAction>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
-
-  /// Create a copy of NotificationAction
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -125,8 +120,6 @@ class __$$NotificationActionOpenParcelDetailsImplCopyWithImpl<$Res>
       $Res Function(_$NotificationActionOpenParcelDetailsImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of NotificationAction
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -173,13 +166,11 @@ class _$NotificationActionOpenParcelDetailsImpl
                 other.trackNumber == trackNumber));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, trackNumber);
 
-  /// Create a copy of NotificationAction
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$NotificationActionOpenParcelDetailsImplCopyWith<
@@ -278,10 +269,7 @@ abstract class NotificationActionOpenParcelDetails
       _$NotificationActionOpenParcelDetailsImpl.fromJson;
 
   String get trackNumber;
-
-  /// Create a copy of NotificationAction
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$NotificationActionOpenParcelDetailsImplCopyWith<
           _$NotificationActionOpenParcelDetailsImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -309,8 +297,6 @@ class __$$NotificationActionReportCrashImplCopyWithImpl<$Res>
       $Res Function(_$NotificationActionReportCrashImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of NotificationAction
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -324,8 +310,6 @@ class __$$NotificationActionReportCrashImplCopyWithImpl<$Res>
     ));
   }
 
-  /// Create a copy of NotificationAction
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CrashInfoCopyWith<$Res> get info {
@@ -366,13 +350,11 @@ class _$NotificationActionReportCrashImpl
             (identical(other.info, info) || other.info == info));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, info);
 
-  /// Create a copy of NotificationAction
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$NotificationActionReportCrashImplCopyWith<
@@ -468,10 +450,7 @@ abstract class NotificationActionReportCrash implements NotificationAction {
       _$NotificationActionReportCrashImpl.fromJson;
 
   CrashInfo get info;
-
-  /// Create a copy of NotificationAction
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$NotificationActionReportCrashImplCopyWith<
           _$NotificationActionReportCrashImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -494,9 +473,6 @@ class __$$NotificationActionOpenParcelsListImplCopyWithImpl<$Res>
       _$NotificationActionOpenParcelsListImpl _value,
       $Res Function(_$NotificationActionOpenParcelsListImpl) _then)
       : super(_value, _then);
-
-  /// Create a copy of NotificationAction
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -525,7 +501,7 @@ class _$NotificationActionOpenParcelsListImpl
             other is _$NotificationActionOpenParcelsListImpl);
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 

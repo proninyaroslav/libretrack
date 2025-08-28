@@ -22,9 +22,7 @@ mixin _$TrackingServiceMetadata {
   Set<PostalServiceMetadata> get postalServices =>
       throw _privateConstructorUsedError;
 
-  /// Create a copy of TrackingServiceMetadata
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $TrackingServiceMetadataCopyWith<TrackingServiceMetadata> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -55,8 +53,6 @@ class _$TrackingServiceMetadataCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of TrackingServiceMetadata
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -85,8 +81,6 @@ class _$TrackingServiceMetadataCopyWithImpl<$Res,
     ) as $Val);
   }
 
-  /// Create a copy of TrackingServiceMetadata
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $RRectIconDataCopyWith<$Res> get iconData {
@@ -125,8 +119,6 @@ class __$$TrackingServiceMetadataImplCopyWithImpl<$Res>
       $Res Function(_$TrackingServiceMetadataImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of TrackingServiceMetadata
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -203,9 +195,7 @@ class _$TrackingServiceMetadataImpl implements _TrackingServiceMetadata {
   int get hashCode => Object.hash(runtimeType, type, localizedName, iconData,
       const DeepCollectionEquality().hash(_postalServices));
 
-  /// Create a copy of TrackingServiceMetadata
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$TrackingServiceMetadataImplCopyWith<_$TrackingServiceMetadataImpl>
@@ -229,11 +219,8 @@ abstract class _TrackingServiceMetadata implements TrackingServiceMetadata {
   RRectIconData get iconData;
   @override
   Set<PostalServiceMetadata> get postalServices;
-
-  /// Create a copy of TrackingServiceMetadata
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$TrackingServiceMetadataImplCopyWith<_$TrackingServiceMetadataImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -244,9 +231,7 @@ mixin _$PostalServiceMetadata {
   String get localizedName => throw _privateConstructorUsedError;
   RRectIconData get iconData => throw _privateConstructorUsedError;
 
-  /// Create a copy of PostalServiceMetadata
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $PostalServiceMetadataCopyWith<PostalServiceMetadata> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -274,8 +259,6 @@ class _$PostalServiceMetadataCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of PostalServiceMetadata
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -299,8 +282,6 @@ class _$PostalServiceMetadataCopyWithImpl<$Res,
     ) as $Val);
   }
 
-  /// Create a copy of PostalServiceMetadata
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $RRectIconDataCopyWith<$Res> get iconData {
@@ -335,8 +316,6 @@ class __$$PostalServiceMetadataImplCopyWithImpl<$Res>
       $Res Function(_$PostalServiceMetadataImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of PostalServiceMetadata
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -396,9 +375,7 @@ class _$PostalServiceMetadataImpl implements _PostalServiceMetadata {
   @override
   int get hashCode => Object.hash(runtimeType, type, localizedName, iconData);
 
-  /// Create a copy of PostalServiceMetadata
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$PostalServiceMetadataImplCopyWith<_$PostalServiceMetadataImpl>
@@ -418,11 +395,8 @@ abstract class _PostalServiceMetadata implements PostalServiceMetadata {
   String get localizedName;
   @override
   RRectIconData get iconData;
-
-  /// Create a copy of PostalServiceMetadata
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$PostalServiceMetadataImplCopyWith<_$PostalServiceMetadataImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

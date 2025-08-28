@@ -44,6 +44,8 @@ function(APPLY_STANDARD_SETTINGS TARGET)
   target_compile_options(${TARGET} PRIVATE -Wall -Werror)
   target_compile_options(${TARGET} PRIVATE "$<$<NOT:$<CONFIG:Debug>>:-O3>")
   target_compile_definitions(${TARGET} PRIVATE "$<$<NOT:$<CONFIG:Debug>>:NDEBUG>")
+  # TODO: https://github.com/juliansteenbakker/flutter_secure_storage/issues/965
+  target_compile_options(${TARGET} PRIVATE -Wno-deprecated)
 endfunction()
 
 # Flutter library and tool build rules.

@@ -75,8 +75,6 @@ mixin _$ParcelsSort {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
-
-  /// Serializes this ParcelsSort to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 }
 
@@ -96,9 +94,6 @@ class _$ParcelsSortCopyWithImpl<$Res, $Val extends ParcelsSort>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
-
-  /// Create a copy of ParcelsSort
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -120,8 +115,6 @@ class __$$ParcelsSortAlphabeticallyImplCopyWithImpl<$Res>
       $Res Function(_$ParcelsSortAlphabeticallyImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of ParcelsSort
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -166,13 +159,11 @@ class _$ParcelsSortAlphabeticallyImpl implements ParcelsSortAlphabetically {
             (identical(other.isDesc, isDesc) || other.isDesc == isDesc));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, isDesc);
 
-  /// Create a copy of ParcelsSort
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$ParcelsSortAlphabeticallyImplCopyWith<_$ParcelsSortAlphabeticallyImpl>
@@ -263,10 +254,7 @@ abstract class ParcelsSortAlphabetically implements ParcelsSort {
       _$ParcelsSortAlphabeticallyImpl.fromJson;
 
   bool get isDesc;
-
-  /// Create a copy of ParcelsSort
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$ParcelsSortAlphabeticallyImplCopyWith<_$ParcelsSortAlphabeticallyImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -290,8 +278,6 @@ class __$$ParcelsSortActivityDateImplCopyWithImpl<$Res>
       $Res Function(_$ParcelsSortActivityDateImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of ParcelsSort
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -337,13 +323,11 @@ class _$ParcelsSortActivityDateImpl implements ParcelsSortActivityDate {
                 other.oldestFirst == oldestFirst));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, oldestFirst);
 
-  /// Create a copy of ParcelsSort
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$ParcelsSortActivityDateImplCopyWith<_$ParcelsSortActivityDateImpl>
@@ -434,10 +418,7 @@ abstract class ParcelsSortActivityDate implements ParcelsSort {
       _$ParcelsSortActivityDateImpl.fromJson;
 
   bool get oldestFirst;
-
-  /// Create a copy of ParcelsSort
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$ParcelsSortActivityDateImplCopyWith<_$ParcelsSortActivityDateImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -459,8 +440,6 @@ class __$$ParcelsSortDateAddedImplCopyWithImpl<$Res>
       $Res Function(_$ParcelsSortDateAddedImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of ParcelsSort
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -506,13 +485,11 @@ class _$ParcelsSortDateAddedImpl implements ParcelsSortDateAdded {
                 other.oldestFirst == oldestFirst));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, oldestFirst);
 
-  /// Create a copy of ParcelsSort
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$ParcelsSortDateAddedImplCopyWith<_$ParcelsSortDateAddedImpl>
@@ -604,10 +581,7 @@ abstract class ParcelsSortDateAdded implements ParcelsSort {
       _$ParcelsSortDateAddedImpl.fromJson;
 
   bool get oldestFirst;
-
-  /// Create a copy of ParcelsSort
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$ParcelsSortDateAddedImplCopyWith<_$ParcelsSortDateAddedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -713,8 +687,6 @@ mixin _$ParcelsFilter {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
-
-  /// Serializes this ParcelsFilter to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 }
 
@@ -734,9 +706,6 @@ class _$ParcelsFilterCopyWithImpl<$Res, $Val extends ParcelsFilter>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
-
-  /// Create a copy of ParcelsFilter
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -756,8 +725,6 @@ class __$$ParcelsFilterSearchImplCopyWithImpl<$Res>
       $Res Function(_$ParcelsFilterSearchImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of ParcelsFilter
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -800,13 +767,11 @@ class _$ParcelsFilterSearchImpl implements ParcelsFilterSearch {
             (identical(other.query, query) || other.query == query));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, query);
 
-  /// Create a copy of ParcelsFilter
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$ParcelsFilterSearchImplCopyWith<_$ParcelsFilterSearchImpl> get copyWith =>
@@ -927,10 +892,7 @@ abstract class ParcelsFilterSearch implements ParcelsFilter {
       _$ParcelsFilterSearchImpl.fromJson;
 
   String? get query;
-
-  /// Create a copy of ParcelsFilter
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$ParcelsFilterSearchImplCopyWith<_$ParcelsFilterSearchImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -950,9 +912,6 @@ class __$$ParcelsFilterReceiverImplCopyWithImpl<$Res>
   __$$ParcelsFilterReceiverImplCopyWithImpl(_$ParcelsFilterReceiverImpl _value,
       $Res Function(_$ParcelsFilterReceiverImpl) _then)
       : super(_value, _then);
-
-  /// Create a copy of ParcelsFilter
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -979,7 +938,7 @@ class _$ParcelsFilterReceiverImpl implements ParcelsFilterReceiver {
             other is _$ParcelsFilterReceiverImpl);
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -1110,9 +1069,6 @@ class __$$ParcelsFilterShipperImplCopyWithImpl<$Res>
   __$$ParcelsFilterShipperImplCopyWithImpl(_$ParcelsFilterShipperImpl _value,
       $Res Function(_$ParcelsFilterShipperImpl) _then)
       : super(_value, _then);
-
-  /// Create a copy of ParcelsFilter
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -1139,7 +1095,7 @@ class _$ParcelsFilterShipperImpl implements ParcelsFilterShipper {
             other is _$ParcelsFilterShipperImpl);
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -1270,9 +1226,6 @@ class __$$ParcelsFilterArchiveImplCopyWithImpl<$Res>
   __$$ParcelsFilterArchiveImplCopyWithImpl(_$ParcelsFilterArchiveImpl _value,
       $Res Function(_$ParcelsFilterArchiveImpl) _then)
       : super(_value, _then);
-
-  /// Create a copy of ParcelsFilter
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -1299,7 +1252,7 @@ class _$ParcelsFilterArchiveImpl implements ParcelsFilterArchive {
             other is _$ParcelsFilterArchiveImpl);
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -1433,8 +1386,6 @@ class __$$ParcelsFilterStatusImplCopyWithImpl<$Res>
       $Res Function(_$ParcelsFilterStatusImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of ParcelsFilter
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1478,13 +1429,11 @@ class _$ParcelsFilterStatusImpl implements ParcelsFilterStatus {
                 other.statusType == statusType));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, statusType);
 
-  /// Create a copy of ParcelsFilter
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$ParcelsFilterStatusImplCopyWith<_$ParcelsFilterStatusImpl> get copyWith =>
@@ -1605,10 +1554,7 @@ abstract class ParcelsFilterStatus implements ParcelsFilter {
       _$ParcelsFilterStatusImpl.fromJson;
 
   ShipmentStatusType? get statusType;
-
-  /// Create a copy of ParcelsFilter
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$ParcelsFilterStatusImplCopyWith<_$ParcelsFilterStatusImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1627,9 +1573,6 @@ class __$$ParcelsFilterNewInfoImplCopyWithImpl<$Res>
   __$$ParcelsFilterNewInfoImplCopyWithImpl(_$ParcelsFilterNewInfoImpl _value,
       $Res Function(_$ParcelsFilterNewInfoImpl) _then)
       : super(_value, _then);
-
-  /// Create a copy of ParcelsFilter
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -1656,7 +1599,7 @@ class _$ParcelsFilterNewInfoImpl implements ParcelsFilterNewInfo {
             other is _$ParcelsFilterNewInfoImpl);
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -1787,9 +1730,6 @@ class __$$ParcelsFilterErrorImplCopyWithImpl<$Res>
   __$$ParcelsFilterErrorImplCopyWithImpl(_$ParcelsFilterErrorImpl _value,
       $Res Function(_$ParcelsFilterErrorImpl) _then)
       : super(_value, _then);
-
-  /// Create a copy of ParcelsFilter
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -1815,7 +1755,7 @@ class _$ParcelsFilterErrorImpl implements ParcelsFilterError {
         (other.runtimeType == runtimeType && other is _$ParcelsFilterErrorImpl);
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -1951,8 +1891,6 @@ class __$$ParcelsFilterPostalServiceImplCopyWithImpl<$Res>
       $Res Function(_$ParcelsFilterPostalServiceImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of ParcelsFilter
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1998,13 +1936,11 @@ class _$ParcelsFilterPostalServiceImpl implements ParcelsFilterPostalService {
                 other.serviceType == serviceType));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, serviceType);
 
-  /// Create a copy of ParcelsFilter
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$ParcelsFilterPostalServiceImplCopyWith<_$ParcelsFilterPostalServiceImpl>
@@ -2126,10 +2062,7 @@ abstract class ParcelsFilterPostalService implements ParcelsFilter {
       _$ParcelsFilterPostalServiceImpl.fromJson;
 
   PostalServiceType? get serviceType;
-
-  /// Create a copy of ParcelsFilter
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$ParcelsFilterPostalServiceImplCopyWith<_$ParcelsFilterPostalServiceImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -2195,8 +2128,6 @@ mixin _$AppThemeType {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
-
-  /// Serializes this AppThemeType to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 }
 
@@ -2216,9 +2147,6 @@ class _$AppThemeTypeCopyWithImpl<$Res, $Val extends AppThemeType>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
-
-  /// Create a copy of AppThemeType
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -2235,9 +2163,6 @@ class __$$AppThemeTypeLightImplCopyWithImpl<$Res>
   __$$AppThemeTypeLightImplCopyWithImpl(_$AppThemeTypeLightImpl _value,
       $Res Function(_$AppThemeTypeLightImpl) _then)
       : super(_value, _then);
-
-  /// Create a copy of AppThemeType
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -2263,7 +2188,7 @@ class _$AppThemeTypeLightImpl implements AppThemeTypeLight {
         (other.runtimeType == runtimeType && other is _$AppThemeTypeLightImpl);
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -2364,9 +2289,6 @@ class __$$AppThemeTypeDarkImplCopyWithImpl<$Res>
   __$$AppThemeTypeDarkImplCopyWithImpl(_$AppThemeTypeDarkImpl _value,
       $Res Function(_$AppThemeTypeDarkImpl) _then)
       : super(_value, _then);
-
-  /// Create a copy of AppThemeType
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -2391,7 +2313,7 @@ class _$AppThemeTypeDarkImpl implements AppThemeTypeDark {
         (other.runtimeType == runtimeType && other is _$AppThemeTypeDarkImpl);
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -2492,9 +2414,6 @@ class __$$AppThemeTypeSystemImplCopyWithImpl<$Res>
   __$$AppThemeTypeSystemImplCopyWithImpl(_$AppThemeTypeSystemImpl _value,
       $Res Function(_$AppThemeTypeSystemImpl) _then)
       : super(_value, _then);
-
-  /// Create a copy of AppThemeType
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -2520,7 +2439,7 @@ class _$AppThemeTypeSystemImpl implements AppThemeTypeSystem {
         (other.runtimeType == runtimeType && other is _$AppThemeTypeSystemImpl);
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -2660,8 +2579,6 @@ mixin _$AppLocaleType {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
-
-  /// Serializes this AppLocaleType to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 }
 
@@ -2681,9 +2598,6 @@ class _$AppLocaleTypeCopyWithImpl<$Res, $Val extends AppLocaleType>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
-
-  /// Create a copy of AppLocaleType
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -2700,9 +2614,6 @@ class __$$AppLocaleTypeSystemImplCopyWithImpl<$Res>
   __$$AppLocaleTypeSystemImplCopyWithImpl(_$AppLocaleTypeSystemImpl _value,
       $Res Function(_$AppLocaleTypeSystemImpl) _then)
       : super(_value, _then);
-
-  /// Create a copy of AppLocaleType
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -2729,7 +2640,7 @@ class _$AppLocaleTypeSystemImpl implements AppLocaleTypeSystem {
             other is _$AppLocaleTypeSystemImpl);
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -2829,8 +2740,6 @@ class __$$AppLocaleTypeInnerImplCopyWithImpl<$Res>
       $Res Function(_$AppLocaleTypeInnerImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of AppLocaleType
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2844,8 +2753,6 @@ class __$$AppLocaleTypeInnerImplCopyWithImpl<$Res>
     ));
   }
 
-  /// Create a copy of AppLocaleType
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $LocaleCopyWith<$Res> get locale {
@@ -2883,13 +2790,11 @@ class _$AppLocaleTypeInnerImpl implements AppLocaleTypeInner {
             (identical(other.locale, locale) || other.locale == locale));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, locale);
 
-  /// Create a copy of AppLocaleType
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$AppLocaleTypeInnerImplCopyWith<_$AppLocaleTypeInnerImpl> get copyWith =>
@@ -2974,10 +2879,7 @@ abstract class AppLocaleTypeInner implements AppLocaleType {
       _$AppLocaleTypeInnerImpl.fromJson;
 
   Locale get locale;
-
-  /// Create a copy of AppLocaleType
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$AppLocaleTypeInnerImplCopyWith<_$AppLocaleTypeInnerImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -3059,8 +2961,6 @@ mixin _$TrackingFreqLimit {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
-
-  /// Serializes this TrackingFreqLimit to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 }
 
@@ -3080,9 +2980,6 @@ class _$TrackingFreqLimitCopyWithImpl<$Res, $Val extends TrackingFreqLimit>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
-
-  /// Create a copy of TrackingFreqLimit
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -3102,9 +2999,6 @@ class __$$TrackingFreqLimitFifteenMinImplCopyWithImpl<$Res>
       _$TrackingFreqLimitFifteenMinImpl _value,
       $Res Function(_$TrackingFreqLimitFifteenMinImpl) _then)
       : super(_value, _then);
-
-  /// Create a copy of TrackingFreqLimit
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -3132,7 +3026,7 @@ class _$TrackingFreqLimitFifteenMinImpl implements TrackingFreqLimitFifteenMin {
             other is _$TrackingFreqLimitFifteenMinImpl);
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -3249,9 +3143,6 @@ class __$$TrackingFreqLimitThirtyMinImplCopyWithImpl<$Res>
       _$TrackingFreqLimitThirtyMinImpl _value,
       $Res Function(_$TrackingFreqLimitThirtyMinImpl) _then)
       : super(_value, _then);
-
-  /// Create a copy of TrackingFreqLimit
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -3279,7 +3170,7 @@ class _$TrackingFreqLimitThirtyMinImpl implements TrackingFreqLimitThirtyMin {
             other is _$TrackingFreqLimitThirtyMinImpl);
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -3395,9 +3286,6 @@ class __$$TrackingFreqLimitFortyFiveMinImplCopyWithImpl<$Res>
       _$TrackingFreqLimitFortyFiveMinImpl _value,
       $Res Function(_$TrackingFreqLimitFortyFiveMinImpl) _then)
       : super(_value, _then);
-
-  /// Create a copy of TrackingFreqLimit
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -3426,7 +3314,7 @@ class _$TrackingFreqLimitFortyFiveMinImpl
             other is _$TrackingFreqLimitFortyFiveMinImpl);
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -3543,9 +3431,6 @@ class __$$TrackingFreqLimitOneHourImplCopyWithImpl<$Res>
       _$TrackingFreqLimitOneHourImpl _value,
       $Res Function(_$TrackingFreqLimitOneHourImpl) _then)
       : super(_value, _then);
-
-  /// Create a copy of TrackingFreqLimit
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -3572,7 +3457,7 @@ class _$TrackingFreqLimitOneHourImpl implements TrackingFreqLimitOneHour {
             other is _$TrackingFreqLimitOneHourImpl);
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -3688,9 +3573,6 @@ class __$$TrackingFreqLimitUnlimitedImplCopyWithImpl<$Res>
       _$TrackingFreqLimitUnlimitedImpl _value,
       $Res Function(_$TrackingFreqLimitUnlimitedImpl) _then)
       : super(_value, _then);
-
-  /// Create a copy of TrackingFreqLimit
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -3718,7 +3600,7 @@ class _$TrackingFreqLimitUnlimitedImpl implements TrackingFreqLimitUnlimited {
             other is _$TrackingFreqLimitUnlimitedImpl);
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -3894,8 +3776,6 @@ mixin _$AutoTrackingFreq {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
-
-  /// Serializes this AutoTrackingFreq to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 }
 
@@ -3915,9 +3795,6 @@ class _$AutoTrackingFreqCopyWithImpl<$Res, $Val extends AutoTrackingFreq>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
-
-  /// Create a copy of AutoTrackingFreq
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -3936,9 +3813,6 @@ class __$$AutoTrackingFreqSixHoursImplCopyWithImpl<$Res>
       _$AutoTrackingFreqSixHoursImpl _value,
       $Res Function(_$AutoTrackingFreqSixHoursImpl) _then)
       : super(_value, _then);
-
-  /// Create a copy of AutoTrackingFreq
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -3965,7 +3839,7 @@ class _$AutoTrackingFreqSixHoursImpl implements AutoTrackingFreqSixHours {
             other is _$AutoTrackingFreqSixHoursImpl);
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -4081,9 +3955,6 @@ class __$$AutoTrackingFreqTwelveHoursImplCopyWithImpl<$Res>
       _$AutoTrackingFreqTwelveHoursImpl _value,
       $Res Function(_$AutoTrackingFreqTwelveHoursImpl) _then)
       : super(_value, _then);
-
-  /// Create a copy of AutoTrackingFreq
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -4111,7 +3982,7 @@ class _$AutoTrackingFreqTwelveHoursImpl implements AutoTrackingFreqTwelveHours {
             other is _$AutoTrackingFreqTwelveHoursImpl);
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -4227,9 +4098,6 @@ class __$$AutoTrackingFreqOneDayImplCopyWithImpl<$Res>
       _$AutoTrackingFreqOneDayImpl _value,
       $Res Function(_$AutoTrackingFreqOneDayImpl) _then)
       : super(_value, _then);
-
-  /// Create a copy of AutoTrackingFreq
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -4256,7 +4124,7 @@ class _$AutoTrackingFreqOneDayImpl implements AutoTrackingFreqOneDay {
             other is _$AutoTrackingFreqOneDayImpl);
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -4372,9 +4240,6 @@ class __$$AutoTrackingFreqThreeDaysImplCopyWithImpl<$Res>
       _$AutoTrackingFreqThreeDaysImpl _value,
       $Res Function(_$AutoTrackingFreqThreeDaysImpl) _then)
       : super(_value, _then);
-
-  /// Create a copy of AutoTrackingFreq
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -4401,7 +4266,7 @@ class _$AutoTrackingFreqThreeDaysImpl implements AutoTrackingFreqThreeDays {
             other is _$AutoTrackingFreqThreeDaysImpl);
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -4516,9 +4381,6 @@ class __$$AutoTrackingFreqOneWeekImplCopyWithImpl<$Res>
       _$AutoTrackingFreqOneWeekImpl _value,
       $Res Function(_$AutoTrackingFreqOneWeekImpl) _then)
       : super(_value, _then);
-
-  /// Create a copy of AutoTrackingFreq
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -4545,7 +4407,7 @@ class _$AutoTrackingFreqOneWeekImpl implements AutoTrackingFreqOneWeek {
             other is _$AutoTrackingFreqOneWeekImpl);
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -4700,8 +4562,6 @@ mixin _$BarcodeGeneratorType {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
-
-  /// Serializes this BarcodeGeneratorType to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 }
 
@@ -4722,9 +4582,6 @@ class _$BarcodeGeneratorTypeCopyWithImpl<$Res,
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
-
-  /// Create a copy of BarcodeGeneratorType
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -4744,9 +4601,6 @@ class __$$BarcodeGeneratorTypeCode128ImplCopyWithImpl<$Res>
       _$BarcodeGeneratorTypeCode128Impl _value,
       $Res Function(_$BarcodeGeneratorTypeCode128Impl) _then)
       : super(_value, _then);
-
-  /// Create a copy of BarcodeGeneratorType
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -4774,7 +4628,7 @@ class _$BarcodeGeneratorTypeCode128Impl implements BarcodeGeneratorTypeCode128 {
             other is _$BarcodeGeneratorTypeCode128Impl);
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -4873,9 +4727,6 @@ class __$$BarcodeGeneratorTypeQrCodeImplCopyWithImpl<$Res>
       _$BarcodeGeneratorTypeQrCodeImpl _value,
       $Res Function(_$BarcodeGeneratorTypeQrCodeImpl) _then)
       : super(_value, _then);
-
-  /// Create a copy of BarcodeGeneratorType
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -4903,7 +4754,7 @@ class _$BarcodeGeneratorTypeQrCodeImpl implements BarcodeGeneratorTypeQrCode {
             other is _$BarcodeGeneratorTypeQrCodeImpl);
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -5045,8 +4896,6 @@ mixin _$ParcelsPageType {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
-
-  /// Serializes this ParcelsPageType to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 }
 
@@ -5066,9 +4915,6 @@ class _$ParcelsPageTypeCopyWithImpl<$Res, $Val extends ParcelsPageType>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
-
-  /// Create a copy of ParcelsPageType
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -5087,9 +4933,6 @@ class __$$ParcelsPageTypeReceiverImplCopyWithImpl<$Res>
       _$ParcelsPageTypeReceiverImpl _value,
       $Res Function(_$ParcelsPageTypeReceiverImpl) _then)
       : super(_value, _then);
-
-  /// Create a copy of ParcelsPageType
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -5116,7 +4959,7 @@ class _$ParcelsPageTypeReceiverImpl implements ParcelsPageTypeReceiver {
             other is _$ParcelsPageTypeReceiverImpl);
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -5219,9 +5062,6 @@ class __$$ParcelsPageTypeShipperImplCopyWithImpl<$Res>
       _$ParcelsPageTypeShipperImpl _value,
       $Res Function(_$ParcelsPageTypeShipperImpl) _then)
       : super(_value, _then);
-
-  /// Create a copy of ParcelsPageType
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -5248,7 +5088,7 @@ class _$ParcelsPageTypeShipperImpl implements ParcelsPageTypeShipper {
             other is _$ParcelsPageTypeShipperImpl);
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -5351,9 +5191,6 @@ class __$$ParcelsPageTypeArchiveImplCopyWithImpl<$Res>
       _$ParcelsPageTypeArchiveImpl _value,
       $Res Function(_$ParcelsPageTypeArchiveImpl) _then)
       : super(_value, _then);
-
-  /// Create a copy of ParcelsPageType
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -5380,7 +5217,7 @@ class _$ParcelsPageTypeArchiveImpl implements ParcelsPageTypeArchive {
             other is _$ParcelsPageTypeArchiveImpl);
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 

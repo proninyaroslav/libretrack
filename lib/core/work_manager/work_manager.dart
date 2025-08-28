@@ -308,7 +308,8 @@ class _MobileWorkManager implements _PlatformWorkManager {
         frequency: frequency,
         constraints: _convertConstraints(params?.constraints),
         inputData: params?.inputData?.asMap(),
-        existingWorkPolicy: _convertWorkPolicy(params?.existingWorkPolicy),
+        existingWorkPolicy:
+            _convertPeriodicWorkPolicy(params?.existingWorkPolicy),
       );
     } else {
       await _iosWm.registerPeriodic(
@@ -390,9 +391,9 @@ class _MobileWorkManager implements _PlatformWorkManager {
       case NetworkType.metered:
         return wm.NetworkType.metered;
       case NetworkType.notRequired:
-        return wm.NetworkType.not_required;
+        return wm.NetworkType.notRequired;
       case NetworkType.notRoaming:
-        return wm.NetworkType.not_roaming;
+        return wm.NetworkType.notRoaming;
       case NetworkType.unmetered:
         return wm.NetworkType.unmetered;
     }
@@ -411,6 +412,20 @@ class _MobileWorkManager implements _PlatformWorkManager {
         return wm.ExistingWorkPolicy.keep;
       case ExistingWorkPolicy.replace:
         return wm.ExistingWorkPolicy.replace;
+    }
+  }
+
+  wm.ExistingPeriodicWorkPolicy? _convertPeriodicWorkPolicy(
+      ExistingWorkPolicy? policy) {
+    if (policy == null) {
+      return null;
+    }
+
+    switch (policy) {
+      case ExistingWorkPolicy.keep:
+        return wm.ExistingPeriodicWorkPolicy.keep;
+      case ExistingWorkPolicy.replace:
+        return wm.ExistingPeriodicWorkPolicy.replace;
     }
   }
 }

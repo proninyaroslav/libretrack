@@ -68,7 +68,7 @@ class AppTheme {
     ),
   );
 
-  static final cardTheme = CardTheme(
+  static final cardTheme = CardThemeData(
     shape: RoundedRectangleBorder(
       borderRadius: BorderRadius.circular(8.0),
     ),

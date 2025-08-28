@@ -78,9 +78,6 @@ class _$AboutStateCopyWithImpl<$Res, $Val extends AboutState>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
-
-  /// Create a copy of AboutState
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -97,9 +94,6 @@ class __$$AboutStateInitialImplCopyWithImpl<$Res>
   __$$AboutStateInitialImplCopyWithImpl(_$AboutStateInitialImpl _value,
       $Res Function(_$AboutStateInitialImpl) _then)
       : super(_value, _then);
-
-  /// Create a copy of AboutState
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -216,9 +210,6 @@ class __$$AboutStateLoadingImplCopyWithImpl<$Res>
   __$$AboutStateLoadingImplCopyWithImpl(_$AboutStateLoadingImpl _value,
       $Res Function(_$AboutStateLoadingImpl) _then)
       : super(_value, _then);
-
-  /// Create a copy of AboutState
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -338,8 +329,6 @@ class __$$AboutStateLoadedImplCopyWithImpl<$Res>
       $Res Function(_$AboutStateLoadedImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of AboutState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -399,9 +388,7 @@ class _$AboutStateLoadedImpl
   @override
   int get hashCode => Object.hash(runtimeType, appName, appVersion);
 
-  /// Create a copy of AboutState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$AboutStateLoadedImplCopyWith<_$AboutStateLoadedImpl> get copyWith =>
@@ -484,10 +471,7 @@ abstract class AboutStateLoaded implements AboutState {
 
   String get appName;
   String get appVersion;
-
-  /// Create a copy of AboutState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$AboutStateLoadedImplCopyWith<_$AboutStateLoadedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

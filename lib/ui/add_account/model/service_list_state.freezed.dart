@@ -85,9 +85,6 @@ class _$ServiceListStateCopyWithImpl<$Res, $Val extends ServiceListState>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
-
-  /// Create a copy of ServiceListState
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -106,9 +103,6 @@ class __$$ServiceListStateInitialImplCopyWithImpl<$Res>
       _$ServiceListStateInitialImpl _value,
       $Res Function(_$ServiceListStateInitialImpl) _then)
       : super(_value, _then);
-
-  /// Create a copy of ServiceListState
-  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -240,8 +234,6 @@ class __$$ServiceListStateLoadedImplCopyWithImpl<$Res>
       $Res Function(_$ServiceListStateLoadedImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of ServiceListState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -314,9 +306,7 @@ class _$ServiceListStateLoadedImpl
       const DeepCollectionEquality().hash(_nonExistenServices),
       isAuthStorageSecured);
 
-  /// Create a copy of ServiceListState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$ServiceListStateLoadedImplCopyWith<_$ServiceListStateLoadedImpl>
@@ -406,10 +396,7 @@ abstract class ServiceListStateLoaded implements ServiceListState {
 
   List<TrackingServiceType> get nonExistenServices;
   bool get isAuthStorageSecured;
-
-  /// Create a copy of ServiceListState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$ServiceListStateLoadedImplCopyWith<_$ServiceListStateLoadedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -436,8 +423,6 @@ class __$$ServiceListStateLoadingFailedImplCopyWithImpl<$Res>
       $Res Function(_$ServiceListStateLoadingFailedImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of ServiceListState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -451,8 +436,6 @@ class __$$ServiceListStateLoadingFailedImplCopyWithImpl<$Res>
     ));
   }
 
-  /// Create a copy of ServiceListState
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $StorageErrorCopyWith<$Res>? get error {
@@ -500,9 +483,7 @@ class _$ServiceListStateLoadingFailedImpl
   @override
   int get hashCode => Object.hash(runtimeType, error);
 
-  /// Create a copy of ServiceListState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$ServiceListStateLoadingFailedImplCopyWith<
@@ -591,10 +572,7 @@ abstract class ServiceListStateLoadingFailed implements ServiceListState {
       _$ServiceListStateLoadingFailedImpl;
 
   StorageError? get error;
-
-  /// Create a copy of ServiceListState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$ServiceListStateLoadingFailedImplCopyWith<
           _$ServiceListStateLoadingFailedImpl>
       get copyWith => throw _privateConstructorUsedError;

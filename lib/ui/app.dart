@@ -263,7 +263,7 @@ class _AppState extends State<App> {
 }
 
 class _Loading extends StatelessWidget {
-  const _Loading({super.key});
+  const _Loading();
 
   @override
   Widget build(BuildContext context) {
