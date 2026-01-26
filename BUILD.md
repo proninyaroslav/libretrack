@@ -7,12 +7,12 @@ Enter the following command in the terminal to build the project:
 - **Android APK**
 
   ```
-  flutter build apk --flavor main
+  flutter build apk --flavor base
   ```
   or
 
   ```
-  flutter build apk --flavor main --target-platform [android-arm|android-arm64|android-x64]
+  flutter build apk --flavor base --target-platform [android-arm|android-arm64|android-x64]
   ```
 
   The built APK will be located in the `build/app/outputs/flutter-apk/` directory.
