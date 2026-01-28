@@ -2,7 +2,7 @@
 
 <p><img src="fastlane/metadata/android/en-US/images/icon.png" width="150"></p>
 <h2><b>LibreTrack</b></h2>
-<h4>Private, cross-platform package tracking app.</h4>
+<h4>Private, cross-platform package / parcel tracking app.</h4>
 
 [![Get it from the Snap Store](https://snapcraft.io/static/images/badges/en/snap-store-black.svg)](https://snapcraft.io/libretrack)
 [<img alt="Get it on Flathub" height="60" src="https://flathub.org/assets/badges/flathub-badge-en.svg">](https://flathub.org/apps/details/ru.proninyaroslav.libretrack)
