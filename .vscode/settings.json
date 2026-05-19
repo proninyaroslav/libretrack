@@ -58,5 +58,6 @@
         "thread": "cpp",
         "cinttypes": "cpp",
         "typeinfo": "cpp"
-    }
+    },
+    "git.enableCommitSigning": true
 }

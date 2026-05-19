@@ -50,7 +50,7 @@ dependencies:
   flutter_secure_storage: ^9.2.2
   flutter_staggered_animations: ^1.0.0
   fluttertoast: ^8.2.6
-  freezed_annotation: ^2.4.4
+  freezed_annotation: any
   get_it: ^8.0.3
   http: ^1.2.2
   image: ^4.2.0
@@ -82,18 +82,17 @@ dependency_overrides:
     git:
       url: https://github.com/kreativityapps/receive_sharing_intent.git
       ref: fix-uri-path
+  test_api: 0.7.10
 
 dev_dependencies:
-  analyzer: ^6.4.1
   bloc_test: ^10.0.0
-  build_runner: ^2.0.1
-  floor_generator: ^1.1.0
+  build_runner: 2.4.13
+  floor_generator: ^1.4.2
   flutter_lints: ^6.0.0
   flutter_test:
     sdk: flutter
-  freezed: ^2.5.2
-  injectable_generator: ^2.6.2
-  intl_utils: ^2.1.0
+  freezed: any
+  injectable_generator: ^2.0.0
   mocktail: ^1.0.4
 
 # For information on the generic Dart part of this file, see the
