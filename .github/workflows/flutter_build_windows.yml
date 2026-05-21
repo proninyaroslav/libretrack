@@ -1,0 +1,30 @@
+name: Flutter Build Windows CI
+
+on: [pull_request, workflow_dispatch]
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: "temurin"
+          java-version: "17"
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: "3.41.x"
+      - name: Disable Google Analytics
+        run: flutter config --no-analytics
+      - name: Install dependencies
+        run: flutter pub get
+      - name: Enable desktop support
+        run: flutter config --enable-windows-desktop
+      - name: Build Windows binary
+        run: flutter build windows --release
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: windows-app
+          path: build\windows\x64\runner\Release
