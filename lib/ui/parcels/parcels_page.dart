@@ -28,7 +28,7 @@ import 'package:libretrack/injector.dart';
 import 'package:libretrack/locale.dart';
 import 'package:libretrack/ui/components/widget.dart';
 import 'package:libretrack/ui/model/utils.dart';
-import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
+import 'package:flutter_material_design_icons/flutter_material_design_icons.dart';
 import 'package:share_plus/share_plus.dart';
 
 import '../../logger.dart';

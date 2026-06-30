@@ -18,6 +18,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_material_design_icons/flutter_material_design_icons.dart';
 import 'package:libretrack/core/entity/entity.dart';
 import 'package:libretrack/ui/components/widget.dart';
 import 'package:libretrack/ui/crash_report_dialog/send_report_error_dialog.dart';
@@ -25,7 +26,6 @@ import 'package:libretrack/ui/edit_account/model/edit_account_state.dart';
 import 'package:libretrack/ui/edit_account/model/service_info_state.dart';
 import 'package:libretrack/ui/model/error_report_cubit.dart';
 import 'package:libretrack/ui/model/error_report_state.dart';
-import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 import '../../locale.dart';
 import '../../logger.dart';
@@ -111,7 +111,7 @@ class EditAccountPageState extends State<EditAccountPage> {
     StackTrace? stackTrace,
   ) {
     const msg = 'Failed to edit account';
-    log().e(MdiIcons.signal2G, error: e, stackTrace: stackTrace);
+    log().e(MdiIcons.signal2g, error: e, stackTrace: stackTrace);
 
     final reportCubit = context.read<ErrorReportCubit>();
     showDialog(

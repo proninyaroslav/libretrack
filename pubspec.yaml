@@ -60,7 +60,7 @@ dependencies:
   json_annotation: ^4.9.0
   json_serializable: ^6.0.0
   logger: ^2.4.0
-  material_design_icons_flutter: ^7.0.7296
+  flutter_material_design_icons: ^3.1.0+7447
   package_info_plus: ^8.0.0
   pretty_http_logger: ^1.0.4
   quiver: ^3.0.0

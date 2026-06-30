@@ -27,7 +27,7 @@ import 'package:libretrack/ui/parcel_details/components/parcel_details.dart';
 import 'package:libretrack/ui/parcel_details/model/details_actions_state.dart';
 import 'package:libretrack/ui/parcel_details/model/parcel_details_state.dart';
 import 'package:libretrack/ui/parcel_details/model/parcel_error_banner_state.dart';
-import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
+import 'package:flutter_material_design_icons/flutter_material_design_icons.dart';
 import 'package:share_plus/share_plus.dart';
 
 import '../../locale.dart';

@@ -23,7 +23,7 @@ import 'package:libretrack/core/settings/model.dart';
 import 'package:libretrack/ui/components/custom_actions_row.dart';
 import 'package:libretrack/ui/components/widget.dart';
 import 'package:libretrack/ui/model/selectable_state.dart';
-import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
+import 'package:flutter_material_design_icons/flutter_material_design_icons.dart';
 
 import '../../../locale.dart';
 import '../parcels.dart';

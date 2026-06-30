@@ -25,7 +25,7 @@ import 'package:libretrack/ui/components/custom_actions_row.dart';
 import 'package:libretrack/ui/components/widget.dart';
 import 'package:libretrack/ui/parcel_details/components/parcel_details.dart';
 import 'package:libretrack/ui/parcel_details/model/parcel_details_state.dart';
-import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
+import 'package:flutter_material_design_icons/flutter_material_design_icons.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 import '../../../locale.dart';

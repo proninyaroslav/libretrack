@@ -30,7 +30,7 @@ import 'package:libretrack/ui/crash_report_dialog/send_report_error_dialog.dart'
 import 'package:libretrack/ui/model/error_report_cubit.dart';
 import 'package:libretrack/ui/model/error_report_state.dart';
 import 'package:libretrack/ui/model/utils.dart';
-import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
+import 'package:flutter_material_design_icons/flutter_material_design_icons.dart';
 
 import '../../injector.dart';
 import '../../logger.dart';

@@ -26,7 +26,7 @@ import 'package:libretrack/core/entity/entity.dart';
 import 'package:libretrack/ui/components/widget.dart';
 import 'package:libretrack/ui/model/error_report_cubit.dart';
 import 'package:libretrack/ui/model/utils.dart';
-import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
+import 'package:flutter_material_design_icons/flutter_material_design_icons.dart';
 
 import '../../../injector.dart';
 import '../../../locale.dart';

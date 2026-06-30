@@ -23,7 +23,7 @@ import 'package:libretrack/ui/accounts/accounts.dart';
 import 'package:libretrack/ui/components/widget.dart';
 import 'package:libretrack/ui/parcels/components/parcels_filter_drawer.dart';
 import 'package:libretrack/ui/parcels/parcels.dart';
-import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
+import 'package:flutter_material_design_icons/flutter_material_design_icons.dart';
 
 import '../routes/app_router.dart';
 import 'components/navigation_page.dart';

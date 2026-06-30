@@ -26,7 +26,7 @@ import 'package:libretrack/ui/model/service_metadata.dart';
 import 'package:libretrack/ui/model/shipment_metadata.dart';
 import 'package:libretrack/ui/parcels/parcels.dart';
 import 'package:libretrack/ui/theme.dart';
-import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
+import 'package:flutter_material_design_icons/flutter_material_design_icons.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 import '../../../locale.dart';
